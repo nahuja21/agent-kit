@@ -1,0 +1,3821 @@
+====================================================================================================
+LLM REASONING LOG
+====================================================================================================
+Project: APDerm
+Generated: 2026-01-21 14:47:08
+Model: o3
+
+
+====================================================================================================
+PASS 1: FILE SELECTION
+====================================================================================================
+
+--- PROMPT SENT TO LLM ---
+You are analyzing a Treya Partners project folder to select files for a comprehensive case study extraction.
+
+## Background: Treya Partners
+Treya Partners is a procurement consulting firm that helps PE-backed companies achieve cost savings through strategic sourcing across multiple spend categories.
+
+## Project Folder Structure:
+```
+📁 APDerm/
+   Scanned: 2026-01-21 14:44:23
+   Total: 1134 files in 281 folders
+
+Structure:
+──────────────────────────────────────────────────
+├── 📁 Additional Invoices/
+│   ├── 📁 W.B. Mason/
+│   │   └── 📁 W.B. Mason/
+│   │       ├── 📄 WB Maon 216736164_C2665593.pdf (88.6 KB)
+│   │       ├── 📄 WB Mason 215930336_C2665593.pdf (90.2 KB)
+│   │       ├── 📄 WB Mason 215941780_C2665593.pdf (90.3 KB)
+│   │       ├── 📄 WB Mason 215942337_C2665593.pdf (91.8 KB)
+│   │       ├── 📄 WB Mason 215950129_C2665593.pdf (92.4 KB)
+│   │       ├── 📄 WB Mason 215956695_C2665593.pdf (89.3 KB)
+│   │       ├── 📄 WB Mason 215978071_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 215981568_C2665593.pdf (89.8 KB)
+│   │       ├── 📄 WB Mason 215984056_C2665593.pdf (90.3 KB)
+│   │       ├── 📄 WB Mason 215996271_C2665593.pdf (126.0 KB)
+│   │       ├── 📄 WB Mason 216006114_C2665593.pdf (91.6 KB)
+│   │       ├── 📄 WB Mason 216006122_C2665593.pdf (89.5 KB)
+│   │       ├── 📄 WB Mason 216006144_C2665593.pdf (89.5 KB)
+│   │       ├── 📄 WB Mason 216019378_C2665593.pdf (88.5 KB)
+│   │       ├── 📄 WB Mason 216020270_C2665593.pdf (87.6 KB)
+│   │       ├── 📄 WB Mason 216034821_C2665593.pdf (89.5 KB)
+│   │       ├── 📄 WB Mason 216037498_C2665593.pdf (88.3 KB)
+│   │       ├── 📄 WB Mason 216042976_C2665593.pdf (88.5 KB)
+│   │       ├── 📄 WB Mason 216061624_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 216064246_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB MAson 216067941_C2665593.pdf (87.9 KB)
+│   │       ├── 📄 WB Mason 216080217_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 216091756_C2665593.pdf (89.6 KB)
+│   │       ├── 📄 WB Mason 216108626_C2665593.pdf (89.3 KB)
+│   │       ├── 📄 WB Mason 216109506_C2665593.pdf (88.8 KB)
+│   │       ├── 📄 WB Mason 216112052_C2665593.pdf (89.3 KB)
+│   │       ├── 📄 WB Mason 216123388_C2665593.pdf (89.2 KB)
+│   │       ├── 📄 WB Mason 216126648_C2665593.pdf (89.2 KB)
+│   │       ├── 📄 WB Mason 216152792_C2665593.pdf (89.1 KB)
+│   │       ├── 📄 WB Mason 216161404_C2665593.pdf (87.8 KB)
+│   │       ├── 📄 WB Mason 216165452_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 216166971_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 216174243_C2665593.pdf (89.3 KB)
+│   │       ├── 📄 WB Mason 216189175_C2665593.pdf (90.5 KB)
+│   │       ├── 📄 WB Mason 216208883_C2665593.pdf (90.3 KB)
+│   │       ├── 📄 WB Mason 216220522_C2665593.pdf (91.1 KB)
+│   │       ├── 📄 WB Mason 216262462_C2665593.pdf (36.9 KB)
+│   │       ├── 📄 WB Mason 216263090_C2665593.pdf (88.4 KB)
+│   │       ├── 📄 WB Mason 216273236_C2665593.pdf (88.3 KB)
+│   │       ├── 📄 WB Mason 216273294_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 216273470_C2665593.pdf (87.9 KB)
+│   │       ├── 📄 WB Mason 216274407_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 216276694_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 216280326_C2665593.pdf (88.7 KB)
+│   │       ├── 📄 WB Mason 216281629_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 216288069_C2665593.pdf (88.3 KB)
+│   │       ├── 📄 WB Mason 216288896_C2665593.pdf (88.0 KB)
+│   │       ├── 📄 WB Mason 216288959_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 216289100_C2665593.pdf (88.3 KB)
+│   │       ├── 📄 WB Mason 216325776_C2665593.pdf (91.0 KB)
+│   │       ├── 📄 WB Mason 216340168_C2665593.pdf (122.5 KB)
+│   │       ├── 📄 WB Mason 216365839_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 216372147_C2665593.pdf (124.9 KB)
+│   │       ├── 📄 WB Mason 216372199_C2665593.pdf (90.7 KB)
+│   │       ├── 📄 WB Mason 216514780_C2665593.pdf (89.2 KB)
+│   │       ├── 📄 WB Mason 216533116_C2665593.pdf (90.6 KB)
+│   │       ├── 📄 WB Mason 216535809_C2665593.pdf (92.2 KB)
+│   │       ├── 📄 WB Mason 216544626_C2665593.pdf (90.2 KB)
+│   │       ├── 📄 WB Mason 216553538_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 216568783_C2665593.pdf (91.4 KB)
+│   │       ├── 📄 WB Mason 216578305_C2665593.pdf (90.1 KB)
+│   │       ├── 📄 WB Mason 216580152_C2665593.pdf (89.7 KB)
+│   │       ├── 📄 WB Mason 216583301_C2665593.pdf (92.0 KB)
+│   │       ├── 📄 WB Mason 216607250_C2665593.pdf (90.3 KB)
+│   │       ├── 📄 wb Mason 216637759_C2665593.pdf (89.7 KB)
+│   │       ├── 📄 WB Mason 216679772_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 216683598_C2665593.pdf (121.4 KB)
+│   │       ├── 📄 WB Mason 216716763_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 216717009_C2665593.pdf (89.1 KB)
+│   │       ├── 📄 WB Mason 216718226_C2665593.pdf (87.9 KB)
+│   │       ├── 📄 WB Mason 216751844_C2665593.pdf (87.8 KB)
+│   │       ├── 📄 WB Mason 216754046_C2665593.pdf (89.5 KB)
+│   │       ├── 📄 WB Mason 216791439_C2665593.pdf (89.3 KB)
+│   │       ├── 📄 WB Mason 216805484_C2665593.pdf (88.0 KB)
+│   │       ├── 📄 WB Mason 216807204_C2665593.pdf (90.2 KB)
+│   │       ├── 📄 WB Mason 216822879_C2665593.pdf (87.8 KB)
+│   │       ├── 📄 WB Mason 216835600_C2665593.pdf (88.5 KB)
+│   │       ├── 📄 WB Mason 216840484_C2665593.pdf (88.4 KB)
+│   │       ├── 📄 WB Mason 216841885_C2665593.pdf (87.9 KB)
+│   │       ├── 📄 WB Mason 216853888_C2665593.pdf (118.9 KB)
+│   │       ├── 📄 WB Mason 216854990_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 216861395_C2665593.pdf (89.4 KB)
+│   │       ├── 📄 WB Mason 216864496_C2665593.pdf (87.6 KB)
+│   │       ├── 📄 WB Mason 216882396_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 216884063_C2665593.pdf (89.3 KB)
+│   │       ├── 📄 WB Mason 216888591_C2665593.pdf (89.7 KB)
+│   │       ├── 📄 WB Mason 216897065_C2665593.pdf (88.7 KB)
+│   │       ├── 📄 WB Mason 216900058_C2665593.pdf (87.2 KB)
+│   │       ├── 📄 WB Mason 216903560_C2665593.pdf (119.6 KB)
+│   │       ├── 📄 WB Mason 216922199_C2665593.pdf (90.0 KB)
+│   │       ├── 📄 WB Mason 216924279_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 216925343_C2665593.pdf (90.4 KB)
+│   │       ├── 📄 WB Mason 216926272_C2665593.pdf (89.8 KB)
+│   │       ├── 📄 WB Mason 216936785_C2665593.pdf (90.4 KB)
+│   │       ├── 📄 WB Mason 216941358_C2665593.pdf (90.0 KB)
+│   │       ├── 📄 WB Mason 216947598_C2665593.pdf (90.2 KB)
+│   │       ├── 📄 WB Mason 216966347_C2665593.pdf (89.8 KB)
+│   │       ├── 📄 WB Mason 216981682_C2665593.pdf (119.6 KB)
+│   │       ├── 📄 WB Mason 216994418_C2665593.pdf (90.0 KB)
+│   │       ├── 📄 WB Mason 216995059_C2665593.pdf (89.8 KB)
+│   │       ├── 📄 WB Mason 217017050_C2665593.pdf (87.4 KB)
+│   │       ├── 📄 WB Mason 217024322_C2665593.pdf (116.1 KB)
+│   │       ├── 📄 WB Mason 217026492_C2665593.pdf (116.1 KB)
+│   │       ├── 📄 WB Mason 217030692_C2665593.pdf (90.0 KB)
+│   │       ├── 📄 WB Mason 217038402_C2665593.pdf (89.4 KB)
+│   │       ├── 📄 WB Mason 217050517_C2665593.pdf (88.6 KB)
+│   │       ├── 📄 WB Mason 217053725_C2665593.pdf (116.8 KB)
+│   │       ├── 📄 WB Mason 217056076_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 217066838_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 217092784_C2665593 (002).pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 217099580_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 217107425_C2665593.pdf (87.8 KB)
+│   │       ├── 📄 WB Mason 217107632_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 217108428_C2665593.pdf (88.8 KB)
+│   │       ├── 📄 WB Mason 217112579_C2665593.pdf (90.0 KB)
+│   │       ├── 📄 WB Mason 217119605_C2665593.pdf (116.9 KB)
+│   │       ├── 📄 WB Mason 217129865_C2665593 (002).pdf (89.7 KB)
+│   │       ├── 📄 WB Mason 217132098_C2665593 (002).pdf (92.3 KB)
+│   │       ├── 📄 WB Mason 217134488_C2665593.pdf (90.0 KB)
+│   │       ├── 📄 WB Mason 217146845_C2665593.pdf (90.2 KB)
+│   │       ├── 📄 WB Mason 217148079_C2665593.pdf (91.7 KB)
+│   │       ├── 📄 WB Mason 217170891_C2665593.pdf (117.8 KB)
+│   │       ├── 📄 WB Mason 217182161_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 217183529_C2665593.pdf (119.4 KB)
+│   │       ├── 📄 WB Mason 217190937_C2665593.pdf (89.6 KB)
+│   │       ├── 📄 WB Mason 217205295_C2665593.pdf (87.4 KB)
+│   │       ├── 📄 WB Mason 217211430_C2665593 (002).pdf (88.3 KB)
+│   │       ├── 📄 WB Mason 217211430_C2665593.pdf (88.3 KB)
+│   │       ├── 📄 WB Mason 217217385_C2665593.pdf (88.1 KB)
+│   │       ├── 📄 WB Mason 217218666_C2665593.pdf (88.1 KB)
+│   │       ├── 📄 WB Mason 217219075_C2665593.pdf (89.1 KB)
+│   │       ├── 📄 WB Mason 217225235_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 217248733_C2665593.pdf (89.3 KB)
+│   │       ├── 📄 WB Mason 217268530_C2665593.pdf (92.1 KB)
+│   │       ├── 📄 WB Mason 217268590_C2665593.pdf (140.4 KB)
+│   │       ├── 📄 WB Mason 217277004_C2665593.pdf (89.3 KB)
+│   │       ├── 📄 WB Mason 217287086_C2665593.pdf (89.5 KB)
+│   │       ├── 📄 WB Mason 217297074_C2665593.pdf (119.1 KB)
+│   │       ├── 📄 WB Mason 217313174_C2665593.pdf (87.8 KB)
+│   │       ├── 📄 WB Mason 217314257_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 217316780_C2665593.pdf (115.7 KB)
+│   │       ├── 📄 WB Mason 217321016_C2665593.pdf (88.0 KB)
+│   │       ├── 📄 WB Mason 217328040_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 217336245_C2665593.pdf (89.6 KB)
+│   │       ├── 📄 WB Mason 217343932_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 217359768_C2665593.pdf (88.0 KB)
+│   │       ├── 📄 WB Mason 217370131_C2665593.pdf (186.6 KB)
+│   │       ├── 📄 WB Mason 217370191_C2665593.pdf (148.9 KB)
+│   │       ├── 📄 WB Mason 217370912_C2665593.pdf (87.8 KB)
+│   │       ├── 📄 WB Mason 217372541_C2665593.pdf (118.5 KB)
+│   │       ├── 📄 WB Mason 217403329_C2665593.pdf (88.7 KB)
+│   │       ├── 📄 WB Mason 217403932_C2665593.pdf (88.8 KB)
+│   │       ├── 📄 WB Mason 217417309_C2665593.pdf (126.2 KB)
+│   │       ├── 📄 WB Mason 217417551_C2665593.pdf (125.9 KB)
+│   │       ├── 📄 WB Mason 217420229_C2665593.pdf (87.4 KB)
+│   │       ├── 📄 WB Mason 217421810_C2665593.pdf (88.5 KB)
+│   │       ├── 📄 WB Mason 217423469_C2665593.pdf (88.8 KB)
+│   │       ├── 📄 WB Mason 217426826_C2665593.pdf (89.3 KB)
+│   │       ├── 📄 WB Mason 217439470_C2665593.pdf (121.0 KB)
+│   │       ├── 📄 WB Mason 217440709_C2665593.pdf (87.9 KB)
+│   │       ├── 📄 WB Mason 217450242_C2665593.pdf (119.3 KB)
+│   │       ├── 📄 WB Mason 217451358_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 217457774_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 217479001_C2665593.pdf (88.0 KB)
+│   │       ├── 📄 WB Mason 217481922_C2665593.pdf (89.7 KB)
+│   │       ├── 📄 WB Mason 217483824_C2665593.pdf (88.5 KB)
+│   │       ├── 📄 WB Mason 217492054_C2665593.pdf (122.0 KB)
+│   │       ├── 📄 WB Mason 217494313_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 217496928_C2665593.pdf (117.3 KB)
+│   │       ├── 📄 WB Mason 217501388_C2665593.pdf (92.5 KB)
+│   │       ├── 📄 WB Mason 217501482_C2665593.pdf (87.8 KB)
+│   │       ├── 📄 WB Mason 217505203_C2665593.pdf (87.3 KB)
+│   │       ├── 📄 WB Mason 217510065_C2665593.pdf (90.3 KB)
+│   │       ├── 📄 WB Mason 217512383_C2665593.pdf (88.0 KB)
+│   │       ├── 📄 WB Mason 217538822_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 217538920_C2665593.pdf (87.9 KB)
+│   │       ├── 📄 WB Mason 217540821_C2665593.pdf (88.0 KB)
+│   │       ├── 📄 WB Mason 217560977_C2665593.pdf (88.3 KB)
+│   │       ├── 📄 WB Mason 217575877_C2665593.pdf (87.8 KB)
+│   │       ├── 📄 WB Mason 217575929_C2665593.pdf (88.0 KB)
+│   │       ├── 📄 WB Mason 217585448_C2665593.pdf (116.0 KB)
+│   │       ├── 📄 WB Mason 217609458_C2665593.pdf (89.1 KB)
+│   │       ├── 📄 WB Mason 217623537_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 217638235_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 217659601_C2665593.pdf (88.8 KB)
+│   │       ├── 📄 WB Mason 217677331_C2665593.pdf (89.7 KB)
+│   │       ├── 📄 WB Mason 217678961_C2665593.pdf (117.6 KB)
+│   │       ├── 📄 WB Mason 217679133_C2665593.pdf (89.4 KB)
+│   │       ├── 📄 WB Mason 217681103_C2665593.pdf (115.9 KB)
+│   │       ├── 📄 WB Mason 217700699_C2665593.pdf (88.7 KB)
+│   │       ├── 📄 WB Mason 217708457_C2665593.pdf (88.0 KB)
+│   │       ├── 📄 WB Mason 217708807_C2665593.pdf (88.7 KB)
+│   │       ├── 📄 WB Mason 217719172_C2665593.pdf (115.4 KB)
+│   │       ├── 📄 WB Mason 217739606_C2665593.pdf (92.6 KB)
+│   │       ├── 📄 WB Mason 217745566_C2665593.pdf (89.6 KB)
+│   │       ├── 📄 WB Mason 217746980_C2665593.pdf (90.2 KB)
+│   │       ├── 📄 WB Mason 217747743_C2665593.pdf (91.5 KB)
+│   │       ├── 📄 WB Mason 217770085_C2665593.pdf (91.3 KB)
+│   │       ├── 📄 WB Mason 217776005_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 217781469_C2665593.pdf (91.5 KB)
+│   │       ├── 📄 WB Mason 217782761_C2665593.pdf (89.7 KB)
+│   │       ├── 📄 WB Mason 217784835_C2665593.pdf (120.6 KB)
+│   │       ├── 📄 WB Mason 217807070_C2665593.pdf (89.7 KB)
+│   │       ├── 📄 WB Mason 217814347_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 217816316_C2665593.pdf (89.9 KB)
+│   │       ├── 📄 WB Mason 217817908_C2665593.pdf (90.1 KB)
+│   │       ├── 📄 WB Mason 217817945_C2665593.pdf (93.9 KB)
+│   │       ├── 📄 WB Mason 217820277_C2665593.pdf (90.5 KB)
+│   │       ├── 📄 WB Mason 217842974_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 217843750_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 217844694_C2665593.pdf (88.6 KB)
+│   │       ├── 📄 WB Mason 217845407_C2665593.pdf (88.1 KB)
+│   │       ├── 📄 WB Mason 217856900_C2665593.pdf (88.3 KB)
+│   │       ├── 📄 WB Mason 217859763_C2665593.pdf (88.1 KB)
+│   │       ├── 📄 WB Mason 217860346_C2665593.pdf (117.9 KB)
+│   │       ├── 📄 WB Mason 217862618_C2665593.pdf (87.9 KB)
+│   │       ├── 📄 WB Mason 217868954_C2665593.pdf (89.4 KB)
+│   │       ├── 📄 WB Mason 217878963_C2665593.pdf (118.6 KB)
+│   │       ├── 📄 WB Mason 217880402_C2665593.pdf (88.4 KB)
+│   │       ├── 📄 WB Mason 217883696_C2665593.pdf (87.7 KB)
+│   │       ├── 📄 WB Mason 217913851_C2665593.pdf (87.5 KB)
+│   │       ├── 📄 WB Mason 217917620_C2665593.pdf (87.3 KB)
+│   │       ├── 📄 WB Mason 217927838_C2665593.pdf (88.6 KB)
+│   │       ├── 📄 WB Mason 217934889_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 217950498_C2665593.pdf (90.3 KB)
+│   │       ├── 📄 WB Mason 217953671_C2665593.pdf (90.4 KB)
+│   │       ├── 📄 WB Mason 217961017_C2665593.pdf (122.4 KB)
+│   │       ├── 📄 WB Mason 217962386_C2665593.pdf (90.7 KB)
+│   │       ├── 📄 WB Mason 217966525_C2665593.pdf (90.5 KB)
+│   │       ├── 📄 WB Mason 217983190_C2665593.pdf (91.8 KB)
+│   │       ├── 📄 WB Mason 217996263_C2665593.pdf (90.2 KB)
+│   │       ├── 📄 WB Mason 217996492_C2665593.pdf (122.2 KB)
+│   │       ├── 📄 WB Mason 218011980_C2665593.pdf (90.4 KB)
+│   │       ├── 📄 WB Mason 218012417_C2665593.pdf (89.5 KB)
+│   │       ├── 📄 WB Mason 218028293_C2665593.pdf (91.8 KB)
+│   │       ├── 📄 WB Mason 218113678_C2665593.pdf (88.2 KB)
+│   │       ├── 📄 WB Mason 218113915_C2665593.pdf (90.7 KB)
+│   │       ├── 📄 WB Mason 218118004_C2665593.pdf (87.9 KB)
+│   │       ├── 📄 WB Mason 218126544_C2665593.pdf (87.9 KB)
+│   │       ├── 📄 WB Mason 218127535_C2665593.pdf (115.9 KB)
+│   │       ├── 📄 WB Mason 218165564_C2665593.pdf (88.6 KB)
+│   │       ├── 📄 WB Mason 218172826_C2665593.pdf (89.8 KB)
+│   │       ├── 📄 WB Mason CR8574648_C2665593.pdf (87.3 KB)
+│   │       ├── 📄 WB Mason CR8682474_C2665593.pdf (84.8 KB)
+│   │       ├── 📄 WB Mason CR8698759_C2665593.pdf (84.4 KB)
+│   │       ├── 📄 WB Mason CR8735470_C2665593.pdf (85.5 KB)
+│   │       ├── 📄 WB Mason CR8774862_C2665593.pdf (88.6 KB)
+│   │       ├── 📄 WB Mason CR8782904_C2665593.pdf (84.6 KB)
+│   │       ├── 📄 WB Mason Invoice_216082024.pdf (37.8 KB)
+│   │       ├── 📄 WB Mason Invoice_216168558.pdf (37.0 KB)
+│   │       ├── 📄 WB Mason Invoice_216263090.pdf (37.0 KB)
+│   │       ├── 📄 WB Mason Invoice_216273294 (2).pdf (36.8 KB)
+│   │       ├── 📄 WB Mason Invoice_216273470.pdf (36.6 KB)
+│   │       ├── 📄 WB Mason Invoice_216274407.pdf (36.5 KB)
+│   │       ├── 📄 WB Mason Invoice_216276694.pdf (38.0 KB)
+│   │       ├── 📄 WB Mason Invoice_216281629.pdf (36.5 KB)
+│   │       ├── 📄 WB Mason Invoice_216288069.pdf (36.9 KB)
+│   │       ├── 📄 WB Mason Invoice_216288896.pdf (36.7 KB)
+│   │       ├── 📄 WB Mason Invoice_216288959.pdf (36.8 KB)
+│   │       ├── 📄 WB Mason Invoice_216289100.pdf (36.8 KB)
+│   │       ├── 📄 WB Mason Invoice_216292647.pdf (36.3 KB)
+│   │       ├── 📄 WB Mason Invoice_216292775.pdf (56.6 KB)
+│   │       ├── 📄 WB Mason Invoice_216304514.pdf (36.9 KB)
+│   │       ├── 📄 WB Mason Invoice_216399205.pdf (36.5 KB)
+│   │       ├── 📄 WB Mason Invoice_216401081.pdf (52.0 KB)
+│   │       ├── 📄 WB Mason Invoice_216410553.pdf (37.7 KB)
+│   │       ├── 📄 WB Mason Invoice_216410935.pdf (36.5 KB)
+│   │       ├── 📄 WB Mason Invoice_216441215.pdf (36.7 KB)
+│   │       ├── 📄 WB Mason Invoice_216442152.pdf (37.1 KB)
+│   │       ├── 📄 WB Mason Invoice_216445462.pdf (36.6 KB)
+│   │       ├── 📄 WB Mason Invoice_216454552.pdf (37.0 KB)
+│   │       ├── 📄 WB Mason Invoice_216456108.pdf (37.9 KB)
+│   │       ├── 📄 WB Mason Invoice_216479050.pdf (56.6 KB)
+│   │       ├── 📄 WB Mason Invoice_216480441.pdf (37.0 KB)
+│   │       ├── 📄 WB Mason Invoice_216506567.pdf (37.8 KB)
+│   │       ├── 📄 WB Mason Invoice_216508700.pdf (37.8 KB)
+│   │       ├── 📄 WB Mason Invoice_216509062.pdf (36.8 KB)
+│   │       ├── 📄 WB Mason Invoice_216509329.pdf (36.7 KB)
+│   │       ├── 📄 WB Mason Invoice_216510383.pdf (38.2 KB)
+│   │       ├── 📄 WB Mason Invoice_216512956.pdf (50.6 KB)
+│   │       ├── 📄 WB Mason Invoice_216514462.pdf (36.7 KB)
+│   │       ├── 📄 WB Mason PM_217129865_C2665593.pdf (89.7 KB)
+│   │       ├── 📄 WB Mason PM_217131525_C2665593.pdf (92.5 KB)
+│   │       └── 📄 WB Mason PM_217132098_C2665593.pdf (92.3 KB)
+│   ├── 🗜️ Henry Schein.zip (44.6 MB)
+│   ├── 🗜️ McKesson.zip (2.6 MB)
+│   └── 🗜️ W.B. Mason.zip (19.6 MB)
+├── 📁 Agreement/
+│   ├── 📁 Signed Agreement/
+│   │   └── 📄 Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf (506.5 KB)
+│   ├── 📄 Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf (506.5 KB)
+│   ├── 📝 Procurement Cost Reduction Services Agreement_APDerm_SC - Copy.docx (188.8 KB)
+│   ├── 📝 Procurement Cost Reduction Services Agreement_APDerm_SC.docx (188.9 KB)
+│   └── 📝 Treya AP Derm Extension Agreement Nov 3 2021 vF.docx (60.1 KB)
+├── 📁 Assessment/
+│   ├── 📎 AP Derm - AP Spend Analysis - 9.3.2020 (4).pbix (2.2 MB)
+│   ├── 📄 APDerm Opportunity Assessment_v2_12.3.20.pdf (1.7 MB)
+│   └── 📊 APDerm Opportunity Assessment_v2_12.3.20.pptx (1.8 MB)
+├── 📁 Benefits/
+│   └── 📊 APDerm - Employee Benefits Proposal Comparison (Sept 28 2021).pptx (1.5 MB)
+├── 📁 Case Study/
+│   ├── 📝 Treya Case Study_APDerm v5 MY.docx (3.0 MB)
+│   ├── 📝 Treya Case Study_APDerm v6 MY.docx (3.0 MB)
+│   └── 📄 Treya Case Study_APDerm vF.pdf (354.9 KB)
+├── 📁 Categories/
+│   ├── 📁 Allergan/
+│   │   ├── 📁 Contracts - Invoices/
+│   │   │   ├── 📄 2021_AGN_Special_Contract_Agmnt_67719_ADULT__PEDIATRIC_DERM_PC.docx (002).pdf (1.1 MB)
+│   │   │   ├── 📈 APDerm2021Update.xlsx (27.0 KB)
+│   │   │   ├── 📄 Credit Memo Q3 2020 Allergan Botox and Juvederm.pdf (14.5 KB)
+│   │   │   └── 📄 Credit Memo Q4 2020 Allergan Botox and Juvederm-1.pdf (84.3 KB)
+│   │   └── 📁 Incumbent Negotiations/
+│   │       ├── 📄 Allergan Strategic Business Review (May. 27, 2021) vF.pdf (413.5 KB)
+│   │       └── 📊 Allergan Strategic Business Review (May. 27, 2021) vF.pptx (765.6 KB)
+│   ├── 📁 Billing Systems/
+│   │   └── 📁 RFP Responses/
+│   │       ├── 📁 AdvancedMD/
+│   │       │   └── 📈 APDerm - Practice Management - Billing Systems RFP ADVANCEDMD.xlsx (69.5 KB)
+│   │       ├── 📁 Athena Health/
+│   │       │   ├── 📈 APDerm RFP_athenahealth.xlsx (89.7 KB)
+│   │       │   └── 📄 Supplemental Information_athenahealth.pdf (2.3 MB)
+│   │       ├── 📁 MedEvolve/
+│   │       │   └── 🗜️ APDerm RFP Files 2.zip (5.6 MB)
+│   │       ├── 📁 Modernizing Medicine/
+│   │       │   ├── 📄 APDerm Implementation Presentation .pdf (651.5 KB)
+│   │       │   ├── 📈 BOOST RCM Services Fees and Scope for AP Derm (1).xlsx (38.5 KB)
+│   │       │   ├── 📄 EMA Security and Reliability - 3AZ doc .pdf (4.5 MB)
+│   │       │   ├── 📈 Modernizing Medicine's RFP Response- APDerm - Practice Management - Billing Systems RFP (Dec 2021) (1).xlsx (330.0 KB)
+│   │       │   ├── 📄 System Requirements_MMI_5.28.21.pdf (116.9 KB)
+│   │       │   └── 📈 Tech and Pay Proposal for APDerm.xlsx (58.8 KB)
+│   │       ├── 📁 Nextech/
+│   │       │   ├── 📈 APDerm - Practice Management - Billing Systems RFP (Nov 22 2021).xlsx (77.9 KB)
+│   │       │   ├── 📄 Nextech SOC2 Description.pdf (622.7 KB)
+│   │       │   └── 📄 Practice 360 Consulting Brochure (1) (1).pdf (107.3 KB)
+│   │       ├── 📁 RXNT/
+│   │       │   ├── 📄 2021 RXNT- implementation Timeline.pdf (114.5 KB)
+│   │       │   ├── 📈 APDerm - Practice Management - Billing Systems RFP- RXNT.xlsx (315.3 KB)
+│   │       │   ├── 📄 Hostway Disaster Recovery Business Continuity Plan v1.5 Final (20180704).pdf (1.2 MB)
+│   │       │   └── 📝 RXNT Terms of Service Full-Suite.docx (94.1 KB)
+│   │       └── 📈 APDerm - Path Lab Systems RFP Comparison (Sep. 2, 2021).xlsx (152.7 KB)
+│   ├── 📁 Courier Services/
+│   │   ├── 📁 0. Data/
+│   │   │   ├── 📁 Data Request/
+│   │   │   │   └── 📈 APDerm - Courier Services Data Request (1-28-2021).xlsx (239.3 KB)
+│   │   │   ├── 📈 APDerm - Courier Services Data - Skycom v3.xlsx (4.8 MB)
+│   │   │   ├── 📈 APDerm - Courier Services Data - Skycom v4.xlsx (4.9 MB)
+│   │   │   ├── 📈 APDerm - Courier Services Data - Skycomm v1.xlsx (2.3 MB)
+│   │   │   ├── 📈 APDerm - Courier Services Data - Skycomm v2.xlsx (2.2 MB)
+│   │   │   ├── 📈 APDerm - Courier Services Data - Skycomm.xlsx (2.1 MB)
+│   │   │   ├── 📄 APDERM - Skycom-standard service agreement executed.pdf (451.3 KB)
+│   │   │   └── 📎 Courier Services - Shortcut.lnk (1.7 KB)
+│   │   ├── 📁 00. Route Data/
+│   │   │   ├── 📄 2021 GROUND TRANSPORTATION AGREEMENT.pdf (185.8 KB)
+│   │   │   ├── 📄 addendumA.pdf (70.2 KB)
+│   │   │   ├── 📄 AP Derm Route .pdf (156.1 KB)
+│   │   │   ├── 📈 courier services update.xlsx (45.5 KB)
+│   │   │   ├── 📝 courierstuff.docx (28.8 KB)
+│   │   │   └── 📧 Re_ courier routes_pricing info.msg (194.0 KB)
+│   │   ├── 📁 1. Routes and Usage Lists/
+│   │   │   ├── 📎 APDerm - Courier Services Data - Skycom v5 (ScheduledOrders).xlsm (5.1 MB)
+│   │   │   ├── 📎 APDerm - Courier Services Data - Skycom v5.xlsm (4.8 MB)
+│   │   │   ├── 📈 APDerm - Courier Services- Routes Schedules v2.xlsx (44.2 KB)
+│   │   │   ├── 📈 APDerm - Courier Services- Routes Schedules v3 (4-22-21).xlsx (44.5 KB)
+│   │   │   ├── 📈 APDerm - Courier Services- Routes Schedules v3 (4-23-21) - Copy.xlsx (45.4 KB)
+│   │   │   ├── 📈 APDerm - Courier Services- Routes Schedules v3 (4-23-21).xlsx (45.4 KB)
+│   │   │   └── 📈 APDerm - Courier Services- Routes Schedules.xlsx (28.7 KB)
+│   │   ├── 📁 2. RFP Development/
+│   │   │   ├── 📁 Shared - APDerm Courier RFP/
+│   │   │   │   ├── 📁 Q&A Document/
+│   │   │   │   │   ├── 📈 APDerm - Courier Services RFP - Q&A Document (5-25-21).xlsx (38.2 KB)
+│   │   │   │   │   ├── 📈 APDerm - Courier Services RFP - Q&A Document v2 (5-19-21).xlsx (32.9 KB)
+│   │   │   │   │   └── 📈 APDerm - Courier Services RFP - Q&A Document v3 (5-24-21).xlsx (33.2 KB)
+│   │   │   │   ├── 📈 APDerm - Courier Services RFP (5-7-21).xlsx (174.7 KB)
+│   │   │   │   └── 📈 APDerm - Courier Services RFP - Draft vF (5-7-21).xlsx (175.1 KB)
+│   │   │   ├── 📁 zOld/
+│   │   │   │   ├── 📈 APDerm - Courier Services RFP - Draft v2 (4-27-21).xlsx (171.1 KB)
+│   │   │   │   ├── 📈 APDerm - Courier Services RFQ - Draft v1 (4-12-21).xlsx (2.1 MB)
+│   │   │   │   └── 📈 APDerm - Courier Services RFQ - Draft v2 (4-12-21).xlsx (171.8 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP (5-7-21).xlsx (187.5 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Draft v3 (4-27-21).xlsx (176.3 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Draft v4 (4-27-21).xlsx (177.6 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Draft v5 (5-3-21).xlsx (179.3 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Draft v6 (5-3-21).xlsx (178.3 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Draft v7 (5-7-21).xlsx (178.5 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Draft vF (5-7-21).xlsx (166.5 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Vendor Outreach.xlsx (21.1 KB)
+│   │   │   ├── 📈 Copy of courier services update - Caitlin+JV Notes.xlsx (47.1 KB)
+│   │   │   ├── 📈 RFP Contacts v2.xlsx (27.4 KB)
+│   │   │   └── 📈 RFP Contacts.xlsx (24.0 KB)
+│   │   ├── 📁 3. Q&A/
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Q&A Document v1 (5-18-21).xlsx (26.9 KB)
+│   │   │   └── 📈 APDerm - Courier Services RFP - Q&A Document v2 (5-19-21).xlsx (31.0 KB)
+│   │   ├── 📁 4. RFP Responses/
+│   │   │   ├── 📁 Airspace (Responding Tuesday)/
+│   │   │   │   ├── 📈 APDerm Pricing FV.xlsx (190.9 KB)
+│   │   │   │   └── 📄 Shareable Overview.pdf (11.6 MB)
+│   │   │   ├── 📁 Exec Logistics Group/
+│   │   │   │   ├── 📈 APDerm - Courier Services RFP (5-7-21)   Final .xlsx (197.3 KB)
+│   │   │   │   ├── 📊 ELG Pathogen Training.ppt (2.8 MB)
+│   │   │   │   ├── 📝 HIPAA Confidentiality and Non.docx (94.4 KB)
+│   │   │   │   ├── 📝 REFERENCES  2021.doc (99.0 KB)
+│   │   │   │   └── 📝 Value RX SOP May 2019.docx (744.0 KB)
+│   │   │   ├── 📁 Millers Express/
+│   │   │   │   └── 📈 Copy of Copy of APDerm - Courier Services RFP Presentation.xlsx (197.2 KB)
+│   │   │   ├── 📁 Skycom (RTD Logistics)/
+│   │   │   │   ├── 📈 Exhibit A - RTD Response APDerm - Courier Services RFP).xlsx (197.2 KB)
+│   │   │   │   ├── 📄 Exhibit B - RTD_Best Practices.pdf (786.9 KB)
+│   │   │   │   ├── 📄 Exhibit C - RTD_Online Client Portal.pdf (1.3 MB)
+│   │   │   │   ├── 📈 Exhibit D - RTD 12 Month Metrics APDerm.xlsx (25.3 KB)
+│   │   │   │   └── 📄 RTD Skycom Proposal - Adult and Pediatric Dermatology.pdf (833.7 KB)
+│   │   │   ├── 📁 USA Couriers/
+│   │   │   │   ├── 📈 Copy of APDerm - Courier Services RFP (5-7-21).xlsx (182.5 KB)
+│   │   │   │   ├── 📄 COVID RESPONSE.pdf (483.6 KB)
+│   │   │   │   ├── 📝 HIPAA HITECH WISP.doc (139.0 KB)
+│   │   │   │   ├── 📄 Infectious_Substances(04_07).pdf (2.5 MB)
+│   │   │   │   ├── 📝 Problem resolution.docx (87.4 KB)
+│   │   │   │   ├── 📄 spill_report_form.pdf (158.1 KB)
+│   │   │   │   ├── 📄 universal precautions.pdf (158.3 KB)
+│   │   │   │   └── 📝 video list.docx (27.1 KB)
+│   │   │   └── 📁 Xpressman/
+│   │   │       ├── 📄 WBENC 2020 Certification.pdf (332.2 KB)
+│   │   │       ├── 📈 Xpressman APDerm - Courier Services RFP (5-7-21) FINAL FINAL.xlsx (194.6 KB)
+│   │   │       └── 📄 Xpressman Staff Training Sample 2020.pdf (111.5 KB)
+│   │   ├── 📁 5. Award Feedback/
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Potential Award - Millers (7-6-21).xlsx (47.9 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Potential Award - Millers.xlsx (44.9 KB)
+│   │   │   ├── 📈 APDerm - Courier Services RFP - Potential Award - Xpressman (7-6-21).xlsx (43.4 KB)
+│   │   │   └── 📈 APDerm - Courier Services RFP - Potential Award - Xpressman.xlsx (46.7 KB)
+│   │   ├── 📁 6. Contracting/
+│   │   │   ├── 📁 Drafts/
+│   │   │   │   ├── 📁 Shared Agreement Review/
+│   │   │   │   │   ├── 📝 Millers Express - Courier Services Amendment (8-9-2021).docx (56.6 KB)
+│   │   │   │   │   ├── 📝 Xpressman AP DERM Contract  7 2021 T (Treya Reviewed).docx (55.2 KB)
+│   │   │   │   │   ├── 📝 Xpressman AP DERM Contract  8-8-21 (Redlined).DOCX (62.8 KB)
+│   │   │   │   │   └── 📝 Xpressman AP DERM Contract (8-16-2021).docx (54.9 KB)
+│   │   │   │   ├── 📝 Xpressman AP DERM Contract  7 2021 T (Treya Reviewed v1) BDM.docx (58.6 KB)
+│   │   │   │   ├── 📝 Xpressman AP DERM Contract  7 2021 T (Treya Reviewed v1).docx (57.6 KB)
+│   │   │   │   └── 📝 Xpressman AP DERM Contract  8-8-21 (Redlined).DOCX (55.1 KB)
+│   │   │   ├── 📝 APDerm and Millers Express - Courier Services Amendment DRAFT (7-23-2021).docx (57.6 KB)
+│   │   │   ├── 📝 MILLERS CONTRACT DRAFT.docx (56.8 KB)
+│   │   │   ├── 📈 Millers Express - APDerm -Addendum  Courier Services 7-13-2021.xlsx (52.6 KB)
+│   │   │   ├── 📄 Xpressman AP DERM Contract (8-16-2021).docx.pdf (3.0 MB)
+│   │   │   └── 📝 Xpressman Customer Information (09-08-2021).docx (38.6 KB)
+│   │   ├── 📁 X. Map/
+│   │   │   ├── 📎 APDerm - Courier Services Data - Skycom v5.xlsm (4.8 MB)
+│   │   │   └── 📎 APDerm - PowerBI Routes Updated v6 (06-15-2021).xlsm (4.8 MB)
+│   │   ├── 📁 zzzTrainingCaseStudy/
+│   │   │   ├── 📈 CASE STUDY.xlsx (4.9 MB)
+│   │   │   ├── 📝 Excel Model Training - Courier Exhibit A Pricing & Routes.docx (33.8 KB)
+│   │   │   ├── 📈 Excel Modeling - Bid Sheet RFP.xlsx (22.2 KB)
+│   │   │   └── 📝 Exhibit A.docx (36.8 KB)
+│   │   ├── 📎 APDerm - Courier Map.pbix (515.8 KB)
+│   │   ├── 📈 APDerm - Courier Services RFP - R1 Analysis v2.xlsx (137.2 KB)
+│   │   ├── 📈 APDerm - Courier Services RFP - R1 Analysis v3 (Shared).xlsx (137.3 KB)
+│   │   ├── 📈 APDerm - Courier Services RFP - R1 Analysis.xlsx (101.5 KB)
+│   │   ├── 📈 APDerm - Courier Services RFP - Savings Analysis v4 (APDerm Feedback).xlsx (83.6 KB)
+│   │   ├── 📈 APDerm - Courier Services RFP - Savings Analysis v4 (APDerm Ver).xlsx (80.1 KB)
+│   │   ├── 📈 APDerm - Courier Services RFP - Savings Analysis v4 (Xpressman Feedback).xlsx (75.5 KB)
+│   │   ├── 📈 APDerm - Courier Services RFP - Savings Analysis v5.xlsx (87.3 KB)
+│   │   └── 📈 CASE STUDY.xlsx (4.9 MB)
+│   ├── 📁 Employee Benefits/
+│   │   ├── 📁 APDerm/
+│   │   │   ├── 📁 Danielle Mulholland - 2/
+│   │   │   │   └── 📁 Folder 2/
+│   │   │   │       ├── 📁 MGT/
+│   │   │   │       │   ├── 📁 EyeMed/
+│   │   │   │       │   │   └── 📄 Final Benefit Summary_AAPDerm P.C._2020-01-01.pdf (3.6 MB)
+│   │   │   │       │   ├── 📁 MetLife/
+│   │   │   │       │   │   ├── 📁 Benefit Summaries and Outline of Coverage Disclosures/
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill summary.pdf (72.5 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill.pdf (80.9 KB)
+│   │   │   │       │   │   ├── 📄 Feb metLife details.pdf (3.5 MB)
+│   │   │   │       │   │   ├── 📄 TS_05969046_DV1_CS1_LI_CERT.pdf (473.2 KB)
+│   │   │   │       │   │   └── 📄 TS_05969046_DV1_CS1_LV_CERT.pdf (701.9 KB)
+│   │   │   │       │   ├── 📁 UHC Medical and Dental/
+│   │   │   │       │   │   ├── 📄 AP Derm Management LLC UHC Dental Summary.pdf (280.9 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HDHP PPO $3,000 Plan SBC.pdf (491.3 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HRA Choice Plus Traditional Plan SBC.pdf (926.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_660557755701.csv (55.6 KB)
+│   │   │   │       │   │   └── 📄 invoice_660557755701.pdf (147.5 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Management-BAAG-FINAL 120420.pdf (1.4 MB)
+│   │   │   │       ├── 📁 Norton LifeLock MGT and PC/
+│   │   │   │       │   ├── 📄 CUSTOMER_INVOICE_10010301521.pdf (73.1 KB)
+│   │   │   │       │   ├── 📈 E0009168_APDERM_Manageme_NortonLifeLock_Invoice_Detail_2102127198.csv (2.8 KB)
+│   │   │   │       │   ├── 📄 NortonLifeLock Flyer with Pricing - AP DERM.pdf (1.0 MB)
+│   │   │   │       │   └── 📄 NortonLifeLock Plan Features Guide.pdf (512.6 KB)
+│   │   │   │       ├── 📁 PC/
+│   │   │   │       │   ├── 📁 BCBS medical/
+│   │   │   │       │   │   ├── 📄 Access Blue NE Saver $3k.pdf (377.5 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 002367214 4.1.2021 Premium.pdf (13.9 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 004066964 4.1.2021 Premium.pdf (10.4 KB)
+│   │   │   │       │   │   └── 📄 Preferred Blue PPO $2900.pdf (371.1 KB)
+│   │   │   │       │   ├── 📁 UHC Dental/
+│   │   │   │       │   │   ├── 📄 Dental High X9683.pdf (59.8 KB)
+│   │   │   │       │   │   ├── 📄 Dental Low P5426.pdf (61.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_367392438982.csv (3.2 KB)
+│   │   │   │       │   │   └── 📄 invoice_367392438982.pdf (145.2 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Clinicians-BAAG-v8.pdf (690.9 KB)
+│   │   │   │       └── 📁 PetInsurance MGT and PC/
+│   │   │   │           ├── 📄 Nationwide Pet Insurance Summary.pdf (133.4 KB)
+│   │   │   │           ├── 📄 Nationwide Pet Protection Insurance.pdf (264.6 KB)
+│   │   │   │           └── 📄 Paylogix Period ending 3.31.2021.pdf (244.6 KB)
+│   │   │   ├── 📁 Danielle Mulholland - 3/
+│   │   │   │   └── 📁 Folder 3/
+│   │   │   │       ├── 📁 MGT/
+│   │   │   │       │   ├── 📁 EyeMed/
+│   │   │   │       │   │   └── 📄 Final Benefit Summary_AAPDerm P.C._2020-01-01.pdf (3.6 MB)
+│   │   │   │       │   ├── 📁 MetLife/
+│   │   │   │       │   │   ├── 📁 Benefit Summaries and Outline of Coverage Disclosures/
+│   │   │   │       │   │   │   ├── 📝 Accident On-Ballot Language.docx (27.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Accident Outline of Coverage_AP Derm.pdf (2.8 MB)
+│   │   │   │       │   │   │   ├── 📄 Accident Regulatory Disclosure.pdf (683.5 KB)
+│   │   │   │       │   │   │   ├── 📄 Accident Summary_AP Derm.pdf (142.1 KB)
+│   │   │   │       │   │   │   ├── 📝 Critical Illness On Ballot Language.docx (27.8 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Outline of Coverage_MA.ME.RI Residents_AP Derm.pdf (206.4 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Outline of Coverage_NH Residents_AP Derm.pdf (204.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Regulatory Disclosure_No Pre-Ex.pdf (635.3 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Summary_AP Derm.pdf (135.9 KB)
+│   │   │   │       │   │   │   ├── 📝 Hospital Indemnity On-Ballot Language.docx (27.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Outline of Coverage_AP Derm.pdf (4.1 MB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Regulatory Disclosure.pdf (683.2 KB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Summary_AP Derm.pdf (103.4 KB)
+│   │   │   │       │   │   │   ├── 📄 STD Summary_Hired Before 1.1.21.pdf (167.9 KB)
+│   │   │   │       │   │   │   └── 📄 STD Summary_Hired OnAfter 1.1.21.pdf (168.3 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill summary.pdf (72.5 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill.pdf (80.9 KB)
+│   │   │   │       │   │   ├── 📄 Feb metLife details.pdf (3.5 MB)
+│   │   │   │       │   │   ├── 📄 TS_05969046_DV1_CS1_LI_CERT.pdf (473.2 KB)
+│   │   │   │       │   │   └── 📄 TS_05969046_DV1_CS1_LV_CERT.pdf (701.9 KB)
+│   │   │   │       │   ├── 📁 UHC Medical and Dental/
+│   │   │   │       │   │   ├── 📄 AP Derm Management LLC UHC Dental Summary.pdf (280.9 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HDHP PPO $3,000 Plan SBC.pdf (491.3 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HRA Choice Plus Traditional Plan SBC.pdf (926.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_660557755701.csv (55.6 KB)
+│   │   │   │       │   │   └── 📄 invoice_660557755701.pdf (147.5 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Management-BAAG-FINAL 120420.pdf (1.4 MB)
+│   │   │   │       ├── 📁 Norton LifeLock MGT and PC/
+│   │   │   │       │   ├── 📄 CUSTOMER_INVOICE_10010301521.pdf (73.1 KB)
+│   │   │   │       │   ├── 📈 E0009168_APDERM_Manageme_NortonLifeLock_Invoice_Detail_2102127198.csv (2.8 KB)
+│   │   │   │       │   ├── 📄 NortonLifeLock Flyer with Pricing - AP DERM.pdf (1.0 MB)
+│   │   │   │       │   └── 📄 NortonLifeLock Plan Features Guide.pdf (512.6 KB)
+│   │   │   │       ├── 📁 PC/
+│   │   │   │       │   ├── 📁 BCBS medical/
+│   │   │   │       │   │   ├── 📄 Access Blue NE Saver $3k.pdf (377.5 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 002367214 4.1.2021 Premium.pdf (13.9 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 004066964 4.1.2021 Premium.pdf (10.4 KB)
+│   │   │   │       │   │   └── 📄 Preferred Blue PPO $2900.pdf (371.1 KB)
+│   │   │   │       │   ├── 📁 UHC Dental/
+│   │   │   │       │   │   ├── 📄 Dental High X9683.pdf (59.8 KB)
+│   │   │   │       │   │   ├── 📄 Dental Low P5426.pdf (61.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_367392438982.csv (3.2 KB)
+│   │   │   │       │   │   └── 📄 invoice_367392438982.pdf (145.2 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Clinicians-BAAG-v8.pdf (690.9 KB)
+│   │   │   │       └── 📁 PetInsurance MGT and PC/
+│   │   │   │           ├── 📄 Nationwide Pet Insurance Summary.pdf (133.4 KB)
+│   │   │   │           ├── 📄 Nationwide Pet Protection Insurance.pdf (264.6 KB)
+│   │   │   │           └── 📄 Paylogix Period ending 3.31.2021.pdf (244.6 KB)
+│   │   │   ├── 📁 Danielle Mulholland - 4/
+│   │   │   │   └── 📁 Folder 4/
+│   │   │   │       ├── 📁 MGT/
+│   │   │   │       │   ├── 📁 EyeMed/
+│   │   │   │       │   │   └── 📄 Final Benefit Summary_AAPDerm P.C._2020-01-01.pdf (3.6 MB)
+│   │   │   │       │   ├── 📁 MetLife/
+│   │   │   │       │   │   ├── 📁 Benefit Summaries and Outline of Coverage Disclosures/
+│   │   │   │       │   │   │   ├── 📝 Accident On-Ballot Language.docx (27.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Accident Outline of Coverage_AP Derm.pdf (2.8 MB)
+│   │   │   │       │   │   │   ├── 📄 Accident Regulatory Disclosure.pdf (683.5 KB)
+│   │   │   │       │   │   │   ├── 📄 Accident Summary_AP Derm.pdf (142.1 KB)
+│   │   │   │       │   │   │   ├── 📝 Critical Illness On Ballot Language.docx (27.8 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Outline of Coverage_MA.ME.RI Residents_AP Derm.pdf (206.4 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Outline of Coverage_NH Residents_AP Derm.pdf (204.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Regulatory Disclosure_No Pre-Ex.pdf (635.3 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Summary_AP Derm.pdf (135.9 KB)
+│   │   │   │       │   │   │   ├── 📝 Hospital Indemnity On-Ballot Language.docx (27.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Outline of Coverage_AP Derm.pdf (4.1 MB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Regulatory Disclosure.pdf (683.2 KB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Summary_AP Derm.pdf (103.4 KB)
+│   │   │   │       │   │   │   ├── 📄 STD Summary_Hired Before 1.1.21.pdf (167.9 KB)
+│   │   │   │       │   │   │   └── 📄 STD Summary_Hired OnAfter 1.1.21.pdf (168.3 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill summary.pdf (72.5 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill.pdf (80.9 KB)
+│   │   │   │       │   │   ├── 📄 Feb metLife details.pdf (3.5 MB)
+│   │   │   │       │   │   ├── 📄 TS_05969046_DV1_CS1_LI_CERT.pdf (473.2 KB)
+│   │   │   │       │   │   └── 📄 TS_05969046_DV1_CS1_LV_CERT.pdf (701.9 KB)
+│   │   │   │       │   ├── 📁 UHC Medical and Dental/
+│   │   │   │       │   │   ├── 📄 AP Derm Management LLC UHC Dental Summary.pdf (280.9 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HDHP PPO $3,000 Plan SBC.pdf (491.3 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HRA Choice Plus Traditional Plan SBC.pdf (926.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_660557755701.csv (55.6 KB)
+│   │   │   │       │   │   └── 📄 invoice_660557755701.pdf (147.5 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Management-BAAG-FINAL 120420.pdf (1.4 MB)
+│   │   │   │       ├── 📁 Norton LifeLock MGT and PC/
+│   │   │   │       │   ├── 📄 CUSTOMER_INVOICE_10010301521.pdf (73.1 KB)
+│   │   │   │       │   ├── 📈 E0009168_APDERM_Manageme_NortonLifeLock_Invoice_Detail_2102127198.csv (2.8 KB)
+│   │   │   │       │   ├── 📄 NortonLifeLock Flyer with Pricing - AP DERM.pdf (1.0 MB)
+│   │   │   │       │   └── 📄 NortonLifeLock Plan Features Guide.pdf (512.6 KB)
+│   │   │   │       ├── 📁 PC/
+│   │   │   │       │   ├── 📁 BCBS medical/
+│   │   │   │       │   │   ├── 📄 Access Blue NE Saver $3k.pdf (377.5 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 002367214 4.1.2021 Premium.pdf (13.9 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 004066964 4.1.2021 Premium.pdf (10.4 KB)
+│   │   │   │       │   │   └── 📄 Preferred Blue PPO $2900.pdf (371.1 KB)
+│   │   │   │       │   ├── 📁 UHC Dental/
+│   │   │   │       │   │   ├── 📄 Dental High X9683.pdf (59.8 KB)
+│   │   │   │       │   │   ├── 📄 Dental Low P5426.pdf (61.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_367392438982.csv (3.2 KB)
+│   │   │   │       │   │   └── 📄 invoice_367392438982.pdf (145.2 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Clinicians-BAAG-v8.pdf (690.9 KB)
+│   │   │   │       └── 📁 PetInsurance MGT and PC/
+│   │   │   │           ├── 📄 Nationwide Pet Insurance Summary.pdf (133.4 KB)
+│   │   │   │           ├── 📄 Nationwide Pet Protection Insurance.pdf (264.6 KB)
+│   │   │   │           └── 📄 Paylogix Period ending 3.31.2021.pdf (244.6 KB)
+│   │   │   ├── 📁 Danielle Mulholland - 5/
+│   │   │   │   └── 📁 Folder 5/
+│   │   │   │       ├── 📁 MGT/
+│   │   │   │       │   ├── 📁 EyeMed/
+│   │   │   │       │   │   └── 📄 Final Benefit Summary_AAPDerm P.C._2020-01-01.pdf (3.6 MB)
+│   │   │   │       │   ├── 📁 MetLife/
+│   │   │   │       │   │   ├── 📁 Benefit Summaries and Outline of Coverage Disclosures/
+│   │   │   │       │   │   │   ├── 📝 Accident On-Ballot Language.docx (27.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Accident Outline of Coverage_AP Derm.pdf (2.8 MB)
+│   │   │   │       │   │   │   ├── 📄 Accident Regulatory Disclosure.pdf (683.5 KB)
+│   │   │   │       │   │   │   ├── 📄 Accident Summary_AP Derm.pdf (142.1 KB)
+│   │   │   │       │   │   │   ├── 📝 Critical Illness On Ballot Language.docx (27.8 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Outline of Coverage_MA.ME.RI Residents_AP Derm.pdf (206.4 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Outline of Coverage_NH Residents_AP Derm.pdf (204.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Regulatory Disclosure_No Pre-Ex.pdf (635.3 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Summary_AP Derm.pdf (135.9 KB)
+│   │   │   │       │   │   │   ├── 📝 Hospital Indemnity On-Ballot Language.docx (27.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Outline of Coverage_AP Derm.pdf (4.1 MB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Regulatory Disclosure.pdf (683.2 KB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Summary_AP Derm.pdf (103.4 KB)
+│   │   │   │       │   │   │   ├── 📄 STD Summary_Hired Before 1.1.21.pdf (167.9 KB)
+│   │   │   │       │   │   │   └── 📄 STD Summary_Hired OnAfter 1.1.21.pdf (168.3 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill summary.pdf (72.5 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill.pdf (80.9 KB)
+│   │   │   │       │   │   ├── 📄 Feb metLife details.pdf (3.5 MB)
+│   │   │   │       │   │   ├── 📄 TS_05969046_DV1_CS1_LI_CERT.pdf (473.2 KB)
+│   │   │   │       │   │   └── 📄 TS_05969046_DV1_CS1_LV_CERT.pdf (701.9 KB)
+│   │   │   │       │   ├── 📁 UHC Medical and Dental/
+│   │   │   │       │   │   ├── 📄 AP Derm Management LLC UHC Dental Summary.pdf (280.9 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HDHP PPO $3,000 Plan SBC.pdf (491.3 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HRA Choice Plus Traditional Plan SBC.pdf (926.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_660557755701.csv (55.6 KB)
+│   │   │   │       │   │   └── 📄 invoice_660557755701.pdf (147.5 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Management-BAAG-FINAL 120420.pdf (1.4 MB)
+│   │   │   │       ├── 📁 Norton LifeLock MGT and PC/
+│   │   │   │       │   ├── 📄 CUSTOMER_INVOICE_10010301521.pdf (73.1 KB)
+│   │   │   │       │   ├── 📈 E0009168_APDERM_Manageme_NortonLifeLock_Invoice_Detail_2102127198.csv (2.8 KB)
+│   │   │   │       │   ├── 📄 NortonLifeLock Flyer with Pricing - AP DERM.pdf (1.0 MB)
+│   │   │   │       │   └── 📄 NortonLifeLock Plan Features Guide.pdf (512.6 KB)
+│   │   │   │       ├── 📁 PC/
+│   │   │   │       │   ├── 📁 BCBS medical/
+│   │   │   │       │   │   ├── 📄 Access Blue NE Saver $3k.pdf (377.5 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 002367214 4.1.2021 Premium.pdf (13.9 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 004066964 4.1.2021 Premium.pdf (10.4 KB)
+│   │   │   │       │   │   └── 📄 Preferred Blue PPO $2900.pdf (371.1 KB)
+│   │   │   │       │   ├── 📁 UHC Dental/
+│   │   │   │       │   │   ├── 📄 Dental High X9683.pdf (59.8 KB)
+│   │   │   │       │   │   ├── 📄 Dental Low P5426.pdf (61.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_367392438982.csv (3.2 KB)
+│   │   │   │       │   │   └── 📄 invoice_367392438982.pdf (145.2 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Clinicians-BAAG-v8.pdf (690.9 KB)
+│   │   │   │       └── 📁 PetInsurance MGT and PC/
+│   │   │   │           ├── 📄 Nationwide Pet Insurance Summary.pdf (133.4 KB)
+│   │   │   │           ├── 📄 Nationwide Pet Protection Insurance.pdf (264.6 KB)
+│   │   │   │           └── 📄 Paylogix Period ending 3.31.2021.pdf (244.6 KB)
+│   │   │   ├── 📁 Danielle Mulholland - 6/
+│   │   │   │   └── 📁 Folder 6/
+│   │   │   │       ├── 📁 MGT/
+│   │   │   │       │   ├── 📁 EyeMed/
+│   │   │   │       │   │   └── 📄 Final Benefit Summary_AAPDerm P.C._2020-01-01.pdf (3.6 MB)
+│   │   │   │       │   ├── 📁 MetLife/
+│   │   │   │       │   │   ├── 📁 Benefit Summaries and Outline of Coverage Disclosures/
+│   │   │   │       │   │   │   ├── 📝 Accident On-Ballot Language.docx (27.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Accident Outline of Coverage_AP Derm.pdf (2.8 MB)
+│   │   │   │       │   │   │   ├── 📄 Accident Regulatory Disclosure.pdf (683.5 KB)
+│   │   │   │       │   │   │   ├── 📄 Accident Summary_AP Derm.pdf (142.1 KB)
+│   │   │   │       │   │   │   ├── 📝 Critical Illness On Ballot Language.docx (27.8 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Outline of Coverage_MA.ME.RI Residents_AP Derm.pdf (206.4 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Outline of Coverage_NH Residents_AP Derm.pdf (204.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Regulatory Disclosure_No Pre-Ex.pdf (635.3 KB)
+│   │   │   │       │   │   │   ├── 📄 Critical Illness Summary_AP Derm.pdf (135.9 KB)
+│   │   │   │       │   │   │   ├── 📝 Hospital Indemnity On-Ballot Language.docx (27.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Outline of Coverage_AP Derm.pdf (4.1 MB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Regulatory Disclosure.pdf (683.2 KB)
+│   │   │   │       │   │   │   ├── 📄 Hospital Indemnity Summary_AP Derm.pdf (103.4 KB)
+│   │   │   │       │   │   │   ├── 📄 STD Summary_Hired Before 1.1.21.pdf (167.9 KB)
+│   │   │   │       │   │   │   └── 📄 STD Summary_Hired OnAfter 1.1.21.pdf (168.3 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill summary.pdf (72.5 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill.pdf (80.9 KB)
+│   │   │   │       │   │   ├── 📄 Feb metLife details.pdf (3.5 MB)
+│   │   │   │       │   │   ├── 📄 TS_05969046_DV1_CS1_LI_CERT.pdf (473.2 KB)
+│   │   │   │       │   │   └── 📄 TS_05969046_DV1_CS1_LV_CERT.pdf (701.9 KB)
+│   │   │   │       │   ├── 📁 UHC Medical and Dental/
+│   │   │   │       │   │   ├── 📄 AP Derm Management LLC UHC Dental Summary.pdf (280.9 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HDHP PPO $3,000 Plan SBC.pdf (491.3 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HRA Choice Plus Traditional Plan SBC.pdf (926.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_660557755701.csv (55.6 KB)
+│   │   │   │       │   │   └── 📄 invoice_660557755701.pdf (147.5 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Management-BAAG-FINAL 120420.pdf (1.4 MB)
+│   │   │   │       ├── 📁 Norton LifeLock MGT and PC/
+│   │   │   │       │   ├── 📄 CUSTOMER_INVOICE_10010301521.pdf (73.1 KB)
+│   │   │   │       │   ├── 📈 E0009168_APDERM_Manageme_NortonLifeLock_Invoice_Detail_2102127198.csv (2.8 KB)
+│   │   │   │       │   ├── 📄 NortonLifeLock Flyer with Pricing - AP DERM.pdf (1.0 MB)
+│   │   │   │       │   └── 📄 NortonLifeLock Plan Features Guide.pdf (512.6 KB)
+│   │   │   │       ├── 📁 PC/
+│   │   │   │       │   ├── 📁 BCBS medical/
+│   │   │   │       │   │   ├── 📄 Access Blue NE Saver $3k.pdf (377.5 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 002367214 4.1.2021 Premium.pdf (13.9 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 004066964 4.1.2021 Premium.pdf (10.4 KB)
+│   │   │   │       │   │   └── 📄 Preferred Blue PPO $2900.pdf (371.1 KB)
+│   │   │   │       │   ├── 📁 UHC Dental/
+│   │   │   │       │   │   ├── 📄 Dental High X9683.pdf (59.8 KB)
+│   │   │   │       │   │   ├── 📄 Dental Low P5426.pdf (61.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_367392438982.csv (3.2 KB)
+│   │   │   │       │   │   └── 📄 invoice_367392438982.pdf (145.2 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Clinicians-BAAG-v8.pdf (690.9 KB)
+│   │   │   │       └── 📁 PetInsurance MGT and PC/
+│   │   │   │           ├── 📄 Nationwide Pet Insurance Summary.pdf (133.4 KB)
+│   │   │   │           ├── 📄 Nationwide Pet Protection Insurance.pdf (264.6 KB)
+│   │   │   │           └── 📄 Paylogix Period ending 3.31.2021.pdf (244.6 KB)
+│   │   │   ├── 📁 Danielle Mulholland - AP Derm 2019 Renewal Data/
+│   │   │   │   └── 📁 AP Derm 2019 Renewal Data/
+│   │   │   │       ├── 📁 COMMUNICATIONS/
+│   │   │   │       │   ├── 📁 GUIDE/
+│   │   │   │       │   │   ├── 📄 MGMT 2019.pdf (7.4 MB)
+│   │   │   │       │   │   └── 📄 PC 2019.pdf (7.3 MB)
+│   │   │   │       │   └── 📁 PPT/
+│   │   │   │       │       ├── 📊 2019 AP Derm Benefits Enrollment.PPTX (37.4 MB)
+│   │   │   │       │       └── 📊 2019 Benefits Open Enrollment Mystic Valley Staff.pptx (2.5 MB)
+│   │   │   │       ├── 📁 PLAN DOCUMENTS/
+│   │   │   │       │   ├── 📁 Mgmt/
+│   │   │   │       │   │   ├── 📁 BCBS of MA/
+│   │   │   │       │   │   │   ├── 📁 HMO/
+│   │   │   │       │   │   │   │   ├── 📄 APDerm _Blue_NE_Saver_2000 SOB Staff.pdf (609.0 KB)
+│   │   │   │       │   │   │   │   ├── 📄 APDerm Management  LLC Access_Blue_NE_Saver_2000 SBC.PDF (620.2 KB)
+│   │   │   │       │   │   │   │   └── 📄 HMO Subscriber Cert. 004063475.pdf (3.5 MB)
+│   │   │   │       │   │   │   └── 📁 PPO/
+│   │   │   │       │   │   │       ├── 📄 APDerm Management  LLC Preferred_Blue_Saver_2000 SBC.PDF (620.4 KB)
+│   │   │   │       │   │   │       ├── 📄 APDerm Preferred_Blue_Saver_2000 SOB Staff.pdf (453.6 KB)
+│   │   │   │       │   │   │       └── 📄 PPO Subscriber Cert. 002358016.pdf (3.5 MB)
+│   │   │   │       │   │   └── 📁 Unum/
+│   │   │   │       │   │       ├── 📄 APDERM Management LLC Dental Certificate - High Plan.pdf (1.6 MB)
+│   │   │   │       │   │       ├── 📄 APDERM Management LLC Dental Certificate - Low Plan.pdf (1.6 MB)
+│   │   │   │       │   │       ├── 📄 APDERM Management LLCD Dental Benefit Summary - High Plan.pdf (125.7 KB)
+│   │   │   │       │   │       └── 📄 APDERM Managment LLC Dental Benefit Summary - Low Plan.pdf (138.6 KB)
+│   │   │   │       │   ├── 📁 PC/
+│   │   │   │       │   │   ├── 📁 BCBS of MA/
+│   │   │   │       │   │   │   ├── 📁 HMO/
+│   │   │   │       │   │   │   │   ├── 📄 Access Blue NE Saver SBC.PDF (620.2 KB)
+│   │   │   │       │   │   │   │   ├── 📄 Access Blue NE Saver SOB.pdf (609.0 KB)
+│   │   │   │       │   │   │   │   └── 📄 HMO Subscriber Cert. 004066964.pdf (3.5 MB)
+│   │   │   │       │   │   │   └── 📁 PPO/
+│   │   │   │       │   │   │       ├── 📄 PPO Suscriber Cert. 002367214.pdf (3.5 MB)
+│   │   │   │       │   │   │       ├── 📄 Preferred Blue PPO Saver $2,000 SBC.PDF (620.4 KB)
+│   │   │   │       │   │   │       └── 📄 Preferred Blue PPO Saver $2,000 SOB.pdf (453.6 KB)
+│   │   │   │       │   │   └── 📁 Unum/
+│   │   │   │       │   │       ├── 📄 Adult & Pediat. Dermatology Dental Benefit Summary - High Plan.pdf (125.8 KB)
+│   │   │   │       │   │       ├── 📄 Adult & Pediat. Dermatology Dental Benefit Summary - Low Plan.pdf (138.3 KB)
+│   │   │   │       │   │       ├── 📄 Adult & Pediat. Dermatology Dental Certificate - High Plan.pdf (1.6 MB)
+│   │   │   │       │   │       └── 📄 Adult & Pediat. Dermatology Dental Certificate - Low Plan.pdf (1.6 MB)
+│   │   │   │       │   └── 📝 Plan Information 2019 AP Derm Mgmt and AP Derm PC.docx (52.4 KB)
+│   │   │   │       └── 📁 RATES - CONTRIBUTIONS/
+│   │   │   │           ├── 📈 Ap Derm Contributions 2018 v 2019.xlsx (58.4 KB)
+│   │   │   │           └── 📝 SOLD 2019 DENTAL - UNUM Mgmt and PC.docx (367.3 KB)
+│   │   │   ├── 📁 Danielle Mulholland - AP Derm 2020 Renewal/
+│   │   │   │   └── 📁 AP Derm 2020 Renewal/
+│   │   │   │       ├── 📁 Communications/
+│   │   │   │       │   ├── 📁 Guide/
+│   │   │   │       │   │   ├── 📄 2020-AP-Derm-Clinicians-BAAG-Final-121619.pdf (362.0 KB)
+│   │   │   │       │   │   └── 📄 2020-AP-Derm-Management-BAAG-v9 FINAL.pdf (841.2 KB)
+│   │   │   │       │   └── 📁 PPT - Brainshark/
+│   │   │   │       │       ├── 📊 AP Derm Mgmt 2020 Benefits.pptx (2.7 MB)
+│   │   │   │       │       ├── 📊 AP Derm PC 2020 Benefits.pptx (2.0 MB)
+│   │   │   │       │       ├── 📧 RE_ AP Derm Brainshark - Mgmt Company - UPDATED.msg (74.0 KB)
+│   │   │   │       │       └── 📧 RE_ AP Derm PC - Brainshark Link - UPDATED.msg (74.0 KB)
+│   │   │   │       ├── 📁 Plan Documents/
+│   │   │   │       │   ├── 📁 2020 Plan Docs MGMT/
+│   │   │   │       │   │   ├── 📁 Dental/
+│   │   │   │       │   │   │   ├── 📄 AP Derm Management LLC summary.pdf (280.9 KB)
+│   │   │   │       │   │   │   ├── 📄 Dental Policy.pdf (87.2 KB)
+│   │   │   │       │   │   │   ├── 📄 Dental PPO Plan 9P248- 0120.pdf (1.0 MB)
+│   │   │   │       │   │   │   └── 📄 dental-consumer-max-multiplier-$1500.pdf (1.3 MB)
+│   │   │   │       │   │   ├── 📁 Life and Vlife/
+│   │   │   │       │   │   │   ├── 📁 Certs/
+│   │   │   │       │   │   │   │   ├── 📄 TS_05969046_DV1_CS1_LI_CERT.pdf (473.2 KB)
+│   │   │   │       │   │   │   │   └── 📄 TS_05969046_DV1_CS1_LV_CERT.pdf (701.9 KB)
+│   │   │   │       │   │   │   ├── 📁 Policies/
+│   │   │   │       │   │   │   │   ├── 📄 TS_05969046_DV1_CS1_LI_POL.pdf (267.3 KB)
+│   │   │   │       │   │   │   │   └── 📄 TS_05969046_DV1_CS1_LV_POL.pdf (391.1 KB)
+│   │   │   │       │   │   │   ├── 📁 Port and Convert/
+│   │   │   │       │   │   │   │   ├── 📄 Conversion Notice (003).pdf (172.4 KB)
+│   │   │   │       │   │   │   │   └── 📄 NewPort Form (003).pdf (552.7 KB)
+│   │   │   │       │   │   │   └── 📁 Summaries/
+│   │   │   │       │   │   │       ├── 📄 BscLif_5528025_All Active Full-Time Employees_bsum.pdf (111.7 KB)
+│   │   │   │       │   │   │       └── 📄 SupLif_5528025_All Active Full-Time Employees_bsum.pdf (125.6 KB)
+│   │   │   │       │   │   ├── 📁 Medical/
+│   │   │   │       │   │   │   ├── 📁 Policies/
+│   │   │   │       │   │   │   │   ├── 📄 50225243 - MOTION HRA Contract.DOC.pdf (3.5 MB)
+│   │   │   │       │   │   │   │   ├── 📄 50225254 - HRA Plan Contract.DOC.pdf (3.5 MB)
+│   │   │   │       │   │   │   │   ├── 📄 Choice Plus HRA BKL3.pdf (1.9 MB)
+│   │   │   │       │   │   │   │   ├── 📄 Choice Plus HSA ANLK - FINAL.PDF (1.9 MB)
+│   │   │   │       │   │   │   │   └── 📄 Group Policy.pdf (197.0 KB)
+│   │   │   │       │   │   │   ├── 📁 SBC/
+│   │   │   │       │   │   │   │   ├── 📄 UHC MED 920016_Choice_Plus_Plan_ANLK_MA_0120 (1).pdf (550.3 KB)
+│   │   │   │       │   │   │   │   └── 📄 UHC MED 920016_Choice_Plus_Plan_BKL3_MA_0120.pdf (554.8 KB)
+│   │   │   │       │   │   │   └── 📁 Signed ASA/
+│   │   │   │       │   │   │       ├── 📄 AP Derm 920018 MOTION HRA ASA - Fully Signed.pdf (3.6 MB)
+│   │   │   │       │   │   │       └── 📄 AP Derm HRA ASA - Fully Signed.pdf (3.6 MB)
+│   │   │   │       │   │   └── 📁 Vision/
+│   │   │   │       │   │       ├── 📄 APDerm Management_ LLC Certificate Package 1-1-20.pdf (766.7 KB)
+│   │   │   │       │   │       ├── 📄 APDerm Management_ LLC Policy Package 1-1-20.pdf (1.2 MB)
+│   │   │   │       │   │       └── 📄 Final Benefit Summary_APDerm Management.pdf (3.6 MB)
+│   │   │   │       │   └── 📁 2020 Plan Docs PC/
+│   │   │   │       │       ├── 📁 BCBS/
+│   │   │   │       │       │   ├── 📁 Certificates/
+│   │   │   │       │       │   │   ├── 📄 002367214 PPO.pdf (3.6 MB)
+│   │   │   │       │       │   │   └── 📄 004066964 HMO.pdf (3.6 MB)
+│   │   │   │       │       │   └── 📁 SBC/
+│   │   │   │       │       │       ├── 📄 Access Blue New England Saver $2000.pdf (640.5 KB)
+│   │   │   │       │       │       └── 📄 Preferred Blue PPO Saver $2000.pdf (642.4 KB)
+│   │   │   │       │       ├── 📁 EyeMed/
+│   │   │   │       │       │   ├── 📄 Adult _ Pediatric Dermatology P.C. Certificate Package 1-1-20.pdf (767.5 KB)
+│   │   │   │       │       │   ├── 📄 Adult _ Pediatric Dermatology P.C. Policy Package 1-1-20.pdf (705.7 KB)
+│   │   │   │       │       │   └── 📄 Final Benefit Summary_AAPDerm P.C._2020-01-01.pdf (3.6 MB)
+│   │   │   │       │       └── 📁 Unum/
+│   │   │   │       │           ├── 📁 Certificates/
+│   │   │   │       │           │   ├── 📄 Adult & Pediat. Dermatology Dental Certificate - High Plan.pdf (1.6 MB)
+│   │   │   │       │           │   └── 📄 Adult & Pediat. Dermatology Dental Certificate - Low Plan.pdf (1.6 MB)
+│   │   │   │       │           └── 📁 Summaries/
+│   │   │   │       │               ├── 📄 Adult & Pediat. Dermatology Dental Benefit Summary - High Plan.pdf (125.8 KB)
+│   │   │   │       │               └── 📄 Adult & Pediat. Dermatology Dental Benefit Summary - Low Plan.pdf (138.3 KB)
+│   │   │   │       ├── 📁 Presentations/
+│   │   │   │       │   ├── 📄 AP Derm 2020 Renewal and Marketing Presentation UPDATED.pdf (1.6 MB)
+│   │   │   │       │   └── 📄 AP Derm PC 2020 Renewal 10.29.19.pdf (745.6 KB)
+│   │   │   │       └── 📁 Renewal Confirmation/
+│   │   │   │           └── 📄 AP Derm 2020 Renewal Confirmation.pdf (241.2 KB)
+│   │   │   ├── 📁 Danielle Mulholland 1/
+│   │   │   │   └── 📁 noveta/
+│   │   │   │       ├── 📁 MGT/
+│   │   │   │       │   ├── 📁 EyeMed/
+│   │   │   │       │   │   └── 📄 Final Benefit Summary_AAPDerm P.C._2020-01-01.pdf (3.6 MB)
+│   │   │   │       │   ├── 📁 MetLife/
+│   │   │   │       │   │   ├── 📁 Benefit Summaries and Outline of Coverage Disclosures/
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill summary.pdf (72.5 KB)
+│   │   │   │       │   │   ├── 📄 Feb MetLife Bill.pdf (80.9 KB)
+│   │   │   │       │   │   ├── 📄 Feb metLife details.pdf (3.5 MB)
+│   │   │   │       │   │   ├── 📄 TS_05969046_DV1_CS1_LI_CERT.pdf (473.2 KB)
+│   │   │   │       │   │   └── 📄 TS_05969046_DV1_CS1_LV_CERT.pdf (701.9 KB)
+│   │   │   │       │   ├── 📁 UHC Medical and Dental/
+│   │   │   │       │   │   ├── 📄 AP Derm Management LLC UHC Dental Summary.pdf (280.9 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HDHP PPO $3,000 Plan SBC.pdf (491.3 KB)
+│   │   │   │       │   │   ├── 📄 APDERM - HRA Choice Plus Traditional Plan SBC.pdf (926.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_660557755701.csv (55.6 KB)
+│   │   │   │       │   │   └── 📄 invoice_660557755701.pdf (147.5 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Management-BAAG-FINAL 120420.pdf (1.4 MB)
+│   │   │   │       ├── 📁 Norton LifeLock MGT and PC/
+│   │   │   │       │   ├── 📄 CUSTOMER_INVOICE_10010301521.pdf (73.1 KB)
+│   │   │   │       │   ├── 📈 E0009168_APDERM_Manageme_NortonLifeLock_Invoice_Detail_2102127198.csv (2.8 KB)
+│   │   │   │       │   ├── 📄 NortonLifeLock Flyer with Pricing - AP DERM.pdf (1.0 MB)
+│   │   │   │       │   └── 📄 NortonLifeLock Plan Features Guide.pdf (512.6 KB)
+│   │   │   │       ├── 📁 PC/
+│   │   │   │       │   ├── 📁 BCBS medical/
+│   │   │   │       │   │   ├── 📄 Access Blue NE Saver $3k.pdf (377.5 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 002367214 4.1.2021 Premium.pdf (13.9 KB)
+│   │   │   │       │   │   ├── 📄 BCBS 4959046 - 004066964 4.1.2021 Premium.pdf (10.4 KB)
+│   │   │   │       │   │   └── 📄 Preferred Blue PPO $2900.pdf (371.1 KB)
+│   │   │   │       │   ├── 📁 UHC Dental/
+│   │   │   │       │   │   ├── 📄 Dental High X9683.pdf (59.8 KB)
+│   │   │   │       │   │   ├── 📄 Dental Low P5426.pdf (61.4 KB)
+│   │   │   │       │   │   ├── 📈 invoice_367392438982.csv (3.2 KB)
+│   │   │   │       │   │   └── 📄 invoice_367392438982.pdf (145.2 KB)
+│   │   │   │       │   └── 📄 2021-AP-Derm-Clinicians-BAAG-v8.pdf (690.9 KB)
+│   │   │   │       └── 📁 PetInsurance MGT and PC/
+│   │   │   │           ├── 📄 Nationwide Pet Insurance Summary.pdf (133.4 KB)
+│   │   │   │           ├── 📄 Nationwide Pet Protection Insurance.pdf (264.6 KB)
+│   │   │   │           └── 📄 Paylogix Period ending 3.31.2021.pdf (244.6 KB)
+│   │   │   ├── 📄 Danielle Mulholland - ADULT & PEDIATRIC DERMATOLOGY_4959046_January_2020_Client.pdf (115.5 KB)
+│   │   │   ├── 📄 Danielle Mulholland - ADULT & PEDIATRIC DERMATOLOGY_4959046_January_2021_Client.pdf (120.7 KB)
+│   │   │   ├── 🗜️ Danielle Mulholland - AP Derm 2019 Renewal Data.zip (78.1 MB)
+│   │   │   ├── 🗜️ Danielle Mulholland - AP Derm 2020 Renewal.zip (50.6 MB)
+│   │   │   ├── 📈 Danielle Mulholland - AP Derm Claims and Enrollment_20182019.xlsx (26.4 KB)
+│   │   │   ├── 📎 Danielle Mulholland - AP Derm Exhibit_To Lockton.xlsm (1.2 MB)
+│   │   │   ├── 📄 Danielle Mulholland - AP Derm Management LLC Dental Membership Report for 01-2020 - 03-2021.pdf (69.9 KB)
+│   │   │   ├── 📄 Danielle Mulholland - AP Derm Renewal Confirmation 2021.pdf (3.2 MB)
+│   │   │   ├── 📄 Danielle Mulholland - AP Derm_Large Loss Report_2020.PDF (229.0 KB)
+│   │   │   ├── 📄 Danielle Mulholland - APDERM MANAGEMENT LLC 4958367 January 2020 Client.pdf (196.2 KB)
+│   │   │   ├── 📈 Danielle Mulholland - Benefits Census 020321 for Treya.xlsx (985.1 KB)
+│   │   │   ├── 📧 Danielle Mulholland - RE APDerm Additional questions.msg (3.0 MB)
+│   │   │   └── 📧 Danielle Mulholland - UHC Additional Information 4.28.2021.msg (456.5 KB)
+│   │   ├── 📁 APDerm Employee Benefits Documents/
+│   │   │   ├── 📈 AP Derm Claims and Enrollment_20182019 (2).xlsx (26.5 KB)
+│   │   │   ├── 📄 AP Derm Renewal Confirmation 2021.pdf (221.5 KB)
+│   │   │   ├── 📄 APDerm Master Structure Chart 1.23.21.pdf (119.5 KB)
+│   │   │   ├── 📄 BCBS Experience - APDERM MANAGEMENT LLC 4958367 January 2020 Client (3).pdf (113.4 KB)
+│   │   │   ├── 📄 BCBS Renewal - ADULT  PEDIATRIC DERMATOLOGY_4959046_January_2020_Client (2).pdf (114.0 KB)
+│   │   │   ├── 📄 BCBS Renewal - ADULT  PEDIATRIC DERMATOLOGY_4959046_January_2021_Client (1).pdf (119.7 KB)
+│   │   │   ├── 📈 Copy of Benefits Census 020321 for Treya COMPLETE.xlsx (2.2 MB)
+│   │   │   ├── 📈 Copy of Danielle Mulholland - AP Derm Claims and Enrollment_20182019 (1) (1).xlsx (26.5 KB)
+│   │   │   ├── 📈 Employee Benefits Invoice Extrapolation (Mar. 12, 2021).xlsx (80.1 KB)
+│   │   │   ├── 📄 HCC Contrarian Re Implementation Overview - AP Dern - 5.1.21_ (002).pdf (781.8 KB)
+│   │   │   └── 📄 UHC 660556238195 Feb 2021 Premium Invoice.pdf (460.6 KB)
+│   │   ├── 📁 New folder/
+│   │   ├── 📁 Proposal Comparison/
+│   │   │   ├── 📁 Archives/
+│   │   │   │   ├── 📊 APDerm - Employee Benefits Proposal Comparison (Sep. 15, 2021).pptx (2.4 MB)
+│   │   │   │   └── 📈 APDerm - Employee Benefits Savings Comparison (Sep. 15, 2021).xlsx (100.4 KB)
+│   │   │   ├── 📊 APDerm - Employee Benefits Proposal Comparison (Sep. 16, 2021).pptx (2.4 MB)
+│   │   │   ├── 📈 APDerm - Employee Benefits Savings Comparison (Sep. 16, 2021).xlsx (103.5 KB)
+│   │   │   └── 📈 APDerm - Employee Benefits Savings Comparison (Sep. 28, 2021).xlsx (100.3 KB)
+│   │   └── 📁 Treya Analysis/
+│   │       └── 📈 Employee Benefits Analysis - Questions to Ask - Treya (March 19, 2021) v1.xlsx (43.2 KB)
+│   ├── 📁 IT Hardware Software/
+│   │   ├── 📁 RFQ/
+│   │   │   ├── 📁 RFQ Responses/
+│   │   │   │   ├── 📈 APDerm -  IT Hardware RFQ Draft (March 12 2021) vF - Whalley.xlsx (84.6 KB)
+│   │   │   │   ├── 📈 APDerm -  IT Hardware RFQ Draft (March 26 2021) vF - Connection.xlsx (87.7 KB)
+│   │   │   │   └── 📈 APDerm -  IT Hardware RFQ Savings Comparison (April 27, 2021) vF.xlsx (112.0 KB)
+│   │   │   ├── 📈 APDerm -  IT Hardware RFQ Draft (March 12, 2021) vF (Unlocked).xlsx (83.7 KB)
+│   │   │   └── 📈 APDerm -  IT Hardware RFQ Draft (March 12, 2021) vF.xlsx (80.6 KB)
+│   │   └── 📁 Usage Data Received/
+│   │       ├── 📈 Connection - Bill To Purchase History Adult  Pediatric Dermatology.xlsx (126.5 KB)
+│   │       └── 📈 Whalley - APDERM 2018 - 2020 ORDERS.xlsx (82.9 KB)
+│   ├── 📁 Medical Supplies/
+│   │   └── 📁 RFP/
+│   │       └── 📈 APDerm - Medical Supplies RFP Draft (Apr. 2, 2021) v1.xlsx (80.4 KB)
+│   ├── 📁 Office Supplies/
+│   │   ├── 📁 0. Data/
+│   │   │   ├── 📁 Data Request/
+│   │   │   │   └── 📈 APDerm - Office Supplies - Data Request (01 27 2021).xlsx (42.0 KB)
+│   │   │   ├── 📁 Furniture/
+│   │   │   │   └── 📁 C2665593/
+│   │   │   │       ├── 📄 NP_205447910_C2665593.PDF (151.6 KB)
+│   │   │   │       ├── 📄 NP_I63185249_C2665593.PDF (180.5 KB)
+│   │   │   │       ├── 📄 NP_I64012300_C2665593.PDF (93.9 KB)
+│   │   │   │       ├── 📄 NP_I64856521_C2665593.PDF (93.8 KB)
+│   │   │   │       ├── 📄 PM_204012262_C2665593.PDF (121.0 KB)
+│   │   │   │       ├── 📄 PM_204362489_C2665593.PDF (93.6 KB)
+│   │   │   │       ├── 📄 PM_205051881_C2665593.PDF (93.6 KB)
+│   │   │   │       ├── 📄 PM_I63966325_C2665593.PDF (114.5 KB)
+│   │   │   │       ├── 📄 PM_I64238468_C2665593.PDF (119.3 KB)
+│   │   │   │       ├── 📄 PM_I64238496_C2665593.PDF (117.6 KB)
+│   │   │   │       ├── 📄 PM_I64339765_C2665593.PDF (118.5 KB)
+│   │   │   │       ├── 📄 PM_I64856308_C2665593.PDF (201.8 KB)
+│   │   │   │       ├── 📄 PM_I64856569_C2665593.PDF (122.3 KB)
+│   │   │   │       ├── 📄 PM_I64945436_C2665593.PDF (93.9 KB)
+│   │   │   │       ├── 📄 PM_I65509547_C2665593.PDF (94.6 KB)
+│   │   │   │       └── 📄 PM_I65555585_C2665593.PDF (93.9 KB)
+│   │   │   ├── 📁 Market Basket/
+│   │   │   │   ├── 📈 APDerm - Office Supplies - Data Request_W.B.Mason v2 (03-15-21).xlsx (1.5 MB)
+│   │   │   │   ├── 📈 APDerm - Office Supplies - Data Request_W.B.Mason v3 (03-15-21).xlsx (1.6 MB)
+│   │   │   │   ├── 📈 APDerm - Office Supplies - Data Request_W.B.Mason v4 (03-22-21) 2020 Dataonly.xlsx (1.5 MB)
+│   │   │   │   ├── 📈 APDerm - Office Supplies - Pricing Request Draft v2 (03-24-21).xlsx (1.5 MB)
+│   │   │   │   ├── 📈 APDerm - Office Supplies - Pricing Request Draft v3 (03-24-21).xlsx (1.5 MB)
+│   │   │   │   ├── 📈 APDerm - Office Supplies - Pricing Request Draft v4 (03-24-21).xlsx (1.3 MB)
+│   │   │   │   └── 📈 APDerm - Office Supplies - Pricing Request vF(03-24-21).xlsx (1.4 MB)
+│   │   │   ├── 📈 Amazon past 12 months.xlsx (161.5 KB)
+│   │   │   ├── 📄 AP DERM AGREEMENT.pdf (918.7 KB)
+│   │   │   ├── 📈 APDerm - Office Supplies - Data Request_W.B.Mason_010119-123120 JV v1.xlsx (1.3 MB)
+│   │   │   ├── 📈 APDerm - Office Supplies - Data Request_W.B.Mason_010119-123120 JV v2.xlsx (2.0 MB)
+│   │   │   ├── 📄 ConwayOfficeSolutions Managed Print Services Agreement 3.27.19.pdf (2.4 MB)
+│   │   │   └── 📈 Copy of APDerm - Office Supplies - Data Request_W.B.Mason_010119-123120.xlsx (929.1 KB)
+│   │   ├── 📁 1. Analysis/
+│   │   │   ├── 📈 AP Derm pricefile 4.14.2021.xlsx (50.6 KB)
+│   │   │   ├── 📈 APDerm - Office Supplies Analysis (4-26-21).xlsx (194.6 KB)
+│   │   │   ├── 📈 APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx (259.1 KB)
+│   │   │   └── 📈 APDerm - Office Supplies Analysis (6-10-2021).xlsx (269.9 KB)
+│   │   ├── 📁 2. WB Mason Negotiation Deck/
+│   │   │   ├── 📄 APDerm - Office Supplies - WB Mason Discussion Deck (5-26-21).pdf (443.6 KB)
+│   │   │   ├── 📊 APDerm - Office Supplies - WB Mason Discussion Deck (5-26-21).pptx (1.1 MB)
+│   │   │   ├── 📊 APDerm - Office Supplies - WB Mason Negotiation Deck v1 (5-14-21).pptx (1.3 MB)
+│   │   │   ├── 📊 APDerm - Office Supplies - WB Mason Negotiation Deck v2 (5-17-21).pptx (1.2 MB)
+│   │   │   ├── 📊 APDerm - Office Supplies - WB Mason Negotiation Deck v3 (5-17-21).pptx (1.1 MB)
+│   │   │   ├── 📈 APDerm - WB Mason - Office Supplies Benchmarking (06-03-21).xlsx (49.7 KB)
+│   │   │   └── 📈 APDerm - WB Mason Supplier Response Template.xlsx (24.2 KB)
+│   │   ├── 📁 3. Response/
+│   │   │   ├── 📈 Copy of APDerm - WB Mason Supplier Response Template.xlsx (27.3 KB)
+│   │   │   └── 📈 WB Mason Trader Copy File WB MASON.xlsx (61.9 KB)
+│   │   ├── 📁 4. Contracts/
+│   │   │   ├── 📝 WB Mason AP Derm First Amendment (Treya Reviewed) (6-24-21).doc (177.5 KB)
+│   │   │   └── 📝 WB Mason AP Derm First Amendment (Treya Reviewed).doc (177.0 KB)
+│   │   ├── 📁 Z. Office Equipment Research/
+│   │   │   └── 📄 ConwayOfficeSolutions Managed Print Services Agreement 3.27.19.pdf (2.4 MB)
+│   │   ├── 📈 Amazon past 12 months v2.xlsx (329.0 KB)
+│   │   ├── 📈 Amazon past 12 months.xlsx (329.1 KB)
+│   │   ├── 📈 APDerm - Henry Schein APD HS usage custom 2018_2019 (OS Items) v2.xlsx (3.3 MB)
+│   │   ├── 📈 APDerm - Henry Schein APD HS usage custom 2018_2019 (OS Items).xlsx (3.9 MB)
+│   │   ├── 📈 APDerm - Office Supplies  - High Usage List Pricing Request (03-25-2021).xlsx (60.8 KB)
+│   │   ├── 📝 WB Mason AP Derm First Amendment (Final) (7-19-21).doc (164.0 KB)
+│   │   └── 📝 WB Mason AP Derm First Amendment (Legal Reviewed) (7-1-21).DOC (178.5 KB)
+│   ├── 📁 Path Lab System/
+│   │   ├── 📁 0. Data and Contracts/
+│   │   ├── 📁 1. RFP Requirements and Draft/
+│   │   │   ├── 📈 APDerm - Path Lab Systems RFP (Aug. 5, 2021) Draft.xlsx (74.8 KB)
+│   │   │   └── 📈 Path Lab Requirements Gathering (July 8, 2021).xlsx (26.1 KB)
+│   │   ├── 📁 Q&A Related Materials/
+│   │   │   └── 📄 xComputerTrustCorporationPreSiteSurveyForm (JV).pdf (193.1 KB)
+│   │   ├── 📁 RFP - Live Demos/
+│   │   │   ├── 📁 Live Demo Recordings/
+│   │   │   │   ├── 📎 AP Easy Presentation and Demo-20210909_090246-Meeting Recording.mp4 (206.2 MB)
+│   │   │   │   ├── 📎 NovoPath - 2nd Demo & Training-20210923_100613-Meeting Recording.mp4 (133.7 MB)
+│   │   │   │   └── 📎 NovoPath Presentation and Demo-20210909_100312-Meeting Recording.mp4 (160.5 MB)
+│   │   │   ├── 📁 NovoPath Materials/
+│   │   │   │   ├── 📊 APDerm Demonstration.pptx (2.8 MB)
+│   │   │   │   └── 📄 NovoPath's Offering Overview.pdf (237.0 KB)
+│   │   │   ├── 📈 APDerm Demo Notes (9-13-21).xlsx (12.8 MB)
+│   │   │   └── 📈 APDerm Demo Notes (9-9-21).xlsx (7.0 MB)
+│   │   ├── 📁 RFP Q&A/
+│   │   │   └── 📈 APDerm Path Lab Systems RFP Q&A Submitted.xlsx (25.1 KB)
+│   │   ├── 📁 RFP Responses/
+│   │   │   └── 📁 RFP Responses/
+│   │   │       ├── 📁 AP Easy/
+│   │   │       │   └── 📈 APESS -  APDerm - Path Lab Systems RFP .xlsx (328.0 KB)
+│   │   │       ├── 📁 Ligolabs/
+│   │   │       │   └── 📈 APDerm - Path Lab Systems RFP (Aug. 6, 2021) vF - LigoLab.xlsx (325.1 KB)
+│   │   │       ├── 📁 Novopath/
+│   │   │       │   ├── 📁 Best and Final Pricing Proposal/
+│   │   │       │   │   └── 📄 AP Derm - NovoPath Proposal.pdf (1.5 MB)
+│   │   │       │   ├── 📈 APDerm - Path Lab Systems RFP - NovoPath (Final).xlsx (71.7 KB)
+│   │   │       │   ├── 📄 APDerm PRO-2.pdf (269.7 KB)
+│   │   │       │   └── 📄 APDerm STD-1.pdf (292.4 KB)
+│   │   │       ├── 📁 Orchard/
+│   │   │       │   ├── 📈 APDerm - Path Lab Systems RFP (Aug. 6 2021) vF_Orchard Response_Final.xlsx (83.3 KB)
+│   │   │       │   └── 📄 Supporting Documents for APDerm.pdf (9.0 MB)
+│   │   │       ├── 📁 Sunquest/
+│   │   │       │   ├── 📈 AP Derm PowerPath Hardware 08-27-21.xlsx (49.2 KB)
+│   │   │       │   ├── 📝 Platform Configuration Document PowerPath 12.0.docx (7.0 MB)
+│   │   │       │   ├── 📝 Platform Configuration Document Sunquest Atlas v20.4.docx (616.1 KB)
+│   │   │       │   └── 📈 Sunquest Response to APDerm - Path Lab Systems RFP  - 08-27-21 - Final.xlsx (96.5 KB)
+│   │   │       └── 📁 WinSurge/
+│   │   │           ├── 📈 APDerm-PathLabSystemsRFP-WinSURGEresponse.xlsx (95.6 KB)
+│   │   │           ├── 📈 xAPDermWinSURGEaImplementationSchedule.xls (64.0 KB)
+│   │   │           └── 📈 xAPDermWinSURGEaPricing.xls (127.0 KB)
+│   │   ├── 📁 Sandbox Demos/
+│   │   │   └── 📁 APEasy/
+│   │   │       ├── 📄 NDA APDerm - AP Easy CV.pdf (300.3 KB)
+│   │   │       ├── 📄 NDA APDerm - AP Easy IA.pdf (1.8 MB)
+│   │   │       └── 📄 NDA APDerm - AP Easy.pdf (219.3 KB)
+│   │   ├── 📁 Slides/
+│   │   │   └── 📊 APDerm - Vendor Outreach Slide (8-4-21).pptx (69.7 KB)
+│   │   ├── 📈 Path Lab - RFP Contact List v2.xlsx (109.6 KB)
+│   │   └── 📈 Path Lab - RFP Contact List.xlsx (102.1 KB)
+│   ├── 📁 Small Parcel/
+│   │   ├── 📁 0. Data/
+│   │   │   ├── 📁 First Set/
+│   │   │   │   ├── 📈 FedEx_ShipmentDetail_20210211143840(AutoRecovered).xlsx (256.3 KB)
+│   │   │   │   ├── 📈 FedEx_ShipmentDetail_20210211143840.xlsx (253.2 KB)
+│   │   │   │   └── 🗜️ FedEx_ShipmentDetail_20210211143840.zip (296.1 KB)
+│   │   │   ├── 📁 Second Set/
+│   │   │   │   ├── 📈 FedEx_ShipmentDetail_20210301222734.xlsx (346.3 KB)
+│   │   │   │   ├── 🗜️ FedEx_ShipmentDetail_20210301222734.zip (415.2 KB)
+│   │   │   │   └── 📄 FRO_Help_Disclaimer_Parcel.pdf (173.4 KB)
+│   │   │   ├── 📄 FRO_Help_Disclaimer_Parcel.pdf (173.4 KB)
+│   │   │   └── 📧 RE_ APDerm - Courier Services_ Small Parcel_ & Office Supplies Category Review.msg (233.0 KB)
+│   │   ├── 📁 1. Analysis/
+│   │   │   ├── 📈 APDerm - Parcel - Delivery Times and Drop Locations - 03-24-2021.xlsx (35.3 KB)
+│   │   │   ├── 📈 APDerm - Parcel - Delivery Times and Drop Locations v2(03-24-2021).xlsx (36.0 KB)
+│   │   │   ├── 📈 APDerm - Small Parcel - Savings Analysis (03-01-2021) (Account with Discounts).xlsx (400.7 KB)
+│   │   │   ├── 📈 APDerm - Small Parcel - Savings Analysis (03-01-2021).xlsx (585.5 KB)
+│   │   │   ├── 📈 APDerm - Small Parcel - Savings Analysis v2 (03-15-2021) .xlsx (892.6 KB)
+│   │   │   ├── 📈 APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx (895.7 KB)
+│   │   │   └── 📈 APDerm - Small Parcel - Shipment Comparisons (03-15-2021).xlsx (24.5 KB)
+│   │   ├── 📁 2. Contracts/
+│   │   │   ├── 📈 2021 UPS_ImplementationWorkbook - APDerm (Draft) (6-2-21).xlsx (58.7 KB)
+│   │   │   ├── 📈 2021 UPS_ImplementationWorkbook - APDerm 6.16.21.xlsx (59.9 KB)
+│   │   │   ├── 📈 APDerm - Treya Member Flex Agreements 062321.xlsx (342.5 KB)
+│   │   │   ├── 📝 APDerm - UPS Member Agreement (4-26-21).docx (46.4 KB)
+│   │   │   ├── 📝 APDerm - UPS Member Agreement (4-27-21).docx (46.2 KB)
+│   │   │   ├── 📝 APDerm - UPS Member Agreement (5-12-21).DOCX (51.8 KB)
+│   │   │   ├── 📝 APDerm - UPS Member Agreement (6-21-21).docx (50.0 KB)
+│   │   │   └── 📄 Treya_UPS_Agreement-rnee_apderm.com.pdf (258.5 KB)
+│   │   ├── 📈 2021 UPS_ImplementationWorkbook - APDerm 6.16.21.xlsx (58.1 KB)
+│   │   ├── 📊 APDerm - Small Parcel - Service Times (03-11-2021).pptx (62.8 KB)
+│   │   ├── 📈 Pirate Ship 3.3.21 v2.xlsx (86.7 KB)
+│   │   └── 📈 Pirate Ship 3.3.21.xlsx (81.3 KB)
+│   ├── 📁 Telecom - data & voice/
+│   │   ├── 📁 Comcast/
+│   │   │   ├── 📁 Comcast Invoices/
+│   │   │   │   ├── 📄 Comcast 0110162 - 12.13.2020 (1).pdf (388.5 KB)
+│   │   │   │   ├── 📄 Comcast 0110162 - 12.13.2020.pdf (388.5 KB)
+│   │   │   │   ├── 📄 Comcast 0140921 - 12.23.2020 (1).pdf (289.2 KB)
+│   │   │   │   ├── 📄 Comcast 0140921 - 12.23.2020.pdf (289.2 KB)
+│   │   │   │   ├── 📄 Comcast 0155135 - 12.23.2020 (1).pdf (155.6 KB)
+│   │   │   │   ├── 📄 Comcast 0155135 - 12.23.2020.pdf (155.6 KB)
+│   │   │   │   ├── 📄 Comcast 0180728 - 12.1.2020 (1).pdf (356.2 KB)
+│   │   │   │   ├── 📄 Comcast 0180728 - 12.1.2020.pdf (356.2 KB)
+│   │   │   │   ├── 📄 Comcast 0189179 - 12.30.2020 (1).pdf (412.3 KB)
+│   │   │   │   ├── 📄 Comcast 0189179 - 12.30.2020.pdf (412.3 KB)
+│   │   │   │   ├── 📄 Comcast 0192669 - 12.5.2020 (1).pdf (387.5 KB)
+│   │   │   │   ├── 📄 Comcast 0192669 - 12.5.2020.pdf (387.5 KB)
+│   │   │   │   ├── 📄 Comcast 0195762 - 12.23.2020 (1).pdf (157.0 KB)
+│   │   │   │   ├── 📄 Comcast 0195762 - 12.23.2020.pdf (157.0 KB)
+│   │   │   │   ├── 📄 Comcast 0197942 - 12.23.2020 (1).pdf (283.6 KB)
+│   │   │   │   ├── 📄 Comcast 0197942 - 12.23.2020.pdf (283.6 KB)
+│   │   │   │   ├── 📄 Comcast 0199777 - 12.23.2020 (1).pdf (157.3 KB)
+│   │   │   │   ├── 📄 Comcast 0199777 - 12.23.2020.pdf (157.3 KB)
+│   │   │   │   ├── 📄 Comcast 0202365 - 12.28.2020 (1).pdf (231.3 KB)
+│   │   │   │   ├── 📄 Comcast 0202365 - 12.28.2020.pdf (231.3 KB)
+│   │   │   │   ├── 📄 Comcast 0205983 - 12.28.2020 (1).pdf (148.6 KB)
+│   │   │   │   ├── 📄 Comcast 0205983 - 12.28.2020.pdf (148.6 KB)
+│   │   │   │   ├── 📄 Comcast 0209140 - 12.24.2020 (1).pdf (288.9 KB)
+│   │   │   │   ├── 📄 Comcast 0209140 - 12.24.2020.pdf (288.9 KB)
+│   │   │   │   ├── 📄 Comcast 0224880 - 12.3.2020 (1).pdf (153.5 KB)
+│   │   │   │   ├── 📄 Comcast 0224880 - 12.3.2020.pdf (153.5 KB)
+│   │   │   │   ├── 📄 Comcast 0255655 - 12.24.2020 (1).pdf (254.2 KB)
+│   │   │   │   ├── 📄 Comcast 0255655 - 12.24.2020.pdf (254.2 KB)
+│   │   │   │   ├── 📄 Comcast 0285009 - 12.6.2020 (1).pdf (185.8 KB)
+│   │   │   │   ├── 📄 Comcast 0285009 - 12.6.2020.pdf (185.8 KB)
+│   │   │   │   ├── 📄 Comcast 0293451 - 12.22.2020 (1).pdf (167.4 KB)
+│   │   │   │   ├── 📄 Comcast 0293451 - 12.22.2020.pdf (167.4 KB)
+│   │   │   │   ├── 📄 Comcast 0298838 - 12.5.2020 (1).pdf (187.1 KB)
+│   │   │   │   ├── 📄 Comcast 0298838 - 12.5.2020.pdf (187.1 KB)
+│   │   │   │   ├── 📄 Comcast 0301332 - 12.5.2020 (1).pdf (174.6 KB)
+│   │   │   │   ├── 📄 Comcast 0301332 - 12.5.2020.pdf (174.6 KB)
+│   │   │   │   ├── 📄 Comcast 0311839 - 12.18.2020 (1).pdf (363.6 KB)
+│   │   │   │   ├── 📄 Comcast 0311839 - 12.18.2020.pdf (363.6 KB)
+│   │   │   │   ├── 📄 Comcast 0340385 - 12.27.2020 (1).pdf (162.7 KB)
+│   │   │   │   ├── 📄 Comcast 0340385 - 12.27.2020.pdf (162.7 KB)
+│   │   │   │   ├── 📄 Comcast 0637482 - 12.5.2020 (1).pdf (202.0 KB)
+│   │   │   │   ├── 📄 Comcast 0637482 - 12.5.2020.pdf (202.0 KB)
+│   │   │   │   ├── 📄 Comcast 0658980 - 12.27.2020 (1).pdf (288.9 KB)
+│   │   │   │   ├── 📄 Comcast 0658980 - 12.27.2020.pdf (288.9 KB)
+│   │   │   │   ├── 📄 Comcast 0705328 - 12.28.2020 (1).pdf (188.4 KB)
+│   │   │   │   ├── 📄 Comcast 0705328 - 12.28.2020.pdf (188.4 KB)
+│   │   │   │   ├── 📄 Comcast 0791088 - 12.24.2020 (1).pdf (153.5 KB)
+│   │   │   │   ├── 📄 Comcast 0791088 - 12.24.2020.pdf (153.5 KB)
+│   │   │   │   ├── 📄 Comcast 0923583 - 12.1.2020 (1).pdf (382.7 KB)
+│   │   │   │   ├── 📄 Comcast 0923583 - 12.1.2020.pdf (382.7 KB)
+│   │   │   │   ├── 📄 Comcast 0995506 - 12.11.2020.pdf (197.8 KB)
+│   │   │   │   ├── 📄 Comcast 1047390 - 12.1.2020.pdf (257.1 KB)
+│   │   │   │   ├── 📄 Comcast 1047606 - 12.1.2020.pdf (407.3 KB)
+│   │   │   │   ├── 📄 Comcast 1117101 - 12.8.2020.pdf (196.8 KB)
+│   │   │   │   ├── 📄 Comcast 2603516 - 12.3.2020.pdf (187.5 KB)
+│   │   │   │   ├── 📄 Comcast 8773100520302627 - 12.23.2020 Canton.pdf (1.0 MB)
+│   │   │   │   ├── 📄 Comcast Business 001000043610.pdf (689.0 KB)
+│   │   │   │   └── 📄 vzbill_paper_1430_021221_030821160129.pdf (174.6 KB)
+│   │   │   └── 📈 Comcast Circuit Inventory .xlsx (29.6 KB)
+│   │   ├── 📁 MetTel/
+│   │   │   └── 📄 Adult & Pediatric Dermatology 2-14-22.pdf (383.2 KB)
+│   │   ├── 📁 One Source/
+│   │   │   ├── 📈 APDerm - Invoice Inventory.xlsx (24.7 KB)
+│   │   │   ├── 📝 Contact List 2021 (1).docx (71.2 KB)
+│   │   │   ├── 📊 Onboarding Presentation - APDerm.pptx (4.8 MB)
+│   │   │   └── 📈 Treya - APDerm Circuit Solutions.xlsx (29.3 KB)
+│   │   ├── 📁 RFQ/
+│   │   │   ├── 📁 New folder/
+│   │   │   ├── 📁 OneSource/
+│   │   │   │   └── 📄 Agreement For Service - APDerm.pdf (523.6 KB)
+│   │   │   ├── 📁 RFQ Responses/
+│   │   │   │   ├── 📁 8x8/
+│   │   │   │   │   ├── 📄 8x8 Contact Center _ Solution Overview.pdf (10.8 MB)
+│   │   │   │   │   ├── 📄 8x8 High Availability Platform.pdf (624.0 KB)
+│   │   │   │   │   ├── 📈 8x8 Response APDerm Telecom RFQ (031221) vF.xlsx (588.6 KB)
+│   │   │   │   │   ├── 📄 APDerm - Quote #Q-00417553 - 8x8 Implementation Services Custom-SOW .pdf (1.3 MB)
+│   │   │   │   │   ├── 📝 APDerm 8x8 Service Agreement and SLA.docx (142.9 KB)
+│   │   │   │   │   ├── 📄 APDerm.pdf (1.6 MB)
+│   │   │   │   │   ├── 📄 Cover Letter and Executive Summary 8x8 APDerm.pdf (600.3 KB)
+│   │   │   │   │   ├── 🗜️ Virtual Contact Centre Sample Reports.zip (6.5 MB)
+│   │   │   │   │   └── 📄 X Series Feature and Calling Plans.pdf (70.7 KB)
+│   │   │   │   ├── 📁 Avaya/
+│   │   │   │   │   ├── 📄 ACO Live Reports.pdf (330.7 KB)
+│   │   │   │   │   ├── 📄 ACO Plan Matrix.pdf (426.7 KB)
+│   │   │   │   │   ├── 📄 APDerm RingCentral Business Proposal.pdf (3.6 MB)
+│   │   │   │   │   ├── 📈 APDerm Telecom RFQ Responses 3-31-2021 - Avaya.xlsx (88.2 KB)
+│   │   │   │   │   ├── 📈 APDerm Telecom RFQ Responses 3-31-2021.xlsx (88.4 KB)
+│   │   │   │   │   ├── 📄 Avaya Device Catalogue.pdf (1.5 MB)
+│   │   │   │   │   └── 📄 AvayaCloudOffice5.0-ServiceDescription.pdf (1.3 MB)
+│   │   │   │   ├── 📁 CallTower/
+│   │   │   │   │   ├── 📈 APDerm Telecom RFQ (031221) vF - CallTower.xlsx (132.0 KB)
+│   │   │   │   │   └── 📄 CallTower Response for APDerm3_18_21.pdf (855.9 KB)
+│   │   │   │   ├── 📁 Comcast/
+│   │   │   │   │   └── 📈 APDerm Telecom RFQ (031221) vF - Comcast.xlsx (134.9 KB)
+│   │   │   │   ├── 📁 Fuze/
+│   │   │   │   │   └── 📈 APDerm Telecom RFQ - FUZE.xlsx (89.4 KB)
+│   │   │   │   ├── 📁 MetTel/
+│   │   │   │   │   ├── 📈 APDerm 4-13-21 - MetTel.xlsx (51.4 KB)
+│   │   │   │   │   └── 📄 MetTel - Adult  Pediatric Dermatology 4-13-21.pdf (379.3 KB)
+│   │   │   │   ├── 📁 Verizon/
+│   │   │   │   │   └── 📄 NON NYDMA FiOS Rate Card-JAN 2021 - Verizon.pdf (596.2 KB)
+│   │   │   │   ├── 📈 APDerm Telecom RFQ Bid Evaluation .xlsx (22.9 KB)
+│   │   │   │   └── 📈 APDerm Telecom RFQ Q&A Repository.xlsx (26.2 KB)
+│   │   │   ├── 📁 Vendor Contacts/
+│   │   │   │   └── 📈 Telecom & ITHW RFQ Vendor Contact List.xlsx (25.9 KB)
+│   │   │   ├── 📈 APDerm Telecom RFQ (031121) vF (Unlocked).xlsx (129.1 KB)
+│   │   │   ├── 📈 APDerm Telecom RFQ (031121) vF.xlsx (129.2 KB)
+│   │   │   ├── 📈 APDerm Telecom RFQ (031221) vF.xlsx (86.1 KB)
+│   │   │   ├── 📈 APDerm Telecom RFQ Bid Comparison (041921).xlsx (195.1 KB)
+│   │   │   ├── 📈 APDerm Telecom RFQ Bid Comparison (081621).xlsx (196.8 KB)
+│   │   │   ├── 📈 APDerm Telecom RFQ Bid Comparison_UCaaS and CCaaS_Sanitized.xlsx (78.7 KB)
+│   │   │   ├── 📈 APDerm Telecom RFQ Q&A - Repository.xlsx (26.0 KB)
+│   │   │   ├── 📈 APDerm Telecom-IT RFQ Draft (030521) v1.xlsx (129.1 KB)
+│   │   │   └── 📊 ITHW Telecom Timeline.pptx (57.8 KB)
+│   │   ├── 📁 Telecom - Live Demos/
+│   │   │   └── 📈 APDerm Telecom RFQ Bid Evaluation (June 3, 2021).xlsx (60.3 KB)
+│   │   ├── 📁 Tidal/
+│   │   │   ├── 📄 Elevate Quote AP Derm.pdf (1.4 MB)
+│   │   │   ├── 📄 Invoice113742 - Tidal.pdf (1.1 MB)
+│   │   │   ├── 📄 PBA Signed - Tidal Agreement.pdf (577.7 KB)
+│   │   │   ├── 📄 Powered By Avaya APDerm 12 Month Term with Secondary Servers 090121 pg2.pdf (32.7 KB)
+│   │   │   ├── 📄 Powered By Avaya APDerm 12 Month Term with Secondary Servers 090121.pdf (48.7 KB)
+│   │   │   ├── 📄 Skill_Queue_Call_Volume-7685310408867524230.pdf (849.6 KB)
+│   │   │   └── 📈 Tidal Invoice113742.xlsx (34.2 KB)
+│   │   ├── 📁 Whalley/
+│   │   │   └── 📄 ManagedServicesProposal-APDerm 2020-11-11 v2 - Whalley.pdf (2.3 MB)
+│   │   └── 📈 Vendor Contact Information.xlsx (23.1 KB)
+│   ├── 📁 z. Company Info/
+│   │   ├── 📈 APDerm - Brands and Locations - 02-22-2021 v1 JV.xlsx (27.0 KB)
+│   │   └── 📈 APDerm - Brands and Locations - 03-11-2021.xlsx (23.1 KB)
+│   ├── 📈 APDerm - Office Supplies, Courier, and Parcel Savings Detail (12-16-2021).xlsx (526.3 KB)
+│   └── 📈 APDerm_FacilitiesMaintenance_Research.xlsx (25.8 KB)
+├── 📁 Project Updates/
+│   ├── 📁 Kick Off/
+│   │   ├── 📁 Path Lab Systems/
+│   │   │   ├── 📄 AP Derm Path Lab Systems RFP Kickoff (June 17, 2021).pdf (226.4 KB)
+│   │   │   └── 📊 AP Derm Path Lab Systems RFP Kickoff (June 17, 2021).pptx (118.2 KB)
+│   │   └── 📊 AP Derm Strategic Sourcing Project Kickoff 011121 v1.pptx (2.1 MB)
+│   ├── 📁 Weekly Leadership Updates/
+│   │   ├── 📁 Archives/
+│   │   │   ├── 📁 Feb 02 2021/
+│   │   │   │   ├── 📈 AP Derm Project Workplan (Feb 2 2021).xlsx (65.3 KB)
+│   │   │   │   ├── 📊 AP Derm Strategic Sourcing Project Update (020221).pptx (180.3 KB)
+│   │   │   │   └── 📈 APDerm Savings Dashboard, Data Collection Tracker.xlsx (27.8 KB)
+│   │   │   └── 📁 Feb 16 2021/
+│   │   │       ├── 📈 AP Derm Project Workplan (Feb 16 2021).xlsx (68.4 KB)
+│   │   │       ├── 📊 AP Derm Strategic Sourcing Project Update (021621).pptx (191.1 KB)
+│   │   │       ├── 📈 APDerm Savings Dashboard, Data Collection Tracker.xlsx (28.9 KB)
+│   │   │       └── 📈 data.csv (58.6 KB)
+│   │   ├── 📈 AP Derm Project Workplan (Feb 16 2021).xlsx (68.4 KB)
+│   │   ├── 📈 AP Derm Project Workplan (Mar 15 2021).xlsx (68.2 KB)
+│   │   ├── 📊 AP Derm Strategic Sourcing Project Update (021621).pptx (193.7 KB)
+│   │   ├── 📊 AP Derm Strategic Sourcing Project Update (030121).pptx (222.7 KB)
+│   │   ├── 📊 AP Derm Strategic Sourcing Project Update (031621).pptx (230.9 KB)
+│   │   └── 📈 APDerm Savings Dashboard, Data Collection Tracker.xlsx (28.8 KB)
+│   └── 📁 Weekly Leadership Updates 2/
+│       ├── 📈 AP Derm Project Workplan (Mar 15 2021).xlsx (70.2 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (033021).pptx (273.1 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (041321).pptx (593.1 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (042721).pptx (302.6 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (051121).pptx (316.1 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (052521).pptx (287.3 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (060821).pptx (291.4 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (061521).pptx (309.3 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (062221).pptx (288.8 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (062921).pptx (298.4 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (070621).pptx (304.8 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (071321).pptx (302.2 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (072021).pptx (307.2 KB)
+│       ├── 📊 AP Derm Strategic Sourcing Project Update (080321).pptx (118.4 KB)
+│       ├── 📈 APDerm Category Summary Update.xlsx (25.6 KB)
+│       ├── 📈 APDerm Savings Dashboard, Data Collection Tracker.xlsx (32.1 KB)
+│       ├── 📊 APDerm Strategic Sourcing Project Update (081721) vF.pptx (164.9 KB)
+│       ├── 📊 APDerm Strategic Sourcing Project Update (082421).pptx (158.0 KB)
+│       ├── 📊 APDerm Strategic Sourcing Project Update (083121).pptx (153.2 KB)
+│       ├── 📊 APDerm Strategic Sourcing Project Update (090721).pptx (177.4 KB)
+│       ├── 📊 APDerm Strategic Sourcing Project Update (091421) [Autosaved].pptx (175.6 KB)
+│       └── 📊 APDerm Strategic Sourcing Project Update (091421).pptx (177.4 KB)
+└── 📁 Wave 2/
+    ├── 📁 Assessment/
+    │   ├── 📁 Data/
+    │   │   ├── 📈 (PREVIOUS) AP Derm AP Analysis 9.3.20.xlsx (15.0 MB)
+    │   │   └── 📈 APDerm - Spending Report - 10.1.20 to 9.30.21.xlsx (4.4 MB)
+    │   ├── 📁 Shared AP Data Collection/
+    │   │   └── 📁 AP Analysis/
+    │   │       └── 📈 APDerm - Spending Report - 10.1.20 to 9.30.21.xlsx (2.5 MB)
+    │   ├── 📎 APDerm - AP Spend Analysis Dashboard (10-12-2021).pbix (2.6 MB)
+    │   └── 📈 APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx (17.2 MB)
+    ├── 📁 Categories/
+    │   ├── 📁 Billing System/
+    │   │   ├── 📁 Contracts/
+    │   │   │   └── 📄 AP Derm - AP Derm PC Q-12043-1 - Addendum B Proposal - Collector - 12 28 18 (part 1) - signed_encrypted_.pdf (512.2 KB)
+    │   │   ├── 📁 Kickoff/
+    │   │   │   └── 📊 APDerm Billing System Project Kickoff (Oct. 19, 2021).pptx (944.4 KB)
+    │   │   └── 📁 Negotiations/
+    │   │       ├── 📊 Athena Health - Strategic Business Review (Jan. 13, 2022) DRAFT.pptx (164.3 KB)
+    │   │       ├── 📊 Athena Health - Strategic Business Review (Jan. 21, 2022) APDerm Draft.pptx (164.3 KB)
+    │   │       ├── 📄 Athena Health Strategic Business Review (Jan. 5, 2022) WIP.pdf (369.9 KB)
+    │   │       └── 📊 Athena Health Strategic Business Review (Jan. 5, 2022) WIP.pptx (144.9 KB)
+    │   ├── 📁 Copiers/
+    │   │   ├── 📎 APDerm Management Equipment Under Contract Feb 2022.xlsm (68.3 KB)
+    │   │   ├── 📄 ConwayOfficeSolutions Managed Print Services Agreement 3.27.19.pdf (2.4 MB)
+    │   │   └── 📈 September 2023 Platinum Data Collection - Copiers.xlsx (426.7 KB)
+    │   ├── 📁 Janitorial & Sanitation/
+    │   │   ├── 📁 0. Contracts & Data/
+    │   │   │   ├── 📁 EcoSource/
+    │   │   │   │   ├── 📄 Adult&Pediatric Updated Agreement 052720 (2).pdf (378.4 KB)
+    │   │   │   │   ├── 📄 Adult&Pediatric Updated Agreement 052720 (3).pdf (379.3 KB)
+    │   │   │   │   ├── 📄 Adult&Pediatric Updated Agreement 052720.pdf (391.8 KB)
+    │   │   │   │   ├── 📄 APDE001 - Amendment - 6-16-20.pdf (846.4 KB)
+    │   │   │   │   ├── 📄 APDE002 - Amendment - 6-24-20.pdf (552.7 KB)
+    │   │   │   │   └── 📄 JCWD001 - Amendment - 7-9-20.pdf (775.5 KB)
+    │   │   │   └── 📁 Enterprise Cleaning/
+    │   │   │       ├── 📁 Contract & Proposals/
+    │   │   │       │   ├── 📄 APDERM - Westford & Melrose 4+ PROPOSAL.pdf (878.9 KB)
+    │   │   │       │   ├── 📄 APDERM Melrose Insurance Certificate.pdf (87.0 KB)
+    │   │   │       │   ├── 📄 APDERM Westford & Melrose 1-3 Proposal.pdf (592.7 KB)
+    │   │   │       │   └── 📄 APDERM Westford Insurance Certificate.pdf (87.0 KB)
+    │   │   │       └── 📁 Invoices/
+    │   │   │           ├── 📄 Concord Cambridge Enterprise Invoice 5.pdf (148.1 KB)
+    │   │   │           ├── 📄 Courthouse Chelmsford Enterprise Invoice 3.pdf (144.8 KB)
+    │   │   │           ├── 📄 Elissa Wayland Enterprise Invoice 6.pdf (147.8 KB)
+    │   │   │           ├── 📄 Enterprise Cleaing Inv_42560.pdf (195.7 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42547.pdf (203.2 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42608.pdf (148.6 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42609.pdf (179.4 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42617.pdf (151.3 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42618.pdf (154.2 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42619.pdf (152.7 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42622.pdf (150.2 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning INV_42623.pdf (151.9 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42629.pdf (147.7 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42630.pdf (150.6 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42639.pdf (161.2 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42640.pdf (149.4 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42642.pdf (148.5 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42648.pdf (153.1 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning INV_42652.pdf (147.2 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42655.pdf (147.1 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42656.pdf (146.9 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42685.pdf (148.7 KB)
+    │   │   │           ├── 📄 Enterprise Cleaning Inv_42686.pdf (165.2 KB)
+    │   │   │           ├── 📄 Groton AyerEnterprise Invoice.pdf (195.6 KB)
+    │   │   │           ├── 📄 Lancaster Boston Enterprise Invoice 2.pdf (149.6 KB)
+    │   │   │           └── 📄 Village Chelmsford Enterprise Invoice 4.pdf (149.4 KB)
+    │   │   ├── 📁 RFP/
+    │   │   │   ├── 📁 Analysis/
+    │   │   │   │   ├── 📁 Target Pricing/
+    │   │   │   │   │   ├── 📝 Alves and Enterprise Cleaning comparison[42].docx (27.2 KB)
+    │   │   │   │   │   ├── 📈 APDerm - Janitorial Svs - Target Pricing v1 - Alves.xlsx (43.5 KB)
+    │   │   │   │   │   └── 📈 APDerm - Janitorial Svs - Target Pricing v1 - Enterprise.xlsx (44.5 KB)
+    │   │   │   │   ├── 📈 APDerm - Janitorial Svs - Savings Analysis Rnd2 v1.xlsx (43.0 KB)
+    │   │   │   │   ├── 📈 APDerm - Janitorial Svs - Savings Analysis Rnd2 v3.xlsx (39.6 KB)
+    │   │   │   │   └── 📈 APDerm - Janitorial Svs - Savings Analysis v1.xlsx (37.2 KB)
+    │   │   │   ├── 📁 Final Materials/
+    │   │   │   │   ├── 📈 APDerm Janitorial Services RFP Draft (Feb 16 2022) vF.xlsx (136.1 KB)
+    │   │   │   │   └── 📈 List of Suppliers v1.xlsx (23.4 KB)
+    │   │   │   └── 📁 Responses/
+    │   │   │       ├── 📁 APDerm Janitorial Services RFP Draft (Feb 16 2022) vF.numbers/
+    │   │   │       │   ├── 📁 Data/
+    │   │   │       │   │   ├── 🖼️ image1-16.png (18.6 KB)
+    │   │   │       │   │   ├── 🖼️ image1-small-17.png (10.7 KB)
+    │   │   │       │   │   └── 🖼️ image2-19.jpg (4.0 KB)
+    │   │   │       │   ├── 📁 Metadata/
+    │   │   │       │   │   ├── 📎 BuildVersionHistory.plist (245 B)
+    │   │   │       │   │   ├── 📎 DocumentIdentifier (36 B)
+    │   │   │       │   │   └── 📎 Properties.plist (358 B)
+    │   │   │       │   ├── 🗜️ Index.zip (171.8 KB)
+    │   │   │       │   ├── 🖼️ preview-micro.jpg (1.4 KB)
+    │   │   │       │   ├── 🖼️ preview-web.jpg (11.8 KB)
+    │   │   │       │   └── 🖼️ preview.jpg (114.8 KB)
+    │   │   │       ├── 📈 Alves - APDerm Janitorial Services - Copy.xlsx (133.7 KB)
+    │   │   │       ├── 📈 EcoSource Response to APDerm Janitorial Services RFP Draft (Feb 16 2022) vF.xlsx (1.6 MB)
+    │   │   │       └── 📈 Enterprise - APDerm Janitorial Services RFP Bid (Feb 16 2022) vF.xlsx (162.5 KB)
+    │   │   ├── 📁 Shared Jan&San Documents/
+    │   │   │   └── 📈 APDerm - Janitorial & Santiation - Baseline Spend by Location v1 (01-25-2022).xlsx (35.7 KB)
+    │   │   ├── 📁 x. Reference/
+    │   │   │   ├── 🗜️ Final RFP Docs (Posted Dec 1).zip (4.6 MB)
+    │   │   │   ├── 📈 Lasko Packaging RFQ_Final_20171206.xlsx (126.4 KB)
+    │   │   │   ├── 📈 Plum Healthcare Food Service RFP vF.xlsx (638.8 KB)
+    │   │   │   ├── 📈 Plum Healthcare Housekeeping RFP Draft (Oct 14 2017 - for John Bowen).xlsx (136.5 KB)
+    │   │   │   └── 📝 Plum Housekeeping Services RFP -  Intent To Respond Form_DRAFT (Oct 14 2017).docx (731.4 KB)
+    │   │   └── 📈 APDerm - Janitorial & Sanitation RFP DRAFT v1.xlsx (157.6 KB)
+    │   ├── 📁 Laundry & Linen/
+    │   │   ├── 📈 Image First Staement ADULT000 2-2022 .xlsx (47.3 KB)
+    │   │   ├── 📄 ImageFirst Contract 6.6.18.pdf (1.5 MB)
+    │   │   └── 📄 ImageFirst-Invoices-ADULT000 2-2022 inv.pdf (4.6 MB)
+    │   ├── 📁 Shared Contract Collection/
+    │   │   ├── 📁 Copiers & Print/
+    │   │   │   └── 📄 ConwayOfficeSolutions Managed Print Services Agreement 3.27.19.pdf (2.4 MB)
+    │   │   ├── 📁 IT Managed Services/
+    │   │   ├── 📁 Janitorial Services/
+    │   │   │   ├── 📄 AdultPediatric Updated Agreement 052720.pdf (490.8 KB)
+    │   │   │   ├── 📄 EcoSource 052020 Chelms - Adult&Pediatric Updated Agreement 052720 (2).pdf (378.4 KB)
+    │   │   │   ├── 📄 EcoSource 062020 Chelms - APDE002 - Amendment - 6-24-20.pdf (552.7 KB)
+    │   │   │   ├── 📄 EcoSource 062020 Waltham - APDE001 - Amendment - 6-16-20.pdf (846.4 KB)
+    │   │   │   ├── 📄 EcoSource 072020 Waltham - Adult&Pediatric Updated Agreement 052720 (3).pdf (379.3 KB)
+    │   │   │   ├── 📄 EcoSource 072020 Wellesley - Adult&Pediatric Updated Agreement 052720.pdf (391.8 KB)
+    │   │   │   ├── 📄 EcoSource 072020 Wellesley2 - JCWD001 - Amendment - 7-9-20.pdf (775.5 KB)
+    │   │   │   └── 📄 EcoSource Contract Termination Ltr 03.04.2021.pdf (355.1 KB)
+    │   │   ├── 📁 Laundry Linen/
+    │   │   │   └── 📄 ImageFirst Contract 6.6.18.pdf (1.5 MB)
+    │   │   ├── 📁 Temporary Labor/
+    │   │   ├── 📁 Uniforms/
+    │   │   └── 📁 Waste Management/
+    │   │       ├── 📄 Clean Harbors Marlborough Invoice.pdf (98.9 KB)
+    │   │       ├── 📄 Clean Harbors Path Lab invoice.pdf (145.5 KB)
+    │   │       ├── 📄 Stericycle - Adult and Ped. Master Agreement Signed.pdf (3.7 MB)
+    │   │       ├── 📄 Stericycle 2 - Adult and Pediatric Dermatology 60 Mos Agreement  (1).pdf (3.9 MB)
+    │   │       └── 📄 Triumvirate Quote 11.11.2021.pdf (192.5 KB)
+    │   ├── 📁 Temp Labor/
+    │   │   ├── 📎 APDerm Temp Labor - Randstad Savings Analysis.ods (13.8 KB)
+    │   │   └── 📈 APDerm Temp Labor - Randstad Savings Analysis.xlsx (209.0 KB)
+    │   ├── 📁 Uniforms/
+    │   │   ├── 📁 Uniforms/
+    │   │   │   ├── 📄 Alexanders uniforms Barco Matrix.pdf (709.4 KB)
+    │   │   │   ├── 📄 Alexanders uniforms Wink 123 Matrix.pdf (497.1 KB)
+    │   │   │   ├── 📄 Alexanders uniforms.pdf (243.8 KB)
+    │   │   │   ├── 📄 RE_ Uniform Advantage - Custom Website Details.pdf (191.4 KB)
+    │   │   │   ├── 📄 Uniform Advantage - Custom Website Details cost.pdf (158.6 KB)
+    │   │   │   ├── 📝 Uniforms advantage - Website Portal Options - Credits or Sets.docx (28.8 KB)
+    │   │   │   └── 📈 Uniforms for America Bills Analysis Report 2021-10-14.xlsx (54.4 KB)
+    │   │   └── 🗜️ Uniforms.zip (1.4 MB)
+    │   └── 📁 Waste Management/
+    │       └── 📎 Contracts.lnk (2.1 KB)
+    ├── 📁 Kickoff/
+    │   └── 📊 APDerm Phase 2 Project Kickoff (Nov. 9, 2021).pptx (3.6 MB)
+    └── 📁 Updates/
+        ├── 📈 APDerm - Savings Dashboard, Data Collection Tracker.xlsx (153.1 KB)
+        ├── 📊 APDerm Phase 2 Project Close-out (Aug 04, 2022).pptx (3.8 MB)
+        ├── 📊 APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx (4.9 MB)
+        ├── 📊 APDerm Phase 2 Project Update (Jun 29, 2022).pptx (3.7 MB)
+        └── 📈 APDerm Phase 2 Savings Dashboard, Data Collection Tracker.xlsx (30.4 KB)
+
+File Types:
+──────────────────────────────────────────────────
+  .pdf: 763 file(s)
+  .xlsx: 201 file(s)
+  .pptx: 52 file(s)
+  .docx: 48 file(s)
+  .csv: 19 file(s)
+  .zip: 12 file(s)
+  .xlsm: 6 file(s)
+  .msg: 6 file(s)
+  .doc: 6 file(s)
+  .jpg: 4 file(s)
+  .pbix: 3 file(s)
+  .mp4: 3 file(s)
+  .png: 2 file(s)
+  .plist: 2 file(s)
+  .lnk: 2 file(s)
+  .xls: 2 file(s)
+  (no extension): 1 file(s)
+  .ods: 1 file(s)
+  .ppt: 1 file(s)
+```
+
+## STEP 1: IDENTIFY ALL CATEGORIES
+First, look at the directory tree and list ALL spend categories you can find.
+Categories appear in:
+- `Categories/` folder (each subfolder is a category)
+- `Wave 2/Categories/` folder (additional categories)
+- Any folder named after a spend type (e.g., "Medical Supplies", "Telecom", "IT Hardware")
+
+## STEP 2: SELECT FILES (Total: 30 files)
+
+### MANDATORY FILES - MUST INCLUDE:
+
+**1. Agreement Folder (3-5 files) - CRITICAL!**
+- Look for: "signed", "final", "executed", "Agreement" in filename
+- MUST include the main signed agreement (usually PDF)
+- This contains Exhibit A (categories table) and Exhibit B (fee structure)
+- Fee type, fee amount, addressable spend, savings estimates are ALL in here
+
+**2. Case Study Folder (2-3 files)**
+- Any file with "Case Study" in the name
+- Prioritize: "vF" (version final), latest version numbers
+
+**3. Project Updates - FINAL/CLOSE-OUT (2-3 files)**
+- Look for: "Close-out", "Final", "Phase 2", highest dates
+- These have ACTUAL results for all categories
+- Include the MOST RECENT update for each phase/wave
+
+**4. Assessment/Proposal (1-2 files)**
+- Opportunity Assessment files
+- Initial proposal with projected savings
+
+### CATEGORY FILES - ONE PER CATEGORY:
+
+**5. For EACH Category You Identified:**
+Select 1 file per category that shows:
+- Savings analysis or summary (prefer .xlsx with "Analysis" or "Savings")
+- RFP results or vendor comparison
+- Final negotiation outcomes
+
+Common categories to look for:
+- Medical Supplies, Office Supplies, Small Parcel, Courier
+- Telecom, IT Hardware/Software, Copiers
+- Employee Benefits, HR, Insurance
+- Facilities, Janitorial, Laundry
+- Path Lab, Billing Systems
+- Any other category folders you see
+
+### FILES TO SKIP:
+- Raw invoices, payment data, AP files
+- Files in "Additional Invoices" folders
+- Duplicate versions (keep newest only)
+- Archive/ folder contents
+- Files ending with "(002)", "(copy)", "backup"
+- Individual vendor contracts (unless it's the final negotiated one)
+
+## OUTPUT FORMAT:
+Return a JSON object with two parts:
+
+```json
+{
+  "categories_found": [
+    "Medical Supplies",
+    "Office Supplies", 
+    "Telecom",
+    "... list ALL categories you see in the directory tree"
+  ],
+  "selected_files": [
+    "Agreement/Signed Agreement/Agreement - signed.pdf",
+    "Case Study/Treya Case Study vF.pdf",
+    "Project Updates/Close-out.pptx",
+    "Categories/Medical Supplies/Analysis/Savings Summary.xlsx",
+    "... one file per category minimum"
+  ]
+}
+```
+
+**IMPORTANT**: You must select at least ONE file for EACH category in `categories_found`.
+
+
+--- LLM RESPONSE ---
+Tokens: 40,004 in / 5,535 out
+
+{
+  "categories_found": [
+    "Allergan",
+    "Billing Systems",
+    "Courier Services",
+    "Employee Benefits",
+    "IT Hardware & Software",
+    "Medical Supplies",
+    "Office Supplies",
+    "Path Lab Systems",
+    "Small Parcel",
+    "Telecom (Data & Voice)",
+    "Copiers & Print",
+    "Janitorial & Sanitation",
+    "Laundry & Linen",
+    "Temp Labor",
+    "Uniforms",
+    "Waste Management",
+    "IT Managed Services",
+    "Facilities Maintenance"
+  ],
+  "selected_files": [
+    "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx",
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_SC.docx",
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Case Study/Treya Case Study_APDerm v6 MY.docx",
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+    "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf",
+    "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pptx",
+    "Categories/Allergan/Incumbent Negotiations/Allergan Strategic Business Review (May. 27, 2021) vF.pdf",
+    "Categories/Billing Systems/RFP Responses/APDerm - Practice Management - Billing Systems RFP Comparison (Sep. 2, 2021).xlsx",
+    "Categories/Courier Services/APDerm - Courier Services RFP - Savings Analysis v5.xlsx",
+    "Categories/Employee Benefits/Proposal Comparison/APDerm - Employee Benefits Savings Comparison (Sep. 28, 2021).xlsx",
+    "Categories/IT Hardware Software/RFQ/RFQ Responses/APDerm -  IT Hardware RFQ Savings Comparison (April 27, 2021) vF.xlsx",
+    "Categories/Medical Supplies/RFP/APDerm - Medical Supplies RFP Draft (Apr. 2, 2021) v1.xlsx",
+    "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx",
+    "Categories/Path Lab System/RFP Responses/RFP Responses/Novopath/APDerm - Path Lab Systems RFP - NovoPath (Final).xlsx",
+    "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx",
+    "Categories/Telecom - data & voice/RFQ/APDerm Telecom RFQ Bid Comparison (081621).xlsx",
+    "Wave 2/Categories/Copiers/APDerm Management Equipment Under Contract Feb 2022.xlsm",
+    "Wave 2/Categories/Janitorial & Sanitation/RFP/Analysis/APDerm - Janitorial Svs - Savings Analysis Rnd2 v3.xlsx",
+    "Wave 2/Categories/Laundry & Linen/Image First Staement ADULT000 2-2022 .xlsx",
+    "Wave 2/Categories/Temp Labor/APDerm Temp Labor - Randstad Savings Analysis.xlsx",
+    "Wave 2/Categories/Uniforms/Uniforms/Uniforms for America Bills Analysis Report 2021-10-14.xlsx",
+    "Wave 2/Categories/Waste Management/Shared Contract Collection/Waste Management/Stericycle - Adult and Ped. Master Agreement Signed.pdf",
+    "Categories/Telecom - data & voice/Whalley/ManagedServicesProposal-APDerm 2020-11-11 v2 - Whalley.pdf",
+    "APDerm_FacilitiesMaintenance_Research.xlsx",
+    "Case Study/Treya Case Study_APDerm v5 MY.docx",
+    "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+  ]
+}
+
+
+====================================================================================================
+PASS 2: SCHEMA EXTRACTION
+====================================================================================================
+
+--- PROMPT SENT TO LLM (truncated - file contents removed for brevity) ---
+
+NOTE: The full extraction prompt included the following file contents:
+You are extracting structured case study information from Treya Partners project documents.
+
+## Background: Treya Partners
+Treya Partners is a procurement consulting firm that helps companies (often PE-backed) achieve cost savings through strategic sourcing. Projects typically involve:
+- Analyzing client spend across categories
+- Running RFP processes and negotiations
+- Implementing savings and tracking results
+
+**Hint**: The project folder is named 'APDerm' - this is likely the client name.
+
+
+## Your Task:
+Read the extracted document contents below and fill in the case study schema COMPLETELY.
+
+**⚠️ DOCUMENT PRIORITY ORDER ⚠️**
+When the same information appears in multiple documents, USE THIS PRIORITY:
+1. **Agreement/** documents (highest priority for fees, scope, addressable spend)
+2. **Case Study/** documents (for outcomes and narrative)
+3. **Project Updates/** - specifically the FINAL/close-out update (for category results)
+4. **Assessment/** documents (for projected savings if not in Agreement)
+5. Other category-level documents
+
+## CRITICAL REQUIREMENTS:
+
+### 1. SOURCES FOR EVERY FACT
+For EVERY ClaimMoney and ClaimNumber field, you MUST include:
+- `source_file`: The exact file name where you found this information
+- `confidence`: One of "high", "medium", or "low"
+
+### 2. CONFIDENCE LEVEL DEFINITIONS
+- **high**: Explicitly stated in a "final", "signed", or "vF" document (agreements, final case studies, close-out reports)
+- **medium**: Found in project updates, analysis documents, or assessment materials; may be estimates
+- **low**: Inferred from context, found in older documents, or conflicting across sources
+
+### 2b. FIELDS REQUIRING SOURCES
+The following fields MUST always have `source_file` and `confidence` populated:
+- **Client Overview**: Revenue (from WEB SEARCH), EBITDA, Locations
+- **Engagement Background**: `procurement_environment` must include `source_file` and `confidence`
+- **Impact**: Annual Savings, One-Time Savings, and each Proof Point (via evidence array)
+- **Categories**: All baseline_spend, savings amounts
+
+### 2c. REVENUE - USE WEB SEARCH
+For client `revenue`:
+- Look in the "Web Search Results" section at the top of the content
+- Set `source_file` to "Web Search" (not a document)
+- Set `confidence` based on how authoritative the source seems
+
+For `locations_count`:
+- If found in documents, set `locations_source` to the document name
+- If from web search, set `locations_source` to "Web Search"
+- Set `locations_confidence` appropriately
+
+### 3. FEE & SCOPE FIELDS - MUST BE FROM AGREEMENT (CRITICAL!)
+
+**⚠️ STOP AND READ THIS CAREFULLY ⚠️**
+
+When extracting fee and scope data, you MUST:
+1. **FIRST** search for documents with "Agreement" in the file path
+2. **LOOK for "Exhibit B" or "Project Fees"** - this is where fee structure lives
+3. **ONLY use Agreement values** for these fields:
+
+**AGREEMENT HAS TWO KEY EXHIBITS - READ BOTH!**
+
+### EXHIBIT A - PROJECT SCOPE TABLE
+Look for a TABLE in Exhibit A that lists all categories. This table typically has columns like:
+| Category | Baseline/Addressable Spend | Savings Low | Savings High |
+
+From this table, extract:
+- `initial_categories_count`: COUNT the rows in this table (number of categories)
+- `addressable_spend`: SUM of the baseline/addressable spend column OR look for "Total" row
+- `savings_estimate_low`: SUM of "Savings Low" column OR look for total row
+- `savings_estimate_high`: SUM of "Savings High" column OR look for total row
+
+**The categories listed in Exhibit A are the INITIAL categories in scope!**
+
+### EXHIBIT B - PROJECT FEES
+Look for text like:
+- "$X fixed fee" or "Project Fees: $X" - THIS is `fee_amount`
+- "% of savings" or "contingent" - THIS determines `fee_type`
+- "Minimum Savings Guarantee" - this is NOT the fee, it's a guarantee threshold
+
+**⚠️ BEWARE OF EXAMPLE CALCULATIONS! ⚠️**
+The Agreement may contain example calculations like:
+- "if savings are $600,000 then... $300,000 ($600,000/2)"
+These are EXAMPLES to explain formulas, NOT actual fees!
+The actual fee is the one explicitly labeled "fixed fee" or "Project Fees".
+
+### Field Mapping:
+- `fee_type`: "fixed" if flat dollar, "contingent" if % of savings, "hybrid" if both
+- `fee_amount`: The FIXED FEE (e.g., "$190,000 fixed fee" → 190000.0)
+- `fee_contingent_percentage`: Only if contingent/hybrid model
+- `initial_categories_count`: COUNT of categories in Exhibit A table
+- `addressable_spend`: TOTAL from Exhibit A table
+- `savings_estimate_low`: LOW end from Exhibit A table
+- `savings_estimate_high`: HIGH end from Exhibit A table
+
+**IGNORE other documents for these fields!** The Agreement is the contractual source of truth.
+
+**How to set source correctly:**
+- `source_file`: MUST contain "Agreement" in the path
+- `confidence`: "high" if from Agreement
+- If you CANNOT find it in Agreement documents:
+  - Still try to find it in Assessment/Proposal as fallback
+  - Set `confidence`: "low"
+  - Add to notes: "⚠️ WARNING: Not found in Agreement - fallback from [filename]"
+
+### 4. SAVINGS: PROJECTED vs ACTUAL
+Distinguish between:
+- `savings_estimate_low` / `savings_estimate_high`: From Agreement ONLY (what was projected)
+- `impact.financials.annual_savings`: From Case Study or Close-out (what was actually achieved)
+
+### 5. EXTRACT ALL CATEGORIES (CRITICAL!)
+
+**STEP 1: Start with Agreement Exhibit A**
+The Agreement's Exhibit A table lists ALL initial categories in scope. 
+This is your baseline - you MUST extract data for EACH category listed there.
+
+**STEP 2: Check for Additional Categories**
+Some categories may have been added after the Agreement was signed.
+Look for additional categories in:
+- Categories/ folder structure
+- Wave 2/Categories/ folder (if exists)
+- Project Updates that mention new categories
+
+**STEP 3: For EACH Category, Extract:**
+- `category_label`: Exact name (e.g., "Medical Supplies", "Telecom - Circuits")
+- `status`: "implemented", "negotiated", "identified", "not_pursued", "in_progress", or "unknown"
+- `baseline_spend`: With amount, confidence, and source_file
+- `savings_annual_run_rate`: With amount, confidence, and source_file
+- `savings_percentage`: Calculated or stated percentage
+- `levers`: List of tactics used (rate_reduction, GPO, consolidation, RFP, incumbent_negotiation)
+- `vendors_before`: Who they bought from BEFORE
+- `vendors_after`: Who they buy from AFTER (with context like "GPO contract", "renegotiated")
+
+**STEP 4: For Categories with Sparse Data**
+Even if you only have partial information:
+- Still include the category
+- Set `status: "unknown"` if unclear
+- Set `confidence: "low"` on any values you're uncertain about
+- Add notes explaining what information is missing
+
+**MINIMUM REQUIREMENT:**
+You MUST extract at least as many categories as listed in Agreement Exhibit A.
+If Agreement says 7 categories, you need AT LEAST 7 in your output.
+Most Treya projects have 7-15 categories.
+
+### 6. VENDOR INFORMATION (Pre/Post Sourcing)
+For each category, extract:
+- `vendors_before`: Who they were buying from BEFORE Treya's work
+  - Example: ["Henry Schein", "Multiple local suppliers", "Various distributors"]
+- `vendors_after`: Who they ended up with AFTER implementation, with context
+  - Example: ["McKesson (GPO contract)", "Henry Schein (renegotiated terms)", "Incumbent - 15% rate reduction"]
+
+### 7. PROJECT UPDATES OVERRIDE (CRITICAL!)
+When extracting category data, if the FINAL project update (close-out, latest dated update) has different numbers than other documents:
+- **ALWAYS use the final project update values** - they are the most accurate
+- Set `confidence: "high"` for data from final project updates
+- In notes, mention if there was a discrepancy: "Updated from final close-out (previously X in earlier docs)"
+
+### 8. FORMAT RULES
+- **Dates**: Use ISO format (YYYY-MM-DD)
+- **Money amounts**: Always as float (e.g., 1200000.0 not "1.2M")
+- **Percentages**: As decimal 0-100 (e.g., 25.0 for 25%)
+
+### 9. EXTRACTION NOTES
+Add to `extraction_notes` array:
+- Any gaps in information
+- Conflicting data between sources
+- Fields you couldn't populate and why
+- Assumptions you had to make
+
+## Output Schema (JSON):
+```json
+{
+  "$defs": {
+    "CaseStudyPackaging": {
+      "description": "How to present the case study for marketing/sales.",
+      "properties": {
+        "case_study_ready": {
+          "default": false,
+          "description": "Whether this case study has enough info to be marketing-ready",
+          "title": "Case Study Ready",
+          "type": "boolean"
+        },
+        "headline": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "One-liner headline: '$X run-rate savings across Y categories'",
+          "title": "Headline"
+        },
+        "client_problem_statement": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What problem was the client facing",
+          "title": "Client Problem Statement"
+        },
+        "approach_summary": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "3-5 bullet points describing Treya's approach",
+          "title": "Approach Summary"
+        },
+        "top_levers": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Ranked list of top savings levers used",
+          "title": "Top Levers"
+        },
+        "value_delivered_blurb": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Short blurb about value delivered",
+          "title": "Value Delivered Blurb"
+        },
+        "where_we_were_unique": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What made Treya unique: speed, data approach, negotiations, etc.",
+          "title": "Where We Were Unique"
+        }
+      },
+      "title": "CaseStudyPackaging",
+      "type": "object"
+    },
+    "CategoryConstraints": {
+      "description": "Constraints specific to a category.",
+      "properties": {
+        "supplier_constraints": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Must-use, diversity requirements, preferred vendors",
+          "title": "Supplier Constraints"
+        },
+        "operational_constraints": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "No downtime, spec lock, clinical constraints",
+          "title": "Operational Constraints"
+        },
+        "contractual_constraints": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Existing terms, renewals, exclusivity",
+          "title": "Contractual Constraints"
+        },
+        "implementation_constraints": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Labor relations, seasonality, regulatory",
+          "title": "Implementation Constraints"
+        }
+      },
+      "title": "CategoryConstraints",
+      "type": "object"
+    },
+    "CategoryOutcome": {
+      "description": "Outcome for a single spend category.",
+      "properties": {
+        "category_label": {
+          "description": "Category name (e.g., 'Telecom', 'IT Hardware')",
+          "title": "Category Label",
+          "type": "string"
+        },
+        "category_l1": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Level 1 category",
+          "title": "Category L1"
+        },
+        "category_l2": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Level 2 category",
+          "title": "Category L2"
+        },
+        "category_l3": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Level 3 category",
+          "title": "Category L3"
+        },
+        "start_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Category work start date",
+          "title": "Start Date"
+        },
+        "end_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Category work end date",
+          "title": "End Date"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CategoryStatus"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Current status of the category"
+        },
+        "vendors_before": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Vendors used BEFORE sourcing (e.g., 'Multiple local suppliers', 'Henry Schein')",
+          "title": "Vendors Before"
+        },
+        "vendors_after": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Vendors used AFTER sourcing with context (e.g., 'McKesson (GPO contract)', 'Incumbent - renegotiated terms')",
+          "title": "Vendors After"
+        },
+        "levers": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Savings levers used: consolidation, rate_reduction, term_improvement, etc.",
+          "title": "Levers"
+        },
+        "constraints": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CategoryConstraints"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Category-specific constraints"
+        },
+        "savings_annual_run_rate": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Annual run-rate savings"
+        },
+        "savings_one_time": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "One-time savings"
+        },
+        "baseline_spend": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Baseline spend in this category"
+        },
+        "savings_percentage": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Savings as percentage of baseline",
+          "title": "Savings Percentage"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Additional notes about this category",
+          "title": "Notes"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Evidence"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Evidence supporting category claims",
+          "title": "Evidence"
+        }
+      },
+      "required": [
+        "category_label"
+      ],
+      "title": "CategoryOutcome",
+      "type": "object"
+    },
+    "CategoryStatus": {
+      "description": "Status of a spend category in the project.",
+      "enum": [
+        "identified",
+        "negotiated",
+        "implemented",
+        "complete",
+        "completed",
+        "in_progress",
+        "not_pursued",
+        "unknown"
+      ],
+      "title": "CategoryStatus",
+      "type": "string"
+    },
+    "ClaimMoney": {
+      "description": "A monetary claim with optional evidence and confidence.",
+      "properties": {
+        "amount": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Dollar amount",
+          "title": "Amount"
+        },
+        "currency": {
+          "default": "USD",
+          "description": "Currency code",
+          "title": "Currency",
+          "type": "string"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "low/medium/high confidence in this number",
+          "title": "Confidence"
+        },
+        "source_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "File this was extracted from",
+          "title": "Source File"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Additional context about this amount",
+          "title": "Notes"
+        }
+      },
+      "title": "ClaimMoney",
+      "type": "object"
+    },
+    "ClaimNumber": {
+      "description": "A numeric claim with optional evidence.",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Numeric value",
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Unit (days, percent, count, etc.)",
+          "title": "Unit"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "low/medium/high confidence",
+          "title": "Confidence"
+        },
+        "source_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "File this was extracted from",
+          "title": "Source File"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Additional context",
+          "title": "Notes"
+        }
+      },
+      "title": "ClaimNumber",
+      "type": "object"
+    },
+    "ClientContext": {
+      "description": "Information about the client.",
+      "properties": {
+        "client_name": {
+          "description": "Client company name",
+          "title": "Client Name",
+          "type": "string"
+        },
+        "industry_primary": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Primary industry",
+          "title": "Industry Primary"
+        },
+        "industry_secondary": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Secondary industry if applicable",
+          "title": "Industry Secondary"
+        },
+        "business_model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Business model: manufacturer, distributor, services, healthcare, multi-site, etc.",
+          "title": "Business Model"
+        },
+        "sponsor_pe_firm": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "PE sponsor/owner if applicable",
+          "title": "Sponsor Pe Firm"
+        },
+        "client_history": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Client background: founder-run, first institutional equity, multiple PE turns, roll-up, M&A history, etc.",
+          "title": "Client History"
+        },
+        "size_metrics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SizeMetrics"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Size metrics"
+        }
+      },
+      "required": [
+        "client_name"
+      ],
+      "title": "ClientContext",
+      "type": "object"
+    },
+    "EngagementBackground": {
+      "description": "Background context for the engagement.",
+      "properties": {
+        "objective": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "One-sentence 'why' - primary objective of the engagement",
+          "title": "Objective"
+        },
+        "scope_summary": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Short paragraph describing what's in/out of scope",
+          "title": "Scope Summary"
+        },
+        "constraints_challenges": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Array of constraints or challenges faced",
+          "title": "Constraints Challenges"
+        },
+        "procurement_environment": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProcurementEnvironment"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Context about client's procurement environment"
+        }
+      },
+      "title": "EngagementBackground",
+      "type": "object"
+    },
+    "Evidence": {
+      "description": "Evidence supporting a claim.",
+      "properties": {
+        "source_file": {
+          "description": "Relative path to source file",
+          "title": "Source File",
+          "type": "string"
+        },
+        "page_or_slide": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Page number, slide number, or sheet name",
+          "title": "Page Or Slide"
+        },
+        "quote": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Relevant quote or excerpt",
+          "title": "Quote"
+        },
+        "date_extracted": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When this was found in the file name/content",
+          "title": "Date Extracted"
+        }
+      },
+      "required": [
+        "source_file"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "FeeType": {
+      "description": "Types of fee structures.",
+      "enum": [
+        "fixed",
+        "hybrid",
+        "contingent",
+        "unknown"
+      ],
+      "title": "FeeType",
+      "type": "string"
+    },
+    "Financials": {
+      "description": "Financial impact metrics.",
+      "properties": {
+        "annual_savings": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Annual run-rate savings"
+        },
+        "one_time_savings": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "One-time savings"
+        }
+      },
+      "title": "Financials",
+      "type": "object"
+    },
+    "Impact": {
+      "description": "Overall project impact.",
+      "properties": {
+        "summary": {
+          "$ref": "#/$defs/ImpactSummary",
+          "description": "High-level impact summary"
+        },
+        "financials": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Financials"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Financial impact metrics"
+        },
+        "time_to_value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TimeToValue"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Time to value metrics"
+        },
+        "operational_improvements": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Description of operational improvements achieved",
+          "title": "Operational Improvements"
+        },
+        "proof_points": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/ProofPoint"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Short, defensible bullets for marketing/sales",
+          "title": "Proof Points"
+        }
+      },
+      "required": [
+        "summary"
+      ],
+      "title": "Impact",
+      "type": "object"
+    },
+    "ImpactSummary": {
+      "description": "High-level impact summary.",
+      "properties": {
+        "headline": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Marketing-safe headline (e.g., '$X run-rate savings across Y categories')",
+          "title": "Headline"
+        },
+        "narrative": {
+          "description": "2-4 sentence narrative describing the impact",
+          "title": "Narrative",
+          "type": "string"
+        }
+      },
+      "required": [
+        "narrative"
+      ],
+      "title": "ImpactSummary",
+      "type": "object"
+    },
+    "Maturity": {
+      "description": "Procurement maturity levels.",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ],
+      "title": "Maturity",
+      "type": "string"
+    },
+    "OperatingModel": {
+      "description": "Procurement operating model types.",
+      "enum": [
+        "centralized",
+        "decentralized",
+        "hybrid",
+        "unknown"
+      ],
+      "title": "OperatingModel",
+      "type": "string"
+    },
+    "ProcurementEnvironment": {
+      "description": "Client's procurement environment context.",
+      "properties": {
+        "operating_model": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/OperatingModel"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Procurement operating model"
+        },
+        "maturity": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Maturity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Procurement maturity level"
+        },
+        "data_availability": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Data availability: poor/good, decentralized, multiple supplier accounts, etc.",
+          "title": "Data Availability"
+        },
+        "data_quality_notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Notes on data quality challenges",
+          "title": "Data Quality Notes"
+        },
+        "source_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Document where procurement environment was assessed",
+          "title": "Source File"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Confidence level: high/medium/low",
+          "title": "Confidence"
+        }
+      },
+      "title": "ProcurementEnvironment",
+      "type": "object"
+    },
+    "ProjectScope": {
+      "description": "Project scope, timing, and fee information.",
+      "properties": {
+        "engagement_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Type of engagement: broad multi-category strategic sourcing, rapid cost takeout, pre-sale value maximization, post-merger synergy, etc.",
+          "title": "Engagement Type"
+        },
+        "fee_type": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FeeType"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Fee structure type"
+        },
+        "fee_amount": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Fixed fee amount if applicable"
+        },
+        "fee_hybrid_threshold": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Threshold for hybrid fee model"
+        },
+        "fee_contingent_percentage": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Contingent percentage (0-100)",
+          "title": "Fee Contingent Percentage"
+        },
+        "fee_notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Additional fee structure details",
+          "title": "Fee Notes"
+        },
+        "initial_categories_count": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Number of categories in initial scope",
+          "title": "Initial Categories Count"
+        },
+        "addressable_spend": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Total addressable spend"
+        },
+        "savings_estimate_low": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Low estimate of savings"
+        },
+        "savings_estimate_high": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "High estimate of savings"
+        },
+        "cogs_categories_count": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Number of COGS categories",
+          "title": "Cogs Categories Count"
+        },
+        "cogs_categories_percentage": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "COGS categories as % of total",
+          "title": "Cogs Categories Percentage"
+        },
+        "cogs_spend_addressed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "COGS spend addressed"
+        },
+        "cogs_categories_list": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of specific COGS categories",
+          "title": "Cogs Categories List"
+        },
+        "operational_objectives": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Non-savings related process/operational objectives",
+          "title": "Operational Objectives"
+        },
+        "start_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Project start date",
+          "title": "Start Date"
+        },
+        "end_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Project end date or expected end",
+          "title": "End Date"
+        },
+        "source_folder_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "SharePoint or source folder URL",
+          "title": "Source Folder Url"
+        }
+      },
+      "title": "ProjectScope",
+      "type": "object"
+    },
+    "ProofPoint": {
+      "description": "A short, defensible proof point for marketing/sales.",
+      "properties": {
+        "statement": {
+          "description": "The proof point statement",
+          "title": "Statement",
+          "type": "string"
+        },
+        "category": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Related category if applicable",
+          "title": "Category"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Evidence"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Supporting evidence",
+          "title": "Evidence"
+        }
+      },
+      "required": [
+        "statement"
+      ],
+      "title": "ProofPoint",
+      "type": "object"
+    },
+    "SizeMetrics": {
+      "description": "Client size metrics.",
+      "properties": {
+        "revenue": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Annual revenue - USE WEB SEARCH if not in docs"
+        },
+        "ebitda": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimMoney"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "EBITDA if available"
+        },
+        "locations_count": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Number of locations/sites",
+          "title": "Locations Count"
+        },
+        "locations_source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Source file for locations count",
+          "title": "Locations Source"
+        },
+        "locations_confidence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Confidence: high/medium/low",
+          "title": "Locations Confidence"
+        },
+        "employees_count": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Number of employees",
+          "title": "Employees Count"
+        }
+      },
+      "title": "SizeMetrics",
+      "type": "object"
+    },
+    "TimeToValue": {
+      "description": "Time to value metrics.",
+      "properties": {
+        "value_realized_in_days": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClaimNumber"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Days to realize value"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Additional context",
+          "title": "Notes"
+        }
+      },
+      "title": "TimeToValue",
+      "type": "object"
+    }
+  },
+  "description": "Complete case study extraction from a Treya Partners project.\n\nThis is the top-level model that contains all extracted information.",
+  "properties": {
+    "schema_version": {
+      "default": "v1",
+      "description": "Schema version",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "extraction_date": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "When this was extracted",
+      "title": "Extraction Date"
+    },
+    "extraction_model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "LLM model used for extraction",
+      "title": "Extraction Model"
+    },
+    "source_project_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Path to source project folder",
+      "title": "Source Project Path"
+    },
+    "client": {
+      "$ref": "#/$defs/ClientContext",
+      "description": "Client information"
+    },
+    "project_scope": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ProjectScope"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Project scope, timing, and fees"
+    },
+    "engagement_background": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/EngagementBackground"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Engagement context"
+    },
+    "impact": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Impact"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Overall project impact"
+    },
+    "categories": {
+      "description": "Category-level outcomes",
+      "items": {
+        "$ref": "#/$defs/CategoryOutcome"
+      },
+      "title": "Categories",
+      "type": "array"
+    },
+    "case_study_packaging": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CaseStudyPackaging"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Marketing-ready packaging"
+    },
+    "extraction_notes": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Notes from the extraction process (gaps, uncertainties, etc.)",
+      "title": "Extraction Notes"
+    },
+    "files_analyzed": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "List of files that were analyzed for extraction",
+      "title": "Files Analyzed"
+    }
+  },
+  "required": [
+    "client"
+  ],
+  "title": "CaseStudy",
+  "type": "object"
+}
+```
+
+
+
+[FILE CONTENTS OMITTED - See selected files above]
+
+--- LLM RESPONSE ---
+Tokens: 102,467 in / 5,739 out
+
+{
+  "schema_version": "v1",
+  "extraction_date": "2026-01-21",
+  "extraction_model": "gpt-4o",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology (APDerm)",
+    "industry_primary": "Healthcare – Dermatology Services",
+    "industry_secondary": "Multi-site Physician Practice",
+    "business_model": "Physician-led, multi-location clinical services",
+    "sponsor_pe_firm": "Waud Capital Partners",
+    "client_history": "Founded 1992, roll-up growth across New England; PE-backed since 2017",
+    "size_metrics": {
+      "revenue": {
+        "amount": 50000000.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Web Search",
+        "notes": "LeadIQ lists USD 50-100 MM; conservative midpoint used"
+      },
+      "ebitda": null,
+      "locations_count": 40,
+      "locations_source": "Web Search",
+      "locations_confidence": "medium",
+      "employees_count": null
+    }
+  },
+  "project_scope": {
+    "engagement_type": "Multi-category strategic sourcing (two phases)",
+    "fee_type": "fixed",
+    "fee_amount": {
+      "amount": 125000.0,
+      "currency": "USD",
+      "confidence": "low",
+      "source_file": "Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx",
+      "notes": "Only the extension agreement contained explicit fee; original Exhibit B not available"
+    },
+    "fee_contingent_percentage": null,
+    "initial_categories_count": 7,
+    "addressable_spend": {
+      "amount": 6300000.0,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+      "notes": "Total baseline spend quoted for two-phase engagement"
+    },
+    "savings_estimate_low": {
+      "amount": 223979.07,
+      "currency": "USD",
+      "confidence": "low",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx",
+      "notes": "Savings projections from Wave-2 assessment – used as fallback because Exhibit A unavailable"
+    },
+    "savings_estimate_high": {
+      "amount": 428063.16,
+      "currency": "USD",
+      "confidence": "low",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx",
+      "notes": "See above"
+    },
+    "start_date": null,
+    "end_date": "2022-08-05",
+    "source_folder_url": null
+  },
+  "engagement_background": {
+    "objective": "Leverage APDerm’s enterprise purchasing power to reduce indirect & SG&A costs across priority spend categories.",
+    "scope_summary": "Two-phase strategic sourcing program addressing medical & office supplies, logistics, telecom, IT, facilities, and administrative services; mix of RFPs, incumbent negotiations, and GPO utilization.",
+    "constraints_challenges": [
+      "Highly decentralized purchasing across 40+ locations",
+      "Pandemic-driven supply chain inflation",
+      "Desire to minimize operational disruption and retain many incumbents"
+    ],
+    "procurement_environment": {
+      "operating_model": "decentralized",
+      "maturity": "low",
+      "data_availability": "Fragmented AP extract with numerous supplier accounts",
+      "data_quality_notes": "Significant effort required to standardize categories and baselines",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+      "confidence": "medium"
+    }
+  },
+  "impact": {
+    "summary": {
+      "headline": "$1.2 MM annual run-rate savings across 13 categories",
+      "narrative": "Treya Partners executed a two-phase sourcing program addressing $6.3 MM in baseline spend. Through competitive RFPs, targeted incumbent negotiations, and GPO contracts the team delivered $1.2 MM in quantified annual savings (19 % reduction) while largely retaining incumbent vendors and requiring minimal operational change."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      },
+      "one_time_savings": null
+    },
+    "time_to_value": null,
+    "operational_improvements": "Standardized national pricing, consolidated suppliers, implemented GPO contracts, and negotiated long-term rate locks.",
+    "proof_points": [
+      {
+        "statement": "19 % cost reduction on $6.3 MM spend",
+        "category": null,
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+            "quote": "Total project savings of $1.2M or 19% on $6.3M in baseline spend over 2 Phases"
+          }
+        ]
+      },
+      {
+        "statement": "27 % savings on medical supplies keeping incumbent distributor",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "page_or_slide": "5",
+            "quote": "Historical Spend $1,817,711 – Savings 27% ($485K) – Awarded Distributor McKesson"
+          }
+        ]
+      },
+      {
+        "statement": "38 % telecom circuit savings via OneSource/Verizon aggregation",
+        "category": "Telecom – Circuits",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "page_or_slide": "16",
+            "quote": "Telecom (Circuits) – 38 % / $37,454 savings"
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "status": "implemented",
+      "baseline_spend": {
+        "amount": 1817711.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 485087.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 27.0,
+      "vendors_before": ["Multiple local distributors"],
+      "vendors_after": ["McKesson (HPG/Premier GPO contract)"],
+      "levers": ["RFP", "GPO", "incumbent_negotiation"],
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": "5"
+        }
+      ]
+    },
+    {
+      "category_label": "Courier Services",
+      "status": "implemented",
+      "baseline_spend": {
+        "amount": 432024.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 121572.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 28.0,
+      "vendors_before": ["Multiple regional couriers"],
+      "vendors_after": ["Millers Express & Xpressman (split award)"],
+      "levers": ["RFP", "route_consolidation"],
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": "16"
+        }
+      ]
+    },
+    {
+      "category_label": "Telecom – Circuits",
+      "status": "implemented",
+      "baseline_spend": {
+        "amount": 98568.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 37454.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 38.0,
+      "vendors_before": ["Various local ISPs"],
+      "vendors_after": ["OneSource (MetTel / Verizon aggregation)"],
+      "levers": ["consolidation", "rate_reduction"],
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": "16"
+        }
+      ]
+    },
+    {
+      "category_label": "IT Hardware",
+      "status": "implemented",
+      "baseline_spend": {
+        "amount": 110125.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 29410.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 27.0,
+      "vendors_before": ["Multiple resellers"],
+      "vendors_after": ["Whalley (negotiated catalog)"],
+      "levers": ["RFP", "vendor_consolidation"],
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": "16"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies",
+      "status": "implemented",
+      "baseline_spend": {
+        "amount": 174287.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 13694.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx"
+      },
+      "savings_percentage": 8.0,
+      "vendors_before": ["Office Depot", "Amazon"],
+      "vendors_after": ["WB Mason (GPO rebate structure)"],
+      "levers": ["GPO", "rebate_optimization"],
+      "evidence": [
+        {
+          "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx",
+          "page_or_slide": "WM Mason Summary"
+        }
+      ]
+    },
+    {
+      "category_label": "Small Parcel Shipping",
+      "status": "implemented",
+      "baseline_spend": {
+        "amount": 35571.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 10508.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 30.0,
+      "vendors_before": ["FedEx"],
+      "vendors_after": ["UPS (Premier GPO rates)"],
+      "levers": ["GPO", "rate_reduction"],
+      "evidence": [
+        {
+          "source_file": "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx",
+          "page_or_slide": "Savings Analysis T2 Working"
+        }
+      ]
+    },
+    {
+      "category_label": "Telecom – PBX / Contact Center",
+      "status": "implemented",
+      "baseline_spend": {
+        "amount": 207996.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 6240.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 3.0,
+      "vendors_before": ["Legacy PBX vendors"],
+      "vendors_after": ["Tidal (hosted solution)"],
+      "levers": ["RFP", "technology_migration"],
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": "16"
+        }
+      ]
+    },
+    {
+      "category_label": "Billing Services",
+      "status": "award_review",
+      "baseline_spend": {
+        "amount": 1558800.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 259800.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 17.0,
+      "vendors_before": ["Athenahealth"],
+      "vendors_after": ["Athenahealth (renegotiated tiered rate structure)"],
+      "levers": ["incumbent_negotiation"],
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": "3"
+        }
+      ]
+    },
+    {
+      "category_label": "Janitorial Services",
+      "status": "implementation",
+      "baseline_spend": {
+        "amount": 977833.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 193565.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 20.0,
+      "vendors_before": ["Multiple local cleaners"],
+      "vendors_after": ["Enterprise Cleaning (rate-locked)"],
+      "levers": ["RFP", "vendor_consolidation"],
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": "3"
+        }
+      ]
+    },
+    {
+      "category_label": "Non-IT Temporary Labor",
+      "status": "implementation",
+      "baseline_spend": {
+        "amount": 174793.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 10245.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 11.0,
+      "vendors_before": ["Addison Group"],
+      "vendors_after": ["Randstad (Premier GPO)"],
+      "levers": ["GPO"],
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": "3"
+        }
+      ]
+    },
+    {
+      "category_label": "Copier / Print Services",
+      "status": "reporting",
+      "baseline_spend": {
+        "amount": 93686.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 12000.0,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Mid-point of 10-15 % range used"
+      },
+      "savings_percentage": 12.5,
+      "vendors_before": ["Conway Technology Group"],
+      "vendors_after": ["Konica Minolta (Usage-based)"],
+      "levers": ["GPO", "usage_monitoring"]
+    },
+    {
+      "category_label": "Uniforms",
+      "status": "award_review",
+      "baseline_spend": {
+        "amount": 60414.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_annual_run_rate": {
+        "amount": 6041.0,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "High end of 5-10 % range"
+      },
+      "savings_percentage": 10.0,
+      "vendors_before": ["Uniforms for America"],
+      "vendors_after": ["Cintas (proposal)"],
+      "levers": ["GPO"]
+    }
+  ],
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "headline": "$1.2 MM savings – 19 % cost reduction across 13 categories",
+    "client_problem_statement": "Rapidly growing dermatology platform lacked centralized purchasing and faced pandemic-driven cost inflation.",
+    "approach_summary": [
+      "Two-phase sourcing roadmap addressing $6.3 MM in indirect spend",
+      "Combined competitive RFPs, Treya GPO contracts, and targeted incumbent renegotiations",
+      "Aligned stakeholders across 40+ sites through data-backed baselines and clear decision gates",
+      "Implemented robust tracking to lock in savings and guarantee ROI"
+    ],
+    "top_levers": [
+      "Incumbent supplier negotiation",
+      "Competitive RFP",
+      "GPO contracting",
+      "Vendor consolidation"
+    ],
+    "value_delivered_blurb": "Treya delivered a 4× ROI, freeing $1.2 MM in annual savings while preserving clinical continuity and minimizing change-management effort.",
+    "where_we_were_unique": [
+      "Deep healthcare category benchmarks and GPO access",
+      "Speed – realized savings in under 6 months",
+      "Collaborative, clinician-friendly negotiation style"
+    ]
+  },
+  "extraction_notes": [
+    "Signed Agreement PDF did not include visible Exhibit A/B tables; therefore fee and initial scope numbers were inferred from later assessment slides – flagged low confidence.",
+    "Extension proposal (Nov 2021) provided fixed-fee amount but may not reflect original phase-1 fees.",
+    "Copier/Print and Uniform savings figures not finalized in close-out deck; used mid-point or high-end of provided ranges – low confidence marked.",
+    "Overall annual savings figure relies on Treya marketing case study (vF PDF) which aggregates Phase 1 & 2 results – treated as high confidence.",
+    "Employee Benefits and Path Lab Systems categories mentioned but excluded due to ‘no savings focus’ per project updates."
+  ],
+  "files_analyzed": [
+    "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx",
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+    "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx",
+    "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx",
+    "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx",
+    "Web Search Results"
+  ]
+}

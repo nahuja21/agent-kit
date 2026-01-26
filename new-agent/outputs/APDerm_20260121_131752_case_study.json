@@ -1,0 +1,289 @@
+{
+  "schema_version": "v1",
+  "extraction_date": "2023-10-07",
+  "extraction_model": "GPT-4",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology, PC (APDerm)",
+    "industry_primary": "Healthcare",
+    "business_model": "Healthcare services, multi-site",
+    "sponsor_pe_firm": "Waud Capital",
+    "client_history": "Founded in 1992 as a solo practice, expanded through acquisitions",
+    "size_metrics": {
+      "revenue": {
+        "amount": 78000000.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+      },
+      "locations_count": 29
+    }
+  },
+  "project_scope": {
+    "engagement_type": "broad multi-category strategic sourcing",
+    "fee_type": "hybrid",
+    "fee_amount": {
+      "amount": 300000.0,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+    },
+    "fee_hybrid_threshold": {
+      "amount": 600000.0,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+    },
+    "fee_contingent_percentage": 25.0,
+    "initial_categories_count": 8,
+    "addressable_spend": {
+      "amount": 3741659.17,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+    },
+    "savings_estimate_low": {
+      "amount": 223979.07,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+    },
+    "savings_estimate_high": {
+      "amount": 428063.16,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+    },
+    "start_date": "2020-12-11",
+    "end_date": "2022-01-30"
+  },
+  "engagement_background": {
+    "objective": "Achieve procurement cost savings and efficiencies through optimization efforts and competitive sourcing processes.",
+    "scope_summary": "Strategic sourcing engagement across multiple categories to leverage enterprise-wide purchasing power and achieve cost savings.",
+    "constraints_challenges": [
+      "Fragmented supply base and decentralized purchasing",
+      "Inflationary market conditions and supply chain issues"
+    ],
+    "procurement_environment": {
+      "operating_model": "decentralized",
+      "maturity": "medium",
+      "data_availability": "Good but decentralized",
+      "data_quality_notes": "Fragmented across locations"
+    }
+  },
+  "impact": {
+    "summary": {
+      "headline": "$1.2M or 19% savings on a $6.3M baseline spend",
+      "narrative": "The Treya/AP Derm strategic sourcing project created significant savings across more than 10 spend categories over two phases. The project leveraged competitive bidding processes, incumbent supplier negotiations, and Group Purchasing agreements to create cost savings."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      }
+    },
+    "operational_improvements": "Retained incumbent suppliers in many cases, minimizing transition time for APDerm.",
+    "proof_points": [
+      {
+        "statement": "Achieved 19% savings on a $6.3M baseline spend.",
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+            "page_or_slide": "2",
+            "quote": "Total project savings of $1.2M or 19% on $6.3M in baseline spend over 2 Phases",
+            "date_extracted": "2023-10-07"
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "status": "implemented",
+      "levers": [
+        "GPO",
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 485087.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Update (Jun 29, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 1817711.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Update (Jun 29, 2022).pptx"
+      },
+      "savings_percentage": 27.0
+    },
+    {
+      "category_label": "Office Supplies",
+      "status": "implemented",
+      "levers": [
+        "GPO"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 13694.48,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx"
+      },
+      "baseline_spend": {
+        "amount": 174287.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx"
+      },
+      "savings_percentage": 7.9
+    },
+    {
+      "category_label": "Small Parcel",
+      "status": "implemented",
+      "levers": [
+        "GPO"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 10508.18,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx"
+      },
+      "baseline_spend": {
+        "amount": 35571.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx"
+      },
+      "savings_percentage": 29.5
+    },
+    {
+      "category_label": "Courier Services",
+      "status": "implemented",
+      "levers": [
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 121572.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 432024.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 28.1
+    },
+    {
+      "category_label": "Telecom (Circuits)",
+      "status": "implemented",
+      "levers": [
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 37454.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Telecom - data & voice/RFQ/RFQ Responses/8x8/APDerm - Quote #Q-00417553 - 8x8 Implementation Services Custom-SOW .pdf"
+      },
+      "baseline_spend": {
+        "amount": 98568.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Telecom - data & voice/RFQ/RFQ Responses/8x8/APDerm - Quote #Q-00417553 - 8x8 Implementation Services Custom-SOW .pdf"
+      },
+      "savings_percentage": 38.0
+    },
+    {
+      "category_label": "IT Hardware",
+      "status": "implemented",
+      "levers": [
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 29410.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/IT Hardware Software/RFQ/RFQ Responses/APDerm -  IT Hardware RFQ Savings Comparison (April 27, 2021) vF.xlsx"
+      },
+      "baseline_spend": {
+        "amount": 110125.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/IT Hardware Software/RFQ/RFQ Responses/APDerm -  IT Hardware RFQ Savings Comparison (April 27, 2021) vF.xlsx"
+      },
+      "savings_percentage": 26.7
+    },
+    {
+      "category_label": "Billing Services",
+      "status": "negotiated",
+      "levers": [
+        "RFP"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 259800.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+      },
+      "baseline_spend": {
+        "amount": 1558800.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+      },
+      "savings_percentage": 16.7
+    }
+  ],
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "headline": "$1.2M run-rate savings across 10 categories",
+    "client_problem_statement": "APDerm faced fragmented supply base and decentralized purchasing, resulting in unleveraged enterprise-wide purchasing power amid inflationary market conditions.",
+    "approach_summary": [
+      "Conducted comprehensive spend analysis across multiple categories.",
+      "Utilized competitive bidding processes and incumbent supplier negotiations.",
+      "Leveraged GPO agreements to achieve rapid savings.",
+      "Collaborated with stakeholders to ensure business needs were met.",
+      "Implemented solutions with minimal operational disruption."
+    ],
+    "top_levers": [
+      "GPO",
+      "rate_reduction",
+      "RFP",
+      "incumbent negotiations"
+    ],
+    "value_delivered_blurb": "Delivered $1.2M in annual savings by optimizing procurement processes and leveraging enterprise-wide purchasing power.",
+    "where_we_were_unique": [
+      "Data-driven approach with strong stakeholder collaboration.",
+      "Ability to leverage existing supplier relationships and GPO agreements.",
+      "Minimized disruption by retaining incumbent suppliers."
+    ]
+  },
+  "extraction_notes": [
+    "Some spend categories have sparse data or unquantified savings.",
+    "Billing Services savings are projected and may change upon final negotiation.",
+    "Employee Benefits and Path Lab Systems categories were addressed without savings focus.",
+    "Discrepancies in savings figures across documents were reconciled using final case study PDF."
+  ],
+  "files_analyzed": [
+    "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx",
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+    "Wave 2/Updates/APDerm Phase 2 Project Update (Jun 29, 2022).pptx",
+    "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx",
+    "Categories/Medical Supplies/RFP/APDerm - Medical Supplies RFP Draft (Apr. 2, 2021) v1.xlsx",
+    "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx",
+    "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx",
+    "Categories/Telecom - data & voice/RFQ/RFQ Responses/8x8/APDerm - Quote #Q-00417553 - 8x8 Implementation Services Custom-SOW .pdf"
+  ]
+}

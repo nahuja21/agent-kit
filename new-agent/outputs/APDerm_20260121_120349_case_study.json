@@ -1,0 +1,197 @@
+{
+  "schema_version": "v1",
+  "extraction_date": "2023-10-01",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "APDerm",
+    "industry_primary": "Healthcare",
+    "business_model": "Healthcare, multi-site",
+    "sponsor_pe_firm": "Waud Capital",
+    "client_history": "Founded in 1992 as a solo practice; Waud Capital invested in 2017; experienced overall growth rate of 2.5x",
+    "size_metrics": {
+      "revenue": {
+        "amount": 86600000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Update (Jun 29, 2022).pptx"
+      }
+    }
+  },
+  "project_scope": {
+    "engagement_type": "Strategic sourcing",
+    "fee_type": "unknown",
+    "initial_categories_count": 8,
+    "addressable_spend": {
+      "amount": 3741659.17,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+    },
+    "savings_estimate_low": {
+      "amount": 223979.06795,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+    },
+    "savings_estimate_high": {
+      "amount": 428063.1591,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+    },
+    "start_date": "2021-01-01"
+  },
+  "engagement_background": {
+    "objective": "Create procurement cost savings while ensuring business needs are fully met",
+    "scope_summary": "Addressed $6.3 million in baseline spend through competitive bidding, incumbent supplier negotiations, and GPO contracts.",
+    "constraints_challenges": [
+      "Limited spend visibility",
+      "Fragmented supply base",
+      "Decentralized purchasing",
+      "Inflationary market",
+      "Supply chain issues"
+    ],
+    "procurement_environment": {
+      "operating_model": "decentralized",
+      "maturity": "unknown",
+      "data_availability": "Limited, decentralized",
+      "data_quality_notes": "Challenges with spend visibility and fragmented contracts"
+    }
+  },
+  "impact": {
+    "summary": {
+      "headline": "$1.2M run-rate savings across multiple categories",
+      "narrative": "Treya Partners collaborated with APDerm to achieve $1.2M or 19% in cost savings on an addressable baseline of $6.3M, leveraging competitive bidding, incumbent negotiations, and GPO contracts over two sourcing phases."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      }
+    },
+    "operational_improvements": "Maintained relationships with incumbent vendors, minimizing transition time",
+    "proof_points": [
+      {
+        "statement": "Achieved $1.2M savings on $6.3M baseline spend",
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+            "page_or_slide": "3",
+            "quote": "The Treya/AP Derm strategic sourcing project created $1.2M or 19% in cost savings on an addressable baseline of $6.3M."
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "status": "implemented",
+      "levers": [
+        "GPO utilization",
+        "Rate reduction"
+      ],
+      "constraints": {},
+      "savings_annual_run_rate": {
+        "amount": 485087.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 1817711.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 27.0
+    },
+    {
+      "category_label": "Courier Services",
+      "status": "implemented",
+      "levers": [
+        "GPO utilization",
+        "Rate reduction"
+      ],
+      "constraints": {},
+      "savings_annual_run_rate": {
+        "amount": 121572.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 432024.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 28.0
+    },
+    {
+      "category_label": "Billing Services",
+      "status": "identified",
+      "levers": [
+        "RFP"
+      ],
+      "constraints": {},
+      "savings_annual_run_rate": {
+        "amount": 259800.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 1558800.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 17.0
+    }
+  ],
+  "case_study_packaging": {
+    "headline": "$1.2M run-rate savings across multiple categories",
+    "client_problem_statement": "Limited spend visibility, fragmented supply base, decentralized purchasing, challenging market conditions",
+    "approach_summary": [
+      "Analyzed $6.3M in baseline spend",
+      "Utilized competitive RFPs, incumbent negotiations, and GPO contracts",
+      "Collaborated closely with APDerm stakeholders",
+      "Ensured sustainable savings with minimal operational disruption"
+    ],
+    "top_levers": [
+      "GPO utilization",
+      "Incumbent supplier negotiations",
+      "Competitive RFPs"
+    ],
+    "value_delivered_blurb": "Delivered $1.2M or 19% in cost savings with limited changes to operations.",
+    "where_we_were_unique": [
+      "Collaborative approach",
+      "Data-driven sourcing",
+      "Maintained incumbent supplier relationships"
+    ]
+  },
+  "extraction_notes": [
+    "The project end date is not explicitly mentioned.",
+    "Exact number of categories impacted was not clearly listed in all sources.",
+    "The confidence level for some financial figures is based on the consistency across multiple documents."
+  ],
+  "files_analyzed": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Case Study/Treya Case Study_APDerm v6 MY.docx",
+    "Case Study/Treya Case Study_APDerm v5 MY.docx",
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx",
+    "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+    "Categories/Courier Services/2. RFP Development/APDerm - Courier Services RFP - Draft vF (5-7-21).xlsx",
+    "Categories/Billing Systems/RFP Responses/Modernizing Medicine/Modernizing Medicine's RFP Response- APDerm - Practice Management - Billing Systems RFP (Dec 2021) (1).xlsx",
+    "Wave 2/Categories/Billing System/Negotiations/Athena Health Strategic Business Review (Jan. 5, 2022) WIP.pdf",
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 04, 2022).pptx",
+    "Wave 2/Updates/APDerm Phase 2 Project Update (Jun 29, 2022).pptx",
+    "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+  ]
+}

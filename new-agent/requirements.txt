@@ -1,0 +1,26 @@
+# Project Summary Agent - Dependencies
+
+# OpenAI API client
+openai>=1.40.0
+
+# Rich console output
+rich>=13.7.0
+
+# Pydantic for data models and structured outputs
+pydantic>=2.0.0
+
+# ============================================================================
+# Content Extraction Dependencies
+# ============================================================================
+
+# PDF extraction (PyMuPDF - fast and reliable)
+pymupdf>=1.24.0
+
+# PowerPoint reading
+python-pptx>=0.6.23
+
+# Word document reading
+python-docx>=1.1.0
+
+# Excel reading
+openpyxl>=3.1.0

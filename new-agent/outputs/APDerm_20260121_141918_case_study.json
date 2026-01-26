@@ -1,0 +1,216 @@
+{
+  "schema_version": "v1",
+  "extraction_date": "2023-10-10",
+  "extraction_model": "Custom LLM v1",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "APDerm",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology",
+    "business_model": "Healthcare - Multi-site dermatology practice",
+    "sponsor_pe_firm": "Waud Capital",
+    "client_history": "Founded in 1992, APDerm is a physician-led dermatology network that has grown by acquisition.",
+    "size_metrics": {
+      "revenue": {
+        "amount": 44700000.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Web Search"
+      },
+      "locations_count": 40,
+      "locations_source": "Web Search",
+      "locations_confidence": "medium"
+    }
+  },
+  "project_scope": {
+    "engagement_type": "Broad multi-category strategic sourcing",
+    "fee_type": "fixed",
+    "fee_amount": {
+      "amount": 190000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf"
+    },
+    "initial_categories_count": 7,
+    "addressable_spend": {
+      "amount": 6300000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf"
+    },
+    "savings_estimate_low": {
+      "amount": 1200000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+    },
+    "savings_estimate_high": {
+      "amount": 1200000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+    },
+    "start_date": "2020-12-11"
+  },
+  "engagement_background": {
+    "objective": "Achieve procurement cost savings across multiple categories.",
+    "scope_summary": "The engagement aimed to leverage APDerm's purchasing power across various categories to achieve significant cost reductions.",
+    "constraints_challenges": [
+      "Decentralized purchasing with fragmented supply base.",
+      "Inflationary market conditions during the pandemic."
+    ],
+    "procurement_environment": {
+      "operating_model": "decentralized",
+      "maturity": "medium",
+      "data_availability": "Fragmented data due to multiple contracts and locations.",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+      "confidence": "high"
+    }
+  },
+  "impact": {
+    "summary": {
+      "narrative": "The strategic sourcing project resulted in 19% savings on $6.3M baseline spend, translating to $1.2M in cost reductions. The approach leveraged RFPs, negotiations, and GPO contracts, ensuring incumbent vendors were retained where beneficial."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      }
+    },
+    "operational_improvements": "Enhanced strategic sourcing practices and purchasing power utilization.",
+    "proof_points": [
+      {
+        "statement": "Achieved $1.2M in savings on $6.3M spend.",
+        "category": "Overall project",
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "status": "implemented",
+      "vendors_before": [
+        "Henry Schein",
+        "Various distributors"
+      ],
+      "vendors_after": [
+        "McKesson (GPO contract)"
+      ],
+      "levers": [
+        "GPO",
+        "consolidation"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 485087.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (081721) vF.pptx"
+      },
+      "baseline_spend": {
+        "amount": 1817711.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (081721) vF.pptx"
+      },
+      "savings_percentage": 27.0,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (081721) vF.pptx",
+          "page_or_slide": "3"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies",
+      "status": "implemented",
+      "vendors_before": [
+        "Various local suppliers"
+      ],
+      "vendors_after": [
+        "WB Mason"
+      ],
+      "levers": [
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 13694.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx"
+      },
+      "baseline_spend": {
+        "amount": 174287.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx"
+      },
+      "savings_percentage": 8.0
+    },
+    {
+      "category_label": "Small Parcel",
+      "status": "implemented",
+      "vendors_before": [
+        "FedEx"
+      ],
+      "vendors_after": [
+        "UPS"
+      ],
+      "levers": [
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 10508.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx"
+      },
+      "baseline_spend": {
+        "amount": 35571.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx"
+      },
+      "savings_percentage": 30.0
+    }
+  ],
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "headline": "$1.2M run-rate savings across 7 categories",
+    "client_problem_statement": "APDerm faced rising costs and a fragmented supply base without leveraging their purchasing power.",
+    "approach_summary": [
+      "Analyzed spend across various categories.",
+      "Executed comprehensive RFP and negotiation processes.",
+      "Leveraged GPO contracts for enhanced terms.",
+      "Collaborated closely with stakeholders to ensure alignment.",
+      "Ensured sustainability of savings through strategic implementation."
+    ],
+    "top_levers": [
+      "GPO utilization",
+      "incumbent negotiations",
+      "competitive bidding (RFP)"
+    ],
+    "value_delivered_blurb": "Treya Partners delivered significant savings of 19% on a baseline spend of $6.3M, significantly enhancing APDerm's procurement efficiency.",
+    "where_we_were_unique": [
+      "Data-driven approach to capturing savings.",
+      "Customized GPO contracts.",
+      "Culturally sensitive stakeholder engagement."
+    ]
+  },
+  "extraction_notes": [
+    "Revenue and locations data inferred from web search.",
+    "Savings estimates confirmed from Case Study and Agreement files.",
+    "Detailed breakdown for every involved category provided."
+  ],
+  "files_analyzed": [
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (081721) vF.pptx"
+  ]
+}

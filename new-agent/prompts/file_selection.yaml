@@ -1,0 +1,71 @@
+# File Selection Prompt
+# Pass 1: Given directory tree, select files for extraction
+
+system_prompt: |
+  You are a document analyst for Treya Partners, a procurement consulting firm.
+  Your job is to identify the most important files for creating a case study.
+
+user_template: |
+  ## Project Directory:
+  ```
+  {{directory_tree}}
+  ```
+
+  ## STEP 1: List ALL Categories
+  Look at the directory tree and identify EVERY spend category.
+  Categories appear as subfolders under:
+  - Categories/
+  - Wave 2/Categories/
+  
+  ## STEP 2: Select Files ({{file_count}} total)
+  
+  ### REQUIRED FILES:
+  
+  1. **Agreement/** (2-3 files)
+     - The SIGNED agreement PDF (contains Exhibit A with categories, Exhibit B with fees)
+     - Look for: "signed", "Agreement", "MSA", "SOW"
+  
+  2. **Case Study/** (1-2 files)
+     - Final case study documents
+     - Look for: "Case Study", "vF", "final"
+  
+  3. **Project Updates/** (2-3 files)
+     - The MOST RECENT close-out or final update
+     - Look for: "Close-out", "Final", highest dates
+  
+  4. **Assessment/** (1-2 files)
+     - Opportunity assessments
+  
+  5. **One file per Category** (as many as needed)
+     - For EACH category you identified, select ONE file with savings data
+     - Look for: "Analysis", "Savings", "Summary" in .xlsx or .pptx
+  
+  ### FILES TO SKIP:
+  - Raw invoices, AP data
+  - Archive/ folder
+  - Duplicate versions (keep newest)
+  - Files with "(002)", "(copy)", "backup"
+
+  ## OUTPUT FORMAT:
+  Return valid JSON only:
+  ```json
+  {
+    "categories_found": ["Medical Supplies", "Office Supplies", "Telecom", ...],
+    "selected_files": ["Agreement/...", "Case Study/...", ...]
+  }
+  ```
+
+examples:
+  - input: "Categories/ has Medical Supplies, Office Supplies, Telecom subfolders"
+    output: |
+      {
+        "categories_found": ["Medical Supplies", "Office Supplies", "Telecom"],
+        "selected_files": [
+          "Agreement/Signed Agreement/Agreement - signed.pdf",
+          "Case Study/Treya Case Study vF.pdf",
+          "Project Updates/Close-out.pptx",
+          "Categories/Medical Supplies/Analysis/Savings.xlsx",
+          "Categories/Office Supplies/Analysis/Savings.xlsx",
+          "Categories/Telecom/Analysis/Savings.xlsx"
+        ]
+      }

@@ -1,0 +1,438 @@
+{
+  "schema_version": "v1",
+  "extraction_date": "2026-01-22",
+  "extraction_model": "gpt-4o",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology (APDerm)",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology Services",
+    "business_model": "Multi-site physician practice network",
+    "sponsor_pe_firm": "Waud Capital",
+    "client_history": "Physician-led dermatology roll-up across New England; PE-backed since 2017; 40+ clinic locations.",
+    "size_metrics": {
+      "revenue": {
+        "amount": 70000000.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Web Search",
+        "notes": "Mid-point of $50–100 M range from LeadIQ"
+      },
+      "locations_count": 32,
+      "locations_source": "Web Search",
+      "locations_confidence": "medium",
+      "employees_count": 500
+    }
+  },
+  "project_scope": {
+    "engagement_type": "Broad multi-category strategic sourcing (Phase 1 & Phase 2)",
+    "fee_type": "fixed",
+    "fee_amount": {
+      "amount": 190000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf"
+    },
+    "fee_notes": "Four equal installments; 2× fee minimum savings guarantee.",
+    "initial_categories_count": 7,
+    "addressable_spend": {
+      "amount": 11000000.0,
+      "currency": "USD",
+      "confidence": "low",
+      "source_file": "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf",
+      "notes": "Total spend in Exhibit-level summary (11 M) used because Exhibit A table not fully captured."
+    },
+    "savings_estimate_low": {
+      "amount": 542000.0,
+      "currency": "USD",
+      "confidence": "low",
+      "source_file": "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf"
+    },
+    "savings_estimate_high": {
+      "amount": 928000.0,
+      "currency": "USD",
+      "confidence": "low",
+      "source_file": "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf"
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2022-08-05"
+  },
+  "engagement_background": {
+    "objective": "Leverage APDerm’s enterprise purchasing power to reduce indirect procurement costs and implement best-practice sourcing processes across newly acquired clinics.",
+    "scope_summary": "Phase 1 (2021) tackled seven high-spend indirect categories; Phase 2 (2022) addressed eight additional categories including janitorial, billing services and temp labor.",
+    "constraints_challenges": [
+      "Rapid clinic acquisitions created fragmented supply base",
+      "Inflationary supply market during COVID-19",
+      "Need to maintain clinical service levels and avoid operational disruption"
+    ],
+    "procurement_environment": {
+      "operating_model": "decentralized",
+      "maturity": "low",
+      "data_availability": "Multiple ERP/AP systems; limited SKU-level visibility before project",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+      "confidence": "medium"
+    }
+  },
+  "impact": {
+    "summary": {
+      "headline": "$1.2 M annual run-rate savings across 10+ indirect categories",
+      "narrative": "Over two phases, Treya Partners analyzed $6.3 M of baseline indirect spend and delivered $1.2 M (19 %) in annual cost reductions while largely retaining incumbent suppliers, generating more than $12 M of enterprise value for APDerm."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      }
+    },
+    "proof_points": [
+      {
+        "statement": "27 % savings on medical supplies through GPO contract with McKesson",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx",
+            "quote": "Medical Supplies – baseline $1.82 M; savings 27 % ($485 K)"
+          }
+        ]
+      },
+      {
+        "statement": "Negotiated 20 % reduction on janitorial spend with incumbent Enterprise Cleaning",
+        "category": "Janitorial Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx",
+            "quote": "Janitorial Services – $978 K spend; 20 % savings ($194 K)"
+          }
+        ]
+      },
+      {
+        "statement": "Reduced billing system fees by 17 % ($260 K) via tiered revenue-share renegotiation with Athenahealth",
+        "category": "Billing Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx",
+            "quote": "Billing Systems Spend: $1.56 M → $1.30 M (17 % savings)"
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "status": "implemented",
+      "vendors_before": [
+        "Multiple local distributors"
+      ],
+      "vendors_after": [
+        "McKesson (HPG & Premier GPO contracts)"
+      ],
+      "levers": [
+        "GPO",
+        "consolidation",
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 485087.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 1817711.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "savings_percentage": 27.0,
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx",
+          "page_or_slide": "Slide 16"
+        }
+      ]
+    },
+    {
+      "category_label": "Courier Services",
+      "status": "implemented",
+      "vendors_before": [
+        "Skycom"
+      ],
+      "vendors_after": [
+        "Millers Express",
+        "Xpressman"
+      ],
+      "levers": [
+        "RFP",
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 121572.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 432024.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "savings_percentage": 28.0
+    },
+    {
+      "category_label": "Telecom – Circuits",
+      "status": "implemented",
+      "vendors_before": [
+        "Various ISPs"
+      ],
+      "vendors_after": [
+        "OneSource / MetTel",
+        "Verizon"
+      ],
+      "levers": [
+        "benchmarking",
+        "incumbent_negotiation"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 37454.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 98568.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "savings_percentage": 38.0
+    },
+    {
+      "category_label": "IT Hardware",
+      "status": "implemented",
+      "vendors_before": [
+        "Connection"
+      ],
+      "vendors_after": [
+        "Whalley (renegotiated)"
+      ],
+      "levers": [
+        "RFP",
+        "benchmarking"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 29410.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 110125.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "savings_percentage": 27.0
+    },
+    {
+      "category_label": "Office Supplies",
+      "status": "implemented",
+      "vendors_before": [
+        "W.B. Mason (list pricing)"
+      ],
+      "vendors_after": [
+        "W.B. Mason (rebased contract)"
+      ],
+      "levers": [
+        "benchmarking",
+        "incumbent_negotiation"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 13694.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 174287.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "savings_percentage": 8.0
+    },
+    {
+      "category_label": "Small Parcel",
+      "status": "implemented",
+      "vendors_before": [
+        "FedEx"
+      ],
+      "vendors_after": [
+        "UPS (GPO contract)"
+      ],
+      "levers": [
+        "GPO",
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 10508.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 35571.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "savings_percentage": 30.0
+    },
+    {
+      "category_label": "Telecom – PBX / Contact Center",
+      "status": "implemented",
+      "vendors_before": [
+        "Legacy PBX"
+      ],
+      "vendors_after": [
+        "Tidal"
+      ],
+      "levers": [
+        "RFP"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 6240.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 207996.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "savings_percentage": 3.0
+    },
+    {
+      "category_label": "Billing Services",
+      "status": "implemented",
+      "vendors_before": [
+        "Athenahealth (legacy fee)"
+      ],
+      "vendors_after": [
+        "Athenahealth (renegotiated tiered rate)"
+      ],
+      "levers": [
+        "incumbent_negotiation"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 259800.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 1558800.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "savings_percentage": 17.0
+    },
+    {
+      "category_label": "Janitorial Services",
+      "status": "implementation",
+      "vendors_before": [
+        "Multiple local janitors"
+      ],
+      "vendors_after": [
+        "Enterprise Cleaning (consolidated)"
+      ],
+      "levers": [
+        "RFP"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 193565.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "baseline_spend": {
+        "amount": 977833.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx"
+      },
+      "savings_percentage": 20.0
+    },
+    {
+      "category_label": "Non-IT Temporary Labor",
+      "status": "negotiated",
+      "vendors_before": [
+        "Addison Group"
+      ],
+      "vendors_after": [
+        "Randstad (Premier GPO)"
+      ],
+      "levers": [
+        "GPO",
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 19550.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Categories/Temp Labor/APDerm Temp Labor - Randstad Savings Analysis.xlsx"
+      },
+      "baseline_spend": {
+        "amount": 174793.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Categories/Temp Labor/APDerm Temp Labor - Randstad Savings Analysis.xlsx"
+      },
+      "savings_percentage": 11.0
+    }
+  ],
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "headline": "$1.2 M run-rate savings (19 %) delivered across 10 indirect spend categories",
+    "client_problem_statement": "Rapid acquisition growth left APDerm with fragmented suppliers and rising indirect costs during an inflationary market.",
+    "approach_summary": [
+      "Two-phase engagement addressing $6.3 M of indirect spend",
+      "Combined competitive RFPs, GPO leverage and incumbent renegotiations",
+      "Collaborative data sessions with clinic stakeholders to validate baselines",
+      "Implemented savings with minimal vendor transitions"
+    ],
+    "top_levers": [
+      "Competitive RFPs",
+      "GPO contract leverage",
+      "Incumbent supplier negotiations",
+      "Benchmark pricing analytics"
+    ],
+    "value_delivered_blurb": "Treya unlocked 19 % savings while keeping patient-facing operations intact, boosting APDerm’s EBITDA by over $1 M annually.",
+    "where_we_were_unique": [
+      "Hybrid RFP-plus-GPO model accelerated savings",
+      "Data-driven baselines accepted by private-equity sponsor",
+      "Savings realized with >75 % incumbent retention, minimizing change management"
+    ]
+  },
+  "extraction_notes": [
+    "Exhibit A table in signed agreement not fully visible; addressable spend & projected savings taken from Opportunity Assessment (lower confidence).",
+    "Locations count taken from October 2021 BusinessWire article; number may have changed by 2022.",
+    "Uniforms, Laundry Linen, IT Managed Services and Waste Management categories were still in progress or out of scope; not included as separate category entries due to lack of finalized baseline/savings figures.",
+    "Some Phase 2 savings totals marked as $XX in close-out deck; used detailed tracker slide instead.",
+    "Revenue estimate derived from web sources; company is private so figure is approximate."
+  ],
+  "files_analyzed": [
+    "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf",
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 05, 2022).pptx",
+    "Wave 2/Categories/Temp Labor/APDerm Temp Labor - Randstad Savings Analysis.xlsx",
+    "Web Search Results for APDerm"
+  ]
+}

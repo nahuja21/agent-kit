@@ -1,0 +1,63 @@
+# Impact & Narrative Extraction Prompt
+# Pass 4: Extract client info, impact, and case study narrative
+
+system_prompt: |
+  You are extracting case study narrative and impact data from Treya Partners documents.
+  Focus on client background, project results, and marketing-ready content.
+
+user_template: |
+  ## Web Search Results (for Revenue/Company Info):
+  {{web_search_results}}
+
+  ## Document Contents:
+  {{document_contents}}
+
+  ## Agreement Data (already extracted):
+  - Initial Categories: {{initial_categories}}
+  - Addressable Spend: ${{addressable_spend}}
+  - Savings Target: ${{savings_low}} - ${{savings_high}}
+
+  ## Category Results (already extracted):
+  {{category_summary}}
+
+  ## YOUR TASK:
+  Extract the following:
+
+  ### CLIENT INFO:
+  - `client_name`: Full company name
+  - `industry`: Primary industry
+  - `pe_sponsor`: PE firm name if mentioned
+  - `revenue`: Annual revenue (from web search)
+  - `locations`: Number of locations
+  - `background`: Brief company history
+
+  ### ENGAGEMENT:
+  - `objective`: One sentence why they engaged Treya
+  - `scope_summary`: Brief scope description
+  - `constraints`: List of challenges faced
+  - `procurement_maturity`: low/medium/high
+
+  ### IMPACT:
+  - `headline`: Marketing headline (e.g., "$1.2M run-rate savings")
+  - `narrative`: 2-3 sentence story of the project
+  - `annual_savings`: Total annual savings achieved
+  - `savings_percentage`: Overall percentage saved
+  - `proof_points`: List of key achievements
+  - `operational_improvements`: Non-financial improvements
+
+  ### CASE STUDY PACKAGING:
+  - `problem_statement`: The challenge the client faced
+  - `approach`: List of 3-5 steps Treya took
+  - `top_levers`: Main tactics used
+  - `value_delivered`: Summary of value
+  - `unique_aspects`: What made this project unique
+
+  ## OUTPUT FORMAT:
+  Return valid JSON matching the structure above.
+
+examples:
+  - note: "Example headline formats"
+    examples:
+      - "$1.2M run-rate savings across 7 categories"
+      - "19% cost reduction on $6.3M baseline spend"
+      - "Achieved $500K savings in first 90 days"

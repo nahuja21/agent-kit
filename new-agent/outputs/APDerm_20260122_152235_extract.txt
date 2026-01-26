@@ -1,0 +1,241 @@
+================================================================================
+CASE STUDY EXTRACTION: APDERM
+================================================================================
+Generated: 2026-01-22 15:22:35
+Model: o3
+Tokens: 151,561 in / 9,941 out
+
+================================================================================
+CLIENT OVERVIEW
+================================================================================
+Client Name: Adult & Pediatric Dermatology, PC (APDerm)
+Industry: Healthcare / Dermatology Services
+Business Model: Multi-site physician-led dermatology practice
+PE Sponsor: Waud Capital
+Background: Founded 1992, PE-backed roll-up across New England
+Revenue: $50,000,000 [confidence: medium]
+  Source: Web Search
+Locations: 40 [confidence: medium]
+  Source: Web Search
+Employees: 500
+
+================================================================================
+ENGAGEMENT BACKGROUND
+================================================================================
+Objective: Reduce indirect procurement costs across growing multi-site network.
+Scope: Two-phase sourcing program covering medical & office supplies, logistics, telecom, facilities and back-office services.
+Constraints/Challenges:
+  • Highly decentralized purchasing across 30+ acquired clinics
+  • COVID-19 supply chain volatility & inflation
+  • Need to retain incumbent vendors where clinically critical
+Procurement Environment: [confidence: medium]
+  Source: Treya Case Study_APDerm vF.pdf
+  • Operating Model: decentralized
+  • Maturity: low
+  • Data Availability: Fragmented AP data; limited item-level detail
+
+================================================================================
+PROJECT SCOPE & FEES
+(⚠️ These fields should come from Agreement. ❌ = NOT from Agreement)
+================================================================================
+Engagement Type: Broad multi-category strategic sourcing (2 phases)
+Fee Type: fixed
+Fee Amount: $190,000 [✓ FROM AGREEMENT]
+  Source: Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf
+Initial Categories: 7
+Addressable Spend: $11,000,000 [❌ NOT FROM AGREEMENT]
+  Source: APDerm Opportunity Assessment_v2_12.3.20.pdf
+Savings Estimate: $542,000 - $928,000 [❌ NOT FROM AGREEMENT]
+  Source: APDerm Opportunity Assessment_v2_12.3.20.pdf
+Timeline: 2021-01-01 → 2022-08-05
+Operational Objectives:
+  • Rapid savings with minimal clinic disruption
+  • Leverage PE-portfolio GPO contracts
+
+================================================================================
+IMPACT (ACTUAL RESULTS)
+================================================================================
+Headline: $1.2 M annual run-rate savings across 12 categories
+Narrative: In two sourcing waves Treya addressed $6.3 million of APDerm spend, delivering $1.2 million (19 %) in annual savings and over $12 million in enterprise value while largely retaining incumbent suppliers and avoiding operational disruption.
+Annual Savings: $1,200,000 [confidence: high]
+  Source: Treya Case Study_APDerm vF.pdf
+Operational Improvements: Standardized contracts, consolidated vendors, implemented GPO pricing.
+Proof Points:
+  ✓ 27 % savings ($485 K) on medical supplies with GPO McKesson contract
+      Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+      Quote: "Historical Spend $1,817,711 | Savings % 27 | Savings $ 485,087"
+  ✓ 28 % savings on courier services retaining split award incumbents
+      Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+      Quote: "Courier Services baseline $432,024 | Savings 28 % ($121,572)"
+  ✓ 20 % savings on janitorial services through RFP to Enterprise Cleaning
+      Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+      Quote: "Janitorial Services baseline $977,833 | savings 20 % ($193,565)"
+
+================================================================================
+CATEGORY OUTCOMES
+================================================================================
+
+Legend: [confidence: high/medium/low] indicates data reliability
+
+[IMPLEMENTED] Medical Supplies
+  Baseline Spend: $1,817,711 [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $485,087 (27%) [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: GPO, rate_reduction
+  Vendors Before: Multiple suppliers (incl. Henry Schein)
+  Vendors After: McKesson (HPG primary GPO)
+
+[IMPLEMENTED] Courier Services
+  Baseline Spend: $432,024 [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $121,572 (28%) [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: RFP, incumbent_negotiation
+  Vendors Before: Skycom, Various couriers
+  Vendors After: Millers Express & Xpressman split award
+
+[IMPLEMENTED] Telecom – Circuits
+  Baseline Spend: $98,568 [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $37,454 (38%) [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: benchmarking, incumbent_negotiation
+  Vendors Before: Multiple local telcos
+  Vendors After: OneSource (MetTel/Verizon)
+
+[IMPLEMENTED] IT Hardware
+  Baseline Spend: $110,125 [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $29,410 (27%) [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: GPO, consolidation
+  Vendors Before: Multiple VARs
+  Vendors After: Whalley Computer
+
+[IMPLEMENTED] Office Supplies
+  Baseline Spend: $174,287 [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $13,694 (8%) [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: GPO, vendor consolidation
+  Vendors Before: Office Depot, others
+  Vendors After: WB Mason (renegotiated)
+
+[IMPLEMENTED] Small Parcel
+  Baseline Spend: $35,571 [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $10,508 (30%) [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: GPO contract
+  Vendors Before: FedEx
+  Vendors After: UPS GPO rate
+
+[IMPLEMENTED] Telecom – PBX / Contact Center
+  Baseline Spend: $207,996 [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $6,240 (3%) [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: RFP, migration to cloud PBX
+  Vendors Before: Legacy on-prem PBX
+  Vendors After: Tidal
+
+[AWARD_REVIEW] Billing Services
+  Baseline Spend: $1,558,800 [confidence: medium]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $259,800 (17%) [confidence: medium]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: incumbent_negotiation
+  Vendors Before: Athenahealth
+  Vendors After: Athenahealth (renegotiated tiered rate)
+
+[IMPLEMENTATION] Janitorial Services
+  Baseline Spend: $977,833 [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $193,565 (20%) [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: RFP, service level adjustment
+  Vendors Before: Mixed local janitorial
+  Vendors After: Enterprise Cleaning
+
+[IMPLEMENTATION] Non-IT Temporary Labor
+  Baseline Spend: $174,793 [confidence: medium]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $19,550 (11%) [confidence: medium]
+    Source: APDerm Temp Labor - Randstad Savings Analysis.xlsx
+  Levers: GPO, benchmarking
+  Vendors Before: Addison Group
+  Vendors After: Randstad (Premier GPO)
+
+[REPORTING] Copier / Print Services
+  Baseline Spend: $93,686 [confidence: medium]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $9,369 (10%) [confidence: medium]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: incumbent_negotiation
+  Vendors Before: Conway Technology Group
+  Vendors After: Konica Minolta
+
+[AWARD_REVIEW] Uniforms
+  Baseline Spend: $60,414 [confidence: medium]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $3,021 (5%) [confidence: medium]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: GPO
+  Vendors Before: Uniforms for America
+  Vendors After: Cintas (proposal)
+
+
+================================================================================
+CASE STUDY PACKAGING (MARKETING-READY)
+================================================================================
+Headline: $1.2 M run-rate savings across 12 categories for PE-backed dermatology platform
+Problem Statement: Rapid growth via acquisition left APDerm with fragmented, high-cost spend and no centralized purchasing leverage.
+Approach:
+  • Conducted spend analysis across 40 locations
+  • Prioritized high-impact categories in two sourcing waves
+  • Leveraged Treya & Waud Capital GPO contracts for quick wins
+  • Ran competitive RFPs and incumbent renegotiations
+  • Implemented savings tracking and compliance governance
+Top Levers: GPO aggregation, Competitive RFPs, Incumbent vendor renegotiation, Vendor consolidation, Rate benchmarking
+Value Delivered: Treya delivered 19 % cost reduction without operational disruption, unlocking >$12 M enterprise value and ensuring scalable procurement processes for future clinic acquisitions.
+Unique Approach: Speed to savings (two phases <18 months), Data-driven baseline methodology with limited client lift, Guaranteed ROI with fixed-fee contract
+
+================================================================================
+EXTRACTION NOTES
+================================================================================
+  ⚠️ Exhibit A table in signed agreement not fully captured; used Assessment (Dec 2020) for addressable spend & savings estimates – marked low confidence.
+  ⚠️ Initial categories count inferred as 7 from Assessment document.
+  ⚠️ Project start/end dates approximated from contract execution (Dec 2020) and Phase 2 close-out deck (Aug 2022).
+  ⚠️ Locations count taken from 2026 article noting “over 40”; used 40 rounded.
+  ⚠️ Some Phase 2 categories still in implementation/award review; savings considered projected not fully realized.
+  ⚠️ Employee Benefits, Waste Management, IT Managed Services, Laundry/Linen addressed but insufficient final data – excluded from category list.
+
+================================================================================
+FILES ANALYZED
+================================================================================
+  • Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf
+  • Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx
+  • Agreement/Procurement Cost Reduction Services Agreement_APDerm_SC.docx
+  • Case Study/Treya Case Study_APDerm vF.pdf
+  • Case Study/Treya Case Study_APDerm v6 MY.docx
+  • Case Study/Treya Case Study_APDerm v5 MY.docx
+  • Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  • Wave 2/Updates/APDerm Phase 2 Savings Dashboard, Data Collection Tracker.xlsx
+  • Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx
+  • Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf
+  • Assessment/APDerm Opportunity Assessment_v2_12.3.20.pptx
+  • Categories/Allergan/Incumbent Negotiations/Allergan Strategic Business Review (May. 27, 2021) vF.pdf
+  • Categories/Billing Systems/RFP Responses/Nextech/APDerm - Practice Management - Billing Systems RFP (Nov 22 2021).xlsx
+  • Categories/Courier Services/APDerm - Courier Services RFP - Savings Analysis v5.xlsx
+  • Categories/Employee Benefits/Proposal Comparison/APDerm - Employee Benefits Savings Comparison (Sep. 28, 2021).xlsx
+  • Categories/IT Hardware Software/RFQ/RFQ Responses/APDerm -  IT Hardware RFQ Savings Comparison (April 27, 2021) vF.xlsx
+  • Categories/Medical Supplies/RFP/APDerm - Medical Supplies RFP Draft (Apr. 2, 2021) v1.xlsx
+  • Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx
+  • Categories/Telecom - data & voice/RFQ/APDerm Telecom RFQ Bid Comparison (081621).xlsx
+  • Wave 2/Categories/Copiers/APDerm Management Equipment Under Contract Feb 2022.xlsm
+  • Wave 2/Categories/Janitorial & Sanitation/RFP/Analysis/APDerm - Janitorial Svs - Savings Analysis Rnd2 v3.xlsx
+  • Wave 2/Categories/Laundry & Linen/Image First Staement ADULT000 2-2022 .xlsx
+  • Wave 2/Categories/Temp Labor/APDerm Temp Labor - Randstad Savings Analysis.xlsx
+  • Wave 2/Categories/Uniforms/Uniforms/Uniforms for America Bills Analysis Report 2021-10-14.xlsx
+  • Wave 2/Categories/Shared Contract Collection/Waste Management/Stericycle - Adult and Ped. Master Agreement Signed.pdf

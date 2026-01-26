@@ -1,0 +1,149 @@
+================================================================================
+CASE STUDY EXTRACTION: APDERM
+================================================================================
+Generated: 2026-01-21 13:10:59
+Model: gpt-4o
+Tokens: 115,999 in / 3,640 out
+
+================================================================================
+CLIENT OVERVIEW
+================================================================================
+Client Name: Adult & Pediatric Dermatology, PC
+Industry: Healthcare / Dermatology
+Business Model: Multi-site healthcare services
+PE Sponsor: Waud Capital
+Background: Founded in 1992, grown through acquisitions, PE-backed
+Revenue: $43,000,000
+Locations: 29
+
+================================================================================
+ENGAGEMENT BACKGROUND
+================================================================================
+Objective: Achieve cost savings through strategic sourcing across multiple categories.
+Scope: Includes Medical Supplies, Office Supplies, IT Hardware/Software, Telecom, Courier Services, Employee Benefits, etc.
+Constraints/Challenges:
+  • Fragmented supply base
+  • Decentralized purchasing
+  • Market conditions mid-pandemic
+Procurement Environment:
+  • Operating Model: decentralized
+  • Maturity: medium
+  • Data Availability: Multiple supplier accounts, decentralized
+
+================================================================================
+PROJECT SCOPE & FEES
+================================================================================
+Engagement Type: Broad multi-category strategic sourcing
+Fee Type: contingent (25.0% of savings)
+Initial Categories: 10
+Addressable Spend: $11,000,000 [confidence: medium]
+  Source: APDerm Opportunity Assessment_v2_12.3.20.pdf
+Savings Estimate: $542,000 - $928,000 [confidence: medium]
+  Source: APDerm Opportunity Assessment_v2_12.3.20.pdf
+Timeline: 2020-11-01 → 2021-06-01
+
+================================================================================
+IMPACT (ACTUAL RESULTS)
+================================================================================
+Headline: $1.2M savings across 10 categories
+Narrative: The project achieved $1.2M in cost savings from a $6.3M baseline spend, representing a 19% savings rate. The majority of savings were realized without significant operational changes.
+Annual Savings: $1,200,000 [confidence: high]
+  Source: Treya Case Study_APDerm vF.pdf
+Operational Improvements: Improved procurement processes and supplier consolidation
+Proof Points:
+  ✓ Achieved 19% savings on a $6.3M baseline spend
+      Source: Treya Case Study_APDerm vF.pdf
+      Quote: "Total project savings of $1.2M or 19% on $6.3M in baseline spend over 2 Phases"
+
+================================================================================
+CATEGORY OUTCOMES
+================================================================================
+
+Legend: [confidence: high/medium/low] indicates data reliability
+
+[IMPLEMENTED] Medical Supplies
+  Baseline Spend: $1,817,711 [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Annual Savings: $485,087 (27%) [confidence: high]
+    Source: APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  Levers: competitive_bidding, GPO
+  Notes: Pricing held firm for initial 12 months
+
+[IMPLEMENTED] Office Supplies
+  Baseline Spend: $174,287 [confidence: medium]
+    Source: APDerm - Office Supplies Analysis (6-10-2021).xlsx
+  Annual Savings: $13,694 (8%) [confidence: medium]
+    Source: APDerm - Office Supplies Analysis (6-10-2021).xlsx
+  Levers: GPO
+
+[IMPLEMENTED] IT Hardware/Software
+  Baseline Spend: $110,125 [confidence: medium]
+    Source: APDerm Strategic Sourcing Project Update (091421).pptx
+  Annual Savings: $29,410 (27%) [confidence: medium]
+    Source: APDerm Strategic Sourcing Project Update (091421).pptx
+  Levers: incumbent_negotiations
+
+[IMPLEMENTED] Telecom
+  Baseline Spend: $98,568 [confidence: medium]
+    Source: APDerm Strategic Sourcing Project Update (091421).pptx
+  Annual Savings: $37,454 (38%) [confidence: medium]
+    Source: APDerm Strategic Sourcing Project Update (091421).pptx
+  Levers: incumbent_negotiations
+
+[IMPLEMENTED] Courier Services
+  Baseline Spend: $432,024 [confidence: medium]
+    Source: APDerm Strategic Sourcing Project Update (091421).pptx
+  Annual Savings: $121,572 (28%) [confidence: medium]
+    Source: APDerm Strategic Sourcing Project Update (091421).pptx
+  Levers: GPO
+
+[NEGOTIATED] Employee Benefits
+  Baseline Spend: $1,803,454 [confidence: medium]
+    Source: APDerm Strategic Sourcing Project Update (091421).pptx
+  Annual Savings: $393,333 (22%) [confidence: medium]
+    Source: APDerm Strategic Sourcing Project Update (091421).pptx
+  Levers: incumbent_negotiations
+
+
+================================================================================
+CASE STUDY PACKAGING (MARKETING-READY)
+================================================================================
+Headline: $1.2M run-rate savings across 10 categories
+Problem Statement: Limited spend visibility and fragmented supply base
+Approach:
+  • Utilized a combination of competitive RFPs, direct incumbent supplier negotiations, and GPO contracts to create savings
+  • Collaborated with APDerm stakeholders to understand business needs
+  • Implemented strategic sourcing across multiple categories
+Top Levers: GPO contracts, Competitive bidding, Incumbent negotiations
+Value Delivered: Delivered $1.2M in savings by optimizing procurement processes across 10 categories.
+Unique Approach: Data-driven approach, Collaborative stakeholder engagement, Rapid implementation of savings
+
+================================================================================
+EXTRACTION NOTES
+================================================================================
+  ⚠️ Employee count and exact revenue details were not available.
+  ⚠️ Some categories had lower confidence estimates due to lack of final documentation.
+  ⚠️ Exact project start and end dates were inferred from multiple documents.
+  ⚠️ Some savings values were projected based on initial estimates.
+
+================================================================================
+FILES ANALYZED
+================================================================================
+  • Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf
+  • Case Study/Treya Case Study_APDerm vF.pdf
+  • Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf
+  • Assessment/APDerm Opportunity Assessment_v2_12.3.20.pptx
+  • Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx
+  • Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (081721) vF.pptx
+  • Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  • Categories/Billing Systems/RFP Responses/Athena Health/APDerm RFP_athenahealth.xlsx
+  • Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v2 (03-15-2021) .xlsx
+  • Categories/Telecom - data & voice/RFQ/APDerm Telecom RFQ Bid Comparison (081621).xlsx
+  • Categories/Employee Benefits/APDerm Employee Benefits Documents/AP Derm Renewal Confirmation 2021.pdf
+  • Categories/Courier Services/3. Q&A/APDerm - Courier Services RFP - Q&A Document v1 (5-18-21).xlsx
+  • Categories/Medical Supplies/RFP/APDerm - Medical Supplies RFP Draft (Apr. 2, 2021) v1.xlsx
+  • Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx
+  • Categories/IT Hardware Software/RFQ/RFQ Responses/APDerm -  IT Hardware RFQ Draft (March 26 2021) vF - Connection.xlsx
+  • Project Updates/Kick Off/AP Derm Strategic Sourcing Project Kickoff 011121 v1.pptx
+  • Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx
+  • Categories/Telecom - data & voice/One Source/APDerm - Invoice Inventory.xlsx

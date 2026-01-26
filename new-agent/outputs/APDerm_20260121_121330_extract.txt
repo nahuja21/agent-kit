@@ -1,0 +1,109 @@
+================================================================================
+CASE STUDY EXTRACTION: APDERM
+================================================================================
+Generated: 2026-01-21 12:13:30
+Model: gpt-4o
+Tokens: 102,262 in / 2,376 out
+
+================================================================================
+CLIENT OVERVIEW
+================================================================================
+Client Name: APDerm
+Industry: Healthcare / Dermatology
+Business Model: Healthcare, multi-site
+PE Sponsor: Waud Capital
+Background: Founded in 1992 as a solo practice, grown through acquisitions, part of Waud Capital portfolio
+Locations: 29
+
+================================================================================
+ENGAGEMENT BACKGROUND
+================================================================================
+Objective: Identify procurement cost savings opportunities and optimize procurement processes.
+Scope: Utilized competitive bidding processes, incumbent supplier negotiations, and GPO contracts to address $6.3 million in baseline spend across multiple categories.
+Constraints/Challenges:
+  • Limited spend visibility
+  • Fragmented supply base
+  • Multiple contracts across locations
+  • Inflationary market conditions
+  • Supply chain issues
+Procurement Environment:
+  • Operating Model: unknown
+  • Maturity: unknown
+  • Data Availability: Decentralized purchasing
+
+================================================================================
+PROJECT SCOPE & FEES
+================================================================================
+Engagement Type: Broad multi-category strategic sourcing
+Fee Type: unknown
+Initial Categories: 10
+Addressable Spend: $6,300,000
+Timeline: 2021-01-01 → 2022-08-05
+
+================================================================================
+IMPACT
+================================================================================
+Headline: $1.2M savings across 10 categories
+Narrative: Treya Partners achieved $1.2M in cost savings for APDerm, representing a 19% savings on a $6.3M baseline spend. The project leveraged incumbent suppliers and GPO contracts, maintaining most business operations with limited changes.
+Annual Savings: $1,200,000
+Proof Points:
+  ✓ Achieved $1.2M in savings, 19% cost reduction.
+
+================================================================================
+CATEGORY OUTCOMES
+================================================================================
+
+[IMPLEMENTED] Medical Supplies
+  Baseline Spend: $1,817,711
+  Annual Savings: $485,087 (27%)
+  Levers: rate_reduction, GPO utilization
+  Notes: Majority of business remained with incumbent vendors.
+
+[IMPLEMENTED] Office Supplies
+  Baseline Spend: $174,287
+  Annual Savings: $13,694 (8%)
+  Levers: GPO utilization
+
+================================================================================
+CASE STUDY PACKAGING (MARKETING-READY)
+================================================================================
+Headline: $1.2M run-rate savings across 10 categories
+Problem Statement: Limited spend visibility, fragmented supply base, and decentralized purchasing power.
+Approach:
+  • Conducted comprehensive spend analysis.
+  • Utilized competitive RFPs and direct incumbent supplier negotiations.
+  • Leveraged Group Purchasing Organization (GPO) contracts.
+  • Collaborated with stakeholders to understand business needs.
+  • Ensured sustainable savings and minimal operational disruption.
+Top Levers: Rate reduction, GPO utilization, Incumbent supplier negotiations
+Value Delivered: Delivered $1.2M in savings, creating $12M+ in Enterprise Value Creation.
+Unique Approach: Collaborative and data-driven approach., Maintained incumbent suppliers, minimizing transition time., Transparent supplier interactions.
+
+================================================================================
+EXTRACTION NOTES
+================================================================================
+  ⚠️ Some financial details on individual categories are unclear or not provided.
+  ⚠️ The exact start and end dates for all categories were not always specified.
+  ⚠️ The engagement type was inferred based on project activities rather than explicitly stated.
+
+================================================================================
+FILES ANALYZED
+================================================================================
+  • Case Study/Treya Case Study_APDerm vF.pdf
+  • Case Study/Treya Case Study_APDerm v6 MY.docx
+  • Case Study/Treya Case Study_APDerm v5 MY.docx
+  • Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf
+  • Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx
+  • Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf
+  • Assessment/APDerm Opportunity Assessment_v2_12.3.20.pptx
+  • Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx
+  • Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (090721).pptx
+  • Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  • Wave 2/Updates/APDerm Phase 2 Project Update (Jun 29, 2022).pptx
+  • Categories/Courier Services/2. RFP Development/APDerm - Courier Services RFP - Draft vF (5-7-21).xlsx
+  • Categories/Path Lab System/RFP Responses/RFP Responses/Novopath/APDerm STD-1.pdf
+  • Categories/Path Lab System/RFP Responses/RFP Responses/Orchard/Supporting Documents for APDerm.pdf
+  • Categories/Path Lab System/RFP Responses/RFP Responses/Sunquest/Sunquest Response to APDerm - Path Lab Systems RFP  - 08-27-21 - Final.xlsx
+  • Categories/Billing Systems/RFP Responses/Athena Health/Supplemental Information_athenahealth.pdf
+  • Categories/Employee Benefits/Treya Analysis/Employee Benefits Analysis - Questions to Ask - Treya (March 19, 2021) v1.xlsx
+  • Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx

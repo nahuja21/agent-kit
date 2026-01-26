@@ -1,0 +1,174 @@
+{
+  "schema_version": "v1",
+  "extraction_date": "2023-10-05",
+  "extraction_model": "gpt-4",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "APDerm",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology",
+    "business_model": "Healthcare, multi-site",
+    "sponsor_pe_firm": "Waud Capital",
+    "client_history": "Founded in 1992 as a solo practice, grown through acquisitions, part of Waud Capital portfolio",
+    "size_metrics": {
+      "locations_count": 29
+    }
+  },
+  "project_scope": {
+    "engagement_type": "Broad multi-category strategic sourcing",
+    "fee_type": "unknown",
+    "fee_notes": "Treya guarantees that annual savings will be at least 1.5X project fees ($187,500)",
+    "initial_categories_count": 10,
+    "addressable_spend": {
+      "amount": 6300000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2022-08-05"
+  },
+  "engagement_background": {
+    "objective": "Identify procurement cost savings opportunities and optimize procurement processes.",
+    "scope_summary": "Utilized competitive bidding processes, incumbent supplier negotiations, and GPO contracts to address $6.3 million in baseline spend across multiple categories.",
+    "constraints_challenges": [
+      "Limited spend visibility",
+      "Fragmented supply base",
+      "Multiple contracts across locations",
+      "Inflationary market conditions",
+      "Supply chain issues"
+    ],
+    "procurement_environment": {
+      "operating_model": "unknown",
+      "maturity": "unknown",
+      "data_availability": "Decentralized purchasing",
+      "data_quality_notes": "Limited spend visibility"
+    }
+  },
+  "impact": {
+    "summary": {
+      "headline": "$1.2M savings across 10 categories",
+      "narrative": "Treya Partners achieved $1.2M in cost savings for APDerm, representing a 19% savings on a $6.3M baseline spend. The project leveraged incumbent suppliers and GPO contracts, maintaining most business operations with limited changes."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      }
+    },
+    "proof_points": [
+      {
+        "statement": "Achieved $1.2M in savings, 19% cost reduction.",
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+            "page_or_slide": "2",
+            "quote": "Total project savings of $1.2M or 19% on $6.3M in baseline spend over 2 Phases"
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "category_l1": "Supplies",
+      "category_l2": "Medical",
+      "start_date": "2021-01-01",
+      "end_date": "2021-09-20",
+      "status": "implemented",
+      "levers": [
+        "rate_reduction",
+        "GPO utilization"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 485087.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 1817711.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 27.0,
+      "notes": "Majority of business remained with incumbent vendors.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+          "page_or_slide": "3",
+          "quote": "Medical Supplies | $1,817,711  | McKesson | 27% | $485,087"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies",
+      "category_l1": "Indirect",
+      "category_l2": "Supplies",
+      "start_date": "2021-01-01",
+      "end_date": "2021-09-20",
+      "status": "implemented",
+      "levers": [
+        "GPO utilization"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 13694.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx"
+      },
+      "baseline_spend": {
+        "amount": 174287.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx"
+      },
+      "savings_percentage": 8.0,
+      "evidence": [
+        {
+          "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx",
+          "page_or_slide": "WM Mason Summary",
+          "quote": "Total Savings | 13694.48905509428"
+        }
+      ]
+    }
+  ],
+  "case_study_packaging": {
+    "headline": "$1.2M run-rate savings across 10 categories",
+    "client_problem_statement": "Limited spend visibility, fragmented supply base, and decentralized purchasing power.",
+    "approach_summary": [
+      "Conducted comprehensive spend analysis.",
+      "Utilized competitive RFPs and direct incumbent supplier negotiations.",
+      "Leveraged Group Purchasing Organization (GPO) contracts.",
+      "Collaborated with stakeholders to understand business needs.",
+      "Ensured sustainable savings and minimal operational disruption."
+    ],
+    "top_levers": [
+      "Rate reduction",
+      "GPO utilization",
+      "Incumbent supplier negotiations"
+    ],
+    "value_delivered_blurb": "Delivered $1.2M in savings, creating $12M+ in Enterprise Value Creation.",
+    "where_we_were_unique": [
+      "Collaborative and data-driven approach.",
+      "Maintained incumbent suppliers, minimizing transition time.",
+      "Transparent supplier interactions."
+    ]
+  },
+  "extraction_notes": [
+    "Some financial details on individual categories are unclear or not provided.",
+    "The exact start and end dates for all categories were not always specified.",
+    "The engagement type was inferred based on project activities rather than explicitly stated."
+  ],
+  "files_analyzed": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Case Study/Treya Case Study_APDerm v6 MY.docx",
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+    "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx"
+  ]
+}

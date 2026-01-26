@@ -1,0 +1,126 @@
+================================================================================
+CASE STUDY EXTRACTION: APDERM
+================================================================================
+Generated: 2026-01-21 15:01:20
+Model: o3
+Tokens: 169,807 in / 5,548 out
+
+================================================================================
+CLIENT OVERVIEW
+================================================================================
+Client Name: Adult & Pediatric Dermatology (APDerm)
+Industry: Healthcare - Dermatology
+Business Model: Multi-site dermatology practice network
+PE Sponsor: Waud Capital Partners
+Background: Founded 1992, PE-backed roll-up acquiring practices across New England.
+Revenue: $50,000,000 [confidence: low]
+  Source: Web Search
+Locations: 40 [confidence: medium]
+  Source: Web Search
+Employees: 501
+
+================================================================================
+ENGAGEMENT BACKGROUND
+================================================================================
+Objective: Reduce procurement costs across indirect categories while supporting APDerm’s rapid multi-site growth.
+Scope: Phase 1 focused on Employee Benefits, Medical Supplies, IT Hardware, Telecom, Courier, Office Supplies, Small Parcel; later phases added eight additional categories (billing system, janitorial, etc.).
+Constraints/Challenges:
+  • Decentralized purchasing across 40+ locations
+  • Pandemic-related inflation and supply chain disruption
+  • Need to maintain clinical quality and avoid operational disruption
+Procurement Environment: [confidence: medium]
+  Source: Treya Case Study_APDerm vF.pdf
+  • Operating Model: decentralized
+  • Maturity: low
+  • Data Availability: Fragmented AP data; limited SKU-level visibility pre-project.
+
+================================================================================
+PROJECT SCOPE & FEES
+(⚠️ These fields should come from Agreement. ❌ = NOT from Agreement)
+================================================================================
+Engagement Type: Broad multi-category strategic sourcing (two-phase)
+Fee Type: fixed
+Fee Amount: $190,000 [✓ FROM AGREEMENT]
+  Source: Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf
+Timeline: 2021-01-01 → 2021-07-31
+
+================================================================================
+IMPACT (ACTUAL RESULTS)
+================================================================================
+Headline: $1.2 M run-rate savings across 10+ categories
+Narrative: Over two sourcing phases Treya Partners delivered $1.2 million (19 %) annual savings on $6.3 million of baseline spend for APDerm.  Savings were achieved largely with incumbent vendors, minimizing disruption while capturing more than $12 million in enterprise value.
+Annual Savings: $1,200,000 [confidence: high]
+  Source: Treya Case Study_APDerm vF.pdf
+Operational Improvements: Majority of spend remained with incumbents; limited operational change required.
+Proof Points:
+  ✓ 19 % savings on $6.3 M baseline within six months
+      Source: Treya Case Study_APDerm vF.pdf
+      Quote: "The Treya/AP Derm strategic sourcing project created $1.2M or 19% in cost savings on an addressable ..."
+
+================================================================================
+CATEGORY OUTCOMES
+================================================================================
+
+Legend: [confidence: high/medium/low] indicates data reliability
+
+[IMPLEMENTED] Multiple Indirect Categories (Phase 1 & 2)
+  Baseline Spend: $6,300,000 [confidence: medium]
+    Source: Treya Case Study_APDerm vF.pdf
+  Annual Savings: $1,200,000 (19%) [confidence: high]
+    Source: Treya Case Study_APDerm vF.pdf
+  Levers: competitive_rfp, incumbent_negotiation, gpo
+  Notes: Detailed category-level outcomes not disclosed in final case study; see Extraction Notes.
+
+
+================================================================================
+CASE STUDY PACKAGING (MARKETING-READY)
+================================================================================
+Headline: $1.2 M savings (19 %) across indirect spend for PE-backed dermatology platform
+Problem Statement: Rapidly expanding dermatology network lacked centralized procurement, driving fragmented spend and rising costs.
+Approach:
+  • Two-phase strategic sourcing program addressing >10 indirect categories.
+  • Combined RFPs, GPO leverage, and incumbent renegotiations for quick wins.
+  • Maintained clinical quality while consolidating vendor base.
+  • Implemented savings and tracked results with APDerm stakeholders.
+Top Levers: Incumbent supplier negotiations, Competitive RFPs, Group Purchasing Organization contracts
+Value Delivered: Treya unlocked 19 % savings and $12 M+ in enterprise value, funding continued practice growth with minimal disruption.
+Unique Approach: Hybrid strategy of GPO quick wins plus deep category RFPs, Hands-on support minimizing client resource burden, PE-savvy reporting and savings tracking for board visibility
+
+================================================================================
+EXTRACTION NOTES
+================================================================================
+  ⚠️ Exhibit A table in Agreement not captured in PDF text; category count and addressable spend unavailable.
+  ⚠️ Category-level spend & savings were not itemized in final case study; only aggregate results provided.
+  ⚠️ Revenue and location counts derived from web search estimates; confidence low-medium.
+  ⚠️ Project start/end dates approximated from kickoff (Jan 11 2021) and timeline slide (June 2021 completion).
+  ⚠️ Additional Wave 2 categories (Billing System, Janitorial, etc.) identified in documents but final savings not disclosed; rolled into aggregate category entry.
+
+================================================================================
+FILES ANALYZED
+================================================================================
+  • Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf
+  • Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx
+  • Agreement/Procurement Cost Reduction Services Agreement_APDerm_SC.docx
+  • Case Study/Treya Case Study_APDerm vF.pdf
+  • Case Study/Treya Case Study_APDerm v6 MY.docx
+  • Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx
+  • Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf
+  • Categories/Medical Supplies/RFP/APDerm - Medical Supplies RFP Draft (Apr. 2, 2021) v1.xlsx
+  • Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx
+  • Categories/Courier Services/APDerm - Courier Services RFP - Savings Analysis v5.xlsx
+  • Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx
+  • Categories/Telecom - data & voice/RFQ/APDerm Telecom RFQ Bid Comparison (081621).xlsx
+  • Categories/IT Hardware Software/RFQ/RFQ Responses/APDerm -  IT Hardware RFQ Savings Comparison (April 27, 2021) vF.xlsx
+  • Categories/Employee Benefits/Proposal Comparison/APDerm - Employee Benefits Savings Comparison (Sep. 28, 2021).xlsx
+  • Wave 2/Categories/Billing System/Negotiations/Athena Health - Strategic Business Review (Jan. 21, 2022) APDerm Draft.pptx
+  • Wave 2/Categories/Copiers/September 2023 Platinum Data Collection - Copiers.xlsx
+  • Wave 2/Categories/Janitorial & Sanitation/RFP/Analysis/APDerm - Janitorial Svs - Savings Analysis Rnd2 v3.xlsx
+  • Wave 2/Categories/Laundry & Linen/Image First Staement ADULT000 2-2022 .xlsx
+  • Wave 2/Categories/Temp Labor/APDerm Temp Labor - Randstad Savings Analysis.xlsx
+  • Wave 2/Categories/Uniforms/Uniforms/Uniforms for America Bills Analysis Report 2021-10-14.xlsx
+  • Wave 2/Categories/Shared Contract Collection/Waste Management/Triumvirate Quote 11.11.2021.pdf
+  • Categories/Allergan/Incumbent Negotiations/Allergan Strategic Business Review (May. 27, 2021) vF.pdf
+  • Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx
+  • Wave 2/Assessment/APDerm - AP Spend Analysis Dashboard (10-12-2021).pbix
+  • Project Updates/Kick Off/AP Derm Strategic Sourcing Project Kickoff 011121 v1.pptx
+  • Wave 2/Assessment/Data/(PREVIOUS) AP Derm AP Analysis 9.3.20.xlsx

@@ -1,0 +1,325 @@
+{
+  "schema_version": "v1",
+  "extraction_date": "2026-01-21",
+  "extraction_model": "gpt-4o",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology (APDerm)",
+    "industry_primary": "Healthcare - Dermatology",
+    "business_model": "Multi-site physician practice group",
+    "sponsor_pe_firm": "Waud Capital",
+    "size_metrics": {
+      "revenue": {
+        "amount": 50.0,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Web Search",
+        "notes": "Web estimates vary $44-100M – using midpoint for placeholder"
+      },
+      "locations_count": 40,
+      "locations_source": "Web Search",
+      "locations_confidence": "medium"
+    }
+  },
+  "project_scope": {
+    "engagement_type": "Multi-category strategic sourcing (2 phases)",
+    "fee_type": "unknown"
+  },
+  "engagement_background": {
+    "objective": "Reduce procurement costs across indirect categories while supporting rapid growth.",
+    "scope_summary": "Phase 1 (Jan-Sep 2021) covered Medical Supplies, Office Supplies, Courier, Small Parcel, IT HW, Telecom, Employee Benefits.  Phase 2 (Oct 2021 – Jan 2022) added Janitorial, Temp Labor, Billing System, Laundry, Waste, Copiers, Uniforms.",
+    "procurement_environment": {
+      "operating_model": "decentralized",
+      "maturity": "low",
+      "data_availability": "Limited spend visibility; fragmented supplier contracts",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+      "confidence": "medium"
+    }
+  },
+  "impact": {
+    "summary": {
+      "headline": "$1.2 M savings (19%) on $6.3 M spend",
+      "narrative": "Over two sourcing phases Treya addressed $6.3 million of baseline spend and delivered $1.2 million in annual run-rate savings (19 %).  Savings were achieved via competitive RFPs, incumbent negotiations, and GPO contracts with minimal operational disruption."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1.2,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      }
+    },
+    "proof_points": [
+      {
+        "statement": "19 % reduction across 10+ indirect categories",
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+            "quote": "Total project savings of $1.2M or 19% on $6.3M in baseline spend over 2 Phases"
+          }
+        ]
+      },
+      {
+        "statement": "Majority of business retained with incumbents, ensuring rapid realization",
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+            "quote": "Majority of business remained with incumbent vendors… limited changes to operations required"
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "status": "implemented",
+      "vendors_before": [
+        "Multiple local suppliers",
+        "Henry Schein"
+      ],
+      "vendors_after": [
+        "McKesson (GPO contract)"
+      ],
+      "levers": [
+        "GPO",
+        "consolidation",
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 0.485087,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 1.8177,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "Established Baseline column"
+      },
+      "savings_percentage": 27.0,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+          "page_or_slide": "3"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies & Furniture",
+      "status": "implemented",
+      "vendors_before": [
+        "Staples (assumed)"
+      ],
+      "vendors_after": [
+        "WB Mason (rebate deal)"
+      ],
+      "levers": [
+        "incumbent_negotiation",
+        "rebate"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 0.013694,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 0.174287,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 8.0,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+          "page_or_slide": "3"
+        }
+      ]
+    },
+    {
+      "category_label": "Courier Services",
+      "status": "implemented",
+      "vendors_before": [
+        "Skycom",
+        "Various couriers"
+      ],
+      "vendors_after": [
+        "Millers Express",
+        "Xpressman"
+      ],
+      "levers": [
+        "RFP",
+        "route_optimization"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 0.121572,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Courier Services/APDerm - Courier Services RFP - Savings Analysis v5.xlsx",
+        "notes": "Final scenario column"
+      },
+      "baseline_spend": {
+        "amount": 0.432024,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Courier Services/APDerm - Courier Services RFP - Savings Analysis v5.xlsx",
+        "notes": "Projected Baseline Spend"
+      },
+      "savings_percentage": 29.3,
+      "evidence": [
+        {
+          "source_file": "Categories/Courier Services/APDerm - Courier Services RFP - Savings Analysis v5.xlsx",
+          "page_or_slide": "Summary sheet"
+        }
+      ]
+    },
+    {
+      "category_label": "Small Parcel Shipping",
+      "status": "implemented",
+      "vendors_before": [
+        "FedEx"
+      ],
+      "vendors_after": [
+        "UPS (GPO contract)"
+      ],
+      "levers": [
+        "rate_reduction",
+        "GPO"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 0.010508,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 0.035571,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 30.0,
+      "evidence": [
+        {
+          "source_file": "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx",
+          "page_or_slide": "Savings Analysis T2 Working"
+        }
+      ]
+    },
+    {
+      "category_label": "Telecom – Circuits",
+      "status": "implemented",
+      "vendors_before": [
+        "Multiple local telcos"
+      ],
+      "vendors_after": [
+        "OneSource (MetTel / Verizon aggregation)"
+      ],
+      "levers": [
+        "consolidation",
+        "benchmarking"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 0.037454,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 0.098568,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 38.0,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+          "page_or_slide": "3"
+        }
+      ]
+    },
+    {
+      "category_label": "IT Hardware",
+      "status": "negotiated",
+      "vendors_before": [
+        "Connection",
+        "CDW"
+      ],
+      "vendors_after": [
+        "Whalley (MOU pending)"
+      ],
+      "levers": [
+        "RFP",
+        "vendor_consolidation"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 0.02941,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 0.110125,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 27.0,
+      "evidence": [
+        {
+          "source_file": "Categories/IT Hardware Software/RFQ/RFQ Responses/APDerm -  IT Hardware RFQ Savings Comparison (April 27, 2021) vF.xlsx",
+          "page_or_slide": "Core List Comparison"
+        }
+      ]
+    },
+    {
+      "category_label": "Employee Benefits",
+      "status": "in_progress",
+      "vendors_before": [
+        "Lockton (Fully insured UHC)"
+      ],
+      "vendors_after": [
+        "Hauser / Noveta (Self-insured captive)"
+      ],
+      "levers": [
+        "broker_RFP",
+        "self_funding"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 0.393333,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "Projected based on Noveta proposal"
+      },
+      "baseline_spend": {
+        "amount": 1.803454,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 22.0
+    }
+  ],
+  "case_study_packaging": {
+    "case_study_ready": false
+  },
+  "extraction_notes": [
+    "Exhibit A & B tables were not visible in provided Agreement excerpts – therefore initial scope, fee structure, and projected savings ranges are missing.",
+    "Revenue and location counts taken from web search – not validated in project docs.",
+    "Categories list based on Phase-1 update; additional Phase-2 categories (e.g., Janitorial, Temp Labor, Laundry, etc.) had saving estimates but not final results; left out to avoid speculation.",
+    "All dollar amounts expressed in millions (e.g., 0.485 = $485k)."
+  ],
+  "files_analyzed": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+    "Categories/Courier Services/APDerm - Courier Services RFP - Savings Analysis v5.xlsx",
+    "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v3 (03-15-2021) .xlsx",
+    "Categories/IT Hardware Software/RFQ/RFQ Responses/APDerm -  IT Hardware RFQ Savings Comparison (April 27, 2021) vF.xlsx"
+  ]
+}

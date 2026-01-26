@@ -1,0 +1,151 @@
+{
+  "schema_version": "v1",
+  "extraction_date": "2026-01-21",
+  "extraction_model": "gpt-4o",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology (APDerm)",
+    "industry_primary": "Healthcare - Dermatology",
+    "business_model": "Multi-site dermatology practice network",
+    "sponsor_pe_firm": "Waud Capital Partners",
+    "client_history": "Founded 1992, PE-backed roll-up acquiring practices across New England.",
+    "size_metrics": {
+      "revenue": {
+        "amount": 50000000.0,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Web Search",
+        "notes": "LeadIQ reported $50-$100M; used midpoint of lower bound."
+      },
+      "locations_count": 40,
+      "locations_source": "Web Search",
+      "locations_confidence": "medium",
+      "employees_count": 501
+    }
+  },
+  "project_scope": {
+    "engagement_type": "Broad multi-category strategic sourcing (two-phase)",
+    "fee_type": "fixed",
+    "fee_amount": {
+      "amount": 190000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+      "notes": "$190K fixed fee stated in Exhibit B – Project Fees."
+    },
+    "fee_notes": "Agreement includes 2× fee minimum-savings guarantee but no contingent %.",
+    "start_date": "2021-01-01",
+    "end_date": "2021-07-31"
+  },
+  "engagement_background": {
+    "objective": "Reduce procurement costs across indirect categories while supporting APDerm’s rapid multi-site growth.",
+    "scope_summary": "Phase 1 focused on Employee Benefits, Medical Supplies, IT Hardware, Telecom, Courier, Office Supplies, Small Parcel; later phases added eight additional categories (billing system, janitorial, etc.).",
+    "constraints_challenges": [
+      "Decentralized purchasing across 40+ locations",
+      "Pandemic-related inflation and supply chain disruption",
+      "Need to maintain clinical quality and avoid operational disruption"
+    ],
+    "procurement_environment": {
+      "operating_model": "decentralized",
+      "maturity": "low",
+      "data_availability": "Fragmented AP data; limited SKU-level visibility pre-project.",
+      "data_quality_notes": "Spend baselines in Agreement were ‘estimations based on AP data’.",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+      "confidence": "medium"
+    }
+  },
+  "impact": {
+    "summary": {
+      "headline": "$1.2 M run-rate savings across 10+ categories",
+      "narrative": "Over two sourcing phases Treya Partners delivered $1.2 million (19 %) annual savings on $6.3 million of baseline spend for APDerm.  Savings were achieved largely with incumbent vendors, minimizing disruption while capturing more than $12 million in enterprise value."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+        "notes": "Case study states ‘Total project savings of $1.2M or 19%’"
+      }
+    },
+    "operational_improvements": "Majority of spend remained with incumbents; limited operational change required.",
+    "proof_points": [
+      {
+        "statement": "19 % savings on $6.3 M baseline within six months",
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+            "page_or_slide": "Page 3",
+            "quote": "The Treya/AP Derm strategic sourcing project created $1.2M or 19% in cost savings on an addressable baseline of $6.3M.",
+            "date_extracted": "2026-01-21"
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Multiple Indirect Categories (Phase 1 & 2)",
+      "status": "implemented",
+      "levers": [
+        "competitive_rfp",
+        "incumbent_negotiation",
+        "gpo"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      },
+      "baseline_spend": {
+        "amount": 6300000.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+        "notes": "Total baseline spend referenced in case study."
+      },
+      "savings_percentage": 19.0,
+      "notes": "Detailed category-level outcomes not disclosed in final case study; see Extraction Notes.",
+      "evidence": [
+        {
+          "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+        }
+      ]
+    }
+  ],
+  "case_study_packaging": {
+    "case_study_ready": false,
+    "headline": "$1.2 M savings (19 %) across indirect spend for PE-backed dermatology platform",
+    "client_problem_statement": "Rapidly expanding dermatology network lacked centralized procurement, driving fragmented spend and rising costs.",
+    "approach_summary": [
+      "Two-phase strategic sourcing program addressing >10 indirect categories.",
+      "Combined RFPs, GPO leverage, and incumbent renegotiations for quick wins.",
+      "Maintained clinical quality while consolidating vendor base.",
+      "Implemented savings and tracked results with APDerm stakeholders."
+    ],
+    "top_levers": [
+      "Incumbent supplier negotiations",
+      "Competitive RFPs",
+      "Group Purchasing Organization contracts"
+    ],
+    "value_delivered_blurb": "Treya unlocked 19 % savings and $12 M+ in enterprise value, funding continued practice growth with minimal disruption.",
+    "where_we_were_unique": [
+      "Hybrid strategy of GPO quick wins plus deep category RFPs",
+      "Hands-on support minimizing client resource burden",
+      "PE-savvy reporting and savings tracking for board visibility"
+    ]
+  },
+  "extraction_notes": [
+    "Exhibit A table in Agreement not captured in PDF text; category count and addressable spend unavailable.",
+    "Category-level spend & savings were not itemized in final case study; only aggregate results provided.",
+    "Revenue and location counts derived from web search estimates; confidence low-medium.",
+    "Project start/end dates approximated from kickoff (Jan 11 2021) and timeline slide (June 2021 completion).",
+    "Additional Wave 2 categories (Billing System, Janitorial, etc.) identified in documents but final savings not disclosed; rolled into aggregate category entry."
+  ],
+  "files_analyzed": [
+    "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Project Updates/Kick Off/AP Derm Strategic Sourcing Project Kickoff 011121 v1.pptx"
+  ]
+}

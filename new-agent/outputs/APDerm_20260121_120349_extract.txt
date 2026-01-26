@@ -1,0 +1,52 @@
+# Case Study Extraction: APDerm
+Generated: 2026-01-21 12:03:49
+Model: gpt-4o
+Tokens: 103,718 in / 2,936 out
+
+================================================================================
+FILES ANALYZED
+================================================================================
+
+  • Case Study/Treya Case Study_APDerm vF.pdf
+  • Case Study/Treya Case Study_APDerm v6 MY.docx
+  • Case Study/Treya Case Study_APDerm v5 MY.docx
+  • Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf
+  • Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx
+  • Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf
+  • Assessment/AP Derm - AP Spend Analysis - 9.3.2020 (4).pbix
+  • Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx
+  • Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421) [Autosaved].pptx
+  • Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (083121).pptx
+  • Categories/Courier Services/2. RFP Development/APDerm - Courier Services RFP - Draft vF (5-7-21).xlsx
+  • Categories/Billing Systems/RFP Responses/Modernizing Medicine/Modernizing Medicine's RFP Response- APDerm - Practice Management - Billing Systems RFP (Dec 2021) (1).xlsx
+  • Categories/Small Parcel/0. Data/Second Set/FedEx_ShipmentDetail_20210301222734.xlsx
+  • Categories/Copiers/September 2023 Platinum Data Collection - Copiers.xlsx
+  • Categories/Janitorial & Sanitation/RFP/Final Materials/APDerm Janitorial Services RFP Draft (Feb 16 2022) vF.xlsx
+  • Wave 2/Categories/Billing System/Negotiations/Athena Health Strategic Business Review (Jan. 5, 2022) WIP.pdf
+  • Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx
+  • Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 04, 2022).pptx
+  • Wave 2/Updates/APDerm Phase 2 Project Update (Jun 29, 2022).pptx
+  • Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx
+
+================================================================================
+EXTRACTED DATA
+================================================================================
+
+Client: APDerm
+Industry: Healthcare
+PE Sponsor: Waud Capital
+
+Objective: Create procurement cost savings while ensuring business needs are fully met
+
+Impact Narrative:
+Treya Partners collaborated with APDerm to achieve $1.2M or 19% in cost savings on an addressable baseline of $6.3M, leveraging competitive bidding, incumbent negotiations, and GPO contracts over two sourcing phases.
+
+Categories (3):
+  • Medical Supplies [implemented] - $485,087/yr
+  • Courier Services [implemented] - $121,572/yr
+  • Billing Services [identified] - $259,800/yr
+
+Extraction Notes:
+  • The project end date is not explicitly mentioned.
+  • Exact number of categories impacted was not clearly listed in all sources.
+  • The confidence level for some financial figures is based on the consistency across multiple documents.

@@ -1,0 +1,283 @@
+{
+  "schema_version": "v1",
+  "extraction_date": "2023-10-10",
+  "extraction_model": "GPT-4",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology, PC",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology",
+    "business_model": "Multi-site healthcare services",
+    "sponsor_pe_firm": "Waud Capital",
+    "client_history": "Founded in 1992, grown through acquisitions, PE-backed",
+    "size_metrics": {
+      "revenue": {
+        "amount": 43000000.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf",
+        "notes": "Estimated annual spend with external vendors"
+      },
+      "locations_count": 29
+    }
+  },
+  "project_scope": {
+    "engagement_type": "Broad multi-category strategic sourcing",
+    "fee_type": "contingent",
+    "fee_hybrid_threshold": {
+      "amount": 600000.0,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+    },
+    "fee_contingent_percentage": 25.0,
+    "initial_categories_count": 10,
+    "addressable_spend": {
+      "amount": 11000000.0,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf"
+    },
+    "savings_estimate_low": {
+      "amount": 542000.0,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf"
+    },
+    "savings_estimate_high": {
+      "amount": 928000.0,
+      "currency": "USD",
+      "confidence": "medium",
+      "source_file": "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf"
+    },
+    "start_date": "2020-11-01",
+    "end_date": "2021-06-01"
+  },
+  "engagement_background": {
+    "objective": "Achieve cost savings through strategic sourcing across multiple categories.",
+    "scope_summary": "Includes Medical Supplies, Office Supplies, IT Hardware/Software, Telecom, Courier Services, Employee Benefits, etc.",
+    "constraints_challenges": [
+      "Fragmented supply base",
+      "Decentralized purchasing",
+      "Market conditions mid-pandemic"
+    ],
+    "procurement_environment": {
+      "operating_model": "decentralized",
+      "maturity": "medium",
+      "data_availability": "Multiple supplier accounts, decentralized",
+      "data_quality_notes": "Line-item data not always available"
+    }
+  },
+  "impact": {
+    "summary": {
+      "headline": "$1.2M savings across 10 categories",
+      "narrative": "The project achieved $1.2M in cost savings from a $6.3M baseline spend, representing a 19% savings rate. The majority of savings were realized without significant operational changes."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      }
+    },
+    "operational_improvements": "Improved procurement processes and supplier consolidation",
+    "proof_points": [
+      {
+        "statement": "Achieved 19% savings on a $6.3M baseline spend",
+        "category": "Overall",
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+            "page_or_slide": "3",
+            "quote": "Total project savings of $1.2M or 19% on $6.3M in baseline spend over 2 Phases",
+            "date_extracted": "2023-10-10"
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "category_l1": "Medical",
+      "start_date": "2020-11-01",
+      "end_date": "2021-06-01",
+      "status": "implemented",
+      "levers": [
+        "competitive_bidding",
+        "GPO"
+      ],
+      "constraints": {},
+      "savings_annual_run_rate": {
+        "amount": 485087.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Savings achieved through GPO and competitive bidding"
+      },
+      "baseline_spend": {
+        "amount": 1817711.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+      },
+      "savings_percentage": 27.0,
+      "notes": "Pricing held firm for initial 12 months"
+    },
+    {
+      "category_label": "Office Supplies",
+      "category_l1": "Office",
+      "start_date": "2020-11-01",
+      "end_date": "2021-06-01",
+      "status": "implemented",
+      "levers": [
+        "GPO"
+      ],
+      "constraints": {},
+      "savings_annual_run_rate": {
+        "amount": 13694.5,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx"
+      },
+      "baseline_spend": {
+        "amount": 174287.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021).xlsx"
+      },
+      "savings_percentage": 7.8
+    },
+    {
+      "category_label": "IT Hardware/Software",
+      "category_l1": "IT",
+      "start_date": "2020-11-01",
+      "end_date": "2021-06-01",
+      "status": "implemented",
+      "levers": [
+        "incumbent_negotiations"
+      ],
+      "constraints": {},
+      "savings_annual_run_rate": {
+        "amount": 29410.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 110125.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 27.0
+    },
+    {
+      "category_label": "Telecom",
+      "category_l1": "Telecom",
+      "start_date": "2020-11-01",
+      "end_date": "2021-06-01",
+      "status": "implemented",
+      "levers": [
+        "incumbent_negotiations"
+      ],
+      "constraints": {},
+      "savings_annual_run_rate": {
+        "amount": 37454.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 98568.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 38.0
+    },
+    {
+      "category_label": "Courier Services",
+      "category_l1": "Logistics",
+      "start_date": "2020-11-01",
+      "end_date": "2021-06-01",
+      "status": "implemented",
+      "levers": [
+        "GPO"
+      ],
+      "constraints": {},
+      "savings_annual_run_rate": {
+        "amount": 121572.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 432024.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 28.0
+    },
+    {
+      "category_label": "Employee Benefits",
+      "category_l1": "HR",
+      "start_date": "2020-11-01",
+      "end_date": "2021-06-01",
+      "status": "negotiated",
+      "levers": [
+        "incumbent_negotiations"
+      ],
+      "constraints": {},
+      "savings_annual_run_rate": {
+        "amount": 393333.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 1803454.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 22.0
+    }
+  ],
+  "case_study_packaging": {
+    "case_study_ready": false,
+    "headline": "$1.2M run-rate savings across 10 categories",
+    "client_problem_statement": "Limited spend visibility and fragmented supply base",
+    "approach_summary": [
+      "Utilized a combination of competitive RFPs, direct incumbent supplier negotiations, and GPO contracts to create savings",
+      "Collaborated with APDerm stakeholders to understand business needs",
+      "Implemented strategic sourcing across multiple categories"
+    ],
+    "top_levers": [
+      "GPO contracts",
+      "Competitive bidding",
+      "Incumbent negotiations"
+    ],
+    "value_delivered_blurb": "Delivered $1.2M in savings by optimizing procurement processes across 10 categories.",
+    "where_we_were_unique": [
+      "Data-driven approach",
+      "Collaborative stakeholder engagement",
+      "Rapid implementation of savings"
+    ]
+  },
+  "extraction_notes": [
+    "Employee count and exact revenue details were not available.",
+    "Some categories had lower confidence estimates due to lack of final documentation.",
+    "Exact project start and end dates were inferred from multiple documents.",
+    "Some savings values were projected based on initial estimates."
+  ],
+  "files_analyzed": [
+    "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx"
+  ]
+}

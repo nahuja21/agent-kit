@@ -1,0 +1,234 @@
+{
+  "schema_version": "v1",
+  "extraction_date": "2023-10-10",
+  "extraction_model": "LLM Model",
+  "source_project_path": "APDerm",
+  "client": {
+    "client_name": "APDerm",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology",
+    "business_model": "Healthcare, multi-site",
+    "sponsor_pe_firm": "Waud Capital",
+    "client_history": "PE-backed, multiple acquisitions",
+    "size_metrics": {
+      "revenue": {
+        "amount": 44700000.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Web Search"
+      },
+      "locations_count": 40,
+      "locations_source": "Web Search",
+      "locations_confidence": "high"
+    }
+  },
+  "project_scope": {
+    "engagement_type": "Strategic sourcing",
+    "fee_type": "contingent",
+    "fee_amount": {
+      "currency": "USD"
+    },
+    "fee_contingent_percentage": 50.0,
+    "initial_categories_count": 7,
+    "addressable_spend": {
+      "amount": 6300000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf"
+    },
+    "savings_estimate_low": {
+      "amount": 540000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf"
+    },
+    "savings_estimate_high": {
+      "amount": 928000.0,
+      "currency": "USD",
+      "confidence": "high",
+      "source_file": "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf"
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2021-09-30"
+  },
+  "engagement_background": {
+    "objective": "Reduce costs through strategic sourcing.",
+    "scope_summary": "APDerm aimed to leverage purchasing power across multiple locations to reduce procurement costs through competitive RFP processes and negotiations.",
+    "constraints_challenges": [
+      "Fragmented supply base",
+      "Multiple contracts",
+      "Inflationary market conditions"
+    ],
+    "procurement_environment": {
+      "operating_model": "decentralized",
+      "maturity": "medium",
+      "data_availability": "Good data availability but fragmented across locations.",
+      "data_quality_notes": "Fragmented data across multiple contracts.",
+      "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+      "confidence": "high"
+    }
+  },
+  "impact": {
+    "summary": {
+      "headline": "$1.2M run-rate savings across 7 categories",
+      "narrative": "Treya Partners delivered a total project savings of $1.2M or 19% on $6.3M in baseline spend over 2 phases, maintaining existing supplier relationships where possible."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 1200000.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+      }
+    },
+    "operational_improvements": "Retained incumbent suppliers, reduced transition downtime.",
+    "proof_points": [
+      {
+        "statement": "$1.2M savings achieved across 7 categories",
+        "evidence": [
+          {
+            "source_file": "Case Study/Treya Case Study_APDerm vF.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "start_date": "2021-01-01",
+      "end_date": "2021-09-30",
+      "status": "implemented",
+      "vendors_before": [
+        "Multiple local suppliers"
+      ],
+      "vendors_after": [
+        "McKesson (GPO contract)"
+      ],
+      "levers": [
+        "GPO",
+        "consolidation"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 485087.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "baseline_spend": {
+        "amount": 1817711.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+      },
+      "savings_percentage": 27.0,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies",
+      "start_date": "2021-01-01",
+      "end_date": "2021-09-30",
+      "status": "completed",
+      "vendors_before": [
+        "WB Mason"
+      ],
+      "vendors_after": [
+        "WB Mason (renegotiated terms)"
+      ],
+      "levers": [
+        "rate_reduction"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 13694.49,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx"
+      },
+      "baseline_spend": {
+        "amount": 174287.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx"
+      },
+      "savings_percentage": 8.0,
+      "evidence": [
+        {
+          "source_file": "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx"
+        }
+      ]
+    },
+    {
+      "category_label": "Small Parcel",
+      "start_date": "2021-01-01",
+      "end_date": "2021-09-30",
+      "status": "implemented",
+      "vendors_before": [
+        "FedEx"
+      ],
+      "vendors_after": [
+        "UPS (GPO contract)"
+      ],
+      "levers": [
+        "consolidation"
+      ],
+      "savings_annual_run_rate": {
+        "amount": 10571.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v2 (03-15-2021) .xlsx"
+      },
+      "baseline_spend": {
+        "amount": 28542.0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v2 (03-15-2021) .xlsx"
+      },
+      "savings_percentage": 37.0,
+      "evidence": [
+        {
+          "source_file": "Categories/Small Parcel/1. Analysis/APDerm - Savings Analysis v2 (03-15-2021) .xlsx"
+        }
+      ]
+    }
+  ],
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "headline": "$1.2M run-rate savings across 7 categories",
+    "client_problem_statement": "Limited spend visibility with fragmented supply base and rising costs.",
+    "approach_summary": [
+      "Competitive RFPs",
+      "Incumbent supplier negotiations",
+      "Utilized GPO contracts",
+      "Engaged stakeholders",
+      "Implemented savings tracking"
+    ],
+    "top_levers": [
+      "GPO",
+      "rate_reduction",
+      "consolidation"
+    ],
+    "value_delivered_blurb": "Successfully achieved $1.2M in savings across multiple categories.",
+    "where_we_were_unique": [
+      "Data-driven approach",
+      "Comprehensive GPO network"
+    ]
+  },
+  "extraction_notes": [
+    "Revenue figure is an estimate due to conflicting sources.",
+    "EBITDA and employee count were not available.",
+    "Agreement document did not specify fixed fee."
+  ],
+  "files_analyzed": [
+    "Agreement/Signed Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Agreement/Treya AP Derm Extension Agreement Nov 3 2021 vF.docx",
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+    "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf",
+    "Categories/Office Supplies/1. Analysis/APDerm - Office Supplies Analysis (6-10-2021) v2.xlsx",
+    "Categories/Small Parcel/1. Analysis/APDerm - Small Parcel - Savings Analysis v2 (03-15-2021) .xlsx"
+  ]
+}
