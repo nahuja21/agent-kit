@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objectives, quantified $1.18M savings, and multiple category-level proof points are fully documented.",
+    "headline": "PE-backed dermatology network captures $1.18 million in annual savings and 6.2\u00d7 ROI through Treya-led strategic sourcing",
+    "client_problem_statement": "Adult & Pediatric Dermatology, PC had grown to 38 clinics through acquisitions but still bought goods and services in a highly decentralized manner. Fragmented data, hundreds of vendors and pandemic-driven inflation were eroding margins just as Waud Capital Partners pressed for rapid EBITDA improvement. APDerm needed a partner that could quickly bring spend visibility, negotiate with sensitive incumbents, and unlock scale advantages across its indirect spend.",
+    "approach_summary": [
+      "Analyzed 12 indirect spend categories representing roughly $6.3 million in annual addressable spend and cleansed fragmented AP data from 30+ systems.",
+      "Executed two waves of sourcing events\u2014leveraging competitive RFPs, market baskets and benchmarking\u2014to drive best-and-final offers in medical supplies, courier, janitorial and other services.",
+      "Optimized GPO tiers and dual-GPO strategy with McKesson, HealthTrust and Premier to secure 27 % savings on medical supplies while retaining incumbent distributor.",
+      "Renegotiated key incumbent contracts\u2014including AthenaHealth billing (17 % reduction) and Enterprise Cleaning (20 % reduction)\u2014to avoid operational disruption while lowering cost.",
+      "Consolidated vendors (e.g., telecom circuits aggregated under OneSource, WB Mason contract for office supplies) and instituted centralized contracts, SLAs and governance cadence."
+    ],
+    "top_levers": [
+      "GPO tier optimization & volume aggregation",
+      "Incumbent contract renegotiation",
+      "Competitive RFP / BAFO negotiation",
+      "Vendor consolidation",
+      "Route and service optimization"
+    ],
+    "value_delivered_blurb": "Treya secured $1,179,965 in validated annual run-rate savings\u2014more than triple the $380K minimum guarantee and delivering a 6.2\u00d7 return on the firm\u2019s $190K fixed fee. Quick-win programs in parcel shipping and office supplies went live within 60 days, and six categories are already fully implemented. Beyond the dollars, APDerm now benefits from centralized contracts, standardized pricing across 33+ sites and new supplier SLAs that free clinical staff from administrative tasks.",
+    "where_we_were_unique": [
+      "Generated first realized savings within 60 days via GPO quick-wins and express contract execution.",
+      "Deep healthcare GPO expertise unlocked dual-GPO strategy that preserved incumbent relationships while maximizing rebates.",
+      "\u2018Soft-touch\u2019 negotiation approach retained critical incumbent suppliers, mitigating change-management risk for front-line clinics.",
+      "Data-driven methodology cleansed decentralized AP data to create the first enterprise-wide spend baseline for leadership."
+    ]
+  },
+  "generation_notes": [
+    "Savings, ROI and guarantee figures taken directly from impact and agreement data.",
+    "Approach bullets map to documented actions in both Phase 1 and Phase 2.",
+    "Top levers ranked by dollar impact: Medical supplies (GPO), Billing (renegotiation), Janitorial (RFP), etc."
+  ]
+}

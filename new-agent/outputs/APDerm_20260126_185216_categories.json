@@ -1,0 +1,650 @@
+{
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "category_l1": "Clinical",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2021-07-30",
+      "status": "implemented",
+      "vendors_before": [
+        "Henry Schein",
+        "Medline",
+        "Cardinal Health"
+      ],
+      "vendors_after": [
+        "McKesson (primary distributor)",
+        "HealthTrust (HPG) GPO",
+        "Premier (secondary GPO)"
+      ],
+      "levers": [
+        "Competitive RFP",
+        "GPO tier optimization",
+        "Volume aggregation",
+        "Incumbent renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Clinical teams required uninterrupted access to same product SKUs.",
+        "operational_constraints": "No stock-outs permitted during cut-over across 33+ clinics.",
+        "contractual_constraints": "Pricing to be held firm for 12-months per McKesson agreement.",
+        "implementation_constraints": "Phased location rollout with dual invoicing for 30 days."
+      },
+      "baseline_spend": {
+        "amount": 1817711,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Phase-1 baseline shown on slide 16."
+      },
+      "savings_annual_run_rate": {
+        "amount": 485087,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "27 % savings locked for initial 12-month term."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 27.0,
+      "notes": "McKesson agreement signed 7/30/21; pricing freeze except pharmaceuticals.",
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": 5,
+          "quote": "APDerm\u2019s agreement with McKesson was fully executed on July 30, 2021\u2013 estimated savings were 27 % ($485K).",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Courier Services",
+      "category_l1": "Logistics",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2021-09-20",
+      "status": "implemented",
+      "vendors_before": [
+        "Millers Express (incumbent)"
+      ],
+      "vendors_after": [
+        "Millers Express (renegotiated)",
+        "Xpressman Trucking & Courier"
+      ],
+      "levers": [
+        "Competitive RFP",
+        "Route optimization",
+        "Dual-sourcing",
+        "Rate card renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Specimen transport requires HIPAA compliance & temperature control.",
+        "operational_constraints": "Pick-up/drop schedules fixed around clinic closing times.",
+        "contractual_constraints": "Existing Millers agreement amended, not terminated.",
+        "implementation_constraints": "Route transition completed over two weekends."
+      },
+      "baseline_spend": {
+        "amount": 432024,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "Baseline in purchasing update table."
+      },
+      "savings_annual_run_rate": {
+        "amount": 121572,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "28 % savings; contracts executed Sept-2021."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 28.0,
+      "notes": "All routes successfully transitioned to new blended Millers/Xpressman network.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+          "page_or_slide": 3,
+          "quote": "Courier Services | $432,024 | Millers Express & Xpressman | 28 % | $121,572 | Contract fully executed; implementation in progress",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Telecom \u2013 Circuits",
+      "category_l1": "IT & Telecom",
+      "category_l2": "Connectivity",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Comcast",
+        "Spectrum",
+        "Verizon",
+        "Local ISPs"
+      ],
+      "vendors_after": [
+        "OneSource Communications (aggregator) \u2013 deploying MetTel/Verizon circuits"
+      ],
+      "levers": [
+        "Aggregated inventory benchmarking",
+        "Master services agreement",
+        "Carrier consolidation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "LOAs and porting must avoid clinic downtime; 99.9 % SLA required.",
+        "contractual_constraints": "Legacy carrier early-termination penalties negotiated into OneSource deal.",
+        "implementation_constraints": "Circuit migrations staged location-by-location after hours."
+      },
+      "baseline_spend": {
+        "amount": 98568,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "Phase-1 baseline."
+      },
+      "savings_annual_run_rate": {
+        "amount": 37454,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "Savings contingent on final LOA completions."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 38.0,
+      "notes": "OneSource master agreement signed; carrier LOAs currently in flight.",
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": 16,
+          "quote": "Telecom (Circuits) | $98,568 | OneSource (MetTel / Verizon) | 38 % | $37,454",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "IT Hardware",
+      "category_l1": "IT",
+      "category_l2": "End-User Computing",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "negotiated",
+      "vendors_before": [
+        "Connection",
+        "Dell direct",
+        "CDW"
+      ],
+      "vendors_after": [
+        "Whalley Computer Associates (single-source catalog)"
+      ],
+      "levers": [
+        "Competitive RFQ",
+        "Core-list pricing",
+        "Vendor consolidation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must support Dell & Lenovo OEM warranties.",
+        "operational_constraints": "New\u2010hire laptop imaging process unchanged.",
+        "contractual_constraints": "MOU drafted \u2013 awaiting APDerm signature.",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 110125,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "Phase-1 baseline value."
+      },
+      "savings_annual_run_rate": {
+        "amount": 29410,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "27 % projected \u2013 to be realized post-signature."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 27.0,
+      "notes": "Whalley MOU with tiered discounts on core SKUs delivered 4/2022.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+          "page_or_slide": 3,
+          "quote": "IT Hardware | $110,125 | Whalley | 27 % | $29,410 | Whalley MOU awaiting signature",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies",
+      "category_l1": "Indirect",
+      "category_l2": "MRO & Office",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2021-08-01",
+      "status": "implemented",
+      "vendors_before": [
+        "WB Mason (spot-buy)",
+        "Amazon Business"
+      ],
+      "vendors_after": [
+        "WB Mason (contracted via GPO tier)"
+      ],
+      "levers": [
+        "GPO contract adoption",
+        "Market-basket benchmarking",
+        "Incumbent renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Users retained WB Mason punch-out; no workflow change.",
+        "contractual_constraints": "8 % price reduction locked for 12 months.",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 174287,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "Phase-1 baseline."
+      },
+      "savings_annual_run_rate": {
+        "amount": 13694,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "8 % savings \u2013 live via GPO pricing."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 8.0,
+      "notes": "WB Mason program went live August 2021 using NCPA contract.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+          "page_or_slide": 3,
+          "quote": "Office Supplies (incl. Furniture) | $174,287 | WB Mason | 8 % | $13,694 | Complete",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Small Parcel Shipping",
+      "category_l1": "Logistics",
+      "category_l2": "Parcel",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2021-08-16",
+      "status": "implemented",
+      "vendors_before": [
+        "FedEx",
+        "USPS"
+      ],
+      "vendors_after": [
+        "UPS (Treya GPO program)"
+      ],
+      "levers": [
+        "GPO contract",
+        "Benchmark against FedEx rate card",
+        "DIM factor relief"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Clinic shipping software switched to UPS WorldShip.",
+        "contractual_constraints": "3-year UPS member agreement with Treya Group Purchasing.",
+        "implementation_constraints": "Account onboarding workbook completed 6/16/21."
+      },
+      "baseline_spend": {
+        "amount": 35571,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Exhibit A Data",
+        "notes": "Initial scope baseline \u2013 aligns with Phase-1 slide."
+      },
+      "savings_annual_run_rate": {
+        "amount": 10508,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "30 % savings effective 8/16/21."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 30.0,
+      "notes": "UPS member agreement signed 6/21/21; discounts live 8/16/21.",
+      "evidence": [
+        {
+          "source_file": "Categories/Small Parcel/2. Contracts/APDerm - UPS Member Agreement (6-21-21).docx",
+          "page_or_slide": 1,
+          "quote": "\"This Member Agreement\u2026 between UPS and APDerm\u2026 effective 6-21-21\"",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Telecom \u2013 PBX / Contact Center",
+      "category_l1": "IT & Telecom",
+      "category_l2": "Voice",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Legacy on-prem Avaya & Cisco systems"
+      ],
+      "vendors_after": [
+        "Tidal Communications (hosted PBX) \u2013 under legal review"
+      ],
+      "levers": [
+        "Full RFQ (UCaaS)",
+        "Solution demos",
+        "Contract negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must integrate with AthenaHealth and existing call-flows.",
+        "operational_constraints": "Cut-over required after clinic hours; zero voicemail loss.",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 207996,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Phase-1 baseline."
+      },
+      "savings_annual_run_rate": {
+        "amount": 6240,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "3 % projected \u2013 pending contract signature."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 3.0,
+      "notes": "Tidal contract under legal review as of latest impact sheet.",
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": 16,
+          "quote": "Telecom (PBX / Contact Center) | $207,996 | Tidal | 3 % | $6,240",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Billing Services",
+      "category_l1": "Revenue Cycle",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "negotiated",
+      "vendors_before": [
+        "AthenaHealth (1.80 % of collections)"
+      ],
+      "vendors_after": [
+        "AthenaHealth (renegotiated to 1.50 % with tiered bands)"
+      ],
+      "levers": [
+        "Incumbent renegotiation",
+        "3-year rate lock",
+        "Volume-based tiering"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must remain on Athena platform \u2013 clinical integration.",
+        "operational_constraints": null,
+        "contractual_constraints": "Red-lining of master services addendum in progress.",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1558800,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Phase-2 baseline."
+      },
+      "savings_annual_run_rate": {
+        "amount": 259800,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "17 % reduction in rev-share fee."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 17.0,
+      "notes": "Athena addendum circulated for signature \u2013 expected Q1-2023 go-live.",
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": 3,
+          "quote": "Billing Services | $1,558,800 | 17 % savings | Status: Award Review",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Janitorial Services",
+      "category_l1": "Facilities",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2022-01-15",
+      "end_date": "2022-06-13",
+      "status": "implemented",
+      "vendors_before": [
+        "Enterprise Cleaning (majority)",
+        "Various local providers"
+      ],
+      "vendors_after": [
+        "Enterprise Cleaning (all 33 sites, revised BAFO)"
+      ],
+      "levers": [
+        "Competitive RFP",
+        "BAFO negotiation",
+        "Labor-rate benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Clinics open 7 am-7 pm \u2013 cleaning only after hours.",
+        "contractual_constraints": "3-year agreement with growth incentives.",
+        "implementation_constraints": "Enterprise to reduce hours by 10 % within 3 months."
+      },
+      "baseline_spend": {
+        "amount": 977833,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Phase-2 baseline."
+      },
+      "savings_annual_run_rate": {
+        "amount": 193565,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "20 % savings scenario selected."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 20.0,
+      "notes": "New hourly rates effective 6/13/22 across all locations.",
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": 5,
+          "quote": "Completed implementation of new hourly rates from Enterprise Cleaning for all locations",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Non-IT Temporary Labor",
+      "category_l1": "HR & Staffing",
+      "category_l2": "Temporary Labor",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-04-21",
+      "status": "implemented",
+      "vendors_before": [
+        "Addison Group",
+        "Robert Half"
+      ],
+      "vendors_after": [
+        "Randstad (Premier GPO rates)"
+      ],
+      "levers": [
+        "GPO contract",
+        "Markup benchmarking",
+        "Incumbent exit"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Maintain credentialing requirements for clinical temps.",
+        "contractual_constraints": null,
+        "implementation_constraints": "Rollout underway with HR\u2019s temp request process."
+      },
+      "baseline_spend": {
+        "amount": 91601,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Addressable baseline (80 % of $174,793 spend)."
+      },
+      "savings_annual_run_rate": {
+        "amount": 10245,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Categories/Temp Labor/APDerm Temp Labor - Randstad Savings Analysis.xlsx",
+        "notes": "11 % savings on markup."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 11.2,
+      "notes": "Premier GPO contract accepted; Randstad onboarding complete.",
+      "evidence": [
+        {
+          "source_file": "Wave 2/Categories/Temp Labor/APDerm Temp Labor - Randstad Savings Analysis.xlsx",
+          "page_or_slide": "Summary tab",
+          "quote": "Savings Extrapolated to Total Historical Annual AP Baseline | $19,550 | 11 %",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Copier / Print Services",
+      "category_l1": "IT",
+      "category_l2": "Print",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Konica Minolta (multiple leases)"
+      ],
+      "vendors_after": [],
+      "levers": [
+        "Usage data collection",
+        "Benchmark to GPO lease pricing"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Must support secure print for HIPAA.",
+        "contractual_constraints": "Existing leases have staggered expirations.",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 93686,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Phase-2 baseline."
+      },
+      "savings_annual_run_rate": {
+        "amount": 9369,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Low end of 10-15 % range \u2013 proposals pending."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10.0,
+      "notes": "Consult App installed 8/4; awaiting KM usage reports.",
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": 4,
+          "quote": "Copiers / Print Services | Provided installation instructions\u2026 usage reporting in progress",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Uniforms",
+      "category_l1": "HR & Staffing",
+      "category_l2": "Employee Uniforms",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Uniforms for America"
+      ],
+      "vendors_after": [
+        "Cintas (proposal under review)"
+      ],
+      "levers": [
+        "Supplier proposal & benchmarking",
+        "Program redesign (allowance vs. bulk)"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Need embroidered logos; employees prefer online ordering option.",
+        "contractual_constraints": null,
+        "implementation_constraints": "Web-portal setup fee & annual maintenance subject to spend thresholds."
+      },
+      "baseline_spend": {
+        "amount": 60414,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Phase-2 baseline."
+      },
+      "savings_annual_run_rate": {
+        "amount": 3021,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "5 % low-case savings \u2013 pending award decision."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 5.0,
+      "notes": "Cintas proposal analyzed; APDerm to finalize approach.",
+      "evidence": [
+        {
+          "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+          "page_or_slide": 4,
+          "quote": "Uniforms | Received proposal from Cintas\u2026 awaiting APDerm decision",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 12,
+    "implemented_count": 6,
+    "negotiated_count": 2,
+    "in_progress_count": 4,
+    "identified_count": 0,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 5658616,
+    "total_savings": 1179965,
+    "average_savings_percentage": 20.9
+  },
+  "extraction_sources": [
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+    "Categories/Small Parcel/2. Contracts/APDerm - UPS Member Agreement (6-21-21).docx",
+    "Wave 2/Categories/Temp Labor/APDerm Temp Labor - Randstad Savings Analysis.xlsx"
+  ],
+  "extraction_notes": [
+    "Baselines for Phase-1 categories taken from Purchasing Update slide (09-14-21).",
+    "Phase-2 baselines and savings sourced from close-out deck slide 3.",
+    "Copier and Uniform categories remain in-progress; low-end savings used for conservatism."
+  ]
+}

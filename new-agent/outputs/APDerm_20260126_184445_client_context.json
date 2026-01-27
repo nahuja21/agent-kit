@@ -1,0 +1,49 @@
+{
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology, PC (APDerm)",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology Services",
+    "business_model": "Multi-site, physician-led dermatology practice network providing medical, surgical, and cosmetic dermatology care across New England",
+    "sponsor_pe_firm": "Waud Capital Partners",
+    "client_history": "Founded in 1992 by Dr. Samuel Goos as a solo practice, APDerm has expanded through acquisitions into a leading dermatology platform in Massachusetts, New Hampshire, and Rhode Island. The company emphasizes a collegial provider culture and supports clinicians with centralized practice management."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "LeadIQ (Dec 2025) and Growjo (accessed Jan 2026)",
+      "notes": "Estimates range widely\u2014LeadIQ $2.7 M, Growjo $44.7 M, Seamless.ai $1-5 M\u2014with no confirmation from company or regulatory filings, so revenue is left as null."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 40,
+      "confidence": "medium",
+      "source": "Oysterlink company profile citing \u201cover 40 locations\u201d; corroborated by multiple individual location pages on APDerm.com",
+      "notes": "Company website lists numerous locations in MA, NH, and RI; no single definitive count published but several sources state 40+."
+    },
+    "employees": {
+      "count": 500,
+      "confidence": "low",
+      "source": "Indeed company profile (range 501-1,000) and LeadIQ estimate (501 employees)",
+      "notes": "Public sources vary from 105 to 501-1,000 employees. Using midpoint of the most frequently cited upper-tier estimates (~500). No official headcount disclosed."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 (page 1)",
+    "Case Study/Treya Case Study_APDerm vF.pdf (pages 2-3)",
+    "providenthp.com article on Waud Capital investment (Oct 2017)",
+    "apderm.com About-Us page",
+    "oysterlink.com company profile",
+    "LeadIQ APDerm profile (Dec 2025)",
+    "Growjo APDerm profile",
+    "Indeed APDerm company page"
+  ],
+  "extraction_notes": [
+    "Official legal name confirmed in signed services agreement (\u201cAdult & Pediatric Dermatology, PC\u201d).",
+    "Private-equity backing by Waud Capital Partners confirmed in Provident Healthcare Partners article and APDerm/Treya case study.",
+    "Revenue figures conflict widely across estimation sites with no authoritative confirmation; therefore reported as null with low confidence.",
+    "Employee headcount varies significantly; most recent high-end estimates cluster around 500+, but confidence remains low.",
+    "Location count of ~40 taken from third-party profile and supported by manual count of website\u2019s locations pages."
+  ]
+}

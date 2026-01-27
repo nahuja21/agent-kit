@@ -1,0 +1,161 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Dermatology group captures $1.18M in annual savings across 12 spend categories",
+      "narrative": "Across two sourcing waves, Treya Partners delivered $1,179,965 of annualized savings for Adult & Pediatric Dermatology (APDerm). Six categories \u2013 including Medical Supplies, Courier Services and Janitorial \u2013 are already under executed contracts representing $861,880 in locked-in savings, while another $318,085 is moving through final signature or rollout. Savings were achieved through a blend of competitive RFPs, GPO leverage and incumbent negotiations that preserved service continuity while lowering cost by up to 27% in key areas."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1179965,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Sum of finalized ($861,880) and in-progress ($318,085) category savings"
+      },
+      "finalized_savings": {
+        "amount": 861880,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Contracts executed / implementation underway in 6 categories"
+      },
+      "in_progress_savings": {
+        "amount": 318085,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Vendor selected or contract in legal review"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 485087,
+        "status": "finalized",
+        "status_notes": "McKesson agreement executed 7/30/2021, 27% reduction via HPG/Premier GPO pricing"
+      },
+      {
+        "category_name": "Courier Services",
+        "annual_savings": 121572,
+        "status": "finalized",
+        "status_notes": "Millers Express & Xpressman contracts fully executed, 28% savings"
+      },
+      {
+        "category_name": "Janitorial Services",
+        "annual_savings": 193565,
+        "status": "finalized",
+        "status_notes": "Enterprise Cleaning awarded; new hourly rates live 6/13/2022"
+      },
+      {
+        "category_name": "Telecom \u2013 Data Circuits",
+        "annual_savings": 37454,
+        "status": "finalized",
+        "status_notes": "OneSource/MetTel\u2013Verizon deal signed, 38% savings"
+      },
+      {
+        "category_name": "Small Parcel Shipping",
+        "annual_savings": 10508,
+        "status": "finalized",
+        "status_notes": "UPS contract executed, 30% savings"
+      },
+      {
+        "category_name": "Office Supplies & Furniture",
+        "annual_savings": 13694,
+        "status": "finalized",
+        "status_notes": "WB Mason program live; 8% savings"
+      },
+      {
+        "category_name": "Billing Services (Athenahealth)",
+        "annual_savings": 259800,
+        "status": "in progress",
+        "status_notes": "Rate reduced from 1.80% to 1.50%; award under review prior to contract signature"
+      },
+      {
+        "category_name": "IT Hardware",
+        "annual_savings": 29410,
+        "status": "awaiting signature",
+        "status_notes": "Whalley MOU awaiting final sign-off; 27% savings"
+      },
+      {
+        "category_name": "Non-IT Temporary Labor",
+        "annual_savings": 10245,
+        "status": "in progress",
+        "status_notes": "Randstad GPO pricing approved; implementation underway"
+      },
+      {
+        "category_name": "Copier / Print Services",
+        "annual_savings": 9369,
+        "status": "in progress",
+        "status_notes": "Usage data captured; Konica Minolta proposal under reporting review"
+      },
+      {
+        "category_name": "Uniforms",
+        "annual_savings": 3021,
+        "status": "award review",
+        "status_notes": "Cintas proposal analyzed; decision pending client sign-off"
+      },
+      {
+        "category_name": "Telecom \u2013 PBX / Contact Center",
+        "annual_savings": 6240,
+        "status": "in progress",
+        "status_notes": "Tidal contract in legal review"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 75,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "First go-live savings from Small Parcel category between contract execution (8/16/2021) and wave-1 kickoff (June 2021)"
+      },
+      "notes": "Quick-win categories delivered savings within the first quarter of engagement."
+    },
+    "operational_improvements": "Created centralized vendor contracts, standardized pricing across 30+ clinic locations and locked in multi-year rate protections with incumbents to minimize disruption.",
+    "proof_points": [
+      {
+        "statement": "McKesson contract cut medical supply costs by 27%, producing $485K annual savings while retaining incumbent service.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "slide": 5,
+            "quote": "Historical Spend $1,817,711 | Savings % 27% | Savings $485,087"
+          }
+        ]
+      },
+      {
+        "statement": "Negotiated Athenahealth fee from 1.80% down to 1.50%, unlocking $259,800 annual savings.",
+        "category": "Billing Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "slide": 14,
+            "quote": "Athena Pricing ... Billing Systems Spend: $1,558,800 \u2192 $1,299,000 | Cost Savings $259,800 (17%)"
+          }
+        ]
+      },
+      {
+        "statement": "Enterprise Cleaning RFP reduced blended hourly janitorial rate to $26.60, saving $193K per year across 33 locations.",
+        "category": "Janitorial Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "slide": 7,
+            "quote": "Scenario 1 \u2013 All locations awarded to Enterprise Cleaning | BAFO Savings $193,565"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx"
+  ],
+  "extraction_notes": [
+    "Included only categories with quantified savings and documented sourcing activity.",
+    "Employee Benefits, Path Lab Systems, IT Managed Services, Laundry/Linen and Waste Management excluded \u2013 no confirmed savings or sourcing completion.",
+    "Finalized vs. in-progress status determined by contract execution indicators in update decks."
+  ]
+}

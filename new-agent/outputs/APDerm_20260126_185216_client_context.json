@@ -1,0 +1,50 @@
+{
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology, PC (APDerm)",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology services",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Physician-led, multi-site dermatology practice network offering medical, surgical and cosmetic dermatology across New England.",
+    "sponsor_pe_firm": "Waud Capital Partners",
+    "client_history": "Founded in 1992 as a solo dermatology practice, APDerm has expanded through acquisitions and de-novo openings into a leading New England dermatology network with dozens of clinics. In 2017 it received a growth investment from Waud Capital Partners to accelerate recruitment, new office openings and practice acquisitions."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 44700000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Growjo company profile (https://growjo.com/company/APDerm)",
+      "notes": "Growjo estimates FY revenue at $44.7 M. LeadIQ lists $2.7 M, which is inconsistent with a 500-employee multi-site provider and is likely incomplete. No official filings or press releases disclose revenue. Using higher Growjo figure as the more plausible estimate but confidence remains low due to wide discrepancy."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 38,
+      "confidence": "medium",
+      "source": "Company website About Us page (https://www.apderm.com/about-us/)",
+      "notes": "Site states the network has \u201838 practices across Massachusetts, New Hampshire, and Rhode Island\u2019. Businesswire releases confirmed growth trajectory but did not list total current count."
+    },
+    "employees": {
+      "count": 500,
+      "confidence": "low",
+      "source": "LeadIQ company page (501 employees) and Indeed company profile (501-1,000 range)",
+      "notes": "Other sources vary: SignalHire 249, Growjo 154, Clodura 51-200. LeadIQ and Indeed show the highest and most recent counts and align with a 38-location footprint, so 500 is used as midpoint but high variance reduces confidence."
+    }
+  },
+  "extraction_sources": [
+    "Procurement Cost Reduction Services Agreement_APDerm_12.11.20 (pages 1-2)",
+    "Case Study/Treya Case Study_APDerm vF.pdf (overview section)",
+    "APDerm website About Us page (https://www.apderm.com/about-us/)",
+    "Growjo company profile (https://growjo.com/company/APDerm)",
+    "LeadIQ company profile (https://leadiq.com/c/apderm)",
+    "Indeed company profile (https://www.indeed.com/cmp/Apderm/about)",
+    "SignalHire company profile (https://www.signalhire.com/companies/apderm)",
+    "Businesswire press releases on office openings (2020-2021)"
+  ],
+  "extraction_notes": [
+    "Official company name confirmed in signed services agreement and multiple case-study documents.",
+    "PE ownership confirmed by Agreement and Businesswire/mergr articles citing Waud Capital Partners investment (2017).",
+    "Revenue figures vary widely across data aggregators; no authoritative financial disclosures found, hence low confidence.",
+    "Employee headcount sources conflict; selected figure reflects upper-range estimates consistent with clinic count.",
+    "No EBITDA information available in any document or credible web source."
+  ]
+}

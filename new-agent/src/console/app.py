@@ -1682,11 +1682,14 @@ When extracting, cite which source provided each data point."""
             if client.get("client_name"):
                 self.console.print(f"  [cyan]Name:[/cyan] {client['client_name']}")
             
+            if client.get("primary_industry_sector"):
+                self.console.print(f"  [cyan]Primary Industry Sector:[/cyan] {client['primary_industry_sector']}")
+            
             industry = client.get("industry_primary", "")
             if client.get("industry_secondary"):
                 industry += f" / {client['industry_secondary']}"
             if industry:
-                self.console.print(f"  [cyan]Industry:[/cyan] {industry}")
+                self.console.print(f"  [cyan]Secondary Industry:[/cyan] {industry}")
             
             if client.get("business_model"):
                 self.console.print(f"  [cyan]Business Model:[/cyan] {client['business_model']}")
@@ -2770,11 +2773,13 @@ When extracting, cite which source provided each data point."""
         client_table.add_column("Value", style="white")
         
         client_table.add_row("Client Name", case_study.client.client_name)
+        if case_study.client.primary_industry_sector:
+            client_table.add_row("Primary Industry Sector", case_study.client.primary_industry_sector)
         if case_study.client.industry_primary:
             industry = case_study.client.industry_primary
             if case_study.client.industry_secondary:
                 industry += f" / {case_study.client.industry_secondary}"
-            client_table.add_row("Industry", industry)
+            client_table.add_row("Secondary Industry", industry)
         if case_study.client.business_model:
             client_table.add_row("Business Model", case_study.client.business_model)
         if case_study.client.sponsor_pe_firm:
@@ -3074,11 +3079,13 @@ When extracting, cite which source provided each data point."""
             f"Client Name: {case_study.client.client_name}",
         ])
         
+        if case_study.client.primary_industry_sector:
+            lines.append(f"Primary Industry Sector: {case_study.client.primary_industry_sector}")
         if case_study.client.industry_primary:
             industry = case_study.client.industry_primary
             if case_study.client.industry_secondary:
                 industry += f" / {case_study.client.industry_secondary}"
-            lines.append(f"Industry: {industry}")
+            lines.append(f"Secondary Industry: {industry}")
         if case_study.client.business_model:
             lines.append(f"Business Model: {case_study.client.business_model}")
         if case_study.client.sponsor_pe_firm:

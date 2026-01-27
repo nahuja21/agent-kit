@@ -1,0 +1,33 @@
+{
+  "engagement_background": {
+    "objective": "Deliver measurable procurement cost savings and leverage APDerm\u2019s enterprise-wide buying power to support Waud Capital\u2019s value-creation goals amid inflationary, pandemic-impacted market conditions.",
+    "scope_summary": "Two-phase strategic sourcing program covering more than 10 indirect spend categories with a combined addressable baseline of approximately $6.3 million. Phase 1 tackled high-priority areas such as medical supplies, courier, small parcel, telecom, IT hardware and office supplies; Phase 2 focused on billing services, janitorial, IT managed services, laundry/linen, non-IT temporary labor, copier/print services and uniforms, while recently re-contracted waste management was excluded.",
+    "constraints_challenges": [
+      "Decentralized purchasing across dozens of acquired clinic locations created a fragmented supplier base.",
+      "Limited spend visibility and inconsistent vendor usage data; significant effort required to cleanse AP data and obtain contracts.",
+      "Inflationary environment and supply-chain disruptions during COVID-19 complicated price negotiations.",
+      "Long-standing incumbent relationships made supplier change sensitive, requiring a \u2018soft-touch\u2019 negotiation approach.",
+      "Compressed timeline driven by private-equity value-creation expectations and need for rapid savings realization.",
+      "Limited internal resources available to manage vendor transitions and provide timely stakeholder input."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "AP invoice data for 10/1/20-9/30/21 extracted from accounting system; ad-hoc contract files gathered on request; no centralized contract repository.",
+    "data_quality_notes": "Multiple duplicate vendor names, unmapped GL codes, and gaps where suppliers did not provide historical usage detail, requiring manual cleanup before analysis.",
+    "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Wave 2/Kickoff/APDerm Phase 2 Project Kickoff (Nov. 9, 2021).pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx"
+  ],
+  "extraction_notes": [
+    "Operating model explicitly described as 'decentralized' in case study.",
+    "Maturity assessed as low based on fragmented supply base, lack of leveraged contracts and need for Treya to run full sourcing process.",
+    "Data availability and quality inferred from AP spend files and agreement data-collection clause; confidence medium because internal systems detail not fully documented."
+  ]
+}

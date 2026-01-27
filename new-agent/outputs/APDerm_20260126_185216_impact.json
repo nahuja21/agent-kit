@@ -1,0 +1,190 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Dermatology network captures $1.18M in annual savings across 12 spend categories",
+      "narrative": "Treya Partners partnered with Adult & Pediatric Dermatology, PC to centralize purchasing and run two waves of competitive sourcing. The engagement has locked in $630,861 of fully-executed annual savings and a further $549,104 that is either being implemented or awaiting final signatures. Wins span 12 indirect categories\u2014ranging from medical supplies and courier services to janitorial and billing\u2014without disrupting operations thanks to incumbent-friendly negotiations and GPO leverage."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1179965,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Sum of Phase-1 finalized categories ($703,965) plus Phase-2 current savings estimates ($475,999)"
+      },
+      "finalized_savings": {
+        "amount": 630861,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (090721).pptx",
+        "notes": "Contracts executed and programs live for Medical Supplies, Courier, Office Supplies, Small Parcel"
+      },
+      "in_progress_savings": {
+        "amount": 549104,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Savings tied to categories in implementation, award review, reporting or awaiting signature"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 485087,
+        "status": "finalized",
+        "status_notes": "McKesson agreement executed 7/30/21; 27% savings locked for 12-month term"
+      },
+      {
+        "category_name": "Courier Services",
+        "annual_savings": 121572,
+        "status": "finalized",
+        "status_notes": "Millers Express & Xpressman contracts executed; routes transitioned"
+      },
+      {
+        "category_name": "Telecom \u2013 Circuits",
+        "annual_savings": 37454,
+        "status": "in progress",
+        "status_notes": "OneSource master agreement signed; carrier LOAs in flight"
+      },
+      {
+        "category_name": "IT Hardware",
+        "annual_savings": 29410,
+        "status": "awaiting signature",
+        "status_notes": "Whalley MOU drafted and with APDerm for signature"
+      },
+      {
+        "category_name": "Office Supplies",
+        "annual_savings": 13694,
+        "status": "finalized",
+        "status_notes": "WB Mason program live via GPO pricing"
+      },
+      {
+        "category_name": "Small Parcel Shipping",
+        "annual_savings": 10508,
+        "status": "finalized",
+        "status_notes": "UPS contract executed; new discounts effective 8/16/21"
+      },
+      {
+        "category_name": "Telecom \u2013 PBX / Contact Center",
+        "annual_savings": 6240,
+        "status": "in progress",
+        "status_notes": "Tidal contract under legal review"
+      },
+      {
+        "category_name": "Billing Services",
+        "annual_savings": 259800,
+        "status": "awaiting signature",
+        "status_notes": "AthenaHealth rate reduced from 1.80% to 1.50%; contract redlining"
+      },
+      {
+        "category_name": "Janitorial Services",
+        "annual_savings": 193565,
+        "status": "implementation",
+        "status_notes": "Enterprise Cleaning new hourly rates effective 6/13/22 across 33 sites"
+      },
+      {
+        "category_name": "Non-IT Temporary Labor",
+        "annual_savings": 10245,
+        "status": "implementation",
+        "status_notes": "Randstad Premier GPO rates accepted; rollout underway"
+      },
+      {
+        "category_name": "Copier / Print Services",
+        "annual_savings": 9369,
+        "status": "in progress",
+        "status_notes": "Konica Minolta usage data captured; proposal benchmarking in reporting phase"
+      },
+      {
+        "category_name": "Uniforms",
+        "annual_savings": 3021,
+        "status": "award review",
+        "status_notes": "Cintas proposal analyzed; awaiting APDerm decision"
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Analysis performed but no positive savings identified; category left for future decision"
+      },
+      {
+        "category_name": "Path Lab Systems",
+        "reason": "RFP run for functionality, not cost savings"
+      }
+    ],
+    "not_started_categories": [
+      {
+        "category_name": "IT Managed Services",
+        "reason": "Initial benchmarking only; sourcing event not launched"
+      },
+      {
+        "category_name": "Laundry / Linen",
+        "reason": "Data collection only; no sourcing activity"
+      },
+      {
+        "category_name": "Waste Management",
+        "reason": "Deemed out-of-scope after review"
+      },
+      {
+        "category_name": "Allergan (Pharmaceutical)",
+        "reason": "Negotiations produced no pricing improvement"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 60,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (090721).pptx",
+        "notes": "First savings flowed through with UPS parcel and WB Mason office supply programs within two months"
+      },
+      "notes": "Wave-1 quick wins were realized within Q3-2021; larger categories followed in 2022."
+    },
+    "operational_improvements": "Centralized vendor contracts across 30+ locations, leveraged two national GPOs for standardized pricing, and instituted SLAs for janitorial and courier partners, reducing administrative burden on clinical staff.",
+    "proof_points": [
+      {
+        "statement": "Reduced medical-supply costs by 27% ($485K annually) while retaining incumbent McKesson through a dual-GPO strategy.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "slide": "5",
+            "quote": "Historical Spend $1,817,711 \u2013 Savings 27% ($485,087)"
+          }
+        ]
+      },
+      {
+        "statement": "Negotiated AthenaHealth billing rate down to 1.50%, unlocking $260K per year with no system change.",
+        "category": "Billing Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "slide": "13",
+            "quote": "Athena Pricing\u2026 Billing Systems Spend: $1,558,800 \u2192 $1,299,000 \u2013 Cost Savings $259,800 (17%)"
+          }
+        ]
+      },
+      {
+        "statement": "Consolidated 33 sites under a single janitorial provider with locked-in rates, saving $194K annually.",
+        "category": "Janitorial Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "slide": "7",
+            "quote": "Scenario 1 \u2013 All locations to Enterprise Cleaning \u2013 $193,565 savings"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (090721).pptx",
+    "Case Study/Treya Case Study_APDerm vF.pdf"
+  ],
+  "extraction_notes": [
+    "Phase-1 savings taken from Sept-2021 leadership update slide 3.",
+    "Phase-2 savings taken from Aug-2022 close-out slide 3; low end used for conservative total.",
+    "Categories without quantified savings or with no sourcing activity were excluded per instructions."
+  ]
+}

@@ -1,0 +1,12 @@
+clusters:
+  - name: Building Products, Trades & Installed Systems
+  - name: Education, Government & Public Sector
+  - name: Electronics, Aerospace & Defense Manufacturing
+  - name: Food, Beverage & Ingredient Manufacturing
+  - name: Healthcare Providers & Physician Practice Platforms
+  - name: Industrial & Light Manufacturing
+  - name: Infrastructure, Environmental & Field Services
+  - name: Life Sciences, MedTech & Regulated Clinical Manufacturing
+  - name: Logistics, Fleet, Distribution & Aftermarket Parts
+  - name: Multi-Unit Restaurant & Foodservice
+  - name: Retail, Consumer Brands & DTC

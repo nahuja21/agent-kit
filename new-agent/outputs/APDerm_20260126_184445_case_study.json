@@ -1,0 +1,33 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objectives, quantified $1.18M savings, and multiple documented proof points are all present\u2014case study is fully supported.",
+    "headline": "PE-backed dermatology network captures $1.18 million in annual savings and 6.2\u00d7 ROI through Treya-led strategic sourcing",
+    "client_problem_statement": "After an acquisition-driven growth spurt to 40+ clinics, Adult & Pediatric Dermatology (APDerm) was buying supplies and services through dozens of disconnected vendor agreements, with little visibility into total spend. Pandemic inflation and mounting private-equity value-creation targets put pressure on margins while the decentralized model hindered fast action. APDerm needed a partner that could quickly uncover savings, unify purchasing power, and lock in sustainable cost structures.",
+    "approach_summary": [
+      "Cleansed AP invoice data and performed a detailed spend analysis covering $6.3 million across 12 indirect categories for 30+ clinic locations.",
+      "Launched parallel sourcing waves and competitive RFPs for high-impact areas such as Medical Supplies, Janitorial, Courier, and Telecom.",
+      "Leveraged Premier and HealthTrust GPO relationships to reposition APDerm on Tier-2 pricing\u2014driving a 27% reduction and $485K savings in Medical Supplies alone.",
+      "Negotiated incumbent contracts\u2014including cutting Athenahealth billing fees from 1.80% to 1.50%\u2014securing $260K in annual savings without operational disruption.",
+      "Consolidated vendors and centralized contracts, instituting multi-year rate locks and a new repository that gives leadership real-time spend visibility."
+    ],
+    "top_levers": [
+      "GPO leverage & tier optimization",
+      "Incumbent contract renegotiation",
+      "Competitive RFP",
+      "Vendor consolidation"
+    ],
+    "value_delivered_blurb": "Treya unlocked $1,179,965 in recurring annual savings\u2014more than triple the contractual savings guarantee and equal to a 6.2\u00d7 return on the project\u2019s fixed $190K fee. Six categories are already implemented, with another three in final rollout, cementing an average 20.8% cost reduction. Beyond the dollars, APDerm now operates with standardized pricing, centralized contracts, and the analytics foundation to sustain procurement discipline.",
+    "where_we_were_unique": [
+      "Delivered first contracted savings within 75 days of kickoff through quick-win GPO enrollments.",
+      "Deep healthcare sourcing expertise and exclusive GPO access unlocked pricing tiers unavailable to most mid-market providers.",
+      "Hands-on, collaborative process kept clinicians engaged, allowing major cost cuts while retaining critical incumbents and avoiding service disruption.",
+      "Exceeded the PE sponsor\u2019s minimum savings guarantee by over 3\u00d7, accelerating EBITDA improvement ahead of plan."
+    ]
+  },
+  "generation_notes": [
+    "ROI calculated as $1.18M savings \u00f7 $190K fee \u2248 6.21.",
+    "Savings guarantee comparison uses contractual $380K minimum.",
+    "Approach bullets ordered to mirror project flow: analysis \u2192 sourcing waves \u2192 lever execution \u2192 contract centralization."
+  ]
+}

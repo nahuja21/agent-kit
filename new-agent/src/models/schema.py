@@ -165,6 +165,10 @@ class ClientContext(BaseModel):
     # Industry
     industry_primary: Optional[str] = Field(None, description="Primary industry")
     industry_secondary: Optional[str] = Field(None, description="Secondary industry if applicable")
+    primary_industry_sector: Optional[str] = Field(
+        None, 
+        description="Industry cluster classification from predefined list of 11 sectors"
+    )
     
     # Business model
     business_model: Optional[str] = Field(

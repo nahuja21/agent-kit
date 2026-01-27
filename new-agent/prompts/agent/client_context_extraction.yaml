@@ -51,6 +51,18 @@ prompt:
     - `client_name`: Official company name (verify from documents, not just folder name)
     - `industry_primary`: Primary industry (e.g., "Healthcare", "Manufacturing", "Retail")
     - `industry_secondary`: Secondary industry if applicable (optional)
+    - `primary_industry_sector`: Classify the client into EXACTLY ONE of these 11 industry clusters (pick the closest match):
+      1. Building Products, Trades & Installed Systems
+      2. Education, Government & Public Sector
+      3. Electronics, Aerospace & Defense Manufacturing
+      4. Food, Beverage & Ingredient Manufacturing
+      5. Healthcare Providers & Physician Practice Platforms
+      6. Industrial & Light Manufacturing
+      7. Infrastructure, Environmental & Field Services
+      8. Life Sciences, MedTech & Regulated Clinical Manufacturing
+      9. Logistics, Fleet, Distribution & Aftermarket Parts
+      10. Multi-Unit Restaurant & Foodservice
+      11. Retail, Consumer Brands & DTC
     - `business_model`: Business model description (e.g., "multi-site healthcare provider", "specialty manufacturer", "regional distributor")
     
     ### 2. OWNERSHIP & BACKGROUND
@@ -100,6 +112,7 @@ prompt:
         "client_name": "Acme Healthcare",
         "industry_primary": "Healthcare",
         "industry_secondary": "Dermatology",
+        "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
         "business_model": "Multi-site specialty dermatology practice",
         "sponsor_pe_firm": "Summit Partners",
         "client_history": "Founded in 2010, Acme Healthcare has grown to become one of the largest dermatology platforms in the Northeast."
@@ -190,6 +203,7 @@ examples:
           "client_name": "AP Derm",
           "industry_primary": "Healthcare",
           "industry_secondary": "Dermatology",
+          "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
           "business_model": "Multi-site dermatology practice management platform",
           "sponsor_pe_firm": "Shore Capital Partners",
           "client_history": "AP Derm is a leading dermatology practice management company serving the Northeast and Mid-Atlantic regions."
@@ -238,6 +252,7 @@ examples:
           "client_name": "Midwest Manufacturing Co.",
           "industry_primary": "Manufacturing",
           "industry_secondary": "Precision Parts",
+          "primary_industry_sector": "Industrial & Light Manufacturing",
           "business_model": "Regional precision parts manufacturer serving automotive and aerospace",
           "sponsor_pe_firm": null,
           "client_history": "Family-owned business founded in 1985, serving the automotive and aerospace industries for over 35 years."

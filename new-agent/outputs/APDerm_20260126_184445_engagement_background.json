@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "APDerm engaged Treya Partners to unlock procurement cost savings and leverage its enterprise-wide purchasing power after rapid, acquisition-driven growth left the organization with limited spend visibility, fragmented supplier relationships, and escalating costs during the pandemic.",
+    "scope_summary": "Over two phases Treya addressed approximately $6.3 million in annual indirect spend across 10+ categories. Phase 2 alone targeted $3.5 million in spend covering Billing Services, Janitorial, IT Managed Services, Laundry/Linen, Non-IT Temp Labor, Copiers/Print, and Uniforms, while Waste Management was later removed due to a recent contract and low savings potential.",
+    "constraints_challenges": [
+      "Purchasing was decentralized across dozens of clinic locations acquired over time, making stakeholder alignment and data collection difficult.",
+      "Fragmented supplier base with multiple overlapping contracts limited volume leverage and complicated baseline development.",
+      "Limited historical spend visibility and inconsistent vendor naming in AP data required extensive cleansing before analysis.",
+      "Inflationary market and pandemic-related supply chain disruptions put upward pressure on pricing and vendor lead times.",
+      "Aggressive private-equity value-creation timeline necessitated simultaneous sourcing waves and rapid implementation."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "AP invoice data from the accounting system was available and exported to Excel; contract files and detailed usage data had to be gathered manually from local sites and suppliers.",
+    "data_quality_notes": "Spend data contained duplicate or inconsistent vendor names and lacked a centralized contract repository, resulting in limited initial spend visibility.",
+    "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+    "confidence": "high"
+  },
+  "extraction_sources": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx",
+    "Wave 2/Kickoff/APDerm Phase 2 Project Kickoff (Nov. 9, 2021).pptx",
+    "Wave 2/Updates/APDerm Phase 2 Project Update (Jun 29, 2022).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model explicitly described as decentralized in the case study.",
+    "Procurement maturity classified as low due to statements about lack of spend visibility and unleveraged purchasing power.",
+    "Scope details consolidated from spend analysis workbook and kickoff materials; Waste Management exclusion captured from June 29, 2022 update."
+  ]
+}

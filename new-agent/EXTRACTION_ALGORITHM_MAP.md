@@ -151,23 +151,7 @@ Extract:
 
 ---
 
-## 4️⃣ IMPACT
 
-| Field | Schema Path | Source Document | How It's Found | Current Logic | Issues/Notes |
-|-------|-------------|-----------------|----------------|---------------|--------------|
-| `headline` | `impact.summary.headline` | Case Study | Marketing headline | LLM creates or extracts | |
-| `narrative` | `impact.summary.narrative` | Case Study | 2-4 sentence summary | LLM writes | Required field |
-| `annual_savings` | `impact.financials.annual_savings` | **Case Study, Final Project Update** | Total savings achieved | ⚠️ This is ACTUAL savings (vs. estimates in Agreement) | Key metric |
-| `one_time_savings` | `impact.financials.one_time_savings` | Case Study, Final Update | One-time savings | LLM extraction | |
-| `value_realized_in_days` | `impact.time_to_value.value_realized_in_days` | Case Study, Updates | Days to value | Often not found | |
-| `time_to_value_notes` | `impact.time_to_value.notes` | Case Study, Updates | Additional notes | LLM extraction | |
-| `operational_improvements` | `impact.operational_improvements` | Case Study | Process improvements | LLM extraction | |
-| `proof_points` | `impact.proof_points[]` | Case Study, Updates | Specific wins | LLM extracts with evidence | Array of ProofPoint |
-| `proof_points[].statement` | `impact.proof_points[].statement` | Case Study, Updates | The proof point text | LLM extraction | Required |
-| `proof_points[].category` | `impact.proof_points[].category` | Case Study, Updates | Related category | LLM links | Optional |
-| `proof_points[].evidence` | `impact.proof_points[].evidence[]` | Case Study, Updates | Source files, quotes | LLM extraction | Optional |
-
----
 
 ## 5️⃣ CATEGORIES (Array) - **THE KEY SECTION**
 
@@ -210,7 +194,23 @@ Extract:
 
 | Priority | Source | What It Contains | Quality |
 |----------|--------|------------------|---------|
-| 1 | **Final Project Update / Close-out PPTX** | ALL categories in one table with final numbers | ⭐⭐⭐⭐⭐ |
+| 1 | **F## 4️⃣ IMPACT
+
+| Field | Schema Path | Source Document | How It's Found | Current Logic | Issues/Notes |
+|-------|-------------|-----------------|----------------|---------------|--------------|
+| `headline` | `impact.summary.headline` | Case Study | Marketing headline | LLM creates or extracts | |
+| `narrative` | `impact.summary.narrative` | Case Study | 2-4 sentence summary | LLM writes | Required field |
+| `annual_savings` | `impact.financials.annual_savings` | **Case Study, Final Project Update** | Total savings achieved | ⚠️ This is ACTUAL savings (vs. estimates in Agreement) | Key metric |
+| `one_time_savings` | `impact.financials.one_time_savings` | Case Study, Final Update | One-time savings | LLM extraction | |
+| `value_realized_in_days` | `impact.time_to_value.value_realized_in_days` | Case Study, Updates | Days to value | Often not found | |
+| `time_to_value_notes` | `impact.time_to_value.notes` | Case Study, Updates | Additional notes | LLM extraction | |
+| `operational_improvements` | `impact.operational_improvements` | Case Study | Process improvements | LLM extraction | |
+| `proof_points` | `impact.proof_points[]` | Case Study, Updates | Specific wins | LLM extracts with evidence | Array of ProofPoint |
+| `proof_points[].statement` | `impact.proof_points[].statement` | Case Study, Updates | The proof point text | LLM extraction | Required |
+| `proof_points[].category` | `impact.proof_points[].category` | Case Study, Updates | Related category | LLM links | Optional |
+| `proof_points[].evidence` | `impact.proof_points[].evidence[]` | Case Study, Updates | Source files, quotes | LLM extraction | Optional |
+
+---inal Project Update / Close-out PPTX** | ALL categories in one table with final numbers | ⭐⭐⭐⭐⭐ |
 | 2 | **Agreement Exhibit A** | Initial category list, baseline spend, estimates | ⭐⭐⭐⭐ |
 | 3 | **Case Study** | Aggregate totals, narrative | ⭐⭐⭐ |
 | 4 | **Category-specific Excel files** | Detailed analysis for ONE category | ⭐⭐⭐ |
