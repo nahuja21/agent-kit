@@ -65,6 +65,26 @@ MAX_TOKENS = 16000  # Max output tokens (increased for o3)
 TEMPERATURE = 0.7  # Balanced creativity/consistency (not used by o3)
 
 
+# ============================================================================
+# Azure SQL Database Configuration
+# ============================================================================
+# Enable/disable Azure database integration
+AZURE_SQL_ENABLED = os.environ.get("AZURE_SQL_ENABLED", "false").lower() == "true"
+
+# Azure SQL connection parameters
+# Option 1: Full connection string (preferred)
+AZURE_SQL_CONNECTION_STRING = os.environ.get("AZURE_SQL_CONNECTION_STRING", "")
+
+# Option 2: Individual parameters (used if connection string is empty)
+AZURE_SQL_SERVER = os.environ.get("AZURE_SQL_SERVER", "")  # e.g., "myserver.database.windows.net"
+AZURE_SQL_DATABASE = os.environ.get("AZURE_SQL_DATABASE", "")  # e.g., "treya_case_studies"
+AZURE_SQL_USERNAME = os.environ.get("AZURE_SQL_USERNAME", "")
+AZURE_SQL_PASSWORD = os.environ.get("AZURE_SQL_PASSWORD", "")
+
+# Table name for case study extractions
+AZURE_SQL_TABLE = os.environ.get("AZURE_SQL_TABLE", "case_study_extractions")
+
+
 def validate_config() -> list[str]:
     """Validate configuration and return list of errors."""
     errors = []
@@ -75,6 +95,52 @@ def validate_config() -> list[str]:
         errors.append("OPENAI_API_KEY should start with 'sk-'")
     
     return errors
+
+
+def validate_azure_config() -> list[str]:
+    """Validate Azure SQL configuration and return list of errors."""
+    errors = []
+    
+    if not AZURE_SQL_ENABLED:
+        return errors  # Azure is disabled, no validation needed
+    
+    # Check for connection string or individual params
+    if AZURE_SQL_CONNECTION_STRING:
+        # Connection string provided, good to go
+        return errors
+    
+    # Check individual parameters
+    if not AZURE_SQL_SERVER:
+        errors.append("AZURE_SQL_SERVER environment variable is not set")
+    if not AZURE_SQL_DATABASE:
+        errors.append("AZURE_SQL_DATABASE environment variable is not set")
+    if not AZURE_SQL_USERNAME:
+        errors.append("AZURE_SQL_USERNAME environment variable is not set")
+    if not AZURE_SQL_PASSWORD:
+        errors.append("AZURE_SQL_PASSWORD environment variable is not set")
+    
+    return errors
+
+
+def get_azure_connection_string() -> str:
+    """Get the Azure SQL connection string (either direct or built from params)."""
+    if AZURE_SQL_CONNECTION_STRING:
+        return AZURE_SQL_CONNECTION_STRING
+    
+    # Build connection string from individual parameters
+    # Using ODBC Driver 18 for SQL Server (latest)
+    # tcp: prefix and port 1433 help with Azure SQL connectivity
+    return (
+        f"DRIVER={{ODBC Driver 18 for SQL Server}};"
+        f"SERVER=tcp:{AZURE_SQL_SERVER},1433;"
+        f"DATABASE={AZURE_SQL_DATABASE};"
+        f"UID={AZURE_SQL_USERNAME};"
+        f"PWD={AZURE_SQL_PASSWORD};"
+        f"Encrypt=yes;"
+        f"TrustServerCertificate=no;"
+        f"Connection Timeout=60;"
+        f"LoginTimeout=60;"
+    )
 
 
 def ensure_directories() -> None:

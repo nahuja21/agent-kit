@@ -1,0 +1,53 @@
+{
+  "client": {
+    "client_name": "Advantia Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Women\u2019s health services (OB/GYN, maternal-fetal medicine, telehealth)",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-state women\u2019s health platform operating OB/GYN clinics, urgent care and telehealth services under several practice brands",
+    "sponsor_pe_firm": "BlueMountain Capital Management (Assured Guaranty) \u2013 $45 M growth investment announced Jan 2020",
+    "client_history": "Founded in 2014 in Arlington, Virginia, Advantia Health has grown through acquisitions (e.g., 2019 purchase of Heartland Women\u2019s Healthcare) and now operates clinics across the Mid-Atlantic and Midwest, focusing on integrated, technology-enabled care for women."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 22400000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Growjo company profile (https://growjo.com/company/Advantia_Health, accessed 2026-01-27)",
+      "notes": "Publicly available estimators disagree: Zippia $13.0 M, Buzzfile $29.1 M, Growjo $22.4 M, CanvasBusinessModel $89 M. No official figure disclosed. Selected midpoint ($22.4 M) from Growjo; treat as directional only."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 27,
+      "confidence": "medium",
+      "source": "Company locations list on advantiahealth.com/locations (compiled 2026-01-27)",
+      "notes": "Manually counted distinct clinic addresses in MD (8), VA (7), IL (8), MO (1), DC (3) that are listed individually on the official locations page referenced in web search results."
+    },
+    "employees": {
+      "count": 501,
+      "confidence": "medium",
+      "source": "LeadIQ company profile (https://leadiq.com/c/advantia-health, December 2025)",
+      "notes": "LeadIQ reports 501 employees; SignalHire and Indeed list 500-1,000 range. Buzzfile shows 259. Majority of recent sources cluster around ~500 so 501 chosen."
+    }
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis v4 (11-18-2021) JV.xlsx",
+    "Assessment/AdvantiaHealth - Proposal Nov 29 2021.pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf",
+    "advantiahealth.com/locations",
+    "Growjo company profile",
+    "Zippia company profile",
+    "Buzzfile company profile",
+    "LeadIQ company profile",
+    "SignalHire company profile",
+    "advantiahealth.com news release 2020-01 (BlueMountain Capital $45M investment)"
+  ],
+  "extraction_notes": [
+    "Official documents consistently use the name 'Advantia Health'.",
+    "Primary industry determined from company description in web sources and project documents (women\u2019s health clinics).",
+    "BlueMountain Capital investment noted on company press release; Deerfield also invested earlier (2016) but BlueMountain\u2019s 2020 $45 M round appears to be current lead sponsor.",
+    "Revenue figures are third-party estimates with wide variance; no audited figures available, so confidence is low.",
+    "Locations were counted directly from addresses provided on the official website referenced in search results; count may change as network expands.",
+    "No EBITDA data found in any document or reputable web source."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "engagement_background": {
+    "objective": "Create measurable cost savings by strategically sourcing approximately $19 M of spend across key clinical, technology and indirect categories, while establishing stronger procurement processes and controls to support Advantia Health\u2019s broader value-creation goals.",
+    "scope_summary": "The project covers 10 spend categories identified via AP/P-card analysis (Employee Benefits, Medical Devices-IUDs, Diagnostic Devices & Services, Billing Systems/RCM, Medical Supplies, Medical Equipment, Telecom \u2013 Data & Voice, Electronic Payment Processing, Data Center/Cloud Hosting, Office Supplies), totaling about $18.98 M in spend. Employee Benefits is an optional later wave, and categories may be dropped if found non-addressable; the engagement also includes a high-level review of procurement processes/controls.",
+    "constraints_challenges": [
+      "Fragmented, clinic-level purchasing spread across Advantia (Mid-Atlantic) and Heartland business units, creating supplier and data fragmentation.",
+      "Lack of dedicated strategic procurement resources; client staff have limited availability for sourcing activities.",
+      "Line-item usage and contract data are not centrally stored, requiring repeated requests to suppliers\u2014some of whom do not respond for 6+ weeks.",
+      "Savings in several categories depend on behavior changes or standardization (e.g., enforcing 5-unit IUD order minimums, adopting a single sonography equipment manufacturer).",
+      "Tight 4\u20136-month timeline (with a later Benefits wave) and a minimum savings guarantee of ~$450-500 K place schedule and results pressure on the project.",
+      "Strong incumbent supplier relationships with clinical staff could generate resistance to switching vendors or terms."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Treasury/AP and P-card transaction data from two separate systems were available for October 2020\u2013September 2021; most contract files and detailed usage data had to be requested individually from suppliers.",
+    "data_quality_notes": "Supplier naming inconsistencies, limited item descriptions, missing line-level volumes, and absence of a central contract repository complicated spend categorization and baseline creation.",
+    "source_file": "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "Assessment/AdvantiaHealth - Spend Analysis v4 (11-18-2021) JV.xlsx",
+    "Project Updates/Kickoff/Advantia Strategic Sourcing Project Kickoff (100622).pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf",
+    "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from slides highlighting lack of strategic procurement focus/resources and multi-site purchasing structure.",
+    "Data challenges drawn from Agreement \u00a73.2.1\u20133.2.2 and kickoff slides describing supplier data collection needs.",
+    "Scope summary compiled from multiple roadmap tables listing category spend and addressability.",
+    "Objective wording reflects Executive Summary slides and the signed agreement referencing cost-reduction services."
+  ]
+}

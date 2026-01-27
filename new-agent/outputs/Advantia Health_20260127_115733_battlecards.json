@@ -1,0 +1,296 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "athenahealth, Inc.",
+      "category": "Billing Systems / RCM",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 3025000,
+      "final_spend": 2765800,
+      "savings_dollars": 259200,
+      "savings_percent": 9,
+      "levers_applied": [
+        "Benchmark market comparison",
+        "Incumbent renegotiation",
+        "Retroactive pricing",
+        "Threat of future RFP"
+      ],
+      "alternatives_considered": [
+        "athenaCollector (lower-cost module)",
+        "Issuing full RCM RFP"
+      ],
+      "why_selected": "Kept full athenaOne suite at a market-competitive 3.15 % fee while avoiding a reported $9 M early-termination penalty and disruptive system migration.",
+      "why_not_selected": null,
+      "contract_terms": "3-year rate addendum effective 9/1/22, 3.15 % of collections with retroactive credit to 9/1; price-lock through Jan-2025; quarterly volume tiers preserved.",
+      "negotiation_leverage": "Independent benchmarking showed Advantia was 40\u201360 bps above peers; client signalled willingness to move to Collector or bid the business six months before 2025 expiry.",
+      "supplier_strengths": [
+        "Fully integrated EHR/PM/RCM platform",
+        "High switching costs protect data continuity"
+      ],
+      "supplier_weaknesses": [
+        "Historically high fees",
+        "Material termination penalties"
+      ],
+      "switching_costs": "\u2248$9 M contractual penalty plus workflow retraining and data migration risk.",
+      "key_contacts": [
+        "Bryan O\u2019Neil \u2013 Account Executive"
+      ],
+      "notes": "Savings booked retroactively; Advantia to secure final contract amendment.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant renegotiation >5 % savings",
+        "Threat of supplier switch used as leverage"
+      ]
+    },
+    {
+      "supplier_name": "McKesson Medical-Surgical",
+      "category": "Medical Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1133051,
+      "final_spend": 976441,
+      "savings_dollars": 156610,
+      "savings_percent": 14,
+      "levers_applied": [
+        "RFP competitive bid",
+        "Vendor consolidation",
+        "Volume commitment",
+        "Payment-term extension"
+      ],
+      "alternatives_considered": [
+        "Medline Industries",
+        "Cardinal Health",
+        "Henry Schein",
+        "Thermo Fisher"
+      ],
+      "why_selected": "Provided best BAFO pricing across formularies, agreed to extend 60-day terms and add enterprise service resources; enabled single-supplier model across Mid-Atlantic & Heartland.",
+      "why_not_selected": null,
+      "contract_terms": "Draft prime-vendor agreement: 3-year term with two 1-year renewals, formulary compliance incentives, quarterly business reviews.",
+      "negotiation_leverage": "Ability to shift 100 % of Heartland volume away from Medline; competitive pressure from 4 national distributors.",
+      "supplier_strengths": [
+        "Broad catalog and next-day fulfillment",
+        "Strong EDI integration"
+      ],
+      "supplier_weaknesses": [
+        "Historically weaker service levels in Heartland region (to be addressed in SLA)"
+      ],
+      "switching_costs": "Staff retraining on ordering portal and SKU cross-references; change management mitigated via phased roll-out plan.",
+      "key_contacts": [
+        "Carol Duncan \u2013 Territory Manager",
+        "Kirk Volm \u2013 Field VP Corporate Accounts"
+      ],
+      "notes": "McKesson will supply all 24 practices; implementation start 10/31/22.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Formal RFP with multiple bidders",
+        "Supplier consolidation",
+        "Savings >10 %"
+      ]
+    },
+    {
+      "supplier_name": "Medline Industries, LP",
+      "category": "Medical Supplies",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": 0,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP competitive bid",
+        "Benchmarking"
+      ],
+      "alternatives_considered": null,
+      "why_selected": null,
+      "why_not_selected": "Pricing was not competitive in BAFO round and could not match enterprise service requirements; lost Heartland region when volume was consolidated to McKesson.",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": [
+        "Extensive private-label offering",
+        "Value-added implementation resources"
+      ],
+      "supplier_weaknesses": [
+        "Higher cost on core formulary SKUs",
+        "Separate regional agreement created administrative burden"
+      ],
+      "switching_costs": "Minimal\u2014overlapping product SKUs available through McKesson; main effort is SKU cross-mapping.",
+      "key_contacts": null,
+      "notes": "Final Medline orders phased out by 12/1/22.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier displaced via multi-bid RFP",
+        "Category consolidation decision"
+      ]
+    },
+    {
+      "supplier_name": "IT Imaging, Inc.",
+      "category": "Sonography Services",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 819732,
+      "final_spend": 0,
+      "savings_dollars": 152115,
+      "savings_percent": 19,
+      "levers_applied": [
+        "RFP for staffing",
+        "Insourcing model evaluation",
+        "Benchmarking market pay rates"
+      ],
+      "alternatives_considered": [
+        "In-house recruiting model",
+        "Staffmark Recruiter-on-Demand"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Per-scan rate out of market and unwillingness to meet scheduling KPIs; failed to engage during negotiations.",
+      "contract_terms": null,
+      "negotiation_leverage": "Demonstrated 18-24 % cost reduction through perm-hire model; supplier unresponsive to rate-down requests.",
+      "supplier_strengths": [
+        "Turn-key staffing model"
+      ],
+      "supplier_weaknesses": [
+        "High $50/scan cost, limited responsiveness"
+      ],
+      "switching_costs": "Need to recruit sonographers and manage scheduling internally\u2014addressed via phased hiring plan.",
+      "key_contacts": null,
+      "notes": "Services ramped down Q3-22; final invoices paid 8/31/22.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Labor model change",
+        "Supplier displaced",
+        "Savings >15 %"
+      ]
+    },
+    {
+      "supplier_name": "Staffmark (Recruiter-on-Demand)",
+      "category": "Sonography Services",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP for staffing",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "IT Imaging",
+        "In-house recruiting"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Advantia chose fully in-house recruiting for 80 % of demand; Staffmark may be used ad-hoc for overflow (no committed contract).",
+      "contract_terms": null,
+      "negotiation_leverage": "Offered 22\u201324 % savings relative to incumbent, but still higher long-term cost than direct hire model.",
+      "supplier_strengths": [
+        "Flexible recruiter-on-demand model",
+        "National candidate pool"
+      ],
+      "supplier_weaknesses": [
+        "Higher mark-ups than internal FTEs"
+      ],
+      "switching_costs": "Low\u2014pay-as-you-go service.",
+      "key_contacts": null,
+      "notes": "Kept as contingency vendor; no savings booked.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive sourcing exercise",
+        "Supplier evaluated but not selected"
+      ]
+    },
+    {
+      "supplier_name": "Laboratory Corporation of America (LabCorp)",
+      "category": "Lab Services",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 423792,
+      "final_spend": 383574,
+      "savings_dollars": 40218,
+      "savings_percent": 9,
+      "levers_applied": [
+        "RFQ competitive bid",
+        "Incumbent renegotiation"
+      ],
+      "alternatives_considered": [
+        "Quest Diagnostics"
+      ],
+      "why_selected": "Offered 10 % BAFO reduction while maintaining existing phlebotomy staff, LIS interface and specimen logistics.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing locked for 24 months; quarterly utilization reviews.",
+      "negotiation_leverage": "Quest BAFO showed 19 % savings, creating credible switch threat.",
+      "supplier_strengths": [
+        "Embedded staff at practices",
+        "Existing interfaces with Athena"
+      ],
+      "supplier_weaknesses": [
+        "Higher pricing than Quest on several high-volume tests"
+      ],
+      "switching_costs": "Re-credentialing and patient workflow disruption; new courier routes.",
+      "key_contacts": null,
+      "notes": "Final contract execution targeted 10/15/22; savings begin Nov-22.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFQ with multiple suppliers",
+        "Savings >5 %"
+      ]
+    },
+    {
+      "supplier_name": "Quest Diagnostics",
+      "category": "Lab Services",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 423792,
+      "final_spend": null,
+      "savings_dollars": 66873,
+      "savings_percent": 16,
+      "levers_applied": [
+        "RFQ competitive bid"
+      ],
+      "alternatives_considered": [
+        "LabCorp"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Operational change deemed too disruptive despite higher savings; incumbent LabCorp retained.",
+      "contract_terms": null,
+      "negotiation_leverage": "Quest\u2019s aggressive BAFO used to secure lower pricing from LabCorp.",
+      "supplier_strengths": [
+        "Lowest pricing on 80 % of top tests",
+        "National logistics network"
+      ],
+      "supplier_weaknesses": [
+        "Would require replacing existing in-practice staff and interfaces"
+      ],
+      "switching_costs": "Lab IT integration, courier transition, re-training clinical staff.",
+      "key_contacts": null,
+      "notes": "Treya recommends reevaluating Quest after new LabCorp contract term.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFQ",
+        "Supplier used as leverage in negotiation"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 12,
+    "battlecards_generated": 7,
+    "categories_with_battlecards": [
+      "Billing Systems / RCM",
+      "Medical Supplies",
+      "Sonography Services",
+      "Lab Services"
+    ],
+    "skipped_reason": "Suppliers in IUD Order Management, Bayer CIC program, Office Supplies, Telecom, and IT MSP were skipped: either simple policy changes or sourcing still in progress."
+  },
+  "extraction_notes": [
+    "Savings, baseline spend and award status pulled from Project Close-out Summary and Bi-Weekly Update decks dated 11-22-22 and 10-21-22.",
+    "McKesson contract specifics taken from draft agreement notes (slide 3 \u2013 Medical Supplies).",
+    "Athenahealth negotiation details derived from internal prep deck (8-4-22) and savings tracker.",
+    "Lab RFQ BAFO numbers sourced from slide 8 of 10-21-22 update."
+  ]
+}

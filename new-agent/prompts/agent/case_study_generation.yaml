@@ -100,6 +100,27 @@ prompt:
     - Why they needed help (pain points)
     - What was at stake (PE value creation, margin improvement, etc.)
     
+    ### 3b. CLIENT PROBLEM - ANONYMIZED
+    
+    **`client_problem_anonymized`**: Same content as client_problem_statement BUT with these anonymization rules:
+    
+    1. **Company Name**: Replace with an industry descriptor
+       - Instead of "Advantia Health" → "a women's health platform"
+       - Instead of "APDerm" → "a multi-site dermatology network"
+       - Instead of "XYZ Corp" → "a leading [industry] provider"
+    
+    2. **PE Firm Name**: Replace with generic/descriptive language
+       - Instead of "BlueMountain Capital" → "the private equity sponsor"
+       - Instead of "Waud Capital Partners" → "their PE backer"
+       - Instead of "[Specific PE Name]" → "the private equity ownership group"
+    
+    3. **Soften PE Expectations Language**: Reframe aggressive financial language
+       - Instead of "expecting rapid EBITDA expansion" → "with a focus on operational efficiency and margin improvement"
+       - Instead of "pressing for cost reduction" → "seeking to optimize costs and improve financial performance"
+       - Instead of "demanding quick cost takeout" → "prioritizing procurement optimization"
+    
+    Keep everything else the same - the business context, pain points, and situation description should remain intact.
+    
     ### 4. APPROACH SUMMARY
     
     **`approach_summary`**: Array of 3-5 bullet points describing Treya's approach
@@ -108,11 +129,17 @@ prompt:
     - Start with an action verb
     - Be specific about what was done
     - Mention categories or levers where relevant
+    - **IMPORTANT: Use generic/industry descriptors for the client name - NOT the actual company name**
+      - Instead of "Advantia Health's clinics" → "the client's clinics"
+      - Instead of "APDerm locations" → "the practice's locations"
+      - Instead of "shifted XYZ Corp to McKesson" → "shifted the client to McKesson"
+      - Vendor names (McKesson, Athenahealth, Premier, etc.) can remain as-is
     
     Examples:
     - "Conducted comprehensive spend analysis across 12 indirect categories totaling $6.3M"
     - "Leveraged Premier GPO relationship to unlock Tier 2 pricing on medical supplies"
-    - "Consolidated telecom vendors from 5 to 2 through competitive RFP process"
+    - "Consolidated the client's telecom vendors from 5 to 2 through competitive RFP process"
+    - "Renegotiated the client's Athenahealth RCM contract, reducing fees from 4.56% to 3.40%"
     - "Established centralized contract repository and quarterly business reviews"
     
     ### 5. TOP LEVERS
@@ -164,11 +191,12 @@ prompt:
         "readiness_notes": "All required elements present. Strong quantified results.",
         "headline": "Multi-site healthcare provider achieves $1.2M annual savings through strategic sourcing transformation",
         "client_problem_statement": "As a rapidly growing healthcare platform with 45 locations, the client lacked a centralized procurement function. Each site managed purchasing independently, resulting in fragmented vendor relationships, inconsistent pricing, and limited visibility into total spend. With private equity backing, the organization needed to quickly optimize indirect costs to support EBITDA improvement targets.",
+        "client_problem_anonymized": "A rapidly growing multi-site healthcare platform with 45 locations lacked a centralized procurement function. Each site managed purchasing independently, resulting in fragmented vendor relationships, inconsistent pricing, and limited visibility into total spend. With a focus on operational efficiency and margin improvement, the organization needed to quickly optimize indirect costs.",
         "approach_summary": [
           "Conducted comprehensive spend analysis across 12 indirect categories totaling $6.3M in addressable spend",
           "Leveraged Premier GPO relationship to unlock Tier 2 pricing on medical supplies, delivering 22% savings",
-          "Consolidated telecom vendors from 5 to 2 through competitive RFP, achieving 35% cost reduction",
-          "Renegotiated EMR contract with Athena, reducing fees from 4.56% to 3.40%",
+          "Consolidated the client's telecom vendors from 5 to 2 through competitive RFP, achieving 35% cost reduction",
+          "Renegotiated the client's Athenahealth contract, reducing fees from 4.56% to 3.40%",
           "Established centralized procurement processes and quarterly business reviews with key suppliers"
         ],
         "top_levers": [
@@ -240,6 +268,7 @@ examples:
           "case_study_ready": true,
           "headline": "Healthcare platform delivers $1.2M annual savings across 8 categories",
           "client_problem_statement": "Growing healthcare platform lacked centralized procurement...",
+          "client_problem_anonymized": "A multi-site healthcare platform lacked centralized procurement. With a focus on operational efficiency, the organization needed to optimize indirect costs...",
           "approach_summary": ["Conducted spend analysis...", "Leveraged GPO..."],
           "top_levers": ["GPO optimization", "Vendor consolidation"],
           "value_delivered_blurb": "Delivered $1.2M in annual savings, 6x ROI...",

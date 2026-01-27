@@ -1,0 +1,33 @@
+{
+  "engagement_background": {
+    "objective": "Advantia Health engaged Treya Partners to identify and capture hard-dollar cost savings across key direct-and-indirect spend areas, improve procurement processes/controls, and support the private-equity value-creation plan by boosting EBITDA and enterprise value.",
+    "scope_summary": "Treya will run savings-creation initiatives in 10 spend categories representing roughly $19 M in annual spend (\u2248$45 M total company spend, $18.98 M addressable). In-scope categories include Employee Benefits, IUD Medical Devices, Diagnostic Devices & Services, Billing Systems/RCM, Medical Supplies, Medical Equipment, Telecom/Data & Voice, Electronic Payment Processing, Data Center/Cloud Hosting, and Office Supplies. Employee Benefits is optional/timed later and some suppliers may become non-addressable after deep-dive validation; all other categories are targeted for completion within a 6-month project window.",
+    "constraints_challenges": [
+      "Limited strategic procurement resources and focus within Advantia prior to the project",
+      "Spend data split between two AP/P-card systems (Advantia Mid-Atlantic and Heartland) with incomplete line-item detail, requiring additional supplier data collection",
+      "Ongoing integration issues from prior acquisitions leading to fragmented supplier base and contracts",
+      "Decentralized, multi-site clinic operations make policy enforcement and supplier consolidation difficult",
+      "Aggressive 4-6 month timeline with a minimum $450 K annual savings guarantee",
+      "Certain savings depend on behavioral changes (e.g., ordering IUDs in \u22655-unit lots, practice enrollment in vendor programs) or clinical standardization decisions"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "High-level AP and P-card spend exports are available from two legacy systems; line-item usage and contract files must be requested from suppliers and internal stakeholders.",
+    "data_quality_notes": "Supplier names not standardized, limited item-level detail, no centralized contract repository, and gaps remain if suppliers fail to provide data within six weeks.",
+    "source_file": "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "Assessment/AdvantiaHealth - Proposal Nov 29 2021.pptx",
+    "Project Updates/Kickoff/Advantia Strategic Sourcing Project Kickoff (100622).pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from slides citing lack of strategic procurement focus, multi-site structure, and absence of integrated processes.",
+    "Data quality observations taken from Agreement \u00a73.2.1 and Assessment slides referencing limited line-item data.",
+    "Objective and scope drawn from Proposal slides 3\u20135 and Kickoff slide 6."
+  ]
+}

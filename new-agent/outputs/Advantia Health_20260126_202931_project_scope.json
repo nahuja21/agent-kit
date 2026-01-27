@@ -1,0 +1,136 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "Employee Benefits",
+      "Medical Devices - IUDs",
+      "Diagnostic Devices & Services",
+      "Billing Systems/ RCM",
+      "Medical Supplies",
+      "COGS - Medical Equipment",
+      "Telecom - Data & Voice",
+      "Electronic Payment Processing",
+      "Data Center/ Cloud Hosting",
+      "Office Supplies"
+    ],
+    "initial_categories_count": 10,
+    "category_details": [
+      {
+        "category_name": "Employee Benefits",
+        "spend": 6232293,
+        "addressable_pct": 80,
+        "addressable_spend": 4985834,
+        "savings_low": 249292,
+        "savings_high": 498583,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Medical Devices - IUDs",
+        "spend": 3925417,
+        "addressable_pct": 80,
+        "addressable_spend": 3140334,
+        "savings_low": 62807,
+        "savings_high": 94210,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Diagnostic Devices & Services",
+        "spend": 2244850,
+        "addressable_pct": 50,
+        "addressable_spend": 1122425,
+        "savings_low": 56121,
+        "savings_high": 112242,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Billing Systems/ RCM",
+        "spend": 2033693,
+        "addressable_pct": 85,
+        "addressable_spend": 1728639,
+        "savings_low": 86432,
+        "savings_high": 172864,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Medical Supplies",
+        "spend": 1498946,
+        "addressable_pct": 80,
+        "addressable_spend": 1199157,
+        "savings_low": 119916,
+        "savings_high": 239831,
+        "is_cogs": true
+      },
+      {
+        "category_name": "COGS - Medical Equipment",
+        "spend": 980667,
+        "addressable_pct": 50,
+        "addressable_spend": 490334,
+        "savings_low": 24517,
+        "savings_high": 49033,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Telecom - Data & Voice",
+        "spend": 704691,
+        "addressable_pct": 70,
+        "addressable_spend": 493284,
+        "savings_low": 49328,
+        "savings_high": 98657,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Electronic Payment Processing",
+        "spend": 703123,
+        "addressable_pct": null,
+        "addressable_spend": null,
+        "savings_low": null,
+        "savings_high": null,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Data Center/ Cloud Hosting",
+        "spend": 349542,
+        "addressable_pct": 90,
+        "addressable_spend": 314588,
+        "savings_low": 31459,
+        "savings_high": 62918,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Office Supplies",
+        "spend": 309174,
+        "addressable_pct": 70,
+        "addressable_spend": 216422,
+        "savings_low": 21642,
+        "savings_high": 43284,
+        "is_cogs": false
+      }
+    ],
+    "total_spend": 18982395,
+    "total_addressable_spend": 13711017,
+    "savings_estimate_low": 701513,
+    "savings_estimate_high": 1371623,
+    "cogs_categories_count": 4,
+    "cogs_categories_percentage": 40.0,
+    "cogs_addressable_spend": 5952250,
+    "cogs_addressable_percentage": 43.4
+  },
+  "exhibit_b": {
+    "fee_type": "fixed",
+    "fee_amount": 225000,
+    "minimum_savings_guarantee": 450000,
+    "minimum_return_on_fees_ratio": 2.0,
+    "fee_hybrid_threshold": null,
+    "fee_contingent_percentage": null,
+    "fee_notes": "Fixed project fee is $225,000 if the optional Employee Benefits workstream is NOT pursued; it increases to $250,000 if the Benefits workstream IS pursued. Minimum Savings Guarantee is 2\u00d7 fixed fees ($450,000 or $500,000 respectively)."
+  },
+  "timing": {
+    "start_date": "2021-12-13",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction / strategic sourcing services"
+  },
+  "extraction_notes": [
+    "Addressable spend values were rounded to the nearest whole dollar after calculation.",
+    "Electronic Payment Processing shows 'TBD' for addressable % and '-' for savings; these are captured as null.",
+    "The contract provides two possible fixed fee amounts; 225,000 (without Benefits) was entered as the primary value with explanatory notes."
+  ]
+}

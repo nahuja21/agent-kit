@@ -1,0 +1,134 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Advantia Health captures $0.78M in annual savings across 8 sourcing categories",
+      "narrative": "Through Treya Partners\u2019 strategic sourcing initiative, Advantia Health has locked in $684,936 of recurring annual savings already flowing to the P&L and has a further $95,337 in additional savings moving through final negotiations. The effort spans eight actively-worked categories, with six fully finalized (Billing/RCM, Medical Supplies, Sonography Services, IUD Order Management, Bayer IUD Program and Lab Services) and two late-stage initiatives (IT Managed Services and Lab Reagents & Tests). Key wins include a 9 % fee reduction with Athena for revenue-cycle management, a distributor consolidation yielding 14 % on medical supplies, and redesign of sonography staffing that will trim costs by 19 % while improving care delivery."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 780273,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout - Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "$684,936 finalized per close-out + $95,337 in-progress per 10/21/22 update"
+      },
+      "finalized_savings": {
+        "amount": 684936,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Six categories listed as Final Savings with start dates in 2022"
+      },
+      "in_progress_savings": {
+        "amount": 95337,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+        "notes": "Average savings values for IT Managed Services ($31,459) and Lab Reagents & Tests \u2013 Hologic ($63,878)"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Billing Systems / RCM",
+        "annual_savings": 259200,
+        "status": "finalized",
+        "status_notes": "Athena fee reduced to 3.15 % effective 9/1/22; retroactive pricing addendum in place"
+      },
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 156610,
+        "status": "finalized",
+        "status_notes": "Competitive bid and distributor consolidation (McKesson in Heartland) live 10/31/22"
+      },
+      {
+        "category_name": "Sonography Services",
+        "annual_savings": 152115,
+        "status": "in progress (implementation)",
+        "status_notes": "In-house recruiting model 50 % deployed; full transition by year-end"
+      },
+      {
+        "category_name": "IUD Order Management",
+        "annual_savings": 55193,
+        "status": "finalized",
+        "status_notes": "Policy change to 5-unit order threshold implemented 7/11/22"
+      },
+      {
+        "category_name": "Bayer IUD Program",
+        "annual_savings": 21600,
+        "status": "finalized",
+        "status_notes": "Enrolled in Bayer \u2018Confidence in Coverage\u2019 on 7/11/22"
+      },
+      {
+        "category_name": "Lab Services",
+        "annual_savings": 40218,
+        "status": "finalized",
+        "status_notes": "BAFO completed; Advantia retained LabCorp at improved rates effective 10/15/22"
+      },
+      {
+        "category_name": "IT Managed Services",
+        "annual_savings": 31459,
+        "status": "in progress",
+        "status_notes": "RFP responses under analysis; savings based on benchmark comparison"
+      },
+      {
+        "category_name": "Lab Reagents & Tests \u2013 Hologic",
+        "annual_savings": 63878,
+        "status": "in progress",
+        "status_notes": "Negotiation round held and supplier response received; follow-up pushed to summer \u201923"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 45,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": "Project Closeout - Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "First savings (IUD policy and Bayer program) began 7/11/22, approximately 1.5 months after category kickoff"
+      },
+      "notes": "Multiple quick-win categories delivered savings within the first quarter of the engagement."
+    },
+    "operational_improvements": "Engagement centralized purchasing policies, introduced a standardized distributor formulary, shifted sonography from outsourced pay-per-scan to an in-house staffing model, and enrolled practices in manufacturer programs to mitigate denied claims.",
+    "proof_points": [
+      {
+        "statement": "\u201cFee reduction negotiated ($259K in annual savings)\u201d \u2013 Billing Systems/RCM",
+        "category": "Billing Systems / RCM",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Advantia - Project Close Out Summary - (11-22-2022).pptx",
+            "slide": "5"
+          }
+        ]
+      },
+      {
+        "statement": "\u201cCompetitive bidding exercise resulted in $156K in annual savings\u201d \u2013 Medical Supplies",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Advantia - Project Close Out Summary - (11-22-2022).pptx",
+            "slide": "5"
+          }
+        ]
+      },
+      {
+        "statement": "\u201cIn-house solution was ultimately selected ($152K in annual savings)\u201d \u2013 Sonography Services",
+        "category": "Sonography Services",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Advantia - Project Close Out Summary - (11-22-2022).pptx",
+            "slide": "5"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Closeout - Advantia - Project Close Out Summary - (11-22-2022).pptx",
+    "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx"
+  ],
+  "extraction_notes": [
+    "Savings totals include only categories with documented negotiations, RFPs or implementation work.",
+    "Sonography Equipment savings excluded as project deemed \u2018unlikely to be realized\u2019.",
+    "Employee Benefits, Telecom and other Wave-2 items excluded \u2013 work not yet initiated beyond preliminary scoping."
+  ]
+}

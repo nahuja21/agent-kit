@@ -1,0 +1,442 @@
+{
+  "categories": [
+    {
+      "category_label": "Billing Systems / RCM (Athena)",
+      "category_l1": "Administrative",
+      "category_l2": "Revenue Cycle",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-09-01",
+      "status": "implemented",
+      "vendors_before": [
+        "athenahealth (athenaOne)"
+      ],
+      "vendors_after": [
+        "athenahealth (athenaOne) \u2013 renegotiated"
+      ],
+      "levers": [
+        "Benchmark-driven fee renegotiation",
+        "Contract addendum with retroactive pricing"
+      ],
+      "constraints": {
+        "supplier_constraints": "Early-termination penalty (~$9M) limited switching options",
+        "operational_constraints": null,
+        "contractual_constraints": "Price-lock amendment through Jan-2025 with tiered rates",
+        "implementation_constraints": "Retroactive credits needed back to 9/1/22"
+      },
+      "baseline_spend": {
+        "amount": 2033693,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "EXHIBIT A DATA",
+        "notes": "Exhibit A \u2018Billing Systems/ RCM\u2019 spend"
+      },
+      "savings_annual_run_rate": {
+        "amount": 259200,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Fee reduced to 3.15 % of collections"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 12.75,
+      "notes": "Addendum applies savings retroactively; no vendor change required.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+          "page_or_slide": "3",
+          "quote": "Billing Systems / RCM | $3,025,000  | $259,200  | 9% | No | 9/1/2022",
+          "date_extracted": "2026-01-27"
+        },
+        {
+          "source_file": "Categories/Billing Systems (Athena)/Negotiations/Advantia - Athena Strategic Business Review Prep (Internal) vF.pptx",
+          "page_or_slide": "2",
+          "quote": "Treya\u2019s benchmarking ... if pricing was best in class (2.3% \u2013 2.75%), cost savings could be in the range of $300-$500K annually.",
+          "date_extracted": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "category_label": "Medical Supplies",
+      "category_l1": "Clinical",
+      "category_l2": "Consumables",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-12-01",
+      "status": "implemented",
+      "vendors_before": [
+        "Medline (Heartland region)",
+        "McKesson (Mid-Atlantic)",
+        "Cardinal",
+        "Thermo Fisher"
+      ],
+      "vendors_after": [
+        "McKesson (enterprise-wide prime distributor)"
+      ],
+      "levers": [
+        "Competitive RFP",
+        "Distributor consolidation",
+        "Payment-term extension (30 \u2192 60 days)"
+      ],
+      "constraints": {
+        "supplier_constraints": "Practices required continuity of clinical SKUs during change-over",
+        "operational_constraints": "No stockouts during transition",
+        "contractual_constraints": null,
+        "implementation_constraints": "Heartland region migration to McKesson; Mid-Atlantic remained on McKesson formulary"
+      },
+      "baseline_spend": {
+        "amount": 1498946,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "EXHIBIT A DATA",
+        "notes": "Exhibit A \u2018Medical Supplies\u2019 spend"
+      },
+      "savings_annual_run_rate": {
+        "amount": 156610,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "14 % savings from RFP BAFO"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10.45,
+      "notes": "McKesson agreement addresses formulary management, QBRs, and inventory services.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+          "page_or_slide": "2",
+          "quote": "Medical Supplies | $1,133,051 | 14 % | $156,610 | \u00fc | Final Contract Negotiations | Distributor Change (to McKesson) in Heartland Required",
+          "date_extracted": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "category_label": "IUD Order Management",
+      "category_l1": "Medical Devices",
+      "category_l2": "IUDs",
+      "category_l3": null,
+      "start_date": "2022-05-01",
+      "end_date": "2022-07-11",
+      "status": "implemented",
+      "vendors_before": [
+        "Bayer (Mirena / Kyleena / Skyla)",
+        "Cooper Surgical (Paragard)",
+        "AbbVie (Liletta)"
+      ],
+      "vendors_after": [
+        "Same vendors \u2013 purchasing behavior modified"
+      ],
+      "levers": [
+        "Minimum-order-quantity policy enforcement",
+        "Demand management"
+      ],
+      "constraints": {
+        "supplier_constraints": "USWHA contract pricing dependent on 5-unit order minimums",
+        "operational_constraints": "Practices needed education on new ordering policy",
+        "contractual_constraints": null,
+        "implementation_constraints": "Policy rolled out to all practice managers via memo 6-15-22"
+      },
+      "baseline_spend": {
+        "amount": 3140334,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Spend addressed for combined IUD categories"
+      },
+      "savings_annual_run_rate": {
+        "amount": 55193,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Savings from avoiding zero-discount purchases"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 1.76,
+      "notes": "Savings captured through internal policy \u2013 no supplier negotiations required.",
+      "evidence": [
+        {
+          "source_file": "Categories/Medical Devices (IUDs)/Advantia IUDs Announcement Memo (6-15-22).docx",
+          "page_or_slide": "1",
+          "quote": "IUD Minimum Order Quantity Requirement \u2026 will drive $77K in annual cost savings for our practices.",
+          "date_extracted": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "category_label": "Bayer IUD \u2018Confidence in Coverage\u2019 Program",
+      "category_l1": "Medical Devices",
+      "category_l2": "IUDs",
+      "category_l3": "Manufacturer Programs",
+      "start_date": "2022-05-01",
+      "end_date": "2022-07-11",
+      "status": "implemented",
+      "vendors_before": [
+        "Bayer"
+      ],
+      "vendors_after": [
+        "Bayer \u2013 enrolled in Confidence-in-Coverage replacement program"
+      ],
+      "levers": [
+        "Manufacturer replacement program enrollment"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Practices submit EOB denials to obtain replacements",
+        "contractual_constraints": null,
+        "implementation_constraints": "Training on replacement form submission"
+      },
+      "baseline_spend": {
+        "amount": null,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": null,
+        "notes": "Program provides risk-transfer benefit rather than direct spend reduction"
+      },
+      "savings_annual_run_rate": {
+        "amount": 21600,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Value of replacement devices avoided"
+      },
+      "savings_one_time": null,
+      "savings_percentage": null,
+      "notes": "No purchasing change; savings reflect avoided write-offs for denied claims.",
+      "evidence": [
+        {
+          "source_file": "Categories/Medical Devices (IUDs)/Denied IUD Analysis/Confidence in Coverage IUD Flashcard.pdf",
+          "page_or_slide": "1",
+          "quote": "If your patient is denied coverage \u2026 Bayer will replace that IUD at no cost.",
+          "date_extracted": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "category_label": "Sonography Services",
+      "category_l1": "Clinical Services",
+      "category_l2": "Imaging Staffing",
+      "category_l3": null,
+      "start_date": "2022-04-01",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "IT Imaging, Inc."
+      ],
+      "vendors_after": [
+        "In-house recruiting model (Advantia)",
+        "Staffmark (20 % supplemental)"
+      ],
+      "levers": [
+        "Make-versus-buy analysis",
+        "Staffing model redesign",
+        "Competitive RFQ with incumbent"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Maintain scan coverage during phased transition (50 % complete as of Oct-22)",
+        "contractual_constraints": "Existing per-scan agreements with IT Imaging",
+        "implementation_constraints": "Recruitment lead-time for full-time sonographers"
+      },
+      "baseline_spend": {
+        "amount": 819732,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Spend addressed figure used in savings tracker"
+      },
+      "savings_annual_run_rate": {
+        "amount": 152115,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "19 % savings expected when fully transitioned"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 18.56,
+      "notes": "Full completion targeted by year-end once recruiting reaches 100 % coverage.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+          "page_or_slide": "2",
+          "quote": "Sonography Services | $819,732 | 19 % | $152,115 | \u00fc | In-House recruiting solution being implemented | 50 % transition complete",
+          "date_extracted": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "category_label": "Lab Services",
+      "category_l1": "Clinical Services",
+      "category_l2": "Diagnostic Testing",
+      "category_l3": null,
+      "start_date": "2022-06-10",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "LabCorp"
+      ],
+      "vendors_after": [
+        "LabCorp (renegotiated) or Quest Diagnostics \u2013 final decision pending"
+      ],
+      "levers": [
+        "Competitive RFQ (BAFO)",
+        "Incumbent renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Practice managers may prefer minimal operational change",
+        "operational_constraints": "LIS interfaces with Athena must remain functional",
+        "contractual_constraints": null,
+        "implementation_constraints": "Phased switch if Quest selected"
+      },
+      "baseline_spend": {
+        "amount": 423792,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+        "notes": "Spend evaluated in RFQ"
+      },
+      "savings_annual_run_rate": {
+        "amount": 40218,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Assumes incumbent LabCorp offer (10 % savings)"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 9.49,
+      "notes": "Quest BAFO would yield higher savings (16 %), but operational impact under review.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+          "page_or_slide": "8",
+          "quote": "Lab Services RFQ BAFO results indicate $67K (16 %) in annual savings are available with Quest; incumbent LabCorp has offered $40K (10 %).",
+          "date_extracted": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "category_label": "IT Managed Services",
+      "category_l1": "IT",
+      "category_l2": "Managed Services & Licensing",
+      "category_l3": null,
+      "start_date": "2022-08-15",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "DAG Tech",
+        "ComTech Systems",
+        "Clearwave"
+      ],
+      "vendors_after": [
+        "TBD \u2013 proposals benchmarked (target 11-15-22)"
+      ],
+      "levers": [
+        "Benchmark pricing review",
+        "RFP to MSP competitors"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "24\u00d77 support SLA required for clinical operations",
+        "contractual_constraints": null,
+        "implementation_constraints": "Cutover must avoid EMR downtime"
+      },
+      "baseline_spend": {
+        "amount": 314588,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+        "notes": "Addressable spend line \u2018IT Managed Services\u2019"
+      },
+      "savings_annual_run_rate": {
+        "amount": 31459,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+        "notes": "Average of 5-15 % savings range"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10.0,
+      "notes": "Awaiting final supplier selection; proposals show 12-18 % reduction in MRC.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+          "page_or_slide": "9",
+          "quote": "Treya has identified potential savings \u2026 opportunity for $26.5K or 15 % savings by conducting an RFP benchmarking process through MSP competitors.",
+          "date_extracted": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "category_label": "Lab Reagents & Tests \u2013 Hologic",
+      "category_l1": "Clinical",
+      "category_l2": "Lab Reagents",
+      "category_l3": null,
+      "start_date": "2022-06-27",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Hologic"
+      ],
+      "vendors_after": [
+        "Hologic \u2013 renegotiated (follow-up summer \u201923)"
+      ],
+      "levers": [
+        "Strategic business review",
+        "Future-dated price negotiations"
+      ],
+      "constraints": {
+        "supplier_constraints": "Reagents tied to Hologic analyzers already installed",
+        "operational_constraints": "Volumes still stabilising post-COVID",
+        "contractual_constraints": "48-month equipment usage agreements in place",
+        "implementation_constraints": "Negotiations deferred until volumes normalise"
+      },
+      "baseline_spend": {
+        "amount": 851710,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+        "notes": "Addressable spend line \u2018Lab Reagents & Tests \u2013 Hologic\u2019"
+      },
+      "savings_annual_run_rate": {
+        "amount": 63878,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+        "notes": "Mid-point of 5-10 % identified range"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7.5,
+      "notes": "Negotiations to resume summer \u201923 when test volumes reach steady state.",
+      "evidence": [
+        {
+          "source_file": "Categories/Imaging and Diagnosis Services/Hologic/Advantia - Strategic Business Review (July 2022) Hologic vF.pptx",
+          "page_or_slide": "3",
+          "quote": "Advantia is pursuing Strategic Business Reviews with key partners and would like to engage in collaborative discussions with Hologic.",
+          "date_extracted": "2026-01-27"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 8,
+    "implemented_count": 4,
+    "in_progress_count": 4,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 9082795,
+    "total_savings": 780273,
+    "average_savings_percentage": 8.59
+  },
+  "extraction_sources": [
+    "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+    "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+    "EXHIBIT A DATA",
+    "Categories/Medical Devices (IUDs)/Advantia IUDs Announcement Memo (6-15-22).docx",
+    "Categories/Medical Devices (IUDs)/Denied IUD Analysis/Confidence in Coverage IUD Flashcard.pdf",
+    "Categories/Billing Systems (Athena)/Negotiations/Advantia - Athena Strategic Business Review Prep (Internal) vF.pptx",
+    "Categories/Imaging and Diagnosis Services/Hologic/Advantia - Strategic Business Review (July 2022) Hologic vF.pptx"
+  ],
+  "extraction_notes": [
+    "Baseline spend taken from Exhibit A when exact match available; otherwise used spend addressed values from project trackers.",
+    "Bayer IUD program yields cost avoidance rather than direct spend reduction; baseline therefore left null to avoid double-counting IUD spend.",
+    "Savings percentages are computed where both baseline and savings amounts are available."
+  ]
+}

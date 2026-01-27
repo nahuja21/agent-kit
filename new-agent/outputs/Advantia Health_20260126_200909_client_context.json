@@ -1,0 +1,47 @@
+{
+  "client": {
+    "client_name": "Advantia Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Women's Health Services",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site women's healthcare platform providing OB/GYN and related services through clinic locations and telehealth.",
+    "sponsor_pe_firm": "BlueMountain Capital Management",
+    "client_history": "Founded in 2014 by Sean Glass in Arlington, Virginia, Advantia Health has grown through acquisitions such as the 2019 purchase of Heartland Women\u2019s Healthcare and the 2019 acquisition of telehealth platform Pacify, positioning it as a technology-enabled provider of integrated women\u2019s health services."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Zippia ($13.0M), Growjo ($22.4M), Buzzfile ($29.1M), CanvasBusinessModel.com ($89M)",
+      "notes": "Publicly available estimates vary widely from $13M to $89M and no official figure is disclosed by the company; therefore revenue is left as null."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 26,
+      "confidence": "low",
+      "source": "advantiahealth.com/locations list reproduced in web search results",
+      "notes": "Web search enumerated 26 specific clinic addresses across MD, VA, DC, IL and MO. Other sources note the Heartland acquisition added 25 sites in 2019, suggesting the current count may be higher, but only 26 could be positively verified."
+    },
+    "employees": {
+      "count": 500,
+      "confidence": "low",
+      "source": "LeadIQ (501 employees, Dec 2025); SignalHire (500-1,000); Buzzfile (259); Indeed (501-1,000)",
+      "notes": "Headcount estimates range from 259 to \u201c500-1,000.\u201d Using the midpoint of 500 as a rounded figure; no single authoritative source available."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021) \u2013 pages 1-2",
+    "Assessment/AdvantiaHealth \u2013 Spend Analysis Opportunity v1 JV (11-22-2021).pptx \u2013 various slides",
+    "advantiahealth.com/news press releases (2019 Heartland acquisition; 2020 BlueMountain investment)",
+    "Web search result pages: zippia.com, growjo.com, buzzfile.com, canvabusinessmodel.com, leadiq.com, signalhire.com, indeed.com",
+    "advantiahealth.com/locations (referenced in web search results)"
+  ],
+  "extraction_notes": [
+    "Official company name taken from the signed services agreement where the legal party is listed as 'Advantia Health'.",
+    "BlueMountain Capital Management led a $45M investment in Jan 2020 (advantiahealth.com press release); Deerfield Management led an earlier 2016 growth round, but BlueMountain is the most recent and sizable PE-style backer, listed as sponsor.",
+    "Revenue figures are highly inconsistent across third-party estimate sites with no confirmation from company filings; therefore revenue not reported.",
+    "Clinic location count based only on addresses that could be individually verified from the company locations list reproduced in web search results; other sources imply additional sites.",
+    "Employee headcount shows significant variance; chose 500 as a midpoint but flagged confidence as low."
+  ]
+}

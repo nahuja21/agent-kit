@@ -1,0 +1,55 @@
+{
+  "client": {
+    "client_name": "Advantia Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Women's health services (OB-GYN, telehealth, ancillary care)",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site women's health provider operating OB-GYN clinics, ancillary service lines and a telehealth platform across several U.S. states",
+    "sponsor_pe_firm": "BlueMountain Capital Management (Assured Guaranty subsidiary)",
+    "client_history": "Founded in 2014 in Arlington, Virginia by Sean Glass, Advantia Health has grown through acquisitions such as Heartland Women\u2019s Healthcare and Pacify to more than 60 women\u2019s health clinics and a nationwide telehealth offering. The company received growth investments from Deerfield Management (2016) and a $45 million round led by BlueMountain Capital Management in 2020 to accelerate expansion."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 29100000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Buzzfile company profile (https://www.buzzfile.com/business/Advantia-Health-LLC-202-315-5223)",
+      "notes": "Publicly available estimates vary widely: Zippia \u2013 $13.0 M, Growjo \u2013 $22.4 M, Buzzfile \u2013 $29.1 M, CanvasBusinessModel \u2013 $89 M (likely inflated). Buzzfile/D&B data is generally more reliable than employment-based extrapolations; reported range $13\u201329 M, using Buzzfile\u2019s $29.1 M as highest credible point but overall confidence remains low."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 60,
+      "confidence": "medium",
+      "source": "Prnewswire release on Heartland acquisition & company overview page (https://www.prnewswire.com/news-releases/advantia-health-expands-nationally-with-acquisition-of-heartland-womens-healthcare-300798460.html; https://theindex.work/companies/advantia-health)",
+      "notes": "Both sources state Advantia operates \u2018over 60 OB-GYN and coordinated specialist offices\u2019. No exact count published on official site; treated 60 as midpoint."
+    },
+    "employees": {
+      "count": 501,
+      "confidence": "medium",
+      "source": "LeadIQ company profile (https://leadiq.com/c/advantia-health/5a1d82ae24000024005d4858)",
+      "notes": "LeadIQ lists 501 employees (Dec 2025). Supporting sources show 500\u20131,000 range (Indeed, SignalHire) and 259 (Buzzfile). Majority of sources cluster around 500+, so 501 selected."
+    }
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis v4 (11-18-2021) JV.xlsx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf",
+    "Assessment/AdvantiaHealth - Proposal Nov 29 2021.pptx",
+    "Prnewswire release: Advantia Health expands nationally with acquisition of Heartland Women's Healthcare",
+    "Advantia Health company overview (theindex.work)",
+    "Buzzfile company profile for Advantia Health LLC",
+    "Zippia revenue page for Advantia Health",
+    "Growjo company profile for Advantia Health",
+    "CanvasBusinessModel.com article on Advantia revenue",
+    "LeadIQ company profile for Advantia Health",
+    "Indeed.com Advantia Health company page",
+    "SignalHire company profile for Advantia Health"
+  ],
+  "extraction_notes": [
+    "Company name, legal address and industry confirmed in signed services agreement between Treya Partners and Advantia Health.",
+    "PE backing: $45 M investment announcement (2020) identifies BlueMountain Capital Management as lead investor; Deerfield Management participated in earlier (2016) round. Listed most recent/active PE sponsor.",
+    "Revenue figures are all estimates from third-party databases with no official disclosure; provided highest D&B-sourced number but flagged low confidence and noted full range.",
+    "No EBITDA information found in documents, filings or credible web sources.",
+    "Location count derived from multiple official press releases and company overview statements referencing \u2018over 60 offices\u2019; no comprehensive list with exact number available.",
+    "Employee count lacks authoritative disclosure; most sources cluster around 500\u20131,000, using LeadIQ\u2019s 501 as representative mid-point."
+  ]
+}

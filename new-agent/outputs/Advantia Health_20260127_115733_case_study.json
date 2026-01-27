@@ -1,0 +1,37 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client identity, objective, quantified $716K savings, and multiple documented proof points are all present\u2014sufficient for a strong case study.",
+    "headline": "Women\u2019s health platform captures $716K in annual savings and 3.2\u00d7 ROI through Treya-led strategic sourcing sprint",
+    "client_problem_statement": "Advantia Health\u2019s rapid, PE-funded expansion left procurement scattered across 40 clinics and two legacy accounting systems. Fragmented purchasing drove inconsistent pricing on everything from billing services to medical supplies, while limited internal bandwidth threatened to stall EBITDA improvement goals set by BlueMountain Capital. The leadership team needed an outside partner to quickly uncover and realize cost-savings without disrupting patient care.",
+    "client_problem_anonymized": "A multi-state women\u2019s health platform\u2019s rapid, PE-funded expansion left procurement scattered across 40 clinics and two legacy accounting systems. Fragmented purchasing drove inconsistent pricing on everything from billing services to medical supplies, while limited internal bandwidth threatened to stall EBITDA improvement goals set by the private equity sponsor. The leadership team needed an outside partner to quickly uncover and realize cost-savings without disrupting patient care.",
+    "approach_summary": [
+      "Analyzed $18.9M in annual spend and isolated $13.7M of addressable cost across 10 clinical and administrative categories",
+      "Prioritized high-impact waves and renegotiated Athenahealth RCM fees\u2014from 3.39% to 3.15%\u2014leveraging market benchmarks and retroactive pricing",
+      "Ran competitive RFPs and distributor consolidation that shifted Heartland clinics to a single McKesson contract, unlocking 14% savings on medical supplies",
+      "Re-engineered sonography staffing by insourcing technologists and supplementing with on-demand recruiters, reducing imaging labor cost by 19%",
+      "Standardized IUD purchasing policies (\u22655-unit orders) and enrolled clinics in Bayer\u2019s Confidence-in-Coverage program to capture manufacturer discounts and device replacements"
+    ],
+    "top_levers": [
+      "Contract renegotiation with incumbents",
+      "Vendor consolidation through competitive RFP",
+      "Labor model insourcing",
+      "Policy enforcement & demand aggregation",
+      "GPO / manufacturer program optimization"
+    ],
+    "value_delivered_blurb": "Treya delivered $716,395 in verified, recurring annual savings\u2014exceeding the guaranteed target by 59% and generating a 3.2\u00d7 return on the $225K fixed project fee. First savings flowed within 60 days, and six of seven initiatives are fully implemented. Beyond hard dollars, Advantia now operates with standardized purchasing policies, consolidated vendor relationships, and clearer spend visibility that supports ongoing margin expansion.",
+    "where_we_were_unique": [
+      "Unlocked quick wins\u2014first dollar savings realized in just 60 days despite decentralized data and limited client resources",
+      "Secured meaningful concessions from entrenched incumbents (e.g., Athenahealth) even under restrictive contract terms and high switching costs",
+      "Blended clinical and back-office expertise, allowing cost reductions that maintained caregiver workflows and patient experience",
+      "Exceeded savings guarantee by 59%, proving Treya\u2019s ability to deliver outsized value against fixed-fee engagements"
+    ]
+  },
+  "generation_notes": [
+    "Total savings figure pulled from finalized + in-progress amounts in impact summary ($716,395).",
+    "ROI calculated as $716,395 \u00f7 $225,000 \u2248 3.2\u00d7.",
+    "Approach bullets limited to five, each beginning with an action verb and tied to documented levers.",
+    "Top levers ranked by contribution to total savings (RCM renegotiation and medical supplies consolidation were largest).",
+    "Problem anonymization follows requested rules\u2014company and PE names generalized."
+  ]
+}

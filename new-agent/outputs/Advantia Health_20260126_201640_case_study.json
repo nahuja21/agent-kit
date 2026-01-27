@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objective, quantified $685K finalized savings (+$146K pipeline) and multiple documented proof points are available\u2014sufficient for a strong case study.",
+    "headline": "PE-backed women\u2019s health platform unlocks $685K in recurring savings (3\u00d7 ROI) in under six months",
+    "client_problem_statement": "Advantia Health\u2019s rapid growth through acquisitions left the 40-location women\u2019s health provider with fragmented vendors, inconsistent pricing, and no centralized procurement muscle. With private-equity owners pressing for EBITDA expansion, leadership needed to quickly take $0.7-1.4 M of cost out of both clinical and indirect spend without disrupting patient care or sensitive supplier relationships.",
+    "approach_summary": [
+      "Mapped and cleansed $19 M of AP and P-card data across two legacy systems to pinpoint $13.7 M in addressable spend across 10 categories.",
+      "Renegotiated the high-stakes Athenahealth RCM contract\u2014avoiding a $9 M termination fee while cutting fees from 3.39 % to 3.15 %, saving $259 K annually.",
+      "Ran competitive RFPs and distributor consolidations on medical supplies, shifting Heartland clinics to McKesson and driving 14 % ($157 K) savings.",
+      "Redesigned the sonography staffing model, transitioning from outsourced pay-per-scan to an in-house team that delivers $152 K (19 %) annual savings.",
+      "Implemented quick-win policy and manufacturer program changes in IUD purchasing and lab services, capturing an additional $119 K in low-lift savings within 45 days."
+    ],
+    "top_levers": [
+      "Contract renegotiation with incumbents",
+      "Vendor/distributor consolidation",
+      "Operating model redesign (insourcing)",
+      "Competitive RFPs",
+      "Behavioral and policy compliance"
+    ],
+    "value_delivered_blurb": "Treya delivered $684,936 in hard annual savings\u2014already a 3.0\u00d7 return on our $225 K fixed fee\u2014with a further $146,492 in pipeline awards that will lift total savings to $831 K (3.7\u00d7 ROI) once implemented. Beyond the financial impact, Advantia now has standardized purchasing policies, consolidated supplier footprints, and a clear roadmap for ongoing procurement governance that boosts EBITDA and enterprise value.",
+    "where_we_were_unique": [
+      "Generated first measurable savings within 45 days by attacking policy-driven quick wins.",
+      "Healthcare-specific sourcing expertise enabled sensitive renegotiations (e.g., Athena RCM, LabCorp) without operational disruption.",
+      "Hands-on data cleansing bridged two disparate AP systems, giving Advantia its first unified view of spend.",
+      "Collaborative, clinician-friendly change management preserved care continuity while executing supplier transitions."
+    ]
+  },
+  "generation_notes": [
+    "Savings figures taken from finalized categories ($684,936) and documented pipeline ($146,492).",
+    "ROI calculated against lower fixed-fee option of $225K as used in engagement.",
+    "Approach bullets ordered by magnitude of savings contribution."
+  ]
+}

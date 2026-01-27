@@ -1,0 +1,33 @@
+{
+  "engagement_background": {
+    "objective": "Reduce Advantia Health\u2019s cost base by creating $0.7-1.4 M in annual savings across key clinical and indirect spend categories, while instituting stronger procurement processes and controls to boost EBITDA and enterprise value for the PE owners.",
+    "scope_summary": "Treya will run strategic sourcing and/or GPO/incumbent negotiations for 10 categories representing about $19 M of the $45 M total spend analysed. Categories include Employee Benefits (optional), IUDs, Diagnostic & Lab Services, Billing/RCM, Medical Supplies & Equipment, Telecom, Data Center/Cloud, Office Supplies and Electronic Payment Processing (TBD). Engagement also covers a review of procurement processes/controls; some sub-categories may be ruled un-addressable after deep-dives.",
+    "constraints_challenges": [
+      "Limited strategic procurement resources and focus inside Advantia prior to the project",
+      "Spend and item-level data is incomplete and spread across two AP systems and P-cards, requiring line-item data collection from suppliers",
+      "Supplier and system fragmentation caused by recent acquisitions (Advantia Mid-Atlantic vs. Heartland) with little back-end integration",
+      "Decentralized, multi-site clinical operations create varied purchasing practices and potential stakeholder resistance to supplier changes",
+      "Six-month timeline with a moratorium on parallel client-led sourcing activity to avoid market confusion",
+      "Need to preserve sensitive incumbent supplier relationships, especially in clinical categories such as IUDs and lab services"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "AP transaction data from Advantia and Heartland plus YTD P-card data were available; centralized contract repository and detailed usage data were not.",
+    "data_quality_notes": "Multiple supplier naming conventions, limited commodity descriptions, gaps in historical usage; acquisitions not fully integrated, so spend had to be manually categorized and supplemented by supplier-provided data.",
+    "source_file": "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "Assessment/AdvantiaHealth - Proposal Nov 29 2021.pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf",
+    "Project Updates/Kickoff/Advantia Strategic Sourcing Project Kickoff (100622).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from statements about lack of strategic procurement focus, multi-site roll-up and acquisition integration gaps.",
+    "Data availability and quality issues explicitly mentioned on Assessment slides and in the Services Agreement data collection clause.",
+    "No document directly labels procurement structure, hence confidence set to medium."
+  ]
+}

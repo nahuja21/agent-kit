@@ -27,7 +27,11 @@ from src.config import (
     OUTPUTS_DIR,
     MODEL,
     validate_config,
+    validate_azure_config,
     ensure_directories,
+    AZURE_SQL_ENABLED,
+    AZURE_SQL_TABLE,
+    get_azure_connection_string,
 )
 from src.scanner import DirectoryScanner, find_project_in_inputs, extract_zip_project
 from src.llm import OpenAIClient
@@ -37,6 +41,7 @@ from src.prompts.loader import get_anchor_detection_prompt, get_project_scope_pr
 from src.extractors.pdf import extract_pdf_with_tables, find_exhibit_pages, extract_table_with_vision, extract_table_with_tesseract
 from src.extractors.base import extract_file_content
 from src.models.schema import CaseStudy
+from src.database import AzureSQLWriter
 import re
 
 
@@ -308,12 +313,30 @@ class ConsoleApp:
         else:
             table.add_row("Project Folder", "(empty)", "⚠️ (no project found)")
         
+        # Azure SQL Database
+        if AZURE_SQL_ENABLED:
+            azure_errors = validate_azure_config()
+            azure_status = "✅" if not azure_errors else "❌"
+            table.add_row("Azure SQL", "Enabled", azure_status)
+            table.add_row("Azure SQL Table", AZURE_SQL_TABLE, "")
+        else:
+            table.add_row("Azure SQL", "Disabled", "⚪ (set AZURE_SQL_ENABLED=true)")
+        
         self.console.print(table)
         
         if errors:
             self.console.print("\n[red]Configuration Errors:[/red]")
             for error in errors:
                 self.console.print(f"  [red]•[/red] {error}")
+        
+        # Azure SQL errors
+        if AZURE_SQL_ENABLED:
+            azure_errors = validate_azure_config()
+            if azure_errors:
+                self.console.print("\n[red]Azure SQL Configuration Errors:[/red]")
+                for error in azure_errors:
+                    self.console.print(f"  [red]•[/red] {error}")
+        
         self.console.print()
     
     async def _handle_file(self, args: List[str]) -> None:
@@ -855,11 +878,14 @@ ANALYSIS OUTPUT
         if not self.llm_client:
             self.llm_client = OpenAIClient()
         
+        # Determine total steps (10 if Azure enabled, 9 if not)
+        total_steps = 10 if AZURE_SQL_ENABLED else 9
+        
         # =====================================================================
         # STEP 1: Scan Directory Structure
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 1/9:[/bold] Scanning directory structure",
+            f"[bold]Step 1/{total_steps}:[/bold] Scanning directory structure",
             border_style="cyan",
         ))
         
@@ -876,7 +902,7 @@ ANALYSIS OUTPUT
         # STEP 2: Anchor File/Folder Detection
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 2/9:[/bold] Detecting anchor files and folders",
+            f"[bold]Step 2/{total_steps}:[/bold] Detecting anchor files and folders",
             border_style="cyan",
         ))
         
@@ -913,7 +939,7 @@ ANALYSIS OUTPUT
         # STEP 3: Project Scope Extraction (from Agreement)
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 3/9:[/bold] Extracting Project Scope from Agreement",
+            f"[bold]Step 3/{total_steps}:[/bold] Extracting Project Scope from Agreement",
             border_style="cyan",
         ))
         
@@ -1071,7 +1097,7 @@ ANALYSIS OUTPUT
         # STEP 4: Client Context Extraction
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 4/9:[/bold] Extracting Client Context",
+            f"[bold]Step 4/{total_steps}:[/bold] Extracting Client Context",
             border_style="cyan",
         ))
         
@@ -1228,7 +1254,7 @@ When extracting, cite which source provided each data point."""
         # STEP 5: Engagement Background Extraction
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 5/9:[/bold] Extracting Engagement Background",
+            f"[bold]Step 5/{total_steps}:[/bold] Extracting Engagement Background",
             border_style="cyan",
         ))
         
@@ -1296,7 +1322,7 @@ When extracting, cite which source provided each data point."""
         # STEP 6: Impact Extraction
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 6/9:[/bold] Extracting Impact & Results",
+            f"[bold]Step 6/{total_steps}:[/bold] Extracting Impact & Results",
             border_style="cyan",
         ))
         
@@ -1413,7 +1439,7 @@ When extracting, cite which source provided each data point."""
         # STEP 7: Categories Extraction (Detailed)
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 7/9:[/bold] Extracting Detailed Category Information",
+            f"[bold]Step 7/{total_steps}:[/bold] Extracting Detailed Category Information",
             border_style="cyan",
         ))
         
@@ -1546,7 +1572,7 @@ When extracting, cite which source provided each data point."""
         # STEP 8: Case Study Content Generation
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 8/9:[/bold] Generating Case Study Content",
+            f"[bold]Step 8/{total_steps}:[/bold] Generating Case Study Content",
             border_style="cyan",
         ))
         
@@ -1616,7 +1642,7 @@ When extracting, cite which source provided each data point."""
         # STEP 9: Supplier Battlecards
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 9/9:[/bold] Generating Supplier Battlecards",
+            f"[bold]Step 9/{total_steps}:[/bold] Generating Supplier Battlecards",
             border_style="cyan",
         ))
         
@@ -1627,11 +1653,24 @@ When extracting, cite which source provided each data point."""
         if categories_list:
             categories_summary_items = []
             for cat in categories_list:
-                cat_name = cat.get("category_name", "Unknown")
+                cat_name = cat.get("category_name", cat.get("category_label", "Unknown"))
                 vendors_before = cat.get("vendors_before", [])
                 vendors_after = cat.get("vendors_after", [])
-                baseline = cat.get("baseline_spend", 0) or 0
-                savings = cat.get("annual_savings", 0) or 0
+                
+                # Handle baseline_spend - could be a dict with 'amount' or a plain number
+                baseline_raw = cat.get("baseline_spend", 0)
+                if isinstance(baseline_raw, dict):
+                    baseline = baseline_raw.get("amount", 0) or 0
+                else:
+                    baseline = baseline_raw or 0
+                
+                # Handle savings - could be annual_savings or savings_annual_run_rate
+                savings_raw = cat.get("annual_savings", cat.get("savings_annual_run_rate", 0))
+                if isinstance(savings_raw, dict):
+                    savings = savings_raw.get("amount", 0) or 0
+                else:
+                    savings = savings_raw or 0
+                
                 levers = cat.get("levers", [])
                 
                 summary_item = f"""
@@ -1778,6 +1817,73 @@ Category: {cat_name}
             self.console.print(f"[green]✓[/green] Supplier Battlecards saved: {battlecards_file.name}")
         except Exception as e:
             self.console.print(f"[yellow]⚠️ Could not save battlecards: {e}[/yellow]")
+        
+        # =====================================================================
+        # STEP 10: Save to Azure SQL Database (if enabled)
+        # =====================================================================
+        if AZURE_SQL_ENABLED:
+            self.console.print(Panel(
+                f"[bold]Step 10/{total_steps}:[/bold] Saving to Azure SQL Database",
+                border_style="cyan",
+            ))
+            
+            # Validate Azure config
+            azure_errors = validate_azure_config()
+            if azure_errors:
+                self.console.print("[red]Azure SQL configuration errors:[/red]")
+                for error in azure_errors:
+                    self.console.print(f"  [red]•[/red] {error}")
+            else:
+                try:
+                    connection_string = get_azure_connection_string()
+                    extraction_dt = datetime.strptime(timestamp, "%Y%m%d_%H%M%S")
+                    
+                    # Define blocking database operations to run in thread pool
+                    def save_to_azure_sync():
+                        """Run all blocking pyodbc operations in a separate thread."""
+                        import time
+                        
+                        writer = AzureSQLWriter(
+                            connection_string=connection_string,
+                            table_name=AZURE_SQL_TABLE,
+                        )
+                        
+                        # Connect with retries
+                        writer.connect(retries=3)
+                        
+                        # Ensure table exists
+                        writer.ensure_table_exists()
+                        
+                        # Save to database
+                        row_id = writer.save_extraction(
+                            client_name=extracted_client_name,
+                            project_scope=project_scope_data or {},
+                            client_context=client_context_data or {},
+                            engagement_background=engagement_background_data or {},
+                            impact=impact_data or {},
+                            categories=categories_data or {},
+                            case_study=case_study_data or {},
+                            battlecards=battlecards_data or {},
+                            extraction_timestamp=extraction_dt,
+                            upsert=True,
+                        )
+                        
+                        writer.close()
+                        return row_id
+                    
+                    # Run blocking database operations in thread pool
+                    # This prevents pyodbc from blocking the asyncio event loop
+                    self.console.print("[cyan]Connecting to Azure SQL (in background thread)...[/cyan]")
+                    row_id = await asyncio.to_thread(save_to_azure_sync)
+                    self.console.print(f"[green]✓[/green] Saved to Azure SQL (client: {extracted_client_name})")
+                        
+                except ImportError as e:
+                    self.console.print(f"[yellow]⚠️ Azure SQL driver not available: {e}[/yellow]")
+                    self.console.print("[dim]Install with: pip install pyodbc[/dim]")
+                    self.console.print("[dim]Also install ODBC Driver 18 for SQL Server[/dim]")
+                except Exception as e:
+                    self.console.print(f"[red]❌ Failed to save to Azure SQL: {e}[/red]")
+                    self.console.print("[dim]You can manually upload the JSON files later.[/dim]")
         
         self.console.print()
     
@@ -1978,6 +2084,13 @@ Category: {cat_name}
         if problem:
             self.console.print("[bold magenta]🎯 CLIENT PROBLEM[/bold magenta]")
             self.console.print(f"{problem}")
+            self.console.print()
+        
+        # Client Problem - Anonymized
+        problem_anon = packaging.get("client_problem_anonymized")
+        if problem_anon:
+            self.console.print("[bold magenta]🎯 CLIENT PROBLEM (ANONYMIZED)[/bold magenta]")
+            self.console.print(f"{problem_anon}")
             self.console.print()
         
         # Approach Summary
@@ -3335,6 +3448,8 @@ Category: {cat_name}
                 self.console.print(f"[bold]Headline:[/bold] {csp.headline}")
             if csp.client_problem_statement:
                 self.console.print(f"[bold]Problem:[/bold] {csp.client_problem_statement}")
+            if csp.client_problem_anonymized:
+                self.console.print(f"[bold]Problem (Anonymized):[/bold] {csp.client_problem_anonymized}")
             
             if csp.approach_summary:
                 self.console.print("[bold]Approach:[/bold]")
@@ -3623,6 +3738,8 @@ Category: {cat_name}
                 lines.append(f"Headline: {csp.headline}")
             if csp.client_problem_statement:
                 lines.append(f"Problem Statement: {csp.client_problem_statement}")
+            if csp.client_problem_anonymized:
+                lines.append(f"Problem Statement (Anonymized): {csp.client_problem_anonymized}")
             if csp.approach_summary:
                 lines.append("Approach:")
                 for a in csp.approach_summary:

@@ -381,6 +381,11 @@ class CaseStudyPackaging(BaseModel):
         description="What problem was the client facing"
     )
     
+    client_problem_anonymized: Optional[str] = Field(
+        None,
+        description="Anonymized version of client problem: company name replaced with industry descriptor, PE firm name genericized, and PE expectations softened"
+    )
+    
     approach_summary: Optional[List[str]] = Field(
         None,
         description="3-5 bullet points describing Treya's approach"

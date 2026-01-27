@@ -1,0 +1,52 @@
+{
+  "client": {
+    "client_name": "Advantia Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Women's health services",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-state women's health provider platform operating OB/GYN clinics, ancillary women-focused services and telehealth offerings.",
+    "sponsor_pe_firm": "BlueMountain Capital Management (2020 investment); Deerfield Management Company (2016 growth financing)",
+    "client_history": "Founded in 2014 in Arlington, Virginia, Advantia Health has grown through acquisitions such as the 2019 purchase of Heartland Women\u2019s Healthcare (adding 25 sites) and the Pacify telehealth platform. Backed by healthcare investors BlueMountain and Deerfield, the company now offers integrated in-person and virtual care for women across several Mid-Atlantic and Midwest states."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 22400000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Growjo company profile (https://growjo.com/company/Advantia_Health)",
+      "notes": "Reported figures vary widely: Zippia $13M, Buzzfile $29.1M, Growjo $22.4M, CanvasBusinessModel $89M (2024). No official filing found; using the mid-range Growjo estimate but reliability is low."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 50,
+      "confidence": "low",
+      "source": "Company locations list on AdvantiaHealth.com/locations (compiled in web search results)",
+      "notes": "Web search enumerated 27 specific addresses and references 25 Heartland Women\u2019s Healthcare sites, implying roughly 50 total. No single authoritative count stated."
+    },
+    "employees": {
+      "count": 500,
+      "confidence": "medium",
+      "source": "LeadIQ profile (Dec 2025) and Indeed company page, both citing 501-1,000 employees; Buzzfile lists 259.",
+      "notes": "Multiple employment data sources; majority (LeadIQ, SignalHire, Indeed) cluster around ~500 while Buzzfile is lower. Adopted 500 midpoint with medium confidence."
+    }
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Proposal Nov 29 2021.pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021).pdf",
+    "Web search result \u2013 Growjo company profile",
+    "Web search result \u2013 Zippia revenue estimate",
+    "Web search result \u2013 Buzzfile profile",
+    "Web search result \u2013 CanvasBusinessModel blog post",
+    "Web search result \u2013 AdvantiaHealth.com/locations list",
+    "Web search result \u2013 LeadIQ employee count",
+    "Web search result \u2013 Indeed company page",
+    "Web search result \u2013 press releases on Deerfield (2016) and BlueMountain (2020) investments"
+  ],
+  "extraction_notes": [
+    "Official company name confirmed from signed services agreement (page 1) \u2013 'Advantia Health'.",
+    "Industry sector selected as 'Healthcare Providers & Physician Practice Platforms' due to multi-clinic women's health operations.",
+    "PE backing: Only minority/ growth investments publicly disclosed; BlueMountain\u2019s 2020 $45M round is the most recent and is treated as current PE sponsor.",
+    "No EBITDA figures located in documents or credible web sources; field set to null.",
+    "Size metrics suffer from conflicting third-party estimates; revenue and location counts therefore assigned low confidence."
+  ]
+}

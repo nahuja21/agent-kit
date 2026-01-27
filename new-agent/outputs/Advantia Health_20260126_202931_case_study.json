@@ -1,0 +1,33 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client name, industry context, clear problem statement, quantified $716K savings, and multiple documented proof points are all present\u2014sufficient for a polished case study.",
+    "headline": "Advantia Health unlocks $716K in annual savings and a 3\u00d7 ROI through Treya Partners\u2019 rapid strategic sourcing program",
+    "client_problem_statement": "Advantia Health\u2014a fast-growing, PE-backed women\u2019s health platform spanning 27 clinics\u2014was purchasing everything from medical supplies to IT services at the clinic level with little central oversight. Fragmented data, entrenched incumbent relationships, and a lean corporate staff limited their ability to negotiate market-competitive pricing. With BlueMountain Capital expecting near-term EBITDA improvement, Advantia needed an expert partner to quickly surface savings and put disciplined procurement controls in place.",
+    "approach_summary": [
+      "Analyzed $19 M in AP and P-card data to isolate $13.7 M of addressable spend across ten clinical, technology and indirect categories.",
+      "Renegotiated Athenahealth revenue-cycle fees\u2014leveraging market benchmarks\u2014to secure a 12.7% rate cut and $259 K in retroactive savings.",
+      "Ran competitive RFPs and consolidated medical-supply distribution to a single McKesson contract, capturing $157 K (14%) while preserving service continuity.",
+      "Converted outsourced per-scan sonography to an in-house staffing model, delivering $152 K (19%) in savings without disrupting patient throughput.",
+      "Instituted no-cost, behavior-based levers\u2014including \u22655-unit IUD order minimums and enrollment in Bayer\u2019s \u2018Confidence in Coverage\u2019 program\u2014netting an additional $77 K."
+    ],
+    "top_levers": [
+      "Contract renegotiation with incumbents (Athenahealth, LabCorp)",
+      "Vendor consolidation & competitive RFP (medical supplies)",
+      "Labor model transformation (in-house sonography staffing)",
+      "Purchasing-behavior policy changes (IUD order thresholds & manufacturer program enrollment)"
+    ],
+    "value_delivered_blurb": "Treya Partners delivered $684,936 in finalized annual savings\u2014with another $31,459 in late-stage review\u2014amounting to a $716 K run-rate and more than triple the project\u2019s $225 K fixed fee. First dollars were realized just 45 days after kickoff, and six categories are already accruing benefits. Beyond the financial impact, Advantia now has standardized ordering policies, streamlined distributor relationships, and a clear roadmap for ongoing procurement governance.",
+    "where_we_were_unique": [
+      "Generated tangible savings within 45 days by targeting quick-win levers such as IUD ordering policies and manufacturer rebate programs.",
+      "Secured retroactive pricing concessions from entrenched vendors\u2014delivering savings without operational disruption or costly system changeovers.",
+      "Combined deep healthcare category expertise with hands-on data cleansing to overcome fragmented spend data and supplier resistance.",
+      "Provided a turnkey sourcing team that allowed Advantia\u2019s lean staff to focus on patient care while still achieving a 3\u00d7 return on consulting fees."
+    ]
+  },
+  "generation_notes": [
+    "Savings figures align with close-out deck: $684,936 finalized + $31,459 in-progress = $716,395.",
+    "ROI calculated as finalized savings \u00f7 $225K fixed fee \u2248 3.0.",
+    "Approach bullets ordered by dollar impact, referencing specific levers and categories."
+  ]
+}

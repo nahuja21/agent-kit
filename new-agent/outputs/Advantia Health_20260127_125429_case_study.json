@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "All key elements are present: named healthcare client, clear procurement challenges, $780K quantified savings across eight categories, multiple documented proof points.",
+    "headline": "Women\u2019s health platform captures $780K annual savings in 5 months, delivering 3.5\u00d7 ROI through strategic sourcing",
+    "client_problem_statement": "Advantia Health, a rapidly expanding women\u2019s health provider operating 60+ clinics, managed purchasing through disparate systems inherited from acquisitions and lacked a centralized procurement function. Fragmented vendor relationships, inconsistent pricing, and incomplete spend visibility put pressure on margins and jeopardized private-equity value-creation objectives. Leadership needed a partner that could quickly unlock savings and embed disciplined purchasing processes across ten high-spend categories.",
+    "client_problem_anonymized": "A rapidly expanding women\u2019s health platform operating 60+ clinics managed purchasing through disparate systems inherited from acquisitions and lacked a centralized procurement function. Fragmented vendor relationships, inconsistent pricing, and incomplete spend visibility put pressure on margins and jeopardized objectives set by the private equity sponsor. Leadership needed a partner that could quickly unlock savings and embed disciplined purchasing processes across ten high-spend categories.",
+    "approach_summary": [
+      "Analyzed $19 million in annual spend across 10 categories, validating $1.37 million in achievable savings and prioritizing quick-win opportunities.",
+      "Renegotiated the client\u2019s Athenahealth revenue-cycle contract, cutting fees from 3.39 % to 3.15 % and securing retroactive credits worth $259K annually.",
+      "Ran competitive RFPs and vendor consolidation initiatives\u2014moving all clinics to McKesson as prime distributor and benchmarking lab and IT managed-service pricing.",
+      "Designed and began implementing an in-house sonography staffing model, replacing outsourced scans and targeting 19 % cost reduction without disrupting clinical coverage.",
+      "Implemented demand-management policies such as a 5-unit IUD order minimum and enrolled practices in Bayer\u2019s replacement program, capturing otherwise lost value."
+    ],
+    "top_levers": [
+      "Contract renegotiation",
+      "Vendor consolidation & competitive RFP",
+      "Insourcing (make-versus-buy)",
+      "Demand management & policy enforcement"
+    ],
+    "value_delivered_blurb": "Treya delivered $780K in verified annual run-rate savings\u201473 % above the contractual guarantee and equal to 3.5\u00d7 the project\u2019s fixed fee. Nearly $500K was fully implemented within the 5-month engagement, with the balance in final contracting. Beyond hard dollars, Treya standardized IUD purchasing, extended payment terms to 60 days, and stood up an in-house sonography recruiting capability to sustain savings long term.",
+    "where_we_were_unique": [
+      "Realized first savings in just 45 days through targeted policy changes and rapid contract renegotiation.",
+      "Leveraged deep healthcare procurement expertise to secure best-in-class terms with Athenahealth, McKesson, LabCorp, and specialty device manufacturers under significant switching constraints.",
+      "Hands-on change management enabled a seamless shift to an in-house sonography model while maintaining service levels across 60+ clinics.",
+      "Exceeded the 2\u00d7 savings guarantee by 73 %, providing a 3.5\u00d7 return on Treya\u2019s fees."
+    ]
+  },
+  "generation_notes": [
+    "Savings and ROI figures pulled directly from impact section and fee schedule ($780,273 savings vs. $225,000 fee).",
+    "Approach bullets ordered by magnitude of savings impact, using generic client references per guidelines.",
+    "Top levers ranked based on dollar contribution detailed in category results."
+  ]
+}

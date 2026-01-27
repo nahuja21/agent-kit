@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "Identify and realize $0.7-1.4 million in annual cost savings across key spend categories and lay the foundation for stronger procurement discipline, thereby enhancing Advantia Health\u2019s EBITDA and supporting its PE value-creation plan.",
+    "scope_summary": "Treya will run strategic sourcing initiatives for 10 spend categories representing roughly $19 million of the company\u2019s $45 million total spend (e.g., employee benefits, medical supplies, medical & diagnostic devices, billing/RCM, telecom, data-center hosting, office supplies). Work includes competitive RFPs, incumbent negotiations, and GPO leverage, plus a review of Advantia\u2019s procure-to-pay processes; employee benefits is an optional later phase and some suppliers may prove non-addressable after deep-dives.",
+    "constraints_challenges": [
+      "Limited strategic procurement resources and focus prior to engagement",
+      "Fragmented spend split between two AP/P-card systems (Advantia Mid-Atlantic and Heartland) with incomplete line-item detail",
+      "Lack of full back-end integration from recent acquisitions leading to decentralized buying behavior",
+      "Need to secure additional usage and contract data directly from suppliers due to poor internal visibility",
+      "Tight 4-6-month timeline to deliver savings while minimizing disruption to clinical operations",
+      "Incumbent clinical supplier relationships that may resist pricing pressure or vendor changes"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Basic AP and P-card spend data are available from two separate systems; contracts and detailed usage must be requested from suppliers.",
+    "data_quality_notes": "Multiple naming conventions, sparse item-level detail, and gaps caused by non-responsive suppliers; spend visibility not centralized across acquired practices.",
+    "source_file": "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "Assessment/AdvantiaHealth - Proposal Nov 29 2021.pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf",
+    "Project Updates/Kickoff/Advantia Strategic Sourcing Project Kickoff (100622).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from slides listing 'lack of strategic procurement focus/resources' and multi-site acquisition integration issues; no explicit org chart provided.",
+    "Data availability and quality issues drawn from Assessment slide 4, Typical Value Drivers slide 6, and Agreement \u00a73.2.1 describing data collection requirements."
+  ]
+}

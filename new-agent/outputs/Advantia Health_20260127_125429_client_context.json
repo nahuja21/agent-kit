@@ -1,0 +1,53 @@
+{
+  "client": {
+    "client_name": "Advantia Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Women\u2019s health services (OB-GYN, maternal-fetal, telehealth)",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site women\u2019s health physician practice platform operating OB-GYN clinics, specialty services and telehealth across several states",
+    "sponsor_pe_firm": "BlueMountain Capital Management (investment announced Jan 2020); earlier growth financing from Deerfield Management Company (Jan 2016)",
+    "client_history": "Founded in 2014 and headquartered in Arlington, Virginia, Advantia Health has grown through acquisitions (e.g., Heartland Women\u2019s Healthcare in 2019) and organic expansion to more than 60 clinics with over 200 providers serving roughly 430,000 patients."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Zippia ($13.0 M), Growjo ($22.4 M), Buzzfile ($29.1 M), CanvasBusinessModel ($89 M)",
+      "notes": "No official figure published. Third-party estimates range widely from $13 M to $89 M; none can be verified against company filings or press releases."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 60,
+      "confidence": "medium",
+      "source": "Advantia Health official website locations page (accessed via web search result) and 2020 press release citing 'over 60 locations'",
+      "notes": "Company press release (PRNewswire, Feb 2019) states acquisition brought total to 60+; website still lists 60+ clinics across MD, VA, DC, IL and MO."
+    },
+    "employees": {
+      "count": 501,
+      "confidence": "medium",
+      "source": "LeadIQ company profile (Dec 2025) listing ~501 employees; corroborated by Indeed and SignalHire ranges (500-1,000)",
+      "notes": "Buzzfile lists 259 which appears outdated. Majority of recent sources cluster around 500+, so 501 used as midpoint of latest specific figure."
+    }
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Proposal Nov 29 2021.pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021)",
+    "Advantia Health press release, PRNewswire 11-Feb-2019 (acquisition of Heartland Women\u2019s Healthcare)",
+    "Advantia Health press release, 07-Jan-2020 (BlueMountain $45 M investment)",
+    "Advantia Health official website \u2013 Locations page",
+    "LeadIQ company profile for Advantia Health (Dec 2025)",
+    "Zippia company page for Advantia Health \u2013 Revenue",
+    "Buzzfile profile for Advantia Health LLC \u2013 Revenue & employees",
+    "Growjo company page for Advantia Health \u2013 Revenue",
+    "CanvasBusinessModel.com article on Advantia Health ownership"
+  ],
+  "extraction_notes": [
+    "Official company name confirmed in signed services agreement (page 1).",
+    "Primary industry sector mapped to Healthcare Providers & Physician Practice Platforms per classification list.",
+    "PE sponsorship: Company is not wholly owned by a PE firm but received significant growth investments; BlueMountain Capital Management is the most recent and sits on the board, therefore listed.",
+    "Revenue numbers conflict heavily and lack authoritative confirmation; amount field left null with low confidence and range explained.",
+    "Location count taken from company website and corroborating press releases; exact number fluctuates slightly with clinic openings/closures, so 60 used.",
+    "Employee count varies by source; more recent talent databases align around 500+, whereas Buzzfile figure appears older. Medium confidence assigned."
+  ]
+}

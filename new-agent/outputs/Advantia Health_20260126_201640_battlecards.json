@@ -1,0 +1,177 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "athenahealth Inc.",
+      "category": "Billing Systems / RCM",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 3025000,
+      "final_spend": 2765800,
+      "savings_dollars": 259200,
+      "savings_percent": 9,
+      "levers_applied": [
+        "Incumbent renegotiation",
+        "Benchmark pricing analysis",
+        "Threat of RFP/market test",
+        "Volume\u2010tier restructuring"
+      ],
+      "alternatives_considered": [
+        "Launching full RFP to other RCM vendors",
+        "Migrating to athenaCollector only billing module"
+      ],
+      "why_selected": "Provided retroactive rate reduction to 3.15 % of collections without triggering $9 M early-termination fee; lowest overall switching risk.",
+      "why_not_selected": null,
+      "contract_terms": "3-year addendum effective 9/1/2022 with 3.15 % fee tier, retroactive pricing credit, price lock through Jan 2025",
+      "negotiation_leverage": "Benchmarks showed Advantia paying out-of-market rates; threat to issue RFP six months before 2025 renewal; early notice to avoid $9 M penalty highlighted win-win.",
+      "supplier_strengths": "Fully integrated EHR/PM/RCM platform, embedded workflows already adopted by 75+ providers, avoids re-implementation.",
+      "supplier_weaknesses": "Historically higher fees than market peers; aggressive termination penalties reduce flexibility.",
+      "switching_costs": "~$9 M early termination charge plus major clinical/workflow change and data migration effort.",
+      "key_contacts": null,
+      "notes": "Savings scenario analysis (Slides 5) used $110 M collections baseline.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant negotiation with incumbent",
+        "Benchmarking used",
+        "Savings >5 %"
+      ]
+    },
+    {
+      "supplier_name": "McKesson Medical-Surgical",
+      "category": "Medical Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1498946,
+      "final_spend": 1342336,
+      "savings_dollars": 156610,
+      "savings_percent": 14,
+      "levers_applied": [
+        "Competitive RFP",
+        "Distributor consolidation",
+        "Extended payment terms (30\u219260 days)"
+      ],
+      "alternatives_considered": [
+        "Medline",
+        "Cardinal Health",
+        "ThermoFisher"
+      ],
+      "why_selected": "Most competitive BAFO pricing for Heartland region, agreed to formulary support and 60-day terms.",
+      "why_not_selected": null,
+      "contract_terms": "Draft master distribution agreement\u2014 formulary & inventory management, dedicated implementation resources, QBRs; term 3 years (contract negotiations 8/22 & 9/16 updates).",
+      "negotiation_leverage": "Ability to award all Heartland volume; head-to-head pricing transparency from multi-round RFP.",
+      "supplier_strengths": "Broad product portfolio, strong logistics, GPO pricing via Premier/Vizient.",
+      "supplier_weaknesses": "Historically mixed service in Mid-Atlantic; higher minimums vs some competitors.",
+      "switching_costs": "System set-up, staff training on ordering portal, back-end contract price loads.",
+      "key_contacts": null,
+      "notes": "McKesson replaced Medline in Heartland while retaining Mid-Atlantic book, creating single enterprise partner per region.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Multiple bidders",
+        "Supplier consolidation",
+        "Savings >5 %"
+      ]
+    },
+    {
+      "supplier_name": "Laboratory Corporation of America (LabCorp)",
+      "category": "Lab Services",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 423792,
+      "final_spend": 383574,
+      "savings_dollars": 40218,
+      "savings_percent": 9,
+      "levers_applied": [
+        "Competitive RFQ",
+        "Best-and-final offer negotiation",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "Quest Diagnostics"
+      ],
+      "why_selected": "Met minimum 10 % savings while avoiding operational disruption and LIS re-integration required for a switch.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing addendum locking BAFO rates; planned start 10/15/2022; term aligned to existing service agreements.",
+      "negotiation_leverage": "Quest\u2019s 19 % cheaper proposal provided credible switch threat; incumbency not guaranteed.",
+      "supplier_strengths": "Embedded phlebotomy staff, existing athenaNet interface, known service levels.",
+      "supplier_weaknesses": "Initial pricing out of market; limited flexibility on certain high-volume tests.",
+      "switching_costs": "Re-credentialing, new courier routes, interface build/testing, practice staff retraining.",
+      "key_contacts": null,
+      "notes": "Savings reflected in Project Close-out slide 3; RFQ data slide 8 shows line-item comparisons.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFQ with competitive BAFO",
+        "Incumbent renegotiation",
+        "Savings >5 %"
+      ]
+    },
+    {
+      "supplier_name": "Quest Diagnostics",
+      "category": "Lab Services",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": 66873,
+      "savings_percent": 19,
+      "levers_applied": [
+        "Competitive RFQ"
+      ],
+      "alternatives_considered": [
+        "LabCorp"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Operational change deemed too disruptive despite higher savings; decision made to stay with incumbent LabCorp.",
+      "contract_terms": null,
+      "negotiation_leverage": "Aggressive BAFO pricing (19 % less than baseline) used to pressure incumbent.",
+      "supplier_strengths": "Lowest evaluated pricing on key test SKUs; broad national footprint.",
+      "supplier_weaknesses": "Required transition of phlebotomy services and new interfaces; uncertainty on service levels for Mid-Atlantic practices.",
+      "switching_costs": "Courier set-up, staff workflow changes, IT interface build.",
+      "key_contacts": null,
+      "notes": "Remained competitive option for future rebids.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFQ",
+        "Significant potential savings"
+      ]
+    },
+    {
+      "supplier_name": "IT Imaging Inc.",
+      "category": "Sonography Services",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 819732,
+      "final_spend": 0,
+      "savings_dollars": 152115,
+      "savings_percent": 19,
+      "levers_applied": [
+        "Insourcing",
+        "Scenario modelling",
+        "Supplier negotiation (no-response)"
+      ],
+      "alternatives_considered": [
+        "Staffmark (Recruiter on Demand)",
+        "In-house recruiting model"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Pay-per-scan model significantly more expensive than hybrid in-house solution; supplier unresponsive to scheduling & pricing discussions.",
+      "contract_terms": null,
+      "negotiation_leverage": "Ability to bring sonography fully in-house and supplement with agency if needed.",
+      "supplier_strengths": "Flexible per-scan billing, no upfront staffing costs.",
+      "supplier_weaknesses": "High per-scan rate ($50), limited responsiveness, no long-term cost control.",
+      "switching_costs": "Recruitment ramp-up and onboarding of full-time sonographers; need for supplemental agency coverage during transition.",
+      "key_contacts": null,
+      "notes": "Treya recommended Staffmark 20 % utilization to cover gaps during transition.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier displaced",
+        "Scenario modelling with multiple options",
+        "Savings >5 %"
+      ]
+    }
+  ]
+}
