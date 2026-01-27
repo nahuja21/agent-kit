@@ -1,0 +1,49 @@
+{
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology, PC (APDerm)",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology",
+    "business_model": "Physician-led, multi-site dermatology network providing medical, surgical and cosmetic skin-care services across New England",
+    "sponsor_pe_firm": "Waud Capital Partners",
+    "client_history": "Founded in 1992 as a solo practice, APDerm has grown through acquisitions and new-office openings to become the largest physician-led dermatology practice in New England, operating dozens of clinics in Massachusetts, New Hampshire, and Rhode Island."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "LeadIQ (2.7 M USD, Dec-2025) vs Growjo (44.7 M USD, 2024)",
+      "notes": "Publicly available estimates vary widely (2.7 M\u201344.7 M). No figure from company or filings; therefore amount is set to null."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 27,
+      "confidence": "medium",
+      "source": "apderm.com About-Us page (\"over 30 locations\", accessed 2026-01) vs apderm.com blog post 2026-01 (\"24 locations\")",
+      "notes": "Official website gives two different counts (\"over 30\" and 24). Using midpoint 27 as representative; exact number unclear."
+    },
+    "employees": {
+      "count": 350,
+      "confidence": "low",
+      "source": "LeadIQ (501), SignalHire (\u2248249), Growjo (154), Seamless.ai (201-500)",
+      "notes": "Employee estimates range 154\u2013501. Average of available figures (~350) shown; no LinkedIn headcount located in provided sources."
+    }
+  },
+  "extraction_sources": [
+    "Case Study/Treya Case Study_APDerm vF.pdf (pages 2-3)",
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf (page 1)",
+    "apderm.com About-Us page (web search result: Company Overview)",
+    "apderm.com blog post on partnership with Dermatology Professionals (web search result: PE/Ownership)",
+    "Growjo company profile for APDerm",
+    "LeadIQ company profile for APDerm",
+    "SignalHire company profile for APDerm",
+    "Seamless.ai company profile for APDerm"
+  ],
+  "extraction_notes": [
+    "Official company name confirmed in signed services agreement (\u201cAdult & Pediatric Dermatology, PC\u201d).",
+    "Private-equity ownership explicitly stated in Treya case study and Provident/Waud Capital web sources.",
+    "No reliable, consistent revenue figure available; wide variance across estimation sites with no corroboration from official sources.",
+    "Location count conflicted between two statements on company website (24 vs \u201cover 30\u201d); selected midpoint and marked confidence as medium.",
+    "Employee count highly variable across data-scraping sites; no definitive LinkedIn data provided, so average used with low confidence."
+  ]
+}

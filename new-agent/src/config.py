@@ -65,15 +65,6 @@ MAX_TOKENS = 16000  # Max output tokens (increased for o3)
 TEMPERATURE = 0.7  # Balanced creativity/consistency (not used by o3)
 
 
-# ============================================================================
-# Feature Flags
-# ============================================================================
-# Multi-phase project detection and extraction
-# When True: Detects Phase 1/Phase 2 folders and extracts separately
-# When False: Treats everything as single project (original behavior)
-ENABLE_MULTI_PHASE = False  # Set to True to enable multi-phase extraction
-
-
 def validate_config() -> list[str]:
     """Validate configuration and return list of errors."""
     errors = []

@@ -1,0 +1,30 @@
+{
+  "engagement_background": {
+    "objective": "Generate meaningful procurement cost savings and enterprise value for APDerm by leveraging enterprise-wide purchasing power across fragmented, multi-site spend, thereby supporting Waud Capital\u2019s value-creation plan during a period of inflation and supply-chain pressure.",
+    "scope_summary": "Two-phase strategic sourcing program covering approximately $6.3 million in annual addressable spend across 10+ indirect spend categories (e.g., medical supplies, employee benefits, office supplies, small parcel, courier, IT hardware/software, telecom). Activities included competitive RFPs, incumbent negotiations, and use of Group Purchasing Organization (GPO) contracts; no clinical revenue-generating procedures were in scope.",
+    "constraints_challenges": [
+      "Fragmented supply base and decentralized buying across numerous New England clinic locations acquired over time",
+      "Limited spend visibility and multiple uncoordinated supplier contracts, making baseline creation difficult",
+      "Inflationary market conditions and pandemic-related supply-chain disruptions driving rising input costs",
+      "Need to preserve service quality and minimize operational disruption, keeping most business with incumbent vendors",
+      "Requirement to obtain detailed usage data from suppliers where complete historical data was often unavailable or slow to retrieve"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Accounts-payable spend data and some supplier contracts could be pulled from internal systems, but no centralized repository; detailed SKU/usage data had to be requested from high-spend suppliers.",
+    "data_quality_notes": "Spend data lacked standard vendor naming; historical line-item data incomplete\u2014engagement allowed for representative samples after six weeks of supplier outreach.",
+    "source_file": "Case Study/Treya Case Study_APDerm vF.pdf; Project Updates/Kick Off/AP Derm Strategic Sourcing Project Kickoff 011121 v1.pptx; Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Project Updates/Kick Off/AP Derm Strategic Sourcing Project Kickoff 011121 v1.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from statements about decentralized purchasing, fragmented supply base, and lack of leveraged contracts.",
+    "Data-quality assessment drawn from Agreement language describing difficulty obtaining complete line-item usage data."
+  ]
+}

@@ -1,55 +1,30 @@
 # Anchor Detection Prompt
 # Step: Identify key anchor files and folders in project directory
 # Updated to agent-kit style format
-# Supports multi-phase projects
 
 step: anchor_detection
 
 prompt:
   instructions: |
     You are a document analyst. Analyze the directory structure and find the requested files/folders.
-    
-    IMPORTANT: Check for MULTI-PHASE projects.
-    - Look for folders/files with "Phase 1", "Phase 2", "Ph1", "Ph2" etc.
-    - If you find multiple phases, report anchors SEPARATELY for each phase
-    - "Waves" (Wave 1, Wave 2) are WITHIN a phase, not separate phases - combine them
-    
     Return only valid JSON matching the specified format.
 
   user_template: |
     # Anchor File/Folder Detection
 
     You are analyzing a project folder structure to find specific "anchor" files and folders that are important for case study extraction.
-    
-    {{#if phase_info}}
-    ## DETECTED PHASES
-    This is a MULTI-PHASE project. The following phases were detected:
-    {{phase_info}}
-    
-    You MUST report anchors SEPARATELY for each phase. See response format below.
-    {{/if}}
 
     ## Directory Tree:
     ```
     {{directory_tree}}
     ```
-    
-    ## FIRST: Check for Multi-Phase Structure
-    
-    Before finding anchors, determine if this is a multi-phase project:
-    - Look for folders named "Phase 1", "Phase 2", "Ph1", "Ph2", etc.
-    - Look for separate Agreements per phase (e.g., "Phase 1 Agreement", "Phase 2 Agreement")
-    - Look for Exhibits with phase numbers (e.g., "Phase 2 Exhibit A")
-    
-    NOTE: "Waves" (Wave 1, Wave 2) are WITHIN a single phase and should be treated together.
 
-    ## Files/Folders to Find (for EACH phase if multi-phase):
+    ## Files/Folders to Find:
 
     ### 1. Agreement (FOLDER)
     - Look for folders named "Agreement", "Agreements", or containing "Agreement" in the name
-    - For multi-phase: look for phase-specific agreements (e.g., "Phase 2 Agreement")
-    - An additional Exhibit for a new phase might be in the SAME Agreement folder
     - If there are multiple, pick the one with the MOST RECENT date in the folder name
+    - Date formats could be: "2021-03-15", "March 2021", "3-15-21", "Q3 2021", etc.
 
     ### 2. Assessment (FOLDER)
     - Look for folders named "Assessment", "Assessments", or containing "Assessment" in the name
@@ -63,7 +38,6 @@ prompt:
 
     ### 4. Kickoff (FILE or FOLDER)
     - Look for files or folders named "Kickoff", "Kick-off", "Kick off", or containing these terms
-    - For multi-phase: there might be separate kickoffs per phase
     - Common file types: .pptx, .pdf
     - If there are multiple, pick the one with the MOST RECENT date in the name
     - Return the TYPE as "file" or "folder"
@@ -72,31 +46,20 @@ prompt:
     - Search ANYWHERE in the directory tree for files containing "ProjectUpdate", "Project Update", "Project_Update"
     - These are typically .pptx files but could be other formats
     - Return UP TO 5 of them, sorted by the date in filename (MOST RECENT first)
-    - For multi-phase: try to identify which updates belong to which phase
     - If they are all in one folder, that's fine. If scattered, list each file path.
 
     ### 6. Project Close Out (FILE or FOLDER)
     - Look for files or folders named "Close Out", "CloseOut", "Closeout", "Close-Out", "Project Close"
     - Could also be called "Final Update", "Project Completion"
-    - For multi-phase: there might be separate closeouts per phase
     - If there are multiple, pick the one with the MOST RECENT date in the name
     - Return the TYPE as "file" or "folder"
-    
-    ### 7. Categories (FOLDER)
-    - Look for folders named "Categories", "Category", or containing category names
-    - For multi-phase: might have "Phase 1 Categories", "Phase 2 Categories"
-    - Include Wave folders (e.g., "Wave 2/Categories") as part of the same phase
 
     ## Response Format:
 
-    ### For SINGLE-PHASE projects (or no explicit phases):
-    
     Return ONLY valid JSON in this exact format:
 
     ```json
     {
-      "is_multi_phase": false,
-      "phases": [],
       "agreement": {
         "found": true,
         "type": "folder",
@@ -134,92 +97,27 @@ prompt:
         "type": null,
         "path": null,
         "date_in_name": null
-      },
-      "categories": {
-        "found": true,
-        "type": "folder",
-        "path": "Categories/",
-        "date_in_name": null
-      }
-    }
-    ```
-    
-    ### For MULTI-PHASE projects:
-    
-    ```json
-    {
-      "is_multi_phase": true,
-      "phases": [
-        {
-          "phase_name": "Phase 1",
-          "phase_number": 1,
-          "agreement": {
-            "found": true,
-            "type": "folder",
-            "path": "Phase 1/Agreement/",
-            "exhibit_paths": ["Phase 1/Agreement/Exhibit A.pdf", "Phase 1/Agreement/Exhibit B.pdf"]
-          },
-          "assessment": { "found": true, "type": "folder", "path": "Phase 1/Assessment/" },
-          "kickoff": { "found": true, "type": "file", "path": "Phase 1/Kickoff.pptx" },
-          "project_updates": { "found": true, "type": "files", "paths": ["Phase 1/Updates/Update1.pptx"] },
-          "project_close_out": { "found": true, "type": "file", "path": "Phase 1/Closeout.pptx" },
-          "categories": { "found": true, "type": "folder", "path": "Phase 1/Categories/" },
-          "waves": ["Wave 1", "Wave 2"]
-        },
-        {
-          "phase_name": "Phase 2",
-          "phase_number": 2,
-          "agreement": {
-            "found": true,
-            "type": "folder",
-            "path": "Agreement/",
-            "exhibit_paths": ["Agreement/Phase 2 Exhibit A.pdf"]
-          },
-          "assessment": { "found": false },
-          "kickoff": { "found": true, "type": "file", "path": "Phase 2/Kickoff.pptx" },
-          "project_updates": { "found": true, "type": "files", "paths": ["Phase 2/Updates/Update1.pptx"] },
-          "project_close_out": { "found": false },
-          "categories": { "found": true, "type": "folder", "path": "Phase 2/Categories/" },
-          "waves": []
-        }
-      ],
-      "case_study": {
-        "found": true,
-        "type": "file",
-        "path": "Case Study/Final Case Study.pdf",
-        "covers_phases": ["Phase 1", "Phase 2"]
       }
     }
     ```
 
     IMPORTANT:
     - Use the EXACT paths as they appear in the directory tree
-    - For "project_updates", return an array of paths (up to 5 per phase)
+    - For "project_updates", return an array of paths (up to 5)
     - For other anchors, return a single path string
-    - If not found, set "found": false and omit other fields
-    - "date_in_name" should be the date extracted from the filename (normalized to YYYY-MM-DD if possible)
-    - For multi-phase: Case Study often covers ALL phases (shared document)
-    - For multi-phase: Assessment is typically done once at the start
-    - "waves" within a phase should be combined (e.g., Wave 1 and Wave 2 in Phase 1)
+    - If not found, set "found": false and all other fields to null
+    - "date_in_name" should be the date extracted from the filename (normalized to YYYY-MM-DD if possible, otherwise as found)
 
 parameters:
   - name: directory_tree
     type: string
     required: true
     description: "Text representation of the project directory structure"
-  
-  - name: phase_info
-    type: string
-    required: false
-    description: "Information about detected phases (if any)"
 
 examples:
-  - note: "Single-phase project"
-    input: "Project with Agreement folder and Case Study PDF"
+  - input: "Project with Agreement folder and Case Study PDF"
     output: |
       {
-        "is_multi_phase": false,
-        "phases": [],
         "agreement": {
           "found": true,
           "type": "folder",
@@ -249,7 +147,8 @@ examples:
           "type": "files",
           "paths": [
             "Project Updates/Weekly Leadership Updates/Project Update (091421).pptx",
-            "Project Updates/Weekly Leadership Updates/Project Update (090721).pptx"
+            "Project Updates/Weekly Leadership Updates/Project Update (090721).pptx",
+            "Project Updates/Weekly Leadership Updates/Project Update (083121).pptx"
           ]
         },
         "project_close_out": {
@@ -257,41 +156,5 @@ examples:
           "type": null,
           "path": null,
           "date_in_name": null
-        },
-        "categories": {
-          "found": true,
-          "type": "folder",
-          "path": "Categories/"
         }
-      }
-  
-  - note: "Multi-phase project"
-    input: "Project with Phase 1 and Phase 2 folders"
-    output: |
-      {
-        "is_multi_phase": true,
-        "phases": [
-          {
-            "phase_name": "Phase 1",
-            "phase_number": 1,
-            "agreement": { "found": true, "type": "folder", "path": "Agreement/", "exhibit_paths": ["Agreement/Exhibit A.pdf"] },
-            "kickoff": { "found": true, "type": "file", "path": "Phase 1/Kickoff.pptx" },
-            "project_updates": { "found": true, "type": "files", "paths": ["Phase 1/Updates/Update1.pptx"] },
-            "project_close_out": { "found": true, "type": "file", "path": "Phase 1/Closeout.pptx" },
-            "categories": { "found": true, "type": "folder", "path": "Categories/" },
-            "waves": ["Wave 1"]
-          },
-          {
-            "phase_name": "Phase 2",
-            "phase_number": 2,
-            "agreement": { "found": true, "type": "folder", "path": "Agreement/", "exhibit_paths": ["Agreement/Phase 2 Exhibit A.pdf"] },
-            "kickoff": { "found": true, "type": "file", "path": "Phase 2/Kickoff.pptx" },
-            "project_updates": { "found": true, "type": "files", "paths": ["Phase 2/Updates/Update1.pptx"] },
-            "project_close_out": { "found": false },
-            "categories": { "found": true, "type": "folder", "path": "Phase 2/Categories/" },
-            "waves": ["Wave 2"]
-          }
-        ],
-        "assessment": { "found": true, "type": "folder", "path": "Assessment/" },
-        "case_study": { "found": true, "type": "file", "path": "Case Study/Final.pdf", "covers_phases": ["Phase 1", "Phase 2"] }
       }

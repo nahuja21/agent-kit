@@ -1,0 +1,33 @@
+{
+  "engagement_background": {
+    "objective": "APDerm engaged Treya Partners to reduce procurement costs, gain enterprise-wide spend visibility, and leverage its purchasing power across a fragmented, multi-location supply base in order to create EBITDA / enterprise value for its private-equity owner during an inflationary, supply-constrained market.",
+    "scope_summary": "Treya executed a two-phase strategic sourcing program covering more than 10 indirect spend categories with a combined baseline of roughly $6.3 million. Phase 1 tackled high-value areas such as medical supplies, courier, telecom, IT hardware, office supplies and small-parcel; Phase 2 focused on eight additional categories\u2014Billing Services, Janitorial, IT Managed Services, Laundry/Linen, Non-IT Temp Labor, Copier/Print Services, Uniforms, and (initially) Waste Management\u2014representing about $3.5 million in annual AP spend. Waste Management was later removed from scope after a new Stericycle contract limited savings potential.",
+    "constraints_challenges": [
+      "Decentralized purchasing across dozens of New England clinic locations that were added through acquisitions, resulting in a fragmented supplier landscape.",
+      "Minimal spend visibility and inconsistent AP data\u2014significant vendor deduplication and GL mapping effort required to establish a usable baseline.",
+      "Limited internal procurement resources; client stakeholders needed to provide timely input while maintaining day-to-day clinic operations.",
+      "Ongoing pandemic-era inflation and supply-chain disruptions increased price volatility and supplier sensitivity.",
+      "Requirement to preserve clinical service quality and minimize operational disruption, favoring incumbent retention where possible."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Accounts-payable transaction data (10/1/20-9/30/21) was available in spreadsheets; contract files had to be manually collected from individual sites; no centralized contract repository or spend analytics system existed.",
+    "data_quality_notes": "Multiple vendor naming conventions, high percentage of 'Unmapped' spend, and gaps in supplier usage data necessitated vendor deduping and GL mapping before analysis; some suppliers never provided detail despite repeated requests.",
+    "source_file": "Case Study/Treya Case Study_APDerm vF.pdf; Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx; Wave 2/Kickoff/APDerm Phase 2 Project Kickoff (Nov. 9, 2021).pptx; Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf",
+    "confidence": "high"
+  },
+  "extraction_sources": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx",
+    "Wave 2/Kickoff/APDerm Phase 2 Project Kickoff (Nov. 9, 2021).pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity explicitly described as 'fragmented supply base' and 'decentralized purchasing' in case study.",
+    "Scope dollar values pulled from case study summary ($6.3M) and Phase 2 savings tracker ($3.5M).",
+    "Data challenges evidenced by large 'Unmapped' spend rows and presence of vendor/GL mapping workbook tabs.",
+    "Waste Management shown as 'Out of Scope' in June 29 2022 project update."
+  ]
+}

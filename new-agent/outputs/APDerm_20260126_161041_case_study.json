@@ -1,0 +1,33 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objectives, quantified $1.18M savings and multiple documented proof points are available\u2014sufficient for a strong, marketing-ready case study.",
+    "headline": "PE-backed dermatology network secures $1.18 M in recurring savings and 6\u00d7 ROI through Treya\u2019s strategic sourcing program",
+    "client_problem_statement": "Adult & Pediatric Dermatology (APDerm) had grown to dozens of clinics across New England, but purchasing remained highly decentralized. Fragmented vendor contracts, limited spend visibility, and pandemic-driven cost inflation were eroding margins and slowing Waud Capital Partners\u2019 value-creation timeline. APDerm needed a fast, low-disruption way to leverage its enterprise buying power and contain indirect costs without distracting clinical staff.",
+    "approach_summary": [
+      "Analyzed accounts-payable data and supplier files to build a $6.3 M addressable baseline across 12 indirect spend categories.",
+      "Executed two waves of competitive RFPs and incumbent renegotiations\u2014retaining incumbents in most cases to accelerate implementation.",
+      "Leveraged Premier and HPG GPO tiers to cut medical-supply pricing by 27 %, delivering $485 K annual savings with McKesson.",
+      "Consolidated 50+ vendors\u2014e.g., routing all 33 sites to one janitorial provider and moving parcel shipping to Treya\u2019s UPS program\u2014to unlock scale discounts of 20 - 30 %.",
+      "Established centralized reporting, contract repository, and supplier QBR cadence to sustain savings and procurement discipline."
+    ],
+    "top_levers": [
+      "Competitive RFP & BAFO negotiations",
+      "GPO tier optimization",
+      "Incumbent contract renegotiation",
+      "Vendor consolidation / volume aggregation"
+    ],
+    "value_delivered_blurb": "Treya delivered $1,179,965 in verified annual run-rate savings\u201419 % of the $6.3 M baseline\u2014triple the contractual savings guarantee and equivalent to a 6.2\u00d7 return on the $190 K fixed project fee. Beyond the financial impact, APDerm now benefits from standardized pricing, a 50-vendor reduction, and new visibility into spend that positions the platform for future growth and tuck-in acquisitions.",
+    "where_we_were_unique": [
+      "Achieved first contract signature and savings realization within 90 days of kick-off.",
+      "Healthcare-specific GPO expertise unlocked pricing not accessible through standard distributor channels.",
+      "Collaborative, low-disruption approach kept 80 % of spend with preferred incumbents, protecting clinic operations.",
+      "Delivered savings despite inflationary headwinds, outperforming the 2\u00d7 fee savings guarantee by more than 3\u00d7."
+    ]
+  },
+  "generation_notes": [
+    "Savings figure of $1.18 M is the combined Phase-1 and Phase-2 low-end totals from Aug 2022 close-out deck.",
+    "ROI calculated as $1.18 M \u00f7 $0.19 M fixed fee = 6.2\u00d7.",
+    "Approach bullets ordered to mirror project chronology and impact size."
+  ]
+}

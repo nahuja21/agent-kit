@@ -28,7 +28,6 @@ from src.config import (
     MODEL,
     validate_config,
     ensure_directories,
-    ENABLE_MULTI_PHASE,
 )
 from src.scanner import DirectoryScanner, find_project_in_inputs, extract_zip_project
 from src.llm import OpenAIClient
@@ -818,21 +817,6 @@ ANALYSIS OUTPUT
         
         self.console.print(f"[green]✓[/green] Found {scan_result.total_files} files in {scan_result.total_folders} folders")
         
-        # Display phase detection results (only if multi-phase is enabled)
-        if ENABLE_MULTI_PHASE:
-            if scan_result.is_multi_phase:
-                self.console.print(f"\n[bold yellow]📋 MULTI-PHASE PROJECT DETECTED[/bold yellow]")
-                self.console.print(f"[yellow]Found {len(scan_result.phases)} phases:[/yellow]")
-                for phase in scan_result.phases:
-                    wave_str = f" (includes: {', '.join(phase.waves)})" if phase.waves else ""
-                    self.console.print(f"  • [bold]{phase.phase_name}[/bold]: {len(phase.files)} files{wave_str}")
-                self.console.print()
-            elif scan_result.phases:
-                # Single explicitly labeled phase
-                phase = scan_result.phases[0]
-                wave_str = f" (includes: {', '.join(phase.waves)})" if phase.waves else ""
-                self.console.print(f"[dim]Phase detected: {phase.phase_name}{wave_str}[/dim]")
-        
         # =====================================================================
         # STEP 2: Anchor File/Folder Detection
         # =====================================================================
@@ -841,21 +825,7 @@ ANALYSIS OUTPUT
             border_style="cyan",
         ))
         
-        # Build phase info string if phases detected
-        phase_info = ""
-        if scan_result.is_multi_phase and scan_result.phases:
-            phase_lines = []
-            for phase in scan_result.phases:
-                wave_str = f" (Waves: {', '.join(phase.waves)})" if phase.waves else ""
-                phase_lines.append(f"- {phase.phase_name}{wave_str}: {len(phase.files)} files")
-                if phase.folders:
-                    phase_lines.append(f"  Folders: {', '.join(phase.folders[:3])}...")
-            phase_info = "\n".join(phase_lines)
-        
-        system_prompt, user_prompt = get_anchor_detection_prompt(
-            scan_result.to_tree_string(),
-            phase_info=phase_info,
-        )
+        system_prompt, user_prompt = get_anchor_detection_prompt(scan_result.to_tree_string())
         
         with self.console.status(f"[cyan]Asking {MODEL} to find anchor files...[/cyan]"):
             try:
@@ -883,73 +853,6 @@ ANALYSIS OUTPUT
         
         # Show token usage
         self.console.print(f"\n[dim]Tokens: {anchor_response.input_tokens:,} in / {anchor_response.output_tokens:,} out[/dim]")
-        
-        # =====================================================================
-        # MULTI-PHASE HANDLING (controlled by ENABLE_MULTI_PHASE config)
-        # =====================================================================
-        # Only use multi-phase if enabled in config AND detected in anchor data
-        is_multi_phase = ENABLE_MULTI_PHASE and anchor_data.get("is_multi_phase", False)
-        phases_data = anchor_data.get("phases", []) if is_multi_phase else []
-        
-        # Initialize phase results storage
-        all_phase_results = {}
-        
-        if is_multi_phase and phases_data:
-            self.console.print(Panel(
-                f"[bold yellow]Multi-Phase Extraction: {len(phases_data)} phases detected[/bold yellow]",
-                border_style="yellow",
-            ))
-            
-            # Run extraction for each phase
-            for phase_idx, phase_anchor in enumerate(phases_data):
-                phase_name = phase_anchor.get("phase_name", f"Phase {phase_idx + 1}")
-                phase_number = phase_anchor.get("phase_number", phase_idx + 1)
-                
-                self.console.print(f"\n[bold magenta]{'═' * 60}[/bold magenta]")
-                self.console.print(f"[bold magenta]EXTRACTING: {phase_name}[/bold magenta]")
-                self.console.print(f"[bold magenta]{'═' * 60}[/bold magenta]\n")
-                
-                # Create phase-specific anchor data
-                phase_specific_anchor = {
-                    "agreement": phase_anchor.get("agreement", {}),
-                    "assessment": anchor_data.get("assessment", {}),  # Shared
-                    "case_study": anchor_data.get("case_study", {}),  # Shared
-                    "kickoff": phase_anchor.get("kickoff", {}),
-                    "project_updates": phase_anchor.get("project_updates", {}),
-                    "project_close_out": phase_anchor.get("project_close_out", {}),
-                    "categories": phase_anchor.get("categories", {}),
-                }
-                
-                # Run extraction for this phase
-                phase_result = self._run_phase_extraction(
-                    project_path=project_path,
-                    scan_result=scan_result,
-                    anchor_data=phase_specific_anchor,
-                    phase_name=phase_name,
-                    phase_number=phase_number,
-                )
-                
-                all_phase_results[phase_name] = phase_result
-            
-            # =====================================================================
-            # STEP 8: Combined Case Study Generation (Multi-Phase)
-            # =====================================================================
-            self.console.print(Panel(
-                "[bold]Step 8/8:[/bold] Generating Combined Case Study (Multi-Phase)",
-                border_style="cyan",
-            ))
-            
-            self._run_multiphase_case_study_generation(
-                project_path=project_path,
-                scan_result=scan_result,
-                all_phase_results=all_phase_results,
-            )
-            
-            return  # End multi-phase flow
-        
-        # =====================================================================
-        # SINGLE-PHASE EXTRACTION (Original Flow)
-        # =====================================================================
         
         # =====================================================================
         # STEP 3: Project Scope Extraction (from Agreement)
@@ -2456,382 +2359,62 @@ When extracting, cite which source provided each data point."""
         """Display anchor detection results in a nice format."""
         self.console.print("\n[bold cyan]═══ ANCHOR FILES/FOLDERS DETECTION ═══[/bold cyan]\n")
         
-        # Check if multi-phase
-        is_multi_phase = anchor_data.get("is_multi_phase", False)
-        phases = anchor_data.get("phases", [])
+        found_count = 0
+        total_count = 6
         
-        if is_multi_phase and phases:
-            self.console.print("[bold yellow]📋 MULTI-PHASE PROJECT[/bold yellow]\n")
+        # Define display order and labels
+        anchors = [
+            ("agreement", "Agreement Folder", "folder"),
+            ("assessment", "Assessment Folder", "folder"),
+            ("case_study", "Case Study", "file_or_folder"),
+            ("kickoff", "Kickoff", "file_or_folder"),
+            ("project_updates", "Project Updates", "files"),
+            ("project_close_out", "Project Close Out", "file_or_folder"),
+        ]
+        
+        for key, label, expected_type in anchors:
+            data = anchor_data.get(key, {})
+            found = data.get("found", False)
             
-            # Display shared anchors first
-            self._display_single_anchor("Assessment", anchor_data.get("assessment", {}))
-            self._display_single_anchor("Case Study", anchor_data.get("case_study", {}))
-            
-            # Display per-phase anchors
-            for phase in phases:
-                phase_name = phase.get("phase_name", "Unknown Phase")
-                waves = phase.get("waves", [])
-                wave_str = f" [dim](includes: {', '.join(waves)})[/dim]" if waves else ""
+            if found:
+                found_count += 1
+                self.console.print(f"[green]✅ {label}[/green]")
                 
-                self.console.print(f"\n[bold magenta]── {phase_name}{wave_str} ──[/bold magenta]")
-                
-                self._display_single_anchor("Agreement", phase.get("agreement", {}), indent=2)
-                self._display_single_anchor("Kickoff", phase.get("kickoff", {}), indent=2)
-                self._display_single_anchor("Categories", phase.get("categories", {}), indent=2)
-                self._display_single_anchor("Project Updates", phase.get("project_updates", {}), indent=2, is_multi=True)
-                self._display_single_anchor("Close Out", phase.get("project_close_out", {}), indent=2)
-            
-            self.console.print(f"\n[green]Multi-phase project with {len(phases)} phases detected[/green]")
-        else:
-            # Single phase - original display
-            found_count = 0
-            total_count = 6
-            
-            # Define display order and labels
-            anchors = [
-                ("agreement", "Agreement Folder", "folder"),
-                ("assessment", "Assessment Folder", "folder"),
-                ("case_study", "Case Study", "file_or_folder"),
-                ("kickoff", "Kickoff", "file_or_folder"),
-                ("project_updates", "Project Updates", "files"),
-                ("project_close_out", "Project Close Out", "file_or_folder"),
-            ]
-            
-            for key, label, expected_type in anchors:
-                data = anchor_data.get(key, {})
-                found = data.get("found", False)
-                
-                if found:
-                    found_count += 1
-                    self.console.print(f"[green]✅ {label}[/green]")
-                    
-                    if key == "project_updates":
-                        # Multiple paths
-                        paths = data.get("paths", [])
-                        for path in paths:
-                            self.console.print(f"   [dim]└─[/dim] {path}")
-                        if data.get("invalid_paths"):
-                            for path in data["invalid_paths"]:
-                                self.console.print(f"   [red]└─ (invalid)[/red] [dim]{path}[/dim]")
-                    else:
-                        # Single path
-                        path = data.get("path", "(unknown)")
-                        anchor_type = data.get("type", "")
-                        date_str = data.get("date_in_name", "")
-                        
-                        type_indicator = ""
-                        if anchor_type == "folder":
-                            type_indicator = "📁 "
-                        elif anchor_type == "file":
-                            type_indicator = "📄 "
-                        
-                        date_indicator = f" [dim](date: {date_str})[/dim]" if date_str else ""
-                        self.console.print(f"   [dim]└─[/dim] {type_indicator}{path}{date_indicator}")
-                    
-                    # Show validation error if any
-                    if data.get("validation_error"):
-                        self.console.print(f"   [red]⚠️ {data['validation_error']}[/red]")
+                if key == "project_updates":
+                    # Multiple paths
+                    paths = data.get("paths", [])
+                    for path in paths:
+                        self.console.print(f"   [dim]└─[/dim] {path}")
+                    if data.get("invalid_paths"):
+                        for path in data["invalid_paths"]:
+                            self.console.print(f"   [red]└─ (invalid)[/red] [dim]{path}[/dim]")
                 else:
-                    self.console.print(f"[red]❌ {label}[/red]")
-                    self.console.print(f"   [dim]└─ (Not found)[/dim]")
-                
-                self.console.print()  # Blank line between sections
-            
-            # Summary
-            status_color = "green" if found_count >= 4 else "yellow" if found_count >= 2 else "red"
-            self.console.print(f"[{status_color}]Found: {found_count}/{total_count} anchor sections[/{status_color}]")
-    
-    def _run_phase_extraction(
-        self,
-        project_path: Path,
-        scan_result,
-        anchor_data: dict,
-        phase_name: str,
-        phase_number: int,
-    ) -> dict:
-        """
-        Run extraction steps 3-7 for a single phase.
-        
-        Returns a dict with all extraction results for this phase.
-        """
-        phase_result = {
-            "phase_name": phase_name,
-            "phase_number": phase_number,
-            "project_scope": None,
-            "client_context": None,
-            "engagement_background": None,
-            "impact": None,
-            "categories": None,
-        }
-        
-        # =====================================================================
-        # STEP 3: Project Scope Extraction (from Agreement)
-        # =====================================================================
-        self.console.print(Panel(
-            f"[bold]{phase_name} - Step 3:[/bold] Extracting Project Scope",
-            border_style="cyan",
-        ))
-        
-        agreement_info = anchor_data.get("agreement", {})
-        if not agreement_info.get("found"):
-            self.console.print(f"[yellow]⚠️ No Agreement found for {phase_name}[/yellow]")
-            # Try to use exhibit_paths if available
-            exhibit_paths = agreement_info.get("exhibit_paths", [])
-            if exhibit_paths:
-                self.console.print(f"[dim]Found exhibit paths: {exhibit_paths}[/dim]")
-        else:
-            agreement_path = agreement_info.get("path", "")
-            self.console.print(f"[green]✓[/green] Agreement at: {agreement_path}")
-            
-            # Extract project scope (simplified for phase)
-            agreement_folder = project_path / agreement_path
-            pdf_files = []
-            if agreement_folder.is_dir():
-                pdf_files = list(agreement_folder.rglob("*.pdf"))
-            elif agreement_folder.is_file() and agreement_folder.suffix.lower() == ".pdf":
-                pdf_files = [agreement_folder]
-            
-            if pdf_files:
-                # Use the first PDF (or combine)
-                agreement_content = ""
-                for pdf_file in pdf_files[:3]:  # Max 3 files
-                    result = extract_file_content(pdf_file, max_chars=40000)
-                    if result.success:
-                        agreement_content += f"\n{'='*50}\nFILE: {pdf_file.name}\n{'='*50}\n{result.text_content}\n"
-                
-                if agreement_content:
-                    system_prompt, user_prompt = get_project_scope_prompt(agreement_content)
+                    # Single path
+                    path = data.get("path", "(unknown)")
+                    anchor_type = data.get("type", "")
+                    date_str = data.get("date_in_name", "")
                     
-                    with self.console.status(f"[cyan]Extracting project scope for {phase_name}...[/cyan]"):
-                        try:
-                            scope_response = self.llm_client.analyze(
-                                system_prompt=system_prompt,
-                                user_content=user_prompt,
-                            )
-                            phase_result["project_scope"] = extract_json_from_response(scope_response.content)
-                            self.console.print(f"[green]✓[/green] Project scope extracted")
-                        except Exception as e:
-                            self.console.print(f"[red]Failed: {e}[/red]")
-        
-        # =====================================================================
-        # STEP 4-5: Client Context & Engagement Background (simplified for phase)
-        # =====================================================================
-        # For multi-phase, we'll do abbreviated extraction
-        self.console.print(Panel(
-            f"[bold]{phase_name} - Steps 4-5:[/bold] Client Context & Background",
-            border_style="cyan",
-        ))
-        self.console.print("[dim]Using shared client context from Phase 1...[/dim]")
-        
-        # =====================================================================
-        # STEP 6: Impact Extraction
-        # =====================================================================
-        self.console.print(Panel(
-            f"[bold]{phase_name} - Step 6:[/bold] Extracting Impact & Results",
-            border_style="cyan",
-        ))
-        
-        closeout_info = anchor_data.get("project_close_out", {})
-        updates_info = anchor_data.get("project_updates", {})
-        
-        impact_content = ""
-        
-        if closeout_info.get("found"):
-            closeout_path = project_path / closeout_info.get("path", "")
-            if closeout_path.exists():
-                result = extract_file_content(closeout_path, max_chars=30000)
-                if result.success:
-                    impact_content += f"\n{'='*50}\nCLOSEOUT\n{'='*50}\n{result.text_content}\n"
-        
-        if updates_info.get("found"):
-            for update_path_str in updates_info.get("paths", [])[:3]:
-                update_path = project_path / update_path_str
-                if update_path.exists():
-                    result = extract_file_content(update_path, max_chars=10000)
-                    if result.success:
-                        impact_content += f"\n{'='*50}\nUPDATE: {update_path.name}\n{'='*50}\n{result.text_content}\n"
-        
-        if impact_content:
-            # Get initial categories from project scope
-            initial_categories = ""
-            addressable_spend = 0
-            savings_low = 0
-            savings_high = 0
-            
-            if phase_result.get("project_scope"):
-                exhibit_a = phase_result["project_scope"].get("exhibit_a", {})
-                initial_categories = ", ".join(exhibit_a.get("initial_categories", [])[:10])
-                addressable_spend = exhibit_a.get("addressable_spend", 0)
-                savings_low = exhibit_a.get("savings_estimate_low", 0)
-                savings_high = exhibit_a.get("savings_estimate_high", 0)
-            
-            system_prompt, user_prompt = get_impact_prompt(
-                client_name=scan_result.project_name,
-                initial_categories=initial_categories,
-                addressable_spend=addressable_spend,
-                savings_low=savings_low,
-                savings_high=savings_high,
-                document_contents=impact_content,
-            )
-            
-            with self.console.status(f"[cyan]Extracting impact for {phase_name}...[/cyan]"):
-                try:
-                    impact_response = self.llm_client.analyze(
-                        system_prompt=system_prompt,
-                        user_content=user_prompt,
-                    )
-                    phase_result["impact"] = extract_json_from_response(impact_response.content)
-                    self.console.print(f"[green]✓[/green] Impact extracted")
+                    type_indicator = ""
+                    if anchor_type == "folder":
+                        type_indicator = "📁 "
+                    elif anchor_type == "file":
+                        type_indicator = "📄 "
                     
-                    # Display summary
-                    impact = phase_result["impact"].get("impact", {})
-                    summary = impact.get("summary", {})
-                    if summary.get("headline"):
-                        self.console.print(f"[bold green]📣 {summary['headline']}[/bold green]")
-                except Exception as e:
-                    self.console.print(f"[red]Failed: {e}[/red]")
-        else:
-            self.console.print(f"[yellow]⚠️ No impact sources found for {phase_name}[/yellow]")
-        
-        # =====================================================================
-        # STEP 7: Categories Extraction (abbreviated)
-        # =====================================================================
-        self.console.print(Panel(
-            f"[bold]{phase_name} - Step 7:[/bold] Extracting Categories",
-            border_style="cyan",
-        ))
-        
-        categories_info = anchor_data.get("categories", {})
-        if categories_info.get("found"):
-            categories_path = categories_info.get("path", "")
-            self.console.print(f"[green]✓[/green] Categories folder: {categories_path}")
-            
-            # For multi-phase, we'll note the categories from impact
-            if phase_result.get("impact"):
-                category_results = phase_result["impact"].get("impact", {}).get("category_results", [])
-                if category_results:
-                    self.console.print(f"[dim]Found {len(category_results)} categories in impact results[/dim]")
-                    phase_result["categories"] = {"categories": category_results}
-        else:
-            self.console.print(f"[dim]No dedicated categories folder for {phase_name}[/dim]")
-        
-        return phase_result
-    
-    def _run_multiphase_case_study_generation(
-        self,
-        project_path: Path,
-        scan_result,
-        all_phase_results: dict,
-    ) -> None:
-        """
-        Generate combined case study for multi-phase project.
-        
-        Shows per-phase breakdown and combined totals.
-        """
-        self.console.print("\n[bold magenta]═══ MULTI-PHASE SUMMARY ═══[/bold magenta]\n")
-        
-        # Calculate combined totals
-        total_savings = 0
-        total_categories = 0
-        phase_summaries = []
-        
-        for phase_name, phase_data in all_phase_results.items():
-            phase_savings = 0
-            phase_cats = 0
-            phase_headline = ""
-            
-            if phase_data.get("impact"):
-                impact = phase_data["impact"].get("impact", {})
-                financials = impact.get("financials", {})
+                    date_indicator = f" [dim](date: {date_str})[/dim]" if date_str else ""
+                    self.console.print(f"   [dim]└─[/dim] {type_indicator}{path}{date_indicator}")
                 
-                # Get total savings
-                total_field = financials.get("total_annual_savings") or financials.get("annual_savings")
-                if total_field and total_field.get("amount"):
-                    phase_savings = total_field["amount"]
-                    total_savings += phase_savings
-                
-                # Get categories
-                category_results = impact.get("category_results", [])
-                phase_cats = len(category_results)
-                total_categories += phase_cats
-                
-                # Get headline
-                summary = impact.get("summary", {})
-                phase_headline = summary.get("headline", "")
-            
-            phase_summaries.append({
-                "phase_name": phase_name,
-                "savings": phase_savings,
-                "categories": phase_cats,
-                "headline": phase_headline,
-            })
-        
-        # Display per-phase breakdown
-        self.console.print("[bold cyan]Per-Phase Breakdown:[/bold cyan]\n")
-        
-        for ps in phase_summaries:
-            self.console.print(f"[bold magenta]{ps['phase_name']}[/bold magenta]")
-            if ps["headline"]:
-                self.console.print(f"  📣 {ps['headline']}")
-            self.console.print(f"  💰 Savings: [green]${ps['savings']:,.0f}[/green]")
-            self.console.print(f"  📁 Categories: {ps['categories']}")
-            self.console.print()
-        
-        # Display combined totals
-        self.console.print("[bold cyan]Combined Totals:[/bold cyan]\n")
-        self.console.print(f"  [bold green]Total Savings Across All Phases: ${total_savings:,.0f}[/bold green]")
-        self.console.print(f"  Total Categories: {total_categories}")
-        self.console.print(f"  Phases Completed: {len(all_phase_results)}")
-        self.console.print()
-        
-        # Save combined results
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
-        combined_output = {
-            "is_multi_phase": True,
-            "phase_count": len(all_phase_results),
-            "combined_totals": {
-                "total_annual_savings": total_savings,
-                "total_categories": total_categories,
-            },
-            "phase_summaries": phase_summaries,
-            "phases": all_phase_results,
-        }
-        
-        output_file = OUTPUTS_DIR / f"{scan_result.project_name}_{timestamp}_multiphase.json"
-        try:
-            output_file.write_text(json.dumps(combined_output, indent=2, default=str), encoding="utf-8")
-            self.console.print(f"[green]✓[/green] Multi-phase results saved: {output_file.name}")
-        except Exception as e:
-            self.console.print(f"[yellow]⚠️ Could not save: {e}[/yellow]")
-        
-        # Store for later use
-        self._last_multiphase_results = combined_output
-    
-    def _display_single_anchor(self, label: str, data: dict, indent: int = 0, is_multi: bool = False) -> None:
-        """Helper to display a single anchor item."""
-        prefix = "  " * indent
-        found = data.get("found", False)
-        
-        if found:
-            self.console.print(f"{prefix}[green]✅ {label}[/green]")
-            
-            if is_multi:
-                # Multiple paths (project updates)
-                paths = data.get("paths", [])
-                for path in paths[:3]:  # Show max 3
-                    self.console.print(f"{prefix}   [dim]└─[/dim] {path}")
-                if len(paths) > 3:
-                    self.console.print(f"{prefix}   [dim]└─ ...and {len(paths) - 3} more[/dim]")
+                # Show validation error if any
+                if data.get("validation_error"):
+                    self.console.print(f"   [red]⚠️ {data['validation_error']}[/red]")
             else:
-                # Single path
-                path = data.get("path", "(unknown)")
-                anchor_type = data.get("type", "")
-                
-                type_indicator = "📁 " if anchor_type == "folder" else "📄 " if anchor_type == "file" else ""
-                self.console.print(f"{prefix}   [dim]└─[/dim] {type_indicator}{path}")
-        else:
-            self.console.print(f"{prefix}[dim]❌ {label} (Not found)[/dim]")
+                self.console.print(f"[red]❌ {label}[/red]")
+                self.console.print(f"   [dim]└─ (Not found)[/dim]")
+            
+            self.console.print()  # Blank line between sections
+        
+        # Summary
+        status_color = "green" if found_count >= 4 else "yellow" if found_count >= 2 else "red"
+        self.console.print(f"[{status_color}]Found: {found_count}/{total_count} anchor sections[/{status_color}]")
     
     def _display_project_scope_results(self, data: dict) -> None:
         """Display project scope extraction results."""

@@ -164,19 +164,11 @@ def get_impact_extraction_prompt(
 
 def get_anchor_detection_prompt(
     directory_tree: str,
-    phase_info: str = "",
 ) -> tuple[str, str]:
-    """
-    Get the anchor detection prompt for /agent command.
-    
-    Args:
-        directory_tree: Text representation of the project directory structure
-        phase_info: Optional information about detected phases (for multi-phase projects)
-    """
+    """Get the anchor detection prompt for /agent command."""
     return get_prompt(
         "agent/anchor_detection",
         directory_tree=directory_tree,
-        phase_info=phase_info,
     )
 
 

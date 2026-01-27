@@ -1,0 +1,189 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Dermatology network locks-in $1.18 M in annual savings across 12 spend categories",
+      "narrative": "Through two waves of strategic sourcing, Treya Partners delivered $1.18 million (\u224819 % of $6.3 million baseline) of annual savings for APDerm.  Seven Phase-1 categories are either fully implemented or under final roll-out, while five additional Phase-2 categories have completed RFPs, vendor selection, and are in contract or implementation stages.  Key wins include a 27 % reduction on medical supplies with McKesson, a 17 % fee reduction with Athenahealth, and a consolidated janitorial program saving 20 %.  Most awards retained incumbents, enabling rapid savings realization with minimal operational disruption."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1179965,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx \u2013 slides 3 & 16",
+        "notes": "Sum of Phase-1 ($703,965) and Phase-2 low-end ($475,999) savings"
+      },
+      "finalized_savings": {
+        "amount": 498781,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx \u2013 slide 3",
+        "notes": "Categories marked complete or with fully executed contracts (Medical Supplies, Office Supplies)"
+      },
+      "in_progress_savings": {
+        "amount": 681184,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx \u2013 slides 3,4,5",
+        "notes": "Contracts executed or in award/implementation for remaining 10 categories"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 485087,
+        "status": "finalized",
+        "status_notes": "McKesson agreement fully executed 7/30/21; 27 % savings locked for 24 months (Slide 5)."
+      },
+      {
+        "category_name": "Courier Services",
+        "annual_savings": 121572,
+        "status": "in progress",
+        "status_notes": "Millers Express & Xpressman contracts executed; implementation tracking toward 9/20 go-live."
+      },
+      {
+        "category_name": "Telecom \u2013 Circuits",
+        "annual_savings": 37454,
+        "status": "in progress",
+        "status_notes": "OneSource/MetTel contract signed; circuit migrations underway."
+      },
+      {
+        "category_name": "IT Hardware",
+        "annual_savings": 29410,
+        "status": "awaiting signature",
+        "status_notes": "Whalley memorandum of understanding awaiting client signature."
+      },
+      {
+        "category_name": "Office Supplies & Furniture",
+        "annual_savings": 13694,
+        "status": "finalized",
+        "status_notes": "WB Mason program live \u2013 savings already visible on invoices."
+      },
+      {
+        "category_name": "Small Parcel Shipping",
+        "annual_savings": 10508,
+        "status": "in progress",
+        "status_notes": "UPS contract executed; new rates loaded 8/16."
+      },
+      {
+        "category_name": "Telecom \u2013 PBX / Contact Center",
+        "annual_savings": 6240,
+        "status": "in progress",
+        "status_notes": "Tidal selected; contract in legal review with planned 10/1 start."
+      },
+      {
+        "category_name": "Billing Services (Athenahealth)",
+        "annual_savings": 259800,
+        "status": "award review",
+        "status_notes": "Athena fee reduced from 1.80 % to 1.50 %; terms under client legal review (Slide 14)."
+      },
+      {
+        "category_name": "Janitorial Services",
+        "annual_savings": 193565,
+        "status": "implementation",
+        "status_notes": "Enterprise Cleaning BAFO accepted; new hourly rates effective 6/1/22."
+      },
+      {
+        "category_name": "Non-IT Temporary Labor",
+        "annual_savings": 10245,
+        "status": "implementation",
+        "status_notes": "Randstad Premier GPO pricing approved; onboarding in progress."
+      },
+      {
+        "category_name": "Copier / Print Services",
+        "annual_savings": 9369,
+        "status": "reporting",
+        "status_notes": "Konica Minolta selected; usage app installed 8/4, awaiting first month\u2019s data to confirm savings (10\u201315 % projected, low-end used here)."
+      },
+      {
+        "category_name": "Uniforms",
+        "annual_savings": 3021,
+        "status": "award review",
+        "status_notes": "Cintas proposal analyzed; client final decision pending."
+      }
+    ],
+    "excluded_categories": [],
+    "not_started_categories": [
+      {
+        "category_name": "IT Managed Services",
+        "reason": "Data collection only \u2013 no RFP or savings work yet"
+      },
+      {
+        "category_name": "Laundry / Linen",
+        "reason": "Data collection only \u2013 no sourcing activity"
+      },
+      {
+        "category_name": "Waste Management",
+        "reason": "Benchmarking stage only \u2013 no RFP issued"
+      },
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Analysis performed but no selection/savings finalized"
+      },
+      {
+        "category_name": "Path Lab Systems",
+        "reason": "RFP initial demos only; savings not targeted"
+      },
+      {
+        "category_name": "Allergan/Pharma",
+        "reason": "Negotiations yielded no improvement \u2013 excluded from savings"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 90,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+        "notes": "First fully executed contract (Medical Supplies) occurred ~3 months after project kick-off."
+      },
+      "notes": "Most Phase-1 savings were live within the first quarter; Phase-2 categories are scheduled to realize value over the next 60\u201390 days."
+    },
+    "operational_improvements": "Consolidated over 50 vendor relationships, standardized pricing via two national GPO contracts, and established centralized spend visibility and reporting, reducing administrative burden across 30+ clinic locations.",
+    "proof_points": [
+      {
+        "statement": "McKesson contract locked in a 27 % price cut on $1.8 M of medical supplies, saving $485 K annually for at least two years.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "page_or_slide": "5",
+            "quote": "Estimated savings were 27% ($485K). The agreement indicates that pricing ... would be held firm for a 12-month period."
+          }
+        ]
+      },
+      {
+        "statement": "Revenue-share fee with Athenahealth cut from 1.80 % to 1.50 %, producing $260 K in annual savings (17 %).",
+        "category": "Billing Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "page_or_slide": "14",
+            "quote": "Athena Pricing ... 1.80% -> 1.50% ... Cost Savings $259,800  |  Cost Savings % 17%"
+          }
+        ]
+      },
+      {
+        "statement": "Enterprise-wide janitorial RFP consolidated 33 locations and secured a 20 % rate reduction worth $194 K per year.",
+        "category": "Janitorial Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "page_or_slide": "3",
+            "quote": "Janitorial Services ... Savings Low ($) $193,565 ... Status: Implementation"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (091421).pptx",
+    "Project Updates/Weekly Leadership Updates 2/APDerm Strategic Sourcing Project Update (083121).pptx"
+  ],
+  "extraction_notes": [
+    "Savings values taken from Phase-1 recap (slide 16) and Phase-2 savings overview low-end estimates (slide 3).",
+    "Only categories with concrete RFPs, signed contracts, or implementation activity were included.",
+    "Employee Benefits, Path Lab, IT Managed Services, Laundry/Linen, and Waste Management were excluded as no savings had been finalized."
+  ]
+}

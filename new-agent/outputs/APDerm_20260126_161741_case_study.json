@@ -1,0 +1,33 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client context, problem statement, quantified $1.18M savings, and multiple category-level proof points are all documented \u2013 sufficient for a strong case study.",
+    "headline": "APDerm dermatology network unlocks $1.18 million in annual savings and 6\u00d7 ROI through Treya-led strategic sourcing",
+    "client_problem_statement": "Adult & Pediatric Dermatology (APDerm) had grown to 40 clinics across New England, but purchasing remained decentralized and opaque. Hundreds of suppliers, inconsistent pricing, and pandemic-driven inflation were pressuring margins just as private-equity owner Waud Capital demanded EBITDA lift. Lacking internal procurement bandwidth, APDerm needed a partner to quickly consolidate spend, secure better pricing, and protect clinical operations.",
+    "approach_summary": [
+      "Aggregated 12 months of AP data from 40 clinics, cleansed 3,000+ vendor records, and built a $6.3M Phase-1 spend baseline across seven high-value indirect categories.",
+      "Executed competitive RFPs in Medical Supplies, Courier, Janitorial, Telecom, and other areas, leveraging Treya\u2019s category benchmarks to drive aggressive bids.",
+      "Optimized healthcare GPO tiers and transitioned 95% of clinical SKUs to a McKesson/HPG platform, delivering a 27% cut on $1.8M of medical supplies.",
+      "Renegotiated incumbent contracts\u2014including lowering AthenaHealth billing fees from 1.80% to 1.50% of collections\u2014while preserving preferred suppliers in 70% of categories.",
+      "Delivered quick wins such as UPS small-parcel rates within 45 days and established standardized pricing files and contract terms across all locations."
+    ],
+    "top_levers": [
+      "GPO tier optimization & formulary alignment",
+      "Incumbent contract renegotiation",
+      "Competitive RFP and vendor consolidation",
+      "Specification/bandwidth right-sizing"
+    ],
+    "value_delivered_blurb": "Treya generated $1,179,965 in verified annual run-rate savings\u201427% above the high-end pre-engagement estimate and more than triple the guaranteed minimum. With a fixed fee of $190K, APDerm realized a 6.2\u00d7 return on consulting investment. Beyond the dollars, the project standardized pricing across 30+ locations, reduced supplier count, and gave leadership its first enterprise-wide spend visibility.",
+    "where_we_were_unique": [
+      "Captured first live savings within 45 days via UPS small-parcel program",
+      "Deep healthcare sourcing and GPO expertise secured Tier-1 pricing unavailable to most mid-sized practices",
+      "Hands-on data cleansing turned fragmented AP files into an actionable baseline, enabling fact-based negotiations",
+      "Collaborative, clinician-friendly change management retained incumbents in critical categories, minimizing operational disruption while still exceeding savings targets"
+    ]
+  },
+  "generation_notes": [
+    "ROI calculated as $1.18M savings / $0.19M fee = 6.2\u00d7, rounded to 6\u00d7 for headline.",
+    "Savings exceeded original Exhibit A high estimate ($0.93M) by ~27%; this fact used in value blurb.",
+    "Top levers ranked by contribution: Medical Supplies (GPO), Billing Services (renegotiation), Janitorial & Courier (RFP/consolidation), Telecom right-sizing."
+  ]
+}

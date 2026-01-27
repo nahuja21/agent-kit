@@ -1,0 +1,49 @@
+{
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology, PC (APDerm)",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology services",
+    "business_model": "Physician-led, multi-site dermatology practice network operating outpatient clinics across New England",
+    "sponsor_pe_firm": "Waud Capital Partners",
+    "client_history": "Founded in 1992 as a solo dermatology practice, APDerm has expanded through acquisitions and de-novo clinic openings to become the largest physician-led dermatology network in New England, offering medical, surgical and cosmetic dermatology across Massachusetts, New Hampshire and Rhode Island."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 44700000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Growjo company profile (https://growjo.com/company/APDerm)",
+      "notes": "Growjo estimates 2024 revenue at ~$44.7M. LeadIQ lists $2.7M, which would imply <6k revenue per employee and is therefore likely erroneous. No official figures published; using Growjo but marking confidence low owing to large discrepancy and lack of primary disclosure."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 40,
+      "confidence": "medium",
+      "source": "Indeed company 'About' page (https://www.indeed.com/cmp/Apderm/about) and BusinessWire press releases (Oct 12 2021 & other releases)",
+      "notes": "Indeed states the network operates 40 practices. BusinessWire release from Oct 2021 confirmed 32 offices; multiple new openings reported since then, supporting 40 as the most recent publicly stated figure."
+    },
+    "employees": {
+      "count": 500,
+      "confidence": "medium",
+      "source": "LeadIQ profile (501 employees) and Indeed company page (501\u20131,000 range)",
+      "notes": "Employee estimates vary widely: LeadIQ 501, SignalHire 249, Growjo 154, Clodura 105. LeadIQ aligns with Indeed\u2019s range and is most consistent with a 40-location clinic network, so 500 is used but confidence kept medium due to discrepancies."
+    }
+  },
+  "extraction_sources": [
+    "Procurement Cost Reduction Services Agreement_APDerm_12.11.20 (legal name)",
+    "Case Study/Treya Case Study_APDerm vF.pdf (company overview and PE backing)",
+    "BusinessWire press release 10/12/2021 \u2013 APDerm opens 6th NH office (location count)",
+    "Growjo company profile (revenue & employees)",
+    "LeadIQ company profile (employees & revenue estimate)",
+    "Indeed company About page (locations & employee range)",
+    "providenthp.com article on Waud Capital investment (PE ownership)"
+  ],
+  "extraction_notes": [
+    "Legal agreement explicitly names the company 'Adult & Pediatric Dermatology, PC'.",
+    "Waud Capital Partners investment confirmed by multiple sources including Provident Healthcare Partners (2017 deal announcement) and Treya case study.",
+    "No EBITDA figures disclosed in any documents or credible web sources; field left null.",
+    "Revenue figures differ markedly across estimation sites; Growjo selected as the more plausible figure given clinic footprint but confidence kept low.",
+    "Location count varies by time stamp; latest publicly stated number (40) used.",
+    "Employee headcount highly inconsistent across data aggregators; figure of ~500 chosen as midpoint of highest-quality sources but noted as uncertain."
+  ]
+}
