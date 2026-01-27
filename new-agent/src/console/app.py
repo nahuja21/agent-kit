@@ -33,7 +33,7 @@ from src.scanner import DirectoryScanner, find_project_in_inputs, extract_zip_pr
 from src.llm import OpenAIClient
 from src.prompts import ContextBuilder
 from src.prompts.context import get_file_selection_prompt, get_schema_extraction_prompt, FILE_SELECTION_COUNT
-from src.prompts.loader import get_anchor_detection_prompt, get_project_scope_prompt, get_client_context_prompt, get_engagement_background_prompt, get_impact_prompt, get_categories_prompt, get_case_study_generation_prompt
+from src.prompts.loader import get_anchor_detection_prompt, get_project_scope_prompt, get_client_context_prompt, get_engagement_background_prompt, get_impact_prompt, get_categories_prompt, get_case_study_generation_prompt, get_supplier_battlecards_prompt
 from src.extractors.pdf import extract_pdf_with_tables, find_exhibit_pages, extract_table_with_vision, extract_table_with_tesseract
 from src.extractors.base import extract_file_content
 from src.models.schema import CaseStudy
@@ -49,6 +49,7 @@ def extract_json_from_response(content: str) -> dict:
     - JSON with text before/after
     - Trailing commas in arrays/objects
     - Multiple JSON objects (returns first complete one)
+    - Various markdown code fence formats
     """
     if not content:
         raise ValueError("Empty content")
@@ -61,63 +62,60 @@ def extract_json_from_response(content: str) -> dict:
     except json.JSONDecodeError:
         pass
     
-    # Strategy 2: Remove markdown code fences
-    # Handle ```json\n...\n``` or ```\n...\n```
-    code_block_pattern = r'```(?:json)?\s*\n?(.*?)\n?```'
-    matches = re.findall(code_block_pattern, content, re.DOTALL)
-    if matches:
-        for match in matches:
-            try:
-                return json.loads(match.strip())
-            except json.JSONDecodeError:
-                # Try fixing trailing commas
-                fixed = re.sub(r',\s*([}\]])', r'\1', match.strip())
-                try:
-                    return json.loads(fixed)
-                except json.JSONDecodeError:
+    # Strategy 2: Remove markdown code fences (multiple patterns)
+    # Handle various formats: ```json, ``` json, ```JSON, etc.
+    code_block_patterns = [
+        r'```json\s*\n(.*?)\n\s*```',  # ```json\n...\n```
+        r'```JSON\s*\n(.*?)\n\s*```',  # ```JSON\n...\n```
+        r'```\s*\n(.*?)\n\s*```',       # ```\n...\n```
+        r'```json\s*(.*?)\s*```',       # ```json...``` (no newlines)
+        r'```\s*(.*?)\s*```',           # ```...``` (no newlines)
+        r'`json\s*\n(.*?)\n\s*`',       # Single backtick variants
+    ]
+    
+    for pattern in code_block_patterns:
+        matches = re.findall(pattern, content, re.DOTALL | re.IGNORECASE)
+        if matches:
+            for match in matches:
+                match_stripped = match.strip()
+                if not match_stripped:
                     continue
+                try:
+                    return json.loads(match_stripped)
+                except json.JSONDecodeError:
+                    # Try fixing trailing commas
+                    fixed = re.sub(r',\s*([}\]])', r'\1', match_stripped)
+                    try:
+                        return json.loads(fixed)
+                    except json.JSONDecodeError:
+                        continue
     
     # Strategy 3: Find JSON object by looking for { ... } pattern
-    # Find the first { and match to its closing }
+    # Find the first { that starts a "categories" or similar key pattern
+    # First try to find a JSON object that looks like our expected output
+    for start_pattern in ['"categories"', '"battlecards"', '"client"', '"impact"']:
+        pattern_pos = content.find(start_pattern)
+        if pattern_pos != -1:
+            # Find the opening { before this pattern
+            brace_start = content.rfind('{', 0, pattern_pos)
+            if brace_start != -1:
+                result = _try_extract_json_from_position(content, brace_start)
+                if result:
+                    return result
+    
+    # Fallback: Find the first { and match to its closing }
     brace_start = content.find('{')
     if brace_start != -1:
-        depth = 0
-        in_string = False
-        escape = False
-        for i, char in enumerate(content[brace_start:], brace_start):
-            if escape:
-                escape = False
-                continue
-            if char == '\\':
-                escape = True
-                continue
-            if char == '"' and not escape:
-                in_string = not in_string
-                continue
-            if in_string:
-                continue
-            if char == '{':
-                depth += 1
-            elif char == '}':
-                depth -= 1
-                if depth == 0:
-                    json_str = content[brace_start:i+1]
-                    try:
-                        return json.loads(json_str)
-                    except json.JSONDecodeError:
-                        # Try fixing trailing commas
-                        fixed = re.sub(r',\s*([}\]])', r'\1', json_str)
-                        try:
-                            return json.loads(fixed)
-                        except json.JSONDecodeError:
-                            pass
-                    break
+        result = _try_extract_json_from_position(content, brace_start)
+        if result:
+            return result
     
     # Strategy 4: Try removing common prefix text patterns
     # LLM sometimes says "Here's the JSON:" before the actual JSON
     lines = content.split('\n')
     for i, line in enumerate(lines):
-        if line.strip().startswith('{'):
+        stripped = line.strip()
+        if stripped.startswith('{') or stripped == '{':
             remaining = '\n'.join(lines[i:])
             try:
                 return json.loads(remaining)
@@ -126,7 +124,28 @@ def extract_json_from_response(content: str) -> dict:
                 try:
                     return json.loads(fixed)
                 except json.JSONDecodeError:
-                    break
+                    # Don't break, try next line that starts with {
+                    continue
+    
+    # Strategy 5: Try to find JSON between the last ``` pair
+    last_fence_end = content.rfind('```')
+    if last_fence_end != -1:
+        before_last = content[:last_fence_end]
+        second_last_fence = before_last.rfind('```')
+        if second_last_fence != -1:
+            between = content[second_last_fence + 3:last_fence_end].strip()
+            # Remove 'json' prefix if present
+            if between.lower().startswith('json'):
+                between = between[4:].strip()
+            if between:
+                try:
+                    return json.loads(between)
+                except json.JSONDecodeError:
+                    fixed = re.sub(r',\s*([}\]])', r'\1', between)
+                    try:
+                        return json.loads(fixed)
+                    except json.JSONDecodeError:
+                        pass
     
     # If all strategies fail, raise with helpful message
     raise json.JSONDecodeError(
@@ -134,6 +153,42 @@ def extract_json_from_response(content: str) -> dict:
         content[:200] + "..." if len(content) > 200 else content,
         0
     )
+
+
+def _try_extract_json_from_position(content: str, brace_start: int) -> dict | None:
+    """Try to extract a complete JSON object starting at brace_start."""
+    depth = 0
+    in_string = False
+    escape = False
+    
+    for i, char in enumerate(content[brace_start:], brace_start):
+        if escape:
+            escape = False
+            continue
+        if char == '\\':
+            escape = True
+            continue
+        if char == '"' and not escape:
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if char == '{':
+            depth += 1
+        elif char == '}':
+            depth -= 1
+            if depth == 0:
+                json_str = content[brace_start:i+1]
+                try:
+                    return json.loads(json_str)
+                except json.JSONDecodeError:
+                    # Try fixing trailing commas
+                    fixed = re.sub(r',\s*([}\]])', r'\1', json_str)
+                    try:
+                        return json.loads(fixed)
+                    except json.JSONDecodeError:
+                        return None
+    return None
 
 
 class ConsoleApp:
@@ -804,7 +859,7 @@ ANALYSIS OUTPUT
         # STEP 1: Scan Directory Structure
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 1/8:[/bold] Scanning directory structure",
+            "[bold]Step 1/9:[/bold] Scanning directory structure",
             border_style="cyan",
         ))
         
@@ -821,7 +876,7 @@ ANALYSIS OUTPUT
         # STEP 2: Anchor File/Folder Detection
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 2/8:[/bold] Detecting anchor files and folders",
+            "[bold]Step 2/9:[/bold] Detecting anchor files and folders",
             border_style="cyan",
         ))
         
@@ -858,7 +913,7 @@ ANALYSIS OUTPUT
         # STEP 3: Project Scope Extraction (from Agreement)
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 3/8:[/bold] Extracting Project Scope from Agreement",
+            "[bold]Step 3/9:[/bold] Extracting Project Scope from Agreement",
             border_style="cyan",
         ))
         
@@ -1016,7 +1071,7 @@ ANALYSIS OUTPUT
         # STEP 4: Client Context Extraction
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 4/8:[/bold] Extracting Client Context",
+            "[bold]Step 4/9:[/bold] Extracting Client Context",
             border_style="cyan",
         ))
         
@@ -1173,7 +1228,7 @@ When extracting, cite which source provided each data point."""
         # STEP 5: Engagement Background Extraction
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 5/8:[/bold] Extracting Engagement Background",
+            "[bold]Step 5/9:[/bold] Extracting Engagement Background",
             border_style="cyan",
         ))
         
@@ -1241,7 +1296,7 @@ When extracting, cite which source provided each data point."""
         # STEP 6: Impact Extraction
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 6/8:[/bold] Extracting Impact & Results",
+            "[bold]Step 6/9:[/bold] Extracting Impact & Results",
             border_style="cyan",
         ))
         
@@ -1358,7 +1413,7 @@ When extracting, cite which source provided each data point."""
         # STEP 7: Categories Extraction (Detailed)
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 7/8:[/bold] Extracting Detailed Category Information",
+            "[bold]Step 7/9:[/bold] Extracting Detailed Category Information",
             border_style="cyan",
         ))
         
@@ -1491,7 +1546,7 @@ When extracting, cite which source provided each data point."""
         # STEP 8: Case Study Content Generation
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 8/8:[/bold] Generating Case Study Content",
+            "[bold]Step 8/9:[/bold] Generating Case Study Content",
             border_style="cyan",
         ))
         
@@ -1558,6 +1613,112 @@ When extracting, cite which source provided each data point."""
         self._last_case_study = case_study_data
         
         # =====================================================================
+        # STEP 9: Supplier Battlecards
+        # =====================================================================
+        self.console.print(Panel(
+            "[bold]Step 9/9:[/bold] Generating Supplier Battlecards",
+            border_style="cyan",
+        ))
+        
+        self.console.print("[dim]Analyzing complex categories for strategic supplier information...[/dim]")
+        
+        # Build categories summary from Step 7 results
+        categories_list = categories_data.get("categories", [])
+        if categories_list:
+            categories_summary_items = []
+            for cat in categories_list:
+                cat_name = cat.get("category_name", "Unknown")
+                vendors_before = cat.get("vendors_before", [])
+                vendors_after = cat.get("vendors_after", [])
+                baseline = cat.get("baseline_spend", 0) or 0
+                savings = cat.get("annual_savings", 0) or 0
+                levers = cat.get("levers", [])
+                
+                summary_item = f"""
+Category: {cat_name}
+  Vendors Before: {', '.join(vendors_before) if vendors_before else 'N/A'}
+  Vendors After: {', '.join(vendors_after) if vendors_after else 'N/A'}
+  Baseline Spend: ${baseline:,.0f}
+  Savings: ${savings:,.0f}
+  Levers: {', '.join(levers) if levers else 'N/A'}
+"""
+                categories_summary_items.append(summary_item)
+            
+            categories_summary_str = "\n".join(categories_summary_items)
+            self.console.print(f"[green]✓[/green] Found {len(categories_list)} categories from Step 7")
+        else:
+            categories_summary_str = "(No categories data available from Step 7)"
+            self.console.print("[yellow]⚠️ No categories data available[/yellow]")
+        
+        # Reuse category folder content from Step 7 (already in combined_category_content)
+        # If not available, we need to re-extract
+        if not combined_category_content:
+            self.console.print("[dim]Re-reading category folders for battlecard extraction...[/dim]")
+            category_folder_contents_bc = []
+            categories_folder = project_path / "Categories"
+            
+            if not categories_folder.exists():
+                categories_folder = project_path / "Category"
+            if not categories_folder.exists():
+                for folder in project_path.iterdir():
+                    if folder.is_dir() and "categor" in folder.name.lower():
+                        categories_folder = folder
+                        break
+            
+            if categories_folder.exists() and categories_folder.is_dir():
+                for cat_folder in categories_folder.iterdir():
+                    if cat_folder.is_dir():
+                        cat_content = self._extract_folder_content(cat_folder, project_path, max_chars=20000)
+                        if cat_content:
+                            category_folder_contents_bc.append(
+                                f"\n{'='*60}\nCATEGORY FOLDER: {cat_folder.name}\n{'='*60}\n{cat_content}"
+                            )
+            
+            combined_category_content = "\n\n".join(category_folder_contents_bc)
+        
+        self.console.print(f"[dim]Category folder content: {len(combined_category_content):,} characters[/dim]")
+        
+        # Call LLM for supplier battlecards
+        if categories_summary_str and combined_category_content:
+            system_prompt, user_prompt = get_supplier_battlecards_prompt(
+                client_name=extracted_client_name,
+                categories_summary=categories_summary_str,
+                category_folder_contents=combined_category_content,
+            )
+            
+            with self.console.status(f"[cyan]Generating supplier battlecards with {MODEL}...[/cyan]"):
+                try:
+                    battlecards_response = self.llm_client.analyze(
+                        system_prompt=system_prompt,
+                        user_content=user_prompt,
+                    )
+                except Exception as e:
+                    self.console.print(f"[red]Failed to generate battlecards: {e}[/red]")
+                    battlecards_data = {"error": str(e)}
+                    battlecards_response = None
+            
+            # Parse the response
+            if battlecards_response:
+                try:
+                    battlecards_data = extract_json_from_response(battlecards_response.content)
+                except (json.JSONDecodeError, ValueError) as e:
+                    self.console.print(f"[red]Failed to parse battlecards response: {e}[/red]")
+                    battlecards_data = {"raw_response": battlecards_response.content, "parse_error": str(e)}
+            
+            # Display battlecards results
+            self._display_battlecards_results(battlecards_data)
+            
+            # Show token usage
+            if battlecards_response:
+                self.console.print(f"\n[dim]Tokens: {battlecards_response.input_tokens:,} in / {battlecards_response.output_tokens:,} out[/dim]")
+        else:
+            self.console.print("[yellow]⚠️ Insufficient data for supplier battlecard generation[/yellow]")
+            battlecards_data = {"error": "Insufficient data"}
+        
+        # Store battlecards data
+        self._last_battlecards = battlecards_data
+        
+        # =====================================================================
         # Save Combined Output
         # =====================================================================
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -1609,6 +1770,14 @@ When extracting, cite which source provided each data point."""
             self.console.print(f"[green]✓[/green] Case Study saved: {case_study_file.name}")
         except Exception as e:
             self.console.print(f"[yellow]⚠️ Could not save case study: {e}[/yellow]")
+        
+        # Save supplier battlecards
+        battlecards_file = OUTPUTS_DIR / f"{scan_result.project_name}_{timestamp}_battlecards.json"
+        try:
+            battlecards_file.write_text(json.dumps(battlecards_data, indent=2), encoding="utf-8")
+            self.console.print(f"[green]✓[/green] Supplier Battlecards saved: {battlecards_file.name}")
+        except Exception as e:
+            self.console.print(f"[yellow]⚠️ Could not save battlecards: {e}[/yellow]")
         
         self.console.print()
     
@@ -1973,6 +2142,151 @@ When extracting, cite which source provided each data point."""
         if notes:
             self.console.print("[yellow]Extraction Notes:[/yellow]")
             for note in notes:
+                self.console.print(f"  ⚠️ {note}")
+            self.console.print()
+    
+    def _display_battlecards_results(self, data: dict) -> None:
+        """Display supplier battlecards results."""
+        self.console.print("\n[bold cyan]═══ SUPPLIER BATTLECARDS ═══[/bold cyan]\n")
+        
+        # Check for errors
+        if "error" in data:
+            self.console.print(f"[red]❌ Error: {data['error']}[/red]")
+            return
+        
+        if "parse_error" in data:
+            self.console.print(f"[red]❌ Parse error: {data['parse_error']}[/red]")
+            return
+        
+        battlecards = data.get("battlecards", [])
+        if not battlecards:
+            self.console.print("[yellow]No supplier battlecards generated[/yellow]")
+            self.console.print("[dim]This may mean no categories met the complexity threshold.[/dim]")
+            return
+        
+        # Status icons for relationship
+        status_icons = {
+            "incumbent": "🔄",
+            "new": "✅",
+            "displaced": "❌",
+            "considered": "🔍",
+        }
+        
+        for idx, card in enumerate(battlecards, 1):
+            supplier_name = card.get("supplier_name", "Unknown Supplier")
+            category = card.get("category", "Unknown")
+            status = card.get("relationship_status", "unknown")
+            status_icon = status_icons.get(status.lower(), "❓")
+            is_complex = card.get("is_complex", False)
+            was_incumbent = card.get("was_incumbent", False)
+            was_awarded = card.get("was_awarded", False)
+            
+            # Header for each battlecard
+            self.console.print(f"[bold]━━━ Battlecard {idx}: {supplier_name} ━━━[/bold]")
+            self.console.print(f"  [cyan]Category:[/cyan] {category}")
+            self.console.print(f"  [cyan]Status:[/cyan] {status_icon} {status.title()}")
+            
+            # Incumbent and Awarded indicators
+            incumbent_str = "[green]Yes[/green]" if was_incumbent else "[dim]No[/dim]"
+            awarded_str = "[green]Yes[/green]" if was_awarded else "[dim]No[/dim]"
+            self.console.print(f"  [cyan]Was Incumbent:[/cyan] {incumbent_str}  |  [cyan]Was Awarded:[/cyan] {awarded_str}")
+            
+            # Complexity reasons
+            complexity_reasons = card.get("complexity_reasons", [])
+            if complexity_reasons:
+                self.console.print(f"  [cyan]Why Complex:[/cyan] {', '.join(complexity_reasons)}")
+            
+            # Financial summary
+            baseline = card.get("baseline_spend")
+            final = card.get("final_spend")
+            savings_dollars = card.get("savings_dollars")
+            savings_pct = card.get("savings_percent")
+            
+            self.console.print()
+            self.console.print("  [bold green]Financial Summary[/bold green]")
+            if baseline:
+                self.console.print(f"    Baseline Spend: ${baseline:,.0f}")
+            if final:
+                self.console.print(f"    Final Spend: ${final:,.0f}")
+            if savings_dollars:
+                pct_str = f" ({savings_pct:.1f}%)" if savings_pct else ""
+                self.console.print(f"    [green]Savings: ${savings_dollars:,.0f}{pct_str}[/green]")
+            
+            # Levers applied
+            levers = card.get("levers_applied", [])
+            if levers:
+                self.console.print(f"    Levers: {', '.join(levers)}")
+            
+            # Strategic information
+            alternatives = card.get("alternatives_considered", [])
+            why_selected = card.get("why_selected")
+            why_not_selected = card.get("why_not_selected")
+            contract_terms = card.get("contract_terms")
+            leverage = card.get("negotiation_leverage")
+            
+            if alternatives or why_selected or contract_terms or leverage:
+                self.console.print()
+                self.console.print("  [bold green]Strategic Details[/bold green]")
+                
+                if alternatives:
+                    self.console.print(f"    Alternatives Considered: {', '.join(alternatives)}")
+                if why_selected:
+                    self.console.print(f"    Why Selected: {why_selected}")
+                if why_not_selected:
+                    self.console.print(f"    Why Not Selected: {why_not_selected}")
+                if contract_terms:
+                    self.console.print(f"    Contract Terms: {contract_terms}")
+                if leverage:
+                    self.console.print(f"    Negotiation Leverage: {leverage}")
+            
+            # Strengths/Weaknesses
+            strengths = card.get("supplier_strengths")
+            weaknesses = card.get("supplier_weaknesses")
+            switching_costs = card.get("switching_costs")
+            
+            if strengths or weaknesses or switching_costs:
+                self.console.print()
+                self.console.print("  [bold green]Supplier Assessment[/bold green]")
+                
+                if strengths:
+                    self.console.print(f"    [green]Strengths:[/green] {strengths}")
+                if weaknesses:
+                    self.console.print(f"    [yellow]Weaknesses:[/yellow] {weaknesses}")
+                if switching_costs:
+                    self.console.print(f"    [dim]Switching Costs:[/dim] {switching_costs}")
+            
+            # Notes
+            notes = card.get("notes")
+            if notes:
+                self.console.print()
+                self.console.print(f"  [dim]Notes: {notes}[/dim]")
+            
+            self.console.print()  # Blank line between battlecards
+        
+        # Summary
+        summary = data.get("summary", {})
+        if summary:
+            self.console.print("[bold green]Battlecards Summary[/bold green]")
+            
+            total_evaluated = summary.get("total_suppliers_evaluated", 0)
+            battlecards_generated = summary.get("battlecards_generated", len(battlecards))
+            categories_covered = summary.get("categories_with_battlecards", [])
+            skipped_reason = summary.get("skipped_reason", "")
+            
+            self.console.print(f"  Suppliers Evaluated: {total_evaluated}")
+            self.console.print(f"  Battlecards Generated: [green]{battlecards_generated}[/green]")
+            if categories_covered:
+                self.console.print(f"  Categories Covered: {', '.join(categories_covered)}")
+            if skipped_reason:
+                self.console.print(f"  [dim]{skipped_reason}[/dim]")
+            
+            self.console.print()
+        
+        # Extraction notes
+        extraction_notes = data.get("extraction_notes", [])
+        if extraction_notes:
+            self.console.print("[yellow]Extraction Notes:[/yellow]")
+            for note in extraction_notes:
                 self.console.print(f"  ⚠️ {note}")
             self.console.print()
     

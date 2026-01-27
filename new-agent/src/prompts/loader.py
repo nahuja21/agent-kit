@@ -322,3 +322,28 @@ def get_case_study_generation_prompt(
         impact_data=impact_data,
         categories_data=categories_data,
     )
+
+
+def get_supplier_battlecards_prompt(
+    client_name: str,
+    categories_summary: str,
+    category_folder_contents: str,
+) -> tuple[str, str]:
+    """
+    Get the supplier battlecards prompt for Step 9.
+    
+    Generates detailed battlecards for suppliers in complex categories:
+    - Core: supplier name, category, spend, savings, levers
+    - Strategic: alternatives, contract terms, leverage points, strengths/weaknesses
+    - Complexity flags: why this supplier warranted a battlecard
+    
+    Only creates battlecards for complex categories with meaningful strategic data.
+    
+    Input: Categories summary from Step 7, Category folder contents
+    """
+    return get_prompt(
+        "agent/supplier_battlecards",
+        client_name=client_name,
+        categories_summary=categories_summary,
+        category_folder_contents=category_folder_contents,
+    )

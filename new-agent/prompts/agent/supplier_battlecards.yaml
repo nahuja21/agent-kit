@@ -1,0 +1,168 @@
+# Supplier Battlecards Extraction Prompt
+# Step 9: Generate detailed battlecards for strategic suppliers
+# Sources: Category folders, Project Updates, Case Study, Close-out
+
+step: supplier_battlecards
+
+prompt:
+  instructions: |
+    You are a procurement analyst creating supplier battlecards from project documentation.
+    
+    A battlecard is a strategic summary of a supplier relationship - what was negotiated, 
+    what leverage existed, what alternatives were considered, and what results were achieved.
+    
+    ONLY create battlecards for suppliers in COMPLEX categories where there is meaningful 
+    strategic information. Skip suppliers where you only have basic spend data.
+    
+    A category is "complex" if it has ANY of these characteristics:
+    - Multiple suppliers were involved (before or after)
+    - A competitive process was run (RFP, bid, GPO comparison)
+    - Significant negotiation occurred (not just a renewal)
+    - Supplier was switched or consolidated
+    - There were notable constraints or challenges
+    - Meaningful savings were achieved (>5% or >$50K)
+    
+    CRITICAL OUTPUT RULES:
+    - Return ONLY valid JSON - no markdown, no code fences, no explanatory text
+    - Start your response with { and end with }
+    - Do NOT wrap in ```json``` or any other formatting
+    - Do NOT add any text before or after the JSON object
+
+  user_template: |
+    # Supplier Battlecard Generation
+    
+    ## Client Name
+    {{client_name}}
+    
+    ## Categories Summary (from Step 7)
+    This is what we already know about categories and their suppliers:
+    
+    {{categories_summary}}
+    
+    ## Category Folder Contents
+    Detailed content from each category folder (RFPs, scorecards, analysis, etc.):
+    
+    {{category_folder_contents}}
+    
+    ---
+    
+    # YOUR TASK
+    
+    Generate supplier battlecards for suppliers in COMPLEX categories only.
+    
+    For each qualifying supplier, extract as much detail as possible.
+    
+    ## BATTLECARD FIELDS
+    
+    ### Required Fields (must have for every battlecard)
+    - `supplier_name`: Official supplier/vendor name
+    - `category`: Which spend category they serve
+    - `relationship_status`: "incumbent", "new", "displaced", or "considered"
+    - `was_incumbent`: Boolean - was this supplier already in place BEFORE the engagement? (true if they were an existing supplier)
+    - `was_awarded`: Boolean - did this supplier end up with the contract AFTER the engagement? (true if they are in vendors_after)
+    - `baseline_spend`: Annual spend before engagement (null if unknown)
+    - `final_spend`: Annual spend after negotiation (null if unknown)
+    - `savings_dollars`: Total savings achieved with this supplier (null if unknown)
+    - `savings_percent`: Percentage savings (null if unknown)
+    - `levers_applied`: Array of levers used (e.g., ["GPO", "RFP", "Consolidation", "Renegotiation", "Volume commitment"])
+    
+    ### Strategic Fields (include when available)
+    - `alternatives_considered`: Array of other suppliers that were evaluated
+    - `why_selected`: Why this supplier was chosen (or retained)
+    - `why_not_selected`: If displaced or not chosen, why
+    - `contract_terms`: Key contract details (length, pricing structure, renewal date)
+    - `negotiation_leverage`: What gave leverage in the negotiation
+    - `supplier_strengths`: What the supplier does well
+    - `supplier_weaknesses`: Service gaps, pricing issues, concerns
+    - `switching_costs`: Barriers to switching away from this supplier
+    - `key_contacts`: Named contacts if mentioned
+    - `notes`: Any other strategic insights
+    
+    ### Complexity Flags
+    - `is_complex`: Boolean - does this meet complexity criteria?
+    - `complexity_reasons`: Array of reasons why this is complex (e.g., ["RFP conducted", "Multiple bidders", "Supplier switched"])
+    
+    ## OUTPUT FORMAT
+    
+    Return ONLY the JSON object below. Do NOT include markdown code fences or any other text.
+    Start your response with { and end with }.
+    
+    {
+      "battlecards": [
+        {
+          "supplier_name": "Medline Industries",
+          "category": "Medical Supplies",
+          "relationship_status": "new",
+          "was_incumbent": false,
+          "was_awarded": true,
+          "baseline_spend": 450000,
+          "final_spend": 380000,
+          "savings_dollars": 70000,
+          "savings_percent": 15.6,
+          "levers_applied": ["GPO", "RFP", "Volume commitment"],
+          "alternatives_considered": ["McKesson", "Cardinal Health", "Owens & Minor"],
+          "why_selected": "Best pricing through GPO, strong service commitment, agreed to 90-day payment terms",
+          "why_not_selected": null,
+          "contract_terms": "3-year agreement with annual price caps, quarterly business reviews",
+          "negotiation_leverage": "Competitive RFP with 4 bidders, GPO membership, volume commitment across 15 locations",
+          "supplier_strengths": "Broad product portfolio, next-day delivery, dedicated account manager",
+          "supplier_weaknesses": "Higher minimums than some competitors, limited specialty products",
+          "switching_costs": "Staff training on new ordering system, product formulary changes",
+          "key_contacts": null,
+          "notes": "Displaced McKesson after 8-year relationship. Transition took 60 days.",
+          "is_complex": true,
+          "complexity_reasons": ["RFP conducted", "4 bidders evaluated", "Supplier switched", "Significant savings (15.6%)"]
+        }
+      ],
+      "summary": {
+        "total_suppliers_evaluated": 25,
+        "battlecards_generated": 8,
+        "categories_with_battlecards": ["Medical Supplies", "Lab Services", "IT Hardware"],
+        "skipped_reason": "17 suppliers skipped - simple renewals or insufficient data"
+      },
+      "extraction_notes": [
+        "Medical Supplies had the most complete documentation (RFP scorecard available)",
+        "Lab Services supplier info came primarily from Project Update presentations",
+        "Could not determine baseline spend for 3 suppliers"
+      ]
+    }
+    
+    ## IMPORTANT RULES
+    
+    1. **Only complex categories**: Skip simple renewals or suppliers with just a name and spend
+    2. **Be specific**: Use actual names, numbers, and details from documents
+    3. **Savings accuracy**: Only report savings you can verify from documents
+    4. **relationship_status meanings**:
+       - "incumbent": Supplier was retained (may have been renegotiated)
+       - "new": Supplier was newly selected during engagement
+       - "displaced": Supplier was replaced/removed
+       - "considered": Supplier was evaluated but not selected
+    5. **Null for unknown**: If data isn't available, use null - don't guess
+    6. **Multiple battlecards per category**: If a category has multiple strategic suppliers, create separate battlecards
+    7. **complexity_reasons**: Be specific about why this supplier warranted a battlecard
+
+parameters:
+  - name: client_name
+    type: string
+    required: true
+    description: "Client company name"
+  
+  - name: categories_summary
+    type: string
+    required: true
+    description: "Summary of categories from Step 7 including vendors_before/after"
+  
+  - name: category_folder_contents
+    type: string
+    required: true
+    description: "Detailed content from category folders"
+
+examples:
+  - note: "Healthcare client with medical supplies RFP"
+    complexity_indicators:
+      - "RFP conducted with 4 bidders"
+      - "Supplier switched from McKesson to Medline"
+      - "15.6% savings achieved"
+    output_snippet: |
+      Battlecard for Medline Industries showing competitive RFP process,
+      displacement of incumbent, and specific contract terms.
