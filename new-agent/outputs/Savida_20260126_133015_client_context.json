@@ -1,0 +1,42 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare Services",
+    "industry_secondary": "Addiction Treatment",
+    "business_model": "Multi-site outpatient provider of medication-assisted treatment for opioid and alcohol use disorders",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "Founded in 2010, SaVida Health has expanded from its Nashville headquarters to operate outpatient addiction treatment centers across several states, offering FDA-approved medications, counseling, and case management services."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 75000000,
+      "currency": "USD",
+      "confidence": "medium",
+      "source": "web_search",
+      "notes": "Leadiq estimates revenue between $50\u2013$100 million; midpoint used."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 11,
+      "confidence": "low",
+      "source": "web_search",
+      "notes": "Web search lists 11 specific city locations but full network size not explicitly stated."
+    },
+    "employees": {
+      "count": 150,
+      "confidence": "medium",
+      "source": "web_search",
+      "notes": "LinkedIn company page shows 51\u2013200 employees; midpoint used."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "web_search"
+  ],
+  "extraction_notes": [
+    "Company referred to as 'SaVida Health' in kickoff deck and 'SaVida Management' in legal agreement; consumer-facing brand is SaVida Health.",
+    "No revenue, EBITDA, employee or location figures were provided in the client documents; web sources used instead.",
+    "Council Capital ownership confirmed via web search (mergr.com)."
+  ]
+}

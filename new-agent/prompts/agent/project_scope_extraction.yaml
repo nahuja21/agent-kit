@@ -1,0 +1,255 @@
+# Project Scope Extraction Prompt
+# Step 3: Extract project scope, fees, and timing from Agreement document
+# Source: Agreement folder (Exhibit A and Exhibit B)
+
+step: project_scope_extraction
+
+prompt:
+  instructions: |
+    You are extracting project scope and fee data from a Treya Partners Agreement document.
+    This document contains two key exhibits:
+    - Exhibit A: Project Scope (categories, spend, addressable %, savings estimates)
+    - Exhibit B: Project Fees (fee structure, ROI guarantees)
+    
+    Be precise - these are contractual values. Extract EXACTLY what is stated.
+    Return only valid JSON matching the specified format.
+
+  user_template: |
+    # Agreement Document Content
+    
+    {{agreement_content}}
+    
+    ---
+    
+    # YOUR TASK
+    
+    Extract data from this Agreement document. Focus on Exhibit A and Exhibit B.
+    
+    ## EXHIBIT A - PROJECT SCOPE TABLE
+    
+    The table typically has columns like: Category, Spend, Addressable, Savings Low, Savings High, Savings Avg
+    
+    Extract:
+    1. `initial_categories`: List of all category names from the table
+    2. For each category, note the Spend and Addressable % values
+    3. Calculate `total_addressable_spend`: SUM of (Spend × Addressable%) for each category
+       - Example: If "Telecom" has $500,000 spend and 80% addressable = $400,000
+       - Sum this across ALL categories
+    4. `savings_estimate_low`: SUM of the "Savings Low" column (or total row value)
+    5. `savings_estimate_high`: SUM of the "Savings High" column (or total row value)
+    6. `initial_categories_count`: COUNT of categories in the table
+    
+    ### COGS CLASSIFICATION:
+    For each category, determine if it is a COGS (Cost of Goods Sold) category or SG&A (non-COGS).
+    
+    **COGS categories** are directly related to delivering products/services to customers:
+    - Medical Supplies, Medical Equipment, Lab Supplies, Scientific Equipment
+    - Raw Materials, Manufacturing Supplies, Packaging
+    - Direct materials used in patient care or service delivery
+    - Pharmaceuticals, Clinical supplies
+    
+    **Non-COGS (SG&A) categories** are overhead/administrative:
+    - IT Hardware, Telecom, Office Supplies
+    - Commercial Print, Waste Management
+    - Employee Benefits, Insurance
+    - Facilities, Janitorial
+    
+    For each category in `category_details`, add:
+    - `is_cogs`: true or false
+    
+    Then calculate:
+    7. `cogs_categories_count`: Number of COGS categories
+    8. `cogs_categories_percentage`: (COGS categories / total categories) × 100
+    9. `cogs_addressable_spend`: SUM of addressable spend for COGS categories only
+    10. `cogs_addressable_percentage`: (COGS addressable spend / total addressable spend) × 100
+    
+    ## EXHIBIT B - PROJECT FEES
+    
+    There are THREE possible fee structures. Determine which ONE applies:
+    
+    ### 1. FIXED FEE
+    - Look for: "$X fixed fee", "Project Fee: $X", flat dollar amount
+    - Also has ROI guarantee: "Minimum Savings Guarantee", "2X fee", "minimum return on fees ratio"
+    - Extract:
+      - `fee_type`: "fixed"
+      - `fee_amount`: The fixed dollar amount
+      - `minimum_savings_guarantee`: The guaranteed savings as a dollar amount (if stated)
+      - `minimum_return_on_fees_ratio`: The ratio guarantee (e.g., "2X" = 2.0, "1.2×" = 1.2)
+    
+    ### 2. HYBRID FEE
+    - Has BOTH a fixed component AND a variable/contingent component
+    - Look for: "$X base fee plus Y% of savings above $Z"
+    - Also has ROI guarantee on the fixed portion
+    - Extract:
+      - `fee_type`: "hybrid"
+      - `fee_amount`: The fixed/base fee amount
+      - `minimum_savings_guarantee`: ROI guarantee as dollar amount (if stated)
+      - `minimum_return_on_fees_ratio`: The ratio guarantee (e.g., "1.2×" = 1.2, "2X" = 2.0)
+      - `fee_hybrid_threshold`: The savings threshold above which variable fee applies
+      - `fee_contingent_percentage`: The percentage of savings above threshold
+    
+    ### 3. CONTINGENT FEE
+    - Purely variable, no fixed component
+    - Look for: "X% of savings", "contingent on savings achieved"
+    - Extract:
+      - `fee_type`: "contingent"
+      - `fee_contingent_percentage`: The percentage (e.g., 25 for 25%)
+    
+    ## OTHER FIELDS TO EXTRACT
+    
+    - `start_date`: Look for signature date, effective date, or project start date
+    - `end_date`: If mentioned (often not specified)
+    - `engagement_type`: Brief description of the engagement type if stated
+    
+    ## OUTPUT FORMAT
+    
+    Return valid JSON only:
+    
+    ```json
+    {
+      "exhibit_a": {
+        "initial_categories": ["Category 1", "Category 2", "..."],
+        "initial_categories_count": 7,
+        "category_details": [
+          {
+            "category_name": "Medical Supplies",
+            "spend": 1800000,
+            "addressable_pct": 100,
+            "addressable_spend": 1800000,
+            "savings_low": 180000,
+            "savings_high": 270000,
+            "is_cogs": true
+          },
+          {
+            "category_name": "Telecom",
+            "spend": 500000,
+            "addressable_pct": 80,
+            "addressable_spend": 400000,
+            "savings_low": 40000,
+            "savings_high": 80000,
+            "is_cogs": false
+          }
+        ],
+        "total_spend": 6300000,
+        "total_addressable_spend": 5800000,
+        "savings_estimate_low": 540000,
+        "savings_estimate_high": 928000,
+        "cogs_categories_count": 3,
+        "cogs_categories_percentage": 42.9,
+        "cogs_addressable_spend": 2500000,
+        "cogs_addressable_percentage": 43.1
+      },
+      "exhibit_b": {
+        "fee_type": "fixed",
+        "fee_amount": 190000,
+        "minimum_savings_guarantee": 380000,
+        "minimum_return_on_fees_ratio": 2.0,
+        "fee_hybrid_threshold": null,
+        "fee_contingent_percentage": null,
+        "fee_notes": "Any additional fee details or payment terms"
+      },
+      "timing": {
+        "start_date": "2021-01-15",
+        "end_date": null,
+        "engagement_type": "Strategic sourcing engagement"
+      },
+      "extraction_notes": [
+        "Any uncertainties or notes about the extraction"
+      ]
+    }
+    ```
+    
+    ## IMPORTANT RULES
+    
+    1. Dollar amounts should be full numbers (190000 not "$190K" or "190,000")
+    2. Percentages should be numbers 0-100 (25 for 25%, not 0.25)
+    3. Calculate total_addressable_spend yourself: SUM of (spend × addressable_pct/100)
+    4. If a value is not found or unclear, set it to null
+    5. Include extraction_notes for any uncertainties or missing data
+    6. `minimum_return_on_fees_ratio`: Extract the ratio number (e.g., "1.2×" = 1.2, "2X" = 2.0)
+       - Look for phrases like: "minimum return on fees ratio", "ROI guarantee", "X× fixed fees"
+
+parameters:
+  - name: agreement_content
+    type: string
+    required: true
+    description: "The extracted text content from the Agreement PDF (with tables)"
+
+examples:
+  - note: "Fixed fee example"
+    input: |
+      EXHIBIT A - PROJECT SCOPE
+      | Category | Spend | Addressable | Savings Low | Savings High |
+      | Medical Supplies | $1,800,000 | 100% | $180,000 | $270,000 |
+      | Office Supplies | $175,000 | 80% | $14,000 | $21,000 |
+      | Total | $6,300,000 | - | $540,000 | $928,000 |
+      
+      EXHIBIT B - PROJECT FEES
+      Project Fee: $190,000 (fixed fee)
+      Minimum Savings Guarantee: 2X Project Fee ($380,000)
+    output: |
+      {
+        "exhibit_a": {
+          "initial_categories": ["Medical Supplies", "Office Supplies"],
+          "initial_categories_count": 2,
+          "category_details": [
+            {"category_name": "Medical Supplies", "spend": 1800000, "addressable_pct": 100, "addressable_spend": 1800000, "savings_low": 180000, "savings_high": 270000},
+            {"category_name": "Office Supplies", "spend": 175000, "addressable_pct": 80, "addressable_spend": 140000, "savings_low": 14000, "savings_high": 21000}
+          ],
+          "total_spend": 6300000,
+          "total_addressable_spend": 1940000,
+          "savings_estimate_low": 540000,
+          "savings_estimate_high": 928000
+        },
+        "exhibit_b": {
+          "fee_type": "fixed",
+          "fee_amount": 190000,
+          "minimum_savings_guarantee": 380000,
+          "minimum_return_on_fees_ratio": 2.0,
+          "fee_hybrid_threshold": null,
+          "fee_contingent_percentage": null,
+          "fee_notes": null
+        },
+        "timing": {
+          "start_date": null,
+          "end_date": null,
+          "engagement_type": null
+        },
+        "extraction_notes": []
+      }
+
+  - note: "Hybrid fee example with minimum return on fees ratio"
+    input: |
+      EXHIBIT B - PROJECT FEES
+      Fixed Fee: $175,000
+      Variable Fee: 45% of Annual Savings above $210,000 threshold
+      Minimum Return on Fees Ratio: 1.2× fixed fees within 15 months
+    output: |
+      {
+        "exhibit_b": {
+          "fee_type": "hybrid",
+          "fee_amount": 175000,
+          "minimum_savings_guarantee": 210000,
+          "minimum_return_on_fees_ratio": 1.2,
+          "fee_hybrid_threshold": 210000,
+          "fee_contingent_percentage": 45,
+          "fee_notes": "1.2× fixed fees within 15 months or Treya adjusts its fee"
+        }
+      }
+
+  - note: "Contingent fee example"
+    input: |
+      EXHIBIT B - PROJECT FEES
+      Fee: 25% of implemented annual savings
+    output: |
+      {
+        "exhibit_b": {
+          "fee_type": "contingent",
+          "fee_amount": null,
+          "minimum_savings_guarantee": null,
+          "minimum_savings_guarantee_ratio": null,
+          "fee_hybrid_threshold": null,
+          "fee_contingent_percentage": 25,
+          "fee_notes": null
+        }
+      }

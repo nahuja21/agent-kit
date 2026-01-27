@@ -1,0 +1,31 @@
+{
+  "engagement_background": {
+    "objective": "Generate $240K\u2013$470K in cost savings through enterprise-wide strategic sourcing, leveraging SaVida Health\u2019s purchasing power while maintaining or improving service levels, with quick-hit savings by the end of 2024 and full project completion by March 2025.",
+    "scope_summary": "Approximately $5.3 million in annual spend across 10 indirect and clinical support categories is in scope (EMR, employee benefits, scientific/medical lab supplies, medical supplies, small parcel shipping, IT hardware, telecom, office supplies, commercial print, waste management). Categories with low spend or limited opportunity may be dropped as the project progresses.",
+    "constraints_challenges": [
+      "Supplier lack of responsiveness to data requests, creating potential delays in baselining and RFP development",
+      "Risk of unsanctioned side conversations with suppliers that could weaken a united negotiation stance",
+      "Limited stakeholder time and potential pushback, requiring careful scheduling and engagement",
+      "Aggressive timeline: quick-hit savings needed by end-2024 and full sourcing cycle completed by mid-March 2025",
+      "Incumbent supplier sensitivities that must be managed respectfully during competitive events",
+      "Incomplete internal line-item usage data, necessitating reliance on suppliers to fill data gaps"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Unit-level AP/usage data and current contracts exist but are not centrally consolidated; detailed SKU/line-item data often must be requested directly from suppliers.",
+    "data_quality_notes": "Historical usage data is patchy; representative samples may substitute for full data sets when suppliers are unresponsive after multiple follow-ups.",
+    "source_file": "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from need to collect unit-level data, lack of existing strategic sourcing, and Treya performing the 'heavy lifting'.",
+    "Data availability and quality issues explicitly referenced in both the kickoff deck and the services agreement clauses on data collection."
+  ]
+}

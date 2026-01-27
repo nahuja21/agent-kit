@@ -1,0 +1,47 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Behavioral Health / Addiction Treatment",
+    "business_model": "Multi-site outpatient medication-assisted treatment (MAT) provider for opioid and alcohol use disorders",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "Founded in 2010, SaVida Health delivers MAT-based addiction care that combines FDA-approved medications with counseling and case management. Council Capital acquired the company in 2017, after which SaVida expanded from a regional provider to operating clinics across several Northeastern and Mid-Atlantic states."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 75000000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "LeadIQ company profile for SaVida Health (https://leadiq.com/c/savida-health/5c6a313b20000097313b8d4d)",
+      "notes": "LeadIQ estimates annual revenue between $50 M and $100 M. No corroborating figures found in official filings or press releases; midpoint of published range shown. Treated as low confidence."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 22,
+      "confidence": "low",
+      "source": "Behavioral Health Business article, 9-Nov-2020 (https://bhbusiness.com/2020/11/09/pipeline-mat-expansions-at-savida-spero-health-monte-nido-enters-second-southeastern-state/)",
+      "notes": "Article states SaVida operated 22 outpatient treatment centers as of Nov-2020. Company has announced additional openings (e.g., Danville VA in 2024 press release), so actual 2025 total is likely higher, but no authoritative current count was located."
+    },
+    "employees": {
+      "count": 165,
+      "confidence": "medium",
+      "source": "LeadIQ employee directory for SaVida Health (https://leadiq.com/c/savida-health/5c6a313b20000097313b8d4d/employee-directory)",
+      "notes": "LeadIQ lists approximately 165 employees as of Oct-2025. No employee figures found on official website or LinkedIn company page."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx (multiple slides)",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "Mergr.com transaction page (Council Capital acquires SaVida Health)",
+    "savidahealth.com/about-us (company overview)",
+    "LeadIQ company profile & employee directory for SaVida Health",
+    "Behavioral Health Business article, 9-Nov-2020"
+  ],
+  "extraction_notes": [
+    "Company name confirmed as \"SaVida Health\" in kickoff deck slides and on official website.",
+    "Private-equity ownership by Council Capital stated on Mergr.com and multiple news sources.",
+    "Revenue only available as a broad estimate from LeadIQ; no official figures located, so confidence set to low.",
+    "Location count based on 2020 article; subsequent press releases indicate further expansion but without a consolidated current total.",
+    "Employee count sourced solely from LeadIQ; LinkedIn did not display a public headcount figure, hence confidence is medium."
+  ]
+}

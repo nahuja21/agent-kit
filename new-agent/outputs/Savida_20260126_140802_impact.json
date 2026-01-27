@@ -1,0 +1,72 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "SaVida Health locks in $358K of hard annual savings by renegotiating its EMR contract",
+      "narrative": "In less than seven months, Treya Partners helped SaVida Health renegotiate its contract with incumbent EMR provider Athena, dropping the fee from 4.56 % to 3.40 %. The new three-year agreement delivers $357,889 in verified annual run-rate savings\u201422 % off prior costs\u2014while preserving service continuity and limiting future price escalation. Additional categories remain in flight, but this early win already covers 84 % of the project\u2019s original savings target range."
+    },
+    "financials": {
+      "annual_savings": {
+        "amount": 357889,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "\"$357K in savings has been finalized\" (Executive Summary, slide 3) and Savings Dashboard check-marked row for EMR (slide 4)."
+      },
+      "one_time_savings": {
+        "amount": 0,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "",
+        "notes": "No one-time credits or rebates are referenced in any project documents."
+      }
+    },
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 196,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Engagement launched October 2024; EMR agreement signed 4/15/2025 (Savings Dashboard, slide 4)."
+      },
+      "notes": "First hard savings captured with EMR contract 196 days after project kick-off; additional categories still being implemented."
+    },
+    "operational_improvements": "Secured a three-year EMR contract with defined CPI cap, eliminating embedded credit-card fees and improving fee transparency. Established process for centralized contract review and spend visibility, setting the stage for further GPO and telecom savings.",
+    "proof_points": [
+      {
+        "statement": "Negotiated Athena fee reduction from 4.56 % to 3.40 %, yielding $357,889 in annual savings (22 %).",
+        "category": "EMR",
+        "evidence": [
+          {
+            "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+            "page_or_slide": "6",
+            "quote": "\"Athena's final proposal meets the 3.4% target rate, delivering approximately $358K in annual savings.\""
+          },
+          {
+            "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+            "page_or_slide": "4",
+            "quote": "Savings Identified | EMR (Athena) | $1,596,000 spend | 22% savings | $357,889 | \u2705"
+          }
+        ]
+      },
+      {
+        "statement": "Locked in a three-year EMR term with CPI + 2 % price-cap language, protecting rates through 2028.",
+        "category": "EMR",
+        "evidence": [
+          {
+            "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+            "page_or_slide": "6",
+            "quote": "Contract Term: 3 Years \u2026 Price Adjustment Clause: subject to potential CPI +2%."
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+    "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx"
+  ],
+  "extraction_notes": [
+    "Only EMR category is marked as finalized/implemented; all other categories are still 'in progress' or 'proposal' so they are not counted as achieved savings.",
+    "Executive Summary explicitly states \"$357K in savings has been finalized\"\u2014this is treated as the total realized annual savings to date."
+  ]
+}

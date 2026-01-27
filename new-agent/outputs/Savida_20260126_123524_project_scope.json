@@ -1,0 +1,30 @@
+{
+  "exhibit_a": {
+    "initial_categories": [],
+    "initial_categories_count": 0,
+    "category_details": [],
+    "total_spend": null,
+    "total_addressable_spend": null,
+    "savings_estimate_low": null,
+    "savings_estimate_high": null
+  },
+  "exhibit_b": {
+    "fee_type": "hybrid",
+    "fee_amount": 175000,
+    "minimum_savings_guarantee": null,
+    "minimum_savings_guarantee_ratio": 1.2,
+    "fee_hybrid_threshold": 210000,
+    "fee_contingent_percentage": 45,
+    "fee_notes": "Fixed fee of $175,000 divided into five equal monthly invoices beginning at contract execution. Variable fee is 45% of Annual Savings created over $210,000, invoiced upon category completion once the minimum savings guarantee is met. Travel fees are passed through at cost. Minimum Return on Fees Ratio guarantees at least 1.2\u00d7 fixed fees within 15 months or Treya adjusts its fee."
+  },
+  "timing": {
+    "start_date": "2024-09-20",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction / strategic sourcing services"
+  },
+  "extraction_notes": [
+    "The actual Exhibit A table with category, spend, and savings details is referenced but not present in the provided text; therefore no scope values could be extracted.",
+    "Exhibit B fee structure clearly states a $175,000 fixed fee plus 45% of savings over $210,000 with a 1.2\u00d7 ROI guarantee, qualifying this as a hybrid fee model.",
+    "Signature dates (09/20/2024) were used as the start date; no explicit end date is specified in the document."
+  ]
+}

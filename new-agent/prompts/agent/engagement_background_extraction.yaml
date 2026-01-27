@@ -1,0 +1,211 @@
+# Engagement Background Extraction Prompt
+# Step 5: Extract engagement objectives, scope, and procurement environment
+# Sources: Agreement, Assessment, Case Study, Kick-off
+
+step: engagement_background_extraction
+
+prompt:
+  instructions: |
+    You are extracting engagement background information for a Treya Partners case study.
+    This includes the WHY (objectives), WHAT (scope), and HOW (procurement environment).
+    Analyze the provided documents to build a complete picture of the engagement context.
+    Return only valid JSON matching the specified format.
+    
+    Focus on procurement-specific context - this is a strategic sourcing engagement.
+
+  user_template: |
+    # Engagement Background Extraction
+    
+    ## Client: {{client_name}}
+    
+    ## Document Contents
+    (Extract engagement background from these sources)
+    
+    {{document_contents}}
+    
+    ---
+    
+    # YOUR TASK
+    
+    Extract engagement background information from the documents above.
+    
+    ## FIELDS TO EXTRACT
+    
+    ### 1. OBJECTIVE
+    
+    - `objective`: Why did the client engage Treya Partners?
+      - Look for: "goals", "objectives", "reasons for engagement", "client needs"
+      - 1-3 sentences summarizing the primary purpose
+      - Examples: "Reduce costs across indirect spend categories", "Establish procurement function", "Support PE value creation plan"
+    
+    ### 2. SCOPE SUMMARY
+    
+    - `scope_summary`: What is in scope vs out of scope?
+      - Look for: "scope", "categories in scope", "exclusions", "focus areas"
+      - Include: Number of categories, spend amount, any exclusions mentioned
+      - 1-3 sentences summarizing scope boundaries
+    
+    ### 3. CONSTRAINTS & CHALLENGES
+    
+    - `constraints_challenges`: Array of challenges or constraints faced
+      - Look for: "challenges", "constraints", "obstacles", "limitations", "risks"
+      - Include: supplier constraints, operational constraints, data challenges, timing pressures
+      - Return as array of strings, each describing one constraint/challenge
+      - Examples:
+        - "Limited procurement maturity - no dedicated procurement staff"
+        - "Incumbent supplier relationships with clinical staff"
+        - "Multi-site operations with decentralized purchasing"
+        - "Aggressive timeline due to PE value creation goals"
+    
+    ### 4. PROCUREMENT ENVIRONMENT
+    
+    This describes the client's procurement maturity and operating model BEFORE Treya's engagement.
+    
+    **`operating_model`**: How is procurement organized?
+    - "centralized" - Central procurement team makes decisions
+    - "decentralized" - Each site/location buys independently  
+    - "hybrid" - Mix of central and local control
+    - "center_led" - Central provides guidance, local executes
+    - null if not determinable
+    
+    **`maturity`**: How mature is the procurement function?
+    - "low" - No formal procurement, ad-hoc purchasing, no contracts
+    - "medium" - Some contracts, basic processes, limited strategic sourcing
+    - "high" - Mature procurement, strategic sourcing, category management
+    - null if not determinable
+    
+    **`data_availability`**: What procurement data is available?
+    - Describe: AP data, spend data, contract files, supplier lists
+    - Note quality issues: "incomplete", "scattered across systems", "no centralized view"
+    
+    **`data_quality_notes`**: Additional notes on data quality challenges
+    - Examples: "Multiple ERP systems", "Paper-based contracts", "No spend visibility"
+    
+    **`source_file`**: Which document provided this information
+    
+    **`confidence`**: How confident in this assessment?
+    - "high" - Explicitly stated in documents
+    - "medium" - Inferred from context
+    - "low" - Uncertain, limited information
+    
+    ## OUTPUT FORMAT
+    
+    Return valid JSON only:
+    
+    ```json
+    {
+      "engagement_background": {
+        "objective": "Reduce indirect spend costs by 10-15% across key categories to support private equity value creation goals and improve EBITDA margins.",
+        "scope_summary": "7 indirect spend categories totaling $6.3M in addressable spend, including medical supplies, telecom, and office supplies. Direct patient care costs excluded.",
+        "constraints_challenges": [
+          "Decentralized purchasing across 45 clinic locations",
+          "Limited visibility into current supplier contracts",
+          "Clinical staff resistance to changing medical supply vendors",
+          "Tight 12-month timeline for implementation"
+        ]
+      },
+      "procurement_environment": {
+        "operating_model": "decentralized",
+        "maturity": "low",
+        "data_availability": "AP data available from single ERP system. No centralized contract repository. Spend data requires cleanup.",
+        "data_quality_notes": "Multiple vendor naming conventions in AP data. Some categories have incomplete historical data.",
+        "source_file": "Assessment/Client Procurement Assessment.pptx",
+        "confidence": "high"
+      },
+      "extraction_sources": [
+        "Assessment/Client Procurement Assessment.pptx",
+        "Agreement/Services Agreement.pdf",
+        "Kick-off/Project Kickoff.pptx"
+      ],
+      "extraction_notes": [
+        "Operating model inferred from multi-site structure description",
+        "No explicit maturity assessment found - classified as low based on lack of procurement function"
+      ]
+    }
+    ```
+    
+    ## IMPORTANT RULES
+    
+    1. **Be specific**: Use actual numbers and details from documents when available
+    2. **Constraints array**: Each item should be a distinct, specific challenge (not generic)
+    3. **Operating model**: Must be one of: "centralized", "decentralized", "hybrid", "center_led", or null
+    4. **Maturity**: Must be one of: "low", "medium", "high", or null
+    5. **Source tracking**: Note which documents provided information
+    6. **Confidence**: Be honest about certainty level - "medium" if inferred
+    7. If a field cannot be determined from documents, set to null (don't guess)
+    8. **extraction_notes**: Note any gaps, inferences, or uncertainties
+
+parameters:
+  - name: client_name
+    type: string
+    required: true
+    description: "The client name for context"
+  
+  - name: document_contents
+    type: string
+    required: true
+    description: "Extracted content from Agreement, Assessment, Case Study, and Kick-off files"
+
+examples:
+  - note: "Healthcare company with decentralized procurement"
+    input: |
+      Client: AP Derm
+      Documents show: 52 clinic locations, no central procurement, each clinic orders independently...
+    output: |
+      {
+        "engagement_background": {
+          "objective": "Establish strategic sourcing capability and reduce indirect spend costs to support private equity value creation objectives.",
+          "scope_summary": "12 indirect spend categories with $8.5M total addressable spend. Focus on medical supplies, office supplies, and telecom. Clinical services and physician compensation excluded.",
+          "constraints_challenges": [
+            "No dedicated procurement function - office managers handle purchasing",
+            "52 clinic locations with independent purchasing decisions",
+            "Strong physician preferences for specific medical supply brands",
+            "Limited visibility into current contracts and pricing"
+          ]
+        },
+        "procurement_environment": {
+          "operating_model": "decentralized",
+          "maturity": "low",
+          "data_availability": "AP data available from centralized accounting system. No contract database. Spend requires normalization.",
+          "data_quality_notes": "Vendor names inconsistent across locations. Some historical spend data missing.",
+          "source_file": "Assessment/APDerm Procurement Assessment.pptx",
+          "confidence": "high"
+        },
+        "extraction_sources": [
+          "Assessment/APDerm Procurement Assessment.pptx",
+          "Kick-off/Project Kickoff.pptx"
+        ],
+        "extraction_notes": []
+      }
+
+  - note: "Manufacturing company with some procurement maturity"
+    input: |
+      Client: Midwest Manufacturing
+      Documents show: Central purchasing manager, some GPO contracts, 3 facilities...
+    output: |
+      {
+        "engagement_background": {
+          "objective": "Optimize indirect spend categories and renegotiate key supplier contracts to improve margins ahead of planned sale process.",
+          "scope_summary": "5 categories totaling $2.1M: MRO supplies, packaging, logistics, temp labor, and telecom. Raw materials excluded (managed separately).",
+          "constraints_challenges": [
+            "Existing multi-year contracts with some suppliers limit near-term savings",
+            "Plant managers have strong relationships with local suppliers",
+            "Limited resources for implementation - small procurement team"
+          ]
+        },
+        "procurement_environment": {
+          "operating_model": "hybrid",
+          "maturity": "medium",
+          "data_availability": "ERP spend data available. Contract files exist but not centralized. GPO membership provides some benchmarking data.",
+          "data_quality_notes": "Good AP data quality. Contract terms not fully documented in system.",
+          "source_file": "Assessment/Procurement Review.pptx",
+          "confidence": "medium"
+        },
+        "extraction_sources": [
+          "Assessment/Procurement Review.pptx",
+          "Agreement/Engagement Letter.pdf"
+        ],
+        "extraction_notes": [
+          "Maturity classified as medium based on existing purchasing manager role and GPO usage"
+        ]
+      }

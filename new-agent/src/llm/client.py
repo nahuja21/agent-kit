@@ -116,6 +116,69 @@ class OpenAIClient:
         
         return "\n".join(reasoning_parts) if reasoning_parts else None
     
+    def analyze_image(
+        self,
+        image_base64: str,
+        prompt: str,
+        detail: str = "high"
+    ) -> LLMResponse:
+        """
+        Analyze an image using GPT-4o Vision.
+        
+        Args:
+            image_base64: Base64-encoded image data
+            prompt: What to extract/analyze from the image
+            detail: Image detail level ("low", "high", "auto")
+            
+        Returns:
+            LLMResponse with extracted content
+        """
+        try:
+            response = self.client.responses.create(
+                model="gpt-4o",  # Vision requires gpt-4o
+                input=[
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "input_image",
+                                "image_url": f"data:image/png;base64,{image_base64}",
+                                "detail": detail,
+                            },
+                            {
+                                "type": "input_text",
+                                "text": prompt,
+                            },
+                        ],
+                    }
+                ],
+                max_output_tokens=4000,
+            )
+            
+            content = self._extract_text_content(response)
+            
+            input_tokens = response.usage.input_tokens if response.usage else 0
+            output_tokens = response.usage.output_tokens if response.usage else 0
+            
+            return LLMResponse(
+                content=content or "",
+                reasoning=None,
+                model="gpt-4o-vision",
+                input_tokens=input_tokens,
+                output_tokens=output_tokens,
+                total_tokens=input_tokens + output_tokens,
+            )
+            
+        except Exception as e:
+            return LLMResponse(
+                content=f"Vision API failed: {e}",
+                reasoning=None,
+                model="error",
+                input_tokens=0,
+                output_tokens=0,
+                total_tokens=0,
+            )
+    
     def web_search(self, query: str) -> LLMResponse:
         """
         Search the web for information using OpenAI's web search tool.

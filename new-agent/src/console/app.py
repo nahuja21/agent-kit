@@ -28,13 +28,113 @@ from src.config import (
     MODEL,
     validate_config,
     ensure_directories,
+    ENABLE_MULTI_PHASE,
 )
 from src.scanner import DirectoryScanner, find_project_in_inputs, extract_zip_project
 from src.llm import OpenAIClient
 from src.prompts import ContextBuilder
 from src.prompts.context import get_file_selection_prompt, get_schema_extraction_prompt, FILE_SELECTION_COUNT
+from src.prompts.loader import get_anchor_detection_prompt, get_project_scope_prompt, get_client_context_prompt, get_engagement_background_prompt, get_impact_prompt, get_categories_prompt, get_case_study_generation_prompt
+from src.extractors.pdf import extract_pdf_with_tables, find_exhibit_pages, extract_table_with_vision, extract_table_with_tesseract
 from src.extractors.base import extract_file_content
 from src.models.schema import CaseStudy
+import re
+
+
+def extract_json_from_response(content: str) -> dict:
+    """
+    Robustly extract JSON from LLM response that may contain markdown or text.
+    
+    Handles:
+    - JSON wrapped in ```json ... ``` or ``` ... ```
+    - JSON with text before/after
+    - Trailing commas in arrays/objects
+    - Multiple JSON objects (returns first complete one)
+    """
+    if not content:
+        raise ValueError("Empty content")
+    
+    content = content.strip()
+    
+    # Strategy 1: Try direct parse first
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError:
+        pass
+    
+    # Strategy 2: Remove markdown code fences
+    # Handle ```json\n...\n``` or ```\n...\n```
+    code_block_pattern = r'```(?:json)?\s*\n?(.*?)\n?```'
+    matches = re.findall(code_block_pattern, content, re.DOTALL)
+    if matches:
+        for match in matches:
+            try:
+                return json.loads(match.strip())
+            except json.JSONDecodeError:
+                # Try fixing trailing commas
+                fixed = re.sub(r',\s*([}\]])', r'\1', match.strip())
+                try:
+                    return json.loads(fixed)
+                except json.JSONDecodeError:
+                    continue
+    
+    # Strategy 3: Find JSON object by looking for { ... } pattern
+    # Find the first { and match to its closing }
+    brace_start = content.find('{')
+    if brace_start != -1:
+        depth = 0
+        in_string = False
+        escape = False
+        for i, char in enumerate(content[brace_start:], brace_start):
+            if escape:
+                escape = False
+                continue
+            if char == '\\':
+                escape = True
+                continue
+            if char == '"' and not escape:
+                in_string = not in_string
+                continue
+            if in_string:
+                continue
+            if char == '{':
+                depth += 1
+            elif char == '}':
+                depth -= 1
+                if depth == 0:
+                    json_str = content[brace_start:i+1]
+                    try:
+                        return json.loads(json_str)
+                    except json.JSONDecodeError:
+                        # Try fixing trailing commas
+                        fixed = re.sub(r',\s*([}\]])', r'\1', json_str)
+                        try:
+                            return json.loads(fixed)
+                        except json.JSONDecodeError:
+                            pass
+                    break
+    
+    # Strategy 4: Try removing common prefix text patterns
+    # LLM sometimes says "Here's the JSON:" before the actual JSON
+    lines = content.split('\n')
+    for i, line in enumerate(lines):
+        if line.strip().startswith('{'):
+            remaining = '\n'.join(lines[i:])
+            try:
+                return json.loads(remaining)
+            except json.JSONDecodeError:
+                fixed = re.sub(r',\s*([}\]])', r'\1', remaining)
+                try:
+                    return json.loads(fixed)
+                except json.JSONDecodeError:
+                    break
+    
+    # If all strategies fail, raise with helpful message
+    raise json.JSONDecodeError(
+        f"Could not extract valid JSON from response (length: {len(content)} chars)",
+        content[:200] + "..." if len(content) > 200 else content,
+        0
+    )
 
 
 class ConsoleApp:
@@ -705,7 +805,7 @@ ANALYSIS OUTPUT
         # STEP 1: Scan Directory Structure
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 1/3:[/bold] Scanning directory structure",
+            "[bold]Step 1/8:[/bold] Scanning directory structure",
             border_style="cyan",
         ))
         
@@ -718,21 +818,50 @@ ANALYSIS OUTPUT
         
         self.console.print(f"[green]✓[/green] Found {scan_result.total_files} files in {scan_result.total_folders} folders")
         
+        # Display phase detection results (only if multi-phase is enabled)
+        if ENABLE_MULTI_PHASE:
+            if scan_result.is_multi_phase:
+                self.console.print(f"\n[bold yellow]📋 MULTI-PHASE PROJECT DETECTED[/bold yellow]")
+                self.console.print(f"[yellow]Found {len(scan_result.phases)} phases:[/yellow]")
+                for phase in scan_result.phases:
+                    wave_str = f" (includes: {', '.join(phase.waves)})" if phase.waves else ""
+                    self.console.print(f"  • [bold]{phase.phase_name}[/bold]: {len(phase.files)} files{wave_str}")
+                self.console.print()
+            elif scan_result.phases:
+                # Single explicitly labeled phase
+                phase = scan_result.phases[0]
+                wave_str = f" (includes: {', '.join(phase.waves)})" if phase.waves else ""
+                self.console.print(f"[dim]Phase detected: {phase.phase_name}{wave_str}[/dim]")
+        
         # =====================================================================
         # STEP 2: Anchor File/Folder Detection
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 2/3:[/bold] Detecting anchor files and folders",
+            "[bold]Step 2/8:[/bold] Detecting anchor files and folders",
             border_style="cyan",
         ))
         
-        anchor_prompt = self._get_anchor_detection_prompt(scan_result.to_tree_string())
+        # Build phase info string if phases detected
+        phase_info = ""
+        if scan_result.is_multi_phase and scan_result.phases:
+            phase_lines = []
+            for phase in scan_result.phases:
+                wave_str = f" (Waves: {', '.join(phase.waves)})" if phase.waves else ""
+                phase_lines.append(f"- {phase.phase_name}{wave_str}: {len(phase.files)} files")
+                if phase.folders:
+                    phase_lines.append(f"  Folders: {', '.join(phase.folders[:3])}...")
+            phase_info = "\n".join(phase_lines)
+        
+        system_prompt, user_prompt = get_anchor_detection_prompt(
+            scan_result.to_tree_string(),
+            phase_info=phase_info,
+        )
         
         with self.console.status(f"[cyan]Asking {MODEL} to find anchor files...[/cyan]"):
             try:
                 anchor_response = self.llm_client.analyze(
-                    system_prompt="You are a document analyst. Analyze the directory structure and find the requested files/folders. Return only valid JSON.",
-                    user_content=anchor_prompt,
+                    system_prompt=system_prompt,
+                    user_content=user_prompt,
                 )
             except Exception as e:
                 self.console.print(f"[red]Failed to detect anchor files: {e}[/red]")
@@ -740,13 +869,8 @@ ANALYSIS OUTPUT
         
         # Parse anchor detection response
         try:
-            content = anchor_response.content.strip()
-            if content.startswith("```"):
-                lines = content.split("\n")
-                content = "\n".join(lines[1:-1])
-            
-            anchor_data = json.loads(content)
-        except json.JSONDecodeError as e:
+            anchor_data = extract_json_from_response(anchor_response.content)
+        except (json.JSONDecodeError, ValueError) as e:
             self.console.print(f"[red]Failed to parse anchor detection: {e}[/red]")
             self.console.print(f"[dim]Response was: {anchor_response.content[:500]}...[/dim]")
             return
@@ -761,121 +885,1472 @@ ANALYSIS OUTPUT
         self.console.print(f"\n[dim]Tokens: {anchor_response.input_tokens:,} in / {anchor_response.output_tokens:,} out[/dim]")
         
         # =====================================================================
-        # STEP 3: (Placeholder for future extraction)
+        # MULTI-PHASE HANDLING (controlled by ENABLE_MULTI_PHASE config)
+        # =====================================================================
+        # Only use multi-phase if enabled in config AND detected in anchor data
+        is_multi_phase = ENABLE_MULTI_PHASE and anchor_data.get("is_multi_phase", False)
+        phases_data = anchor_data.get("phases", []) if is_multi_phase else []
+        
+        # Initialize phase results storage
+        all_phase_results = {}
+        
+        if is_multi_phase and phases_data:
+            self.console.print(Panel(
+                f"[bold yellow]Multi-Phase Extraction: {len(phases_data)} phases detected[/bold yellow]",
+                border_style="yellow",
+            ))
+            
+            # Run extraction for each phase
+            for phase_idx, phase_anchor in enumerate(phases_data):
+                phase_name = phase_anchor.get("phase_name", f"Phase {phase_idx + 1}")
+                phase_number = phase_anchor.get("phase_number", phase_idx + 1)
+                
+                self.console.print(f"\n[bold magenta]{'═' * 60}[/bold magenta]")
+                self.console.print(f"[bold magenta]EXTRACTING: {phase_name}[/bold magenta]")
+                self.console.print(f"[bold magenta]{'═' * 60}[/bold magenta]\n")
+                
+                # Create phase-specific anchor data
+                phase_specific_anchor = {
+                    "agreement": phase_anchor.get("agreement", {}),
+                    "assessment": anchor_data.get("assessment", {}),  # Shared
+                    "case_study": anchor_data.get("case_study", {}),  # Shared
+                    "kickoff": phase_anchor.get("kickoff", {}),
+                    "project_updates": phase_anchor.get("project_updates", {}),
+                    "project_close_out": phase_anchor.get("project_close_out", {}),
+                    "categories": phase_anchor.get("categories", {}),
+                }
+                
+                # Run extraction for this phase
+                phase_result = self._run_phase_extraction(
+                    project_path=project_path,
+                    scan_result=scan_result,
+                    anchor_data=phase_specific_anchor,
+                    phase_name=phase_name,
+                    phase_number=phase_number,
+                )
+                
+                all_phase_results[phase_name] = phase_result
+            
+            # =====================================================================
+            # STEP 8: Combined Case Study Generation (Multi-Phase)
+            # =====================================================================
+            self.console.print(Panel(
+                "[bold]Step 8/8:[/bold] Generating Combined Case Study (Multi-Phase)",
+                border_style="cyan",
+            ))
+            
+            self._run_multiphase_case_study_generation(
+                project_path=project_path,
+                scan_result=scan_result,
+                all_phase_results=all_phase_results,
+            )
+            
+            return  # End multi-phase flow
+        
+        # =====================================================================
+        # SINGLE-PHASE EXTRACTION (Original Flow)
+        # =====================================================================
+        
+        # =====================================================================
+        # STEP 3: Project Scope Extraction (from Agreement)
         # =====================================================================
         self.console.print(Panel(
-            "[bold]Step 3/3:[/bold] Content extraction [dim](not yet implemented)[/dim]",
-            border_style="yellow",
+            "[bold]Step 3/8:[/bold] Extracting Project Scope from Agreement",
+            border_style="cyan",
         ))
-        self.console.print("[yellow]⚠️ Step 3 is a placeholder - will be implemented next.[/yellow]")
         
-        # Store anchor data for potential Step 3 use
+        # Check if Agreement was found
+        agreement_info = anchor_data.get("agreement", {})
+        if not agreement_info.get("found"):
+            self.console.print("[red]❌ No Agreement folder found - cannot extract project scope[/red]")
+            self.console.print("[dim]Project scope, fees, and initial categories require the Agreement document.[/dim]")
+            
+            # Store what we have
+            self._last_anchor_data = anchor_data
+            self._last_scan_result = scan_result
+            self._last_project_path = project_path
+            self._last_project_scope = None
+            self.console.print()
+            return
+        
+        agreement_path = agreement_info.get("path", "")
+        agreement_folder = project_path / agreement_path
+        
+        self.console.print(f"[green]✓[/green] Found Agreement at: {agreement_path}")
+        
+        # Find PDF files in the Agreement folder
+        pdf_files = []
+        if agreement_folder.is_dir():
+            # Recursively find all PDFs
+            pdf_files = list(agreement_folder.rglob("*.pdf"))
+        elif agreement_folder.is_file() and agreement_folder.suffix.lower() == ".pdf":
+            pdf_files = [agreement_folder]
+        
+        if not pdf_files:
+            self.console.print("[yellow]⚠️ No PDF files found in Agreement folder[/yellow]")
+            self._last_anchor_data = anchor_data
+            self._last_scan_result = scan_result
+            self._last_project_path = project_path
+            self._last_project_scope = None
+            self.console.print()
+            return
+        
+        self.console.print(f"[dim]Found {len(pdf_files)} PDF file(s) in Agreement folder[/dim]")
+        
+        # Extract content from Agreement PDFs (with table preservation)
+        agreement_contents = []
+        for pdf_file in pdf_files:
+            self.console.print(f"  [dim]• Extracting: {pdf_file.name}[/dim]")
+            result = extract_pdf_with_tables(pdf_file, max_chars=60000)
+            
+            if result.success:
+                # Include file path for context
+                relative_path = pdf_file.relative_to(project_path)
+                header = f"\n{'='*60}\nFILE: {relative_path}\n{'='*60}\n"
+                agreement_contents.append(header + result.text_content)
+                table_count = result.metadata.get("table_count", "0")
+                self.console.print(f"    [green]✓[/green] Extracted ({len(result.text_content):,} chars, {table_count} tables)")
+            else:
+                self.console.print(f"    [yellow]⚠️[/yellow] Failed: {result.error}")
+        
+        if not agreement_contents:
+            self.console.print("[red]❌ Failed to extract content from any Agreement PDF[/red]")
+            self._last_anchor_data = anchor_data
+            self._last_scan_result = scan_result
+            self._last_project_path = project_path
+            self._last_project_scope = None
+            self.console.print()
+            return
+        
+        # Combine all Agreement content
+        combined_agreement = "\n\n".join(agreement_contents)
+        self.console.print(f"\n[dim]Total Agreement content: {len(combined_agreement):,} characters[/dim]")
+        
+        # =====================================================================
+        # STEP 3b: Tesseract OCR for Exhibit Tables (image-based tables)
+        # =====================================================================
+        self.console.print("\n[cyan]📷 Checking for image-based tables (Exhibit A/B)...[/cyan]")
+        
+        ocr_extractions = []
+        for pdf_file in pdf_files:
+            # Find pages with Exhibit A or Exhibit B
+            exhibit_pages = find_exhibit_pages(pdf_file)
+            
+            if exhibit_pages:
+                self.console.print(f"  [dim]Found {len(exhibit_pages)} exhibit page(s) in {pdf_file.name}[/dim]")
+                
+                for page_num, exhibit_type in exhibit_pages:
+                    exhibit_label = "Exhibit A" if exhibit_type == "exhibit_a" else "Exhibit B"
+                    self.console.print(f"    [cyan]📷 OCR'ing {exhibit_label} (page {page_num + 1}) with Tesseract...[/cyan]")
+                    
+                    try:
+                        # Use Tesseract for accurate OCR (no hallucination)
+                        table_content = extract_table_with_tesseract(
+                            pdf_file, page_num, exhibit_type
+                        )
+                        
+                        if table_content and len(table_content.strip()) > 50:
+                            ocr_extractions.append(
+                                f"\n{'='*60}\n"
+                                f"TESSERACT OCR: {exhibit_label} (Page {page_num + 1})\n"
+                                f"{'='*60}\n"
+                                f"{table_content}"
+                            )
+                            self.console.print(f"    [green]✓[/green] Extracted {exhibit_label} table ({len(table_content):,} chars)")
+                        else:
+                            self.console.print(f"    [yellow]⚠️[/yellow] Could not extract {exhibit_label} table")
+                    except Exception as e:
+                        self.console.print(f"    [yellow]⚠️[/yellow] Tesseract OCR error: {e}")
+        
+        # Add OCR extractions to combined content
+        if ocr_extractions:
+            combined_agreement += "\n\n" + "\n\n".join(ocr_extractions)
+            self.console.print(f"[green]✓[/green] Added {len(ocr_extractions)} OCR'd table(s) to extraction")
+        else:
+            self.console.print("[dim]No image-based tables found (tables may be text-based)[/dim]")
+        
+        self.console.print(f"\n[dim]Final Agreement content: {len(combined_agreement):,} characters[/dim]")
+        
+        # Send to LLM for project scope extraction
+        system_prompt, user_prompt = get_project_scope_prompt(combined_agreement)
+        
+        with self.console.status(f"[cyan]Extracting project scope with {MODEL}...[/cyan]"):
+            try:
+                scope_response = self.llm_client.analyze(
+                    system_prompt=system_prompt,
+                    user_content=user_prompt,
+                )
+            except Exception as e:
+                self.console.print(f"[red]Failed to extract project scope: {e}[/red]")
+                self._last_anchor_data = anchor_data
+                self._last_scan_result = scan_result
+                self._last_project_path = project_path
+                self._last_project_scope = None
+                self.console.print()
+                return
+        
+        # Parse the response
+        try:
+            project_scope_data = extract_json_from_response(scope_response.content)
+        except (json.JSONDecodeError, ValueError) as e:
+            self.console.print(f"[red]Failed to parse project scope response: {e}[/red]")
+            self.console.print(f"[dim]Response was: {scope_response.content[:500]}...[/dim]")
+            project_scope_data = {"raw_response": scope_response.content, "parse_error": str(e)}
+        
+        # Display extraction results
+        self._display_project_scope_results(project_scope_data)
+        
+        # Show token usage
+        self.console.print(f"\n[dim]Tokens: {scope_response.input_tokens:,} in / {scope_response.output_tokens:,} out[/dim]")
+        
+        # Store results for later steps
         self._last_anchor_data = anchor_data
         self._last_scan_result = scan_result
         self._last_project_path = project_path
+        self._last_project_scope = project_scope_data
+        
+        # =====================================================================
+        # STEP 4: Client Context Extraction
+        # =====================================================================
+        self.console.print(Panel(
+            "[bold]Step 4/8:[/bold] Extracting Client Context",
+            border_style="cyan",
+        ))
+        
+        # Gather content from multiple sources: Assessment, Case Study, Agreement, Kick-off
+        client_context_sources = []
+        client_context_contents = []
+        
+        # 1. Assessment folder
+        assessment_info = anchor_data.get("assessment", {})
+        if assessment_info.get("found"):
+            assessment_path = project_path / assessment_info.get("path", "")
+            self.console.print(f"[dim]• Reading Assessment: {assessment_info.get('path')}[/dim]")
+            assessment_content = self._extract_folder_content(assessment_path, project_path, max_chars=30000)
+            if assessment_content:
+                client_context_contents.append(assessment_content)
+                client_context_sources.append(f"Assessment: {assessment_info.get('path')}")
+        
+        # 2. Case Study
+        case_study_info = anchor_data.get("case_study", {})
+        if case_study_info.get("found"):
+            case_study_path = project_path / case_study_info.get("path", "")
+            self.console.print(f"[dim]• Reading Case Study: {case_study_info.get('path')}[/dim]")
+            if case_study_path.is_file():
+                result = extract_file_content(case_study_path, max_chars=25000)
+                if result.success:
+                    relative_path = case_study_path.relative_to(project_path)
+                    header = f"\n{'='*60}\nFILE: {relative_path}\n{'='*60}\n"
+                    client_context_contents.append(header + result.text_content)
+                    client_context_sources.append(f"Case Study: {case_study_info.get('path')}")
+            else:
+                cs_content = self._extract_folder_content(case_study_path, project_path, max_chars=25000)
+                if cs_content:
+                    client_context_contents.append(cs_content)
+                    client_context_sources.append(f"Case Study: {case_study_info.get('path')}")
+        
+        # 3. Kick-off
+        kickoff_info = anchor_data.get("kickoff", {})
+        if kickoff_info.get("found"):
+            kickoff_path = project_path / kickoff_info.get("path", "")
+            self.console.print(f"[dim]• Reading Kick-off: {kickoff_info.get('path')}[/dim]")
+            if kickoff_path.is_file():
+                result = extract_file_content(kickoff_path, max_chars=20000)
+                if result.success:
+                    relative_path = kickoff_path.relative_to(project_path)
+                    header = f"\n{'='*60}\nFILE: {relative_path}\n{'='*60}\n"
+                    client_context_contents.append(header + result.text_content)
+                    client_context_sources.append(f"Kick-off: {kickoff_info.get('path')}")
+            else:
+                ko_content = self._extract_folder_content(kickoff_path, project_path, max_chars=20000)
+                if ko_content:
+                    client_context_contents.append(ko_content)
+                    client_context_sources.append(f"Kick-off: {kickoff_info.get('path')}")
+        
+        # 4. Include some Agreement content for client context (already extracted)
+        if agreement_contents:
+            # Take first 15k chars of agreement for client context
+            agreement_snippet = combined_agreement[:15000]
+            client_context_contents.append(
+                f"\n{'='*60}\nAGREEMENT (Excerpt)\n{'='*60}\n" + agreement_snippet
+            )
+            client_context_sources.append("Agreement (excerpt)")
+        
+        combined_client_content = "\n\n".join(client_context_contents)
+        self.console.print(f"[dim]Total client context content: {len(combined_client_content):,} characters from {len(client_context_sources)} sources[/dim]")
+        
+        # 5. Web search for company information (multiple searches for accuracy)
+        self.console.print(f"\n[cyan]🌐 Multi-source web search for {scan_result.project_name}...[/cyan]")
+        self.console.print("[dim]Running multiple searches to cross-validate information...[/dim]")
+        
+        web_search_results = []
+        search_queries = [
+            (f"{scan_result.project_name} company revenue annual sales", "Revenue"),
+            (f"{scan_result.project_name} number of employees headcount", "Employees"),
+            (f"{scan_result.project_name} locations offices sites facilities", "Locations"),
+            (f"{scan_result.project_name} private equity investor backed owner", "PE/Ownership"),
+            (f"{scan_result.project_name} company overview industry business", "Company Overview"),
+        ]
+        
+        for query, label in search_queries:
+            try:
+                with self.console.status(f"[cyan]Searching: {label}...[/cyan]"):
+                    response = self.llm_client.web_search(query)
+                    if response.content:
+                        web_search_results.append(f"\n### Web Search: {label}\nQuery: {query}\n\n{response.content}")
+                        self.console.print(f"  [green]✓[/green] {label}: {len(response.content)} chars")
+            except Exception as e:
+                self.console.print(f"  [yellow]⚠️[/yellow] {label} search failed: {e}")
+        
+        # Combine all web search results
+        if web_search_results:
+            web_search_info = "\n\n".join(web_search_results)
+            web_search_info = f"""# Web Search Results (Multiple Sources)
+
+IMPORTANT: Cross-validate information across sources. If sources disagree, note the discrepancy and prefer:
+1. Official company sources (website, press releases)
+2. Reputable business databases (LinkedIn, Crunchbase, PitchBook)
+3. News articles from established outlets
+4. If values differ significantly, report the range and note uncertainty
+
+{web_search_info}
+
+---
+END OF WEB SEARCH RESULTS
+When extracting, cite which source provided each data point."""
+            self.console.print(f"[green]✓[/green] Total web search content: {len(web_search_info):,} chars from {len(web_search_results)} searches")
+        else:
+            web_search_info = f"[Web search unavailable - manually lookup {scan_result.project_name}]"
+            self.console.print("[yellow]⚠️ All web searches failed[/yellow]")
+        
+        # 6. Call LLM for client context extraction
+        if combined_client_content or web_search_info:
+            system_prompt, user_prompt = get_client_context_prompt(
+                client_name_hint=scan_result.project_name,
+                web_search_results=web_search_info or "(No web search results)",
+                document_contents=combined_client_content or "(No document content extracted)",
+            )
+            
+            with self.console.status(f"[cyan]Extracting client context with {MODEL}...[/cyan]"):
+                try:
+                    client_context_response = self.llm_client.analyze(
+                        system_prompt=system_prompt,
+                        user_content=user_prompt,
+                    )
+                except Exception as e:
+                    self.console.print(f"[red]Failed to extract client context: {e}[/red]")
+                    client_context_data = {"error": str(e)}
+                    client_context_response = None
+            
+            # Parse the response
+            if client_context_response:
+                try:
+                    client_context_data = extract_json_from_response(client_context_response.content)
+                except (json.JSONDecodeError, ValueError) as e:
+                    self.console.print(f"[red]Failed to parse client context response: {e}[/red]")
+                    client_context_data = {"raw_response": client_context_response.content, "parse_error": str(e)}
+            
+            # Display client context results
+            self._display_client_context_results(client_context_data)
+            
+            # Show token usage
+            if client_context_response:
+                self.console.print(f"\n[dim]Tokens: {client_context_response.input_tokens:,} in / {client_context_response.output_tokens:,} out[/dim]")
+        else:
+            self.console.print("[yellow]⚠️ No content available for client context extraction[/yellow]")
+            client_context_data = {"error": "No content available"}
+        
+        # Store client context
+        self._last_client_context = client_context_data
+        
+        # Get client name from extraction (for Step 5)
+        extracted_client_name = client_context_data.get("client", {}).get("client_name", scan_result.project_name)
+        
+        # =====================================================================
+        # STEP 5: Engagement Background Extraction
+        # =====================================================================
+        self.console.print(Panel(
+            "[bold]Step 5/8:[/bold] Extracting Engagement Background",
+            border_style="cyan",
+        ))
+        
+        # Reuse the same document content from Step 4 (already gathered)
+        # Add Project Updates if available
+        project_updates_info = anchor_data.get("project_updates", {})
+        if project_updates_info.get("found"):
+            update_paths = project_updates_info.get("paths", [])
+            self.console.print(f"[dim]• Adding {len(update_paths)} Project Update(s) for constraints/challenges[/dim]")
+            
+            # Read up to 3 most recent project updates
+            for update_path in update_paths[:3]:
+                update_file = project_path / update_path
+                if update_file.exists() and update_file.is_file():
+                    result = extract_file_content(update_file, max_chars=10000)
+                    if result.success:
+                        header = f"\n{'='*60}\nFILE: {update_path}\n{'='*60}\n"
+                        client_context_contents.append(header + result.text_content)
+                        client_context_sources.append(f"Project Update: {update_path}")
+        
+        # Rebuild combined content with updates
+        combined_engagement_content = "\n\n".join(client_context_contents)
+        self.console.print(f"[dim]Total engagement background content: {len(combined_engagement_content):,} characters from {len(client_context_sources)} sources[/dim]")
+        
+        # Call LLM for engagement background extraction
+        if combined_engagement_content:
+            system_prompt, user_prompt = get_engagement_background_prompt(
+                client_name=extracted_client_name,
+                document_contents=combined_engagement_content,
+            )
+            
+            with self.console.status(f"[cyan]Extracting engagement background with {MODEL}...[/cyan]"):
+                try:
+                    engagement_response = self.llm_client.analyze(
+                        system_prompt=system_prompt,
+                        user_content=user_prompt,
+                    )
+                except Exception as e:
+                    self.console.print(f"[red]Failed to extract engagement background: {e}[/red]")
+                    engagement_background_data = {"error": str(e)}
+                    engagement_response = None
+            
+            # Parse the response
+            if engagement_response:
+                try:
+                    engagement_background_data = extract_json_from_response(engagement_response.content)
+                except (json.JSONDecodeError, ValueError) as e:
+                    self.console.print(f"[red]Failed to parse engagement background response: {e}[/red]")
+                    engagement_background_data = {"raw_response": engagement_response.content, "parse_error": str(e)}
+            
+            # Display engagement background results
+            self._display_engagement_background_results(engagement_background_data)
+            
+            # Show token usage
+            if engagement_response:
+                self.console.print(f"\n[dim]Tokens: {engagement_response.input_tokens:,} in / {engagement_response.output_tokens:,} out[/dim]")
+        else:
+            self.console.print("[yellow]⚠️ No content available for engagement background extraction[/yellow]")
+            engagement_background_data = {"error": "No content available"}
+        
+        # Store engagement background
+        self._last_engagement_background = engagement_background_data
+        
+        # =====================================================================
+        # STEP 6: Impact Extraction
+        # =====================================================================
+        self.console.print(Panel(
+            "[bold]Step 6/8:[/bold] Extracting Impact & Results",
+            border_style="cyan",
+        ))
+        
+        # Gather content from Case Study, Project Updates, and Project Close Out
+        impact_contents = []
+        impact_sources = []
+        
+        # 1. Case Study (primary source for impact)
+        case_study_info = anchor_data.get("case_study", {})
+        if case_study_info.get("found"):
+            case_study_path = project_path / case_study_info.get("path", "")
+            self.console.print(f"[dim]• Reading Case Study: {case_study_info.get('path')}[/dim]")
+            if case_study_path.is_file():
+                result = extract_file_content(case_study_path, max_chars=40000)
+                if result.success:
+                    relative_path = case_study_path.relative_to(project_path)
+                    header = f"\n{'='*60}\nFILE: {relative_path}\n{'='*60}\n"
+                    impact_contents.append(header + result.text_content)
+                    impact_sources.append(f"Case Study: {case_study_info.get('path')}")
+            else:
+                cs_content = self._extract_folder_content(case_study_path, project_path, max_chars=40000)
+                if cs_content:
+                    impact_contents.append(cs_content)
+                    impact_sources.append(f"Case Study: {case_study_info.get('path')}")
+        
+        # 2. Project Close Out (often has final results)
+        close_out_info = anchor_data.get("project_close_out", {})
+        if close_out_info.get("found"):
+            close_out_path = project_path / close_out_info.get("path", "")
+            self.console.print(f"[dim]• Reading Project Close Out: {close_out_info.get('path')}[/dim]")
+            if close_out_path.is_file():
+                result = extract_file_content(close_out_path, max_chars=30000)
+                if result.success:
+                    relative_path = close_out_path.relative_to(project_path)
+                    header = f"\n{'='*60}\nFILE: {relative_path}\n{'='*60}\n"
+                    impact_contents.append(header + result.text_content)
+                    impact_sources.append(f"Project Close Out: {close_out_info.get('path')}")
+            else:
+                co_content = self._extract_folder_content(close_out_path, project_path, max_chars=30000)
+                if co_content:
+                    impact_contents.append(co_content)
+                    impact_sources.append(f"Project Close Out: {close_out_info.get('path')}")
+        
+        # 3. Project Updates (for additional context, use most recent ones)
+        project_updates_info = anchor_data.get("project_updates", {})
+        if project_updates_info.get("found"):
+            update_paths = project_updates_info.get("paths", [])
+            self.console.print(f"[dim]• Reading {min(len(update_paths), 3)} most recent Project Update(s)[/dim]")
+            
+            for update_path in update_paths[:3]:
+                update_file = project_path / update_path
+                if update_file.exists() and update_file.is_file():
+                    result = extract_file_content(update_file, max_chars=15000)
+                    if result.success:
+                        header = f"\n{'='*60}\nFILE: {update_path}\n{'='*60}\n"
+                        impact_contents.append(header + result.text_content)
+                        impact_sources.append(f"Project Update: {update_path}")
+        
+        combined_impact_content = "\n\n".join(impact_contents)
+        self.console.print(f"[dim]Total impact content: {len(combined_impact_content):,} characters from {len(impact_sources)} sources[/dim]")
+        
+        # Get context from previous steps for comparison
+        exhibit_a = project_scope_data.get("exhibit_a", {})
+        initial_categories = ", ".join(exhibit_a.get("initial_categories", []))
+        addressable_spend = exhibit_a.get("total_addressable_spend", 0) or 0
+        savings_low = exhibit_a.get("savings_estimate_low", 0) or 0
+        savings_high = exhibit_a.get("savings_estimate_high", 0) or 0
+        
+        # Call LLM for impact extraction
+        if combined_impact_content:
+            system_prompt, user_prompt = get_impact_prompt(
+                client_name=extracted_client_name,
+                document_contents=combined_impact_content,
+                initial_categories=initial_categories,
+                addressable_spend=addressable_spend,
+                savings_low=savings_low,
+                savings_high=savings_high,
+            )
+            
+            with self.console.status(f"[cyan]Extracting impact with {MODEL}...[/cyan]"):
+                try:
+                    impact_response = self.llm_client.analyze(
+                        system_prompt=system_prompt,
+                        user_content=user_prompt,
+                    )
+                except Exception as e:
+                    self.console.print(f"[red]Failed to extract impact: {e}[/red]")
+                    impact_data = {"error": str(e)}
+                    impact_response = None
+            
+            # Parse the response
+            if impact_response:
+                try:
+                    impact_data = extract_json_from_response(impact_response.content)
+                except (json.JSONDecodeError, ValueError) as e:
+                    self.console.print(f"[red]Failed to parse impact response: {e}[/red]")
+                    impact_data = {"raw_response": impact_response.content, "parse_error": str(e)}
+            
+            # Display impact results
+            self._display_impact_results(impact_data)
+            
+            # Show token usage
+            if impact_response:
+                self.console.print(f"\n[dim]Tokens: {impact_response.input_tokens:,} in / {impact_response.output_tokens:,} out[/dim]")
+        else:
+            self.console.print("[yellow]⚠️ No Case Study, Project Updates, or Close Out found for impact extraction[/yellow]")
+            self.console.print("[dim]Impact data requires completed project documentation.[/dim]")
+            impact_data = {"error": "No impact sources available"}
+        
+        # Store impact data
+        self._last_impact = impact_data
+        
+        # =====================================================================
+        # STEP 7: Categories Extraction (Detailed)
+        # =====================================================================
+        self.console.print(Panel(
+            "[bold]Step 7/8:[/bold] Extracting Detailed Category Information",
+            border_style="cyan",
+        ))
+        
+        # Get category list from Impact results
+        category_list_from_impact = impact_data.get("impact", {}).get("category_results", [])
+        
+        # Fallback: Get from last 3 project updates if Impact doesn't have categories
+        if not category_list_from_impact:
+            self.console.print("[yellow]⚠️ No category list from Impact, checking Project Updates...[/yellow]")
+            # We already have project updates content from Impact step
+            # The LLM will need to find categories from that content
+            category_list_str = "(No category list available - extract from Project Updates content)"
+        else:
+            # Format category list for prompt
+            category_list_items = []
+            for cat in category_list_from_impact:
+                name = cat.get("category_name", "Unknown")
+                savings = cat.get("annual_savings", 0)
+                status = cat.get("status", "unknown")
+                notes = cat.get("status_notes", "")
+                category_list_items.append(f"- {name}: ${savings:,.0f} [{status}] {notes}")
+            category_list_str = "\n".join(category_list_items)
+            self.console.print(f"[green]✓[/green] Found {len(category_list_from_impact)} categories from Impact")
+        
+        # Get Exhibit A data from Project Scope
+        exhibit_a_data = project_scope_data.get("exhibit_a", {})
+        if exhibit_a_data:
+            exhibit_a_str = json.dumps(exhibit_a_data, indent=2)
+            self.console.print(f"[green]✓[/green] Exhibit A data available (baseline spend)")
+        else:
+            exhibit_a_str = "(No Exhibit A data available)"
+            self.console.print("[yellow]⚠️ No Exhibit A data available[/yellow]")
+        
+        # Find and read category folders
+        self.console.print("\n[cyan]📁 Reading category folders...[/cyan]")
+        category_folder_contents = []
+        categories_folder = project_path / "Categories"
+        
+        # Check for alternate folder names
+        if not categories_folder.exists():
+            categories_folder = project_path / "Category"
+        if not categories_folder.exists():
+            # Try to find any folder with "categor" in the name
+            for folder in project_path.iterdir():
+                if folder.is_dir() and "categor" in folder.name.lower():
+                    categories_folder = folder
+                    break
+        
+        if categories_folder.exists() and categories_folder.is_dir():
+            # Get all category subfolders
+            category_subfolders = [f for f in categories_folder.iterdir() if f.is_dir()]
+            self.console.print(f"[dim]Found {len(category_subfolders)} category folders[/dim]")
+            
+            for cat_folder in category_subfolders[:15]:  # Limit to 15 categories
+                self.console.print(f"  [dim]• Reading: {cat_folder.name}[/dim]")
+                cat_content = self._extract_folder_content(cat_folder, project_path, max_chars=15000)
+                if cat_content:
+                    category_folder_contents.append(
+                        f"\n{'='*60}\nCATEGORY FOLDER: {cat_folder.name}\n{'='*60}\n{cat_content}"
+                    )
+        else:
+            self.console.print("[dim]No Categories folder found[/dim]")
+        
+        # Also check for Wave 2 categories
+        wave2_categories = project_path / "Wave 2" / "Categories"
+        if wave2_categories.exists():
+            self.console.print(f"[dim]Found Wave 2 categories folder[/dim]")
+            for cat_folder in wave2_categories.iterdir():
+                if cat_folder.is_dir():
+                    self.console.print(f"  [dim]• Reading Wave 2: {cat_folder.name}[/dim]")
+                    cat_content = self._extract_folder_content(cat_folder, project_path, max_chars=10000)
+                    if cat_content:
+                        category_folder_contents.append(
+                            f"\n{'='*60}\nCATEGORY FOLDER (Wave 2): {cat_folder.name}\n{'='*60}\n{cat_content}"
+                        )
+        
+        combined_category_content = "\n\n".join(category_folder_contents)
+        self.console.print(f"[dim]Total category folder content: {len(combined_category_content):,} characters[/dim]")
+        
+        # Also include Close-out and Project Update content for vendor/lever info
+        if combined_impact_content:
+            combined_category_content = combined_impact_content + "\n\n" + combined_category_content
+        
+        # Call LLM for categories extraction
+        if category_list_str or combined_category_content:
+            from datetime import date
+            extraction_date = date.today().isoformat()
+            
+            system_prompt, user_prompt = get_categories_prompt(
+                client_name=extracted_client_name,
+                category_list=category_list_str,
+                exhibit_a_data=exhibit_a_str,
+                category_folder_contents=combined_category_content or "(No category folder content)",
+                extraction_date=extraction_date,
+            )
+            
+            with self.console.status(f"[cyan]Extracting detailed category info with {MODEL}...[/cyan]"):
+                try:
+                    categories_response = self.llm_client.analyze(
+                        system_prompt=system_prompt,
+                        user_content=user_prompt,
+                    )
+                except Exception as e:
+                    self.console.print(f"[red]Failed to extract categories: {e}[/red]")
+                    categories_data = {"error": str(e)}
+                    categories_response = None
+            
+            # Parse the response
+            if categories_response:
+                try:
+                    categories_data = extract_json_from_response(categories_response.content)
+                except (json.JSONDecodeError, ValueError) as e:
+                    self.console.print(f"[red]Failed to parse categories response: {e}[/red]")
+                    categories_data = {"raw_response": categories_response.content, "parse_error": str(e)}
+            
+            # Display categories results
+            self._display_categories_results(categories_data)
+            
+            # Show token usage
+            if categories_response:
+                self.console.print(f"\n[dim]Tokens: {categories_response.input_tokens:,} in / {categories_response.output_tokens:,} out[/dim]")
+        else:
+            self.console.print("[yellow]⚠️ No category data available for extraction[/yellow]")
+            categories_data = {"error": "No category data available"}
+        
+        # Store categories data
+        self._last_categories = categories_data
+        
+        # =====================================================================
+        # STEP 8: Case Study Content Generation
+        # =====================================================================
+        self.console.print(Panel(
+            "[bold]Step 8/8:[/bold] Generating Case Study Content",
+            border_style="cyan",
+        ))
+        
+        self.console.print("[dim]Synthesizing all extracted data into case study content...[/dim]")
+        
+        # Prepare all data from previous steps as JSON strings
+        project_scope_str = json.dumps(project_scope_data, indent=2) if project_scope_data else "{}"
+        client_context_str = json.dumps(client_context_data, indent=2) if client_context_data else "{}"
+        engagement_background_str = json.dumps(engagement_background_data, indent=2) if engagement_background_data else "{}"
+        impact_str = json.dumps(impact_data, indent=2) if impact_data else "{}"
+        categories_str = json.dumps(categories_data, indent=2) if categories_data else "{}"
+        
+        # Show what data we have
+        data_status = []
+        if project_scope_data and "error" not in project_scope_data:
+            data_status.append("Project Scope ✓")
+        if client_context_data and "error" not in client_context_data:
+            data_status.append("Client Context ✓")
+        if engagement_background_data and "error" not in engagement_background_data:
+            data_status.append("Engagement Background ✓")
+        if impact_data and "error" not in impact_data:
+            data_status.append("Impact ✓")
+        if categories_data and "error" not in categories_data:
+            data_status.append("Categories ✓")
+        
+        self.console.print(f"[green]Data available:[/green] {', '.join(data_status)}")
+        
+        # Call LLM for case study generation
+        system_prompt, user_prompt = get_case_study_generation_prompt(
+            project_scope_data=project_scope_str,
+            client_context_data=client_context_str,
+            engagement_background_data=engagement_background_str,
+            impact_data=impact_str,
+            categories_data=categories_str,
+        )
+        
+        with self.console.status(f"[cyan]Generating case study content with {MODEL}...[/cyan]"):
+            try:
+                case_study_response = self.llm_client.analyze(
+                    system_prompt=system_prompt,
+                    user_content=user_prompt,
+                )
+            except Exception as e:
+                self.console.print(f"[red]Failed to generate case study: {e}[/red]")
+                case_study_data = {"error": str(e)}
+                case_study_response = None
+        
+        # Parse the response
+        if case_study_response:
+            try:
+                case_study_data = extract_json_from_response(case_study_response.content)
+            except (json.JSONDecodeError, ValueError) as e:
+                self.console.print(f"[red]Failed to parse case study response: {e}[/red]")
+                case_study_data = {"raw_response": case_study_response.content, "parse_error": str(e)}
+        
+        # Display case study results
+        self._display_case_study_packaging_results(case_study_data)
+        
+        # Show token usage
+        if case_study_response:
+            self.console.print(f"\n[dim]Tokens: {case_study_response.input_tokens:,} in / {case_study_response.output_tokens:,} out[/dim]")
+        
+        # Store case study data
+        self._last_case_study = case_study_data
+        
+        # =====================================================================
+        # Save Combined Output
+        # =====================================================================
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        # Save project scope
+        scope_file = OUTPUTS_DIR / f"{scan_result.project_name}_{timestamp}_project_scope.json"
+        try:
+            scope_file.write_text(json.dumps(project_scope_data, indent=2), encoding="utf-8")
+            self.console.print(f"\n[green]✓[/green] Project Scope saved: {scope_file.name}")
+        except Exception as e:
+            self.console.print(f"[yellow]⚠️ Could not save project scope: {e}[/yellow]")
+        
+        # Save client context
+        client_file = OUTPUTS_DIR / f"{scan_result.project_name}_{timestamp}_client_context.json"
+        try:
+            client_file.write_text(json.dumps(client_context_data, indent=2), encoding="utf-8")
+            self.console.print(f"[green]✓[/green] Client Context saved: {client_file.name}")
+        except Exception as e:
+            self.console.print(f"[yellow]⚠️ Could not save client context: {e}[/yellow]")
+        
+        # Save engagement background
+        engagement_file = OUTPUTS_DIR / f"{scan_result.project_name}_{timestamp}_engagement_background.json"
+        try:
+            engagement_file.write_text(json.dumps(engagement_background_data, indent=2), encoding="utf-8")
+            self.console.print(f"[green]✓[/green] Engagement Background saved: {engagement_file.name}")
+        except Exception as e:
+            self.console.print(f"[yellow]⚠️ Could not save engagement background: {e}[/yellow]")
+        
+        # Save impact
+        impact_file = OUTPUTS_DIR / f"{scan_result.project_name}_{timestamp}_impact.json"
+        try:
+            impact_file.write_text(json.dumps(impact_data, indent=2), encoding="utf-8")
+            self.console.print(f"[green]✓[/green] Impact saved: {impact_file.name}")
+        except Exception as e:
+            self.console.print(f"[yellow]⚠️ Could not save impact: {e}[/yellow]")
+        
+        # Save categories
+        categories_file = OUTPUTS_DIR / f"{scan_result.project_name}_{timestamp}_categories.json"
+        try:
+            categories_file.write_text(json.dumps(categories_data, indent=2), encoding="utf-8")
+            self.console.print(f"[green]✓[/green] Categories saved: {categories_file.name}")
+        except Exception as e:
+            self.console.print(f"[yellow]⚠️ Could not save categories: {e}[/yellow]")
+        
+        # Save case study content
+        case_study_file = OUTPUTS_DIR / f"{scan_result.project_name}_{timestamp}_case_study.json"
+        try:
+            case_study_file.write_text(json.dumps(case_study_data, indent=2), encoding="utf-8")
+            self.console.print(f"[green]✓[/green] Case Study saved: {case_study_file.name}")
+        except Exception as e:
+            self.console.print(f"[yellow]⚠️ Could not save case study: {e}[/yellow]")
         
         self.console.print()
     
-    def _get_anchor_detection_prompt(self, directory_tree: str) -> str:
-        """Generate the prompt for anchor file/folder detection."""
-        return f"""# Anchor File/Folder Detection
-
-You are analyzing a project folder structure to find specific "anchor" files and folders that are important for case study extraction.
-
-## Directory Tree:
-```
-{directory_tree}
-```
-
-## Files/Folders to Find:
-
-### 1. Agreement (FOLDER)
-- Look for folders named "Agreement", "Agreements", or containing "Agreement" in the name
-- If there are multiple, pick the one with the MOST RECENT date in the folder name
-- Date formats could be: "2021-03-15", "March 2021", "3-15-21", "Q3 2021", etc.
-
-### 2. Assessment (FOLDER)
-- Look for folders named "Assessment", "Assessments", or containing "Assessment" in the name
-- If there are multiple, pick the one with the MOST RECENT date in the folder name
-
-### 3. Case Study (FILE or FOLDER)
-- Look for files or folders named "Case Study", "CaseStudy", "Case-Study", or containing these terms
-- Common file types: .pdf, .pptx, .docx
-- If there are multiple, pick the one with the MOST RECENT date in the name
-- Return the TYPE as "file" or "folder"
-
-### 4. Kickoff (FILE or FOLDER)
-- Look for files or folders named "Kickoff", "Kick-off", "Kick off", or containing these terms
-- Common file types: .pptx, .pdf
-- If there are multiple, pick the one with the MOST RECENT date in the name
-- Return the TYPE as "file" or "folder"
-
-### 5. Project Updates (FILES - find up to 5)
-- Search ANYWHERE in the directory tree for files containing "ProjectUpdate", "Project Update", "Project_Update"
-- These are typically .pptx files but could be other formats
-- Return UP TO 5 of them, sorted by the date in filename (MOST RECENT first)
-- If they are all in one folder, that's fine. If scattered, list each file path.
-
-### 6. Project Close Out (FILE or FOLDER)
-- Look for files or folders named "Close Out", "CloseOut", "Closeout", "Close-Out", "Project Close"
-- Could also be called "Final Update", "Project Completion"
-- If there are multiple, pick the one with the MOST RECENT date in the name
-- Return the TYPE as "file" or "folder"
-
-## Response Format:
-
-Return ONLY valid JSON in this exact format:
-
-```json
-{{
-  "agreement": {{
-    "found": true,
-    "type": "folder",
-    "path": "Agreement/",
-    "date_in_name": "2021-03-15"
-  }},
-  "assessment": {{
-    "found": true,
-    "type": "folder",
-    "path": "Assessment/",
-    "date_in_name": null
-  }},
-  "case_study": {{
-    "found": true,
-    "type": "file",
-    "path": "Case Study/Final Case Study.pdf",
-    "date_in_name": null
-  }},
-  "kickoff": {{
-    "found": false,
-    "type": null,
-    "path": null,
-    "date_in_name": null
-  }},
-  "project_updates": {{
-    "found": true,
-    "type": "files",
-    "paths": [
-      "Project Updates/ProjectUpdate 2021-12-01.pptx",
-      "Project Updates/ProjectUpdate 2021-11-15.pptx"
-    ]
-  }},
-  "project_close_out": {{
-    "found": false,
-    "type": null,
-    "path": null,
-    "date_in_name": null
-  }}
-}}
-```
-
-IMPORTANT:
-- Use the EXACT paths as they appear in the directory tree
-- For "project_updates", return an array of paths (up to 5)
-- For other anchors, return a single path string
-- If not found, set "found": false and all other fields to null
-- "date_in_name" should be the date extracted from the filename (normalized to YYYY-MM-DD if possible, otherwise as found)
-"""
+    def _extract_folder_content(self, folder_path: Path, project_path: Path, max_chars: int = 30000) -> str:
+        """
+        Extract content from all files in a folder.
+        
+        Args:
+            folder_path: Path to the folder
+            project_path: Root project path for relative paths
+            max_chars: Maximum total characters to extract
+            
+        Returns:
+            Combined content from all files in the folder
+        """
+        if not folder_path.exists() or not folder_path.is_dir():
+            return ""
+        
+        contents = []
+        chars_remaining = max_chars
+        
+        # Get all supported files in the folder
+        supported_extensions = {".pdf", ".pptx", ".xlsx", ".docx", ".txt"}
+        files = []
+        for ext in supported_extensions:
+            files.extend(folder_path.rglob(f"*{ext}"))
+        
+        # Sort by modification time (newest first)
+        files.sort(key=lambda f: f.stat().st_mtime, reverse=True)
+        
+        for file_path in files:
+            if chars_remaining <= 0:
+                break
+            
+            # Calculate per-file limit
+            per_file_limit = min(chars_remaining, max_chars // max(1, len(files)))
+            
+            result = extract_file_content(file_path, max_chars=per_file_limit)
+            
+            if result.success and result.text_content:
+                try:
+                    relative_path = file_path.relative_to(project_path)
+                except ValueError:
+                    relative_path = file_path.name
+                
+                header = f"\n{'='*60}\nFILE: {relative_path}\n{'='*60}\n"
+                content_with_header = header + result.text_content
+                contents.append(content_with_header)
+                chars_remaining -= len(content_with_header)
+        
+        return "\n".join(contents)
+    
+    def _display_client_context_results(self, data: dict) -> None:
+        """Display client context extraction results."""
+        self.console.print("\n[bold cyan]═══ CLIENT CONTEXT ═══[/bold cyan]\n")
+        
+        # Check for errors
+        if "error" in data:
+            self.console.print(f"[red]❌ Error: {data['error']}[/red]")
+            return
+        
+        if "parse_error" in data:
+            self.console.print(f"[red]❌ Parse error: {data['parse_error']}[/red]")
+            return
+        
+        # Client identification
+        client = data.get("client", {})
+        if client:
+            self.console.print("[bold green]Client Identification[/bold green]")
+            
+            if client.get("client_name"):
+                self.console.print(f"  [cyan]Name:[/cyan] {client['client_name']}")
+            
+            industry = client.get("industry_primary", "")
+            if client.get("industry_secondary"):
+                industry += f" / {client['industry_secondary']}"
+            if industry:
+                self.console.print(f"  [cyan]Industry:[/cyan] {industry}")
+            
+            if client.get("business_model"):
+                self.console.print(f"  [cyan]Business Model:[/cyan] {client['business_model']}")
+            
+            if client.get("sponsor_pe_firm"):
+                self.console.print(f"  [cyan]PE Sponsor:[/cyan] {client['sponsor_pe_firm']}")
+            else:
+                self.console.print(f"  [cyan]PE Sponsor:[/cyan] [dim](Not PE-backed)[/dim]")
+            
+            if client.get("client_history"):
+                history = client["client_history"]
+                if len(history) > 150:
+                    history = history[:150] + "..."
+                self.console.print(f"  [cyan]Background:[/cyan] {history}")
+            
+            self.console.print()
+        
+        # Size metrics
+        size_metrics = data.get("size_metrics", {})
+        if size_metrics:
+            self.console.print("[bold green]Size Metrics[/bold green]")
+            
+            conf_icons = {"high": "🟢", "medium": "🟡", "low": "🔴"}
+            
+            # Revenue
+            revenue = size_metrics.get("revenue")
+            if revenue and revenue.get("amount"):
+                conf = conf_icons.get(revenue.get("confidence", ""), "⚪")
+                source = revenue.get("source", "unknown")
+                self.console.print(f"  [cyan]Revenue:[/cyan] ${revenue['amount']:,.0f} {conf}")
+                self.console.print(f"    [dim]Source: {source}[/dim]")
+                if revenue.get("notes"):
+                    self.console.print(f"    [dim]Notes: {revenue['notes']}[/dim]")
+            
+            # EBITDA
+            ebitda = size_metrics.get("ebitda")
+            if ebitda and ebitda.get("amount"):
+                conf = conf_icons.get(ebitda.get("confidence", ""), "⚪")
+                self.console.print(f"  [cyan]EBITDA:[/cyan] ${ebitda['amount']:,.0f} {conf}")
+            
+            # Locations
+            locations = size_metrics.get("locations")
+            if locations and locations.get("count"):
+                conf = conf_icons.get(locations.get("confidence", ""), "⚪")
+                source = locations.get("source", "unknown")
+                self.console.print(f"  [cyan]Locations:[/cyan] {locations['count']} {conf}")
+                self.console.print(f"    [dim]Source: {source}[/dim]")
+                if locations.get("notes"):
+                    self.console.print(f"    [dim]Notes: {locations['notes']}[/dim]")
+            
+            # Employees
+            employees = size_metrics.get("employees")
+            if employees and employees.get("count"):
+                conf = conf_icons.get(employees.get("confidence", ""), "⚪")
+                source = employees.get("source", "unknown")
+                self.console.print(f"  [cyan]Employees:[/cyan] {employees['count']:,} {conf}")
+                self.console.print(f"    [dim]Source: {source}[/dim]")
+            
+            self.console.print()
+        
+        # Extraction sources
+        sources = data.get("extraction_sources", [])
+        if sources:
+            self.console.print("[bold green]Sources Used[/bold green]")
+            for src in sources:
+                self.console.print(f"  [dim]• {src}[/dim]")
+            self.console.print()
+        
+        # Extraction notes
+        notes = data.get("extraction_notes", [])
+        if notes:
+            self.console.print("[yellow]Extraction Notes:[/yellow]")
+            for note in notes:
+                self.console.print(f"  ⚠️ {note}")
+            self.console.print()
+    
+    def _display_case_study_packaging_results(self, data: dict) -> None:
+        """Display case study packaging/generation results."""
+        self.console.print("\n[bold magenta]═══ CASE STUDY CONTENT ═══[/bold magenta]\n")
+        
+        # Check for errors
+        if "error" in data:
+            self.console.print(f"[red]❌ Error: {data['error']}[/red]")
+            return
+        
+        if "parse_error" in data:
+            self.console.print(f"[red]❌ Parse error: {data['parse_error']}[/red]")
+            return
+        
+        packaging = data.get("case_study_packaging", {})
+        if not packaging:
+            self.console.print("[yellow]No case study content generated[/yellow]")
+            return
+        
+        # Case study ready assessment
+        is_ready = packaging.get("case_study_ready", False)
+        readiness_notes = packaging.get("readiness_notes", "")
+        
+        if is_ready:
+            self.console.print("[bold green]✅ CASE STUDY READY[/bold green]")
+        else:
+            self.console.print("[bold yellow]⚠️ CASE STUDY NOT READY[/bold yellow]")
+        
+        if readiness_notes:
+            self.console.print(f"[dim]{readiness_notes}[/dim]")
+        self.console.print()
+        
+        # Headline
+        headline = packaging.get("headline")
+        if headline:
+            self.console.print("[bold magenta]📣 HEADLINE[/bold magenta]")
+            self.console.print(f"[bold]{headline}[/bold]")
+            self.console.print()
+        
+        # Client Problem Statement
+        problem = packaging.get("client_problem_statement")
+        if problem:
+            self.console.print("[bold magenta]🎯 CLIENT PROBLEM[/bold magenta]")
+            self.console.print(f"{problem}")
+            self.console.print()
+        
+        # Approach Summary
+        approach = packaging.get("approach_summary", [])
+        if approach:
+            self.console.print("[bold magenta]🔧 APPROACH[/bold magenta]")
+            for bullet in approach:
+                self.console.print(f"  • {bullet}")
+            self.console.print()
+        
+        # Top Levers
+        levers = packaging.get("top_levers", [])
+        if levers:
+            self.console.print("[bold magenta]⚡ TOP LEVERS[/bold magenta]")
+            for i, lever in enumerate(levers, 1):
+                self.console.print(f"  {i}. {lever}")
+            self.console.print()
+        
+        # Value Delivered
+        value = packaging.get("value_delivered_blurb")
+        if value:
+            self.console.print("[bold magenta]💰 VALUE DELIVERED[/bold magenta]")
+            self.console.print(f"{value}")
+            self.console.print()
+        
+        # Where We Were Unique
+        unique = packaging.get("where_we_were_unique", [])
+        if unique:
+            self.console.print("[bold magenta]⭐ WHERE WE WERE UNIQUE[/bold magenta]")
+            for item in unique:
+                self.console.print(f"  ✓ {item}")
+            self.console.print()
+        
+        # Generation notes
+        notes = data.get("generation_notes", [])
+        if notes:
+            self.console.print("[dim]Generation Notes:[/dim]")
+            for note in notes:
+                self.console.print(f"  [dim]• {note}[/dim]")
+            self.console.print()
+    
+    def _display_categories_results(self, data: dict) -> None:
+        """Display categories extraction results."""
+        self.console.print("\n[bold cyan]═══ DETAILED CATEGORIES ═══[/bold cyan]\n")
+        
+        # Check for errors
+        if "error" in data:
+            self.console.print(f"[red]❌ Error: {data['error']}[/red]")
+            return
+        
+        if "parse_error" in data:
+            self.console.print(f"[red]❌ Parse error: {data['parse_error']}[/red]")
+            return
+        
+        categories = data.get("categories", [])
+        if not categories:
+            self.console.print("[yellow]No categories extracted[/yellow]")
+            return
+        
+        # Status icons
+        status_icons = {
+            "implemented": "✅",
+            "negotiated": "🤝",
+            "in_progress": "🔄",
+            "in progress": "🔄",
+            "identified": "🎯",
+            "not_pursued": "❌",
+            "not pursued": "❌",
+        }
+        
+        conf_icons = {"high": "🟢", "medium": "🟡", "low": "🔴"}
+        
+        for cat in categories:
+            name = cat.get("category_label", "Unknown")
+            status = cat.get("status", "unknown")
+            icon = status_icons.get(status.lower().replace("_", " "), "❓")
+            
+            self.console.print(f"{icon} [bold]{name}[/bold] [{status}]")
+            
+            # Vendors
+            vendors_before = cat.get("vendors_before", [])
+            vendors_after = cat.get("vendors_after", [])
+            if vendors_before or vendors_after:
+                if vendors_before:
+                    self.console.print(f"   [dim]Vendors Before:[/dim] {', '.join(vendors_before)}")
+                if vendors_after:
+                    self.console.print(f"   [green]Vendors After:[/green] {', '.join(vendors_after)}")
+            
+            # Levers
+            levers = cat.get("levers", [])
+            if levers:
+                self.console.print(f"   [cyan]Levers:[/cyan] {', '.join(levers)}")
+            
+            # Financials
+            baseline = cat.get("baseline_spend")
+            savings = cat.get("savings_annual_run_rate")
+            pct = cat.get("savings_percentage")
+            
+            if baseline and baseline.get("amount"):
+                conf = conf_icons.get(baseline.get("confidence", ""), "⚪")
+                self.console.print(f"   [dim]Baseline:[/dim] ${baseline['amount']:,.0f} {conf}")
+            
+            if savings and savings.get("amount"):
+                conf = conf_icons.get(savings.get("confidence", ""), "⚪")
+                pct_str = f" ({pct:.1f}%)" if pct else ""
+                self.console.print(f"   [green]Savings:[/green] ${savings['amount']:,.0f}{pct_str} {conf}")
+            
+            # Constraints (if any)
+            constraints = cat.get("constraints", {})
+            if constraints and any(constraints.values()):
+                self.console.print(f"   [yellow]Constraints:[/yellow]")
+                for ctype, cval in constraints.items():
+                    if cval:
+                        ctype_display = ctype.replace("_", " ").title()
+                        self.console.print(f"      • {ctype_display}: {cval}")
+            
+            # Notes
+            notes = cat.get("notes")
+            if notes:
+                self.console.print(f"   [dim]Notes: {notes}[/dim]")
+            
+            self.console.print()  # Blank line between categories
+        
+        # Summary
+        summary = data.get("categories_summary", {})
+        if summary:
+            self.console.print("[bold green]Category Summary[/bold green]")
+            
+            total = summary.get("total_count", len(categories))
+            implemented = summary.get("implemented_count", 0)
+            in_progress = summary.get("in_progress_count", 0)
+            
+            self.console.print(f"  Total Categories: {total}")
+            self.console.print(f"  ✅ Implemented: {implemented}")
+            self.console.print(f"  🔄 In Progress: {in_progress}")
+            
+            total_baseline = summary.get("total_baseline_spend")
+            total_savings = summary.get("total_savings")
+            avg_pct = summary.get("average_savings_percentage")
+            
+            if total_baseline:
+                self.console.print(f"  Total Baseline Spend: ${total_baseline:,.0f}")
+            if total_savings:
+                self.console.print(f"  Total Savings: [green]${total_savings:,.0f}[/green]")
+            if avg_pct:
+                self.console.print(f"  Average Savings %: {avg_pct:.1f}%")
+            
+            self.console.print()
+        
+        # Extraction sources
+        sources = data.get("extraction_sources", [])
+        if sources:
+            self.console.print("[bold green]Sources Used[/bold green]")
+            for src in sources[:5]:  # Limit to 5
+                self.console.print(f"  [dim]• {src}[/dim]")
+            if len(sources) > 5:
+                self.console.print(f"  [dim]... and {len(sources) - 5} more[/dim]")
+            self.console.print()
+        
+        # Extraction notes
+        notes = data.get("extraction_notes", [])
+        if notes:
+            self.console.print("[yellow]Extraction Notes:[/yellow]")
+            for note in notes:
+                self.console.print(f"  ⚠️ {note}")
+            self.console.print()
+    
+    def _display_impact_results(self, data: dict) -> None:
+        """Display impact extraction results."""
+        self.console.print("\n[bold green]═══ IMPACT & RESULTS ═══[/bold green]\n")
+        
+        # Check for errors
+        if "error" in data:
+            self.console.print(f"[red]❌ Error: {data['error']}[/red]")
+            return
+        
+        if "parse_error" in data:
+            self.console.print(f"[red]❌ Parse error: {data['parse_error']}[/red]")
+            return
+        
+        impact = data.get("impact", {})
+        if not impact:
+            self.console.print("[yellow]No impact data extracted[/yellow]")
+            return
+        
+        conf_icons = {"high": "🟢", "medium": "🟡", "low": "🔴"}
+        
+        # Summary section
+        summary = impact.get("summary", {})
+        if summary:
+            if summary.get("headline"):
+                self.console.print(f"[bold green]📣 {summary['headline']}[/bold green]")
+                self.console.print()
+            
+            if summary.get("narrative"):
+                self.console.print("[bold]Narrative[/bold]")
+                self.console.print(f"  {summary['narrative']}")
+                self.console.print()
+        
+        # Financials section
+        financials = impact.get("financials", {})
+        if financials:
+            self.console.print("[bold green]Financial Impact[/bold green]")
+            
+            # Total annual savings
+            total = financials.get("total_annual_savings")
+            if total and total.get("amount"):
+                conf = conf_icons.get(total.get("confidence", ""), "⚪")
+                self.console.print(f"  [cyan]Total Annual Savings:[/cyan] [bold green]${total['amount']:,.0f}[/bold green] {conf}")
+                if total.get("notes"):
+                    self.console.print(f"    [dim]{total['notes']}[/dim]")
+            
+            # Finalized savings
+            finalized = financials.get("finalized_savings")
+            if finalized and finalized.get("amount"):
+                conf = conf_icons.get(finalized.get("confidence", ""), "⚪")
+                self.console.print(f"  [cyan]Finalized Savings:[/cyan] [green]${finalized['amount']:,.0f}[/green] {conf}")
+            
+            # In-progress savings
+            in_progress = financials.get("in_progress_savings")
+            if in_progress and in_progress.get("amount"):
+                conf = conf_icons.get(in_progress.get("confidence", ""), "⚪")
+                self.console.print(f"  [cyan]In-Progress Savings:[/cyan] [yellow]${in_progress['amount']:,.0f}[/yellow] {conf}")
+            
+            # Legacy support: annual_savings (if no total_annual_savings)
+            if not total:
+                annual = financials.get("annual_savings")
+                if annual and annual.get("amount"):
+                    conf = conf_icons.get(annual.get("confidence", ""), "⚪")
+                    self.console.print(f"  [cyan]Annual Savings:[/cyan] [bold green]${annual['amount']:,.0f}[/bold green] {conf}")
+                    if annual.get("source_file"):
+                        self.console.print(f"    [dim]Source: {annual['source_file']}[/dim]")
+                    if annual.get("notes"):
+                        self.console.print(f"    [dim]Notes: {annual['notes']}[/dim]")
+            
+            # One-time savings
+            one_time = financials.get("one_time_savings")
+            if one_time and one_time.get("amount"):
+                conf = conf_icons.get(one_time.get("confidence", ""), "⚪")
+                self.console.print(f"  [cyan]One-Time Savings:[/cyan] [green]${one_time['amount']:,.0f}[/green] {conf}")
+            
+            self.console.print()
+        
+        # Category Results breakdown
+        category_results = impact.get("category_results", [])
+        if category_results:
+            self.console.print("[bold green]Category Results[/bold green]")
+            
+            # Status icons
+            status_icons = {
+                "finalized": "✅",
+                "implemented": "✅",
+                "complete": "✅",
+                "in progress": "🔄",
+                "in_progress": "🔄",
+                "awaiting signature": "📝",
+                "awaiting_signature": "📝",
+                "pending": "📝",
+                "proposal": "📋",
+                "negotiation": "🤝",
+            }
+            
+            for cat in category_results:
+                name = cat.get("category_name", "Unknown")
+                savings = cat.get("annual_savings", 0)
+                status = cat.get("status", "unknown").lower()
+                notes = cat.get("status_notes", "")
+                
+                icon = status_icons.get(status, "❓")
+                status_display = status.replace("_", " ").title()
+                
+                self.console.print(f"  {icon} [bold]{name}[/bold]: ${savings:,.0f} [{status_display}]")
+                if notes:
+                    self.console.print(f"      [dim]{notes}[/dim]")
+            
+            self.console.print()
+        
+        # Excluded categories
+        excluded = impact.get("excluded_categories", [])
+        if excluded:
+            self.console.print("[dim]Excluded Categories:[/dim]")
+            for cat in excluded:
+                name = cat.get("category_name", "Unknown")
+                reason = cat.get("reason", "")
+                self.console.print(f"  [dim]✗ {name}: {reason}[/dim]")
+            self.console.print()
+        
+        # Not started categories (in scope but no work performed)
+        not_started = impact.get("not_started_categories", [])
+        if not_started:
+            self.console.print("[dim]Not Started (in scope but no work performed):[/dim]")
+            for cat in not_started:
+                name = cat.get("category_name", "Unknown")
+                reason = cat.get("reason", "")
+                self.console.print(f"  [dim]⏸️ {name}: {reason}[/dim]")
+            self.console.print()
+        
+        # Time to value
+        ttv = impact.get("time_to_value", {})
+        if ttv:
+            value_days = ttv.get("value_realized_in_days")
+            if value_days and value_days.get("value"):
+                conf = conf_icons.get(value_days.get("confidence", ""), "⚪")
+                self.console.print("[bold green]Time to Value[/bold green]")
+                self.console.print(f"  [cyan]First Value Realized:[/cyan] {value_days['value']:.0f} days {conf}")
+                if ttv.get("notes"):
+                    self.console.print(f"  [dim]{ttv['notes']}[/dim]")
+                self.console.print()
+        
+        # Operational improvements
+        ops = impact.get("operational_improvements")
+        if ops:
+            self.console.print("[bold green]Operational Improvements[/bold green]")
+            self.console.print(f"  {ops}")
+            self.console.print()
+        
+        # Proof points
+        proof_points = impact.get("proof_points", [])
+        if proof_points:
+            self.console.print("[bold green]Proof Points[/bold green]")
+            for i, pp in enumerate(proof_points, 1):
+                statement = pp.get("statement", "")
+                category = pp.get("category")
+                
+                cat_str = f" [dim]({category})[/dim]" if category else ""
+                self.console.print(f"  [green]✓[/green] {statement}{cat_str}")
+                
+                # Show evidence if available
+                evidence = pp.get("evidence", [])
+                for ev in evidence[:1]:  # Show first evidence only for brevity
+                    if ev.get("quote"):
+                        quote = ev["quote"]
+                        if len(quote) > 80:
+                            quote = quote[:80] + "..."
+                        self.console.print(f"    [dim]Quote: \"{quote}\"[/dim]")
+            
+            self.console.print()
+        
+        # Extraction sources
+        sources = data.get("extraction_sources", [])
+        if sources:
+            self.console.print("[bold green]Sources Used[/bold green]")
+            for src in sources:
+                self.console.print(f"  [dim]• {src}[/dim]")
+            self.console.print()
+        
+        # Extraction notes
+        notes = data.get("extraction_notes", [])
+        if notes:
+            self.console.print("[yellow]Extraction Notes:[/yellow]")
+            for note in notes:
+                self.console.print(f"  ⚠️ {note}")
+            self.console.print()
+    
+    def _display_engagement_background_results(self, data: dict) -> None:
+        """Display engagement background extraction results."""
+        self.console.print("\n[bold cyan]═══ ENGAGEMENT BACKGROUND ═══[/bold cyan]\n")
+        
+        # Check for errors
+        if "error" in data:
+            self.console.print(f"[red]❌ Error: {data['error']}[/red]")
+            return
+        
+        if "parse_error" in data:
+            self.console.print(f"[red]❌ Parse error: {data['parse_error']}[/red]")
+            return
+        
+        # Engagement background section
+        eb = data.get("engagement_background", {})
+        if eb:
+            # Objective
+            if eb.get("objective"):
+                self.console.print("[bold green]Objective[/bold green]")
+                self.console.print(f"  {eb['objective']}")
+                self.console.print()
+            
+            # Scope summary
+            if eb.get("scope_summary"):
+                self.console.print("[bold green]Scope Summary[/bold green]")
+                self.console.print(f"  {eb['scope_summary']}")
+                self.console.print()
+            
+            # Constraints & Challenges
+            constraints = eb.get("constraints_challenges", [])
+            if constraints:
+                self.console.print("[bold green]Constraints & Challenges[/bold green]")
+                for constraint in constraints:
+                    self.console.print(f"  [yellow]⚠️[/yellow] {constraint}")
+                self.console.print()
+        
+        # Procurement environment
+        pe = data.get("procurement_environment", {})
+        if pe:
+            self.console.print("[bold green]Procurement Environment[/bold green]")
+            
+            conf_icons = {"high": "🟢", "medium": "🟡", "low": "🔴"}
+            conf = conf_icons.get(pe.get("confidence", ""), "⚪")
+            
+            # Operating model
+            operating_model = pe.get("operating_model")
+            if operating_model:
+                model_display = {
+                    "centralized": "Centralized",
+                    "decentralized": "Decentralized",
+                    "hybrid": "Hybrid",
+                    "center_led": "Center-Led",
+                }.get(operating_model, operating_model)
+                self.console.print(f"  [cyan]Operating Model:[/cyan] {model_display}")
+            
+            # Maturity
+            maturity = pe.get("maturity")
+            if maturity:
+                maturity_display = {
+                    "low": "Low 🔴",
+                    "medium": "Medium 🟡",
+                    "high": "High 🟢",
+                }.get(maturity, maturity)
+                self.console.print(f"  [cyan]Procurement Maturity:[/cyan] {maturity_display}")
+            
+            # Data availability
+            if pe.get("data_availability"):
+                self.console.print(f"  [cyan]Data Availability:[/cyan] {pe['data_availability']}")
+            
+            # Data quality notes
+            if pe.get("data_quality_notes"):
+                self.console.print(f"  [cyan]Data Quality Notes:[/cyan] {pe['data_quality_notes']}")
+            
+            # Source and confidence
+            if pe.get("source_file"):
+                self.console.print(f"  [dim]Source: {pe['source_file']} {conf}[/dim]")
+            
+            self.console.print()
+        
+        # Extraction sources
+        sources = data.get("extraction_sources", [])
+        if sources:
+            self.console.print("[bold green]Sources Used[/bold green]")
+            for src in sources:
+                self.console.print(f"  [dim]• {src}[/dim]")
+            self.console.print()
+        
+        # Extraction notes
+        notes = data.get("extraction_notes", [])
+        if notes:
+            self.console.print("[yellow]Extraction Notes:[/yellow]")
+            for note in notes:
+                self.console.print(f"  ⚠️ {note}")
+            self.console.print()
     
     def _validate_anchor_paths(self, anchor_data: dict, scan_result) -> dict:
         """Validate that anchor paths actually exist in the directory."""
@@ -981,62 +2456,584 @@ IMPORTANT:
         """Display anchor detection results in a nice format."""
         self.console.print("\n[bold cyan]═══ ANCHOR FILES/FOLDERS DETECTION ═══[/bold cyan]\n")
         
-        found_count = 0
-        total_count = 6
+        # Check if multi-phase
+        is_multi_phase = anchor_data.get("is_multi_phase", False)
+        phases = anchor_data.get("phases", [])
         
-        # Define display order and labels
-        anchors = [
-            ("agreement", "Agreement Folder", "folder"),
-            ("assessment", "Assessment Folder", "folder"),
-            ("case_study", "Case Study", "file_or_folder"),
-            ("kickoff", "Kickoff", "file_or_folder"),
-            ("project_updates", "Project Updates", "files"),
-            ("project_close_out", "Project Close Out", "file_or_folder"),
-        ]
-        
-        for key, label, expected_type in anchors:
-            data = anchor_data.get(key, {})
-            found = data.get("found", False)
+        if is_multi_phase and phases:
+            self.console.print("[bold yellow]📋 MULTI-PHASE PROJECT[/bold yellow]\n")
             
-            if found:
-                found_count += 1
-                self.console.print(f"[green]✅ {label}[/green]")
+            # Display shared anchors first
+            self._display_single_anchor("Assessment", anchor_data.get("assessment", {}))
+            self._display_single_anchor("Case Study", anchor_data.get("case_study", {}))
+            
+            # Display per-phase anchors
+            for phase in phases:
+                phase_name = phase.get("phase_name", "Unknown Phase")
+                waves = phase.get("waves", [])
+                wave_str = f" [dim](includes: {', '.join(waves)})[/dim]" if waves else ""
                 
-                if key == "project_updates":
-                    # Multiple paths
-                    paths = data.get("paths", [])
-                    for path in paths:
-                        self.console.print(f"   [dim]└─[/dim] {path}")
-                    if data.get("invalid_paths"):
-                        for path in data["invalid_paths"]:
-                            self.console.print(f"   [red]└─ (invalid)[/red] [dim]{path}[/dim]")
+                self.console.print(f"\n[bold magenta]── {phase_name}{wave_str} ──[/bold magenta]")
+                
+                self._display_single_anchor("Agreement", phase.get("agreement", {}), indent=2)
+                self._display_single_anchor("Kickoff", phase.get("kickoff", {}), indent=2)
+                self._display_single_anchor("Categories", phase.get("categories", {}), indent=2)
+                self._display_single_anchor("Project Updates", phase.get("project_updates", {}), indent=2, is_multi=True)
+                self._display_single_anchor("Close Out", phase.get("project_close_out", {}), indent=2)
+            
+            self.console.print(f"\n[green]Multi-phase project with {len(phases)} phases detected[/green]")
+        else:
+            # Single phase - original display
+            found_count = 0
+            total_count = 6
+            
+            # Define display order and labels
+            anchors = [
+                ("agreement", "Agreement Folder", "folder"),
+                ("assessment", "Assessment Folder", "folder"),
+                ("case_study", "Case Study", "file_or_folder"),
+                ("kickoff", "Kickoff", "file_or_folder"),
+                ("project_updates", "Project Updates", "files"),
+                ("project_close_out", "Project Close Out", "file_or_folder"),
+            ]
+            
+            for key, label, expected_type in anchors:
+                data = anchor_data.get(key, {})
+                found = data.get("found", False)
+                
+                if found:
+                    found_count += 1
+                    self.console.print(f"[green]✅ {label}[/green]")
+                    
+                    if key == "project_updates":
+                        # Multiple paths
+                        paths = data.get("paths", [])
+                        for path in paths:
+                            self.console.print(f"   [dim]└─[/dim] {path}")
+                        if data.get("invalid_paths"):
+                            for path in data["invalid_paths"]:
+                                self.console.print(f"   [red]└─ (invalid)[/red] [dim]{path}[/dim]")
+                    else:
+                        # Single path
+                        path = data.get("path", "(unknown)")
+                        anchor_type = data.get("type", "")
+                        date_str = data.get("date_in_name", "")
+                        
+                        type_indicator = ""
+                        if anchor_type == "folder":
+                            type_indicator = "📁 "
+                        elif anchor_type == "file":
+                            type_indicator = "📄 "
+                        
+                        date_indicator = f" [dim](date: {date_str})[/dim]" if date_str else ""
+                        self.console.print(f"   [dim]└─[/dim] {type_indicator}{path}{date_indicator}")
+                    
+                    # Show validation error if any
+                    if data.get("validation_error"):
+                        self.console.print(f"   [red]⚠️ {data['validation_error']}[/red]")
                 else:
-                    # Single path
-                    path = data.get("path", "(unknown)")
-                    anchor_type = data.get("type", "")
-                    date_str = data.get("date_in_name", "")
-                    
-                    type_indicator = ""
-                    if anchor_type == "folder":
-                        type_indicator = "📁 "
-                    elif anchor_type == "file":
-                        type_indicator = "📄 "
-                    
-                    date_indicator = f" [dim](date: {date_str})[/dim]" if date_str else ""
-                    self.console.print(f"   [dim]└─[/dim] {type_indicator}{path}{date_indicator}")
+                    self.console.print(f"[red]❌ {label}[/red]")
+                    self.console.print(f"   [dim]└─ (Not found)[/dim]")
                 
-                # Show validation error if any
-                if data.get("validation_error"):
-                    self.console.print(f"   [red]⚠️ {data['validation_error']}[/red]")
-            else:
-                self.console.print(f"[red]❌ {label}[/red]")
-                self.console.print(f"   [dim]└─ (Not found)[/dim]")
+                self.console.print()  # Blank line between sections
             
-            self.console.print()  # Blank line between sections
+            # Summary
+            status_color = "green" if found_count >= 4 else "yellow" if found_count >= 2 else "red"
+            self.console.print(f"[{status_color}]Found: {found_count}/{total_count} anchor sections[/{status_color}]")
+    
+    def _run_phase_extraction(
+        self,
+        project_path: Path,
+        scan_result,
+        anchor_data: dict,
+        phase_name: str,
+        phase_number: int,
+    ) -> dict:
+        """
+        Run extraction steps 3-7 for a single phase.
         
-        # Summary
-        status_color = "green" if found_count >= 4 else "yellow" if found_count >= 2 else "red"
-        self.console.print(f"[{status_color}]Found: {found_count}/{total_count} anchor sections[/{status_color}]")
+        Returns a dict with all extraction results for this phase.
+        """
+        phase_result = {
+            "phase_name": phase_name,
+            "phase_number": phase_number,
+            "project_scope": None,
+            "client_context": None,
+            "engagement_background": None,
+            "impact": None,
+            "categories": None,
+        }
+        
+        # =====================================================================
+        # STEP 3: Project Scope Extraction (from Agreement)
+        # =====================================================================
+        self.console.print(Panel(
+            f"[bold]{phase_name} - Step 3:[/bold] Extracting Project Scope",
+            border_style="cyan",
+        ))
+        
+        agreement_info = anchor_data.get("agreement", {})
+        if not agreement_info.get("found"):
+            self.console.print(f"[yellow]⚠️ No Agreement found for {phase_name}[/yellow]")
+            # Try to use exhibit_paths if available
+            exhibit_paths = agreement_info.get("exhibit_paths", [])
+            if exhibit_paths:
+                self.console.print(f"[dim]Found exhibit paths: {exhibit_paths}[/dim]")
+        else:
+            agreement_path = agreement_info.get("path", "")
+            self.console.print(f"[green]✓[/green] Agreement at: {agreement_path}")
+            
+            # Extract project scope (simplified for phase)
+            agreement_folder = project_path / agreement_path
+            pdf_files = []
+            if agreement_folder.is_dir():
+                pdf_files = list(agreement_folder.rglob("*.pdf"))
+            elif agreement_folder.is_file() and agreement_folder.suffix.lower() == ".pdf":
+                pdf_files = [agreement_folder]
+            
+            if pdf_files:
+                # Use the first PDF (or combine)
+                agreement_content = ""
+                for pdf_file in pdf_files[:3]:  # Max 3 files
+                    result = extract_file_content(pdf_file, max_chars=40000)
+                    if result.success:
+                        agreement_content += f"\n{'='*50}\nFILE: {pdf_file.name}\n{'='*50}\n{result.text_content}\n"
+                
+                if agreement_content:
+                    system_prompt, user_prompt = get_project_scope_prompt(agreement_content)
+                    
+                    with self.console.status(f"[cyan]Extracting project scope for {phase_name}...[/cyan]"):
+                        try:
+                            scope_response = self.llm_client.analyze(
+                                system_prompt=system_prompt,
+                                user_content=user_prompt,
+                            )
+                            phase_result["project_scope"] = extract_json_from_response(scope_response.content)
+                            self.console.print(f"[green]✓[/green] Project scope extracted")
+                        except Exception as e:
+                            self.console.print(f"[red]Failed: {e}[/red]")
+        
+        # =====================================================================
+        # STEP 4-5: Client Context & Engagement Background (simplified for phase)
+        # =====================================================================
+        # For multi-phase, we'll do abbreviated extraction
+        self.console.print(Panel(
+            f"[bold]{phase_name} - Steps 4-5:[/bold] Client Context & Background",
+            border_style="cyan",
+        ))
+        self.console.print("[dim]Using shared client context from Phase 1...[/dim]")
+        
+        # =====================================================================
+        # STEP 6: Impact Extraction
+        # =====================================================================
+        self.console.print(Panel(
+            f"[bold]{phase_name} - Step 6:[/bold] Extracting Impact & Results",
+            border_style="cyan",
+        ))
+        
+        closeout_info = anchor_data.get("project_close_out", {})
+        updates_info = anchor_data.get("project_updates", {})
+        
+        impact_content = ""
+        
+        if closeout_info.get("found"):
+            closeout_path = project_path / closeout_info.get("path", "")
+            if closeout_path.exists():
+                result = extract_file_content(closeout_path, max_chars=30000)
+                if result.success:
+                    impact_content += f"\n{'='*50}\nCLOSEOUT\n{'='*50}\n{result.text_content}\n"
+        
+        if updates_info.get("found"):
+            for update_path_str in updates_info.get("paths", [])[:3]:
+                update_path = project_path / update_path_str
+                if update_path.exists():
+                    result = extract_file_content(update_path, max_chars=10000)
+                    if result.success:
+                        impact_content += f"\n{'='*50}\nUPDATE: {update_path.name}\n{'='*50}\n{result.text_content}\n"
+        
+        if impact_content:
+            # Get initial categories from project scope
+            initial_categories = ""
+            addressable_spend = 0
+            savings_low = 0
+            savings_high = 0
+            
+            if phase_result.get("project_scope"):
+                exhibit_a = phase_result["project_scope"].get("exhibit_a", {})
+                initial_categories = ", ".join(exhibit_a.get("initial_categories", [])[:10])
+                addressable_spend = exhibit_a.get("addressable_spend", 0)
+                savings_low = exhibit_a.get("savings_estimate_low", 0)
+                savings_high = exhibit_a.get("savings_estimate_high", 0)
+            
+            system_prompt, user_prompt = get_impact_prompt(
+                client_name=scan_result.project_name,
+                initial_categories=initial_categories,
+                addressable_spend=addressable_spend,
+                savings_low=savings_low,
+                savings_high=savings_high,
+                document_contents=impact_content,
+            )
+            
+            with self.console.status(f"[cyan]Extracting impact for {phase_name}...[/cyan]"):
+                try:
+                    impact_response = self.llm_client.analyze(
+                        system_prompt=system_prompt,
+                        user_content=user_prompt,
+                    )
+                    phase_result["impact"] = extract_json_from_response(impact_response.content)
+                    self.console.print(f"[green]✓[/green] Impact extracted")
+                    
+                    # Display summary
+                    impact = phase_result["impact"].get("impact", {})
+                    summary = impact.get("summary", {})
+                    if summary.get("headline"):
+                        self.console.print(f"[bold green]📣 {summary['headline']}[/bold green]")
+                except Exception as e:
+                    self.console.print(f"[red]Failed: {e}[/red]")
+        else:
+            self.console.print(f"[yellow]⚠️ No impact sources found for {phase_name}[/yellow]")
+        
+        # =====================================================================
+        # STEP 7: Categories Extraction (abbreviated)
+        # =====================================================================
+        self.console.print(Panel(
+            f"[bold]{phase_name} - Step 7:[/bold] Extracting Categories",
+            border_style="cyan",
+        ))
+        
+        categories_info = anchor_data.get("categories", {})
+        if categories_info.get("found"):
+            categories_path = categories_info.get("path", "")
+            self.console.print(f"[green]✓[/green] Categories folder: {categories_path}")
+            
+            # For multi-phase, we'll note the categories from impact
+            if phase_result.get("impact"):
+                category_results = phase_result["impact"].get("impact", {}).get("category_results", [])
+                if category_results:
+                    self.console.print(f"[dim]Found {len(category_results)} categories in impact results[/dim]")
+                    phase_result["categories"] = {"categories": category_results}
+        else:
+            self.console.print(f"[dim]No dedicated categories folder for {phase_name}[/dim]")
+        
+        return phase_result
+    
+    def _run_multiphase_case_study_generation(
+        self,
+        project_path: Path,
+        scan_result,
+        all_phase_results: dict,
+    ) -> None:
+        """
+        Generate combined case study for multi-phase project.
+        
+        Shows per-phase breakdown and combined totals.
+        """
+        self.console.print("\n[bold magenta]═══ MULTI-PHASE SUMMARY ═══[/bold magenta]\n")
+        
+        # Calculate combined totals
+        total_savings = 0
+        total_categories = 0
+        phase_summaries = []
+        
+        for phase_name, phase_data in all_phase_results.items():
+            phase_savings = 0
+            phase_cats = 0
+            phase_headline = ""
+            
+            if phase_data.get("impact"):
+                impact = phase_data["impact"].get("impact", {})
+                financials = impact.get("financials", {})
+                
+                # Get total savings
+                total_field = financials.get("total_annual_savings") or financials.get("annual_savings")
+                if total_field and total_field.get("amount"):
+                    phase_savings = total_field["amount"]
+                    total_savings += phase_savings
+                
+                # Get categories
+                category_results = impact.get("category_results", [])
+                phase_cats = len(category_results)
+                total_categories += phase_cats
+                
+                # Get headline
+                summary = impact.get("summary", {})
+                phase_headline = summary.get("headline", "")
+            
+            phase_summaries.append({
+                "phase_name": phase_name,
+                "savings": phase_savings,
+                "categories": phase_cats,
+                "headline": phase_headline,
+            })
+        
+        # Display per-phase breakdown
+        self.console.print("[bold cyan]Per-Phase Breakdown:[/bold cyan]\n")
+        
+        for ps in phase_summaries:
+            self.console.print(f"[bold magenta]{ps['phase_name']}[/bold magenta]")
+            if ps["headline"]:
+                self.console.print(f"  📣 {ps['headline']}")
+            self.console.print(f"  💰 Savings: [green]${ps['savings']:,.0f}[/green]")
+            self.console.print(f"  📁 Categories: {ps['categories']}")
+            self.console.print()
+        
+        # Display combined totals
+        self.console.print("[bold cyan]Combined Totals:[/bold cyan]\n")
+        self.console.print(f"  [bold green]Total Savings Across All Phases: ${total_savings:,.0f}[/bold green]")
+        self.console.print(f"  Total Categories: {total_categories}")
+        self.console.print(f"  Phases Completed: {len(all_phase_results)}")
+        self.console.print()
+        
+        # Save combined results
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        combined_output = {
+            "is_multi_phase": True,
+            "phase_count": len(all_phase_results),
+            "combined_totals": {
+                "total_annual_savings": total_savings,
+                "total_categories": total_categories,
+            },
+            "phase_summaries": phase_summaries,
+            "phases": all_phase_results,
+        }
+        
+        output_file = OUTPUTS_DIR / f"{scan_result.project_name}_{timestamp}_multiphase.json"
+        try:
+            output_file.write_text(json.dumps(combined_output, indent=2, default=str), encoding="utf-8")
+            self.console.print(f"[green]✓[/green] Multi-phase results saved: {output_file.name}")
+        except Exception as e:
+            self.console.print(f"[yellow]⚠️ Could not save: {e}[/yellow]")
+        
+        # Store for later use
+        self._last_multiphase_results = combined_output
+    
+    def _display_single_anchor(self, label: str, data: dict, indent: int = 0, is_multi: bool = False) -> None:
+        """Helper to display a single anchor item."""
+        prefix = "  " * indent
+        found = data.get("found", False)
+        
+        if found:
+            self.console.print(f"{prefix}[green]✅ {label}[/green]")
+            
+            if is_multi:
+                # Multiple paths (project updates)
+                paths = data.get("paths", [])
+                for path in paths[:3]:  # Show max 3
+                    self.console.print(f"{prefix}   [dim]└─[/dim] {path}")
+                if len(paths) > 3:
+                    self.console.print(f"{prefix}   [dim]└─ ...and {len(paths) - 3} more[/dim]")
+            else:
+                # Single path
+                path = data.get("path", "(unknown)")
+                anchor_type = data.get("type", "")
+                
+                type_indicator = "📁 " if anchor_type == "folder" else "📄 " if anchor_type == "file" else ""
+                self.console.print(f"{prefix}   [dim]└─[/dim] {type_indicator}{path}")
+        else:
+            self.console.print(f"{prefix}[dim]❌ {label} (Not found)[/dim]")
+    
+    def _display_project_scope_results(self, data: dict) -> None:
+        """Display project scope extraction results."""
+        self.console.print("\n[bold cyan]═══ PROJECT SCOPE EXTRACTION ═══[/bold cyan]\n")
+        
+        # Check if we have a parse error
+        if "parse_error" in data:
+            self.console.print("[red]❌ Failed to parse extraction response[/red]")
+            self.console.print(f"[dim]Error: {data.get('parse_error')}[/dim]")
+            return
+        
+        # =====================================================================
+        # EXHIBIT A - Project Scope
+        # =====================================================================
+        exhibit_a = data.get("exhibit_a", {})
+        if exhibit_a:
+            self.console.print("[bold green]EXHIBIT A - Project Scope[/bold green]")
+            
+            # Categories
+            categories = exhibit_a.get("initial_categories", [])
+            cat_count = exhibit_a.get("initial_categories_count", len(categories))
+            self.console.print(f"  [cyan]Categories:[/cyan] {cat_count} found")
+            for cat in categories[:10]:  # Show first 10
+                self.console.print(f"    • {cat}")
+            if len(categories) > 10:
+                self.console.print(f"    [dim]... and {len(categories) - 10} more[/dim]")
+            
+            # Spend totals
+            total_spend = exhibit_a.get("total_spend")
+            total_addressable = exhibit_a.get("total_addressable_spend")
+            if total_spend:
+                self.console.print(f"  [cyan]Total Spend:[/cyan] ${total_spend:,.0f}")
+            if total_addressable:
+                self.console.print(f"  [cyan]Total Addressable Spend:[/cyan] ${total_addressable:,.0f}")
+                if total_spend and total_spend > 0:
+                    pct = (total_addressable / total_spend) * 100
+                    self.console.print(f"    [dim]({pct:.0f}% addressable)[/dim]")
+            
+            # Savings estimates
+            savings_low = exhibit_a.get("savings_estimate_low")
+            savings_high = exhibit_a.get("savings_estimate_high")
+            if savings_low or savings_high:
+                if savings_low and savings_high:
+                    self.console.print(f"  [cyan]Savings Estimate:[/cyan] ${savings_low:,.0f} - ${savings_high:,.0f}")
+                elif savings_low:
+                    self.console.print(f"  [cyan]Savings Estimate Low:[/cyan] ${savings_low:,.0f}")
+                elif savings_high:
+                    self.console.print(f"  [cyan]Savings Estimate High:[/cyan] ${savings_high:,.0f}")
+            
+            # Category details (if present)
+            category_details = exhibit_a.get("category_details", [])
+            if category_details:
+                self.console.print("\n  [dim]Category Details:[/dim]")
+                
+                # Create a simple table with COGS column
+                table = Table(show_header=True, border_style="dim", padding=(0, 1))
+                table.add_column("Category", style="white", max_width=25)
+                table.add_column("Spend", style="cyan", justify="right")
+                table.add_column("Addr%", style="dim", justify="right")
+                table.add_column("Savings Range", style="green", justify="right")
+                table.add_column("COGS", style="yellow", justify="center")
+                
+                for cat in category_details[:15]:  # Limit to 15 rows
+                    name = cat.get("category_name", "")[:25]
+                    spend = f"${cat.get('spend', 0):,.0f}" if cat.get('spend') else "-"
+                    addr_pct = f"{cat.get('addressable_pct', 0)}%" if cat.get('addressable_pct') else "-"
+                    
+                    low = cat.get("savings_low")
+                    high = cat.get("savings_high")
+                    if low and high:
+                        savings = f"${low:,.0f} - ${high:,.0f}"
+                    elif low:
+                        savings = f"${low:,.0f}"
+                    else:
+                        savings = "-"
+                    
+                    # COGS indicator
+                    is_cogs = cat.get("is_cogs", False)
+                    cogs_indicator = "✓" if is_cogs else ""
+                    
+                    table.add_row(name, spend, addr_pct, savings, cogs_indicator)
+                
+                self.console.print(table)
+            
+            # COGS Summary
+            cogs_count = exhibit_a.get("cogs_categories_count")
+            cogs_pct = exhibit_a.get("cogs_categories_percentage")
+            cogs_spend = exhibit_a.get("cogs_addressable_spend")
+            cogs_spend_pct = exhibit_a.get("cogs_addressable_percentage")
+            
+            # Get list of COGS categories from category_details
+            cogs_categories = []
+            if category_details:
+                for cat in category_details:
+                    if cat.get("is_cogs", False):
+                        cogs_categories.append(cat.get("category_name", "Unknown"))
+            
+            if cogs_count is not None or cogs_pct is not None or cogs_categories:
+                self.console.print("\n  [bold yellow]COGS Analysis:[/bold yellow]")
+                
+                # List COGS categories
+                if cogs_categories:
+                    self.console.print(f"    COGS Categories Identified:")
+                    for cat_name in cogs_categories:
+                        self.console.print(f"      [yellow]✓[/yellow] {cat_name}")
+                
+                if cogs_count is not None and cogs_pct is not None:
+                    self.console.print(f"    Total: {cogs_count} COGS categories ({cogs_pct:.1f}% of total)")
+                elif cogs_count is not None:
+                    self.console.print(f"    Total: {cogs_count} COGS categories")
+                
+                if cogs_spend is not None and cogs_spend_pct is not None:
+                    self.console.print(f"    COGS Addressable Spend: ${cogs_spend:,.0f} ({cogs_spend_pct:.1f}% of total)")
+                elif cogs_spend is not None:
+                    self.console.print(f"    COGS Addressable Spend: ${cogs_spend:,.0f}")
+            
+            self.console.print()
+        
+        # =====================================================================
+        # EXHIBIT B - Fees
+        # =====================================================================
+        exhibit_b = data.get("exhibit_b", {})
+        if exhibit_b:
+            self.console.print("[bold green]EXHIBIT B - Fee Structure[/bold green]")
+            
+            fee_type = exhibit_b.get("fee_type", "unknown")
+            fee_type_display = {
+                "fixed": "🔒 Fixed Fee",
+                "hybrid": "🔀 Hybrid Fee",
+                "contingent": "📊 Contingent Fee",
+            }.get(fee_type, fee_type)
+            
+            self.console.print(f"  [cyan]Fee Type:[/cyan] {fee_type_display}")
+            
+            # Fee amount (for fixed/hybrid)
+            fee_amount = exhibit_b.get("fee_amount")
+            if fee_amount:
+                self.console.print(f"  [cyan]Fee Amount:[/cyan] ${fee_amount:,.0f}")
+            
+            # Minimum savings guarantee
+            msg = exhibit_b.get("minimum_savings_guarantee")
+            if msg:
+                self.console.print(f"  [cyan]Min. Savings Guarantee:[/cyan] ${msg:,.0f}")
+            
+            # Minimum return on fees ratio (ROI guarantee)
+            roi_ratio = exhibit_b.get("minimum_return_on_fees_ratio")
+            if roi_ratio:
+                self.console.print(f"  [cyan]Min. Return on Fees Ratio:[/cyan] {roi_ratio}×")
+            
+            # Hybrid-specific fields
+            if fee_type == "hybrid":
+                threshold = exhibit_b.get("fee_hybrid_threshold")
+                if threshold:
+                    self.console.print(f"  [cyan]Threshold:[/cyan] ${threshold:,.0f}")
+                
+                contingent_pct = exhibit_b.get("fee_contingent_percentage")
+                if contingent_pct:
+                    self.console.print(f"  [cyan]Variable Fee:[/cyan] {contingent_pct}% above threshold")
+            
+            # Contingent percentage (for contingent/hybrid)
+            if fee_type == "contingent":
+                contingent_pct = exhibit_b.get("fee_contingent_percentage")
+                if contingent_pct:
+                    self.console.print(f"  [cyan]Fee Percentage:[/cyan] {contingent_pct}% of savings")
+            
+            # Fee notes
+            fee_notes = exhibit_b.get("fee_notes")
+            if fee_notes:
+                self.console.print(f"  [dim]Notes: {fee_notes}[/dim]")
+            
+            self.console.print()
+        
+        # =====================================================================
+        # Timing
+        # =====================================================================
+        timing = data.get("timing", {})
+        if timing:
+            start_date = timing.get("start_date")
+            end_date = timing.get("end_date")
+            engagement_type = timing.get("engagement_type")
+            
+            if start_date or end_date or engagement_type:
+                self.console.print("[bold green]Timing & Engagement[/bold green]")
+                
+                if engagement_type:
+                    self.console.print(f"  [cyan]Type:[/cyan] {engagement_type}")
+                if start_date:
+                    self.console.print(f"  [cyan]Start Date:[/cyan] {start_date}")
+                if end_date:
+                    self.console.print(f"  [cyan]End Date:[/cyan] {end_date}")
+                
+                self.console.print()
+        
+        # =====================================================================
+        # Extraction Notes
+        # =====================================================================
+        notes = data.get("extraction_notes", [])
+        if notes:
+            self.console.print("[yellow]Extraction Notes:[/yellow]")
+            for note in notes:
+                self.console.print(f"  ⚠️ {note}")
+            self.console.print()
     
     def _generate_reasoning_log(
         self,

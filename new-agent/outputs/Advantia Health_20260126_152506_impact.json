@@ -1,0 +1,168 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Advantia Health secures $1.36 M in annual savings across 14 cost categories",
+      "narrative": "Through a comprehensive strategic-sourcing program, Treya Partners identified $1,363,353 in recurring annual savings for Advantia Health. Six categories\u2014ranging from Revenue-Cycle Management fees to Medical Supplies and Lab Services\u2014are fully finalized, delivering $684,936 already in place. A further $678,417 in savings is queued across eight additional categories now in negotiation, contracting, or analysis stages, ensuring a strong pipeline for continued value capture. Key wins include a 9 % fee reduction with Athena for billing/RCM, distributor consolidation for Medical Supplies, and an insourcing model for Sonography Services."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1363353,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Sum of finalized savings ($684,936) plus additional categories with stated savings values ($678,417) from 10-21-22 project update."
+      },
+      "finalized_savings": {
+        "amount": 684936,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Six categories labeled as final savings in close-out deck."
+      },
+      "in_progress_savings": {
+        "amount": 678417,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+        "notes": "Eight categories shown as in progress, wave-2, or 'identified' with dollar values."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Billing Systems / RCM",
+        "annual_savings": 259200,
+        "status": "finalized",
+        "status_notes": "Fee reduction negotiated with Athena; contract addendum retroactive to 9/1/22."
+      },
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 156610,
+        "status": "finalized",
+        "status_notes": "Competitive bid and distributor consolidation; McKesson change in Heartland region."
+      },
+      {
+        "category_name": "Sonography Services",
+        "annual_savings": 152115,
+        "status": "finalized",
+        "status_notes": "Conversion to in-house model replacing IT Imaging spend."
+      },
+      {
+        "category_name": "IUD Order Management",
+        "annual_savings": 55193,
+        "status": "finalized",
+        "status_notes": "Purchasing behavior change to meet 5-unit order threshold."
+      },
+      {
+        "category_name": "Bayer IUD Program",
+        "annual_savings": 21600,
+        "status": "finalized",
+        "status_notes": "Enrollment in Bayer 'Confidence in Coverage' replacement program."
+      },
+      {
+        "category_name": "Lab Services",
+        "annual_savings": 40218,
+        "status": "finalized",
+        "status_notes": "Incumbent LabCorp pricing renegotiated after RFQ."
+      },
+      {
+        "category_name": "IT Managed Services",
+        "annual_savings": 31459,
+        "status": "in progress",
+        "status_notes": "Proposals received; benchmarking shows 15 % savings opportunity."
+      },
+      {
+        "category_name": "Employee Benefits",
+        "annual_savings": 373938,
+        "status": "not yet started (wave 2)",
+        "status_notes": "Identified 5-10 % savings; category slated for future sourcing wave."
+      },
+      {
+        "category_name": "Lab Reagents & Tests \u2013 Hologic",
+        "annual_savings": 63878,
+        "status": "in progress",
+        "status_notes": "Negotiations underway; follow-up scheduled after volume clarification."
+      },
+      {
+        "category_name": "Telecom \u2013 Data & Voice",
+        "annual_savings": 51155,
+        "status": "in progress",
+        "status_notes": "RFP package pending release; benchmarking planned."
+      },
+      {
+        "category_name": "Sonography Equipment",
+        "annual_savings": 136579,
+        "status": "identified",
+        "status_notes": "Savings contingent on manufacturer standardization; marked 'unlikely to be realized' but dollar amount captured."
+      },
+      {
+        "category_name": "Office Supplies",
+        "annual_savings": 17415,
+        "status": "discontinued/in progress",
+        "status_notes": "Initial pricing requests sent to Staples & Office Depot; project later paused."
+      },
+      {
+        "category_name": "IUDs \u2013 Mirena/Liletta Optimization",
+        "annual_savings": 3993,
+        "status": "identified",
+        "status_notes": "Analysis shows limited benefit; optimization effort discontinued."
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 40,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "First implemented savings began 7/11/22 (IUD programs) roughly six weeks after project kick-off in late May 2022 (inferred)."
+      },
+      "notes": "Quick-win categories in the first two months unlocked immediate cash-flow relief."
+    },
+    "operational_improvements": "Implemented centralized purchasing policies, consolidated distributors, and shifted sonography staff to an insourced model, improving service consistency and control.",
+    "proof_points": [
+      {
+        "statement": "Negotiated Athena billing rate drop from 3.39 % to 3.15 %, delivering $259,200 in annual savings without changing vendors.",
+        "category": "Billing Systems / RCM",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+            "page_or_slide": "3",
+            "quote": "Billing Systems / RCM | $259,200 | 9% | No vendor change required"
+          }
+        ]
+      },
+      {
+        "statement": "Consolidated fragmented medical-supply spend, securing $156,610 (14 %) annual savings through a competitive bid and McKesson transition.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+            "page_or_slide": "3",
+            "quote": "Medical Supplies | $156,610 | 14% | Distributor change in Heartland required"
+          }
+        ]
+      },
+      {
+        "statement": "Shifted sonography services from outsourced pay-per-scan model to an in-house solution, saving $152,115 annually (19 %).",
+        "category": "Sonography Services",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+            "page_or_slide": "3",
+            "quote": "Sonography Services | $152,115 | 19% | Conversion to fully in-house solution"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+    "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+    "Project Updates/zOLD/Advantia Strategic Sourcing Project Update (092322) vF.pptx"
+  ],
+  "extraction_notes": [
+    "Finalized savings taken directly from the 11-22-22 close-out slide.",
+    "In-progress and wave-2 savings values pulled from the most recent (10-21-22) project update dashboard.",
+    "Categories marked 'unlikely to be realized' are included per instructions because they are not explicitly marked 'Excluded'."
+  ]
+}

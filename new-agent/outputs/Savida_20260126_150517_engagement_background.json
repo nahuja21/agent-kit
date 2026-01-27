@@ -1,0 +1,31 @@
+{
+  "engagement_background": {
+    "objective": "Generate $240-$470K in cost savings through a six-month strategic sourcing initiative that leverages Savida Health\u2019s enterprise-wide purchasing power while maintaining or improving service levels, product quality, and payment terms.",
+    "scope_summary": "Approximately $5.3 million of indirect spend across 10 categories (EMR, employee benefits, lab supplies, medical supplies, small-parcel shipping, IT hardware, telecom, office supplies, commercial print, waste management) is in scope; low-opportunity categories may be dropped as the project progresses.",
+    "constraints_challenges": [
+      "Supplier lack of responsiveness to data requests",
+      "Supplier pushback and risk of uncoordinated \u201cside conversations\u201d without a unified communication strategy",
+      "Limited internal line-item usage data, requiring direct supplier data pulls",
+      "Key stakeholder availability and potential pushback during data collection and review cycles",
+      "Aggressive timeline: quick-hit savings by end of 2024 and full project completion by mid-March 2025",
+      "Incumbent supplier sensitivities that must be managed respectfully during competitive sourcing"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Basic AP / purchasing data exists, but detailed line-item usage often must be obtained from suppliers; contracts are held locally and need to be collected.",
+    "data_quality_notes": "No centralized spend visibility; historical usage data is incomplete and scattered, requiring significant cleanup and external supplier input to build baselines.",
+    "source_file": "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from need to aggregate enterprise purchasing power, lack of existing strategic sourcing, and heavy data-collection requirements.",
+    "No explicit statement of procurement structure; assessment based on typical project challenge slides and agreement language indicating Treya will perform the heavy lifting."
+  ]
+}

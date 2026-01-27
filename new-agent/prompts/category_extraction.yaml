@@ -1,75 +1,95 @@
 # Category Extraction Prompt
-# Pass 3: Extract category-level details
+# Step: Extract category-level details from project documents
+# Updated to agent-kit style format
 
-system_prompt: |
-  You are extracting spend category outcomes from Treya Partners project documents.
-  You MUST extract data for EVERY category listed.
-  If data is sparse for a category, still include it with what you have.
+step: category_extraction
 
-user_template: |
-  ## Categories to Extract (from Agreement Exhibit A):
-  {{categories_list}}
+prompt:
+  instructions: |
+    You are extracting spend category outcomes from Treya Partners project documents.
+    You MUST extract data for EVERY category listed.
+    If data is sparse for a category, still include it with what you have.
 
-  ## Document Contents:
-  {{document_contents}}
+  user_template: |
+    ## Categories to Extract (from Agreement Exhibit A):
+    {{categories_list}}
 
-  ## YOUR TASK:
-  For EACH category listed above, extract:
+    ## Document Contents:
+    {{document_contents}}
 
-  1. `category_name`: Exact name from Agreement
-  2. `status`: One of: implemented, negotiated, identified, in_progress, not_pursued, unknown
-  3. `baseline_spend`: Amount in dollars
-  4. `savings_amount`: Annual savings in dollars
-  5. `savings_percentage`: Percentage saved
-  6. `levers`: List of tactics used (GPO, rate_reduction, consolidation, RFP, incumbent_negotiation)
-  7. `vendors_before`: List of vendors BEFORE the project
-  8. `vendors_after`: List of vendors AFTER with context (e.g., "McKesson (GPO contract)")
-  9. `source_file`: Which document this data came from
-  10. `confidence`: high (from close-out/final), medium (from updates), low (sparse/inferred)
+    ## YOUR TASK:
+    For EACH category listed above, extract:
 
-  ## IMPORTANT RULES:
-  - You MUST have at least {{category_count}} categories in your output
-  - Use the FINAL project update values when available (they override earlier docs)
-  - For categories with minimal data, set status="unknown" and confidence="low"
-  - Include notes explaining any missing information
+    1. `category_name`: Exact name from Agreement
+    2. `status`: One of: implemented, negotiated, identified, in_progress, not_pursued, unknown
+    3. `baseline_spend`: Amount in dollars
+    4. `savings_amount`: Annual savings in dollars
+    5. `savings_percentage`: Percentage saved
+    6. `levers`: List of tactics used (GPO, rate_reduction, consolidation, RFP, incumbent_negotiation)
+    7. `vendors_before`: List of vendors BEFORE the project
+    8. `vendors_after`: List of vendors AFTER with context (e.g., "McKesson (GPO contract)")
+    9. `source_file`: Which document this data came from
+    10. `confidence`: high (from close-out/final), medium (from updates), low (sparse/inferred)
 
-  ## OUTPUT FORMAT:
-  Return valid JSON only:
-  ```json
-  {
-    "categories": [
-      {
-        "category_name": "Medical Supplies",
-        "status": "implemented",
-        "baseline_spend": 1817711,
-        "savings_amount": 485087,
-        "savings_percentage": 27,
-        "levers": ["GPO", "consolidation"],
-        "vendors_before": ["Henry Schein", "Various distributors"],
-        "vendors_after": ["McKesson (GPO contract)"],
-        "source_file": "Project Updates/Close-out.pptx",
-        "confidence": "high",
-        "notes": null
-      },
-      {
-        "category_name": "Office Supplies",
-        "status": "implemented",
-        "baseline_spend": 174287,
-        "savings_amount": 13694,
-        "savings_percentage": 8,
-        "levers": ["rate_reduction"],
-        "vendors_before": ["WB Mason"],
-        "vendors_after": ["WB Mason (renegotiated terms)"],
-        "source_file": "Categories/Office Supplies/Analysis.xlsx",
-        "confidence": "medium",
-        "notes": null
-      }
-    ]
-  }
-  ```
+    ## IMPORTANT RULES:
+    - You MUST have at least {{category_count}} categories in your output
+    - Use the FINAL project update values when available (they override earlier docs)
+    - For categories with minimal data, set status="unknown" and confidence="low"
+    - Include notes explaining any missing information
+
+    ## OUTPUT FORMAT:
+    Return valid JSON only:
+    ```json
+    {
+      "categories": [
+        {
+          "category_name": "Medical Supplies",
+          "status": "implemented",
+          "baseline_spend": 1817711,
+          "savings_amount": 485087,
+          "savings_percentage": 27,
+          "levers": ["GPO", "consolidation"],
+          "vendors_before": ["Henry Schein", "Various distributors"],
+          "vendors_after": ["McKesson (GPO contract)"],
+          "source_file": "Project Updates/Close-out.pptx",
+          "confidence": "high",
+          "notes": null
+        },
+        {
+          "category_name": "Office Supplies",
+          "status": "implemented",
+          "baseline_spend": 174287,
+          "savings_amount": 13694,
+          "savings_percentage": 8,
+          "levers": ["rate_reduction"],
+          "vendors_before": ["WB Mason"],
+          "vendors_after": ["WB Mason (renegotiated terms)"],
+          "source_file": "Categories/Office Supplies/Analysis.xlsx",
+          "confidence": "medium",
+          "notes": null
+        }
+      ]
+    }
+    ```
+
+parameters:
+  - name: categories_list
+    type: list
+    required: true
+    description: "List of category names from Agreement Exhibit A"
+  
+  - name: document_contents
+    type: string
+    required: true
+    description: "Concatenated contents of all extracted documents"
+  
+  - name: category_count
+    type: int
+    required: true
+    description: "Expected number of categories (from Agreement)"
 
 examples:
-  - note: "Example showing sparse category"
+  - note: "Example showing sparse category handling"
     output: |
       {
         "category_name": "Janitorial",

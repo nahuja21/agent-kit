@@ -1,0 +1,35 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objectives, quantified $685K savings, and multiple documented proof points are all available.",
+    "headline": "Advantia Health captures $685K in annual savings and 3\u00d7 ROI by modernizing procurement across six spend categories",
+    "client_problem_statement": "Advantia Health\u2019s rapid, PE-backed expansion left purchasing split between 60+ clinics, two legacy business units and multiple AP systems. Fragmented vendor relationships, inconsistent pricing and limited spend visibility were eroding margins just as BlueMountain Capital sought to boost EBITDA. Lacking an internal strategic sourcing team, Advantia needed an expert partner to uncover and realize cost-reduction opportunities without disrupting patient care.",
+    "approach_summary": [
+      "Analyzed $19 M in spend across 10 categories, cleansing disparate AP and P-card data to pinpoint $1.3 M in addressable savings upside.",
+      "Renegotiated Athenahealth contract, leveraging benchmarks to cut the collections fee from 3.39 % to 3.15 % and secure retro-pricing credits.",
+      "Ran competitive RFPs that consolidated medical-supply distribution with McKesson and delivered 14 % price reductions on high-volume SKUs.",
+      "Designed and launched an in-house sonography staffing model, replacing an outsourced vendor and lowering ultrasound labor costs by 19 %.",
+      "Instituted enterprise-wide IUD purchasing policies and enrolled practices in Bayer\u2019s Confidence-in-Coverage program to capture rebate and replacement savings."
+    ],
+    "top_levers": [
+      "Contract renegotiation (Athenahealth billing platform)",
+      "Competitive RFP & vendor consolidation (medical supplies, lab services)",
+      "Make-versus-buy insourcing (sonography services)",
+      "Policy enforcement & compliance management (IUD minimum-order program)",
+      "Manufacturer rebate program enrollment (Bayer CIC)"
+    ],
+    "value_delivered_blurb": "Treya delivered $684,936 in validated, recurring annual savings\u2014exceeding the $450K minimum guarantee and generating a 3.0\u00d7 return on the firm\u2019s fixed $225K fee. Beyond the financial impact, Advantia now has centralized purchasing policies, standardized distributor coverage, and clear visibility into spend performance, positioning the provider for continued EBITDA growth.",
+    "where_we_were_unique": [
+      "Delivered first cash savings within 90 days through quick-hit IUD policy changes.",
+      "Balanced savings with clinical continuity\u2014retaining key platforms (Athenahealth, LabCorp) while still securing double-digit cost reductions.",
+      "Deep women\u2019s-health sourcing expertise enabled creative levers like sonography insourcing and Bayer replacement programs not identified internally.",
+      "Data-driven yet hands-on approach cleansed fragmented spend data and guided stakeholder adoption across 60+ geographically dispersed clinics."
+    ]
+  },
+  "generation_notes": [
+    "Total savings figure pulled from close-out deck ($684,936).",
+    "ROI calculated as savings \u00f7 fixed fee (684,936 / 225,000 \u2248 3.0\u00d7).",
+    "Approach bullets mirror highest-impact categories and levers.",
+    "Uniqueness section draws on speed, industry expertise and stakeholder management themes."
+  ]
+}

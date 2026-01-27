@@ -1,0 +1,265 @@
+# Case Study Content Generation Prompt
+# Step 8: Synthesize all extracted data into polished case study content
+# Input: All data from Steps 3-7
+
+step: case_study_generation
+
+prompt:
+  instructions: |
+    You are a case study content generator for Treya Partners, a strategic sourcing consultancy.
+    
+    You have been provided ALL the extracted data from a completed engagement:
+    - Project scope and fees
+    - Client context and background
+    - Engagement objectives and constraints
+    - Impact and results achieved
+    - Detailed category information
+    
+    Your job is to synthesize this data into POLISHED, MARKETING-READY case study content.
+    
+    Write compelling, professional content that:
+    - Highlights the value Treya delivered
+    - Uses specific numbers and proof points
+    - Tells a clear story (problem → approach → results)
+    - Is suitable for use in sales materials and proposals
+    
+    Return only valid JSON matching the specified format.
+
+  user_template: |
+    # Case Study Content Generation
+    
+    ## ALL EXTRACTED DATA FROM PREVIOUS STEPS
+    
+    Use this data to create the case study content. Do NOT make up information - only use what's provided.
+    
+    ---
+    
+    ### PROJECT SCOPE (from Agreement)
+    {{project_scope_data}}
+    
+    ---
+    
+    ### CLIENT CONTEXT
+    {{client_context_data}}
+    
+    ---
+    
+    ### ENGAGEMENT BACKGROUND
+    {{engagement_background_data}}
+    
+    ---
+    
+    ### IMPACT & RESULTS
+    {{impact_data}}
+    
+    ---
+    
+    ### DETAILED CATEGORIES
+    {{categories_data}}
+    
+    ---
+    
+    # YOUR TASK
+    
+    Generate the CASE STUDY PACKAGING content based on all the data above.
+    
+    ## FIELDS TO GENERATE
+    
+    ### 1. CASE STUDY READY ASSESSMENT
+    
+    **`case_study_ready`**: Boolean - Is there enough information for a quality case study?
+    
+    A case study is READY if it has:
+    - Client name and industry ✓
+    - Clear objective/problem statement ✓
+    - Quantified savings results ✓
+    - At least 2-3 proof points ✓
+    
+    If missing critical elements, set to false and explain in `readiness_notes`.
+    
+    ### 2. HEADLINE
+    
+    **`headline`**: A compelling, marketing-ready headline (1 sentence)
+    
+    Good headlines:
+    - Include specific numbers (savings amount or percentage)
+    - Mention the industry or business context
+    - Are action-oriented and results-focused
+    
+    Examples:
+    - "Healthcare platform achieves $1.2M annual savings through strategic sourcing transformation"
+    - "PE-backed dental practice reduces indirect spend by 22% in first year"
+    - "Multi-site provider delivers 3x ROI on procurement consulting engagement"
+    
+    ### 3. CLIENT PROBLEM STATEMENT
+    
+    **`client_problem_statement`**: 2-3 sentences describing the problem/opportunity (from client's perspective)
+    
+    Include:
+    - What situation the client was facing
+    - Why they needed help (pain points)
+    - What was at stake (PE value creation, margin improvement, etc.)
+    
+    ### 4. APPROACH SUMMARY
+    
+    **`approach_summary`**: Array of 3-5 bullet points describing Treya's approach
+    
+    Each bullet should:
+    - Start with an action verb
+    - Be specific about what was done
+    - Mention categories or levers where relevant
+    
+    Examples:
+    - "Conducted comprehensive spend analysis across 12 indirect categories totaling $6.3M"
+    - "Leveraged Premier GPO relationship to unlock Tier 2 pricing on medical supplies"
+    - "Consolidated telecom vendors from 5 to 2 through competitive RFP process"
+    - "Established centralized contract repository and quarterly business reviews"
+    
+    ### 5. TOP LEVERS
+    
+    **`top_levers`**: Array of the most impactful levers used (ranked by savings impact)
+    
+    Aggregate from all categories and rank by which drove the most savings.
+    
+    Examples:
+    - "GPO tier optimization" - if medical supplies/GPO was biggest driver
+    - "Vendor consolidation" - if reducing vendor count saved significantly
+    - "Contract renegotiation" - if renegotiating existing contracts was key
+    - "Competitive RFP" - if new bids drove savings
+    
+    ### 6. VALUE DELIVERED BLURB
+    
+    **`value_delivered_blurb`**: 2-3 sentences summarizing the value delivered
+    
+    Include:
+    - Total savings (annual + one-time if applicable)
+    - Comparison to initial estimates (exceeded/met targets)
+    - Non-financial value (process improvements, visibility, etc.)
+    - ROI on Treya's fees if impressive
+    
+    ### 7. WHERE WE WERE UNIQUE
+    
+    **`where_we_were_unique`**: Array of 2-4 differentiators
+    
+    What made Treya's approach special? Look for:
+    - Speed (quick wins, fast implementation)
+    - Expertise (industry-specific knowledge, GPO relationships)
+    - Approach (hands-on, collaborative, data-driven)
+    - Results (exceeded estimates, unlocked new opportunities)
+    
+    Examples:
+    - "Delivered first savings within 60 days through quick-win opportunities"
+    - "Deep healthcare GPO expertise enabled optimal tier positioning"
+    - "Collaborative approach maintained clinical staff buy-in during vendor transitions"
+    - "Identified $350K in additional savings beyond original scope"
+    
+    ## OUTPUT FORMAT
+    
+    Return valid JSON only:
+    
+    ```json
+    {
+      "case_study_packaging": {
+        "case_study_ready": true,
+        "readiness_notes": "All required elements present. Strong quantified results.",
+        "headline": "Multi-site healthcare provider achieves $1.2M annual savings through strategic sourcing transformation",
+        "client_problem_statement": "As a rapidly growing healthcare platform with 45 locations, the client lacked a centralized procurement function. Each site managed purchasing independently, resulting in fragmented vendor relationships, inconsistent pricing, and limited visibility into total spend. With private equity backing, the organization needed to quickly optimize indirect costs to support EBITDA improvement targets.",
+        "approach_summary": [
+          "Conducted comprehensive spend analysis across 12 indirect categories totaling $6.3M in addressable spend",
+          "Leveraged Premier GPO relationship to unlock Tier 2 pricing on medical supplies, delivering 22% savings",
+          "Consolidated telecom vendors from 5 to 2 through competitive RFP, achieving 35% cost reduction",
+          "Renegotiated EMR contract with Athena, reducing fees from 4.56% to 3.40%",
+          "Established centralized procurement processes and quarterly business reviews with key suppliers"
+        ],
+        "top_levers": [
+          "GPO tier optimization",
+          "Contract renegotiation",
+          "Vendor consolidation",
+          "Competitive RFP"
+        ],
+        "value_delivered_blurb": "The engagement delivered $1.2M in annual run-rate savings, exceeding initial estimates by 15%. Beyond financial impact, Treya established foundational procurement capabilities including a centralized contract repository, standardized purchasing processes, and supplier performance management. The client achieved a 6x return on Treya's project fees.",
+        "where_we_were_unique": [
+          "Delivered first savings within 60 days through GPO quick-win opportunities",
+          "Deep healthcare industry expertise enabled optimal positioning with Premier and specialty suppliers",
+          "Collaborative approach maintained clinical staff buy-in during sensitive vendor transitions",
+          "Identified $200K in additional savings opportunities beyond original scope categories"
+        ]
+      },
+      "generation_notes": [
+        "Headline emphasizes total savings as primary metric",
+        "Problem statement highlights PE value creation context",
+        "Approach bullets ordered by savings impact"
+      ]
+    }
+    ```
+    
+    ## IMPORTANT RULES
+    
+    1. **Use only provided data** - Do NOT make up numbers or facts
+    2. **Be specific** - Include actual dollar amounts, percentages, category names
+    3. **Be compelling** - This is marketing content, make it impactful
+    4. **case_study_ready** - Be honest about whether there's enough info
+    5. **Aggregate levers** - Combine levers from all categories, rank by impact
+    6. **Tell a story** - Problem → Approach → Results flow
+    7. **Highlight uniqueness** - What made this engagement special?
+    8. **Professional tone** - Suitable for client-facing materials
+
+parameters:
+  - name: project_scope_data
+    type: string
+    required: true
+    description: "Project scope data from Step 3 (JSON)"
+  
+  - name: client_context_data
+    type: string
+    required: true
+    description: "Client context data from Step 4 (JSON)"
+  
+  - name: engagement_background_data
+    type: string
+    required: true
+    description: "Engagement background data from Step 5 (JSON)"
+  
+  - name: impact_data
+    type: string
+    required: true
+    description: "Impact data from Step 6 (JSON)"
+  
+  - name: categories_data
+    type: string
+    required: true
+    description: "Categories data from Step 7 (JSON)"
+
+examples:
+  - note: "Complete case study with strong results"
+    input: |
+      All previous step data with $1.2M savings, 8 categories, healthcare client...
+    output: |
+      {
+        "case_study_packaging": {
+          "case_study_ready": true,
+          "headline": "Healthcare platform delivers $1.2M annual savings across 8 categories",
+          "client_problem_statement": "Growing healthcare platform lacked centralized procurement...",
+          "approach_summary": ["Conducted spend analysis...", "Leveraged GPO..."],
+          "top_levers": ["GPO optimization", "Vendor consolidation"],
+          "value_delivered_blurb": "Delivered $1.2M in annual savings, 6x ROI...",
+          "where_we_were_unique": ["60-day quick wins", "Healthcare GPO expertise"]
+        }
+      }
+
+  - note: "Incomplete data - not ready"
+    input: |
+      Missing impact data, only partial category information...
+    output: |
+      {
+        "case_study_packaging": {
+          "case_study_ready": false,
+          "readiness_notes": "Missing quantified savings results. Impact data incomplete.",
+          "headline": null,
+          "client_problem_statement": null,
+          "approach_summary": null,
+          "top_levers": null,
+          "value_delivered_blurb": null,
+          "where_we_were_unique": null
+        }
+      }

@@ -1,0 +1,42 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Addiction Treatment Services",
+    "business_model": "Multi-state outpatient opioid and alcohol addiction treatment provider operating community clinics",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "Founded in 2010 and headquartered in Nashville, Tennessee, SaVida Health delivers medication-assisted treatment and counseling for opioid and alcohol use disorders. Backed by healthcare-focused private equity firm Council Capital since 2017, the company has expanded into several New England and Mid-Atlantic states through a growing network of outpatient clinics."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 5500000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "web_search",
+      "notes": "Clodura.ai estimates ~$5.5M; other sources list wider ranges up to $100M, figures are not disclosed in documents."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 11,
+      "confidence": "medium",
+      "source": "web_search",
+      "notes": "11 clinic addresses explicitly listed in LinkedIn company profile snippet; total footprint may be larger but not confirmed in documents."
+    },
+    "employees": {
+      "count": 125,
+      "confidence": "medium",
+      "source": "web_search",
+      "notes": "LinkedIn lists 51-200 employees; midpoint of range used."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "web_search"
+  ],
+  "extraction_notes": [
+    "Official name appears as \"SaVida Health\" throughout kickoff deck; legal entity in agreement is \"SaVida Management\".",
+    "No financial size data provided in internal documents; revenue and employee figures sourced from public web data and should be treated as directional.",
+    "Clinic location count based on explicit addresses found; full network size not confirmed."
+  ]
+}

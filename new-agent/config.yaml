@@ -1,0 +1,79 @@
+# Case Study Extractor Configuration
+# Adapted from agent-kit framework
+
+# OpenAI Configuration
+openai:
+  api_key: "${OPENAI_API_KEY}"  # Set via environment variable
+  
+  # Default model for extraction
+  model: "o3"
+  
+  # Reasoning effort: minimal (fast) | medium (balanced) | high (deep thinking)
+  reasoning_effort: "medium"
+  
+  # Max output tokens
+  max_output_tokens: 16000
+  
+  # Output token ratio (fraction of context for output)
+  output_token_ratio: 0.25
+  
+  # Model context limits
+  model_limits:
+    o3: 200000
+    o3-mini: 128000
+    gpt-4o: 128000
+    gpt-5-mini: 400000
+    default: 128000
+  
+  # Per-step model overrides (step_name -> model)
+  # Use different models for different extraction steps
+  step_models:
+    anchor_detection: "gpt-4o"      # Fast model for file detection
+    file_selection: "gpt-4o"        # Fast model for file selection
+    agreement_extraction: "o3"      # Reasoning model for complex extraction
+    category_extraction: "o3"       # Reasoning model for category data
+    impact_extraction: "o3"         # Reasoning model for impact summary
+    web_search: "gpt-4o"            # Web search model
+  
+  # Per-step reasoning effort overrides
+  step_reasoning:
+    anchor_detection: "minimal"     # Simple task
+    file_selection: "minimal"       # Simple task
+    agreement_extraction: "high"    # Complex extraction needs deep thinking
+    category_extraction: "medium"   # Moderate complexity
+    impact_extraction: "medium"     # Moderate complexity
+  
+  # Connection settings
+  request_timeout: 120              # Seconds
+  retry_attempts: 3
+  
+  # Debug prompt configuration
+  debug_prompts:
+    enabled: true                   # Save all prompts/responses for debugging
+    directory: "outputs/debug_prompts"  # Relative to new-agent folder
+    max_files: 50                   # Keep last N prompt files
+
+# Extraction Pipeline Configuration
+extraction:
+  # File selection
+  max_files_to_select: 30           # Max files to analyze per project
+  
+  # Content extraction limits (characters)
+  max_chars_agreement: 40000        # Agreement files get more space
+  max_chars_default: 20000          # Default file limit
+  
+  # Excel extraction limits
+  excel_max_rows: 100
+  excel_max_cols: 20
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
+  datefmt: "%H:%M:%S"
+
+# Directories
+paths:
+  inputs: "inputs"
+  outputs: "outputs"
+  prompts: "prompts"

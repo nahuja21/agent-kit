@@ -1,0 +1,48 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Addiction Treatment / Behavioral Health",
+    "business_model": "Multi-site outpatient medication-assisted treatment provider for opioid and alcohol use disorders",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "Founded in 2010, SaVida Health has grown from a single clinic into a regional addiction-treatment platform operating in several East Coast states. In August 2017, Nashville-based private-equity firm Council Capital acquired a controlling interest, fueling continued clinic expansion including new openings as recently as 2024."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": null,
+      "notes": "No revenue figures located in project documents, official SaVida sources, or reputable business databases during the search window."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 22,
+      "confidence": "low",
+      "source": "Behavioral Health Business article (Nov 9 2020)",
+      "notes": "Article states SaVida operated 22 outpatient centers as of Nov 2020. A September 2024 company press release announces an additional clinic in Danville, VA, indicating growth beyond 22, but no updated total was provided. Therefore reported the last verifiable number and flagged low confidence."
+    },
+    "employees": {
+      "count": 165,
+      "confidence": "medium",
+      "source": "LeadIQ company directory (accessed Oct 2025)",
+      "notes": "LeadIQ lists ~165 employees. SignalHire gives a 100\u2013200 range, corroborating the general scale but without a specific figure."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "Mergr.com \u2013 Council Capital acquires SaVida Health (Aug 2017)",
+    "Behavioral Health Business \u2013 Pipeline MAT Expansions at SaVida (Nov 9 2020)",
+    "savidahealth.com \u2013 Press release: New location in Danville, VA (Sept 2024)",
+    "LeadIQ \u2013 SaVida Health employee directory (Oct 2025)",
+    "SignalHire \u2013 SaVida Health company profile"
+  ],
+  "extraction_notes": [
+    "Company name confirmed as 'SaVida Health' in both project kickoff deck and procurement agreement; agreement party listed as 'SaVida Management' but operating brand is SaVida Health.",
+    "Private-equity ownership explicitly reported by Mergr and multiple news sources; no contradictory information found.",
+    "No reliable public revenue or EBITDA data available; numerous database and news searches returned none.",
+    "Location count likely higher than 22 due to 2024 openings, but only the 2020 figure is verifiable; treated as minimum with low confidence.",
+    "Employee count triangulated from LeadIQ (165) and SignalHire (100\u2013200 range); absence of LinkedIn headcount prevents high confidence."
+  ]
+}

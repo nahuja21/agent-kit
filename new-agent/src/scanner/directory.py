@@ -14,6 +14,7 @@ PHASES:
 from __future__ import annotations
 
 import os
+import re
 import zipfile
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -21,6 +22,41 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 from src.config import RECOGNIZED_EXTENSIONS, IGNORED_FOLDERS
+
+
+# Phase detection patterns
+PHASE_PATTERNS = [
+    r"phase\s*(\d+)",      # "Phase 1", "Phase 2", "phase1"
+    r"ph\s*(\d+)",         # "Ph 1", "Ph2"
+]
+
+# Wave patterns (these are WITHIN a phase, not separate phases)
+WAVE_PATTERNS = [
+    r"wave\s*(\d+)",       # "Wave 1", "Wave 2"
+]
+
+
+@dataclass
+class PhaseInfo:
+    """Information about a detected project phase."""
+    phase_number: int
+    phase_name: str  # e.g., "Phase 1", "Phase 2"
+    
+    # Folders that belong to this phase
+    folders: List[str] = field(default_factory=list)
+    
+    # Files that belong to this phase  
+    files: List[str] = field(default_factory=list)
+    
+    # Waves within this phase (e.g., "Wave 1", "Wave 2")
+    waves: List[str] = field(default_factory=list)
+    
+    # Key anchor files for this phase (Agreement, Exhibit, etc.)
+    agreement_path: Optional[str] = None
+    exhibit_paths: List[str] = field(default_factory=list)
+    categories_folder: Optional[str] = None
+    project_updates_folder: Optional[str] = None
+    closeout_folder: Optional[str] = None
 
 
 @dataclass
@@ -57,6 +93,10 @@ class ScanResult:
     scan_timestamp: datetime = field(default_factory=datetime.now)
     # Cache of all file paths for validation
     _all_file_paths: Optional[List[str]] = field(default=None, repr=False)
+    
+    # Phase detection results
+    phases: List[PhaseInfo] = field(default_factory=list)
+    is_multi_phase: bool = False
     
     def get_all_file_paths(self) -> List[str]:
         """
@@ -226,6 +266,10 @@ class DirectoryScanner:
         # Run phases
         self._phase1_structure(project_path, result.root_folder, result)
         self._phase2_metadata(result)  # Placeholder
+        
+        # Detect project phases (Phase 1, Phase 2, etc.)
+        self._detect_project_phases(result)
+        
         # self._phase3_content(result)  # Future
         # self._phase4_deep_analysis(result)  # Future
         
@@ -300,6 +344,132 @@ class DirectoryScanner:
                 # Track file type counts
                 ext_key = extension if extension else "(no extension)"
                 result.file_type_counts[ext_key] = result.file_type_counts.get(ext_key, 0) + 1
+    
+    # =========================================================================
+    # PROJECT PHASE DETECTION
+    # =========================================================================
+    def _detect_project_phases(self, result: ScanResult) -> None:
+        """
+        Detect if this is a multi-phase project.
+        
+        Looks for:
+        - Folders named "Phase 1", "Phase 2", etc.
+        - Files with "Phase 1", "Phase 2" in names
+        - Multiple Agreements or Exhibits with phase labels
+        
+        Note: "Waves" (Wave 1, Wave 2) are WITHIN a phase, not separate phases.
+        """
+        all_paths = result.get_all_file_paths()
+        phases_found: Dict[int, PhaseInfo] = {}
+        
+        # Helper to extract phase number from a string
+        def extract_phase_number(text: str) -> Optional[int]:
+            text_lower = text.lower()
+            for pattern in PHASE_PATTERNS:
+                match = re.search(pattern, text_lower)
+                if match:
+                    return int(match.group(1))
+            return None
+        
+        # Helper to extract wave info
+        def extract_wave(text: str) -> Optional[str]:
+            text_lower = text.lower()
+            for pattern in WAVE_PATTERNS:
+                match = re.search(pattern, text_lower)
+                if match:
+                    return f"Wave {match.group(1)}"
+            return None
+        
+        # Scan all paths for phase indicators
+        for path in all_paths:
+            path_parts = path.split("/")
+            
+            # Check each path component for phase indicator
+            for part in path_parts:
+                phase_num = extract_phase_number(part)
+                if phase_num is not None:
+                    if phase_num not in phases_found:
+                        phases_found[phase_num] = PhaseInfo(
+                            phase_number=phase_num,
+                            phase_name=f"Phase {phase_num}",
+                        )
+                    
+                    # Add file to this phase
+                    phases_found[phase_num].files.append(path)
+                    
+                    # Check for waves within this phase
+                    wave = extract_wave(path)
+                    if wave and wave not in phases_found[phase_num].waves:
+                        phases_found[phase_num].waves.append(wave)
+                    
+                    # Track folder if it's the first component with phase
+                    folder_path = "/".join(path_parts[:path_parts.index(part) + 1])
+                    if folder_path not in phases_found[phase_num].folders:
+                        phases_found[phase_num].folders.append(folder_path)
+                    
+                    break  # Only count once per file
+        
+        # Also check folder names in the directory structure
+        self._scan_folders_for_phases(result.root_folder, "", phases_found)
+        
+        # If we found multiple phases, mark as multi-phase
+        if len(phases_found) > 1:
+            result.is_multi_phase = True
+            result.phases = [phases_found[k] for k in sorted(phases_found.keys())]
+        elif len(phases_found) == 1:
+            # Single phase explicitly labeled
+            result.is_multi_phase = False
+            result.phases = [phases_found[list(phases_found.keys())[0]]]
+        else:
+            # No phases found - treat entire project as single implicit phase
+            result.is_multi_phase = False
+            # Don't add a phase - let the rest of the code handle it as before
+    
+    def _scan_folders_for_phases(
+        self, 
+        folder: FolderInfo, 
+        path_prefix: str, 
+        phases_found: Dict[int, PhaseInfo]
+    ) -> None:
+        """Recursively scan folders for phase indicators."""
+        for subfolder in folder.subfolders:
+            folder_path = f"{path_prefix}{subfolder.name}" if path_prefix else subfolder.name
+            
+            # Check folder name for phase
+            phase_num = None
+            for pattern in PHASE_PATTERNS:
+                match = re.search(pattern, subfolder.name.lower())
+                if match:
+                    phase_num = int(match.group(1))
+                    break
+            
+            if phase_num is not None:
+                if phase_num not in phases_found:
+                    phases_found[phase_num] = PhaseInfo(
+                        phase_number=phase_num,
+                        phase_name=f"Phase {phase_num}",
+                    )
+                
+                if folder_path not in phases_found[phase_num].folders:
+                    phases_found[phase_num].folders.append(folder_path)
+                
+                # Check for key folders within this phase folder
+                folder_name_lower = subfolder.name.lower()
+                for inner_folder in subfolder.subfolders:
+                    inner_name_lower = inner_folder.name.lower()
+                    inner_path = f"{folder_path}/{inner_folder.name}"
+                    
+                    if "agreement" in inner_name_lower:
+                        phases_found[phase_num].agreement_path = inner_path
+                    elif "categor" in inner_name_lower:
+                        phases_found[phase_num].categories_folder = inner_path
+                    elif "update" in inner_name_lower:
+                        phases_found[phase_num].project_updates_folder = inner_path
+                    elif "close" in inner_name_lower or "closeout" in inner_name_lower:
+                        phases_found[phase_num].closeout_folder = inner_path
+            
+            # Recurse
+            self._scan_folders_for_phases(subfolder, folder_path + "/", phases_found)
     
     # =========================================================================
     # PHASE 2: Metadata (Placeholder)

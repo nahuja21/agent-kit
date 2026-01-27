@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objective, quantified $1.36M savings, and multiple category proof points are all documented, enabling a robust case study.",
+    "headline": "Advantia Health unlocks $1.36 million in annual savings and a 6\u00d7 ROI through Treya-led strategic sourcing",
+    "client_problem_statement": "Advantia Health\u2019s rapid expansion left purchasing fragmented across 46 clinics, two business units, and multiple AP systems. With private-equity investors pushing for EBITDA improvement ahead of an eventual exit, the organization needed to wring cost out of everything from billing fees to medical supplies\u2014without disrupting patient care or triggering costly vendor termination clauses. Limited internal procurement resources and inconsistent spend data made hitting those value-creation targets impossible on their own.",
+    "approach_summary": [
+      "Analyzed nearly $19 million in third-party spend across 10 clinical and back-office categories to pinpoint $1.3 million+ savings potential.",
+      "Negotiated Athenahealth contract repricing, dropping revenue-cycle fees from 3.39 % to 3.15 % and delivering $259 K annual savings while avoiding a $9 M early-exit penalty.",
+      "Ran competitive distributor RFP and consolidated Heartland clinics to McKesson, capturing 14 % savings ($157 K) on medical supplies and extending payment terms to 60 days.",
+      "Replaced outsourced sonography with an in-house staffing model after scenario modelling, generating $152 K (19 %) in recurring savings and improving service consistency.",
+      "Implemented quick-hit purchasing policies\u2014five-unit IUD order minimums and Bayer replacement-credit enrollment\u2014while establishing centralized procurement governance for sustained control."
+    ],
+    "top_levers": [
+      "Contract renegotiation & benchmarking",
+      "Insourcing/operating-model redesign",
+      "Vendor consolidation via competitive RFP",
+      "Policy & process standardization"
+    ],
+    "value_delivered_blurb": "Treya delivered $1,363,353 in recurring annual savings\u2014more than triple Advantia\u2019s $450 K guarantee and over six times the fixed project fee of $225 K. $684,936 was fully implemented within six months, with an additional $678,417 in late-stage negotiations ensuring continued value capture. Beyond the hard dollars, Advantia now operates with centralized purchasing policies, distributor formularies, and contract governance that bolster margins and enterprise value for its PE sponsors.",
+    "where_we_were_unique": [
+      "Realized first implemented savings in just 40 days through \u2018quick-win\u2019 IUD initiatives.",
+      "Overcame a decentralized data environment by harvesting line-item details directly from high-spend suppliers, enabling fact-based negotiations.",
+      "Combined deep healthcare category expertise with hands-on execution to renegotiate mission-critical contracts without clinical disruption.",
+      "Delivered a 6\u00d7 return on fees and identified savings in 14 distinct categories\u2014far exceeding the original project scope."
+    ]
+  },
+  "generation_notes": [
+    "Headline highlights total savings and ROI to grab attention.",
+    "Approach bullets align with highest-impact categories and specific actions documented.",
+    "Top levers ranked by aggregate savings contribution across categories.",
+    "Value blurb references guarantee and fee from Exhibit B to underscore ROI."
+  ]
+}

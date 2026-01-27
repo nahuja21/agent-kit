@@ -1,0 +1,42 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Addiction Treatment & Behavioral Health",
+    "business_model": "Multi-site outpatient opioid and alcohol addiction treatment provider",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "Founded in 2010, SaVida Health has expanded from a single clinic to a multi-state network of outpatient centers offering medication-assisted treatment, counseling, toxicology testing and case-management services."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 5500000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "web_search",
+      "notes": "Web estimates vary widely ($5.5M to $50\u2013100M). Lowest documented figure used; no definitive figure found in documents."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 11,
+      "confidence": "medium",
+      "source": "web_search",
+      "notes": "Web list enumerates 11 outpatient treatment centers across multiple states."
+    },
+    "employees": {
+      "count": 100,
+      "confidence": "medium",
+      "source": "web_search",
+      "notes": "LinkedIn ranges 51\u2013200 employees; midpoint estimate provided."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "web_search"
+  ],
+  "extraction_notes": [
+    "Official brand referenced throughout project materials is \u201cSaVida Health\u201d; legal entity in agreement is \u201cSaVida Management\u201d.",
+    "No financial metrics (revenue, EBITDA, headcount, locations) were stated in the provided internal documents; web search was used to supplement.",
+    "Revenue estimates conflict across sources, so confidence is low."
+  ]
+}

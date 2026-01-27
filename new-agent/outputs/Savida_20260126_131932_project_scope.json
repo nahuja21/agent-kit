@@ -1,0 +1,137 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "EMR",
+      "Employee Benefits",
+      "Scientific / Medical Lab Equipment & Supplies",
+      "Medical Equipment & Supplies",
+      "Small Parcel Shipping",
+      "IT Hardware",
+      "Telecom - Data & Voice",
+      "Office Supplies",
+      "Commercial Print",
+      "Waste Management"
+    ],
+    "initial_categories_count": 10,
+    "category_details": [
+      {
+        "category_name": "EMR",
+        "spend": 1443458,
+        "addressable_pct": 90,
+        "addressable_spend": 1299112,
+        "savings_low": 64956,
+        "savings_high": 155893,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Employee Benefits",
+        "spend": 2351331,
+        "addressable_pct": 70,
+        "addressable_spend": 1645932,
+        "savings_low": 65837,
+        "savings_high": 131675,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Scientific / Medical Lab Equipment & Supplies",
+        "spend": 643956,
+        "addressable_pct": 85,
+        "addressable_spend": 547363,
+        "savings_low": 32842,
+        "savings_high": 65684,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Medical Equipment & Supplies",
+        "spend": 241170,
+        "addressable_pct": 90,
+        "addressable_spend": 217053,
+        "savings_low": 26046,
+        "savings_high": 39069,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Small Parcel Shipping",
+        "spend": 288354,
+        "addressable_pct": 90,
+        "addressable_spend": 259519,
+        "savings_low": 25952,
+        "savings_high": 38928,
+        "is_cogs": false
+      },
+      {
+        "category_name": "IT Hardware",
+        "spend": 141065,
+        "addressable_pct": 90,
+        "addressable_spend": 126959,
+        "savings_low": 10157,
+        "savings_high": 15235,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Telecom - Data & Voice",
+        "spend": 79234,
+        "addressable_pct": 90,
+        "addressable_spend": 71311,
+        "savings_low": 7131,
+        "savings_high": 10697,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Office Supplies",
+        "spend": 35706,
+        "addressable_pct": 90,
+        "addressable_spend": 32135,
+        "savings_low": 3856,
+        "savings_high": 5784,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Commercial Print",
+        "spend": 51337,
+        "addressable_pct": 90,
+        "addressable_spend": 46203,
+        "savings_low": 2310,
+        "savings_high": 3696,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Waste Management",
+        "spend": 32400,
+        "addressable_pct": 90,
+        "addressable_spend": 29160,
+        "savings_low": 1750,
+        "savings_high": 3499,
+        "is_cogs": false
+      }
+    ],
+    "total_spend": 5308010,
+    "total_addressable_spend": 4274747,
+    "savings_estimate_low": 240837,
+    "savings_estimate_high": 470160,
+    "cogs_categories_count": 2,
+    "cogs_categories_percentage": 20.0,
+    "cogs_addressable_spend": 764416,
+    "cogs_addressable_percentage": 17.9
+  },
+  "exhibit_b": {
+    "fee_type": "hybrid",
+    "fee_amount": 175000,
+    "minimum_savings_guarantee": 210000,
+    "minimum_return_on_fees_ratio": 1.2,
+    "fee_hybrid_threshold": 210000,
+    "fee_contingent_percentage": 45,
+    "fee_notes": "Variable fee is 45% of Annual Savings Created over $210,000; fixed fee invoiced in five equal monthly installments; travel passed through at cost."
+  },
+  "timing": {
+    "start_date": "2024-09-20",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction / strategic sourcing engagement"
+  },
+  "extraction_notes": [
+    "Addressable spends were calculated as Spend \u00d7 Addressable % and rounded to nearest whole dollar.",
+    "Total spend uses the total provided in the document (5,308,010).",
+    "Minimum savings guarantee inferred as 1.2 \u00d7 fixed fee = $210,000, matching the variable-fee threshold stated.",
+    "No explicit project end date found in the agreement."
+  ]
+}

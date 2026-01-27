@@ -1,58 +1,68 @@
 # Agreement Extraction Prompt
-# Pass 2: Extract ONLY Agreement data (Exhibit A & B)
+# Step: Extract contract data from Agreement document (Exhibit A & B)
+# Updated to agent-kit style format
 
-system_prompt: |
-  You are extracting contract data from a Treya Partners Agreement document.
-  Focus ONLY on Exhibit A (Project Scope) and Exhibit B (Project Fees).
-  Be precise - these are contractual values.
+step: agreement_extraction
 
-user_template: |
-  ## Agreement Document Content:
-  {{agreement_content}}
+prompt:
+  instructions: |
+    You are extracting contract data from a Treya Partners Agreement document.
+    Focus ONLY on Exhibit A (Project Scope) and Exhibit B (Project Fees).
+    Be precise - these are contractual values.
 
-  ## YOUR TASK:
-  Extract the following from this Agreement document.
+  user_template: |
+    ## Agreement Document Content:
+    {{agreement_content}}
 
-  ### FROM EXHIBIT A - PROJECT SCOPE TABLE:
-  The table lists categories with baseline spend and savings estimates.
-  
-  Extract:
-  - `initial_categories`: List of category names from the table
-  - `addressable_spend`: Total baseline/addressable spend (sum or total row)
-  - `savings_estimate_low`: Low end of savings range
-  - `savings_estimate_high`: High end of savings range
+    ## YOUR TASK:
+    Extract the following from this Agreement document.
 
-  ### FROM EXHIBIT B - PROJECT FEES:
-  Look for the fee structure section.
-  
-  Extract:
-  - `fee_type`: "fixed" (flat fee), "contingent" (% of savings), or "hybrid" (both)
-  - `fee_amount`: The fixed fee dollar amount (e.g., "$190,000 fixed fee" → 190000)
-  - `fee_percentage`: Contingent percentage if applicable
-  - `minimum_savings_guarantee`: If mentioned
+    ### FROM EXHIBIT A - PROJECT SCOPE TABLE:
+    The table lists categories with baseline spend and savings estimates.
+    
+    Extract:
+    - `initial_categories`: List of category names from the table
+    - `addressable_spend`: Total baseline/addressable spend (sum or total row)
+    - `savings_estimate_low`: Low end of savings range
+    - `savings_estimate_high`: High end of savings range
 
-  ### IMPORTANT:
-  - ONLY extract what is explicitly stated in the Agreement
-  - Dollar amounts should be numbers (190000 not "$190K")
-  - If a value is not found, set it to null
-  - Ignore example calculations (like "if savings are $600,000 then...")
+    ### FROM EXHIBIT B - PROJECT FEES:
+    Look for the fee structure section.
+    
+    Extract:
+    - `fee_type`: "fixed" (flat fee), "contingent" (% of savings), or "hybrid" (both)
+    - `fee_amount`: The fixed fee dollar amount (e.g., "$190,000 fixed fee" → 190000)
+    - `fee_percentage`: Contingent percentage if applicable
+    - `minimum_savings_guarantee`: If mentioned
 
-  ## OUTPUT FORMAT:
-  Return valid JSON only:
-  ```json
-  {
-    "initial_categories": ["Category 1", "Category 2", ...],
-    "addressable_spend": 6300000,
-    "savings_estimate_low": 540000,
-    "savings_estimate_high": 928000,
-    "fee_type": "fixed",
-    "fee_amount": 190000,
-    "fee_percentage": null,
-    "minimum_savings_guarantee": 380000,
-    "start_date": "2020-12-11",
-    "source_file": "Agreement/Signed Agreement/Agreement.pdf"
-  }
-  ```
+    ### IMPORTANT:
+    - ONLY extract what is explicitly stated in the Agreement
+    - Dollar amounts should be numbers (190000 not "$190K")
+    - If a value is not found, set it to null
+    - Ignore example calculations (like "if savings are $600,000 then...")
+
+    ## OUTPUT FORMAT:
+    Return valid JSON only:
+    ```json
+    {
+      "initial_categories": ["Category 1", "Category 2", ...],
+      "addressable_spend": 6300000,
+      "savings_estimate_low": 540000,
+      "savings_estimate_high": 928000,
+      "fee_type": "fixed",
+      "fee_amount": 190000,
+      "fee_percentage": null,
+      "minimum_savings_guarantee": 380000,
+      "start_date": "2020-12-11",
+      "source_file": "Agreement/Signed Agreement/Agreement.pdf"
+    }
+    ```
+
+parameters:
+  - name: agreement_content
+    type: string
+    required: true
+    description: "The extracted text content from the Agreement document"
 
 examples:
   - input: |

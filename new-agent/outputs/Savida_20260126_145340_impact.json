@@ -1,0 +1,107 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "SaVida Health secures $412K in annual savings across five spend categories; $358K already locked in",
+      "narrative": "Treya Partners\u2019 six-month strategic sourcing engagement with SaVida Health delivered $411,000+ in identified annual savings across five addressable categories. The EMR renegotiation with incumbent Athena is fully executed, capturing $358K in hard savings. A newly executed Provista GPO agreement is set to trim another $32K from office and medical supplies once roster validation is complete, while telecom consolidation and IT hardware sourcing are poised to add a further $22K. The program combines rate reductions, GPO leverage, and supplier consolidation to strengthen SaVida\u2019s cost structure for 2025 and beyond."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 412065,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Sum of EMR, Provista Office Supplies, Provista Medical Supplies, IT Hardware, and Telecom savings averages."
+      },
+      "finalized_savings": {
+        "amount": 357889,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "EMR category marked with \u2705 and contract signed 4/15/2025."
+      },
+      "in_progress_savings": {
+        "amount": 54176,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Provista GPO (Office & Medical Supplies) agreements signed but savings undergoing validation; IT Hardware and Telecom opportunities still in proposal/negotiation."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "EMR (Athena)",
+        "annual_savings": 357889,
+        "status": "finalized",
+        "status_notes": "Contract signed 4/15/2025; fee reduced from 4.56% to 3.40%."
+      },
+      {
+        "category_name": "Provista GPO \u2013 Office Supplies",
+        "annual_savings": 4033,
+        "status": "in progress",
+        "status_notes": "Agreement signed 5/5/2025; savings validation with SaVida team underway."
+      },
+      {
+        "category_name": "Provista GPO \u2013 Medical Supplies",
+        "annual_savings": 27992,
+        "status": "in progress",
+        "status_notes": "Agreement signed 5/5/2025; final SKU alignment and savings confirmation pending."
+      },
+      {
+        "category_name": "IT Hardware",
+        "annual_savings": 4301,
+        "status": "proposal",
+        "status_notes": "Pricing obtained from Connection; leveraging Provista/CDW for final negotiations."
+      },
+      {
+        "category_name": "Telecom \u2013 Data & Voice",
+        "annual_savings": 17850,
+        "status": "in progress",
+        "status_notes": "Comcast managed-services proposal under review; contract signature TBD."
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 180,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "First hard savings realized with EMR contract execution roughly six months after project launch in Oct-2024."
+      },
+      "notes": "Remaining categories expected to realize savings within the next one to two fiscal quarters."
+    },
+    "operational_improvements": "Implemented group purchasing through Provista to streamline ordering, consolidated telecom services for simplified billing and bandwidth optimization, and established a repeatable sourcing framework for future hardware refresh cycles.",
+    "proof_points": [
+      {
+        "statement": "Renegotiated Athena EMR fee from 4.56% to 3.40%, generating $358K annual savings.",
+        "category": "EMR (Athena)",
+        "evidence": [
+          {
+            "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+            "page_or_slide": "6",
+            "quote": "Athena's final proposal meets the 3.4% target rate, delivering approximately $358K in annual savings."
+          }
+        ]
+      },
+      {
+        "statement": "Signed Provista GPO agreement expected to cut office and medical supply costs by over 10% on high-usage SKUs.",
+        "category": "Provista GPO \u2013 Office & Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+            "page_or_slide": "4",
+            "quote": "ProVista GPO ... savings low $17K/high $46K; agreement signed 5/5/2025."
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+    "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx"
+  ],
+  "extraction_notes": [
+    "Savings figures taken from the most recent Closeout Savings Dashboard (Slide 4, May 8 2025).",
+    "Categories removed from scope (Small Parcel, Waste, Commercial Print, Employee Benefits) were omitted because no savings amounts are listed."
+  ]
+}

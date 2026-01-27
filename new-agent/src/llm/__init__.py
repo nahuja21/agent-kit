@@ -1,5 +1,21 @@
 """LLM client module."""
 
-from .client import OpenAIClient
+# Legacy client (backwards compatible)
+from .client import OpenAIClient, LLMResponse
 
-__all__ = ["OpenAIClient"]
+# Enhanced client with structured output and debug logging
+from .enhanced_client import (
+    EnhancedOpenAIClient,
+    LLMResponse as EnhancedLLMResponse,
+    create_client,
+)
+
+__all__ = [
+    # Legacy
+    "OpenAIClient",
+    "LLMResponse",
+    # Enhanced
+    "EnhancedOpenAIClient",
+    "EnhancedLLMResponse",
+    "create_client",
+]

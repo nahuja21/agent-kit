@@ -1,0 +1,31 @@
+{
+  "engagement_background": {
+    "objective": "SaVida Health engaged Treya Partners to generate $240K\u2013$470K in cost savings through a strategic sourcing program that leverages the company\u2019s enterprise-wide purchasing power, secures best-in-class supplier agreements, and preserves or improves service levels and product quality within a six-month project window ending March 2025.",
+    "scope_summary": "The project covers ten indirect spend categories with a combined baseline spend of approximately $5.3 million (e.g., EMR, Employee Benefits, Lab & Medical Supplies, Small Parcel, IT Hardware, Telecom, Office Supplies, Commercial Print, Waste Management). About 70\u201390 % of each category\u2019s spend is considered addressable; low-spend/low-opportunity categories may be dropped or re-categorized as the project progresses.",
+    "constraints_challenges": [
+      "Supplier non-responsiveness to data requests, requiring mitigation strategies and unified communications",
+      "Potential incumbent supplier pushback and sensitivities during competitive bidding or negotiations",
+      "Risk of unsanctioned \"side conversations\" with suppliers that could undermine a united negotiation front",
+      "Limited availability of internal stakeholder time for data provision, interviews, and deliverable review",
+      "Need to deliver \"quick-hit\" savings before year-end 2024, compressing the timeline for early workstreams",
+      "Gaps in internal line-item usage data; success depends on obtaining data directly from high-spend suppliers"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Basic AP/purchasing data exists, but detailed line-item usage and contract information often must be requested from suppliers; no centralized contract repository is indicated.",
+    "data_quality_notes": "Historical usage data is incomplete and supplier-specific; both parties agreed that collecting full line-item history for every vendor is impractical and that data gaps will be accepted after reasonable efforts.",
+    "source_file": "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from the emphasis on leveraging enterprise-wide spend, the need for Treya to act as single point of contact, and minimal internal procurement workload.",
+    "Data limitations explicitly described in both the kickoff deck and the Services Agreement (Section 3.2.1)."
+  ]
+}

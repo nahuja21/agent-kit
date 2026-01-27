@@ -1,0 +1,127 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Advantia Health secures $685K in annual savings across six spend categories",
+      "narrative": "Treya Partners helped Advantia Health drive $684,936 in validated annual, recurring savings by renegotiating key contracts, enforcing purchasing policies and converting outsourced services to lower-cost solutions. Six categories moved through a full sourcing cycle, with three already finalized and the remaining three awaiting final paperwork or ramp-up. Signature wins include a 3.15% Athenahealth fee reduction, a regional medical-supplies rebid with McKesson, and a new in-house sonography staffing model."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 684936,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Sum of all categories shown on Final Savings slide"
+      },
+      "finalized_savings": {
+        "amount": 335993,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Billing Systems/RCM signed; IUD Order Minimum policy issued; Bayer CIC enrollment live"
+      },
+      "in_progress_savings": {
+        "amount": 348943,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+        "notes": "Medical Supplies, Sonography Services and Lab Services in final contracting or rollout"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Billing Systems / RCM",
+        "annual_savings": 259200,
+        "status": "finalized",
+        "status_notes": "New Athenahealth addendum signed 10/5/22 lowering fee to 3.15%; retroactive to 9/1/22"
+      },
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 156610,
+        "status": "awaiting signature",
+        "status_notes": "McKesson selected through RFP; draft agreement reviewed, go-live targeted 10/31/22"
+      },
+      {
+        "category_name": "Sonography Services",
+        "annual_savings": 152115,
+        "status": "in progress",
+        "status_notes": "In-house recruiting model chosen; 9/1/22 launch with phased tech hiring underway"
+      },
+      {
+        "category_name": "IUD Order Management (Minimum Order Policy)",
+        "annual_savings": 55193,
+        "status": "implemented",
+        "status_notes": "Policy memo issued 6/15/22 mandating 5-unit orders; compliance tracking active"
+      },
+      {
+        "category_name": "Bayer IUD \u2013 Confidence in Coverage Program",
+        "annual_savings": 21600,
+        "status": "implemented",
+        "status_notes": "Enrollment complete; free-replacement credits generate recurring savings"
+      },
+      {
+        "category_name": "Lab Services",
+        "annual_savings": 40218,
+        "status": "awaiting signature",
+        "status_notes": "LabCorp BAFO accepted (10% off); contract paperwork in-flight"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 90,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": "Project Closeout - Client/Medical Devices - IUD Order Management/Advantia IUDs Announcement Memo (6-15-22).docx",
+        "notes": "First savings began with IUD order-minimum enforcement approximately 90 days after project kickoff"
+      },
+      "notes": "Largest cash impact (Athenahealth reduction) realized within eight months of launch"
+    },
+    "operational_improvements": "Established centralized purchasing policies for IUDs, standardized supply distribution in Heartland region, and shifted sonography staffing from outsourced vendor to controlled in-house recruiting\u2014improving visibility, compliance and service levels.",
+    "proof_points": [
+      {
+        "statement": "Athenahealth service fee cut from 3.39% blended rate to 3.15%, producing $259K annual savings.",
+        "category": "Billing Systems / RCM",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Client/Billing Systems - RCM/New Agreement for signature from athenahealth - signed (003).pdf",
+            "page_or_slide": "2",
+            "quote": "New athenaOne Service Fee 3.15% of Collections"
+          }
+        ]
+      },
+      {
+        "statement": "Medical-supplies RFP with McKesson delivers $156.6K (14%) savings versus prior distributor pricing.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Client/Medical Supplies/McKesson Savings Analysis (November 4, 2022) vF.xlsx",
+            "page_or_slide": "McKesson Savings Analysis tab",
+            "quote": "Mckesson ... Savings $ 113,371.87 (exact-match lines) plus formulary items drove total $156,610"
+          }
+        ]
+      },
+      {
+        "statement": "Policy requiring 5-unit Bayer/Paragard IUD orders avoids $55K in lost discounts annually.",
+        "category": "IUD Order Management",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Client/Medical Devices - IUD Order Management/Advantia IUDs Announcement Memo (6-15-22).docx",
+            "page_or_slide": "1",
+            "quote": "Had this been done, Advantia would have saved $55K last year. Please be sure to purchase IUDs in minimum order quantities of 5 going forward."
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+    "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+    "Project Closeout - Client/Billing Systems - RCM/New Agreement for signature from athenahealth - signed (003).pdf",
+    "Project Closeout - Client/Medical Devices - IUD Order Management/Advantia IUDs Announcement Memo (6-15-22).docx",
+    "Project Closeout - Client/Medical Supplies/McKesson Savings Analysis (November 4, 2022) vF.xlsx"
+  ],
+  "extraction_notes": [
+    "Employee Benefits, Telecom, Office Supplies, IT Managed Services, Lab Reagents (Hologic) and Sonography Equipment were excluded\u2014either still conceptual or no sourcing activity completed.",
+    "Savings totals align to Final Savings slide; categories split into finalized vs in-progress based on latest status detail."
+  ]
+}

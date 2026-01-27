@@ -1,0 +1,356 @@
+# Impact Extraction Prompt
+# Step 6: Extract project results and impact
+# Sources: Case Study, Project Updates, Project Close Out
+
+step: impact_extraction
+
+prompt:
+  instructions: |
+    You are extracting PROJECT RESULTS and IMPACT from a Treya Partners engagement.
+    
+    CRITICAL - ONLY INCLUDE CATEGORIES WITH ACTUAL WORK DONE:
+    
+    ✅ INCLUDE categories that show evidence of actual work:
+    - Categories marked as "finalized", "implemented", "complete" ✓
+    - Categories "in progress" or "in flight" with clear activity ✓
+    - Categories "awaiting signature" or "pending approval" (work is done, just awaiting paperwork) ✓
+    - Categories where RFP was conducted and vendor selected ✓
+    - Categories with negotiation completed and terms agreed ✓
+    - ANY category showing clear progress or deliverables ✓
+    
+    ❌ EXCLUDE categories that are just planned or potential:
+    - Categories listed as "potential" or "future" or "TBD" ✗
+    - Categories "not started" or with no indication of work begun ✗
+    - Categories only listed in initial scope but never worked on ✗
+    - Categories with no savings amount AND no status update ✗
+    - Categories explicitly marked as "Excluded" or "Excluded Category" ✗
+    - Categories that only appear in Exhibit A but not in progress updates ✗
+    
+    KEY QUESTION: Was meaningful sourcing work actually performed on this category?
+    - If YES → Include it
+    - If NO (just planned/potential) → Exclude it
+    
+    For each included category, note the STATUS as a qualifying comment.
+    
+    Return only valid JSON matching the specified format.
+
+  user_template: |
+    # Impact Extraction
+    
+    ## Client: {{client_name}}
+    
+    ## Context from Previous Steps
+    (For reference - the Agreement estimates. Extract ACTUAL project results below.)
+    
+    Initial Categories: {{initial_categories}}
+    Addressable Spend: ${{addressable_spend}}
+    Savings Estimate Range: ${{savings_low}} - ${{savings_high}}
+    
+    ---
+    
+    ## Document Contents
+    (Extract project results from savings dashboard, closeout, status updates)
+    
+    {{document_contents}}
+    
+    ---
+    
+    # YOUR TASK
+    
+    Extract PROJECT RESULTS from the savings dashboard, closeout, or status updates.
+    
+    ## CRITICAL: WHAT TO INCLUDE vs EXCLUDE
+    
+    **INCLUDE categories with ACTUAL WORK DONE:**
+    - ✓ Categories marked "finalized", "implemented", "complete"
+    - ✓ Categories "in progress", "in flight", "ongoing" with clear activity shown
+    - ✓ Categories "awaiting signature", "pending approval" (work done, just waiting on paperwork)
+    - ✓ Categories where RFP was completed and vendor selected
+    - ✓ Categories with negotiation completed and terms agreed
+    - ✓ Categories showing clear deliverables (analysis, proposals, contracts drafted)
+    
+    **EXCLUDE categories that are NOT ACTUALLY WORKED ON:**
+    - ✗ Categories marked "potential", "future", "TBD", "Phase 2"
+    - ✗ Categories "not started" or with no progress shown
+    - ✗ Categories only in initial scope (Exhibit A) but never mentioned in updates/closeout
+    - ✗ Categories with no savings amount AND no status update
+    - ✗ Categories explicitly marked "Excluded" or "Excluded Category"
+    - ✗ Categories that were planned but deprioritized or never begun
+    
+    **KEY TEST:** Ask yourself - "Was meaningful sourcing work actually performed?"
+    - Look for evidence: RFPs sent, vendors contacted, contracts negotiated, savings validated
+    - If category only appears in initial scope without follow-up work → EXCLUDE
+    
+    ## FIELDS TO EXTRACT
+    
+    ### 1. SUMMARY
+    
+    **`headline`**: Marketing-ready headline summarizing total project savings
+    - Include the TOTAL savings across all included categories
+    - Note if some categories are still in progress
+    - Examples: 
+      - "Healthcare platform delivers $1.2M in annual savings across 12 categories"
+      - "Strategic sourcing engagement identifies $850K in savings, with $500K already implemented"
+    
+    **`narrative`**: 2-4 sentence summary of the engagement results
+    - Total savings identified/achieved
+    - How many categories, what stages they're in
+    - Key wins and approach
+    - This is a REQUIRED field
+    
+    ### 2. FINANCIALS
+    
+    **`total_annual_savings`**: Sum of ALL category savings (finalized + in-progress + proposed)
+    - Add up savings from all non-excluded categories
+    - Include status breakdown in notes
+    
+    **`finalized_savings`**: Savings from categories marked as finalized/implemented only
+    - Categories with checkmarks, "complete", "implemented"
+    
+    **`in_progress_savings`**: Savings from categories still in progress
+    - Categories marked "in progress", "awaiting signature", "proposal", etc.
+    
+    **`one_time_savings`**: One-time savings (if any)
+    - Signing bonuses, rebates, one-time credits
+    
+    ### 3. CATEGORY RESULTS
+    
+    **`category_results`**: Array of each category with its savings and status
+    
+    For EACH category in the savings dashboard (except Excluded):
+    - `category_name`: Name of the category
+    - `annual_savings`: Dollar amount
+    - `status`: Current status (e.g., "finalized", "in progress", "awaiting signature", "proposal")
+    - `status_notes`: Any qualifying notes about this category's savings
+    
+    ### 4. TIME TO VALUE
+    
+    **`value_realized_in_days`**: Days to first implemented savings
+    **`notes`**: Additional context on timing
+    
+    ### 5. OPERATIONAL IMPROVEMENTS
+    
+    **`operational_improvements`**: Non-financial improvements (1-3 sentences)
+    
+    ### 6. PROOF POINTS
+    
+    Array of specific, quotable wins with evidence.
+    
+    ## OUTPUT FORMAT
+    
+    Return valid JSON only:
+    
+    ```json
+    {
+      "impact": {
+        "summary": {
+          "headline": "Healthcare provider identifies $1.2M in annual savings with $850K finalized",
+          "narrative": "Treya Partners partnered with the client to optimize indirect spend across 8 categories. The engagement has delivered $850,000 in finalized annual savings with an additional $350,000 in progress across 3 categories. EMR and Medical Supplies are fully implemented, while Telecom and IT Hardware are awaiting final signatures."
+        },
+        "financials": {
+          "total_annual_savings": {
+            "amount": 1200000,
+            "currency": "USD",
+            "confidence": "high",
+            "source_file": "Project Close Out/Closeout.pptx",
+            "notes": "Total across all categories: $850K finalized + $350K in progress"
+          },
+          "finalized_savings": {
+            "amount": 850000,
+            "currency": "USD",
+            "confidence": "high",
+            "source_file": "Project Close Out/Closeout.pptx",
+            "notes": "Categories with 'Savings Finalized' checkmark"
+          },
+          "in_progress_savings": {
+            "amount": 350000,
+            "currency": "USD",
+            "confidence": "medium",
+            "source_file": "Project Close Out/Closeout.pptx",
+            "notes": "Categories still in progress or awaiting signature"
+          },
+          "one_time_savings": null
+        },
+        "category_results": [
+          {
+            "category_name": "EMR",
+            "annual_savings": 357889,
+            "status": "finalized",
+            "status_notes": "Contract signed, savings implemented"
+          },
+          {
+            "category_name": "Medical Supplies",
+            "annual_savings": 245000,
+            "status": "finalized",
+            "status_notes": "GPO tier upgrade complete"
+          },
+          {
+            "category_name": "Telecom",
+            "annual_savings": 175000,
+            "status": "awaiting signature",
+            "status_notes": "Vendor selected, contract in legal review"
+          },
+          {
+            "category_name": "IT Hardware",
+            "annual_savings": 125000,
+            "status": "in progress",
+            "status_notes": "RFP responses received, evaluating proposals"
+          },
+          {
+            "category_name": "Office Supplies",
+            "annual_savings": 45000,
+            "status": "proposal",
+            "status_notes": "GPO analysis complete, recommendation pending"
+          }
+        ],
+        "excluded_categories": [
+          {
+            "category_name": "Janitorial",
+            "reason": "Client decision - incumbent relationship"
+          }
+        ],
+        "not_started_categories": [
+          {
+            "category_name": "Fleet Management",
+            "reason": "Listed in initial scope but deprioritized - no work performed"
+          },
+          {
+            "category_name": "Travel",
+            "reason": "Potential future category - not yet begun"
+          }
+        ],
+        "time_to_value": {
+          "value_realized_in_days": {
+            "value": 60,
+            "unit": "days",
+            "confidence": "medium",
+            "source_file": "Case Study/Client Case Study.pdf",
+            "notes": "First savings from EMR renegotiation"
+          },
+          "notes": "Quick wins delivered in first quarter"
+        },
+        "operational_improvements": "Established centralized contract repository and implemented quarterly business reviews with key suppliers.",
+        "proof_points": [
+          {
+            "statement": "Renegotiated EMR contract from 4.56% to 3.40%, delivering $358K annual savings",
+            "category": "EMR",
+            "evidence": [
+              {
+                "source_file": "Project Close Out/Closeout.pptx",
+                "page_or_slide": "4",
+                "quote": "Athena fee reduced from 4.56% to 3.40%"
+              }
+            ]
+          }
+        ]
+      },
+      "extraction_sources": [
+        "Project Close Out/Closeout.pptx",
+        "Project Updates/Final Update.pptx"
+      ],
+      "extraction_notes": [
+        "Total savings includes only categories with actual work performed",
+        "Janitorial excluded per client request",
+        "Fleet Management and Travel listed in Exhibit A but never started - not included in totals"
+      ]
+    }
+    ```
+    
+    ## IMPORTANT RULES
+    
+    1. **ONLY INCLUDE categories with ACTUAL WORK** - evidence of RFPs, negotiations, savings validated
+    2. **EXCLUDE potential/future categories** - if no clear work was done, don't include it
+    3. **Track status** for each category (finalized, in progress, awaiting signature)
+    4. **Sum totals**: total_annual_savings = finalized + in_progress (only from worked categories)
+    5. **Dollar amounts**: Full numbers (850000 not "$850K")
+    6. **Status notes**: Include qualifying notes for each category
+    7. **Excluded categories**: Categories explicitly marked "Excluded" with reasons
+    8. **Not started categories**: Categories in scope but never worked on (list separately)
+    9. **Confidence levels**:
+       - "high": Explicitly stated with clear source
+       - "medium": Calculated or inferred from documents
+       - "low": Uncertain or conflicting sources
+    10. **Source tracking**: Note which document provided each data point
+    11. **Cross-reference**: Compare Exhibit A categories to closeout - if a category only appears in Exhibit A, it wasn't worked on
+
+parameters:
+  - name: client_name
+    type: string
+    required: true
+    description: "The client name for context"
+  
+  - name: initial_categories
+    type: string
+    required: false
+    description: "List of initial categories from Agreement (for context)"
+  
+  - name: addressable_spend
+    type: number
+    required: false
+    description: "Total addressable spend from Agreement (for context)"
+  
+  - name: savings_low
+    type: number
+    required: false
+    description: "Low savings estimate from Agreement (for comparison)"
+  
+  - name: savings_high
+    type: number
+    required: false
+    description: "High savings estimate from Agreement (for comparison)"
+  
+  - name: document_contents
+    type: string
+    required: true
+    description: "Extracted content from Case Study, Project Updates, and Project Close Out"
+
+examples:
+  - note: "Successful engagement with clear results"
+    input: |
+      Client: AP Derm
+      Case Study shows: $1.2M annual savings achieved, 12 categories, 45 locations...
+    output: |
+      {
+        "impact": {
+          "summary": {
+            "headline": "Dermatology platform delivers $1.2M annual savings across 12 categories",
+            "narrative": "Treya Partners partnered with AP Derm to establish strategic sourcing capability and optimize indirect spend. The engagement delivered $1.2M in annual savings through GPO optimization, competitive RFPs, and contract renegotiation. Quick wins were achieved within 60 days, with full implementation completed in 10 months."
+          },
+          "financials": {
+            "annual_savings": {
+              "amount": 1200000,
+              "currency": "USD",
+              "confidence": "high",
+              "source_file": "Case Study/APDerm Case Study.pdf",
+              "notes": "Final implemented savings"
+            },
+            "one_time_savings": null
+          },
+          "time_to_value": {
+            "value_realized_in_days": {
+              "value": 60,
+              "unit": "days",
+              "confidence": "high",
+              "source_file": "Case Study/APDerm Case Study.pdf",
+              "notes": "First savings from medical supplies"
+            },
+            "notes": null
+          },
+          "operational_improvements": "Established procurement function with dedicated category management. Implemented contract management system.",
+          "proof_points": [
+            {
+              "statement": "Achieved 25% reduction in medical supplies through GPO tier upgrade",
+              "category": "Medical Supplies",
+              "evidence": [
+                {
+                  "source_file": "Case Study/APDerm Case Study.pdf",
+                  "page_or_slide": "4",
+                  "quote": "Medical supplies: $450K annual savings through Premier tier upgrade"
+                }
+              ]
+            }
+          ]
+        },
+        "extraction_sources": ["Case Study/APDerm Case Study.pdf"],
+        "extraction_notes": []
+      }

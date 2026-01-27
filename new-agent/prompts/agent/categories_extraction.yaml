@@ -1,0 +1,293 @@
+# Categories Extraction Prompt
+# Step 7: Extract detailed category information
+# Sources: Impact results (category list), Exhibit A (baseline), Category folders (details)
+
+step: categories_extraction
+
+prompt:
+  instructions: |
+    You are extracting DETAILED CATEGORY INFORMATION for a Treya Partners case study.
+    
+    You have been provided:
+    1. The confirmed category list from Impact results (source of truth for what was worked)
+    2. Exhibit A data with initial baseline spend
+    3. Category-specific file contents with vendor, lever, and constraint details
+    
+    Your job is to enrich each category with as much detail as possible.
+    
+    Return only valid JSON matching the specified format.
+
+  user_template: |
+    # Categories Extraction
+    
+    ## Client: {{client_name}}
+    
+    ---
+    
+    ## CONFIRMED CATEGORY LIST (from Impact/Close-out)
+    These are the categories that were actually worked on. Use this as your source of truth.
+    
+    {{category_list}}
+    
+    ---
+    
+    ## EXHIBIT A DATA (Initial Scope - for baseline spend)
+    Note: Some categories may have been added/removed during the project.
+    Use this for baseline_spend values.
+    
+    {{exhibit_a_data}}
+    
+    ---
+    
+    ## CATEGORY FOLDER CONTENTS
+    Detailed files from each category folder (RFPs, analysis, recommendations).
+    Use these for vendors, levers, constraints, and evidence.
+    
+    {{category_folder_contents}}
+    
+    ---
+    
+    # YOUR TASK
+    
+    For EACH category from the confirmed list, extract detailed information.
+    
+    ## FIELDS TO EXTRACT PER CATEGORY
+    
+    ### 1. IDENTIFICATION
+    
+    - `category_label`: Exact category name (Required)
+    - `category_l1`, `category_l2`, `category_l3`: Taxonomy levels (Optional - use if mentioned)
+    
+    ### 2. TIMING
+    
+    - `start_date`: When work started on this category (YYYY-MM-DD or null)
+    - `end_date`: When work completed (YYYY-MM-DD or null)
+    - `status`: Current status - must be one of:
+      - "implemented" - Contract signed, savings realized
+      - "negotiated" - Terms agreed, pending signature
+      - "in_progress" - Actively being worked
+      - "identified" - Opportunity found, not yet started
+      - "not_pursued" - Decided not to proceed
+    
+    ### 3. VENDORS
+    
+    - `vendors_before`: Array of incumbent/previous vendors
+      - Look for: "current vendor", "incumbent", "existing supplier"
+      - Example: ["Staples", "Office Depot"]
+    
+    - `vendors_after`: Array of selected/recommended vendors
+      - Look for: "awarded to", "selected vendor", "new supplier", "recommended"
+      - Include context if helpful: ["Premier (GPO)", "Verizon (consolidated)"]
+    
+    ### 4. LEVERS
+    
+    - `levers`: Array of sourcing strategies/levers used
+      - Common levers: "GPO", "RFP", "consolidation", "renegotiation", "rebid", 
+        "specification change", "demand reduction", "payment terms", "volume aggregation"
+      - Example: ["GPO tier upgrade", "Vendor consolidation"]
+    
+    ### 5. CONSTRAINTS
+    
+    - `constraints`: Object with constraint types:
+      - `supplier_constraints`: Must-use vendors, diversity requirements, preferred suppliers
+      - `operational_constraints`: No downtime, clinical requirements, spec locks
+      - `contractual_constraints`: Existing contract terms, renewal windows
+      - `implementation_constraints`: Labor availability, seasonality, regulatory
+    
+    ### 6. FINANCIALS
+    
+    - `baseline_spend`: Historical/baseline spend (from Exhibit A or category files)
+      - Include: amount, currency, confidence, source_file, notes
+    
+    - `savings_annual_run_rate`: Annual savings achieved/expected
+      - Use data from Impact results
+      - Include: amount, currency, confidence, source_file, notes
+    
+    - `savings_one_time`: One-time savings (signing bonuses, rebates)
+      - Include: amount, currency, confidence, source_file, notes
+    
+    - `savings_percentage`: Calculated (savings ÷ baseline × 100)
+      - If you have both savings and baseline, calculate this
+    
+    ### 7. EVIDENCE & NOTES
+    
+    - `notes`: Additional context, observations, or caveats
+    
+    - `evidence`: Array of evidence items
+      - `source_file`: File path
+      - `page_or_slide`: Page/slide number
+      - `quote`: Relevant quote from document
+      - `date_extracted`: Today's date ({{extraction_date}})
+    
+    ## OUTPUT FORMAT
+    
+    Return valid JSON only:
+    
+    ```json
+    {
+      "categories": [
+        {
+          "category_label": "Medical Supplies",
+          "category_l1": "Clinical",
+          "category_l2": null,
+          "category_l3": null,
+          "start_date": "2024-01-15",
+          "end_date": "2024-06-30",
+          "status": "implemented",
+          "vendors_before": ["Medline", "McKesson"],
+          "vendors_after": ["Premier GPO (Medline preferred)"],
+          "levers": ["GPO tier upgrade", "Volume aggregation"],
+          "constraints": {
+            "supplier_constraints": "Must maintain Medline as primary due to clinical staff preferences",
+            "operational_constraints": "No stockouts during transition - clinical critical",
+            "contractual_constraints": null,
+            "implementation_constraints": "Phased rollout across 45 locations"
+          },
+          "baseline_spend": {
+            "amount": 1800000,
+            "currency": "USD",
+            "confidence": "high",
+            "source_file": "Agreement/Exhibit A",
+            "notes": "Historical annual spend from Exhibit A table"
+          },
+          "savings_annual_run_rate": {
+            "amount": 396000,
+            "currency": "USD",
+            "confidence": "high",
+            "source_file": "Project Closeout/Final Update.pptx",
+            "notes": "22% savings through GPO tier upgrade"
+          },
+          "savings_one_time": null,
+          "savings_percentage": 22.0,
+          "notes": "Achieved Premier Tier 2 status through volume commitment",
+          "evidence": [
+            {
+              "source_file": "Categories/Medical Supplies/Analysis.xlsx",
+              "page_or_slide": "Summary",
+              "quote": "Current GPO tier: Standard. Recommended: Tier 2 with 22% average discount improvement",
+              "date_extracted": "2026-01-26"
+            }
+          ]
+        },
+        {
+          "category_label": "Telecom",
+          "category_l1": "IT",
+          "category_l2": null,
+          "category_l3": null,
+          "start_date": "2024-02-01",
+          "end_date": null,
+          "status": "in_progress",
+          "vendors_before": ["AT&T", "Verizon", "Local ISP", "Comcast", "T-Mobile"],
+          "vendors_after": ["Verizon (consolidated voice/data)"],
+          "levers": ["Vendor consolidation", "Contract renegotiation", "RFP"],
+          "constraints": {
+            "supplier_constraints": null,
+            "operational_constraints": "99.9% uptime SLA required for clinical systems",
+            "contractual_constraints": "AT&T contract expires Q2 2024",
+            "implementation_constraints": "Cutover must happen after hours"
+          },
+          "baseline_spend": {
+            "amount": 500000,
+            "currency": "USD",
+            "confidence": "high",
+            "source_file": "Agreement/Exhibit A",
+            "notes": null
+          },
+          "savings_annual_run_rate": {
+            "amount": 175000,
+            "currency": "USD",
+            "confidence": "medium",
+            "source_file": "Project Updates/March Update.pptx",
+            "notes": "Proposal received, awaiting signature"
+          },
+          "savings_one_time": {
+            "amount": 25000,
+            "currency": "USD",
+            "confidence": "medium",
+            "source_file": "Categories/Telecom/Verizon Proposal.pdf",
+            "notes": "Signing bonus for 3-year commitment"
+          },
+          "savings_percentage": 35.0,
+          "notes": "Consolidating from 5 vendors to 1. Contract in legal review.",
+          "evidence": []
+        }
+      ],
+      "categories_summary": {
+        "total_count": 8,
+        "implemented_count": 5,
+        "in_progress_count": 2,
+        "not_pursued_count": 1,
+        "total_baseline_spend": 6300000,
+        "total_savings": 1250000,
+        "average_savings_percentage": 19.8
+      },
+      "extraction_sources": [
+        "Project Closeout/Final Update.pptx",
+        "Agreement/Exhibit A",
+        "Categories/Medical Supplies/Analysis.xlsx",
+        "Categories/Telecom/Verizon Proposal.pdf"
+      ],
+      "extraction_notes": [
+        "Janitorial category excluded by client - not included in list",
+        "IT Hardware baseline not in Exhibit A - used category file estimate"
+      ]
+    }
+    ```
+    
+    ## IMPORTANT RULES
+    
+    1. **Use Impact category list as source of truth** - only include categories that were actually worked
+    2. **Match baseline from Exhibit A** - link by category name (may need fuzzy matching)
+    3. **Extract vendors carefully** - before = incumbent, after = selected/recommended
+    4. **Levers should be specific** - not just "negotiation" but "GPO tier upgrade" or "vendor consolidation"
+    5. **Calculate savings_percentage** if you have both baseline and savings
+    6. **Constraints are optional** - only include if mentioned in category files
+    7. **Status must match Impact** - use the status from Impact results
+    8. **Evidence should be specific** - include file, page/slide, and quote when possible
+    9. **Dollar amounts**: Full numbers (1800000 not "$1.8M")
+
+parameters:
+  - name: client_name
+    type: string
+    required: true
+    description: "The client name"
+  
+  - name: category_list
+    type: string
+    required: true
+    description: "Category list from Impact results (JSON or formatted text)"
+  
+  - name: exhibit_a_data
+    type: string
+    required: true
+    description: "Exhibit A category/spend data from Project Scope step"
+  
+  - name: category_folder_contents
+    type: string
+    required: true
+    description: "Extracted content from individual category folders"
+  
+  - name: extraction_date
+    type: string
+    required: true
+    description: "Today's date for evidence tracking"
+
+examples:
+  - note: "Healthcare with multiple implemented categories"
+    input: |
+      Category list from Impact: EMR (finalized, $358K), Medical Supplies (in progress, $175K)...
+    output: |
+      {
+        "categories": [
+          {
+            "category_label": "EMR",
+            "status": "implemented",
+            "vendors_before": ["Athena"],
+            "vendors_after": ["Athena (renegotiated)"],
+            "levers": ["Contract renegotiation"],
+            "baseline_spend": {"amount": 1600000, "confidence": "high"},
+            "savings_annual_run_rate": {"amount": 358000, "confidence": "high"},
+            "savings_percentage": 22.4
+          }
+        ]
+      }

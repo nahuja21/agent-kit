@@ -1,0 +1,33 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client name, industry, objectives, quantified $412K savings and multiple documented proof points are available.",
+    "headline": "PE-backed addiction treatment network captures $412K in annual savings and a 22% EMR fee cut in just six months",
+    "client_problem_statement": "Rapid expansion left SaVida Health with a patchwork of vendors, location-by-location purchasing, and minimal spend visibility across its 20+ outpatient medication-assisted treatment clinics. With private-equity owner Council Capital targeting near-term EBITDA lift, leadership needed a fast, low-disruption way to trim indirect costs while safeguarding clinical operations and growth plans.",
+    "approach_summary": [
+      "Analyzed $5.3 million in indirect spend across 10 categories to target the highest-value opportunities first.",
+      "Renegotiated the incumbent Athena EMR contract, dropping fees from 4.56% to 3.40% of collections and securing $358K in hard annual savings.",
+      "Enrolled SaVida in the Provista GPO, unlocking 10\u201334% discounts on high-use medical and office-supply SKUs and standardizing purchasing through existing Staples and Henry Schein channels.",
+      "Consolidated fragmented Comcast Business circuits under a single managed-services agreement and rationalized bandwidth to release 15-20% telecom savings potential.",
+      "Created centralized spend dashboards and a SharePoint contract repository to institutionalize data-driven sourcing going forward."
+    ],
+    "top_levers": [
+      "Contract renegotiation (Athena EMR)",
+      "GPO enrollment & tier optimization",
+      "Vendor consolidation (telecom)",
+      "Competitive benchmarking / alternate VAR quoting (IT hardware)"
+    ],
+    "value_delivered_blurb": "Treya delivered $412,065 in identified annual run-rate savings\u2014almost double the $210K minimum guarantee\u2014with $357,889 already contracted within 196 days of kickoff. The engagement provides more than a 2.3\u00d7 return on Treya\u2019s $175K fixed fee while equipping SaVida with a GPO platform, consolidated telecom roadmap, and a repeatable strategic sourcing playbook.",
+    "where_we_were_unique": [
+      "Achieved first hard savings inside six months by sequencing a high-impact EMR renegotiation.",
+      "Leveraged deep healthcare GPO expertise to secure Provista pricing that SaVida could access without changing day-to-day ordering workflows.",
+      "Hands-on data collection directly from suppliers overcame the client\u2019s limited internal spend visibility.",
+      "Collaborative, low-disruption approach safeguarded clinical operations and maintained strong incumbent supplier relationships."
+    ]
+  },
+  "generation_notes": [
+    "Savings figures ($412K identified, $358K finalized) taken from close-out dashboard.",
+    "ROI calculated as $412,065 \u00f7 $175,000 \u2248 2.35\u00d7.",
+    "Top levers ranked by dollar impact: EMR renegotiation largest, followed by GPO savings, telecom consolidation, IT hardware quoting."
+  ]
+}

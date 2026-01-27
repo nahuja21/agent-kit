@@ -1,0 +1,459 @@
+{
+  "categories": [
+    {
+      "category_label": "EMR",
+      "category_l1": "IT/Clinical",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-10-08",
+      "end_date": "2025-04-15",
+      "status": "implemented",
+      "vendors_before": [
+        "Athena (incumbent)"
+      ],
+      "vendors_after": [
+        "Athena \u2013 renegotiated contract at 3.4% fee"
+      ],
+      "levers": [
+        "RFP",
+        "Benchmarking",
+        "Renegotiation / rate reduction"
+      ],
+      "constraints": {
+        "supplier_constraints": "Athena platform remained mandatory to avoid major system change-over.",
+        "operational_constraints": "No disruption to revenue-cycle or clinical workflows during new contract launch.",
+        "contractual_constraints": "3-year term with CPI+2% adjustment potential; Savida now pays credit-card processing fees directly.",
+        "implementation_constraints": "Potential extension negotiation in Year-2 to avoid CPI uplift."
+      },
+      "baseline_spend": {
+        "amount": 1596000,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Addressable spend shown in final savings dashboard."
+      },
+      "savings_annual_run_rate": {
+        "amount": 357889,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "22 % reduction from incumbent fee."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 22.0,
+      "notes": "Athena accepted Treya target fee of 3.4 % of collections, delivering recurring savings.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+          "page_or_slide": "4",
+          "quote": "EMR (Athena) | $1,596,000 | 22 % | $357,889 | \u2705 4/15/2025",
+          "date_extracted": "2026-01-26"
+        },
+        {
+          "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+          "page_or_slide": "6",
+          "quote": "Athena's final proposal meets the 3.4 % target rate, delivering approximately $358K in annual savings.",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies",
+      "category_l1": "Indirect \u2013 Facilities",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-11-12",
+      "end_date": "2025-05-05",
+      "status": "implemented",
+      "vendors_before": [
+        "Staples (incumbent)"
+      ],
+      "vendors_after": [
+        "Provista GPO contract \u2013 supplies to flow through Staples/Provista catalogue"
+      ],
+      "levers": [
+        "GPO enrollment",
+        "Volume aggregation",
+        "Price benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "End-users continue ordering through existing Staples portal.",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 153942,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Addressable spend line: ProVista GPO (Office Supplies)."
+      },
+      "savings_annual_run_rate": {
+        "amount": 4033,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "3 % savings locked via Provista agreement signed 5/5/25."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 2.6,
+      "notes": "Minor savings but enables future catalogue discounts through Provista.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+          "page_or_slide": "4",
+          "quote": "ProVista GPO (Office Supplies) | $153,942 | 3 % | $4,033 | 5/5/2025",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Medical Supplies",
+      "category_l1": "Clinical",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-11-12",
+      "end_date": "2025-05-05",
+      "status": "implemented",
+      "vendors_before": [
+        "Midland Scientific",
+        "MedSupply Partners",
+        "McKesson"
+      ],
+      "vendors_after": [
+        "Provista GPO (Henry Schein distributor)"
+      ],
+      "levers": [
+        "GPO enrollment",
+        "Benchmark versus Pandion/Premier pricing",
+        "Volume aggregation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must secure correct temp-strip cups before switch (noted by Savida).",
+        "operational_constraints": "No stock-outs during conversion across 60+ clinics.",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 127494,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Addressable spend line: ProVista GPO (Medical Supplies)."
+      },
+      "savings_annual_run_rate": {
+        "amount": 27992,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Average of low/high range (10 %\u201334 %) displayed on dashboard."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 21.9,
+      "notes": "Savings still being validated against Henry Schein purchase data.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+          "page_or_slide": "4",
+          "quote": "ProVista GPO (Medical Supplies) | $127,494 | 10\u201334 % | $13,200 \u2013 $42,783 (avg $27,992) | 5/5/2025",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "IT Hardware",
+      "category_l1": "IT",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-11-18",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "CDW (incumbent reseller)",
+        "GHA Technologies"
+      ],
+      "vendors_after": [
+        "Connection \u2013 alternate VAR quoted",
+        "CDW (to be renegotiated via Provista)"
+      ],
+      "levers": [
+        "Competitive VAR quotes",
+        "GPO leverage (Provista)",
+        "Specification confirmation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Must meet agreed laptop specs for upcoming purchases.",
+        "contractual_constraints": null,
+        "implementation_constraints": "Hardware needed prior to new-hire wave in Q2-2025."
+      },
+      "baseline_spend": {
+        "amount": 33082,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Addressable spend in savings dashboard."
+      },
+      "savings_annual_run_rate": {
+        "amount": 4301,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx",
+        "notes": "Pre-implementation proposal based savings \u2013 not yet finalized."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 13.0,
+      "notes": "Next step: align on purchasing strategy, then negotiate with CDW leveraging Connection quote.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx",
+          "page_or_slide": "3",
+          "quote": "IT Hardware | $33,082 | 13 % savings proposed ($4,301)",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Telecom",
+      "category_l1": "IT",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-11-20",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Multiple decentralized Comcast Business accounts"
+      ],
+      "vendors_after": [
+        "Comcast Global contract via TPX (managed services)"
+      ],
+      "levers": [
+        "Spend consolidation",
+        "Bandwidth rationalization",
+        "Managed-services contract"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Maintain connectivity to all clinics \u2013 zero downtime during cut-over.",
+        "contractual_constraints": "Existing Comcast account terms vary by location; need alignment.",
+        "implementation_constraints": "Roll-out dependent on clinic scheduling (after-hours switch-overs)."
+      },
+      "baseline_spend": {
+        "amount": 102000,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Addressable spend line for Telecom."
+      },
+      "savings_annual_run_rate": {
+        "amount": 17850,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "15-20 % potential savings \u2013 average value used pending agreement."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 17.5,
+      "notes": "5/12/25 meeting with Comcast to review managed-services proposal and confirm savings.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+          "page_or_slide": "4",
+          "quote": "Telecom | $102,000 | 15\u201320 % | $15,300 \u2013 $20,400 | TBD",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Employee Benefits",
+      "category_l1": "HR",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-10-08",
+      "end_date": "2025-05-08",
+      "status": "not_pursued",
+      "vendors_before": [
+        "Blue Cross Blue Shield (fully-insured medical plan)"
+      ],
+      "vendors_after": [],
+      "levers": [
+        "Claims benchmarking",
+        "Broker consultation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "Client fully insured; not positioned to convert to self-funded model.",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1645932,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Exhibit A \u2013 Initial Scope",
+        "notes": "Addressable spend in Exhibit A."
+      },
+      "savings_annual_run_rate": null,
+      "savings_one_time": null,
+      "savings_percentage": null,
+      "notes": "Category removed from scope \u2013 limited opportunity under fully-insured model.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+          "page_or_slide": "4",
+          "quote": "Removed From Scope | Employee Benefits | $1,645,932 | Limited opportunity; Savida is fully insured and not in a position to move to self-funded",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Small Parcel Shipping",
+      "category_l1": "Logistics",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-10-08",
+      "end_date": "2025-02-26",
+      "status": "not_pursued",
+      "vendors_before": [
+        "UPS (incumbent)"
+      ],
+      "vendors_after": [
+        "UPS \u2013 existing February 2024 agreement retained"
+      ],
+      "levers": [
+        "Benchmarking of surcharge discounts"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "New UPS contract signed 2/26/24 \u2013 3-year term; early termination not cost-effective.",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 259519,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Exhibit A \u2013 Initial Scope",
+        "notes": "Addressable spend figure."
+      },
+      "savings_annual_run_rate": null,
+      "savings_one_time": null,
+      "savings_percentage": null,
+      "notes": "Benchmarking showed highly competitive discounts; no further action.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+          "page_or_slide": "4",
+          "quote": "Removed From Scope | Small Parcel Shipping | Benchmarking revealed that Savida\u2019s current surcharge discounts are already highly competitive",
+          "date_extracted": "2026-01-26"
+        },
+        {
+          "source_file": "Categories/Small Parcel/Signed UPS Agreement 2.26.24.pdf",
+          "page_or_slide": "1",
+          "quote": "\"Carrier Agreement\" signed by Savida Health and UPS \u2013 Effective February 2024",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Waste Management",
+      "category_l1": "Facilities",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-10-08",
+      "end_date": "2024-11-01",
+      "status": "not_pursued",
+      "vendors_before": [
+        "Existing regional hauler (recent renewal)"
+      ],
+      "vendors_after": [],
+      "levers": [],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "Agreement was signed just prior to Treya engagement \u2013 locked pricing.",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 29160,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Exhibit A \u2013 Initial Scope",
+        "notes": "Addressable spend figure."
+      },
+      "savings_annual_run_rate": null,
+      "savings_one_time": null,
+      "savings_percentage": null,
+      "notes": "No sourcing event \u2013 contract recently renewed at market rates.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+          "page_or_slide": "4",
+          "quote": "Removed From Scope | Waste Management | Agreement was signed just prior to Treya\u2019s engagement",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    },
+    {
+      "category_label": "Commercial Print",
+      "category_l1": "Marketing",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-10-08",
+      "end_date": "2024-12-15",
+      "status": "not_pursued",
+      "vendors_before": [
+        "Various local printers"
+      ],
+      "vendors_after": [],
+      "levers": [],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 46203,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Exhibit A \u2013 Initial Scope",
+        "notes": "Addressable spend figure."
+      },
+      "savings_annual_run_rate": null,
+      "savings_one_time": null,
+      "savings_percentage": null,
+      "notes": "Limited opportunity \u2013 category dropped after initial review.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+          "page_or_slide": "4",
+          "quote": "Removed From Scope | Commercial Print | Limited opportunity",
+          "date_extracted": "2026-01-26"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 9,
+    "implemented_count": 3,
+    "in_progress_count": 2,
+    "not_pursued_count": 4,
+    "total_baseline_spend": 3993332,
+    "total_savings": 412065,
+    "average_savings_percentage": 10.3
+  },
+  "extraction_sources": [
+    "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+    "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx",
+    "Exhibit A \u2013 Initial Scope",
+    "Categories/Small Parcel/Signed UPS Agreement 2.26.24.pdf"
+  ],
+  "extraction_notes": [
+    "Baseline spends for implemented categories taken from updated savings dashboard (addressable spend). For categories not pursued, Exhibit A baseline used.",
+    "Savings percentages calculated where both baseline and savings present; rounded to one decimal where applicable.",
+    "IT Hardware and Telecom savings still proposal-based \u2013 confidence marked as low.",
+    "Employee Benefits, Small Parcel, Waste, and Print included for completeness but tagged 'not_pursued' per close-out slide."
+  ]
+}

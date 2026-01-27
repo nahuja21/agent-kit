@@ -1,0 +1,49 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Outpatient addiction treatment",
+    "business_model": "Multi-state provider of outpatient medication-assisted treatment clinics for opioid and alcohol use disorders",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "Founded in 2010, SaVida Health has grown from a single clinic to a multi-state platform offering evidence-based opioid and alcohol addiction treatment. Council Capital acquired a controlling interest in 2017, after which the company accelerated its expansion across New England and the Mid-Atlantic."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": null,
+      "notes": "No reliable revenue figures located in company documents, official website, LinkedIn, Crunchbase, or reputable news databases."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 50,
+      "confidence": "medium",
+      "source": "SaVida Health official website \u2013 About Us page (accessed 2025-10-28)",
+      "notes": "Website states the company operates \"over 50 outpatient treatment centers.\" Earlier BHBusiness article (Nov-2020) cited 22 locations. Assuming continued growth, the official site is taken as most current but exact count is not specified."
+    },
+    "employees": {
+      "count": 165,
+      "confidence": "medium",
+      "source": "LeadIQ employee directory (Oct-2025)",
+      "notes": "LeadIQ lists ~165 employees. SignalHire and Indeed give ranges of 100-200 and 51-200 respectively. Using midpoint of most specific figure (LeadIQ)."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "https://savidahealth.com/about-us/",
+    "https://www.councilcapital.com/company/savida-health/",
+    "https://bhbusiness.com/2020/11/09/pipeline-mat-expansions-at-savida-spero-health-monte-nido-enters-second-southeastern-state/",
+    "https://leadiq.com/c/savida-health/5c6a313b20000097313b8d4d/employee-directory",
+    "https://www.signalhire.com/companies/savida-health",
+    "https://www.indeed.com/cmp/Savida-Health/about"
+  ],
+  "extraction_notes": [
+    "Client name appears as \"Savida Health\" in project slides and as legal entity \"SaVida Management\" in the contract; public-facing brand \"SaVida Health\" used for consistency.",
+    "Council Capital ownership confirmed by CouncilCapital.com and Mergr transaction summary.",
+    "No public revenue or EBITDA data located; field left null per instructions.",
+    "Locations: official site (2025) claims \"over 50\" clinics; earlier article showed 22 (2020). Growth trajectory supports using 50 with medium confidence.",
+    "Employee count: multiple third-party sources give similar ranges; LeadIQ provides most precise figure (~165)."
+  ]
+}

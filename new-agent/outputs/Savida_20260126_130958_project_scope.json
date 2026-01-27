@@ -1,0 +1,123 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "EMR",
+      "Employee Benefits",
+      "Scientific / Medical Lab Equipment & Supplies",
+      "Medical Equipment & Supplies",
+      "Small Parcel Shipping",
+      "IT Hardware",
+      "Telecom - Data & Voice",
+      "Office Supplies",
+      "Commercial Print",
+      "Waste Management"
+    ],
+    "initial_categories_count": 10,
+    "category_details": [
+      {
+        "category_name": "EMR",
+        "spend": 1443458,
+        "addressable_pct": 90,
+        "addressable_spend": 1299112,
+        "savings_low": 64956,
+        "savings_high": 155893
+      },
+      {
+        "category_name": "Employee Benefits",
+        "spend": 2351331,
+        "addressable_pct": 70,
+        "addressable_spend": 1645932,
+        "savings_low": 65837,
+        "savings_high": 131675
+      },
+      {
+        "category_name": "Scientific / Medical Lab Equipment & Supplies",
+        "spend": 643956,
+        "addressable_pct": 85,
+        "addressable_spend": 547363,
+        "savings_low": 32842,
+        "savings_high": 65684
+      },
+      {
+        "category_name": "Medical Equipment & Supplies",
+        "spend": 241170,
+        "addressable_pct": 90,
+        "addressable_spend": 217053,
+        "savings_low": 26046,
+        "savings_high": 39069
+      },
+      {
+        "category_name": "Small Parcel Shipping",
+        "spend": 288354,
+        "addressable_pct": 90,
+        "addressable_spend": 259519,
+        "savings_low": 25952,
+        "savings_high": 38928
+      },
+      {
+        "category_name": "IT Hardware",
+        "spend": 141065,
+        "addressable_pct": 90,
+        "addressable_spend": 126959,
+        "savings_low": 10157,
+        "savings_high": 15235
+      },
+      {
+        "category_name": "Telecom - Data & Voice",
+        "spend": 79234,
+        "addressable_pct": 90,
+        "addressable_spend": 71311,
+        "savings_low": 7131,
+        "savings_high": 10697
+      },
+      {
+        "category_name": "Office Supplies",
+        "spend": 35706,
+        "addressable_pct": 90,
+        "addressable_spend": 32135,
+        "savings_low": 3856,
+        "savings_high": 5784
+      },
+      {
+        "category_name": "Commercial Print",
+        "spend": 51337,
+        "addressable_pct": 90,
+        "addressable_spend": 46203,
+        "savings_low": 2310,
+        "savings_high": 3696
+      },
+      {
+        "category_name": "Waste Management",
+        "spend": 32400,
+        "addressable_pct": 90,
+        "addressable_spend": 29160,
+        "savings_low": 1750,
+        "savings_high": 3499
+      }
+    ],
+    "total_spend": 5308010,
+    "total_addressable_spend": 4274746,
+    "savings_estimate_low": 240837,
+    "savings_estimate_high": 470160
+  },
+  "exhibit_b": {
+    "fee_type": "hybrid",
+    "fee_amount": 175000,
+    "minimum_savings_guarantee": 210000,
+    "minimum_return_on_fees_ratio": 1.2,
+    "fee_hybrid_threshold": 210000,
+    "fee_contingent_percentage": 45,
+    "fee_notes": "Variable fee is 45% of Annual Savings Created over $210,000. Fixed fee invoiced in five equal monthly installments. Travel passed through at cost."
+  },
+  "timing": {
+    "start_date": "2024-09-20",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction / strategic sourcing services"
+  },
+  "extraction_notes": [
+    "Addressable spend values rounded to nearest whole dollar.",
+    "Savings_low and savings_high are dollar amounts taken directly from the Exhibit A table.",
+    "Category names 'Small Parcel Shipping' and 'IT Hardware' cleaned from minor OCR artifacts.",
+    "Minimum savings guarantee inferred as 1.2 \u00d7 fixed fee = $210,000, consistent with threshold stated in Exhibit B."
+  ]
+}

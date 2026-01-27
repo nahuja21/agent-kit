@@ -1,0 +1,42 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Addiction Treatment Services",
+    "business_model": "Multi-site outpatient opioid and alcohol addiction treatment provider",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "SaVida Health provides comprehensive medication-assisted treatment, counseling, and case-management services for substance use disorders. The Nashville-based company has expanded to multiple U.S. states and received a control investment from healthcare-focused private equity firm Council Capital in 2017."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 5500000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "web_search",
+      "notes": "Clodura.ai estimates revenue at approximately $5.5M; other sources give a much wider range ($50\u2013$100M)."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": null,
+      "confidence": "low",
+      "source": null,
+      "notes": "No explicit location count found in provided documents or web snippet."
+    },
+    "employees": {
+      "count": 150,
+      "confidence": "medium",
+      "source": "web_search",
+      "notes": "LeadIQ lists employee range 51\u2013200; midpoint used for count."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "web_search"
+  ],
+  "extraction_notes": [
+    "Client name consistently appears as \u201cSavida Health\u201d in kick-off deck; legal entity referred to as \u201cSaVida Management\u201d in agreement.",
+    "No financial or headcount information was found in internal documents; revenue and employee data taken from web search and carry lower confidence.",
+    "No explicit clinic/location count or EBITDA information located in any source."
+  ]
+}

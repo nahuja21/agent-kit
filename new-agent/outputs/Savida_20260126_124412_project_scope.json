@@ -1,0 +1,30 @@
+{
+  "exhibit_a": {
+    "initial_categories": [],
+    "initial_categories_count": 0,
+    "category_details": [],
+    "total_spend": null,
+    "total_addressable_spend": null,
+    "savings_estimate_low": null,
+    "savings_estimate_high": null
+  },
+  "exhibit_b": {
+    "fee_type": "hybrid",
+    "fee_amount": 175000,
+    "minimum_savings_guarantee": 210000,
+    "minimum_return_on_fees_ratio": 1.2,
+    "fee_hybrid_threshold": 210000,
+    "fee_contingent_percentage": 45,
+    "fee_notes": "Fixed fee is divided into five equal monthly invoices starting at contract execution; variable fee of 45% applies to annual savings above $210,000 once the minimum savings guarantee is met. Travel fees are passed through at cost. Payment terms are Net 30."
+  },
+  "timing": {
+    "start_date": "2024-09-20",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction / strategic sourcing engagement"
+  },
+  "extraction_notes": [
+    "Exhibit A table content (categories, spend, addressable %, savings estimates) was not included in the provided document pages, so all related values are left empty or null.",
+    "Minimum savings guarantee calculated as 1.2 \u00d7 $175,000 = $210,000 as explicitly referenced in Exhibit B.",
+    "Signature dates shown as 9/20/2024 for both parties; treated as agreement start date. No explicit end date found."
+  ]
+}
