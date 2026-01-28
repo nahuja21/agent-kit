@@ -347,3 +347,28 @@ def get_supplier_battlecards_prompt(
         categories_summary=categories_summary,
         category_folder_contents=category_folder_contents,
     )
+
+
+def get_powerpoint_generation_prompt(
+    client_context_data: str,
+    case_study_data: str,
+    impact_data: str,
+) -> tuple[str, str]:
+    """
+    Get the PowerPoint slide content generation prompt for Step 11.
+    
+    Generates polished, slide-ready text content for case study presentations:
+    - client_description: Anonymized client description
+    - pe_relationship: Generic PE reference
+    - challenge_text: The client's challenge (anonymized)
+    - solution_bullets: 3 action-oriented solution bullets
+    - impact_metrics: Key metrics with values and descriptions
+    
+    Input: Client context, Case study packaging, Impact data
+    """
+    return get_prompt(
+        "agent/powerpoint_generation",
+        client_context_data=client_context_data,
+        case_study_data=case_study_data,
+        impact_data=impact_data,
+    )

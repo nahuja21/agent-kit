@@ -23,6 +23,7 @@ REASONING_EFFORT = "medium"
 PROJECT_ROOT = Path(__file__).parent.parent
 INPUTS_DIR = PROJECT_ROOT / "inputs"
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
+POWERPOINTS_DIR = PROJECT_ROOT / "powerpoints"
 
 
 # ============================================================================

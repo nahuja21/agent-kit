@@ -1,0 +1,36 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "All critical components are available: clear objective, quantified $716K annual savings across 7 categories, multiple documented proof points, and supporting engagement background.",
+    "headline": "Women\u2019s health provider captures $716K in annual savings within 10-month sourcing program, realizing 3.2x ROI on consulting fees",
+    "client_problem_statement": "Advantia Health, a fast-growing women\u2019s health platform backed by BlueMountain Capital, had expanded to more than 60 clinics but was still purchasing supplies and services in a highly decentralized manner. Disparate AP systems, fragmented vendor relationships, and limited procurement resources left nearly $19 million in spend unmanaged\u2014constraining margins and private-equity value-creation goals. The leadership team sought a partner that could quickly uncover and lock in material cost reductions while establishing repeatable sourcing discipline.",
+    "client_problem_anonymized": "A fast-growing women\u2019s health platform backed by the private equity sponsor had expanded to more than 60 clinics but was still purchasing supplies and services in a highly decentralized manner. Disparate AP systems, fragmented vendor relationships, and limited procurement resources left nearly $19 million in spend unmanaged\u2014constraining margins and operational efficiency targets. The leadership team sought a partner that could quickly uncover and lock in material cost reductions while establishing repeatable sourcing discipline.",
+    "approach_summary": [
+      "Completed a data-driven spend analysis across 10 clinical and back-office categories representing $18.9M in annual spend to pinpoint high-value opportunities.",
+      "Renegotiated the incumbent Athenahealth revenue-cycle contract, securing a 9% fee reduction and $259K in annual savings without system disruption.",
+      "Ran competitive RFPs that consolidated medical-supply distribution to McKesson and optimized lab-services pricing with LabCorp, delivering a combined $197K in savings.",
+      "Implemented quick-win clinical initiatives\u2014standardizing IUD order quantities and enrolling in Bayer\u2019s replacement program\u2014to capture $77K in savings within 45 days of project launch.",
+      "Developed and executed a make-versus-buy strategy that transitioned sonography staffing in-house, cutting costs by $152K while maintaining coverage across all clinics."
+    ],
+    "top_levers": [
+      "Contract renegotiation with incumbents",
+      "Vendor consolidation via competitive RFP",
+      "Make-versus-buy staffing model shift",
+      "GPO and tier optimization/policy enforcement"
+    ],
+    "value_delivered_blurb": "Treya unlocked $716,000 in verified annual run-rate savings\u2014exceeding the engagement\u2019s minimum savings guarantee by 59% and generating more than 3.2\u00d7 return on the fixed $225K fee. Beyond hard dollars, the client now benefits from standardized sourcing processes, centralized visibility into spend, and category playbooks that will support future acquisitions and scale.",
+    "where_we_were_unique": [
+      "Delivered the first $77K in realized savings just 45 days after kickoff through targeted quick-win initiatives.",
+      "Combined deep healthcare category expertise with rigorous analytics to negotiate material price concessions without disrupting clinical operations.",
+      "Orchestrated cross-functional change management that gained physician and practice-manager buy-in for new ordering policies and staffing models.",
+      "Provided a turnkey sourcing roadmap that laid the foundation for ongoing procurement discipline across newly acquired clinics."
+    ]
+  },
+  "generation_notes": [
+    "Headline highlights total annual savings and ROI, aligning with marketing emphasis on value.",
+    "Problem statements incorporate PE context and are adjusted per anonymization rules.",
+    "Approach bullets prioritize actions that map directly to the largest savings categories.",
+    "Top levers ranked by dollar impact drawn from savings breakdown.",
+    "Value blurb references fee information (225K) and savings guarantee (450K) to quantify over-performance."
+  ]
+}

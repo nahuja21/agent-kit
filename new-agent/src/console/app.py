@@ -25,6 +25,7 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 from src.config import (
     INPUTS_DIR,
     OUTPUTS_DIR,
+    POWERPOINTS_DIR,
     MODEL,
     validate_config,
     validate_azure_config,
@@ -37,7 +38,8 @@ from src.scanner import DirectoryScanner, find_project_in_inputs, extract_zip_pr
 from src.llm import OpenAIClient
 from src.prompts import ContextBuilder
 from src.prompts.context import get_file_selection_prompt, get_schema_extraction_prompt, FILE_SELECTION_COUNT
-from src.prompts.loader import get_anchor_detection_prompt, get_project_scope_prompt, get_client_context_prompt, get_engagement_background_prompt, get_impact_prompt, get_categories_prompt, get_case_study_generation_prompt, get_supplier_battlecards_prompt
+from src.prompts.loader import get_anchor_detection_prompt, get_project_scope_prompt, get_client_context_prompt, get_engagement_background_prompt, get_impact_prompt, get_categories_prompt, get_case_study_generation_prompt, get_supplier_battlecards_prompt, get_powerpoint_generation_prompt
+from src.pptx.generator import CaseStudyPPTXGeneratorV2
 from src.extractors.pdf import extract_pdf_with_tables, find_exhibit_pages, extract_table_with_vision, extract_table_with_tesseract
 from src.extractors.base import extract_file_content
 from src.models.schema import CaseStudy
@@ -217,6 +219,7 @@ class ConsoleApp:
         self._commands["/file"] = (self._handle_file, "Scan project folder and analyze with AI (simple analysis)")
         self._commands["/extract"] = (self._handle_extract, "Extract structured case study data (two-pass extraction)")
         self._commands["/agent"] = (self._handle_agent, "Smart extraction with anchor file detection (new pipeline)")
+        self._commands["/powerpoint"] = (self._handle_powerpoint, "Run agent extraction + generate PowerPoint presentation")
         self._commands["/help"] = (self._handle_help, "Show available commands")
         self._commands["/quit"] = (self._handle_quit, "Exit the console")
         self._commands["/exit"] = (self._handle_quit, "Exit the console")
@@ -1886,6 +1889,326 @@ Category: {cat_name}
                     self.console.print("[dim]You can manually upload the JSON files later.[/dim]")
         
         self.console.print()
+    
+    # =========================================================================
+    # /powerpoint Command - Agent + PowerPoint Generation
+    # =========================================================================
+    async def _handle_powerpoint(self, args: List[str]) -> None:
+        """
+        Handle /powerpoint command - generates PowerPoint from database or runs extraction.
+        
+        This command:
+        1. Lists clients from Azure SQL database
+        2. User selects a client
+        3. Fetches client_context, case_study, impact from database
+        4. Generates PowerPoint presentation
+        5. Falls back to /agent if no clients in database
+        """
+        # Validate configuration
+        errors = validate_config()
+        if errors:
+            self.console.print("[red]Configuration errors:[/red]")
+            for error in errors:
+                self.console.print(f"  [red]•[/red] {error}")
+            return
+        
+        # Ensure directories exist
+        ensure_directories()
+        
+        self.console.print()
+        self.console.print(Panel(
+            "[bold magenta]PowerPoint Generation[/bold magenta]\n"
+            "Generate case study presentation from database",
+            border_style="magenta",
+        ))
+        
+        # =====================================================================
+        # Step 1: Check Azure SQL and list clients
+        # =====================================================================
+        client_context_data = None
+        case_study_data = None
+        impact_data = None
+        categories_data = None
+        extracted_client_name = None
+        
+        if AZURE_SQL_ENABLED:
+            self.console.print("\n[cyan]Connecting to Azure SQL Database...[/cyan]")
+            
+            try:
+                connection_string = get_azure_connection_string()
+                writer = AzureSQLWriter(connection_string, AZURE_SQL_TABLE)
+                
+                # Get list of clients
+                clients = writer.list_clients()
+                
+                if clients:
+                    self.console.print(f"[green]✓[/green] Found {len(clients)} client(s) in database\n")
+                    
+                    # Display numbered list
+                    self.console.print("[bold cyan]Available Clients:[/bold cyan]")
+                    table = Table(show_header=True, header_style="bold")
+                    table.add_column("#", style="dim", width=4)
+                    table.add_column("Client Name", style="cyan")
+                    table.add_column("Last Updated", style="dim")
+                    
+                    for i, client in enumerate(clients, 1):
+                        updated = client.get("updated_at", client.get("extraction_timestamp", ""))
+                        if updated:
+                            updated_str = updated.strftime("%Y-%m-%d %H:%M") if hasattr(updated, 'strftime') else str(updated)
+                        else:
+                            updated_str = "N/A"
+                        table.add_row(str(i), client["client_name"], updated_str)
+                    
+                    self.console.print(table)
+                    self.console.print()
+                    
+                    # Get user selection
+                    self.console.print("[dim]Enter client number (or 'q' to quit, 'new' to run fresh extraction):[/dim]")
+                    
+                    while True:
+                        try:
+                            selection = input("> ").strip().lower()
+                            
+                            if selection == 'q':
+                                self.console.print("[yellow]Cancelled.[/yellow]")
+                                return
+                            
+                            if selection == 'new':
+                                # User wants to run fresh extraction
+                                self.console.print("\n[cyan]Running fresh extraction with /agent...[/cyan]\n")
+                                await self._handle_agent(args)
+                                
+                                # Check if extraction succeeded
+                                if hasattr(self, '_last_client_context') and self._last_client_context:
+                                    client_context_data = self._last_client_context
+                                    case_study_data = self._last_case_study
+                                    impact_data = self._last_impact
+                                    categories_data = getattr(self, '_last_categories', {})
+                                    client = client_context_data.get("client", {})
+                                    extracted_client_name = client.get("client_name", "Unknown")
+                                else:
+                                    self.console.print("[red]❌ Extraction failed. Cannot generate PowerPoint.[/red]")
+                                    return
+                                break
+                            
+                            # Parse number selection
+                            idx = int(selection) - 1
+                            if 0 <= idx < len(clients):
+                                selected_client = clients[idx]["client_name"]
+                                self.console.print(f"\n[green]✓[/green] Selected: {selected_client}")
+                                
+                                # Fetch client data from database
+                                self.console.print("[dim]Fetching data from database...[/dim]")
+                                client_data = writer.get_client(selected_client)
+                                
+                                if client_data:
+                                    client_context_data = client_data.get("client_context", {})
+                                    case_study_data = client_data.get("case_study", {})
+                                    impact_data = client_data.get("impact", {})
+                                    categories_data = client_data.get("categories", {})
+                                    extracted_client_name = selected_client
+                                    self.console.print(f"[green]✓[/green] Loaded data for {selected_client}")
+                                else:
+                                    self.console.print(f"[red]❌ Failed to fetch data for {selected_client}[/red]")
+                                    return
+                                break
+                            else:
+                                self.console.print(f"[red]Invalid selection. Enter 1-{len(clients)}[/red]")
+                        
+                        except ValueError:
+                            self.console.print("[red]Please enter a number, 'new', or 'q'[/red]")
+                    
+                    writer.close()
+                    
+                else:
+                    # No clients in database - fall back to /agent
+                    self.console.print("[yellow]⚠️ No clients found in database[/yellow]")
+                    self.console.print("[dim]Falling back to fresh extraction...[/dim]\n")
+                    writer.close()
+                    
+                    await self._handle_agent(args)
+                    
+                    # Check if extraction succeeded
+                    if hasattr(self, '_last_client_context') and self._last_client_context:
+                        client_context_data = self._last_client_context
+                        case_study_data = self._last_case_study
+                        impact_data = self._last_impact
+                        categories_data = getattr(self, '_last_categories', {})
+                        client = client_context_data.get("client", {})
+                        extracted_client_name = client.get("client_name", "Unknown")
+                    else:
+                        self.console.print("[red]❌ Extraction failed. Cannot generate PowerPoint.[/red]")
+                        return
+            
+            except Exception as e:
+                self.console.print(f"[red]❌ Database error: {e}[/red]")
+                self.console.print("[dim]Falling back to fresh extraction...[/dim]\n")
+                
+                await self._handle_agent(args)
+                
+                # Check if extraction succeeded
+                if hasattr(self, '_last_client_context') and self._last_client_context:
+                    client_context_data = self._last_client_context
+                    case_study_data = self._last_case_study
+                    impact_data = self._last_impact
+                    categories_data = getattr(self, '_last_categories', {})
+                    client = client_context_data.get("client", {})
+                    extracted_client_name = client.get("client_name", "Unknown")
+                else:
+                    self.console.print("[red]❌ Extraction failed. Cannot generate PowerPoint.[/red]")
+                    return
+        
+        else:
+            # Azure SQL not enabled - fall back to /agent
+            self.console.print("[yellow]⚠️ Azure SQL not enabled[/yellow]")
+            self.console.print("[dim]Falling back to fresh extraction...[/dim]\n")
+            
+            await self._handle_agent(args)
+            
+            # Check if extraction succeeded
+            if hasattr(self, '_last_client_context') and self._last_client_context:
+                client_context_data = self._last_client_context
+                case_study_data = self._last_case_study
+                impact_data = self._last_impact
+                categories_data = getattr(self, '_last_categories', {})
+                client = client_context_data.get("client", {})
+                extracted_client_name = client.get("client_name", "Unknown")
+            else:
+                self.console.print("[red]❌ Extraction failed. Cannot generate PowerPoint.[/red]")
+                return
+        
+        # =====================================================================
+        # Step 2: Validate we have the required data
+        # =====================================================================
+        if not client_context_data:
+            self.console.print("[red]❌ No client context data available. Cannot generate PowerPoint.[/red]")
+            return
+        
+        if not case_study_data:
+            self.console.print("[red]❌ No case study data available. Cannot generate PowerPoint.[/red]")
+            return
+        
+        if not impact_data:
+            self.console.print("[red]❌ No impact data available. Cannot generate PowerPoint.[/red]")
+            return
+        
+        # =====================================================================
+        # Step 3: Generate PowerPoint Presentation
+        # =====================================================================
+        self.console.print()
+        self.console.print(Panel(
+            "[bold]Generating PowerPoint Presentation[/bold]",
+            border_style="cyan",
+        ))
+        
+        # Initialize LLM client if needed
+        if not self.llm_client:
+            self.llm_client = OpenAIClient()
+        
+        # Step 3a: LLM generates slide content
+        self.console.print("[dim]Generating slide content with LLM...[/dim]")
+        
+        system_prompt, user_prompt = get_powerpoint_generation_prompt(
+            client_context_data=json.dumps(client_context_data, indent=2, default=str),
+            case_study_data=json.dumps(case_study_data, indent=2, default=str),
+            impact_data=json.dumps(impact_data, indent=2, default=str),
+        )
+        
+        try:
+            pptx_response = self.llm_client.analyze(
+                system_prompt=system_prompt,
+                user_content=user_prompt,
+            )
+            
+            # Parse the response
+            try:
+                slide_content_data = extract_json_from_response(pptx_response.content)
+                slide_content = slide_content_data.get("slide_content", {})
+                self.console.print(f"[green]✓[/green] Generated slide content")
+                
+                # Display what was generated
+                self.console.print("\n[bold cyan]Generated Slide Content:[/bold cyan]")
+                self.console.print(f"  [cyan]Client:[/cyan] {slide_content.get('client_description', 'N/A')}")
+                challenge_text = slide_content.get('challenge_text', 'N/A')
+                if len(challenge_text) > 100:
+                    challenge_text = challenge_text[:100] + "..."
+                self.console.print(f"  [cyan]Challenge:[/cyan] {challenge_text}")
+                
+                bullets = slide_content.get('solution_bullets', [])
+                if bullets:
+                    self.console.print(f"  [cyan]Solution Bullets:[/cyan] {len(bullets)} items")
+                
+                metrics = []
+                for i in range(1, 4):
+                    val = slide_content.get(f'impact_metric_{i}_value')
+                    if val:
+                        metrics.append(val)
+                if metrics:
+                    self.console.print(f"  [cyan]Impact Metrics:[/cyan] {', '.join(metrics)}")
+                
+            except (json.JSONDecodeError, ValueError) as e:
+                self.console.print(f"[red]Failed to parse LLM response: {e}[/red]")
+                slide_content = {}
+        
+        except Exception as e:
+            self.console.print(f"[red]Failed to generate slide content: {e}[/red]")
+            slide_content = {}
+        
+        # Step 3b: Generate the PowerPoint file
+        self.console.print("\n[dim]Creating PowerPoint file...[/dim]")
+        
+        # Find the template
+        template_path = Path(__file__).parent.parent.parent / "TREYA-Master Deck_09102025 vra 11.5.pptx"
+        
+        if not template_path.exists():
+            self.console.print(f"[red]❌ Template not found: {template_path}[/red]")
+            self.console.print("[dim]Please ensure the TREYA Master Deck template is in the new-agent directory.[/dim]")
+            return
+        
+        # Generate timestamp for output filename
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_filename = f"{extracted_client_name}_{timestamp}_case_study.pptx"
+        output_path = POWERPOINTS_DIR / output_filename
+        
+        try:
+            generator = CaseStudyPPTXGeneratorV2(template_path)
+            
+            # Generate the PowerPoint
+            result_path = generator.generate_from_extraction(
+                client_context=client_context_data,
+                case_study=case_study_data,
+                impact=impact_data,
+                categories_data=categories_data,
+                output_path=output_path,
+            )
+            
+            self.console.print(f"[green]✓[/green] Generated PowerPoint: {result_path.name}")
+            self.console.print(f"[dim]Saved to: {result_path}[/dim]")
+            
+            # Show logo fetch status
+            if hasattr(generator, '_last_logo_status') and generator._last_logo_status:
+                logo_status = generator._last_logo_status
+                if "✓" in logo_status:
+                    self.console.print(f"[green]{logo_status}[/green]")
+                elif "⚠" in logo_status:
+                    self.console.print(f"[yellow]{logo_status}[/yellow]")
+                    # Show debug info when logo not found
+                    if hasattr(generator, '_last_logo_debug') and generator._last_logo_debug:
+                        for debug_line in generator._last_logo_debug:
+                            self.console.print(f"[dim]  {debug_line}[/dim]")
+                else:
+                    self.console.print(f"[red]{logo_status}[/red]")
+            
+        except Exception as e:
+            self.console.print(f"[red]❌ Failed to generate PowerPoint: {e}[/red]")
+            import traceback
+            self.console.print(f"[dim]{traceback.format_exc()}[/dim]")
+        
+        self.console.print()
+        self.console.print(Panel(
+            "[bold green]PowerPoint Generation Complete[/bold green]",
+            border_style="green",
+        ))
     
     def _extract_folder_content(self, folder_path: Path, project_path: Path, max_chars: int = 30000) -> str:
         """

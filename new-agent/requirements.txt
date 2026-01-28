@@ -41,3 +41,19 @@ pyyaml>=6.0.0
 
 # ODBC driver for Azure SQL
 pyodbc>=5.0.0
+
+# ============================================================================
+# Logo Fetching
+# ============================================================================
+
+# HTTP requests for logo API
+requests>=2.31.0
+
+# Image hashing for logo similarity comparison
+imagehash>=4.3.0
+
+# Pillow for image processing (required by imagehash)
+Pillow>=10.0.0
+
+# Matplotlib for generating charts in PowerPoint
+matplotlib>=3.8.0

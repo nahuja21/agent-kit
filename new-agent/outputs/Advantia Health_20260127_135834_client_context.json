@@ -1,0 +1,47 @@
+{
+  "client": {
+    "client_name": "Advantia Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Women's health services (OB-GYN, coordinated specialty care)",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site women's healthcare provider operating OB-GYN clinics and related specialty services across several U.S. states.",
+    "sponsor_pe_firm": "BlueMountain Capital Management (investment announced Jan 2020); earlier growth financing from Deerfield Management (2016)",
+    "client_history": "Founded in 2014 by Sean Glass and headquartered in Arlington, VA, Advantia Health has expanded through acquisitions such as Heartland Women\u2019s Healthcare and technology offerings like the Pacify telehealth app, now operating more than 60 clinics and serving over 430,000 patients."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 29100000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Buzzfile company profile (https://www.buzzfile.com/business/Advantia-Health-LLC-202-315-5223)",
+      "notes": "Revenue estimates vary widely: Zippia $13M, Growjo $22.4M, Buzzfile $29.1M, CanvasBusinessModel $89M (2024). No official figure published by the company. Selected mid-range Buzzfile estimate but confidence is low due to conflicting third-party estimates."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 60,
+      "confidence": "medium",
+      "source": "Technical.ly article (https://technical.ly/startups/advantia-health-45-million-investment-expansion/)",
+      "notes": "Article states the company 'operates over 60 OB-GYN and coordinated specialist offices.' Company locations page lists many sites consistent with this scale, but no exact count shown."
+    },
+    "employees": {
+      "count": 501,
+      "confidence": "medium",
+      "source": "LeadIQ company profile, Dec 2025 (https://leadiq.com/c/advantia-health/5a1d82ae24000024005d4858)",
+      "notes": "LeadIQ shows 501 employees. Other sources: Indeed and SignalHire list 500-1000, Zippia 750, Buzzfile 259. Chose specific LeadIQ figure; range across sources indicates possible headcount growth or inclusion differences."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf (page 1 \u2013 company name & address)",
+    "Technical.ly article on $45M investment and company overview",
+    "Buzzfile company profile (revenue & employee estimate)",
+    "LeadIQ company profile (employee count)",
+    "advantiahealth.com news releases \u2013 Jan 2020 investment by BlueMountain; Jan 2016 financing by Deerfield"
+  ],
+  "extraction_notes": [
+    "Company name verified from signed services agreement (legal entity listed as Advantia Health).",
+    "Primary industry sector mapped to provided cluster 'Healthcare Providers & Physician Practice Platforms'.",
+    "Ownership: BlueMountain investment (2020) identified in Advantia Health press release; Deerfield earlier. No evidence of other controlling PE sponsor.",
+    "Revenue figures conflict across third-party estimator sites; no authoritative disclosure from company\u2014reported figure should be treated cautiously.",
+    "No EBITDA information located in documents, press releases, or reliable databases."
+  ]
+}
