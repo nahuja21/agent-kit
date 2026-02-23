@@ -1,0 +1,252 @@
+{
+  "categories": [
+    {
+      "category_label": "Car Rental",
+      "category_l1": "Travel",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2022-09-01",
+      "end_date": null,
+      "status": "negotiated",
+      "vendors_before": [
+        "Enterprise/National (direct corporate agreement)"
+      ],
+      "vendors_after": [
+        "Enterprise/National via OMNIA Partners GPO"
+      ],
+      "levers": [
+        "GPO adoption",
+        "Rate benchmarking",
+        "Contract renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Enterprise/National to remain the rental brand; move onto OMNIA master contract",
+        "operational_constraints": "Rates must be loaded into Egencia booking tool before go-live",
+        "contractual_constraints": "Client signature required on two EHI documents before activation",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 185000,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "Spend column in Savings Tracker \u2013 New 2022 Workstreams slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 29600,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "Savings Low/High both equal $29,600"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 16.0,
+      "notes": "Savings achieved by migrating existing Enterprise/National volume onto OMNIA consortium pricing. Awaiting client DocuSign completion.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+          "page_or_slide": "4",
+          "quote": "Car Rental | $185,000 | 100% | 16% | 16% | $29,600 | $29,600 | $29,600",
+          "date_extracted": "2026-02-08"
+        },
+        {
+          "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+          "page_or_slide": "3",
+          "quote": "Enterprise/National (EHI) Car Rental documents sent via DocuSign on 12/8, awaiting client completion",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "Hotels",
+      "category_l1": "Travel",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2022-07-01",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Various unmanaged hotel properties"
+      ],
+      "vendors_after": [
+        "IHG \u2013 Business Edge global discount",
+        "Holiday Inn Express & Suites (Ann Arbor)",
+        "Courtyard by Marriott Mesa at Wrigleyville West",
+        "Courtyard by Marriott Orlando International Drive"
+      ],
+      "levers": [
+        "Property-specific negotiations",
+        "Chain-wide discount program",
+        "Rate loading into TMC"
+      ],
+      "constraints": {
+        "supplier_constraints": "Maintain traveler choice for non-IHG properties where required",
+        "operational_constraints": "Rates to be loaded in Egencia before travelers can book",
+        "contractual_constraints": "One remaining property-specific agreement pending signature",
+        "implementation_constraints": "Communication memo to be circulated company-wide for utilization"
+      },
+      "baseline_spend": {
+        "amount": 615000,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "Spend column in Savings Tracker \u2013 New 2022 Workstreams slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 37500,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "Savings Low/High both equal $37,500"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 6.0,
+      "notes": "Combination of three property-specific agreements (~$9.5K) and 10% IHG Business Edge discount (~$28K). Last property contract still needs signature.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+          "page_or_slide": "4",
+          "quote": "Hotels | $615,000 | 80% | 6% | 6% | $37,500 | $37,500 | $37,500",
+          "date_extracted": "2026-02-08"
+        },
+        {
+          "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+          "page_or_slide": "5",
+          "quote": "IHG chain-wide discount loaded in Egencia; one remaining property-specific agreement sent to client for signature",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "IT Hardware / Peripherals (Amazon)",
+      "category_l1": "IT",
+      "category_l2": "Hardware",
+      "category_l3": null,
+      "start_date": "2022-09-15",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Amazon Business"
+      ],
+      "vendors_after": [
+        "Connection (IT reseller contract)"
+      ],
+      "levers": [
+        "Price benchmarking",
+        "Vendor shift from marketplace to contracted reseller",
+        "Volume funneling"
+      ],
+      "constraints": {
+        "supplier_constraints": "Connection contract to be used only for IT hardware items previously purchased on Amazon",
+        "operational_constraints": "Users must redirect purchases; no automatic block on Amazon portal",
+        "contractual_constraints": "No volume commitment under Connection agreement",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 677695,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "Spend column shows total Amazon IT hardware spend evaluated"
+      },
+      "savings_annual_run_rate": {
+        "amount": 15485,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "5% savings applied to 50% of baseline spend"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 2.3,
+      "notes": "Savings derived from Connection\u2019s discounted pricing on high-usage SKUs representing roughly half of the Amazon spend. Client to begin funneling purchases through Connection.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+          "page_or_slide": "4",
+          "quote": "IT Hardware / Peripherals (Amazon) | $677,695 | 50% | 5% | 5% | $15,485 | $15,485 | $15,485",
+          "date_extracted": "2026-02-08"
+        },
+        {
+          "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+          "page_or_slide": "5",
+          "quote": "Treya received Connection\u2019s pricing on items bought through Amazon and found ~5% or ($15K) in savings using Connection",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "MRO",
+      "category_l1": "Indirect Materials",
+      "category_l2": "MRO",
+      "category_l3": null,
+      "start_date": "2022-09-16",
+      "end_date": "2022-12-13",
+      "status": "negotiated",
+      "vendors_before": [
+        "Grainger"
+      ],
+      "vendors_after": [
+        "Grainger (incumbent maintained)",
+        "Fastenal via OMNIA Partners GPO"
+      ],
+      "levers": [
+        "Dual-source strategy",
+        "GPO pricing benchmark",
+        "Selective category shifting"
+      ],
+      "constraints": {
+        "supplier_constraints": "Grainger must remain primary supplier; Fastenal to be used for high-savings subcategories",
+        "operational_constraints": "No minimum volume commitment required for OMNIA/Fastenal participation",
+        "contractual_constraints": "Participation agreement with OMNIA/Fastenal pending signature",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 310000,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "Spend column in Savings Tracker \u2013 New 2022 Workstreams slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 17484,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "6% savings figure finalized"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 6.0,
+      "notes": "Savings concentrated in Plumbing, Adhesives, Material Handling, Safety, Lighting and other sub-segments where Fastenal pricing beat Grainger.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+          "page_or_slide": "4",
+          "quote": "MRO | $310,000 | 100% | 6% | 6% | $17,484 | $17,484 | $17,484",
+          "date_extracted": "2026-02-08"
+        },
+        {
+          "source_file": "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+          "page_or_slide": "7",
+          "quote": "Treya recommends that Arotech maintain its agreement with Grainger, and do supplemental purchasing from Fastenal (via the OMNIA GPO) on select product categories where Fastenal is significantly more competitive.",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 4,
+    "implemented_count": 0,
+    "in_progress_count": 2,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 1787695,
+    "total_savings": 100069,
+    "average_savings_percentage": 5.6
+  },
+  "extraction_sources": [
+    "Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx"
+  ],
+  "extraction_notes": [
+    "Baseline spend and savings figures taken directly from the Savings Tracker slide (Slide 4) of the 12-13-22 update, which reflects final negotiated amounts.",
+    "Savings percentage for Amazon category is calculated using stated savings versus baseline because slide provides only blended savings dollars."
+  ]
+}

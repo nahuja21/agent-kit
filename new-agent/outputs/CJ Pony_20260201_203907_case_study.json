@@ -1,0 +1,37 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client name, industry, clear objectives, quantified $542K annual savings, and multiple documented proof points are all available.",
+    "headline": "Automotive e-commerce leader captures $542K in annual savings in under 5 months through Treya-led strategic sourcing",
+    "client_problem_statement": "CJ Pony Parts, Inc., a rapidly expanding online retailer of aftermarket automotive parts backed by Century Park Capital Partners, had limited procurement bandwidth and highly decentralized purchasing across its Pennsylvania and Nevada distribution centers. With aggressive value-creation targets, the company needed to uncover at least $100K in savings within three months and deliver $330K\u2013$660K in recurring reductions by year-end. Rising shipping and packaging costs, strong incumbent relationships, and data gaps threatened margin expansion and investor expectations.",
+    "client_problem_anonymized": "A rapidly expanding automotive aftermarket e-commerce retailer backed by its private equity ownership group had limited procurement bandwidth and highly decentralized purchasing across two U.S. distribution centers. With aggressive value-creation targets, the company needed to uncover at least $100K in savings within three months and deliver $330K\u2013$660K in recurring reductions by year-end. Rising shipping and packaging costs, strong incumbent relationships, and data gaps threatened margin expansion and investor expectations.",
+    "approach_summary": [
+      "Conducted a detailed cleanse and analysis of $11.5M in addressable spend across nine logistics, packaging, labor, and payment card categories to pinpoint high-impact opportunities.",
+      "Renegotiated the incumbent FedEx parcel contract using market benchmarking to optimize rate discounts and surcharges, delivering a 4% reduction without service disruption.",
+      "Ran competitive RFPs and vendor consolidation for packaging supplies and corrugated, awarding business to Sigma, Colony Paper, Carlisle, and Neway to achieve up to 32% savings and improved payment terms.",
+      "Leveraged an Omnia Partners GPO agreement with Staffmark to cut temporary labor mark-ups by 13% and lock in rate governance going forward.",
+      "Provided hands-on implementation support, coordinating multi-site inventory transitions and contract execution to ensure first hard-dollar savings were realized within 90 days."
+    ],
+    "top_levers": [
+      "Contract renegotiation",
+      "Competitive RFP & vendor consolidation",
+      "GPO leverage",
+      "Benchmark-driven rate optimization",
+      "Payment term improvement"
+    ],
+    "value_delivered_blurb": "Treya generated $541,658 in verified annual run-rate savings\u2014exceeding the client\u2019s target range and outperforming the low-end business case by 62%. Savings were live in three key categories within 90 days, delivering more than a 7\u00d7 return on the initial $75K retainer before any contingent fees. Beyond the dollars, the engagement streamlined the supply base, standardized contracts across both distribution centers, and improved cash flow through extended payment terms.",
+    "where_we_were_unique": [
+      "Delivered first implemented savings in just 90 days, meeting the sponsor\u2019s quick-win mandate.",
+      "Unlocked significant parcel savings while retaining the client\u2019s preferred FedEx carrier, avoiding operational risk.",
+      "Coordinated dual-coast vendor transitions seamlessly, preventing stockouts and maintaining service levels.",
+      "Exceeded the guaranteed 1\u00d7 ROI, generating over 7\u00d7 payback on upfront fees within the first year."
+    ]
+  },
+  "generation_notes": [
+    "Headline highlights total savings, timeline, and industry context.",
+    "Problem statement references CJ Pony Parts and Century Park; anonymized version replaces both.",
+    "Approach bullets use 'the client' instead of company name and specify actions and levers.",
+    "Levers ranked by impact based on documented savings by category.",
+    "Value blurb compares delivered savings to low-end estimate and fees to show ROI."
+  ]
+}

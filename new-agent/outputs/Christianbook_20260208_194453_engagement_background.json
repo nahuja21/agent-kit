@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "Christianbook engaged Treya Partners to capture $655K\u2013$1.2M of cost savings across indirect spend, strengthen enterprise value for its PE owner (Nonantum), and establish a best-in-class, data-driven procurement process that meets future business needs.",
+    "scope_summary": "Project targets 8 main indirect categories\u2014LTL/FTL freight, merchant processing fees, corrugated, packaging & shipping supplies, employee benefits, janitorial services, marketing software, and Ingram Book Group distribution\u2014representing about $18 M in baseline spend (~$15 M addressable). Low-spend/low-opportunity areas may be dropped after initial review; core COGS, postage, real-estate and other non-addressable spend remain out of scope.",
+    "constraints_challenges": [
+      "Long-standing incumbent relationships in packaging and LTL limiting willingness to change suppliers",
+      "Potential supplier non-responsiveness to data requests and competitive bidding exercises",
+      "Risk of side conversations or mixed messages to suppliers if Christianbook runs parallel procurement activity",
+      "Limited internal stakeholder bandwidth; need timely data provision and feedback to meet aggressive 5-6-month timeline",
+      "Incomplete line-item usage data for some high-spend vendors, requiring estimates or representative samples"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "12-month AP data (Jun 2023\u2013May 2024) with supplier, GL and limited commodity detail; contracts and line-item usage must be requested from key vendors.",
+    "data_quality_notes": "AP spend required manual mapping to Treya taxonomy; inconsistent vendor naming and gaps in historical usage data\u2014especially where suppliers decline to provide details\u2014necessitate baselining with partial or sampled data.",
+    "source_file": "Kickoff/Christian Book- Strategic Sourcing Project Kickoff.pdf",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Kickoff/Christian Book- Strategic Sourcing Project Kickoff.pdf",
+    "Assessment & Proposal/Christianbook Proposal.pptx",
+    "Case Study- Christianbook.docx",
+    "Agreement/Treya Procurement Cost Reduction Services Agreement Christianbook_v2.docx.pdf"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from statements about establishing a procurement organization, long-standing supplier relationships, and absence of existing strategic sourcing processes.",
+    "Spend and scope figures taken from savings assessment sheets and kickoff deck ($18 M baseline; $15 M addressable).",
+    "Constraints list combines explicit 'Typical Project Challenges' slide and case-study commentary on incumbent relationships."
+  ]
+}

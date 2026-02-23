@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "FreshEdge retained Treya Partners to run a company-wide strategic sourcing program aimed at reducing procurement costs and capturing measurable savings across indirect and select direct spend categories in order to improve EBITDA and support the firm\u2019s ongoing private-equity value-creation plan.",
+    "scope_summary": "Treya\u2019s initial spend assessment covered roughly $1.14 B in AP spend across more than 20 FreshEdge business units. Active sourcing waves have focused on about $41 M of indirect spend in categories such as Packaging/Corrugate & Labels, Fuel, Utilities, Waste Management, Crates & Pallets and P-Card. Several areas (e.g., Tableware, Disinfection Supplies, Telecom, Forklifts) were explicitly moved out-of-scope or discontinued when contracts, leases or low savings potential were identified.",
+    "constraints_challenges": [
+      "Highly decentralized purchasing spread over 20+ acquired business units, each requiring its own approvals (e.g., separate LOE/LOA signatures for Utilities).",
+      "Large variances between the January-2022 baseline spend and refreshed Jul-2023\u2013Jun-2024 data sets, reflecting fragmented AP data sources and significant cleansing/mapping requirements.",
+      "Existing long-term supplier agreements and equipment leases (e.g., 3-year telecom contract, leased forklifts) that cap addressable spend and defer certain categories.",
+      "Stakeholder reluctance to switch incumbents when incremental savings were small, resulting in categories such as Crates & Pallets or Janitorial & Office Supplies being discontinued.",
+      "Extensive vendor duplication and unmapped GL codes necessitating Vendor Dedupe, Vendor Map and GL Map exercises before opportunity analysis could begin."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "medium",
+    "data_availability": "AP/GL transaction data exports (ProducePro and other systems) for each business unit; contract/invoice files collected ad-hoc; no single consolidated spend system.",
+    "data_quality_notes": "Multiple business units use different vendor naming conventions and GL structures, causing unmapped and duplicate spend lines; refreshed spend dropped ~83 % versus kickoff analysis, highlighting data completeness issues.",
+    "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+    "Assessment/Spend Analysis FreshEdge 07.12.2023.xlsx - Fees & Spend by Category tabs",
+    "Assessment/Spend Analysis FreshEdge 04.27.2023 (Original).xlsx - Instructions & Savings Opportunity tabs"
+  ],
+  "extraction_notes": [
+    "Objective derived from fee proposal (savings guarantee) and project update slides referring to strategic sourcing savings.",
+    "Operating model inferred from requirement for individual BU approvals and separate spend figures.",
+    "Maturity classified as medium because contracts exist but procurement is not centrally managed.",
+    "Data quality observations taken from Vendor Map/GL Map instructions and large deltas shown on AP Spend Comparison slide."
+  ]
+}

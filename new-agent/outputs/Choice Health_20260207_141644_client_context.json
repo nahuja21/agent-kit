@@ -1,0 +1,48 @@
+{
+  "client": {
+    "client_name": "Choice Health At Home",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Home Health & Hospice Services",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-state provider of home health, hospice and rehabilitation therapy services delivered in patients\u2019 homes",
+    "sponsor_pe_firm": "Trive Capital and Coltala Holdings",
+    "client_history": "Founded in 2007 by physical therapist David Jackson in Tyler, Texas, Choice Health At Home has expanded through organic growth and strategic acquisitions to serve patients across Texas, Oklahoma, Kansas and Louisiana. In 2021 the company received growth investment from private-equity firms Trive Capital and Coltala Holdings, positioning it for continued expansion in the post-acute home-based care market."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": null,
+      "notes": "No credible revenue figures for Choice Health At Home found in company documents, official website, press releases, LinkedIn or reputable databases."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": null,
+      "confidence": "low",
+      "source": null,
+      "notes": "Company and web sources indicate operations in several states but do not disclose the number of branch locations or agencies."
+    },
+    "employees": {
+      "count": 326,
+      "confidence": "low",
+      "source": "LinkedIn company page for Choice Health At Home (accessed Feb-2026)",
+      "notes": "LinkedIn shows 326 employees. Other sources provide conflicting estimates ranging from 86 (Bitscale.ai) to 1,000-5,000 (SignalHire). Using LinkedIn figure as the only specific number, but large discrepancy reduces confidence."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Treya Procurement Cost Reduction Services Agreement_Choice Health at Home.docx.pdf (page 1 \u2013 legal name & headquarters)",
+    "Project Kickoff/Choice Health - Strategic Sourcing Project Kickoff.pptx (slides 8-9 \u2013 spend data refers to Choice Health At Home)",
+    "choicehealthathome.com/about (company overview \u2013 founding year, services, geography, leadership)",
+    "PRNewswire press release 2021-08-05 \u201cTrive Capital Partners with Choice Health at Home\u201d",
+    "HomeHealthCareNews article 2021-06-29 \u201cColtala Acquires Choice Health at Home\u201d",
+    "LinkedIn company page for Choice Health At Home (employee count)"
+  ],
+  "extraction_notes": [
+    "Official company name confirmed from signed services agreement between Treya Partners and Choice Health At Home.",
+    "Industry classification based on company website description of home health, hospice and rehab services delivered to patients.",
+    "Private-equity sponsorship (Trive Capital and Coltala Holdings) confirmed by press releases on PRNewswire and HomeHealthCareNews.",
+    "No authoritative revenue or EBITDA figures located; spreadsheets in Treya project show vendor spend, not company revenue.",
+    "Employee headcount varies widely across third-party sites; LinkedIn provides the only concrete integer (326) but confidence is low due to discrepancies."
+  ]
+}

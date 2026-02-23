@@ -1,0 +1,395 @@
+{
+  "categories": [
+    {
+      "category_label": "Carrier HVAC OEM",
+      "category_l1": "HVAC Equipment",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2025-06-01",
+      "end_date": "2025-09-25",
+      "status": "implemented",
+      "vendors_before": [
+        "Carrier Enterprises (local pricing)"
+      ],
+      "vendors_after": [
+        "Carrier (national pricebook & rebate program)"
+      ],
+      "levers": [
+        "National pricebook",
+        "Rebate negotiation",
+        "Volume consolidation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Cascade must continue purchasing Carrier equipment for existing install base",
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1971974,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Addressable spend figure shown on Savings Dashboard slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 319789,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis.xlsx",
+        "notes": "$297K rebate + $22K front-end price improvements"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 16.2,
+      "notes": "National agreement signed 9/25/2025 locking pricing and rebates back to $1.",
+      "evidence": [
+        {
+          "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis.xlsx",
+          "page_or_slide": "Summary Tab",
+          "quote": "Final agreement includes $297K from rebate and $22K from pricing improvements.",
+          "date_extracted": "2026-02-01"
+        },
+        {
+          "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+          "page_or_slide": "Slide 3",
+          "quote": "Carrier | $1,971,974 | 16% | $319,789 savings identified",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Lennox HVAC OEM",
+      "category_l1": "HVAC Equipment",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2025-06-01",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Lennox (standard program)"
+      ],
+      "vendors_after": [
+        "Lennox (16% tiered rebate program)"
+      ],
+      "levers": [
+        "Tiered rebate program",
+        "Front-end pricing review"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "Agreement under legal review before execution",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 2755129,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Addressable spend figure on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 373003,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis.xlsx",
+        "notes": "Savings equate to 16% rebate on current Lennox spend"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 13.5,
+      "notes": "Awaiting improved front-end pricing prior to contract execution.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+          "page_or_slide": "Slide 12",
+          "quote": "Cascade qualifies for the 16 percent rebate tier (~$441K in savings, 16% of baseline).",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Rheem HVAC OEM",
+      "category_l1": "HVAC Equipment",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2025-06-01",
+      "end_date": null,
+      "status": "negotiated",
+      "vendors_before": [
+        "Gemaire (Rheem distributor program)"
+      ],
+      "vendors_after": [
+        "Rheem national distributor network (Consolidator Incentive Agreement)"
+      ],
+      "levers": [
+        "National incentive program",
+        "Rebate improvement",
+        "Volume aggregation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "Agreement drafted 1/1/2026 awaiting signature",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 2566500,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Addressable spend on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 106553,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Incremental rebate savings versus Gemaire program"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 4.2,
+      "notes": "Consolidator Incentive Agreement provides 8% rebate on projected $2.57M spend.",
+      "evidence": [
+        {
+          "source_file": "Project Close Out/HVAC OEM/Rheem/Rheem Rebate Agreement_Cascade Residential Services_Final (jpi) - signed.pdf",
+          "page_or_slide": "Page 1",
+          "quote": "Subject to the terms and conditions of this Agreement, Rheem agrees to provide the rebate(s)...",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "HVACR & Plumbing Supplies",
+      "category_l1": "HVAC / Plumbing MRO",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2025-06-15",
+      "end_date": null,
+      "status": "negotiated",
+      "vendors_before": [
+        "Hughes Supply",
+        "Baker Distribution",
+        "R.E. Michel",
+        "Dynamic Air Quality",
+        "Ferguson"
+      ],
+      "vendors_after": [
+        "Hughes Supply",
+        "R.E. Michel",
+        "Baker Distribution"
+      ],
+      "levers": [
+        "RFP",
+        "Competitive bidding",
+        "Supplier MOUs",
+        "Payment terms (2% early-pay)"
+      ],
+      "constraints": {
+        "supplier_constraints": "Multiple vendors retained to ensure regional coverage and inventory availability",
+        "operational_constraints": "Vendors to keep adequate inventory and proactively communicate supply disruptions (per MOUs)",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1909504,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Addressable spend shown on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 25938,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Close Out/HVAC & Plumbing Supplies/Cascade Services - HVACR & Plumbing Supplies Savings Analysis.xlsx",
+        "notes": "Round-2 RFP unit-price savings with R.E. Michel"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 1.4,
+      "notes": "MOUs distributed to Hughes, R.E. Michel, and Baker memorializing negotiated pricing.",
+      "evidence": [
+        {
+          "source_file": "Project Close Out/HVAC & Plumbing Supplies/MOUs/Hughes ^M Cascade MOU January 2026.docx",
+          "page_or_slide": "1",
+          "quote": "Cascade Services shall receive locked in pricing ... Customer will be entitled to a two percent (2%) early payment discount...",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Uniforms",
+      "category_l1": "Indirect Services",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2025-08-01",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Cintas",
+        "Unifirst",
+        "Local providers"
+      ],
+      "vendors_after": [
+        "Unifirst via Rampart GPO"
+      ],
+      "levers": [
+        "GPO",
+        "Vendor consolidation",
+        "Benchmark pricing"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "Existing location-level Cintas contracts to be reviewed prior to migration",
+        "implementation_constraints": "Implementation timeline estimated at 3\u20134 months; must manage uniform inventory rollover"
+      },
+      "baseline_spend": {
+        "amount": 135543,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Baseline derived from weekly invoice extrapolation"
+      },
+      "savings_annual_run_rate": {
+        "amount": 57689,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Uniforms/Cascade - Uniforms Summary_v2.xlsx",
+        "notes": "43% savings identified by consolidating to Unifirst"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 42.6,
+      "notes": "Rampart GPO program pending alignment with Cascade leadership.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+          "page_or_slide": "Slide 5",
+          "quote": "Identified an estimated $58k (43%) in annual savings on a $136k baseline by consolidating usage to Unifirst through the GPO Partner Rampart",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Johnstone ECM Program",
+      "category_l1": "HVAC Equipment Parts",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2025-07-01",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Johnstone Supply (standard program)"
+      ],
+      "vendors_after": [
+        "Johnstone Supply (ECM-only rebate program)"
+      ],
+      "levers": [
+        "Rebate structure renegotiation",
+        "Targeted spend (ECM products)"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 355728,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Addressable spend on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 24823,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis.xlsx",
+        "notes": "2% base + 5% growth rebate on $355K ECM spend"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7.0,
+      "notes": "Program focuses solely on ECM parts; full national agreement declined.",
+      "evidence": [
+        {
+          "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis.xlsx",
+          "page_or_slide": "Summary Tab",
+          "quote": "Rebates on $355K ECM spend: 2% base = $7K + 5% growth = $18K \u2192 $25K total",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Interplay Technician Training",
+      "category_l1": "Training & Development",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2025-09-01",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Interplay Learning (standard pricing)"
+      ],
+      "vendors_after": [
+        "Interplay Learning (8% discounted program)"
+      ],
+      "levers": [
+        "Discount negotiation",
+        "Volume commitment"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Training schedule must align with technician availability",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 236250,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Baseline spend shown on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 19250,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "8% discount negotiated on baseline spend"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 8.2,
+      "notes": "Online training platform discount to be applied once agreement finalized.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+          "page_or_slide": "Slide 3",
+          "quote": "Interplay | $236,250 | 8% | $19,250 savings identified",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 7,
+    "implemented_count": 1,
+    "in_progress_count": 4,
+    "negotiated_count": 2,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 9930628,
+    "total_savings": 927045,
+    "average_savings_percentage": 9.3
+  },
+  "extraction_sources": [
+    "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+    "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis.xlsx",
+    "Project Close Out/HVAC & Plumbing Supplies/Cascade Services - HVACR & Plumbing Supplies Savings Analysis.xlsx",
+    "Project Close Out/HVAC & Plumbing Supplies/MOUs/Hughes ^M Cascade MOU January 2026.docx",
+    "Categories/Uniforms/Cascade - Uniforms Summary_v2.xlsx",
+    "Project Close Out/HVAC OEM/Rheem/Rheem Rebate Agreement_Cascade Residential Services_Final (jpi) - signed.pdf"
+  ],
+  "extraction_notes": [
+    "Baseline spend figures per sub-vendor categories were taken from the Savings Dashboard slide because Exhibit A only aggregated OEM spend.",
+    "Savings percentages calculated as annual savings divided by baseline spend, rounded to one decimal where applicable."
+  ]
+}

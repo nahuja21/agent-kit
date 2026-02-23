@@ -1,0 +1,162 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "athenahealth, Inc.",
+      "category": "EMR",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1596000,
+      "final_spend": 1190000,
+      "savings_dollars": 357889,
+      "savings_percent": 22,
+      "levers_applied": [
+        "RFP",
+        "Benchmarking",
+        "Renegotiation",
+        "Competitive pressure",
+        "Volume commitment"
+      ],
+      "alternatives_considered": [
+        "Sigmund Software (Aura)",
+        "MedicsCloud",
+        "Qualifacts",
+        "RXNT",
+        "MedEvolve"
+      ],
+      "why_selected": "Matched 3.4% target fee, lowest total cost when credit-card fees unbundled, no transition disruption, strong functional fit.",
+      "why_not_selected": null,
+      "contract_terms": "3-year term (signed 4/15/2025); fee 3.4% of net collections; Year-3 increase capped at CPI+2%; credit-card processing fees paid directly by SaVida.",
+      "negotiation_leverage": "Full RFP with six bidders, benchmarks showing 3.4% market rate, executive escalation letter, growing collection volumes offered as commitment.",
+      "supplier_strengths": "Integrated PM/RCM platform, existing workflows, responsive engineering support, scalable across sites.",
+      "supplier_weaknesses": "Attempted above-market increase, potential 5% CPI clause in Year-3, limited behavioral-health specific analytics.",
+      "switching_costs": "Data migration, provider retraining, interface rebuilds\u2014estimated 6-9 months and $250k+.",
+      "key_contacts": "Mercedes Dahar \u2013 Director of Customer Success",
+      "notes": "Plan to open re-negotiation in Year-2 to extend term and waive CPI uplift based on volume growth.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP with multiple bidders",
+        "Significant savings (22%)",
+        "Detailed renegotiation of pricing structure"
+      ]
+    },
+    {
+      "supplier_name": "Sigmund Software (Aura)",
+      "category": "EMR",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": null,
+      "why_selected": null,
+      "why_not_selected": "Initial price at 4% of collections above 3.4% target; implementation and data-migration risk; total cost of ownership higher than incumbent after transition costs.",
+      "contract_terms": "Round-1 proposal 4% of $32M collections (~$1.3M/yr); SaVida countered at 3.4%\u2014no agreement reached.",
+      "negotiation_leverage": "Used as credible switch threat to drive incumbent pricing down.",
+      "supplier_strengths": "Behavioral-health focus, flexible customization, positive peer references.",
+      "supplier_weaknesses": "Higher pricing, limited in-house RCM services, unproven at SaVida scale.",
+      "switching_costs": "4\u20136-month migration, staff retraining, interface rebuilds.",
+      "key_contacts": "Cory Valentine \u2013 Vice President, Sales",
+      "notes": "Maintain relationship as future fallback option if Athena performance declines.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Participated in formal RFP",
+        "Provided competitive pricing used for leverage"
+      ]
+    },
+    {
+      "supplier_name": "Provista GPO",
+      "category": "Medical Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 241170,
+      "final_spend": 213178,
+      "savings_dollars": 27992,
+      "savings_percent": 11.6,
+      "levers_applied": [
+        "GPO participation",
+        "SKU benchmarking",
+        "Volume aggregation",
+        "Supplier consolidation"
+      ],
+      "alternatives_considered": [
+        "MedSupply Partners",
+        "Midland Scientific",
+        "McKesson"
+      ],
+      "why_selected": "Premier-tier pricing delivered 10\u201334% SKU reductions and enabled consolidation under one contract.",
+      "why_not_selected": null,
+      "contract_terms": "Membership agreement signed 5/5/2025; evergreen with 60-day exit; pricing tied to Premier contract tiers; quarterly compliance reviews.",
+      "negotiation_leverage": "Ability to shift total volume, competitive SKU benchmarks, commitment to full location roster.",
+      "supplier_strengths": "Broad contract portfolio, immediate price drops, analytics dashboard.",
+      "supplier_weaknesses": "Compliance requirements to keep tier pricing, indirect service via distributors.",
+      "switching_costs": "Low\u2014membership can be cancelled; would need to re-negotiate pricing with individual distributors.",
+      "key_contacts": null,
+      "notes": "Next action: complete location enrollment and validate savings on Henry Schein purchases.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "Multi-vendor consolidation into GPO",
+        "Benchmarking across SKUs"
+      ]
+    },
+    {
+      "supplier_name": "Comcast Business (Managed Services)",
+      "category": "Telecom \u2013 Data & Voice",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 79234,
+      "final_spend": 61384,
+      "savings_dollars": 17850,
+      "savings_percent": 22.5,
+      "levers_applied": [
+        "Spend analysis",
+        "Supplier consolidation",
+        "Bandwidth rationalization",
+        "Contract renegotiation"
+      ],
+      "alternatives_considered": [
+        "Atlantic Broadband",
+        "Bee Line Cable",
+        "Local ISPs"
+      ],
+      "why_selected": "Offered unified managed-services solution with standard bandwidth and single consolidated invoice at reduced rate.",
+      "why_not_selected": null,
+      "contract_terms": "Master services agreement under review (meeting 5/12/2025); expected 36-month term with rate lock and 99.9% SLA.",
+      "negotiation_leverage": "Consolidation of 30+ circuits, threat to move remaining sites to competing ISPs, bandwidth standardization.",
+      "supplier_strengths": "Nationwide footprint, VPN/MPLS capability, dedicated account team.",
+      "supplier_weaknesses": "Complex billing hierarchy, historical SLA issues at select sites.",
+      "switching_costs": "Early-termination fees on non-Comcast contracts; new circuit installation costs.",
+      "key_contacts": null,
+      "notes": "Ensure rollout schedule and SLA credits are embedded before signature.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multiple suppliers consolidated",
+        "Managed-services renegotiation",
+        "Savings >20%"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 12,
+    "battlecards_generated": 4,
+    "categories_with_battlecards": [
+      "EMR",
+      "Medical Supplies",
+      "Telecom \u2013 Data & Voice"
+    ],
+    "skipped_reason": "Remaining suppliers were simple renewals, low spend, or lacked strategic negotiation details."
+  },
+  "extraction_notes": [
+    "EMR folder contained full RFP, proposals, and final savings analysis enabling detailed Athena and Sigmund cards.",
+    "Provista contract and SKU benchmarks provided sufficient data for Medical Supplies battlecard.",
+    "Telecom consolidation details and savings pulled from project update deck and telecom spend analyses."
+  ]
+}

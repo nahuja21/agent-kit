@@ -1,0 +1,170 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Treya Partners unlocks $1.5M in annual savings for Epika Fleet Services across eight spend categories",
+      "narrative": "Working under an accelerated timeline ahead of Epika\u2019s sale, Treya Partners completed a strategic sourcing program that captured $1.5 million in annual savings on $18.25 million of addressable spend.  Eight categories are already under finalized contracts, delivering $1.34 million in hard savings, while three additional work-streams are in active negotiation to bring the remaining savings to full realization.  Key wins included a 15 % reduction on Shell lubricants, a unified Comdata fuel-card rebate program, and consolidated filter buying with Fleetguard and Baldwin.  The majority of savings were achieved through incumbent renegotiations, minimizing operational disruption and expediting time-to-value."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1500000,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Epika Case Study v5.docx",
+        "notes": "Total annual savings reported in the final case study (Priority 2)."
+      },
+      "finalized_savings": {
+        "amount": 1336853,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Sum of categories with \u2713 \u2018Savings Finalized\u2019 check-mark."
+      },
+      "in_progress_savings": {
+        "amount": 163147,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Balance between total savings in case study ($1.5M) and finalized savings.  Represents workstreams still moving through contracting."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Oil & Lubricants \u2013 Shell",
+        "annual_savings": 646151,
+        "status": "finalized",
+        "status_notes": "15 % price reduction and enhanced marketing fund effective 2/10/2025."
+      },
+      {
+        "category_name": "Oil & Lubricants \u2013 Chevron",
+        "annual_savings": 227793,
+        "status": "finalized",
+        "status_notes": "8 % savings; billing corrected retro-actively to 3/1/2025."
+      },
+      {
+        "category_name": "Oil & Lubricants \u2013 ExxonMobil",
+        "annual_savings": 138266,
+        "status": "finalized",
+        "status_notes": "10 % savings on $1.36 M spend; live 3/1/2025."
+      },
+      {
+        "category_name": "Filters \u2013 Fleetguard",
+        "annual_savings": 141127,
+        "status": "finalized",
+        "status_notes": "Enterprise pricing agreement implemented 1/20/2024."
+      },
+      {
+        "category_name": "Filters \u2013 Baldwin",
+        "annual_savings": 80356,
+        "status": "finalized",
+        "status_notes": "3 % savings with negotiated national program live 2/14/2025."
+      },
+      {
+        "category_name": "Telematics (Samsara)",
+        "annual_savings": 23285,
+        "status": "finalized",
+        "status_notes": "Additional 10 % hardware discount for 5-year term; contract executed 10/31/2024."
+      },
+      {
+        "category_name": "Fuel (Comdata Fleet Card)",
+        "annual_savings": 43494,
+        "status": "finalized",
+        "status_notes": "Enterprise card with 1.8 % effective rebate; agreement signed, rollout underway."
+      },
+      {
+        "category_name": "Office Supplies (ODP/OMNIA)",
+        "annual_savings": 36381,
+        "status": "finalized",
+        "status_notes": "13 % savings through cooperative contract; joinder signed 4/1/2025."
+      },
+      {
+        "category_name": "General Industrial Supplies",
+        "annual_savings": 12711,
+        "status": "in progress",
+        "status_notes": "MSC/OMNIA assessment validated 17 % savings; awaiting leadership approval."
+      },
+      {
+        "category_name": "After-Market Parts \u2013 CS T&T",
+        "annual_savings": 76207,
+        "status": "in progress",
+        "status_notes": "RFP with New Life Parts shows 15 % potential rebate; negotiations active."
+      },
+      {
+        "category_name": "After-Market Parts \u2013 Remaining",
+        "annual_savings": 62125,
+        "status": "in progress",
+        "status_notes": "Additional supplier negotiations underway; savings estimate based on current bids."
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Opportunity reviewed but client deferred action to 2026; no sourcing work underway."
+      },
+      {
+        "category_name": "Waste Management",
+        "reason": "Analysis performed but project placed on hold; no vendor engagement yet."
+      },
+      {
+        "category_name": "P-Card, Telecom, Uniforms, Tires",
+        "reason": "Listed as low-priority / on-hold\u2014no material sourcing activity to date."
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 110,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "First hard savings (Filters) went live 1/20/2024, roughly 3.5 months after October 2023 kickoff."
+      },
+      "notes": "Majority of categories required only contract amendments with incumbents, enabling rapid realization."
+    },
+    "operational_improvements": "Created enterprise-wide vendor programs that consolidated eight business units under unified pricing, delivered centralized spend visibility, and introduced automated rebate tracking for fuel and lubricants.",
+    "proof_points": [
+      {
+        "statement": "15 % reduction on Shell bulk oil (price dropped to $10.39/gal net of rebate), generating $646K annual savings.",
+        "category": "Oil & Lubricants \u2013 Shell",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+            "page_or_slide": "6"
+          }
+        ]
+      },
+      {
+        "statement": "Unified Comdata fuel card delivers a guaranteed 1.8 % rebate, replacing six disparate programs and saving $43K annually.",
+        "category": "Fuel",
+        "evidence": [
+          {
+            "source_file": "Epika Project Close-Out/Fuel/Epika Fuel Savings Calculation.xlsx",
+            "page_or_slide": "Sheet1"
+          }
+        ]
+      },
+      {
+        "statement": "Consolidating filter spend with Fleetguard and Baldwin reduced prices by up to 10 %, capturing $221K in verified savings.",
+        "category": "Filters",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+            "page_or_slide": "3"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Epika Case Study v5.docx",
+    "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+    "Epika Project Close-Out/Fuel/Epika Fuel Savings Calculation.xlsx"
+  ],
+  "extraction_notes": [
+    "Total savings: Case Study (Priority 2) reports $1.5M which overrides $1.50\u20131.51M range in Priority 3 update.",
+    "Per-category savings taken from May 16 2025 Savings Dashboard (highest-priority source that lists category-level detail).",
+    "Finalized savings sum to $1,336,853; difference to $1.5M reported as in-progress savings.",
+    "OEM and GIS opportunities shown in update but NOT counted because they were not part of the six categories cited in the Case Study final result.",
+    "Confidence marked medium where reconciliation between Case Study total and Update detail was required."
+  ]
+}

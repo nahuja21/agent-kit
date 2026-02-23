@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objective, quantified $412K savings, and multiple proof-points are documented. Meets all readiness criteria.",
+    "headline": "Outpatient addiction treatment network captures $412K in annual savings and 1.6\u00d7 ROI through Treya-led sourcing overhaul",
+    "client_problem_statement": "SaVida Health\u2019s rapid, PE-backed expansion to 20+ clinics left it with a decentralized, low-maturity purchasing model. Vendor contracts, pricing and data were fragmented across locations, obscuring more than $5 million in annual indirect and clinical support spend. With Council Capital targeting margin improvement and near-term value creation, SaVida needed a partner to quickly uncover savings while safeguarding clinical operations and growth plans.",
+    "client_problem_anonymized": "A rapidly expanding outpatient addiction treatment network with 20+ clinics operated with a decentralized, low-maturity purchasing model. Vendor contracts, pricing and data were fragmented across locations, obscuring more than $5 million in annual indirect and clinical support spend. With the private equity ownership group focusing on operational efficiency and margin improvement, the organization needed a partner to quickly uncover savings while safeguarding clinical operations and growth plans.",
+    "approach_summary": [
+      "Analyzed $5.3 M in spend across 10 indirect and clinical support categories to confirm $4.3 M in addressable opportunity.",
+      "Renegotiated the client\u2019s Athenahealth EMR contract via a competitive RFP and benchmarking process, cutting fees from 4.56 % to 3.40 %.",
+      "Enrolled the client in Provista\u2019s group purchasing organization, securing double-digit price reductions on high-usage medical and office supply SKUs.",
+      "Developed an IT hardware sourcing strategy using competitive VAR quotes and GPO leverage to standardize specs and lower unit costs.",
+      "Launched a telecom consolidation program to migrate 40+ site-level Comcast accounts into a single managed-services agreement, optimizing bandwidth and pricing."
+    ],
+    "top_levers": [
+      "Contract renegotiation",
+      "GPO tier optimization",
+      "Service/vendor consolidation",
+      "Competitive benchmarking & RFP"
+    ],
+    "value_delivered_blurb": "Treya delivered $412,065 in validated annual run-rate savings\u2014squarely within the upper end of the original $240\u2013$470 K target range\u2014and locked in $357,889 of that total within the first seven months. The savings generate a 1.6\u00d7 return on Treya\u2019s hybrid fees, surpassing the 1.2\u00d7 guarantee, while new GPO enrollment, standardized IT specs and a consolidated telecom platform establish sustainable procurement processes for future growth.",
+    "where_we_were_unique": [
+      "Healthcare IT negotiation expertise drove a 22 % reduction on the mission-critical Athenahealth EMR platform.",
+      "Preferred access to Provista GPO unlocked pricing tiers the client could not achieve independently.",
+      "Hands-on data collection overcame fragmented AP records and supplier non-responsiveness to build an actionable baseline.",
+      "Hybrid fee structure aligned incentives and guaranteed savings, ultimately delivering 33 % more ROI than the contractual minimum."
+    ]
+  },
+  "generation_notes": [
+    "Savings, percentages and timelines pulled directly from Closeout deck figures.",
+    "ROI calculated using fixed fee $175K plus estimated $90.9K variable (45% of savings above $210K).",
+    "Problem statements reference Council Capital only in the non-anonymized version per instructions."
+  ]
+}

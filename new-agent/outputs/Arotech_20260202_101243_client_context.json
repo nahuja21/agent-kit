@@ -1,0 +1,47 @@
+{
+  "client": {
+    "client_name": "Arotech Corporation",
+    "industry_primary": "Defense & Security Products",
+    "industry_secondary": "Training & Simulation; Battery & Power Systems",
+    "primary_industry_sector": "Electronics, Aerospace & Defense Manufacturing",
+    "business_model": "Specialty defense contractor that designs and manufactures high-fidelity training/simulation systems and advanced portable power solutions through multiple U.S. and Israeli facilities.",
+    "sponsor_pe_firm": "Albion River (acquired January 2025; previously owned by Greenbriar Equity Group 2019-2025)",
+    "client_history": "Founded in 1990 and incorporated in Delaware, Arotech grew into a niche defense supplier with two main divisions\u2014Training & Simulation and Power Systems\u2014serving military and law-enforcement markets worldwide. It was a NASDAQ-listed public company until December 2019, when Greenbriar Equity Group took it private, and was subsequently acquired by Albion River in 2025."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 96600000,
+      "currency": "USD",
+      "confidence": "medium",
+      "source": "Wikipedia article citing FY-2018 10-K; Zippia company revenue page (both report $96.6 M for 2018)",
+      "notes": "Last publicly reported revenue before going private; no financials released post-2019."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 5,
+      "confidence": "low",
+      "source": "Arotech 2018 Annual Report (Ann Arbor MI HQ; Hanahan SC; Oviedo FL; Beit Shemesh & Dimona, Israel)",
+      "notes": "Report lists these five principal facilities; current site count could differ but no newer official data available."
+    },
+    "employees": {
+      "count": 472,
+      "confidence": "medium",
+      "source": "Wikipedia (citing FY-2018 10-K) and Investing.com profile \u2013 both list 472 employees for 2018",
+      "notes": "Employee figure consistently reported for 2017-2018; a 2025 Equilar snapshot gives 500-1,000, but without detail. Using last precise public figure."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Arotech_Procurement Cost Reduction Services Agreement vF - signed.pdf (company legal name)",
+    "Arotech 2018 Annual Report (Ann Arbor, Hanahan, Oviedo, Beit Shemesh, Dimona locations)",
+    "en.wikipedia.org/wiki/Arotech_Corporation (revenue, employees, ownership timeline)",
+    "zippia.com/arotech-careers-945/revenue (2018 revenue figure)",
+    "businesswire.com/news/.../Albion-River-Acquires-Arotech-Corporation (2025 ownership change)",
+    "nasdaq.com/.../greenbriar-equity-group-completes-acquisition-of-arotech-corporation (2019 ownership change)"
+  ],
+  "extraction_notes": [
+    "Revenue: Both Wikipedia and Zippia quote identical $96.6 M for FY-2018; no newer public data since company went private, so confidence set to medium.",
+    "Employees: 472 appears in multiple 2017-2018 sources; later estimates vary widely, creating medium confidence.",
+    "Locations: Only principal facilities enumerated in last public annual report; company may have added or consolidated sites after going private, hence low confidence.",
+    "Private-equity ownership updated to Albion River based on 2025 Business Wire press release; prior Greenbriar ownership also noted for context."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology, PC (APDerm)",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology services",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Physician-led, multi-site dermatology practice network providing medical, surgical and cosmetic dermatology care across New England.",
+    "sponsor_pe_firm": "Waud Capital Partners",
+    "client_history": "Founded in 1992 as a solo dermatology practice, APDerm has expanded through acquisitions and de-novo openings to become the largest physician-led dermatology network in New England."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 44700000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Growjo company profile (growjo.com/company/APDerm, accessed 2024)",
+      "notes": "Public estimates vary widely: LeadIQ $2.7M (2025), Growjo ~$44.7M, Owler $25-100M range. No official figure available; highest specific estimate (Growjo) used but reliability is low."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 32,
+      "confidence": "medium",
+      "source": "Businesswire press release 12-Oct-2021 (businesswire.com/news/home/20211012005141)",
+      "notes": "Release states APDerm 'operates 32 locations throughout Massachusetts, New Hampshire, and Rhode Island'. Company overview page later mentions 'over 40 locations', indicating growth; 32 is the last concrete count."
+    },
+    "employees": {
+      "count": 205,
+      "confidence": "low",
+      "source": "HighPerformr.ai company profile (highperformr.ai/company/apderm, accessed 2024)",
+      "notes": "Headcount estimates range from 105 (Clodura) to 501 (LeadIQ) and 501-1,000 (Indeed). Mid-range figure of 205 selected; lack of concordance yields low confidence."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf (page 1)",
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Businesswire press release 2021-10-12 (APDerm Opens 6th Office in New Hampshire)",
+    "Growjo company profile (growjo.com)",
+    "LeadIQ company profile (leadiq.com)",
+    "Owler company profile (owler.com)",
+    "HighPerformr.ai company profile",
+    "Bouncewatch.com listing"
+  ],
+  "extraction_notes": [
+    "Official legal name verified from executed services agreement: 'Adult & Pediatric Dermatology, PC'.",
+    "PE ownership confirmed in multiple places: case study overview and Apex-Partners summary of Waud Capital investment (2017).",
+    "Revenue, employee and location figures are based on third-party estimates; no audited or company-reported numbers were located, leading to lower confidence.",
+    "No EBITDA information found in any document or web source."
+  ]
+}

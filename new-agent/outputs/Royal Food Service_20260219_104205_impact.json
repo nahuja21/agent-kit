@@ -1,0 +1,190 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Royal Food Service secures $1.1 M in annual savings across freight, packaging and labor, with over $1.05 M already implemented",
+      "narrative": "Treya Partners partnered with Royal Food Service to run targeted sourcing events for freight, non-IT temporary labor, multiple packaging streams, fuel and select indirect categories. The engagement delivered $1,098,629 in verified annual savings, of which $1,050,492 (96%) is already finalized and flowing through at current run-rates. Key wins include a $537 K inbound freight renegotiation with incumbent carriers, $309 K in packaging savings through multi-round RFPs, and a 4 % reduction on contingent labor mark-ups. Minor additional opportunities\u2014labels testing, Grainger conversion for industrial supplies, and outbound LTL\u2014are in final validation, positioning Royal for a further $48 K once completed."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1098629,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Grand Total \u2018Savings Avg.\u2019 figure from Closeout Savings Dashboard"
+      },
+      "finalized_savings": {
+        "amount": 1050492,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Sum of categories explicitly described as implemented/complete in Closeout report"
+      },
+      "in_progress_savings": {
+        "amount": 48137,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Labels, GIS (McMaster-Carr), and LTL/FTL still undergoing testing or roll-out"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Inbound Freight",
+        "annual_savings": 537550,
+        "status": "finalized",
+        "status_notes": "Carrier rates implemented after RFP and direct negotiations"
+      },
+      {
+        "category_name": "Non-IT Temporary Labor",
+        "annual_savings": 202607,
+        "status": "finalized",
+        "status_notes": "Agency consolidation and markup reductions in place"
+      },
+      {
+        "category_name": "Packaging \u2013 Corrugate",
+        "annual_savings": 151781,
+        "status": "finalized",
+        "status_notes": "Awards to Rusken (RFC) & Victory (RFS) live"
+      },
+      {
+        "category_name": "Packaging \u2013 Films",
+        "annual_savings": 61033,
+        "status": "finalized",
+        "status_notes": "Improved roll-stock & stretch wrap pricing implemented"
+      },
+      {
+        "category_name": "Packaging \u2013 Steam Trays & Pads",
+        "annual_savings": 57594,
+        "status": "finalized",
+        "status_notes": "Conversion to Bunzl soaker pads completed"
+      },
+      {
+        "category_name": "Packaging \u2013 Rigid Packaging",
+        "annual_savings": 14682,
+        "status": "finalized",
+        "status_notes": "Inline domestic option through Bunzl adopted"
+      },
+      {
+        "category_name": "Packaging \u2013 Misc",
+        "annual_savings": 23685,
+        "status": "finalized",
+        "status_notes": "Bucket / lid pricing improvements with Bunzl in effect"
+      },
+      {
+        "category_name": "Fuel (DEF)",
+        "annual_savings": 1560,
+        "status": "finalized",
+        "status_notes": "Shift to market-based DEF pricing with Green Oil"
+      },
+      {
+        "category_name": "LTL / FTL Outbound Freight",
+        "annual_savings": 11620,
+        "status": "in progress",
+        "status_notes": "Ryan Transportation added to lane mix; savings tracking through August"
+      },
+      {
+        "category_name": "General Industrial Supplies (McMaster-Carr \u2192 Grainger)",
+        "annual_savings": 15457,
+        "status": "in progress",
+        "status_notes": "Grainger GPO joinder signed; utilization ramp underway"
+      },
+      {
+        "category_name": "Labels",
+        "annual_savings": 21060,
+        "status": "in progress",
+        "status_notes": "Supplier samples under test; savings range $12-30 K"
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Utilities \u2013 Electric",
+        "reason": "Removed from scope \u2013 regulated market"
+      },
+      {
+        "category_name": "IT Hardware",
+        "reason": "Removed from scope \u2013 low spend"
+      },
+      {
+        "category_name": "Uniforms",
+        "reason": "Removed from scope \u2013 long-term contract"
+      },
+      {
+        "category_name": "Telecom \u2013 Data & Voice",
+        "reason": "Removed from scope \u2013 minimal spend"
+      },
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Removed from scope \u2013 client retained broker"
+      },
+      {
+        "category_name": "GIS (Grainger direct)",
+        "reason": "Removed \u2013 already competitive pricing"
+      },
+      {
+        "category_name": "Forklifts",
+        "reason": "Removed \u2013 lease schedule confirmed competitive"
+      },
+      {
+        "category_name": "Fleet",
+        "reason": "Removed \u2013 client to remain with Penske"
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 180,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "First savings (packaging & DEF fuel) implemented by late June 2025 after December 2024 kickoff"
+      },
+      "notes": "Quick-win fuel and packaging changes generated savings within the first six months of the engagement."
+    },
+    "operational_improvements": "Established competitive carrier and packaging supplier panels, extended payment terms, and introduced a Grainger GPO program giving Royal a dedicated support rep and improved inventory access.",
+    "proof_points": [
+      {
+        "statement": "$537 K (5 %) annual savings locked in on inbound freight by renegotiating incumbent carrier rates.",
+        "category": "Inbound Freight",
+        "evidence": [
+          {
+            "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+            "page_or_slide": "10",
+            "quote": "Royal locked in $537K (5%) in annual savings, with finalized carrier rates now implemented."
+          }
+        ]
+      },
+      {
+        "statement": "Multi-round packaging RFP delivered $309 K in combined annual savings across corrugate, film and rigid packaging.",
+        "category": "Packaging",
+        "evidence": [
+          {
+            "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+            "page_or_slide": "8",
+            "quote": "RFC/RFS combined packaging savings across all product lots of ~$309K annually."
+          }
+        ]
+      },
+      {
+        "statement": "Consolidating agency usage and introducing Jibe reduced contingent labor mark-ups, saving $203 K annually on a $4.9 M baseline.",
+        "category": "Non-IT Temporary Labor",
+        "evidence": [
+          {
+            "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+            "page_or_slide": "9",
+            "quote": "Potential annual savings of $203K (~4.1%) based on the updated $4.9M baseline."
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf"
+  ],
+  "extraction_notes": [
+    "All savings figures taken from Priority-1 Closeout report \u2013 supersedes earlier updates.",
+    "Finalized vs in-progress designation inferred from narrative: Closeout calls labels, GIS and outbound freight \u2018pending/testing\u2019, all other categories marked complete or implemented.",
+    "Savings totals reconcile to Closeout \u2018Grand Total\u2019 of $1,098,629.",
+    "LTL/FTL treated as outbound freight savings still being validated; no separate finalized confirmation provided."
+  ]
+}

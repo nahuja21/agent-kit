@@ -1,0 +1,33 @@
+{
+  "engagement_background": {
+    "objective": "Drive $655K\u2013$1.2M in hard cost savings across key indirect spend categories (transportation, packaging, merchant processing, employee benefits, etc.) within ~6 months, thereby creating $12\u201318 M in enterprise value and helping Christianbook stand-up a best-in-class, scalable procurement capability to support its PE owner (Nonantum) and future growth.",
+    "scope_summary": "8 primary indirect categories representing roughly $18 M of the $93 M annual spend are in scope (LTL/FTL freight, merchant processing fees, corrugated, packaging & shipping supplies, employee benefits, janitorial services, marketing software, and Ingram Book Group distribution). Low-spend / low-opportunity areas may be dropped and direct COGS are out of scope. Additional exploratory workstreams for advertising and IT may be added after data review.",
+    "constraints_challenges": [
+      "Long-standing incumbent relationships (e.g., corrugated, Old Dominion LTL) create sensitivity to competitive bidding and change.",
+      "Supplier non-responsiveness or pushback when providing detailed line-item usage data needed for baselining.",
+      "Risk of \u201cside conversations\u201d between Christianbook staff and suppliers that could undermine unified negotiation strategy.",
+      "Limited internal procurement resources; Treya must do the heavy lifting while securing timely stakeholder input.",
+      "Aggressive timeline to finalize awards by mid-February 2025 to meet private-equity value-creation targets."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "hybrid",
+    "maturity": "medium",
+    "data_availability": "12-month AP transaction file (~$93 M spend) was available; additional unit-level usage data and contracts must be gathered from suppliers and functional owners.",
+    "data_quality_notes": "Spend categorization relied on supplier and GL descriptions; tail spend may be unmapped, and some high-spend suppliers may not supply complete historical usage data, requiring representative samples.",
+    "source_file": "Kickoff/Christian Book- Strategic Sourcing Project Kickoff.pptx (slides 3,5-7) and Assessment & Proposal slides 3-4",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessment & Proposal/Savings Assessment + Proposal Christianbook.pptx",
+    "Kickoff/Christian Book- Strategic Sourcing Project Kickoff.pptx",
+    "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+    "Case Study- Christianbook.docx"
+  ],
+  "extraction_notes": [
+    "Operating model classified as 'hybrid' because multiple functions (logistics, distribution center, IT, HR) own categories but no formal centralized procurement was referenced; Treya aims to create best-in-class processes.",
+    "Maturity assessed as 'medium' since Christianbook has contracts and long-term suppliers but lacks enterprise-wide strategic sourcing; statement about establishing best-in-class process supports this.",
+    "Data availability and quality inferred from repeated emphasis on collecting additional line-item data and the need to baseline spend.",
+    "Constraints list draws directly from 'Typical Project Challenges & Mitigation' slide and case study discussion of incumbent relationships."
+  ]
+}

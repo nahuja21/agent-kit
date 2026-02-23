@@ -8,6 +8,40 @@ prompt:
   instructions: |
     You are extracting PROJECT RESULTS and IMPACT from a Treya Partners engagement.
     
+    DOCUMENT PRIORITY HIERARCHY (CRITICAL - READ THIS FIRST):
+    
+    You will receive documents tagged with priority levels. When the SAME data point
+    (e.g., a category's savings amount) appears in multiple documents with DIFFERENT values,
+    you MUST use the value from the HIGHEST-PRIORITY document:
+    
+    🥇 PRIORITY 1 — Project Close Out / Final Report / Close Out Summary
+       → ALWAYS wins. This is the final, reviewed version of all results.
+       → Use this for: total savings, category savings, finalized status, final vendor selections.
+    
+    🥈 PRIORITY 2 — Case Study
+       → Second priority. Usually aligns with Close Out.
+       → Use this for: narrative context, proof points, timeline.
+       → If a number here conflicts with Close Out, use the Close Out number.
+    
+    🥉 PRIORITY 3 — Most Recent Project Update (latest date)
+       → Only use for savings numbers if Close Out AND Case Study are both missing.
+       → Useful for: timeline details, in-progress status, context on approach.
+    
+    ⚠️  PRIORITY 4 — Earlier Project Updates
+       → NEVER use these for final savings numbers.
+       → Numbers here are OUTDATED — they were correct at the time but have since been superseded.
+       → Only use for: historical context, timeline of how categories evolved.
+    
+    ⛔ NEVER USE — Spend Analysis, Assessment, Proposal, or Agreement documents
+       → These contain ESTIMATES from before the project started, not actual results.
+       → If a number only appears in these documents and nowhere else, do NOT report it as a result.
+    
+    CONFLICT RESOLUTION: If you find conflicting numbers between documents:
+    1. Use the highest-priority document's number
+    2. Log the discrepancy in `extraction_notes` with both values and their sources
+       Example: "IT Managed Services: Close Out states $26,556 (used). Earlier update (10/21) stated $31,459."
+    3. Set confidence to "medium" when there was a conflict (even if you used the right source)
+    
     CRITICAL - ONLY INCLUDE CATEGORIES WITH ACTUAL WORK DONE:
     
     ✅ INCLUDE categories that show evidence of actual work:
@@ -49,7 +83,7 @@ prompt:
     ---
     
     ## Document Contents
-    (Extract project results from savings dashboard, closeout, status updates)
+    (Documents are tagged with priority levels — see hierarchy below)
     
     {{document_contents}}
     
@@ -57,7 +91,18 @@ prompt:
     
     # YOUR TASK
     
-    Extract PROJECT RESULTS from the savings dashboard, closeout, or status updates.
+    Extract PROJECT RESULTS using the document priority hierarchy.
+    
+    ## DOCUMENT PRIORITY REMINDER
+    
+    Each document section above is tagged with a PRIORITY level:
+    - **[PRIORITY 1 - FINAL]** = Close Out / Final Report → ALWAYS use these numbers
+    - **[PRIORITY 2 - CASE STUDY]** = Case Study → Use if Close Out is missing
+    - **[PRIORITY 3 - LATEST UPDATE]** = Most recent Project Update → Only if above are missing
+    - **[PRIORITY 4 - EARLIER UPDATE]** = Older Project Updates → NEVER use for final numbers
+    
+    When numbers conflict between documents, ALWAYS use the highest-priority source and note
+    the discrepancy in `extraction_notes`.
     
     ## CRITICAL: WHAT TO INCLUDE vs EXCLUDE
     
@@ -272,6 +317,9 @@ prompt:
        - "low": Uncertain or conflicting sources
     10. **Source tracking**: Note which document provided each data point
     11. **Cross-reference**: Compare Exhibit A categories to closeout - if a category only appears in Exhibit A, it wasn't worked on
+    12. **Document priority**: ALWAYS prefer Close Out > Case Study > Latest Update > Earlier Updates
+    13. **Conflict logging**: When sources disagree on a number, log BOTH values and sources in extraction_notes
+    14. **Never use estimates as results**: Assessment/Proposal/Agreement numbers are pre-project ESTIMATES — do not report them as actual results
 
 parameters:
   - name: client_name

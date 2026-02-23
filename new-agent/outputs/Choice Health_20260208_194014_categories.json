@@ -1,0 +1,322 @@
+{
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "category_l1": "Clinical",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-02-15",
+      "end_date": "2024-07-19",
+      "status": "implemented",
+      "vendors_before": [
+        "McKesson (incumbent)"
+      ],
+      "vendors_after": [
+        "McKesson (new 2-year agreement)"
+      ],
+      "levers": [
+        "Full competitive RFP",
+        "Volume aggregation",
+        "Contract renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Preference to stay with McKesson if commercially competitive",
+        "operational_constraints": "No clinical stockouts permitted during pricing transition",
+        "contractual_constraints": "New agreement term locked for 2 years (7/15/2024-7/15/2026)",
+        "implementation_constraints": "Pricing change implemented system-wide across 40+ branches"
+      },
+      "baseline_spend": {
+        "amount": 1301434,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend shown on Savings Dashboard slide 3"
+      },
+      "savings_annual_run_rate": {
+        "amount": 276333,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Average savings reported on Savings Dashboard slide 3"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 21.2,
+      "notes": "Round-2 RFP delivered 20%+ savings; contract fully executed 7/19/24.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "3",
+          "quote": "Medical Supplies | $1,301,434 | 21-22% | $268,123 \u2013 $284,543 | Avg $276,333",
+          "date_extracted": "2026-02-09"
+        },
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "7",
+          "quote": "Choice executed new McKesson contract",
+          "date_extracted": "2026-02-09"
+        },
+        {
+          "source_file": "Categories/Medical Supplies + Equipment/Medical Supplies RFP/Round 2 Target Feedback/Choice Health - Round 2 RFP Savings Analysis.xlsx",
+          "page_or_slide": "Summary",
+          "quote": "McKesson bid yields $257,360 (20%) savings on full baseline",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Fleet",
+      "category_l1": "Indirect",
+      "category_l2": "Fleet",
+      "category_l3": null,
+      "start_date": "2024-02-16",
+      "end_date": null,
+      "status": "negotiated",
+      "vendors_before": [
+        "Enterprise Fleet Management (incumbent)",
+        "WEX (fuel cards)"
+      ],
+      "vendors_after": [
+        "Enterprise Fleet Management (amended full-maintenance program)"
+      ],
+      "levers": [
+        "Program restructuring",
+        "Contract renegotiation",
+        "Benchmarking analysis"
+      ],
+      "constraints": {
+        "supplier_constraints": "Enterprise required for existing lease portfolio",
+        "operational_constraints": "No interruption to vehicle availability",
+        "contractual_constraints": "Existing lease terms mid-cycle; addendum negotiated instead of new master",
+        "implementation_constraints": "Client signature pending before rate changes take effect"
+      },
+      "baseline_spend": {
+        "amount": 3764808,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend shown for Fleet on Savings Dashboard slide 3"
+      },
+      "savings_annual_run_rate": {
+        "amount": 139850,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Savings identified; awaiting client signature"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 4.0,
+      "notes": "Enterprise provided mileage-bucket pricing; Choice to execute Service Agreement Addendum.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "3",
+          "quote": "Fleet | $3,764,808 | 4% | $139,850 savings",
+          "date_extracted": "2026-02-09"
+        },
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "8",
+          "quote": "Estimated Total Annual Savings | $139,850",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies",
+      "category_l1": "Indirect",
+      "category_l2": "MRO & Office",
+      "category_l3": null,
+      "start_date": "2024-03-27",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Business Essentials (incumbent)"
+      ],
+      "vendors_after": [
+        "GPO pricing via OMNIA",
+        "Procure Analytics",
+        "GroupSource"
+      ],
+      "levers": [
+        "GPO benchmarking",
+        "Pricing RFP",
+        "Vendor data collection"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Need continuous supply of paper and toner during any transition",
+        "contractual_constraints": "No existing long-term contract with incumbent",
+        "implementation_constraints": "Awaiting full P x Q data to confirm SKU-level savings"
+      },
+      "baseline_spend": {
+        "amount": 158145,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend value on Savings Dashboard slide 3"
+      },
+      "savings_annual_run_rate": {
+        "amount": 19768,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Average of 10-15% range shown on slide"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 12.5,
+      "notes": "Waiting on GPO responses to finalize go-forward supplier recommendation.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "3",
+          "quote": "Office Supplies | $158,145 | 10-15% | Avg $19,768",
+          "date_extracted": "2026-02-09"
+        },
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "5",
+          "quote": "GPO pricing requests through OMNIA, Procure Analytics, and GroupSource sent on 7/25 | Awaiting GPO pricing",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Temps \u2013 Therapists",
+      "category_l1": "Labor",
+      "category_l2": "Temporary Staffing",
+      "category_l3": "Therapists",
+      "start_date": "2024-05-28",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Capstone Therapy",
+        "Alliance Therapy Services",
+        "HealthPRO Heritage",
+        "InHome Therapy",
+        "Ultra Therapy Solutions",
+        "Integrity Therapy Service",
+        "Balanced Therapy PLLC"
+      ],
+      "vendors_after": [],
+      "levers": [
+        "Supplier benchmarking",
+        "Rate card standardization",
+        "Negotiation preparation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Regional therapy coverage requirements vary by state",
+        "operational_constraints": "Must maintain patient therapy coverage during negotiations",
+        "contractual_constraints": "Multiple individual contracts with varying termination clauses",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 994386,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend figure from Savings Dashboard slide 3"
+      },
+      "savings_annual_run_rate": {
+        "amount": 59663,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Mid-point of 4-8% range"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 6.0,
+      "notes": "Negotiation materials to be shared with client on 8/15/24; supplier calls completed.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "3",
+          "quote": "Temps - Therapists | $994,386 | 4-8% | Avg $59,663",
+          "date_extracted": "2026-02-09"
+        },
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "5",
+          "quote": "Phone conversations held week of 7/22 with all suppliers to understand geographical coverage and pricing structure | Treya to share negotiation materials ... on 8/15",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Temp Staff \u2013 Nurses",
+      "category_l1": "Labor",
+      "category_l2": "Temporary Staffing",
+      "category_l3": "Nurses",
+      "start_date": "2024-05-28",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Jogan Health",
+        "No Place Like Home",
+        "Mercy Staffing",
+        "Medtrekkerr LLC",
+        "SnapNurse"
+      ],
+      "vendors_after": [],
+      "levers": [
+        "Supplier interviews",
+        "Rate benchmarking",
+        "Negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Need coverage in rural markets; limited vendor pool in certain geographies",
+        "operational_constraints": "Patient care cannot be interrupted during rate negotiations",
+        "contractual_constraints": "Varied notice periods across current contracts",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 647718,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend value on Savings Dashboard slide 3"
+      },
+      "savings_annual_run_rate": {
+        "amount": 38863,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Average savings reported"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 6.0,
+      "notes": "Supplier phone interviews complete; negotiations to begin mid-August.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "3",
+          "quote": "Temp Staff - Nurses | $647,718 | 4-8% | Avg $38,863",
+          "date_extracted": "2026-02-09"
+        },
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "5",
+          "quote": "Phone conversations held week of 7/22 with all suppliers ... negotiations beginning mid-August",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 5,
+    "implemented_count": 1,
+    "negotiated_count": 1,
+    "in_progress_count": 3,
+    "total_baseline_spend": 6878491,
+    "total_savings": 534477,
+    "average_savings_percentage": 7.8
+  },
+  "extraction_sources": [
+    "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+    "Categories/Medical Supplies + Equipment/Medical Supplies RFP/Round 2 Target Feedback/Choice Health - Round 2 RFP Savings Analysis.xlsx"
+  ],
+  "extraction_notes": [
+    "Baseline and savings figures taken directly from Savings Dashboard slide to align with actual addressed spend.",
+    "Fleet agreement pending final client signature; status marked as negotiated, not implemented.",
+    "Office Supplies, Therapists, and Nurses categories are mid-negotiation; savings figures shown are projected averages."
+  ]
+}

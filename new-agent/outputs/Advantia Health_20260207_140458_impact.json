@@ -1,0 +1,124 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Advantia Health secures $685K in annual recurring savings across six spend categories",
+      "narrative": "Treya Partners helped Advantia Health optimize over $8.5 million in annual spend, delivering $684,936 in validated, recurring savings across six categories. Key wins include a 9% fee reduction with Athena for Billing Systems/RCM, a 14% cut in Medical Supplies costs through distributor consolidation, and the conversion of Sonography Services toward an in-house model. All categories have launched savings, with five fully implemented and Sonography Services midway through transition."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 684936,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Sum of six categories listed as Final Savings in Close-Out report"
+      },
+      "finalized_savings": {
+        "amount": 532821,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "All categories except Sonography Services are fully implemented"
+      },
+      "in_progress_savings": {
+        "amount": 152115,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Sonography Services transition is 50 % complete but savings profile modeled for full year"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Billing Systems / RCM",
+        "annual_savings": 259200,
+        "status": "finalized",
+        "status_notes": "Athena contract amendment executed; 9 % fee reduction effective 9/1/2022"
+      },
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 156610,
+        "status": "finalized",
+        "status_notes": "Competitive bid won by McKesson; consolidated Mid-Atlantic volumes and changed distributor in Heartland"
+      },
+      {
+        "category_name": "Sonography Services",
+        "annual_savings": 152115,
+        "status": "in progress",
+        "status_notes": "Advantia shifting from outsourced pay-per-scan model to in-house staffing; 50 % transition complete"
+      },
+      {
+        "category_name": "IUD Order Management",
+        "annual_savings": 55193,
+        "status": "finalized",
+        "status_notes": "Policy change to purchase at \u22655 units/order captures manufacturer discounts"
+      },
+      {
+        "category_name": "Bayer IUD Program",
+        "annual_savings": 21600,
+        "status": "finalized",
+        "status_notes": "Enrolled in Bayer\u2019s Confidence in Coverage replacement program"
+      },
+      {
+        "category_name": "Lab Services",
+        "annual_savings": 40218,
+        "status": "finalized",
+        "status_notes": "Negotiated incumbent LabCorp pricing; 9 % reduction effective 10/15/2022"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 40,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Earliest savings (IUD Order Management) began 7/11/2022; project kick-off assumed 6/1/2022"
+      },
+      "notes": "First verified savings captured within six weeks of project launch through IUD purchasing policy changes."
+    },
+    "operational_improvements": "Established enterprise-wide purchasing policies, consolidated medical-supply distributors, and transitioned sonography staffing toward an in-house model for greater control and scalability.",
+    "proof_points": [
+      {
+        "statement": "Negotiated Athena Billing Systems fee from 3.39 % to 3.15 %, delivering $259K annual savings (9 %).",
+        "category": "Billing Systems / RCM",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+            "page_or_slide": "3",
+            "quote": "Fee reduction negotiated ($259K in annual savings)"
+          }
+        ]
+      },
+      {
+        "statement": "Competitive bidding and distributor consolidation cut Medical Supplies costs by $156.6K (14 %).",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+            "page_or_slide": "5",
+            "quote": "Competitive bidding exercise resulted in $156K in annual savings"
+          }
+        ]
+      },
+      {
+        "statement": "By enforcing \u22655-unit order quantities, Advantia captured $55K in savings on IUD purchasing.",
+        "category": "IUD Order Management",
+        "evidence": [
+          {
+            "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+            "page_or_slide": "5",
+            "quote": "Behavioral modifications for IUD purchasing led to $55K in annual savings"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx"
+  ],
+  "extraction_notes": [
+    "All savings values taken from Priority-1 Close-Out document; no conflicting numbers found.",
+    "Sonography Services marked 'in progress' per Close-Out note indicating 50 % transition complete.",
+    "Categories such as IT Managed Services, Telecom, Office Supplies and Employee Benefits are excluded\u2014work not completed and no finalized savings in Close-Out."
+  ]
+}

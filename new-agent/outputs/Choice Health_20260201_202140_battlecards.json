@@ -1,0 +1,184 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "McKesson Medical-Surgical",
+      "category": "Medical Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1301434,
+      "final_spend": 1044074,
+      "savings_dollars": 257360,
+      "savings_percent": 20,
+      "levers_applied": [
+        "RFP",
+        "Incumbent renegotiation",
+        "Volume rebate",
+        "Contract extension"
+      ],
+      "alternatives_considered": [
+        "Medline",
+        "Cardinal Health",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": "Matched or beat target pricing in Round-2 RFP and agreed to 20 % overall reduction plus tiered volume rebate while maintaining uninterrupted service and existing logistics network.",
+      "why_not_selected": null,
+      "contract_terms": "Addendum effective 15-Jul-2024 through 15-Jul-2026; firm pricing for term; volume rebate tiers tied to annual spend; option to review pricing with market data at renewal.",
+      "negotiation_leverage": "Competitive RFP with six bidders and detailed SKU-level benchmarks showing 30 % price gaps on 357 SKUs; willingness to shift all volume to best bidder.",
+      "supplier_strengths": [
+        "Broad product catalogue covering home-health SKUs",
+        "Established next-day delivery to 65 % of orders",
+        "Existing EDI integration with Choice Health"
+      ],
+      "supplier_weaknesses": [
+        "Pre-RFP pricing above market on key SKUs",
+        "Limited willingness to hold pricing beyond 24 months"
+      ],
+      "switching_costs": "Moderate\u2014systems already integrated; switching would require formulary changes and nurse retraining but no capital equipment.",
+      "key_contacts": null,
+      "notes": "Savings figure from Round-2 RFP analysis slide (McKesson bid $1.299 M vs $1.556 M bench, 20 % savings). Addendum signed by both parties pending final countersignature.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders",
+        "Significant savings (>20%)",
+        "Incumbent renegotiated"
+      ]
+    },
+    {
+      "supplier_name": "Medline Industries",
+      "category": "Medical Supplies",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 1301434,
+      "final_spend": null,
+      "savings_dollars": 129679,
+      "savings_percent": 10,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "McKesson",
+        "Cardinal Health",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Offered only 10 % savings versus McKesson\u2019s 20 %; did not meet target pricing on high-volume SKUs; service differentiation minimal.",
+      "contract_terms": null,
+      "negotiation_leverage": "Participation in competitive RFP forced incumbent to sharpen pricing.",
+      "supplier_strengths": [
+        "National distribution footprint",
+        "Competitive on wound-care items"
+      ],
+      "supplier_weaknesses": [
+        "Pricing short of target on top 100 SKUs",
+        "No rebate program proposed"
+      ],
+      "switching_costs": "Would require onboarding to Medline portal and data integration.",
+      "key_contacts": null,
+      "notes": "Submitted complete bid in both RFP rounds; remained viable fallback option if McKesson addendum had stalled.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP participant",
+        "Provided benchmark for negotiations"
+      ]
+    },
+    {
+      "supplier_name": "Cardinal Health",
+      "category": "Medical Supplies",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 1301434,
+      "final_spend": null,
+      "savings_dollars": 79702,
+      "savings_percent": 12,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "McKesson",
+        "Medline",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Bid incomplete in Round-1 (UOM issues) and, once corrected, still lagged incumbent and Medline on total cost and rebate structure.",
+      "contract_terms": null,
+      "negotiation_leverage": "Presence as national competitor added pressure despite data issues.",
+      "supplier_strengths": [
+        "Strong chronic-care product lines",
+        "National distribution"
+      ],
+      "supplier_weaknesses": [
+        "Data quality issues in submission",
+        "Savings only 12 %"
+      ],
+      "switching_costs": "Same as other distributors\u2014systems integration and formulary updates.",
+      "key_contacts": null,
+      "notes": "Treya awaiting corrected bid during decision window; ultimately not progressed to contracting.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP participant",
+        "Multiple bidders created leverage"
+      ]
+    },
+    {
+      "supplier_name": "Enterprise Fleet Management",
+      "category": "Fleet",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 3764808,
+      "final_spend": 3624958,
+      "savings_dollars": 139850,
+      "savings_percent": 4,
+      "levers_applied": [
+        "Incumbent renegotiation",
+        "Pricing restructure",
+        "Bucketed mileage rates"
+      ],
+      "alternatives_considered": [],
+      "why_selected": "Agreed to restructure Full Maintenance fees by mileage bucket, reducing per-vehicle cost 13-48 % and aligning charges to actual utilization without switching providers.",
+      "why_not_selected": null,
+      "contract_terms": "Service Agreement Addendum (Full Maintenance) pending client signature; applies to 385 vehicles; rate grid locked for current lease terms.",
+      "negotiation_leverage": "Detailed analysis showed only 126 of 385 vehicles used maintenance monthly, revealing overcharges; potential to solicit competitive bids if pricing not improved.",
+      "supplier_strengths": [
+        "Existing lease portfolio and telematics data",
+        "Ability to customize maintenance program quickly"
+      ],
+      "supplier_weaknesses": [
+        "Initial flat-rate structure overpriced low-mileage vehicles"
+      ],
+      "switching_costs": "High\u2014would require buyout of existing leases and re-title of fleet; disruption to field staff.",
+      "key_contacts": null,
+      "notes": "Savings validated in Enterprise analysis slide (estimated $139.9 K annual). Addendum expected Q3-2024 start.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant negotiation",
+        "Pricing model overhaul",
+        "Savings >$50K"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 22,
+    "battlecards_generated": 4,
+    "categories_with_battlecards": [
+      "Medical Supplies",
+      "Fleet"
+    ],
+    "skipped_reason": "Office Supplies and Temp Labor categories still in progress or lacked finalized negotiation details; suppliers in those areas were therefore omitted."
+  },
+  "extraction_notes": [
+    "RFP round-2 pricing files and project update slides provided exact savings figures for McKesson, Medline, and Cardinal.",
+    "Enterprise savings taken from slide 8 of Strategic Sourcing Update (6/12 Full Maintenance analysis).",
+    "No final contracting or savings data yet available for Temp Labor or Office Supplies suppliers; therefore not included."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "engagement_background": {
+    "objective": "Create measurable procurement cost savings by leveraging APDerm\u2019s enterprise-wide purchasing power across indirect spend categories, supporting Waud Capital\u2019s value-creation plan while ensuring business needs and service levels were maintained.",
+    "scope_summary": "Two-phase strategic sourcing engagement addressing roughly $6.3 million in annual, addressable spend across 10+ indirect categories (e.g., Billing Services, Janitorial Services, IT Managed Services, Laundry/Linen, Non-IT Temp Labor, Copier/Print, Uniforms, Medical & Office Supplies). Waste Management was later removed from scope due to limited savings viability; direct clinical revenue-generating costs were not included.",
+    "constraints_challenges": [
+      "Decentralized, multi-site purchasing after years of acquisitive growth created a fragmented supplier base with limited leverage.",
+      "Poor spend visibility and data quality\u2014vendor names required extensive deduplication and GL mapping; some supplier usage data was incomplete or unresponsive.",
+      "Inflationary environment and pandemic-related supply-chain disruptions drove upward price pressure during the project.",
+      "Long-standing incumbent relationships made stakeholders sensitive to supplier changes and reduced switching credibility.",
+      "Private-equity timeline pressured rapid sourcing cycles and quick savings realization."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Accounts-payable invoice extracts and GL data were available for a 12-month period; no centralized contract repository; supplier usage data had to be requested individually.",
+    "data_quality_notes": "Inconsistent vendor naming, many unmapped categories, and gaps in historical usage data necessitated extensive cleansing, deduplication, and benchmarking before baseline creation.",
+    "source_file": "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx; Case Study/Treya Case Study_APDerm vF.pdf; Wave 2/Kickoff/APDerm Phase 2 Project Kickoff (Nov. 9, 2021).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx",
+    "Wave 2/Kickoff/APDerm Phase 2 Project Kickoff (Nov. 9, 2021).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model explicitly described as decentralized in challenge section of case study.",
+    "Maturity classified as low because documents highlight absence of leveraged contracts and need for Treya to establish sourcing discipline.",
+    "Data quality observations pulled from spend-analysis workbook showing extensive vendor deduplication tabs and comments on missing supplier usage data."
+  ]
+}

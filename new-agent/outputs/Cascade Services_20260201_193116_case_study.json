@@ -1,0 +1,35 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client name, industry, clear objectives, quantified $927K savings, and multiple documented proof points are all present.",
+    "headline": "PE-backed residential HVAC & plumbing platform unlocks $927K in annual savings in just 6 months with Treya Partners",
+    "client_problem_statement": "Cascade Residential Services, a fast-growing platform of 13 HVAC, plumbing and electrical brands backed by Trive Capital and LP First Capital, managed more than $32 million in annual spend through highly decentralized branch-level purchasing. The fragmented approach left the company paying inconsistent prices to OEMs and distributors and missing out on enterprise-level rebate programs. With margin expansion and $16.6 million in expected value creation on the line, Cascade turned to Treya Partners to quickly centralize sourcing and capture hard savings across critical direct and indirect categories.",
+    "client_problem_anonymized": "A fast-growing residential HVAC, plumbing and electrical services platform managed more than $32 million in annual spend through highly decentralized branch-level purchasing. The fragmented approach left the company paying inconsistent prices to OEMs and distributors and missing out on enterprise-level rebate programs. With a focus on operational efficiency and margin improvement, the organization turned to Treya Partners to quickly centralize sourcing and capture hard savings across critical direct and indirect categories.",
+    "approach_summary": [
+      "Conducted a rapid spend diagnostic covering nine categories and $32.9 M in baseline spend to identify $0.87\u2013$1.7 M in addressable savings opportunities.",
+      "Renegotiated national pricebooks and back-end rebate programs with Carrier and Rheem, securing rebate tiers up to 15 % and front-end price improvements without disrupting field operations.",
+      "Launched competitive events with Lennox and Johnstone and benchmarked pricing, positioning the client to capture an additional $397K in OEM rebates now in final review.",
+      "Ran a multi-vendor RFP for HVACR & plumbing supplies, memorializing unit-price reductions via MOUs with Hughes Supply, Baker Distributing and R.E. Michel.",
+      "Designed a single-provider uniform solution through the Rampart GPO and Unifirst, cutting rental costs by 43 % and standardizing service levels across all branches."
+    ],
+    "top_levers": [
+      "OEM rebate & pricebook renegotiation",
+      "GPO program optimization",
+      "Competitive RFP / unit-price negotiation",
+      "Vendor consolidation"
+    ],
+    "value_delivered_blurb": "Treya Partners has delivered $927K in verified annual run-rate savings\u2014already 6 % above the engagement\u2019s high-end forecast\u2014while locking in $426K of those savings under fully executed contracts within the first 120 days. The program generates a 2.2\u00d7 return on Treya\u2019s fixed project fee and establishes national pricing, rebate governance and centralized sourcing processes that will continue to yield benefits as the platform scales.",
+    "where_we_were_unique": [
+      "Delivered first hard-dollar savings within four months despite limited SKU-level data and decentralized purchasing.",
+      "Leveraged deep HVAC OEM relationships to unlock national rebate tiers unavailable through traditional distributor channels.",
+      "Balanced rapid savings capture with zero disruption to field technicians by preserving critical supplier relationships.",
+      "Exceeded the private equity sponsor\u2019s 2\u00d7 ROI requirement while simplifying the client\u2019s procurement infrastructure for future add-on acquisitions."
+    ]
+  },
+  "generation_notes": [
+    "Savings figures and percentages taken directly from Impact & Results section.",
+    "Approach bullets use generic client descriptors while retaining specific vendor names and levers.",
+    "Top levers ranked by contribution: Carrier/Rheem/Lennox renegotiations > Uniform GPO > Supplies RFP > consolidation.",
+    "ROI calculated as $927K savings \u00f7 $425K fee \u2248 2.2\u00d7."
+  ]
+}

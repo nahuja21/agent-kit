@@ -1,0 +1,35 @@
+{
+  "engagement_background": {
+    "objective": "CJ Pony Parts engaged Treya Partners to drive measurable procurement cost reductions through strategic sourcing, with explicit targets of identifying at least $100K in annual savings by September 2021 and delivering $330K\u2013$660K in recurring annual savings by November 2021.",
+    "scope_summary": "The project covers nine priority spend categories\u2014Quick-hit GPO items, Fasteners, Small Parcel, Packaging & Shipping Supplies, LTL/FTL, Employee Benefits, Temporary Labor, P-Card, and Ocean Freight\u2014representing roughly $11.5 million in baseline spend drawn from a total external vendor spend of ~$103 million. Direct product COGS outside the named categories and any parallel sourcing efforts are excluded.",
+    "constraints_challenges": [
+      "Aggressive timeline: savings of $100K needed within three months and full sourcing activities completed in five months.",
+      "Client must halt any \u2018parallel\u2019 procurement activities to prevent market confusion, limiting flexibility during the engagement.",
+      "Data gaps: P-card and T&E details not captured in AP extract; additional cleanup required for vendor naming and categorization.",
+      "Limited client bandwidth\u2014timely stakeholder input and data provision are critical and identified as a risk.",
+      "Multi-site footprint (Harrisburg, PA and Las Vegas, NV) complicates supplier transitions, e.g., implementing multi-carrier LTL solutions.",
+      "IT integration challenges for LTL solution (catalog classification, API work estimated at 3\u20134 months).",
+      "Strong incumbent relationships (e.g., 95 % FedEx share in parcel) reduce \u2018credible switching threat\u2019 in some categories."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "hybrid",
+    "maturity": "medium",
+    "data_availability": "12-month AP spend file, shipment-level parcel data, and key carrier contracts (FedEx, UPS, USPS, UPS Freight) are available; no single contract repository identified.",
+    "data_quality_notes": "Spend file missing P-card/T&E components; multiple vendor naming conventions and incomplete categorization require cleanup before analysis.",
+    "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Kickoff 062821 v1.pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Project Updates/CJ Pony Strategic Sourcing Project Kickoff 062821 v1.pptx",
+    "Assessment/CJ Pony - Spend Analysis - Savings Summary (01-13-2021).xlsx",
+    "Assessment/Rahul's Files from DD Support/CJP Procurement Savings Opportunity 3.5.21.pptx",
+    "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx"
+  ],
+  "extraction_notes": [
+    "Objective and timeline pulled from Kickoff slide (Project Approach & Scope).",
+    "Scope categories confirmed via Kickoff slide 7 and Savings Dashboard slides.",
+    "Constraints compiled from Project Success Factors, Assessment notes, and bi-weekly update discussion points.",
+    "Operating model and maturity are inferred: presence of logistics manager and several existing contracts indicates some centralized control, but data challenges and need for Treya suggest only medium maturity."
+  ]
+}

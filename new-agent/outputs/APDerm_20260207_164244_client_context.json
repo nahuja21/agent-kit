@@ -1,0 +1,49 @@
+{
+  "client": {
+    "client_name": "Adult & Pediatric Dermatology, P.C. (APDerm)",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Dermatology services",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site, physician-led dermatology practice platform operating outpatient clinics across New England",
+    "sponsor_pe_firm": "Waud Capital Partners",
+    "client_history": "Founded in 1992 as a single practice, APDerm has grown through acquisitions and de-novo openings into the largest physician-led dermatology network in New England, offering medical, surgical, pediatric and cosmetic dermatology across Massachusetts, New Hampshire and Rhode Island."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "LeadIQ (estimated $2.7M, Jan-2026) and Growjo (estimated $44.7M, 2024)",
+      "notes": "Estimates vary widely ($2.7M\u2013$44.7M) and no authoritative source (SEC filing, press release, or company statement) could be located. Therefore no single figure is reported."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 40,
+      "confidence": "high",
+      "source": "Official company website locations page (apderm.com) cited in Web Search: Company Overview",
+      "notes": "Company overview states 'over 40 locations in Massachusetts, New Hampshire, and Rhode Island'."
+    },
+    "employees": {
+      "count": 225,
+      "confidence": "low",
+      "source": "Growjo (154), BounceWatch (195), HighPerformr (205), SignalHire (249), CIENCE/Indeed (501-1000)",
+      "notes": "Most data aggregators cluster between 195-249 employees, but two sources list the 501-1000 range. Using midpoint of 154-249 range (\u2248225) with low confidence due to discrepancies."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20.pdf (page 1)",
+    "Case Study/Treya Case Study_APDerm vF.pdf (pages 2-3)",
+    "apderm.com \u2013 About Us and Locations pages (referenced in Web Search: Company Overview and Locations)",
+    "providenthp.com \u2013 October 2017 press release on Waud Capital investment",
+    "Growjo company profile for APDerm (growjo.com)",
+    "LeadIQ company profile for APDerm (leadiq.com)",
+    "BounceWatch, HighPerformr.ai, SignalHire, CIENCE, Indeed employee estimates"
+  ],
+  "extraction_notes": [
+    "Official legal name confirmed from signed services agreement (Adult & Pediatric Dermatology, P.C.).",
+    "Private-equity backing by Waud Capital Partners confirmed by Provident Healthcare Partners press release and company blog post.",
+    "Revenue figures are only third-party estimates with large variance; no reliable number in official sources, so field left null with low confidence explanation.",
+    "Employee headcount varies significantly across data vendors; majority cluster around 200-250, but some list 501-1000 which could include part-time/affiliated providers \u2014 reported midpoint with low confidence.",
+    "Location count taken from company website statement of 'over 40 locations', considered authoritative."
+  ]
+}

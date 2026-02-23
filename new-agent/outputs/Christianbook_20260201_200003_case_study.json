@@ -1,0 +1,35 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objectives, quantified results, and multiple proof points are all well-documented. Engagement includes detailed category-level outcomes and clear ROI.",
+    "headline": "Omnichannel book retailer captures $1.24M in annual savings and 3.3\u00d7 ROI through Treya\u2019s rapid indirect sourcing program",
+    "client_problem_statement": "Christianbook, LLC \u2013 a PE-backed retailer and distributor of Christian books, media and gifts \u2013 managed more than $90 million in annual spend with a largely decentralized, relationship-driven purchasing model. Facing pressure from Nonantum Capital Partners to expand margins and scale efficiently, the company needed to unlock meaningful cost reductions across freight, packaging, payments and other indirect categories without disrupting operations during peak season. Limited internal procurement bandwidth and long-standing incumbent suppliers made it difficult to drive the rigorous, data-driven sourcing events required to meet value-creation targets.",
+    "client_problem_anonymized": "A leading omnichannel books and gifts retailer \u2013 backed by the private equity ownership group \u2013 managed more than $90 million in annual spend with a largely decentralized, relationship-driven purchasing model. Facing pressure to expand margins and scale efficiently, the company needed to unlock meaningful cost reductions across freight, packaging, payments and other indirect categories without disrupting operations during peak season. Limited internal procurement bandwidth and long-standing incumbent suppliers made it difficult to drive the rigorous, data-driven sourcing events required to meet value-creation targets.",
+    "approach_summary": [
+      "Analyzed 12-month AP data and cleansed vendor records to profile $18 million in indirect spend across eight target categories.",
+      "Executed competitive, data-driven RFPs for merchant processing, LTL/FTL freight, corrugated cartons, and packaging supplies, benchmarking proposals against Treya market intelligence.",
+      "Negotiated incumbent suppliers Unicorr and Rand Whitney to secure 14 % price concessions while maintaining established carton specifications and service levels.",
+      "Consolidated LTL and FTL lanes with a single 3PL partner, leveraging aggregated volume to achieve 31 % and 8 % savings respectively and improve shipment visibility.",
+      "Established savings tracking, supplier scorecards and a centralized sourcing playbook to embed a sustainable, best-practice procurement process for the client."
+    ],
+    "top_levers": [
+      "Competitive RFP & market testing",
+      "Supplier switch",
+      "Incumbent contract renegotiation",
+      "Vendor consolidation",
+      "Benchmark-driven negotiation"
+    ],
+    "value_delivered_blurb": "Treya delivered $1,237,359 in fully-contracted annual savings \u2013 slightly above the high end of the original $1.23 million forecast and more than double the guaranteed minimum. The client realized its first savings within 130 days, and total benefits represent a 3.3\u00d7 return on Treya\u2019s fixed project fee. Beyond the dollars, the engagement introduced structured RFP disciplines, supplier performance metrics and a scalable procurement framework that positions the retailer for continued margin improvement.",
+    "where_we_were_unique": [
+      "Generated first implemented savings in just 4 months despite peak-season constraints and limited client bandwidth.",
+      "Exceeded the minimum savings guarantee by 120 %, driving a 3.3\u00d7 ROI on consulting fees.",
+      "Balanced cost take-out with business continuity by retaining key incumbents in sensitive categories.",
+      "Delivered a turnkey, data-driven sourcing playbook that upgraded a low-maturity, decentralized purchasing environment."
+    ]
+  },
+  "generation_notes": [
+    "Savings and percentages pulled directly from Final Savings slide.",
+    "ROI calculated as $1.237M \u00f7 $0.375M = 3.3\u00d7.",
+    "Headline, bullets, and value statement avoid using the client\u2019s name except where permitted."
+  ]
+}

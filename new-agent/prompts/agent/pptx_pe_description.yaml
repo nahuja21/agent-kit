@@ -1,0 +1,113 @@
+# PowerPoint PE Description
+# Generates anonymized PE firm description from web search results
+
+step: pptx_pe_description
+
+prompt:
+  instructions: |
+    You EXTRACT and ANONYMIZE PE firm information for a PowerPoint slide.
+    
+    Your job is to create a SHORT, ANONYMIZED description of a private equity firm
+    based on web search results. This replaces the actual firm name on the slide.
+    
+    CRITICAL RULES - EXTRACTION ONLY:
+    1. You are an EXTRACTOR - only use facts from the web search results provided
+    2. DO NOT use the actual PE firm name in the output
+    3. Create a concise descriptor (max 8 words)
+    4. Be factual based on search results, not generic
+    
+    FORBIDDEN:
+    - Using the actual PE firm name
+    - Making up investment strategies not mentioned in search results
+    - Starting with verbs (Acquired, Founded, Invested, etc.)
+    - Including specific dollar amounts ($160M, $500M, etc.)
+    
+    LANGUAGE GUIDELINES:
+    - Use neutral, professional language
+    - Be descriptive but concise
+    - Use SINGULAR form (one firm, not plural) - e.g., "investor" not "investors", "firm" not "firms"
+    - Description should be a NOUN PHRASE describing what the firm IS, not what they did
+    - DO NOT start with verbs like "Acquired", "Founded", "Invested", "Built"
+    - DO NOT include specific dollar amounts (like "$160M")
+    - If using a location, say "[Location]-based" (e.g., "Texas-based" not just "Texas")
+    - Read the description out loud - it should sound natural as a phrase
+
+  user_template: |
+    # Create Anonymized PE Description
+    
+    Create an anonymized PE firm description for a PowerPoint slide.
+    
+    ## SOURCE DATA (DO NOT USE FIRM NAME)
+    
+    PE Firm Name (DO NOT USE): {{pe_sponsor}}
+    Industry Context: {{industry}}
+    
+    ### Web Search Results (EXTRACT FACTS FROM THIS)
+    {{web_search_results}}
+    
+    ---
+    
+    ## REQUIREMENTS
+    
+    1. Maximum 8 words
+    2. Extract key characteristics from search results (investment focus, strategy, sector expertise)
+    3. Do NOT use the actual firm name
+    4. Write naturally - no rigid format required
+    
+    ## EXAMPLES
+    
+    GOOD (singular form):
+    - "Growth-focused healthcare investor"
+    - "Platform-building defense PE firm"
+    - "Technology services buyout specialist"
+    - "Healthcare-focused private equity sponsor"
+    - "Industrial services growth investor"
+    
+    BAD:
+    - "Acquired $160M Alternative Asset Investor" (starts with verb, includes dollar amount)
+    - "Texas Middle-Market Healthcare Investor" (location without "-based" doesn't read naturally)
+    - "Growth-focused healthcare investors" (plural - should be singular)
+    - "ABC Capital Partners" (uses actual name)
+    - "A private equity firm" (too generic, no facts extracted)
+    
+    If using location, write: "Texas-based healthcare investor" NOT "Texas healthcare investor"
+    
+    ## OUTPUT
+    
+    Return ONLY the description text, nothing else. No quotes, no explanation.
+
+parameters:
+  - name: pe_sponsor
+    type: string
+    required: true
+    description: "Actual PE firm name (for context, NOT to be used in output)"
+  
+  - name: industry
+    type: string
+    required: true
+    description: "Industry context for the investment"
+  
+  - name: web_search_results
+    type: string
+    required: true
+    description: "Web search results about the PE firm"
+
+validation:
+  max_length: 75
+  must_not_contain:
+    - "{{pe_sponsor}}"
+
+examples:
+  - note: "Healthcare PE firm"
+    input:
+      pe_sponsor: "Shore Capital Partners"
+      industry: "Healthcare"
+      web_search_results: "Shore Capital is a Chicago-based private equity firm focused on microcap healthcare investments. They typically invest in companies with $5-50M revenue..."
+    output: "Growth-focused healthcare investor"
+  
+  - note: "Defense sector PE"
+    input:
+      pe_sponsor: "Arlington Capital Partners"
+      industry: "Defense & Security"
+      web_search_results: "Arlington Capital is a middle-market private equity firm focused on government services and defense. Platform-building strategy..."
+    output: "Platform-building defense and aerospace PE"

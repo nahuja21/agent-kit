@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "Identify and implement $678K\u2013$1.65M of annual cost savings (\u22488% of a $18\u201336M baseline) by leveraging Epika\u2019s enterprise-wide purchasing power, improving supplier agreements, and accelerating value creation ahead of Trivest Partners\u2019 planned exit.",
+    "scope_summary": "Strategic sourcing across 13 spend categories (OEM, Aftermarket Parts, Oil/Lubes, Filters, Employee Benefits, P-Card, Fuel, Telecom, General Industrial Supplies, Tires, Uniforms, Waste, Office Supplies) representing ~$51.9M in annual spend of which ~$36.2M is addressable; project to run in \u2018Fast-Track\u2019, Wave 1, and Wave 2 phases with completion targeted for February 2025.",
+    "constraints_challenges": [
+      "Highly decentralized procurement \u2013 8 autonomous business units with separate systems and practices.",
+      "Minimal internal spend data; Treya had to request line-item history directly from suppliers to build 80% of the baseline.",
+      "Aggressive six-month timeline driven by PE sponsor\u2019s planned sale within 6\u20137 months of kickoff.",
+      "Long-standing incumbent supplier relationships not previously leveraged at an enterprise level, creating negotiation sensitivities.",
+      "Supplier non-responsiveness to data requests and potential pushback during negotiations.",
+      "Limited bandwidth of Epika stakeholders to support data gathering and decision making."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Little in-house purchasing data; spend details scattered across multiple technology platforms for each business unit. Detailed line-item data obtained primarily from high-spend suppliers.",
+    "data_quality_notes": "No consolidated spend view, inconsistent formats across business units, significant gaps until suppliers provided records.",
+    "source_file": "Epika Case Study v5.docx",
+    "confidence": "high"
+  },
+  "extraction_sources": [
+    "Epika Case Study v5.docx",
+    "Opportunity Assessment and Proposal Decks/Treya Project Proposal_Epika_8.7.24.pptx",
+    "Kickoff/Epika Fleet Services - Strategic Sourcing Project Kickoff (Sep 2024) Condensed.pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and data challenges explicitly described in Case Study under 'Challenges'.",
+    "Maturity classified as 'low' because documents state lack of data-driven procurement process and independent unit-level buying.",
+    "Scope numbers taken from Kickoff scope slide (addressable $36.2M of $51.9M)."
+  ]
+}

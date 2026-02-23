@@ -1,0 +1,106 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "Employee Benefits",
+      "Medical Supplies",
+      "IT Hardware/Software",
+      "Telecom - Data & Voice",
+      "Courier Services",
+      "Office Supplies",
+      "Small Parcel Shipping"
+    ],
+    "initial_categories_count": 7,
+    "category_details": [
+      {
+        "category_name": "Employee Benefits",
+        "spend": 5575400,
+        "addressable_pct": 60,
+        "addressable_spend": 3345240,
+        "savings_low": 167262,
+        "savings_high": 334524,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Medical Supplies",
+        "spend": 4070155,
+        "addressable_pct": 80,
+        "addressable_spend": 3256124,
+        "savings_low": 260490,
+        "savings_high": 390735,
+        "is_cogs": true
+      },
+      {
+        "category_name": "IT Hardware/Software",
+        "spend": 816156,
+        "addressable_pct": 50,
+        "addressable_spend": 408078,
+        "savings_low": 32646,
+        "savings_high": 61212,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Telecom - Data & Voice",
+        "spend": 359110,
+        "addressable_pct": 60,
+        "addressable_spend": 215466,
+        "savings_low": 21547,
+        "savings_high": 43093,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Courier Services",
+        "spend": 321158,
+        "addressable_pct": 80,
+        "addressable_spend": 256926,
+        "savings_low": 25693,
+        "savings_high": 51385,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Office Supplies",
+        "spend": 230068,
+        "addressable_pct": 80,
+        "addressable_spend": 184054,
+        "savings_low": 27608,
+        "savings_high": 36811,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Small Parcel Shipping",
+        "spend": 35571,
+        "addressable_pct": 100,
+        "addressable_spend": 35571,
+        "savings_low": 7114,
+        "savings_high": 10671,
+        "is_cogs": false
+      }
+    ],
+    "total_spend": 11407618,
+    "total_addressable_spend": 7701459,
+    "savings_estimate_low": 542360,
+    "savings_estimate_high": 928431,
+    "cogs_categories_count": 1,
+    "cogs_categories_percentage": 14.3,
+    "cogs_addressable_spend": 3256124,
+    "cogs_addressable_percentage": 42.3
+  },
+  "exhibit_b": {
+    "fee_type": "fixed",
+    "fee_amount": 190000,
+    "minimum_savings_guarantee": 380000,
+    "minimum_return_on_fees_ratio": 2.0,
+    "fee_hybrid_threshold": null,
+    "fee_contingent_percentage": null,
+    "fee_notes": "Fixed fee invoiced in four equal installments; travel fees not applicable."
+  },
+  "timing": {
+    "start_date": "2020-12-22",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction strategic sourcing engagement"
+  },
+  "extraction_notes": [
+    "Savings low/high and totals taken directly from Exhibit A total row.",
+    "Addressable spend values with fractional cents were rounded to the nearest whole dollar.",
+    "No end date specified in the agreement; field left null."
+  ]
+}

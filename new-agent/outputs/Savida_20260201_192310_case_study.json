@@ -1,0 +1,35 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client name, objectives, quantified $412K savings, and multiple proof points are fully documented.",
+    "headline": "SaVida Health captures $412K annual savings and 1.5\u00d7 ROI in under 7 months with Treya\u2019s strategic sourcing program",
+    "client_problem_statement": "SaVida Health\u2019s rapid expansion to 50 outpatient addiction-treatment clinics left procurement scattered across individual locations. Fragmented vendor relationships, non-standard pricing, and limited spend visibility were eroding margins just as private-equity owner Council Capital looked for EBITDA improvement. The company needed a fast, data-driven sourcing initiative to unlock six-figure savings without disrupting critical clinical operations.",
+    "client_problem_anonymized": "A fast-growing outpatient addiction-treatment provider operating 50 clinics had procurement scattered across individual locations. Fragmented vendor relationships, non-standard pricing, and limited spend visibility were eroding margins just as the private equity ownership group focused on operational efficiency and margin improvement. The company needed a fast, data-driven sourcing initiative to unlock six-figure savings without disrupting critical clinical operations.",
+    "approach_summary": [
+      "Mapped and cleansed $5.3M of indirect spend across 10 categories, isolating $4.3M in addressable volume for targeted sourcing waves.",
+      "Negotiated the client\u2019s Athenahealth EMR contract, cutting fees from 4.56 % to 3.40 % and securing a three-year rate lock worth $358K annually.",
+      "Transitioned office and medical supplies to the Provista GPO, leveraging aggregated tier pricing to deliver an additional $32K in run-rate savings.",
+      "Performed a telecom spend analysis across 40+ sites and designed a Comcast managed-services consolidation projected to save $18K per year while improving uptime guarantees.",
+      "Benchmarked IT hardware specifications and obtained competitive VAR quotes, setting up a 13 % price reduction once final device standards are approved."
+    ],
+    "top_levers": [
+      "Contract renegotiation",
+      "GPO tier optimization",
+      "Vendor consolidation",
+      "Competitive benchmarking/RFP"
+    ],
+    "value_delivered_blurb": "Treya validated $412,065 in annual run-rate savings\u2014within the upper end of the original $240K\u2013$470K target range\u2014and realized the first $358K within 197 days. The savings translate to a 1.55\u00d7 return on Treya\u2019s hybrid fee structure, surpassing the 1.2\u00d7 guarantee. Beyond the dollars, SaVida now has centralized spend visibility, streamlined EMR terms, and a scalable GPO platform to support future growth.",
+    "where_we_were_unique": [
+      "Achieved the largest single savings win\u2014$358K on EMR\u2014in less than six months through deep healthcare IT negotiating expertise.",
+      "Leveraged long-standing GPO relationships to unlock multi-category discounts with minimal client effort.",
+      "Balanced aggressive cost reduction with clinical continuity, ensuring zero downtime across 50 treatment sites.",
+      "Hybrid fee model with a minimum ROI guarantee aligned Treya\u2019s incentives with the client\u2019s value creation goals."
+    ]
+  },
+  "generation_notes": [
+    "Headline cites precise savings and ROI timeframe to drive attention.",
+    "Problem statement uses actual client name; anonymized version swaps it for a descriptor and softens PE language.",
+    "Approach bullets deliberately reference 'the client' instead of SaVida to comply with instructions.",
+    "ROI calculated from documented $412K savings vs. ~$266K total fees (fixed + contingent)."
+  ]
+}

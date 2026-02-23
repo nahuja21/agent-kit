@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "Generate enterprise-wide procurement cost savings and leverage APDerm\u2019s purchasing power across multiple locations to support private-equity value creation during a period of rising costs and supply-chain disruption.",
+    "scope_summary": "Two-phase strategic sourcing program covering roughly $6.3 million in annual baseline spend across 10+ indirect categories (e.g., billing services, janitorial, IT managed services, medical & office supplies, courier, telecom). Waste Management was later excluded when a new contract limited savings potential.",
+    "constraints_challenges": [
+      "Highly decentralized buying across many New England clinic locations acquired over time, resulting in a fragmented supplier base",
+      "Limited spend visibility and inconsistent contract records, requiring extensive data cleansing and mapping of AP datasets",
+      "Inflationary market conditions and pandemic-related supply-chain issues putting upward pressure on prices",
+      "Need to minimize operational disruption by retaining incumbents where possible, reducing flexibility to switch suppliers",
+      "Aggressive timeline tied to private-equity value-creation targets for realizing savings"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Accounts-payable spend extracts, GL reports, and supplier usage data were available but scattered; no centralized contract repository.",
+    "data_quality_notes": "Duplicate vendor names, unmapped GL codes, and gaps in usage data required significant cleansing (evident in \u2018Vendor Dedupe\u2019, \u2018Vendor Map\u2019, and notes about incomplete supplier responses).",
+    "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Wave 2/Kickoff/APDerm Phase 2 Project Kickoff (Nov. 9, 2021).pptx",
+    "Wave 2/Assessment/APDerm - Spend Analysis v2 (12-8-2021) AA.xlsx",
+    "Wave 2/Updates/APDerm Phase 2 Project Update (Jun 29, 2022).pptx"
+  ],
+  "extraction_notes": [
+    "Objective and challenges explicitly stated on pages 2\u20133 of the case-study PDF.",
+    "Decentralized operating model confirmed in case study (\u2018purchasing was decentralized\u2019).",
+    "Data-quality observations drawn from spend-analysis workbooks showing vendor deduping and unmapped categories; maturity inferred from lack of centralized procurement and need for Treya\u2019s guidance."
+  ]
+}

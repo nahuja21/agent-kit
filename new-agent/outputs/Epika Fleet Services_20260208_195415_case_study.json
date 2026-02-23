@@ -1,0 +1,38 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "All core elements are available: clear objective, quantified $1.5M annual savings, multiple proof-point examples, and detailed approach and lever data.",
+    "headline": "Fleet maintenance network captures $1.5M in annual savings and 5x ROI through rapid strategic sourcing program",
+    "client_problem_statement": "Epika Fleet Services had grown to eight autonomous business units through acquisition, each buying parts, lubricants, and supplies on its own. The decentralized model left the company with fragmented data, inconsistent pricing, and no leverage over national suppliers just months before its private-equity owner planned an exit. Leadership needed a fast, enterprise-wide procurement effort to unlock meaningful cost savings, protect margins, and strengthen the valuation story.",
+    "client_problem_anonymized": "A nationwide fleet maintenance network had grown to eight autonomous business units through acquisition, each buying parts, lubricants, and supplies on its own. The decentralized model left the company with fragmented data, inconsistent pricing, and no leverage over national suppliers just months before the private equity ownership group planned an exit. Leadership needed a fast, enterprise-wide procurement effort to unlock meaningful cost savings, protect margins, and strengthen the valuation story.",
+    "approach_summary": [
+      "Reconstructed a consolidated spend baseline by securing line-item histories directly from more than 40 high-spend suppliers, covering $18.3M in addressable spend.",
+      "Aggregated demand across all business units and renegotiated incumbent oil & lubricant, filter, and telematics contracts, driving 8\u201315% price reductions and richer rebates.",
+      "Ran a competitive RFQ for fleet fuel cards, consolidating six programs into a single Comdata solution with a guaranteed 1.8% rebate.",
+      "Leveraged OMNIA cooperative agreements to implement quick-win savings on office and industrial supplies without lengthy RFPs.",
+      "Fast-tracked contracting and phased roll-outs, enabling the client to realize first hard savings within 110 days and automating ongoing rebate tracking."
+    ],
+    "top_levers": [
+      "Strategic incumbent renegotiation",
+      "Volume aggregation across business units",
+      "Rebate enhancement programs",
+      "Vendor consolidation & competitive RFQ",
+      "GPO/cooperative contract utilization"
+    ],
+    "value_delivered_blurb": "Treya unlocked $1.5 million in verified annual run-rate savings on $18.25 million of spend\u2014more than double the $600K savings guarantee and delivering a 5x return on the client\u2019s $300K project fee. Beyond the financial impact, the engagement established unified national supplier programs, created centralized spend visibility, and put automated rebate tracking in place to sustain value post-transaction.",
+    "where_we_were_unique": [
+      "Delivered first category live within 110 days despite minimal internal spend data by sourcing records directly from suppliers.",
+      "Secured 82% of total savings via incumbent renegotiations, minimizing operational disruption and speeding time-to-value.",
+      "Met an aggressive six-month timeline aligned to the sponsor\u2019s sale process, enhancing the valuation narrative.",
+      "Exceeded the contractual 2x savings guarantee by 150%, generating a 5x ROI on fees."
+    ]
+  },
+  "generation_notes": [
+    "Headline highlights total savings and ROI while signaling industry context.",
+    "Problem statements incorporate acquisition growth, decentralization pain, and PE exit timing.",
+    "Approach bullets emphasize data reconstruction, aggregation, key category actions, and speed.",
+    "Top levers ranked by contribution: Shell/Chevron/Exxon renegotiations were largest dollar drivers, hence first.",
+    "Value blurb quantifies savings vs guarantee and fees; notes process benefits.",
+    "Uniqueness points focus on speed, low-disruption renegotiations, alignment to exit, and ROI."
+  ]
+}

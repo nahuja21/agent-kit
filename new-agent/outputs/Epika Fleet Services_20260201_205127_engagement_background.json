@@ -1,0 +1,31 @@
+{
+  "engagement_background": {
+    "objective": "Leverage Epika\u2019s total buying power to capture $0.7-1.6M+ in annual cost savings (and corresponding enterprise-value uplift) through a 6-month strategic-sourcing program while laying the foundation for a best-in-class, enterprise-wide procurement process.",
+    "scope_summary": "13 direct and indirect spend categories representing $51.9 M in total spend and $36.2 M of addressable spend were placed in scope, including OEM parts, aftermarket parts, oil/lubricants, filters, employee benefits, P-Card spend, fuel, telecom, GIS/MRO, tires, uniforms, waste and office supplies. Tail spend within each category and very low-value categories may be dropped if savings are immaterial.",
+    "constraints_challenges": [
+      "Eight business units purchase independently, creating a highly decentralized supplier landscape that must be unified for enterprise negotiations.",
+      "Historical line-item usage data is incomplete; Treya must request data directly from key suppliers to build baselines.",
+      "Some incumbent suppliers are considered strategic, leading to potential push-back and the need for a \u2018united front\u2019 and sensitive negotiation approach.",
+      "Risk of parallel/unsanctioned sourcing conversations by Epika staff could confuse the market; project success requires tight control of supplier communications.",
+      "Aggressive timeline\u2014savings targeted by February 2025 to support private-equity value-creation and pending transaction milestones."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "AP/PO data exists within each business unit, but consolidated spend visibility is limited; detailed SKU-level usage often must be sourced from suppliers; contracts are dispersed across units.",
+    "data_quality_notes": "Multiple BU systems and naming conventions; gaps in historical usage when suppliers do not respond; no central contract repository.",
+    "source_file": "Kickoff/Epika Fleet Services - Strategic Sourcing Project Kickoff (Sep 4 2024).pdf",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Kickoff/Epika Fleet Services - Strategic Sourcing Project Kickoff (Sep 4 2024).pdf",
+    "Project Updates/Epika - Case Study.pptx",
+    "Opportunity Assessment and Proposal Decks/Treya Project Proposal_Epika_8.7.24.pptx"
+  ],
+  "extraction_notes": [
+    "Operating model inferred from statement that Epika consists of 8 independently operating business units and need to leverage \u2018enterprise-wide purchasing power\u2019.",
+    "Maturity rated low because Treya is expected to do the \u2018heavy lifting\u2019, establish baseline data, and build procurement processes.",
+    "Data availability description taken from data-collection slides describing need for supplier data requests and scattered internal data."
+  ]
+}

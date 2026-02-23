@@ -1,0 +1,50 @@
+{
+  "client": {
+    "client_name": "FreshEdge, LLC",
+    "industry_primary": "Fresh food distribution",
+    "industry_secondary": "Produce and specialty foods",
+    "primary_industry_sector": "Logistics, Fleet, Distribution & Aftermarket Parts",
+    "business_model": "Multi-facility regional distributor of fresh produce and specialty food products serving foodservice and retail customers across the Mid-West, South and Southeast United States.",
+    "sponsor_pe_firm": "Wind Point Partners",
+    "client_history": "FreshEdge was formed in 2019 when IF&P Foods (Indianapolis Fruit and Piazza Produce) merged with Get Fresh Produce. Backed initially by Rotunda Capital Partners and acquired by Wind Point Partners in October 2022, the company has executed multiple add-on acquisitions and now ranks among the largest independent fresh-food distributors in the U.S."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "getlatka.com (reported $42.8M, 2025) and buzzfile.com (estimated $254.3M, date unspecified)",
+      "notes": "Two third-party estimate sites provide drastically different figures ($42.8M vs $254.3M) and no primary source could be found. Because of the wide discrepancy and lack of official confirmation, revenue is left null."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 35,
+      "confidence": "medium",
+      "source": "thepacker.com article, July 2024 (\u201cover 1.3 million sq ft across 35 facilities\u201d); earlier ProduceNews.com piece (Jan 2023) cited 25 facilities",
+      "notes": "Most recent source (ThePacker, 2024) indicates 35 facilities; earlier count of 25 likely predates 2023-24 acquisitions."
+    },
+    "employees": {
+      "count": 2800,
+      "confidence": "medium",
+      "source": "freshfruitportal.com, Sept 2025 article",
+      "notes": "Employee count reported as ~2,800 following successive acquisitions. Earlier sources (2022) noted 2,000+, indicating steady growth."
+    }
+  },
+  "extraction_sources": [
+    "Assessment/Spend Analysis FreshEdge 07.12.2023.xlsx (multiple sheets reference FreshEdge)",
+    "Agreement/2023.09.27 FreshEdge Treya - Procurement Cost Reduction Services K - Fully Executed.pdf",
+    "thepacker.com/news/industry/frontier-produce-joins-freshedge (July 2024)",
+    "theproducenews.com/headlines/freshedge-business-sold-after-five-years-rapid-growth (Oct 2022)",
+    "freshfruitportal.com/news/2025/09/30/freshedge-new-ceo (Sept 2025)",
+    "getlatka.com/companies/freshedgefoods.com",
+    "buzzfile.com/business/Freshedge,-LLC-317-981-3599",
+    "wppartners.com/wind-point-partners-acquires-freshedge"
+  ],
+  "extraction_notes": [
+    "Official naming convention 'FreshEdge, LLC' taken from Buzzfile listing; company referred to as 'FreshEdge' in all documents and press releases.",
+    "PE ownership: Rotunda Capital invested 2017; Wind Point Partners acquired Oct 2022 (confirmed by WPP press release and ProduceNews article).",
+    "Revenue figures are highly inconsistent and come only from estimation sites; omitted due to lack of reliable confirmation.",
+    "Location count varies (25 vs 35 facilities). Chose higher, most recent figure but tagged confidence as medium.",
+    "Employee headcount increased with acquisitions; latest public number (2,800) used."
+  ]
+}

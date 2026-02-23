@@ -1,0 +1,533 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "McKesson Medical-Surgical",
+      "category": "Medical Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 1817711,
+      "final_spend": 1332624,
+      "savings_dollars": 485087,
+      "savings_percent": 27,
+      "levers_applied": [
+        "Competitive RFP",
+        "GPO alignment (HPG primary, Premier secondary)",
+        "Distributor consolidation",
+        "Volume aggregation"
+      ],
+      "alternatives_considered": [
+        "Henry Schein",
+        "Cardinal Health",
+        "Medline"
+      ],
+      "why_selected": "Lowest evaluated cost after GPO pricing, committed to hold all non-pharma pricing firm for 12 months and match HPG tier-3 rebate structure; offered dedicated implementation team to consolidate all locations.",
+      "why_not_selected": null,
+      "contract_terms": "2-year distributor agreement executed 30-Jul-2021 with 12-month price hold (non-pharma) + mutual option to renew for 1 year; HPG contract #MS00231 referenced; quarterly rebate true-up.",
+      "negotiation_leverage": "Multi-supplier RFP with historical purchase usage provided, willingness to transition supplier, PE-backed volume growth narrative, dual-GPO benchmarks.",
+      "supplier_strengths": [
+        "Broad dermatology SKU coverage",
+        "Next-day fulfillment from MA DC",
+        "GPO contract administration handled internally"
+      ],
+      "supplier_weaknesses": [
+        "Less flexible on specialty pharma pricing outside GPO",
+        "EDI onboarding lead time 6-8 weeks"
+      ],
+      "switching_costs": "Staff training on McKesson SupplyManager portal, formulary cross-reference of ~1,200 SKUs, new account setups for 30+ ship-to locations.",
+      "key_contacts": null,
+      "notes": "Pricing discrepancy escalation process agreed\u2014McKesson to audit first 90-days invoices against awarded file.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Multiple bidders",
+        "Supplier switched",
+        "27% category savings"
+      ]
+    },
+    {
+      "supplier_name": "Henry Schein",
+      "category": "Medical Supplies",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 1817711,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Competitive RFP",
+        "Benchmark pricing"
+      ],
+      "alternatives_considered": [
+        "McKesson",
+        "Cardinal Health",
+        "Medline"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Could not meet McKesson/HPG pricing targets and declined to match 12-month price lock requirement.",
+      "contract_terms": null,
+      "negotiation_leverage": "Threat of full distributor switch and consolidated volume.",
+      "supplier_strengths": [
+        "Established relationship",
+        "Broad catalog"
+      ],
+      "supplier_weaknesses": [
+        "Higher net pricing even after extended terms",
+        "Limited GPO flexibility"
+      ],
+      "switching_costs": "Low\u2014systems already compatible with other distributors; staff familiarity only minor factor.",
+      "key_contacts": null,
+      "notes": "Will remain secondary for back-order fills until cut-over complete (90-day tail).",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Supplier displaced"
+      ]
+    },
+    {
+      "supplier_name": "Millers Express",
+      "category": "Courier Services",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 432024,
+      "final_spend": null,
+      "savings_dollars": 121572,
+      "savings_percent": 28,
+      "levers_applied": [
+        "Competitive RFP",
+        "Route rationalisation",
+        "Split-award optimisation",
+        "Incumbent displacement"
+      ],
+      "alternatives_considered": [
+        "Xpressman Trucking & Courier",
+        "USA Couriers",
+        "Exec Logistics Group",
+        "RTD Logistics"
+      ],
+      "why_selected": "Best value on west-and-central MA & NH route clusters; agreed to implement barcode chain-of-custody and absorb fuel surcharge risk for term.",
+      "why_not_selected": null,
+      "contract_terms": "3-year Master Transportation Agreement (Aug-2021) with CPI cap 3%/yr; Service-level credits for >2% late deliveries/qtr.",
+      "negotiation_leverage": "Aggregated volume from 33 locations and ability to split award; detailed lane-level cost model shared with bidders.",
+      "supplier_strengths": [
+        "Healthcare route experience",
+        "24/7 dispatch",
+        "HIPAA-trained drivers"
+      ],
+      "supplier_weaknesses": [
+        "Smaller fleet\u2014capacity constraints during winter peaks"
+      ],
+      "switching_costs": "Route re-mapping, new pick-up schedules communicated to clinics.",
+      "key_contacts": null,
+      "notes": "Handles ~60% of scheduled routes; Xpressman covers remaining metro-Boston lanes.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP",
+        "Multiple bidders",
+        "Split award",
+        "28% savings"
+      ]
+    },
+    {
+      "supplier_name": "Xpressman Trucking & Courier",
+      "category": "Courier Services",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 432024,
+      "final_spend": null,
+      "savings_dollars": 121572,
+      "savings_percent": 28,
+      "levers_applied": [
+        "Competitive RFP",
+        "Split-award optimisation",
+        "Service level benchmarking"
+      ],
+      "alternatives_considered": [
+        "Millers Express",
+        "USA Couriers",
+        "RTD Logistics"
+      ],
+      "why_selected": "Strong coverage for greater-Boston STAT work, offered 90-minute on-demand SLA at no premium and WBENC diversity status.",
+      "why_not_selected": null,
+      "contract_terms": "2-year contract (Sep-2021) with option year; fuel surcharge pegged to DOE index with 5% ceiling.",
+      "negotiation_leverage": "Competition with Millers on metro zones and willingness to accept secondary volume.",
+      "supplier_strengths": [
+        "Barcode scan visibility",
+        "Driver training documentation (HIPAA) provided"
+      ],
+      "supplier_weaknesses": [
+        "Higher base rate on long-haul lanes"
+      ],
+      "switching_costs": "Minimal\u2014same manifest template used as incumbent.",
+      "key_contacts": null,
+      "notes": "Transition completed within 30 days; no service interruption.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP",
+        "Split award"
+      ]
+    },
+    {
+      "supplier_name": "Enterprise Cleaning Corporation",
+      "category": "Janitorial Services",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 977833,
+      "final_spend": 784268,
+      "savings_dollars": 193565,
+      "savings_percent": 20,
+      "levers_applied": [
+        "BAFO negotiation",
+        "Labor-hour reduction commitment",
+        "Competitive RFP"
+      ],
+      "alternatives_considered": [
+        "Alves Cleaning",
+        "EcoSource",
+        "Lena\u2019s Cleaning"
+      ],
+      "why_selected": "Agreed to drop blended hourly rate to $26.60 and implement 10% hour reduction within 3 months while covering all 33 sites.",
+      "why_not_selected": null,
+      "contract_terms": "3-year MSA effective 1-Jun-2022; retro-pricing back to 6-Jun-2022; growth incentive\u2014first month free for new sites.",
+      "negotiation_leverage": "Alves\u2019 lower BAFO created credible switch threat; detailed site hours & SLA scorecard shared.",
+      "supplier_strengths": [
+        "Existing staff familiarity",
+        "App-based time tracking"
+      ],
+      "supplier_weaknesses": [
+        "Higher rate than Alves, need to prove efficiency savings"
+      ],
+      "switching_costs": "Re-badging staff, background checks, cleaning supplies change.",
+      "key_contacts": null,
+      "notes": "Treya monitoring monthly hours to enforce 10% reduction target.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP",
+        "BAFO stage",
+        "20% savings"
+      ]
+    },
+    {
+      "supplier_name": "Alves Cleaning Services",
+      "category": "Janitorial Services",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 977833,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Competitive RFP"
+      ],
+      "alternatives_considered": [
+        "Enterprise Cleaning",
+        "EcoSource"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Offered highest savings ($312K) but unable to cover 6 rural locations and concerns about transition capacity.",
+      "contract_terms": null,
+      "negotiation_leverage": "Used as pricing pressure on incumbent.",
+      "supplier_strengths": [
+        "Lowest hourly rate $27.63 incl. equipment",
+        "Woman-owned business"
+      ],
+      "supplier_weaknesses": [
+        "Limited geographic reach",
+        "Higher management turnover risk"
+      ],
+      "switching_costs": "Would require dual-supplier model.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP",
+        "Provided BAFO alternative"
+      ]
+    },
+    {
+      "supplier_name": "OneSource Communications (brokering MetTel/Verizon)",
+      "category": "Telecom \u2013 Data Circuits",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 98568,
+      "final_spend": 61114,
+      "savings_dollars": 37454,
+      "savings_percent": 38,
+      "levers_applied": [
+        "Broker-led renegotiation",
+        "Circuit consolidation",
+        "Benchmarking against MetTel/Verizon wholesale rates"
+      ],
+      "alternatives_considered": [
+        "Comcast Business",
+        "Spectrum",
+        "Verizon retail"
+      ],
+      "why_selected": "Bundled 37 circuits under single invoice, offered 30-month term with no early termination for clinic relocations.",
+      "why_not_selected": null,
+      "contract_terms": "30-month service order signed Aug-2021; flat MRC with auto renew month-to-month; OneSource manages MACD tickets.",
+      "negotiation_leverage": "Ability to migrate to SD-WAN aggregator; Comcast contract expirations within 90 days.",
+      "supplier_strengths": [
+        "Single helpdesk, proactive credit audits"
+      ],
+      "supplier_weaknesses": [
+        "Pass-through taxes may fluctuate",
+        "Relies on underlying telcos for last-mile repair"
+      ],
+      "switching_costs": "Truck rolls for circuit cut-over, potential downtime windows.",
+      "key_contacts": null,
+      "notes": "OneSource paid via 15% commission embedded\u2014transparent during review.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive quote benchmarking",
+        "Supplier switch",
+        "38% savings"
+      ]
+    },
+    {
+      "supplier_name": "Comcast Business",
+      "category": "Telecom \u2013 Data Circuits",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 98568,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Contract expiration leverage"
+      ],
+      "alternatives_considered": [
+        "OneSource",
+        "Spectrum",
+        "Verizon"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Unable to meet OneSource aggregated price point and declined to waive ETF for circuit moves.",
+      "contract_terms": null,
+      "negotiation_leverage": "Threat of full migration to aggregator.",
+      "supplier_strengths": [
+        "Local coax availability"
+      ],
+      "supplier_weaknesses": [
+        "Retail pricing, separate invoices per site"
+      ],
+      "switching_costs": "Equipment return and service disconnect notices.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier displaced",
+        "38% category savings"
+      ]
+    },
+    {
+      "supplier_name": "AthenaHealth",
+      "category": "Billing Services",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1558800,
+      "final_spend": 1299000,
+      "savings_dollars": 259800,
+      "savings_percent": 17,
+      "levers_applied": [
+        "Incumbent renegotiation",
+        "Tiered pricing structure",
+        "Multi-year rate lock"
+      ],
+      "alternatives_considered": [
+        "Modernizing Medicine",
+        "AdvancedMD",
+        "Nextech",
+        "RXNT"
+      ],
+      "why_selected": "Matched lowest competitive take-over cost, provided 3-year rate lock at 1.50% collections and carved out cosmetic revenue.",
+      "why_not_selected": null,
+      "contract_terms": "Addendum signed Feb-2022: 3-year term; quarterly look-back to adjust tier; patient statement fee $0.41.",
+      "negotiation_leverage": "Full RFP with demos; projected revenue growth to $250M; threat to switch platforms.",
+      "supplier_strengths": [
+        "Integrated PM/EHR already deployed",
+        "Scaled RCM workforce"
+      ],
+      "supplier_weaknesses": [
+        "Limited customization, ancillary fees for statements"
+      ],
+      "switching_costs": "Provider retraining, data migration, EDI interfaces\u2014high.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Incumbent renegotiation with 17% savings",
+        "Competitive RFP"
+      ]
+    },
+    {
+      "supplier_name": "Whalley Computer Associates",
+      "category": "IT Hardware",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 110125,
+      "final_spend": 80715,
+      "savings_dollars": 29410,
+      "savings_percent": 27,
+      "levers_applied": [
+        "RFQ",
+        "Preferred reseller agreement",
+        "Standardised configurations"
+      ],
+      "alternatives_considered": [
+        "Connection",
+        "Dell direct",
+        "Lenovo direct"
+      ],
+      "why_selected": "Provided fixed discount off OEM list (10% Dell, 12% Lenovo) and imaging services at no charge; flexible hold-and-ship model for new acquisitions.",
+      "why_not_selected": null,
+      "contract_terms": "MOU dated Sep-2021, 24-month term with quarterly catalog refresh; Net-30 terms.",
+      "negotiation_leverage": "Historical spend analysis showed fragmented buying; commitment to single reseller channeled ~400K future spend.",
+      "supplier_strengths": [
+        "Local warehousing",
+        "Rapid quotes <4h",
+        "Lifecycle services"
+      ],
+      "supplier_weaknesses": [
+        "Limited Apple portfolio"
+      ],
+      "switching_costs": "Minimal\u2014device images provided by APDerm IT; no leasing lock-in.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFQ with multiple bidders",
+        "Supplier switch",
+        "27% savings"
+      ]
+    },
+    {
+      "supplier_name": "UPS",
+      "category": "Small Parcel Shipping",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 35571,
+      "final_spend": 25063,
+      "savings_dollars": 10508,
+      "savings_percent": 30,
+      "levers_applied": [
+        "GPO contract",
+        "Carrier switch",
+        "Rate benchmarking",
+        "DIM factor relief"
+      ],
+      "alternatives_considered": [
+        "FedEx (incumbent)"
+      ],
+      "why_selected": "Treya GPO programme delivered higher discounts across Ground and Air plus 166 DIM factor and waived residential surcharge for clinics.",
+      "why_not_selected": null,
+      "contract_terms": "UPS Member Agreement executed Jun-2021, 3-year term; grace period for performance review at 12 months.",
+      "negotiation_leverage": "Benchmark analysis of 2020 FedEx invoices and threat to move full volume.",
+      "supplier_strengths": [
+        "Strong delivery density in NE",
+        "Billing centre audit capability"
+      ],
+      "supplier_weaknesses": [
+        "Fuel surcharge volatility"
+      ],
+      "switching_costs": "Re-labeling software, account number updates in EMR shipping plug-in.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Carrier switch",
+        "30% savings"
+      ]
+    },
+    {
+      "supplier_name": "W.B. Mason",
+      "category": "Office Supplies & Furniture",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 174287,
+      "final_spend": 160593,
+      "savings_dollars": 13694,
+      "savings_percent": 8,
+      "levers_applied": [
+        "Incumbent renegotiation",
+        "Core-list price lock",
+        "Rebate structure"
+      ],
+      "alternatives_considered": [
+        "Amazon Business",
+        "Office Depot (benchmark data)"
+      ],
+      "why_selected": "Agreed to refresh 200-item core list at 8% reduction and institute 1% annual growth rebate.",
+      "why_not_selected": null,
+      "contract_terms": "24-month pricing addendum dated May-2021; rebate paid annually if spend >$150K.",
+      "negotiation_leverage": "Price benchmarking deck presented showing +11% variance to OD market basket.",
+      "supplier_strengths": [
+        "Next-day desktop delivery",
+        "No-minimum orders"
+      ],
+      "supplier_weaknesses": [
+        "Higher furniture mark-ups"
+      ],
+      "switching_costs": "Low but would require new login credentials and credit apps for staff.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Negotiation with incumbent",
+        "Benchmark analysis"
+      ]
+    },
+    {
+      "supplier_name": "Randstad (Premier GPO)",
+      "category": "Non-IT Temporary Labor",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 91600,
+      "final_spend": 81355,
+      "savings_dollars": 10245,
+      "savings_percent": 11,
+      "levers_applied": [
+        "GPO preferred pricing",
+        "Markup reduction",
+        "Incumbent spend shift"
+      ],
+      "alternatives_considered": [
+        "Addison",
+        "Robert Half",
+        "Complete Staffing Solutions"
+      ],
+      "why_selected": "Premier GPO markup 62% vs 82% incumbent, national footprint to support growth.",
+      "why_not_selected": null,
+      "contract_terms": "GPO rider executed Apr-2022, evergreen with 30-day exit.",
+      "negotiation_leverage": "Spend consolidation threat; benchmark of national GPO rates.",
+      "supplier_strengths": [
+        "Clinician admin roles expertise",
+        "VMS compatible"
+      ],
+      "supplier_weaknesses": [
+        "Overtime bill rate premium 1.5x"
+      ],
+      "switching_costs": "Onboarding new workers through Randstad compliance portal.",
+      "key_contacts": null,
+      "notes": "Savings extrapolated to total annual temp labor baseline $174,793 \u2248 $19.5K/yr.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "GPO contract",
+        "Supplier switch",
+        "11% savings"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "athenahealth, Inc.",
+      "category": "EMR / Revenue Cycle Management",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1596000,
+      "final_spend": 1238111,
+      "savings_dollars": 357889,
+      "savings_percent": 22,
+      "levers_applied": [
+        "Competitive RFP",
+        "Renegotiation",
+        "Fee reduction"
+      ],
+      "alternatives_considered": [
+        "Sigmund Software",
+        "Qualifacts",
+        "MedEvolve",
+        "MedicsCloud"
+      ],
+      "why_selected": "Matched 3.4% target fee, delivering 22% savings with no disruption to providers; existing workflows and integrations retained.",
+      "why_not_selected": null,
+      "contract_terms": "3-year term signed 4/15/2025; fee = 3.4% of net collections; credit-card processing fees carved out; Year-3 CPI cap CPI+2% (max ~5%).",
+      "negotiation_leverage": "Threat of switching to four alternative platforms, documented letter of dissatisfaction, volume growth commitment.",
+      "supplier_strengths": "Mature cloud platform, integrated RCM, clinician familiarity, robust reporting.",
+      "supplier_weaknesses": "Historically high fee, CPI escalator in Year-3, separate credit-card fees.",
+      "switching_costs": "Data migration, interface rebuilds, provider retraining, potential revenue disruption.",
+      "key_contacts": [
+        "Mercedes Dahar \u2013 Director of Customer Success",
+        "Molly Hebert \u2013 Group Sales Executive"
+      ],
+      "notes": "Consider re-opening pricing in Year-2 to waive CPI increase by offering extended term.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Multiple bidders",
+        "Significant savings (22%)"
+      ]
+    },
+    {
+      "supplier_name": "Sigmund Software",
+      "category": "EMR / Revenue Cycle Management",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": null,
+      "why_selected": null,
+      "why_not_selected": "Athena reduced fee to 3.4%; switching risk and implementation cost outweighed incremental benefits.",
+      "contract_terms": "Proposed SaaS subscription with integrated billing; multi-year commitment required.",
+      "negotiation_leverage": null,
+      "supplier_strengths": "Behavioral-health focused platform (Aura); positive peer references; configurable workflows.",
+      "supplier_weaknesses": "Unproven at SaVida scale; migration effort; training burden.",
+      "switching_costs": "Data conversion, staff training, downtime risk during go-live.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Participated in competitive RFP"
+      ]
+    },
+    {
+      "supplier_name": "Henry Schein (via Provista GPO)",
+      "category": "Medical & Lab Supplies Distribution",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 127494,
+      "final_spend": 99502,
+      "savings_dollars": 27992,
+      "savings_percent": 22,
+      "levers_applied": [
+        "GPO enrollment",
+        "Volume aggregation",
+        "SKU rationalization"
+      ],
+      "alternatives_considered": [
+        "MedSupply Partners",
+        "Midland Scientific",
+        "McKesson"
+      ],
+      "why_selected": "Provista tiered pricing delivered >20% savings and allowed consolidation to single distributor.",
+      "why_not_selected": null,
+      "contract_terms": "Purchases flow through Provista agreement; no minimum volume but rebate tiers reset annually; standard 30-day payment.",
+      "negotiation_leverage": "Access to Provista national contract, ability to bundle medical & lab spend to higher rebate tier.",
+      "supplier_strengths": "Nationwide distribution, broad catalog, rebate structure, aligned with GPO compliance reporting.",
+      "supplier_weaknesses": "Initial item cross-reference required; larger case pack sizes.",
+      "switching_costs": "Catalog setup in ERP, ordering workflow changes, staff training.",
+      "key_contacts": null,
+      "notes": "Send full location roster to Provista to finalize tier assignment.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "GPO switch",
+        "Multiple incumbents displaced",
+        "Savings >20%"
+      ]
+    },
+    {
+      "supplier_name": "MedSupply Partners",
+      "category": "Medical & Lab Supplies Distribution",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "GPO benchmarking"
+      ],
+      "alternatives_considered": [
+        "Henry Schein (Provista)"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Prices 10-30% above Provista benchmarks; limited ability to service multi-state footprint.",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": "Responsive on niche lab SKUs; flexible order sizes.",
+      "supplier_weaknesses": "Higher pricing, fragmented fulfillment network.",
+      "switching_costs": "Minimal\u2014SKU substitution handled through Provista catalog.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier displaced during consolidation",
+        "Benchmarking revealed price gap"
+      ]
+    },
+    {
+      "supplier_name": "GHA Technologies (Dell VAR)",
+      "category": "IT Hardware",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 33082,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Benchmark pricing",
+        "Multi-vendor bid"
+      ],
+      "alternatives_considered": [
+        "Connection",
+        "CDW (Provista)"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Initial quote 8-12% higher than Connection benchmarks; limited GPO alignment.",
+      "contract_terms": "Standard Dell reseller terms, Net-30; no price-hold guarantee.",
+      "negotiation_leverage": "Competitive quotes from Connection and CDW, Provista pricing transparency.",
+      "supplier_strengths": "Existing Dell relationship; known fulfillment process.",
+      "supplier_weaknesses": "Pricing not competitive; limited breadth beyond Dell.",
+      "switching_costs": "Low\u2014image and deployment processes portable across VARs.",
+      "key_contacts": null,
+      "notes": "May still be used as leverage if Connection deal stalls.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive bid run",
+        "Incumbent may be displaced"
+      ]
+    },
+    {
+      "supplier_name": "Connection, Inc.",
+      "category": "IT Hardware",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 33082,
+      "final_spend": 28781,
+      "savings_dollars": 4301,
+      "savings_percent": 13,
+      "levers_applied": [
+        "Benchmark pricing",
+        "GPO contract",
+        "Multi-vendor bid"
+      ],
+      "alternatives_considered": [
+        "GHA Technologies",
+        "CDW"
+      ],
+      "why_selected": "Provided like-for-like specs at 13% lower cost and aligned with Provista contract; poised to become preferred VAR.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing good through Provista catalog; 12-month price hold on quoted models.",
+      "negotiation_leverage": "Leverage of Provista tiered discounts and commitment for upcoming laptop refresh.",
+      "supplier_strengths": "Aggressive pricing, broad OEM access, e-commerce portal.",
+      "supplier_weaknesses": "Longer lead times on custom Dell builds than GHA.",
+      "switching_costs": "Minimal\u2014standard imaging process required.",
+      "key_contacts": null,
+      "notes": "Awaiting client confirmation of laptop specs before award.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multi-vendor bid",
+        "GPO leverage",
+        "Projected savings"
+      ]
+    },
+    {
+      "supplier_name": "Comcast Global / TPX Managed Services",
+      "category": "Telecom \u2013 Data & Voice",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 102000,
+      "final_spend": 84150,
+      "savings_dollars": 17850,
+      "savings_percent": 17.5,
+      "levers_applied": [
+        "Service consolidation",
+        "Managed services proposal",
+        "Bandwidth rationalization"
+      ],
+      "alternatives_considered": [
+        "Standalone Comcast Business circuits"
+      ],
+      "why_selected": "Consolidates 30+ circuits into single managed solution with 15\u201320% savings and proactive monitoring.",
+      "why_not_selected": null,
+      "contract_terms": "Proposed 36-month master service agreement; flat-rate per location with SLA; TPX as managed service integrator.",
+      "negotiation_leverage": "Aggregated bandwidth across sites and willingness to move to managed model.",
+      "supplier_strengths": "Single invoice, 24/7 NOC, scalable bandwidth tiers.",
+      "supplier_weaknesses": "Still dependent on Comcast last-mile; early termination fees if sites close.",
+      "switching_costs": "Requires CPE swap and cut-over scheduling at each clinic.",
+      "key_contacts": null,
+      "notes": "5/12 meeting set to review contract details and finalize award decision.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Service consolidation across 30+ sites",
+        "Savings >15%",
+        "Change to managed services model"
+      ]
+    },
+    {
+      "supplier_name": "Comcast Business (stand-alone circuits)",
+      "category": "Telecom \u2013 Data & Voice",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 102000,
+      "final_spend": 84150,
+      "savings_dollars": 17850,
+      "savings_percent": 17.5,
+      "levers_applied": [
+        "Circuit consolidation",
+        "Bandwidth rationalization"
+      ],
+      "alternatives_considered": [
+        "Comcast Global / TPX Managed Services"
+      ],
+      "why_selected": "Comcast remains underlying carrier; moved from individual location billing to consolidated enterprise contract.",
+      "why_not_selected": null,
+      "contract_terms": "Will roll into new global hierarchy account; anticipated 36-month term with volume discounts.",
+      "negotiation_leverage": "Threat of moving circuits to alternative carriers or aggregators; bulk purchasing volume.",
+      "supplier_strengths": "Existing infrastructure at all sites; high bandwidth availability.",
+      "supplier_weaknesses": "Past issues with billing accuracy; limited proactive monitoring without TPX overlay.",
+      "switching_costs": "High construction cost if moving to non-Comcast last-mile providers.",
+      "key_contacts": null,
+      "notes": "Exact savings dependent on final bandwidth tier selections.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Enterprise consolidation",
+        "Significant negotiation for nationwide contract"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 12,
+    "battlecards_generated": 8,
+    "categories_with_battlecards": [
+      "EMR / Revenue Cycle Management",
+      "Medical & Lab Supplies Distribution",
+      "IT Hardware",
+      "Telecom \u2013 Data & Voice"
+    ],
+    "skipped_reason": "Suppliers in Office Supplies GPO had only 3% savings and no competitive event; excluded per complexity criteria."
+  },
+  "extraction_notes": [
+    "Savings, dates, and contract details sourced from May-8-2025 Project Closeout slides.",
+    "EMR alternatives list derived from proposal folder contents (Sigmund, Qualifacts, MedEvolve, MedicsCloud).",
+    "Telecom savings use average of low/high range ($17.85K on $102K)."
+  ]
+}

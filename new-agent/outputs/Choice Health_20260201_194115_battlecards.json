@@ -1,0 +1,159 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "McKesson Medical-Surgical",
+      "category": "Medical Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1301434,
+      "final_spend": 1044074,
+      "savings_dollars": 257360,
+      "savings_percent": 19.8,
+      "levers_applied": [
+        "RFP",
+        "Benchmarking",
+        "Volume rebate",
+        "Contract renegotiation"
+      ],
+      "alternatives_considered": [
+        "Medline",
+        "Cardinal Health",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": "Matched target pricing in Round 2 and offered the highest total savings and volume-based rebate while maintaining existing service levels and direct-to-patient fulfillment capability.",
+      "why_not_selected": null,
+      "contract_terms": "2-year supply agreement (7/15/2024 \u2013 7/15/2026); firm pricing for term; future increases require market-data justification; volume rebate tier added.",
+      "negotiation_leverage": "Competitive RFP with six bidders, SKU-level target pricing, and demonstrated ability to switch to Medline/Cardinal created price pressure.",
+      "supplier_strengths": "Extensive SKU breadth, existing logistics network with next-day delivery, integrated EDI ordering already in place at all 40+ branches.",
+      "supplier_weaknesses": "Initial pricing above market; rebate structure previously absent.",
+      "switching_costs": "Low\u2014formularies already mapped to alternates; however, staff are accustomed to McKesson\u2019s ordering portal and patient drop-ship process.",
+      "key_contacts": null,
+      "notes": "Choice Health executed contract; implementation completed mid-July with immediate price file update.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted with 6 bidders",
+        "Significant negotiation (>19% savings)",
+        "Contract renegotiation with new rebate structure"
+      ]
+    },
+    {
+      "supplier_name": "Medline Industries",
+      "category": "Medical Supplies",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 1301434,
+      "final_spend": null,
+      "savings_dollars": 129679,
+      "savings_percent": 10.0,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "McKesson",
+        "Cardinal Health",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Offered only 10 % savings\u2014insufficient versus McKesson\u2019s 20 % and did not match volume-rebate expectations.",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": "Competitive core-list pricing; national distribution footprint.",
+      "supplier_weaknesses": "Could not meet target prices on several top-spend SKUs; limited rebate.",
+      "switching_costs": null,
+      "key_contacts": null,
+      "notes": "Kept as viable backup supplier for future price checks.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Participated in multi-round RFP",
+        "Savings evaluated versus incumbent"
+      ]
+    },
+    {
+      "supplier_name": "Cardinal Health",
+      "category": "Medical Supplies",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 654930,
+      "final_spend": null,
+      "savings_dollars": 79702,
+      "savings_percent": 12.2,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "McKesson",
+        "Medline",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Bid issues with unit-of-measure mismatches delayed analysis; projected savings below incumbent\u2019s final offer.",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": "Strong national distribution and acute-care product range.",
+      "supplier_weaknesses": "Data quality concerns during bid (UOM mismatches); rebate proposal not provided.",
+      "switching_costs": null,
+      "key_contacts": null,
+      "notes": "Treya kept Cardinal engaged for future benchmarking but excluded from final award.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Participated in multi-round RFP",
+        "Bid quality challenges influenced decision"
+      ]
+    },
+    {
+      "supplier_name": "Enterprise Fleet Management",
+      "category": "Fleet",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 3764808,
+      "final_spend": 3624958,
+      "savings_dollars": 139850,
+      "savings_percent": 3.7,
+      "levers_applied": [
+        "Benchmarking analysis",
+        "Program restructuring",
+        "Contract renegotiation"
+      ],
+      "alternatives_considered": null,
+      "why_selected": "Only viable nationwide lessor with existing 385-vehicle program; agreed to bucketed mileage pricing cutting full-maintenance rates up to 48 %.",
+      "why_not_selected": null,
+      "contract_terms": "Service Agreement Addendum (pending signature) implementing new mileage-based maintenance matrix; savings effective retroactive to 6/12/2024 analyses; no change to underlying lease terms.",
+      "negotiation_leverage": "Detailed utilization analysis revealed only 126 vehicles incurred maintenance monthly; presented \u2018should-be\u2019 cost model showing $343 K potential gap.",
+      "supplier_strengths": "Flexible lease structures, nationwide maintenance network, existing telematics integration.",
+      "supplier_weaknesses": "Legacy flat maintenance rate created overcharges; limited transparency on pass-through fees.",
+      "switching_costs": "High\u2014complex unwind of 400+ individual leases; potential early-termination penalties.",
+      "key_contacts": null,
+      "notes": "Addendum expected to finalize Q3 2024; Treya to memorialize terms and monitor monthly savings realisation.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant negotiation with incumbent",
+        "Program redesign (mileage buckets)",
+        "Savings >$50 K"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 20,
+    "battlecards_generated": 4,
+    "categories_with_battlecards": [
+      "Medical Supplies",
+      "Fleet"
+    ],
+    "skipped_reason": "Categories like Office Supplies and Temp Labor are still in data-collection phase with no final negotiation results; Pharmacy and Telecom on hold or outside current scope."
+  },
+  "extraction_notes": [
+    "Medical Supplies data sourced from Project Update slides 7 & 12-14 and Round 2 savings analysis workbook.",
+    "Fleet savings and leverage details extracted from slides 8 & 9 of the Strategic Sourcing Project Update.",
+    "Savings percentages rounded to one decimal where exact figures provided; baseline spend figures taken from \u2018Savings Dashboard\u2019 addressable spend or RFP baseline where applicable."
+  ]
+}

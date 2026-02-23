@@ -1,0 +1,323 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "Welch Packaging",
+      "category": "Packaging \u2013 Corrugate",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 3836872,
+      "final_spend": 2554489,
+      "savings_dollars": 1282383,
+      "savings_percent": 33,
+      "levers_applied": [
+        "Competitive RFP",
+        "Supplier consolidation",
+        "Volume aggregation",
+        "Site visits",
+        "MOU negotiation"
+      ],
+      "alternatives_considered": [
+        "Demand Packaging",
+        "Kodiak",
+        "Landsberg Orora",
+        "Concept Packaging Group",
+        "Monte Packaging"
+      ],
+      "why_selected": "Highest savings (33%), strong service fit verified during site visits, enthusiastic about business, could start immediately.",
+      "why_not_selected": null,
+      "contract_terms": "MOU drafted 8/6/24 \u2013 pricing fixed through 4/30/25 with quarterly business reviews; no volume commitment penalties.",
+      "negotiation_leverage": "Ability to award full corrugate volume and threat of single-supplier consolidation; multiple BAFO rounds drove price concessions.",
+      "supplier_strengths": [
+        "Significant cost savings",
+        "Responsive sales team",
+        "Proven corrugate quality"
+      ],
+      "supplier_weaknesses": [
+        "Limited reach to FL/AL operating companies",
+        "Does not supply other packaging categories"
+      ],
+      "switching_costs": "Spec verification and artwork approval for ~200 SKUs; minor retraining of warehouse teams.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Multiple bidders",
+        "Supplier switched",
+        "Significant savings (33%)"
+      ]
+    },
+    {
+      "supplier_name": "Bunzl",
+      "category": "Packaging \u2013 Folding Cartons / Labels",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 1868875,
+      "final_spend": 1593529,
+      "savings_dollars": 275346,
+      "savings_percent": 14.7,
+      "levers_applied": [
+        "Competitive RFP",
+        "Supplier consolidation",
+        "Volume aggregation",
+        "MOU negotiation"
+      ],
+      "alternatives_considered": [
+        "Landsberg Orora",
+        "Demand Packaging",
+        "Imperial Dade",
+        "Envoy Solutions"
+      ],
+      "why_selected": "National reach to cover all OpCos, acceptable savings, willingness to hold pricing for 12-months, favorable payment terms.",
+      "why_not_selected": null,
+      "contract_terms": "MOU drafted 8/6/24 \u2013 12-month price hold, option to extend 2 x 12 months with CPI caps \u22643%.",
+      "negotiation_leverage": "Ability to award both packaging and labels lots; threat to consolidate with Landsberg if terms not met.",
+      "supplier_strengths": [
+        "Broad product portfolio",
+        "Existing national distribution network"
+      ],
+      "supplier_weaknesses": [
+        "Historic service concerns at Get Fresh \u2013 FE to monitor KPIs closely",
+        "Did not quote corrugate lot"
+      ],
+      "switching_costs": "SKU cross-references and internal system updates for ~500 items.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Multiple bidders",
+        "Supplier switched"
+      ]
+    },
+    {
+      "supplier_name": "Landsberg Orora",
+      "category": "Packaging \u2013 All Lots",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 5536291,
+      "final_spend": null,
+      "savings_dollars": 1002283,
+      "savings_percent": 18,
+      "levers_applied": [
+        "Competitive RFP",
+        "BAFO"
+      ],
+      "alternatives_considered": [
+        "Welch Packaging",
+        "Bunzl",
+        "Demand Packaging",
+        "Kodiak"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Offered lower overall savings (18%) and limited bid coverage; staggered implementation limited value.",
+      "contract_terms": null,
+      "negotiation_leverage": "Used as price-check against Welch/Bunzl in BAFO to drive additional 1-4% concessions.",
+      "supplier_strengths": [
+        "\u2018One-stop shop\u2019 capability",
+        "National footprint"
+      ],
+      "supplier_weaknesses": [
+        "Did not bid full spend initially",
+        "Implementation concerns"
+      ],
+      "switching_costs": null,
+      "key_contacts": null,
+      "notes": "Kept engaged as future contingency supplier.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Multiple bidders"
+      ]
+    },
+    {
+      "supplier_name": "Kamps",
+      "category": "Crates & Pallets",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 228118,
+      "final_spend": 193456,
+      "savings_dollars": 34662,
+      "savings_percent": 15,
+      "levers_applied": [
+        "Competitive RFP",
+        "Incumbent renegotiation",
+        "Volume forecasting",
+        "MOU"
+      ],
+      "alternatives_considered": [
+        "48Forty",
+        "General Pallet",
+        "PalletOne",
+        "Rebox"
+      ],
+      "why_selected": "Matched target pricing (within $30K of lowest), avoided operational disruption, proximity to Indy Fruit warehouse.",
+      "why_not_selected": null,
+      "contract_terms": "MOU effective 5/1/24-4/30/25 with fixed pricing (48x40 #2 = $3.99, buy-back $1.49); quarterly volume updates.",
+      "negotiation_leverage": "Credible threat to shift to 48Forty, plus detailed usage data provided to all bidders.",
+      "supplier_strengths": [
+        "Broad Midwest network",
+        "Proven quality & reliable pickups"
+      ],
+      "supplier_weaknesses": [
+        "Slightly higher price than 48Forty",
+        "Limited Southeast coverage"
+      ],
+      "switching_costs": "Freight lanes and pallet spec alignment, reverse logistics set-up.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Supplier retained after negotiation",
+        "Meaningful savings (15%)"
+      ]
+    },
+    {
+      "supplier_name": "48Forty Solutions",
+      "category": "Crates & Pallets",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 228118,
+      "final_spend": null,
+      "savings_dollars": 65000,
+      "savings_percent": 28.5,
+      "levers_applied": [
+        "Competitive RFP"
+      ],
+      "alternatives_considered": [
+        "Kamps",
+        "General Pallet",
+        "PalletOne"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Additional ~$30K savings versus Kamps did not justify change-over costs and risk.",
+      "contract_terms": null,
+      "negotiation_leverage": "Their low bid used to pressure Kamps to match targets.",
+      "supplier_strengths": [
+        "National footprint (74 sites)",
+        "Aggressive pricing"
+      ],
+      "supplier_weaknesses": [
+        "Unknown service performance with produce distributors",
+        "90-day price validity only"
+      ],
+      "switching_costs": "System updates, trailer spotting, pallet spec validation.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Multiple bidders"
+      ]
+    },
+    {
+      "supplier_name": "WGL Energy Services",
+      "category": "Utilities \u2013 Electric (Sirna & Sons)",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 158750,
+      "final_spend": 143562,
+      "savings_dollars": 15188,
+      "savings_percent": 10,
+      "levers_applied": [
+        "Brokered fixed-price contract",
+        "Competitive supplier bid",
+        "Term length optimization"
+      ],
+      "alternatives_considered": [
+        "Direct Utility Default",
+        "5 other suppliers via Freedom Energy Logistics"
+      ],
+      "why_selected": "48-month fixed price balanced short-term cost with long-term risk mitigation; best NPV over 4-year horizon.",
+      "why_not_selected": null,
+      "contract_terms": "48-month all-requirements contract starting 5/14/24; fixed $0.06558/kWh; utility billed.",
+      "negotiation_leverage": "Broker ran sealed bid among 6 suppliers; FE/market intel showed upward price trend, prompting supplier concessions.",
+      "supplier_strengths": [
+        "Price stability",
+        "Reputable in deregulated OH market"
+      ],
+      "supplier_weaknesses": [
+        "Slight premium in year 1",
+        "Requires LOA per account"
+      ],
+      "switching_costs": "Early termination fees if market falls; account enrollments via utility.",
+      "key_contacts": null,
+      "notes": "Projected total contract savings $61K vs market forecast.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Broker competitive procurement",
+        "Multiple suppliers bid",
+        "Fixed-price hedge"
+      ]
+    },
+    {
+      "supplier_name": "Love's / Pilot Fleet Card Program",
+      "category": "Fuel",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 15831194,
+      "final_spend": 15436709,
+      "savings_dollars": 394485,
+      "savings_percent": 2.5,
+      "levers_applied": [
+        "Fleet card program",
+        "Supplier consolidation",
+        "Volume aggregation"
+      ],
+      "alternatives_considered": [
+        "Quick Fuel",
+        "Avalon",
+        "WEX",
+        "Comdata",
+        "P&J Petroleum"
+      ],
+      "why_selected": "Nationwide fuel network, consolidated discounts, single invoice & real-time reporting; lowest net cost after rebates.",
+      "why_not_selected": null,
+      "contract_terms": "Net-billing with cost-plus \u00a2/gal markup and quarterly volume rebates; no long-term volume commitment.",
+      "negotiation_leverage": "165+ trucks across 8 OpCos created large volume; threat of staying with fragmented suppliers.",
+      "supplier_strengths": [
+        "24/7 highway coverage",
+        "Integrated DEF pricing",
+        "Strong data analytics portal"
+      ],
+      "supplier_weaknesses": [
+        "Requires driver card transition",
+        "Slightly higher pump prices in some metro areas"
+      ],
+      "switching_costs": "Card replacement, driver training, back-office integration to TMS.",
+      "key_contacts": null,
+      "notes": "Implementation being led by WPP consultant; go-live Q4-2024.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier consolidation",
+        "New program implementation",
+        "Multi-supplier baseline"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 22,
+    "battlecards_generated": 7,
+    "categories_with_battlecards": [
+      "Packaging",
+      "Crates & Pallets",
+      "Utilities",
+      "Fuel"
+    ],
+    "skipped_reason": "Other categories were renewals, on hold, or lacked detailed negotiation data."
+  },
+  "extraction_notes": [
+    "Savings and lot details for Packaging pulled from slide 5 of 08-13-24 update.",
+    "Crates & Pallets pricing and decision rationale based on note on Savings Dashboard and signed Kamps MOU.",
+    "Utilities details from FEL proposal slide (slide 10) and executed WGL agreement.",
+    "Fuel baseline and savings from Savings Dashboard; implementation details from progress update slide 4."
+  ]
+}

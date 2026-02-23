@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client name, industry, clear objectives, quantified $510K implemented savings (+$31K in flight), and multiple documented proof points are available.",
+    "headline": "Automotive e-commerce retailer unlocks $510K in annual logistics and packaging savings through Treya\u2019s strategic sourcing",
+    "client_problem_statement": "Following a private-equity recapitalization, CJ Pony Parts faced rising shipping, packaging, and labor costs across two distribution centers. Procurement was decentralized and reliant on long-standing incumbents, leaving limited visibility into true spend and few levers to improve margins. With aggressive value-creation targets on the horizon, the company needed a partner to quickly identify and implement meaningful cost reductions while preserving service levels for its fast-growing e-commerce operation.",
+    "client_problem_anonymized": "Following a private-equity recapitalization, a leading automotive e-commerce retailer faced rising shipping, packaging, and labor costs across two distribution centers. Procurement was decentralized and reliant on long-standing incumbents, leaving limited visibility into true spend and few levers to improve margins. With a focus on operational efficiency and margin improvement, the company needed a partner to quickly identify and implement meaningful cost reductions while preserving service levels for its fast-growing e-commerce operation.",
+    "approach_summary": [
+      "Analyzed 12-month AP and shipment data covering eight direct and indirect categories\u2014$13.6M in addressable spend\u2014to establish clean baselines and savings hypotheses.",
+      "Renegotiated the incumbent FedEx small-parcel contract, restructuring rates and surcharges to deliver a 4% reduction worth $339K annually while maintaining carrier continuity.",
+      "Ran competitive RFPs and incumbent negotiations for corrugated cartons and packaging supplies, standardizing SKUs across PA and NV facilities and capturing 5% and 32% savings, respectively.",
+      "Leveraged OMNIA Partners\u2019 staffing program to secure a 13% markup reduction with Staffmark, projected to save $31K once fully rolled out.",
+      "Provided hands-on implementation support\u2014carrier amendment execution, MOU drafting, SKU rationalization, and supplier dashboards\u2014to ensure savings were realized and auditable."
+    ],
+    "top_levers": [
+      "Contract renegotiation",
+      "Competitive RFP / incumbent bid",
+      "GPO leverage",
+      "SKU standardization & vendor consolidation"
+    ],
+    "value_delivered_blurb": "Treya delivered $510,841 in validated annual savings\u2014more than 6x the engagement\u2019s fixed fee\u2014and has an additional $30,817 in progress, bringing the total to $541K. The results surpassed the original low-end savings estimate of $334K and met the client\u2019s requirement to identify $100K within three months. Beyond the financial impact, Treya standardized packaging specifications, improved supplier payment terms, and equipped leadership with clear savings dashboards for ongoing spend governance.",
+    "where_we_were_unique": [
+      "Identified the first $100K in savings within 90 days, satisfying stringent PE timelines.",
+      "Balanced cost reduction with operational continuity by negotiating better terms with incumbents rather than forcing disruptive supplier switches.",
+      "Harnessed deep logistics expertise to optimize complex parcel rate structures and surcharges often overlooked by generalist consultants.",
+      "Combined GPO access with custom RFP work, unlocking savings across both direct (COGS) and indirect spend categories."
+    ]
+  },
+  "generation_notes": [
+    "Total implemented savings ($510K) highlighted in headline for maximum impact.",
+    "Approach bullets mirror chronological workflow: analyze, renegotiate, RFP, GPO, implement.",
+    "Value-delivered blurb references initial contractual guarantee to emphasize over-delivery."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "Generate $0.54-$1.2 million in annual cost savings by strategically sourcing high-spend categories, while maintaining service/quality levels, aggregating Choice Health\u2019s enterprise-wide purchasing power, and completing the effort by July 2024 to support value-creation goals.",
+    "scope_summary": "Initial scope covers 12 spend categories (Fleet, Employee Benefits, Medical Supplies, Pharmacy, Medical Equipment, Temp Labor \u2013 Therapists & Nurses, Telecom, Commercial Print, Copiers/MFPs, Office Supplies, IT Hardware) representing approximately $17.7 million in annual spend and targeted savings of 3-15 % per category. Scope may be refined as data is collected; some categories (e.g., Pharmacy, Medical Equipment) have since been put on hold or de-scoped.",
+    "constraints_challenges": [
+      "Supplier non-responsiveness to data requests, delaying baseline development",
+      "Risk of uncoordinated 'side conversations' with suppliers that could undermine unified negotiation strategy",
+      "Need for timely participation and feedback from Choice Health stakeholders despite limited bandwidth",
+      "Potential pushback from incumbents and internal stakeholders when switching suppliers or altering contracts",
+      "Aggressive six-month timeline to capture savings and meet PE value-creation schedule"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Accounts-payable spend data (~$39 M) extracted from the ERP and provided to Treya; limited internal line-item usage data or centralized contract repository, requiring direct supplier outreach for detailed data.",
+    "data_quality_notes": "Multiple vendor naming conventions, unmapped GL descriptions, and incomplete historical usage data\u2014only a subset of high-spend suppliers have provided detailed files; remaining data cleanup and mapping needed before analysis.",
+    "source_file": "Project Kickoff/Choice Health - Strategic Sourcing Project Kickoff - (0122024).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Project Kickoff/Choice Health - Strategic Sourcing Project Kickoff - (0122024).pptx",
+    "Proposal and Assessments/Treya Project Proposal - Choice Health.pptx",
+    "Agreement/Treya Procurement Cost Reduction Services Agreement_Choice Health at Home.docx.pdf",
+    "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from need to 'leverage enterprise-wide purchasing power' and Treya performing the bulk of sourcing work.",
+    "Data challenges taken from Kickoff slide on project challenges and Agreement section on data collection.",
+    "Scope details derived from Kickoff 'Project Scope' table (slide 8) and subsequent project update showing on-hold categories."
+  ]
+}

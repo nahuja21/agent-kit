@@ -1,0 +1,47 @@
+{
+  "client": {
+    "client_name": "Epika Fleet Services, Inc.",
+    "industry_primary": "Fleet maintenance and repair services",
+    "industry_secondary": "Commercial trucking support services",
+    "primary_industry_sector": "Logistics, Fleet, Distribution & Aftermarket Parts",
+    "business_model": "Nationwide network of mobile and in-shop service centers that provide preventative maintenance and repair for medium- and heavy-duty commercial truck and trailer fleets",
+    "sponsor_pe_firm": "Ares Management Corporation (majority stake acquired April 2025)",
+    "client_history": "Founded in 2016 and headquartered in Nashville, Tennessee, Epika Fleet Services has grown rapidly through a series of acquisitions into a coast-to-coast platform serving more than 2,000 fleet customers across almost 40 states."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 37500000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "LeadIQ company profile (range USD 25\u201350 M)",
+      "notes": "No official revenue disclosed. LeadIQ estimates USD 25-50 M. Mid-point (37.5 M) shown as placeholder; actual could be anywhere in the cited range."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 20,
+      "confidence": "medium",
+      "source": "Pr Newswire press release 2025-04-21 (cites ~20 in-shop centers)",
+      "notes": "Press release states 'approximately 20 in-shop centers'; mobile service branches not counted as physical locations."
+    },
+    "employees": {
+      "count": 700,
+      "confidence": "medium",
+      "source": "SignalHire (500-1,000), LeadIQ (501-1,000), Pr Newswire 2025-04-21 (550 technicians)",
+      "notes": "Multiple sources cluster between 500 and 1,000 employees, with 550 identified as technicians alone. Using 700 as mid-point of overlapping ranges."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Treya Procurement Cost Reduction Services Agreement_Epika Fleet Services_vF_8.26.24.docx.pdf (page 1)",
+    "Epika Case Study v5.docx (About the Client section)",
+    "Prnewswire.com press release \u2013 'Epika Fleet Services, Inc. acquired by Ares Management' (21 Apr 2025)",
+    "LeadIQ company profile \u2013 Epika Fleet Services",
+    "SignalHire company profile \u2013 Epika Fleet Services"
+  ],
+  "extraction_notes": [
+    "Official legal name confirmed in signed services agreement between Treya Partners and Epika Fleet Services, Inc.",
+    "Primary industry characterized from case study description of services (mobile and in-shop preventative maintenance for truck fleets).",
+    "PE ownership: Ares Management acquisition (2025) confirmed by company press release; earlier minority stake by Trivest noted but current majority owner is Ares.",
+    "Revenue figures are only third-party estimates; no primary disclosures found, hence low confidence.",
+    "Employee counts vary; selected figure reflects midpoint of overlapping third-party ranges plus technician count disclosed by company."
+  ]
+}

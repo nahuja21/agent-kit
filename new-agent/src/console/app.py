@@ -29,22 +29,28 @@ from src.config import (
     MODEL,
     validate_config,
     validate_azure_config,
+    validate_sharepoint_config,
     ensure_directories,
     AZURE_SQL_ENABLED,
     AZURE_SQL_TABLE,
     get_azure_connection_string,
 )
 from src.scanner import DirectoryScanner, find_project_in_inputs, extract_zip_project
+from src.scanner.sharepoint import SharePointClient
 from src.llm import OpenAIClient
 from src.prompts import ContextBuilder
 from src.prompts.context import get_file_selection_prompt, get_schema_extraction_prompt, FILE_SELECTION_COUNT
 from src.prompts.loader import get_anchor_detection_prompt, get_project_scope_prompt, get_client_context_prompt, get_engagement_background_prompt, get_impact_prompt, get_categories_prompt, get_case_study_generation_prompt, get_supplier_battlecards_prompt, get_powerpoint_generation_prompt
 from src.pptx.generator import CaseStudyPPTXGeneratorV2
+from src.pptx.template_generator import TemplatePPTXGenerator
 from src.extractors.pdf import extract_pdf_with_tables, find_exhibit_pages, extract_table_with_vision, extract_table_with_tesseract
 from src.extractors.base import extract_file_content
 from src.models.schema import CaseStudy
 from src.database import AzureSQLWriter
 import re
+import subprocess
+import platform
+import time
 
 
 def extract_json_from_response(content: str) -> dict:
@@ -208,6 +214,7 @@ class ConsoleApp:
         self.scanner = DirectoryScanner()
         self.context_builder = ContextBuilder()
         self.llm_client: Optional[OpenAIClient] = None
+        self.sharepoint_client: Optional[SharePointClient] = None
         
         # Command registry: {command: (handler, description)}
         self._commands: Dict[str, Tuple[Callable, str]] = {}
@@ -219,7 +226,14 @@ class ConsoleApp:
         self._commands["/file"] = (self._handle_file, "Scan project folder and analyze with AI (simple analysis)")
         self._commands["/extract"] = (self._handle_extract, "Extract structured case study data (two-pass extraction)")
         self._commands["/agent"] = (self._handle_agent, "Smart extraction with anchor file detection (new pipeline)")
+        self._commands["/agentbatch"] = (self._handle_agentbatch, "Run /agent on every project folder in inputs/ (batch mode)")
         self._commands["/powerpoint"] = (self._handle_powerpoint, "Run agent extraction + generate PowerPoint presentation")
+        self._commands["/powerpoint2"] = (self._handle_powerpoint2, "Generate PowerPoint using LLM Case Study template")
+        self._commands["/powerpointbatch"] = (self._handle_powerpointbatch, "Batch generate PowerPoint for multiple clients from database")
+        self._commands["/pdf"] = (self._handle_pdf, "Convert PowerPoint files to PDF using Microsoft PowerPoint")
+        self._commands["/sharepoint"] = (self._handle_sharepoint, "List files from SharePoint Projects library")
+        self._commands["/print"] = (self._handle_print, "Export Azure SQL database to Excel file")
+        self._commands["/wipe"] = (self._handle_wipe, "Delete data from Azure SQL database (all or by client name)")
         self._commands["/help"] = (self._handle_help, "Show available commands")
         self._commands["/quit"] = (self._handle_quit, "Exit the console")
         self._commands["/exit"] = (self._handle_quit, "Exit the console")
@@ -339,6 +353,636 @@ class ConsoleApp:
                 self.console.print("\n[red]Azure SQL Configuration Errors:[/red]")
                 for error in azure_errors:
                     self.console.print(f"  [red]•[/red] {error}")
+        
+        self.console.print()
+    
+    async def _handle_print(self, args: List[str]) -> None:
+        """
+        Handle /print command - export Azure SQL database to readable text file.
+        
+        Exports all data from case_study_extractions table to a human-readable
+        text file formatted for LLM processing.
+        """
+        from datetime import datetime
+        
+        self.console.print(Panel(
+            "[bold]Database Export[/bold]\nExporting Azure SQL database to readable text file",
+            border_style="cyan",
+        ))
+        
+        # Check if Azure SQL is enabled
+        if not AZURE_SQL_ENABLED:
+            self.console.print("[red]❌ Azure SQL is not enabled[/red]")
+            self.console.print("[dim]Run: source azure_setup.sh before starting the console[/dim]")
+            return
+        
+        # Validate Azure config
+        azure_errors = validate_azure_config()
+        if azure_errors:
+            self.console.print("[red]Azure SQL configuration errors:[/red]")
+            for error in azure_errors:
+                self.console.print(f"  [red]•[/red] {error}")
+            return
+        
+        self.console.print("[cyan]Connecting to Azure SQL...[/cyan]")
+        
+        try:
+            connection_string = get_azure_connection_string()
+            
+            # Run database operations in thread pool to avoid blocking
+            def fetch_all_data():
+                import pyodbc
+                conn = pyodbc.connect(connection_string, timeout=30)
+                cursor = conn.cursor()
+                
+                cursor.execute(f"""
+                    SELECT 
+                        id,
+                        client_name,
+                        extraction_timestamp,
+                        project_scope,
+                        client_context,
+                        engagement_background,
+                        impact,
+                        categories,
+                        case_study,
+                        battlecards,
+                        created_at,
+                        updated_at
+                    FROM {AZURE_SQL_TABLE}
+                    ORDER BY id
+                """)
+                
+                rows = cursor.fetchall()
+                cursor.close()
+                conn.close()
+                return rows
+            
+            rows = await asyncio.to_thread(fetch_all_data)
+            
+            self.console.print(f"[green]✓[/green] Found {len(rows)} client(s) in database")
+            
+            if not rows:
+                self.console.print("[yellow]⚠️ No data to export[/yellow]")
+                return
+            
+            # Generate readable text export
+            self.console.print("[cyan]Generating readable export...[/cyan]")
+            
+            output_lines = []
+            output_lines.append("=" * 80)
+            output_lines.append("CASE STUDY DATABASE EXPORT")
+            output_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            output_lines.append(f"Total Clients: {len(rows)}")
+            output_lines.append("=" * 80)
+            
+            for row in rows:
+                # Unpack row
+                (row_id, client_name, extraction_ts, project_scope_json, 
+                 client_context_json, engagement_bg_json, impact_json,
+                 categories_json, case_study_json, battlecards_json,
+                 created_at, updated_at) = row
+                
+                # Parse JSON columns
+                project_scope = json.loads(project_scope_json) if project_scope_json else {}
+                client_context = json.loads(client_context_json) if client_context_json else {}
+                engagement_bg = json.loads(engagement_bg_json) if engagement_bg_json else {}
+                impact = json.loads(impact_json) if impact_json else {}
+                categories = json.loads(categories_json) if categories_json else {}
+                case_study = json.loads(case_study_json) if case_study_json else {}
+                battlecards = json.loads(battlecards_json) if battlecards_json else {}
+                
+                output_lines.append("")
+                output_lines.append("")
+                output_lines.append("#" * 80)
+                output_lines.append(f"# CLIENT: {client_name}")
+                output_lines.append(f"# ID: {row_id} | Extracted: {extraction_ts}")
+                output_lines.append("#" * 80)
+                
+                # ============================================================
+                # CLIENT OVERVIEW
+                # ============================================================
+                output_lines.append("")
+                output_lines.append("=" * 60)
+                output_lines.append("CLIENT OVERVIEW")
+                output_lines.append("=" * 60)
+                
+                client_info = client_context.get("client", {})
+                size_metrics = client_context.get("size_metrics", {})
+                
+                output_lines.append(f"Name: {client_info.get('client_name', client_name)}")
+                output_lines.append(f"Industry Primary: {client_info.get('industry_primary', 'N/A')}")
+                output_lines.append(f"Industry Secondary: {client_info.get('industry_secondary', 'N/A')}")
+                output_lines.append(f"Industry Sector: {client_info.get('primary_industry_sector', 'N/A')}")
+                output_lines.append(f"Business Model: {client_info.get('business_model', 'N/A')}")
+                output_lines.append(f"PE Sponsor: {client_info.get('sponsor_pe_firm', 'N/A')}")
+                output_lines.append(f"Client History: {client_info.get('client_history', 'N/A')}")
+                
+                output_lines.append("")
+                output_lines.append("Size Metrics:")
+                
+                revenue = size_metrics.get("revenue", {})
+                if isinstance(revenue, dict):
+                    rev_amt = revenue.get('amount', 0) or 0
+                    output_lines.append(f"  Revenue: ${rev_amt:,} {revenue.get('currency', 'USD')} (confidence: {revenue.get('confidence', 'N/A')})")
+                    output_lines.append(f"    Source: {revenue.get('source', 'N/A')}")
+                    output_lines.append(f"    Notes: {revenue.get('notes', 'N/A')}")
+                
+                locations = size_metrics.get("locations", {})
+                if isinstance(locations, dict):
+                    output_lines.append(f"  Locations: {locations.get('count', 'N/A')} (confidence: {locations.get('confidence', 'N/A')})")
+                    output_lines.append(f"    Source: {locations.get('source', 'N/A')}")
+                
+                employees = size_metrics.get("employees", {})
+                if isinstance(employees, dict):
+                    output_lines.append(f"  Employees: {employees.get('count', 'N/A')} (confidence: {employees.get('confidence', 'N/A')})")
+                    output_lines.append(f"    Source: {employees.get('source', 'N/A')}")
+                
+                # ============================================================
+                # PROJECT SCOPE
+                # ============================================================
+                output_lines.append("")
+                output_lines.append("=" * 60)
+                output_lines.append("PROJECT SCOPE")
+                output_lines.append("=" * 60)
+                
+                exhibit_a = project_scope.get("exhibit_a", {})
+                exhibit_b = project_scope.get("exhibit_b", {})
+                timing = project_scope.get("timing", {})
+                
+                output_lines.append("")
+                output_lines.append("Exhibit B - Fee Structure:")
+                output_lines.append(f"  Fee Type: {exhibit_b.get('fee_type', 'N/A')}")
+                fee_amt = exhibit_b.get('fee_amount', 0)
+                output_lines.append(f"  Fee Amount: ${fee_amt:,}" if fee_amt else "  Fee Amount: N/A")
+                min_savings = exhibit_b.get('minimum_savings_guarantee', 0)
+                output_lines.append(f"  Min Savings Guarantee: ${min_savings:,}" if min_savings else "  Min Savings Guarantee: N/A")
+                output_lines.append(f"  Return on Fees Ratio: {exhibit_b.get('minimum_return_on_fees_ratio', 'N/A')}x")
+                output_lines.append(f"  Fee Notes: {exhibit_b.get('fee_notes', 'N/A')}")
+                
+                output_lines.append("")
+                output_lines.append("Timing:")
+                output_lines.append(f"  Start Date: {timing.get('start_date', 'N/A')}")
+                output_lines.append(f"  End Date: {timing.get('end_date', 'N/A')}")
+                output_lines.append(f"  Engagement Type: {timing.get('engagement_type', 'N/A')}")
+                
+                output_lines.append("")
+                output_lines.append("Exhibit A - Project Scope:")
+                total_spend = exhibit_a.get('total_spend', 0)
+                output_lines.append(f"  Total Spend: ${total_spend:,}" if total_spend else "  Total Spend: N/A")
+                addr_spend = exhibit_a.get('total_addressable_spend', 0)
+                output_lines.append(f"  Total Addressable Spend: ${addr_spend:,}" if addr_spend else "  Total Addressable Spend: N/A")
+                savings_low = exhibit_a.get('savings_estimate_low', 0) or 0
+                savings_high = exhibit_a.get('savings_estimate_high', 0) or 0
+                output_lines.append(f"  Savings Estimate: ${savings_low:,} - ${savings_high:,}")
+                output_lines.append(f"  Initial Categories Count: {exhibit_a.get('initial_categories_count', 'N/A') or 'N/A'}")
+                cogs_count = exhibit_a.get('cogs_categories_count', 0) or 0
+                cogs_pct = exhibit_a.get('cogs_addressable_percentage', 0) or 0
+                output_lines.append(f"  COGS Categories: {cogs_count} ({cogs_pct}% of addressable)")
+                
+                output_lines.append("")
+                output_lines.append("  Initial Categories:")
+                for cat_name in exhibit_a.get("initial_categories", []):
+                    output_lines.append(f"    - {cat_name}")
+                
+                output_lines.append("")
+                output_lines.append("  Category Details:")
+                for cat in exhibit_a.get("category_details", []):
+                    cat_name = cat.get('category_name', 'Unknown') or 'Unknown'
+                    spend = cat.get('spend', 0) or 0
+                    addr_pct = cat.get('addressable_pct', 0) or 0
+                    sav_low = cat.get('savings_low', 0) or 0
+                    sav_high = cat.get('savings_high', 0) or 0
+                    is_cogs = "COGS" if cat.get('is_cogs') else ""
+                    output_lines.append(f"    - {cat_name}: ${spend:,} spend, {addr_pct}% addressable, ${sav_low:,}-${sav_high:,} savings {is_cogs}")
+                
+                # ============================================================
+                # ENGAGEMENT BACKGROUND
+                # ============================================================
+                output_lines.append("")
+                output_lines.append("=" * 60)
+                output_lines.append("ENGAGEMENT BACKGROUND")
+                output_lines.append("=" * 60)
+                
+                eng_bg = engagement_bg.get("engagement_background", {})
+                proc_env = engagement_bg.get("procurement_environment", {})
+                
+                output_lines.append(f"Objective: {eng_bg.get('objective', 'N/A')}")
+                output_lines.append(f"Scope Summary: {eng_bg.get('scope_summary', 'N/A')}")
+                
+                output_lines.append("")
+                output_lines.append("Constraints & Challenges:")
+                for constraint in eng_bg.get("constraints_challenges", []):
+                    output_lines.append(f"  - {constraint}")
+                
+                output_lines.append("")
+                output_lines.append("Procurement Environment:")
+                output_lines.append(f"  Operating Model: {proc_env.get('operating_model', 'N/A')}")
+                output_lines.append(f"  Maturity: {proc_env.get('maturity', 'N/A')}")
+                output_lines.append(f"  Data Availability: {proc_env.get('data_availability', 'N/A')}")
+                output_lines.append(f"  Data Quality Notes: {proc_env.get('data_quality_notes', 'N/A')}")
+                
+                # ============================================================
+                # IMPACT
+                # ============================================================
+                output_lines.append("")
+                output_lines.append("=" * 60)
+                output_lines.append("IMPACT & RESULTS")
+                output_lines.append("=" * 60)
+                
+                impact_data = impact.get("impact", {})
+                summary = impact_data.get("summary", {})
+                financials = impact_data.get("financials", {})
+                
+                output_lines.append(f"Headline: {summary.get('headline', 'N/A')}")
+                output_lines.append("")
+                output_lines.append(f"Narrative: {summary.get('narrative', 'N/A')}")
+                
+                output_lines.append("")
+                output_lines.append("Financial Impact:")
+                
+                total_savings = financials.get("total_annual_savings", {})
+                if isinstance(total_savings, dict):
+                    total_sav_amt = total_savings.get('amount', 0) or 0
+                    output_lines.append(f"  Total Annual Savings: ${total_sav_amt:,} (confidence: {total_savings.get('confidence', 'N/A')})")
+                    output_lines.append(f"    Source: {total_savings.get('source_file', 'N/A')}")
+                    output_lines.append(f"    Notes: {total_savings.get('notes', 'N/A')}")
+                
+                finalized = financials.get("finalized_savings", {})
+                if isinstance(finalized, dict):
+                    fin_amt = finalized.get('amount', 0) or 0
+                    output_lines.append(f"  Finalized Savings: ${fin_amt:,}")
+                
+                in_progress = financials.get("in_progress_savings", {})
+                if isinstance(in_progress, dict):
+                    ip_amt = in_progress.get('amount', 0) or 0
+                    output_lines.append(f"  In-Progress Savings: ${ip_amt:,}")
+                
+                output_lines.append("")
+                output_lines.append("Category Results:")
+                for cat_result in impact_data.get("category_results", []):
+                    status_icon = "✓" if cat_result.get("status") == "finalized" else "○"
+                    cat_sav = cat_result.get('annual_savings', 0) or 0
+                    output_lines.append(f"  {status_icon} {cat_result.get('category_name', 'Unknown')}: ${cat_sav:,} [{cat_result.get('status', 'unknown')}]")
+                    output_lines.append(f"      {cat_result.get('status_notes', '') or ''}")
+                
+                if impact_data.get("excluded_categories"):
+                    output_lines.append("")
+                    output_lines.append("Excluded Categories:")
+                    for exc in impact_data.get("excluded_categories", []):
+                        output_lines.append(f"  ✗ {exc.get('category_name', 'Unknown')}: {exc.get('reason', 'N/A')}")
+                
+                if impact_data.get("not_started_categories"):
+                    output_lines.append("")
+                    output_lines.append("Not Started Categories:")
+                    for ns in impact_data.get("not_started_categories", []):
+                        output_lines.append(f"  - {ns.get('category_name', 'Unknown')}: {ns.get('reason', 'N/A')}")
+                
+                ttv = impact_data.get("time_to_value", {})
+                if ttv:
+                    ttv_days = ttv.get("value_realized_in_days", {})
+                    output_lines.append("")
+                    output_lines.append(f"Time to Value: {ttv_days.get('value', 'N/A')} {ttv_days.get('unit', 'days')}")
+                    output_lines.append(f"  Notes: {ttv.get('notes', 'N/A')}")
+                
+                output_lines.append("")
+                output_lines.append(f"Operational Improvements: {impact_data.get('operational_improvements', 'N/A')}")
+                
+                output_lines.append("")
+                output_lines.append("Proof Points:")
+                for pp in impact_data.get("proof_points", []):
+                    output_lines.append(f"  • {pp.get('statement', 'N/A')}")
+                    output_lines.append(f"    Category: {pp.get('category', 'N/A')}")
+                
+                # ============================================================
+                # CATEGORIES (Detailed)
+                # ============================================================
+                output_lines.append("")
+                output_lines.append("=" * 60)
+                output_lines.append("CATEGORIES (DETAILED)")
+                output_lines.append("=" * 60)
+                
+                cat_list = categories.get("categories", categories) if isinstance(categories, dict) else categories
+                if isinstance(cat_list, list):
+                    for i, cat in enumerate(cat_list, 1):
+                        output_lines.append("")
+                        output_lines.append(f"--- Category {i}: {cat.get('category_label', 'Unknown')} ---")
+                        output_lines.append(f"  L1/L2/L3: {cat.get('category_l1', '')} / {cat.get('category_l2', '')} / {cat.get('category_l3', '')}")
+                        output_lines.append(f"  Status: {cat.get('status', 'N/A')}")
+                        output_lines.append(f"  Dates: {cat.get('start_date', 'N/A')} to {cat.get('end_date', 'N/A')}")
+                        
+                        baseline = cat.get('baseline_spend', {})
+                        if isinstance(baseline, dict):
+                            base_amt = baseline.get('amount', 0) or 0
+                            output_lines.append(f"  Baseline Spend: ${base_amt:,}")
+                        
+                        savings = cat.get('savings_annual_run_rate', {})
+                        if isinstance(savings, dict):
+                            sav_amt = savings.get('amount', 0) or 0
+                            sav_pct = cat.get('savings_percentage', 0) or 0
+                            output_lines.append(f"  Annual Savings: ${sav_amt:,} ({sav_pct}%)")
+                        
+                        vendors_before = cat.get('vendors_before', []) or []
+                        vendors_after = cat.get('vendors_after', []) or []
+                        levers = cat.get('levers', []) or []
+                        output_lines.append(f"  Vendors Before: {', '.join(str(v) for v in vendors_before if v)}")
+                        output_lines.append(f"  Vendors After: {', '.join(str(v) for v in vendors_after if v)}")
+                        
+                        output_lines.append(f"  Levers: {', '.join(str(l) for l in levers if l)}")
+                        
+                        constraints = cat.get('constraints', {})
+                        if constraints:
+                            output_lines.append("  Constraints:")
+                            if constraints.get('supplier_constraints'):
+                                output_lines.append(f"    Supplier: {constraints.get('supplier_constraints')}")
+                            if constraints.get('operational_constraints'):
+                                output_lines.append(f"    Operational: {constraints.get('operational_constraints')}")
+                            if constraints.get('contractual_constraints'):
+                                output_lines.append(f"    Contractual: {constraints.get('contractual_constraints')}")
+                            if constraints.get('implementation_constraints'):
+                                output_lines.append(f"    Implementation: {constraints.get('implementation_constraints')}")
+                        
+                        output_lines.append(f"  Notes: {cat.get('notes', 'N/A')}")
+                
+                # ============================================================
+                # BATTLECARDS
+                # ============================================================
+                output_lines.append("")
+                output_lines.append("=" * 60)
+                output_lines.append("SUPPLIER BATTLECARDS")
+                output_lines.append("=" * 60)
+                
+                bc_list = battlecards.get("battlecards", [])
+                bc_summary = battlecards.get("summary", {})
+                
+                if bc_summary:
+                    output_lines.append(f"Total Suppliers Evaluated: {bc_summary.get('total_suppliers_evaluated', 'N/A')}")
+                    output_lines.append(f"Battlecards Generated: {bc_summary.get('battlecards_generated', 'N/A')}")
+                    output_lines.append(f"Categories: {', '.join(bc_summary.get('categories_with_battlecards', []))}")
+                
+                for bc in bc_list:
+                    output_lines.append("")
+                    output_lines.append(f"--- {bc.get('supplier_name', 'Unknown')} ---")
+                    output_lines.append(f"  Category: {bc.get('category', 'N/A')}")
+                    output_lines.append(f"  Status: {bc.get('relationship_status', 'N/A')} | Incumbent: {bc.get('was_incumbent', 'N/A')} | Awarded: {bc.get('was_awarded', 'N/A')}")
+                    
+                    baseline = bc.get('baseline_spend', 0) or 0
+                    final = bc.get('final_spend', 0) or 0
+                    savings_d = bc.get('savings_dollars', 0) or 0
+                    savings_p = bc.get('savings_percent', 0) or 0
+                    output_lines.append(f"  Spend: ${baseline:,} → ${final:,} (Saved ${savings_d:,} / {savings_p}%)")
+                    
+                    def _join_field(val):
+                        """Safely join a field that may be a string or list."""
+                        if isinstance(val, str):
+                            return val
+                        if isinstance(val, list):
+                            return ', '.join(str(x) for x in val if x)
+                        return str(val) if val else ''
+                    
+                    levers_applied = bc.get('levers_applied', []) or []
+                    alternatives = bc.get('alternatives_considered', []) or []
+                    strengths = bc.get('supplier_strengths', '') or ''
+                    weaknesses = bc.get('supplier_weaknesses', '') or ''
+                    contacts = bc.get('key_contacts', []) or []
+                    complexity_reasons = bc.get('complexity_reasons', []) or []
+                    
+                    output_lines.append(f"  Levers Applied: {_join_field(levers_applied)}")
+                    output_lines.append(f"  Alternatives Considered: {_join_field(alternatives)}")
+                    output_lines.append(f"  Why Selected: {bc.get('why_selected', 'N/A') or 'N/A'}")
+                    if bc.get('why_not_selected'):
+                        output_lines.append(f"  Why Not Selected: {bc.get('why_not_selected')}")
+                    output_lines.append(f"  Contract Terms: {bc.get('contract_terms', 'N/A') or 'N/A'}")
+                    output_lines.append(f"  Negotiation Leverage: {bc.get('negotiation_leverage', 'N/A') or 'N/A'}")
+                    output_lines.append(f"  Strengths: {_join_field(strengths)}")
+                    output_lines.append(f"  Weaknesses: {_join_field(weaknesses)}")
+                    output_lines.append(f"  Switching Costs: {bc.get('switching_costs', 'N/A') or 'N/A'}")
+                    output_lines.append(f"  Key Contacts: {_join_field(contacts)}")
+                    if bc.get('is_complex'):
+                        output_lines.append(f"  Complex Deal: Yes - {_join_field(complexity_reasons)}")
+                
+                # ============================================================
+                # CASE STUDY
+                # ============================================================
+                output_lines.append("")
+                output_lines.append("=" * 60)
+                output_lines.append("CASE STUDY PACKAGING")
+                output_lines.append("=" * 60)
+                
+                cs_pkg = case_study.get("case_study_packaging", {})
+                
+                output_lines.append(f"Case Study Ready: {cs_pkg.get('case_study_ready', 'N/A')}")
+                output_lines.append(f"Readiness Notes: {cs_pkg.get('readiness_notes', 'N/A')}")
+                output_lines.append("")
+                output_lines.append(f"Headline: {cs_pkg.get('headline', 'N/A')}")
+                output_lines.append("")
+                output_lines.append(f"Client Problem Statement: {cs_pkg.get('client_problem_statement', 'N/A')}")
+                output_lines.append("")
+                output_lines.append(f"Client Problem (Anonymized): {cs_pkg.get('client_problem_anonymized', 'N/A')}")
+                output_lines.append("")
+                output_lines.append("Approach Summary:")
+                for step in (cs_pkg.get("approach_summary", []) or []):
+                    if step:
+                        output_lines.append(f"  - {step}")
+                output_lines.append("")
+                output_lines.append("Top Levers:")
+                for lever in (cs_pkg.get("top_levers", []) or []):
+                    if lever:
+                        output_lines.append(f"  - {lever}")
+                output_lines.append("")
+                output_lines.append(f"Value Delivered: {cs_pkg.get('value_delivered_blurb', 'N/A') or 'N/A'}")
+                output_lines.append("")
+                output_lines.append("Where We Were Unique:")
+                for unique in (cs_pkg.get("where_we_were_unique", []) or []):
+                    if unique:
+                        output_lines.append(f"  - {unique}")
+                
+                # ============================================================
+                # EXTRACTION NOTES (from all sections)
+                # ============================================================
+                output_lines.append("")
+                output_lines.append("=" * 60)
+                output_lines.append("EXTRACTION NOTES")
+                output_lines.append("=" * 60)
+                
+                all_notes = []
+                all_notes.extend(project_scope.get("extraction_notes", []) or [])
+                all_notes.extend(client_context.get("extraction_notes", []) or [])
+                all_notes.extend(engagement_bg.get("extraction_notes", []) or [])
+                all_notes.extend(impact.get("extraction_notes", []) or [])
+                all_notes.extend(case_study.get("generation_notes", []) or [])
+                all_notes.extend(battlecards.get("extraction_notes", []) or [])
+                
+                for note in all_notes:
+                    output_lines.append(f"  • {note}")
+            
+            # End of export
+            output_lines.append("")
+            output_lines.append("=" * 80)
+            output_lines.append("END OF EXPORT")
+            output_lines.append("=" * 80)
+            
+            # Generate filename and save
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"database_export_{timestamp}.txt"
+            filepath = OUTPUTS_DIR / filename
+            
+            # Ensure outputs directory exists
+            ensure_directories()
+            
+            # Write to file
+            filepath.write_text("\n".join(output_lines), encoding="utf-8")
+            
+            self.console.print(f"[green]✓[/green] Text file saved: {filename}")
+            self.console.print(f"[dim]Location: {filepath}[/dim]")
+            self.console.print(f"[dim]Exported {len(rows)} client(s) - {len(output_lines)} lines[/dim]")
+            
+        except ImportError as e:
+            self.console.print(f"[red]❌ Missing dependency: {e}[/red]")
+            self.console.print("[dim]Run: pip install pyodbc[/dim]")
+        except Exception as e:
+            self.console.print(f"[red]❌ Export failed: {e}[/red]")
+            import traceback
+            self.console.print(f"[dim]{traceback.format_exc()}[/dim]")
+        
+        self.console.print()
+    
+    # =========================================================================
+    # /wipe Command - Delete Data from Azure SQL Database
+    # =========================================================================
+    async def _handle_wipe(self, args: List[str]) -> None:
+        """
+        Handle /wipe command - delete data from Azure SQL database.
+        
+        Usage:
+            /wipe           - Delete ALL rows (with confirmation)
+            /wipe ClientName - Delete a specific client's row (with confirmation)
+        """
+        # Check Azure SQL is enabled
+        if not AZURE_SQL_ENABLED:
+            self.console.print("[red]❌ Azure SQL is not enabled[/red]")
+            self.console.print("[dim]Run: source azure_setup.sh before starting the console[/dim]")
+            return
+        
+        # Validate Azure config
+        azure_errors = validate_azure_config()
+        if azure_errors:
+            self.console.print("[red]Azure SQL configuration errors:[/red]")
+            for error in azure_errors:
+                self.console.print(f"  [red]•[/red] {error}")
+            return
+        
+        try:
+            connection_string = get_azure_connection_string()
+            writer = AzureSQLWriter(
+                connection_string=connection_string,
+                table_name=AZURE_SQL_TABLE,
+            )
+            writer.connect(retries=3)
+            
+            # Determine mode: wipe all or wipe specific client
+            client_name_filter = " ".join(args).strip() if args else ""
+            
+            if client_name_filter:
+                # ─── Wipe specific client ───
+                # First check if client exists
+                clients = writer.list_clients()
+                matching = [c for c in clients if c["client_name"].lower() == client_name_filter.lower()]
+                
+                if not matching:
+                    # Try partial match
+                    matching = [c for c in clients if client_name_filter.lower() in c["client_name"].lower()]
+                
+                if not matching:
+                    self.console.print(f"[yellow]⚠️ No client found matching '{client_name_filter}'[/yellow]")
+                    self.console.print("\n[dim]Available clients:[/dim]")
+                    for c in clients:
+                        self.console.print(f"  • {c['client_name']}")
+                    writer.close()
+                    return
+                
+                if len(matching) > 1:
+                    self.console.print(f"[yellow]⚠️ Multiple clients match '{client_name_filter}':[/yellow]")
+                    for c in matching:
+                        self.console.print(f"  • {c['client_name']}")
+                    self.console.print("[dim]Please use a more specific name.[/dim]")
+                    writer.close()
+                    return
+                
+                target_client = matching[0]["client_name"]
+                
+                # Warning and confirmation
+                self.console.print(Panel(
+                    f"[bold red]⚠️  WARNING: DELETE CLIENT DATA  ⚠️[/bold red]\n\n"
+                    f"This will permanently delete all data for:\n"
+                    f"  [bold]{target_client}[/bold]\n\n"
+                    f"This action [bold]cannot be undone[/bold].",
+                    border_style="red",
+                ))
+                
+                confirm = input(f"\nType the client name exactly to confirm deletion: ").strip()
+                if confirm != target_client:
+                    self.console.print("[yellow]Cancelled — input did not match client name.[/yellow]")
+                    writer.close()
+                    return
+                
+                # Execute deletion
+                conn = writer.connect()
+                cursor = conn.cursor()
+                cursor.execute(
+                    f"DELETE FROM {AZURE_SQL_TABLE} WHERE client_name = ?",
+                    target_client,
+                )
+                deleted_count = cursor.rowcount
+                conn.commit()
+                cursor.close()
+                writer.close()
+                
+                self.console.print(f"\n[green]✓[/green] Deleted {deleted_count} row(s) for '{target_client}'")
+            
+            else:
+                # ─── Wipe all data ───
+                # First show what will be deleted
+                clients = writer.list_clients()
+                
+                if not clients:
+                    self.console.print("[yellow]⚠️ Database is already empty — nothing to wipe.[/yellow]")
+                    writer.close()
+                    return
+                
+                self.console.print(Panel(
+                    f"[bold red]⚠️  WARNING: DELETE ALL DATA  ⚠️[/bold red]\n\n"
+                    f"This will permanently delete [bold]ALL {len(clients)} client(s)[/bold] from\n"
+                    f"table [bold]{AZURE_SQL_TABLE}[/bold]:\n\n"
+                    + "\n".join(f"  • {c['client_name']}" for c in clients) + "\n\n"
+                    f"This action [bold]cannot be undone[/bold].",
+                    border_style="red",
+                ))
+                
+                confirm = input(f"\nType 'WIPE ALL' to confirm deletion of all {len(clients)} client(s): ").strip()
+                if confirm != "WIPE ALL":
+                    self.console.print("[yellow]Cancelled — you must type 'WIPE ALL' exactly.[/yellow]")
+                    writer.close()
+                    return
+                
+                # Execute deletion
+                conn = writer.connect()
+                cursor = conn.cursor()
+                cursor.execute(f"DELETE FROM {AZURE_SQL_TABLE}")
+                deleted_count = cursor.rowcount
+                conn.commit()
+                cursor.close()
+                writer.close()
+                
+                self.console.print(f"\n[green]✓[/green] Deleted all {deleted_count} row(s) from {AZURE_SQL_TABLE}")
+        
+        except ImportError as e:
+            self.console.print(f"[red]❌ Missing dependency: {e}[/red]")
+            self.console.print("[dim]Run: pip install pyodbc[/dim]")
+        except Exception as e:
+            self.console.print(f"[red]❌ Wipe failed: {e}[/red]")
+            import traceback
+            self.console.print(f"[dim]{traceback.format_exc()}[/dim]")
         
         self.console.print()
     
@@ -833,9 +1477,133 @@ ANALYSIS OUTPUT
         self.console.print()
 
     # =========================================================================
+    # /sharepoint Command - List files from SharePoint
+    # =========================================================================
+    async def _handle_sharepoint(self, args: List[str]) -> None:
+        """
+        Handle /sharepoint command - list files from SharePoint Projects library.
+        
+        Usage:
+            /sharepoint              - List first 10 items at library root
+            /sharepoint <folder>     - List first 10 items in a subfolder
+            /sharepoint 20           - List first 20 items at library root
+        """
+        # Validate SharePoint configuration
+        errors = validate_sharepoint_config()
+        if errors:
+            self.console.print("[red]SharePoint configuration errors:[/red]")
+            for error in errors:
+                self.console.print(f"  [red]•[/red] {error}")
+            self.console.print()
+            self.console.print("[dim]Required setup:[/dim]")
+            self.console.print("[dim]  1. Register an app at https://portal.azure.com → Azure AD → App registrations[/dim]")
+            self.console.print("[dim]  2. Enable 'Allow public client flows' under Authentication[/dim]")
+            self.console.print("[dim]  3. Add delegated permissions: Files.Read.All, Sites.Read.All[/dim]")
+            self.console.print("[dim]  4. Set env var: export SHAREPOINT_CLIENT_ID=<your-app-client-id>[/dim]")
+            return
+
+        # Parse arguments: optional folder path or item limit
+        folder_path: Optional[str] = None
+        limit = 10
+
+        for arg in args:
+            if arg.isdigit():
+                limit = int(arg)
+            else:
+                folder_path = arg
+
+        # Initialize SharePoint client if needed
+        if not self.sharepoint_client:
+            self.sharepoint_client = SharePointClient()
+
+        # Authenticate (will use cached token if available)
+        self.console.print(Panel(
+            "[bold]SharePoint[/bold] Connecting to Treya Partners SharePoint",
+            border_style="cyan",
+        ))
+
+        try:
+            def _device_code_callback(message: str) -> None:
+                self.console.print(f"\n[yellow]{message}[/yellow]\n")
+
+            with self.console.status("[cyan]Authenticating with Microsoft...[/cyan]"):
+                self.sharepoint_client.authenticate(
+                    device_code_callback=_device_code_callback
+                )
+            self.console.print("[green]✓[/green] Authenticated successfully")
+        except RuntimeError as e:
+            self.console.print(f"[red]Authentication failed: {e}[/red]")
+            return
+
+        # List files
+        location = folder_path or "(root)"
+        self.console.print(f"[dim]Listing up to {limit} items from: {location}[/dim]")
+
+        try:
+            with self.console.status("[cyan]Fetching file list from SharePoint...[/cyan]"):
+                result = self.sharepoint_client.list_items(
+                    folder_path=folder_path,
+                    limit=limit,
+                )
+        except RuntimeError as e:
+            self.console.print(f"[red]Failed to list files: {e}[/red]")
+            return
+
+        if not result.items:
+            self.console.print("[yellow]No items found at this location.[/yellow]")
+            return
+
+        # Display results in a Rich table
+        table = Table(
+            title=f"SharePoint: {result.library_name}/ {folder_path or ''}",
+            border_style="cyan",
+        )
+        table.add_column("#", style="dim", width=4)
+        table.add_column("Type", style="cyan", width=6)
+        table.add_column("Name", style="white")
+        table.add_column("Size", style="dim", justify="right")
+        table.add_column("Modified", style="dim")
+
+        for i, item in enumerate(result.items, 1):
+            # Type icon
+            if item.is_folder:
+                type_str = "📁"
+            else:
+                ext = Path(item.name).suffix.lower()
+                icons = {
+                    ".pdf": "📄", ".doc": "📝", ".docx": "📝",
+                    ".ppt": "📊", ".pptx": "📊",
+                    ".xls": "📈", ".xlsx": "📈", ".csv": "📈",
+                    ".png": "🖼️", ".jpg": "🖼️",
+                    ".zip": "🗜️",
+                }
+                type_str = icons.get(ext, "📎")
+
+            # Size
+            if item.is_folder:
+                size_str = f"{item.child_count} items"
+            elif item.size_bytes < 1024:
+                size_str = f"{item.size_bytes} B"
+            elif item.size_bytes < 1024 * 1024:
+                size_str = f"{item.size_bytes / 1024:.1f} KB"
+            else:
+                size_str = f"{item.size_bytes / (1024 * 1024):.1f} MB"
+
+            # Modified date
+            mod_str = item.modified_date.strftime("%Y-%m-%d %H:%M") if item.modified_date else "-"
+
+            table.add_row(str(i), type_str, item.name, size_str, mod_str)
+
+        self.console.print()
+        self.console.print(table)
+        self.console.print(f"\n[dim]Showing {len(result.items)} item(s) | Drive ID: {result.drive_id[:12]}...[/dim]")
+        self.console.print(f"[dim]Tip: /sharepoint <folder_name> to browse into a folder[/dim]")
+        self.console.print()
+
+    # =========================================================================
     # /agent Command - New Smart Extraction Pipeline
     # =========================================================================
-    async def _handle_agent(self, args: List[str]) -> None:
+    async def _handle_agent(self, args: List[str], project_path: Optional[Path] = None) -> bool:
         """
         Handle /agent command - smart extraction with anchor file detection.
         
@@ -843,6 +1611,14 @@ ANALYSIS OUTPUT
         1. Step 1: Scan directory structure (same as /extract)
         2. Step 2: LLM detects anchor files/folders (Agreement, Assessment, etc.)
         3. Step 3: (Future) Extract content from anchor files
+        
+        Args:
+            args: Command arguments
+            project_path: Optional path to a specific project folder. If None,
+                          auto-detects from inputs directory (original behavior).
+        
+        Returns:
+            True if extraction completed successfully, False otherwise.
         """
         # Validate configuration
         errors = validate_config()
@@ -850,30 +1626,34 @@ ANALYSIS OUTPUT
             self.console.print("[red]Configuration errors:[/red]")
             for error in errors:
                 self.console.print(f"  [red]•[/red] {error}")
-            return
+            return False
         
         # Ensure directories exist
         ensure_directories()
         
-        # Find project folder or zip file
-        project_path, is_zip = find_project_in_inputs(INPUTS_DIR)
-        if not project_path:
-            self.console.print(f"[red]No project folder or zip file found in {INPUTS_DIR}/[/red]")
-            self.console.print(f"[dim]Please add a project folder or .zip file to {INPUTS_DIR}/ and try again.[/dim]")
-            return
-        
-        # Handle zip extraction
-        if is_zip:
-            self.console.print(f"\n[cyan]🗜️ Found zip file:[/cyan] {project_path.name}")
-            with self.console.status("[cyan]Extracting zip file...[/cyan]"):
-                try:
-                    project_path = extract_zip_project(project_path)
-                    self.console.print(f"[green]✓[/green] Extracted to: {project_path.name}/")
-                except Exception as e:
-                    self.console.print(f"[red]Failed to extract zip: {e}[/red]")
-                    return
+        if project_path is None:
+            # Auto-detect: find project folder or zip file
+            project_path, is_zip = find_project_in_inputs(INPUTS_DIR)
+            if not project_path:
+                self.console.print(f"[red]No project folder or zip file found in {INPUTS_DIR}/[/red]")
+                self.console.print(f"[dim]Please add a project folder or .zip file to {INPUTS_DIR}/ and try again.[/dim]")
+                return False
+            
+            # Handle zip extraction
+            if is_zip:
+                self.console.print(f"\n[cyan]🗜️ Found zip file:[/cyan] {project_path.name}")
+                with self.console.status("[cyan]Extracting zip file...[/cyan]"):
+                    try:
+                        project_path = extract_zip_project(project_path)
+                        self.console.print(f"[green]✓[/green] Extracted to: {project_path.name}/")
+                    except Exception as e:
+                        self.console.print(f"[red]Failed to extract zip: {e}[/red]")
+                        return False
+            else:
+                self.console.print(f"\n[cyan]📁 Found project:[/cyan] {project_path.name}")
         else:
-            self.console.print(f"\n[cyan]📁 Found project:[/cyan] {project_path.name}")
+            # Project path was provided explicitly (e.g., from /agentbatch)
+            self.console.print(f"\n[cyan]📁 Processing project:[/cyan] {project_path.name}")
         
         self.console.print()
         
@@ -883,6 +1663,14 @@ ANALYSIS OUTPUT
         
         # Determine total steps (10 if Azure enabled, 9 if not)
         total_steps = 10 if AZURE_SQL_ENABLED else 9
+        
+        # DEBUG: Show Azure SQL status at start
+        if AZURE_SQL_ENABLED:
+            self.console.print(f"[green]✓ Azure SQL enabled[/green] - will save to database in Step 10")
+        else:
+            self.console.print(f"[yellow]⚠️ Azure SQL DISABLED[/yellow] - results will only save locally")
+            self.console.print(f"[dim]  To enable: source azure_setup.sh before running[/dim]")
+        self.console.print()
         
         # =====================================================================
         # STEP 1: Scan Directory Structure
@@ -897,7 +1685,7 @@ ANALYSIS OUTPUT
                 scan_result = self.scanner.scan(project_path)
             except Exception as e:
                 self.console.print(f"[red]Failed to scan directory: {e}[/red]")
-                return
+                return False
         
         self.console.print(f"[green]✓[/green] Found {scan_result.total_files} files in {scan_result.total_folders} folders")
         
@@ -919,7 +1707,7 @@ ANALYSIS OUTPUT
                 )
             except Exception as e:
                 self.console.print(f"[red]Failed to detect anchor files: {e}[/red]")
-                return
+                return False
         
         # Parse anchor detection response
         try:
@@ -927,7 +1715,7 @@ ANALYSIS OUTPUT
         except (json.JSONDecodeError, ValueError) as e:
             self.console.print(f"[red]Failed to parse anchor detection: {e}[/red]")
             self.console.print(f"[dim]Response was: {anchor_response.content[:500]}...[/dim]")
-            return
+            return False
         
         # Validate paths against actual files
         anchor_data = self._validate_anchor_paths(anchor_data, scan_result)
@@ -958,7 +1746,7 @@ ANALYSIS OUTPUT
             self._last_project_path = project_path
             self._last_project_scope = None
             self.console.print()
-            return
+            return False
         
         agreement_path = agreement_info.get("path", "")
         agreement_folder = project_path / agreement_path
@@ -980,7 +1768,7 @@ ANALYSIS OUTPUT
             self._last_project_path = project_path
             self._last_project_scope = None
             self.console.print()
-            return
+            return False
         
         self.console.print(f"[dim]Found {len(pdf_files)} PDF file(s) in Agreement folder[/dim]")
         
@@ -1007,7 +1795,7 @@ ANALYSIS OUTPUT
             self._last_project_path = project_path
             self._last_project_scope = None
             self.console.print()
-            return
+            return False
         
         # Combine all Agreement content
         combined_agreement = "\n\n".join(agreement_contents)
@@ -1074,7 +1862,7 @@ ANALYSIS OUTPUT
                 self._last_project_path = project_path
                 self._last_project_scope = None
                 self.console.print()
-                return
+                return False
         
         # Parse the response
         try:
@@ -1330,57 +2118,94 @@ When extracting, cite which source provided each data point."""
         ))
         
         # Gather content from Case Study, Project Updates, and Project Close Out
+        # Documents are tagged with priority levels for the LLM:
+        #   PRIORITY 1 = Close Out (final, reviewed results — always wins)
+        #   PRIORITY 2 = Case Study (usually aligns with Close Out)
+        #   PRIORITY 3 = Most recent Project Update (only if above are missing)
+        #   PRIORITY 4 = Earlier Project Updates (context only, never for final numbers)
         impact_contents = []
         impact_sources = []
         
-        # 1. Case Study (primary source for impact)
-        case_study_info = anchor_data.get("case_study", {})
-        if case_study_info.get("found"):
-            case_study_path = project_path / case_study_info.get("path", "")
-            self.console.print(f"[dim]• Reading Case Study: {case_study_info.get('path')}[/dim]")
-            if case_study_path.is_file():
-                result = extract_file_content(case_study_path, max_chars=40000)
-                if result.success:
-                    relative_path = case_study_path.relative_to(project_path)
-                    header = f"\n{'='*60}\nFILE: {relative_path}\n{'='*60}\n"
-                    impact_contents.append(header + result.text_content)
-                    impact_sources.append(f"Case Study: {case_study_info.get('path')}")
-            else:
-                cs_content = self._extract_folder_content(case_study_path, project_path, max_chars=40000)
-                if cs_content:
-                    impact_contents.append(cs_content)
-                    impact_sources.append(f"Case Study: {case_study_info.get('path')}")
-        
-        # 2. Project Close Out (often has final results)
+        # 1. Project Close Out — PRIORITY 1 (loaded first so LLM sees it first)
         close_out_info = anchor_data.get("project_close_out", {})
         if close_out_info.get("found"):
             close_out_path = project_path / close_out_info.get("path", "")
-            self.console.print(f"[dim]• Reading Project Close Out: {close_out_info.get('path')}[/dim]")
+            self.console.print(f"[dim]• Reading Project Close Out (Priority 1): {close_out_info.get('path')}[/dim]")
             if close_out_path.is_file():
                 result = extract_file_content(close_out_path, max_chars=30000)
                 if result.success:
                     relative_path = close_out_path.relative_to(project_path)
-                    header = f"\n{'='*60}\nFILE: {relative_path}\n{'='*60}\n"
+                    header = (
+                        f"\n{'='*60}\n"
+                        f"[PRIORITY 1 - FINAL] FILE: {relative_path}\n"
+                        f"This is the FINAL Close Out report. Use these numbers over ALL other documents.\n"
+                        f"{'='*60}\n"
+                    )
                     impact_contents.append(header + result.text_content)
                     impact_sources.append(f"Project Close Out: {close_out_info.get('path')}")
             else:
                 co_content = self._extract_folder_content(close_out_path, project_path, max_chars=30000)
                 if co_content:
-                    impact_contents.append(co_content)
+                    # Prepend priority tag to folder content
+                    priority_header = (
+                        f"\n[PRIORITY 1 - FINAL] Close Out folder contents.\n"
+                        f"These are the FINAL reviewed results. Use these numbers over ALL other documents.\n\n"
+                    )
+                    impact_contents.append(priority_header + co_content)
                     impact_sources.append(f"Project Close Out: {close_out_info.get('path')}")
         
-        # 3. Project Updates (for additional context, use most recent ones)
+        # 2. Case Study — PRIORITY 2
+        case_study_info = anchor_data.get("case_study", {})
+        if case_study_info.get("found"):
+            case_study_path = project_path / case_study_info.get("path", "")
+            self.console.print(f"[dim]• Reading Case Study (Priority 2): {case_study_info.get('path')}[/dim]")
+            if case_study_path.is_file():
+                result = extract_file_content(case_study_path, max_chars=40000)
+                if result.success:
+                    relative_path = case_study_path.relative_to(project_path)
+                    header = (
+                        f"\n{'='*60}\n"
+                        f"[PRIORITY 2 - CASE STUDY] FILE: {relative_path}\n"
+                        f"Use for narrative context and proof points. If numbers conflict with PRIORITY 1, use PRIORITY 1.\n"
+                        f"{'='*60}\n"
+                    )
+                    impact_contents.append(header + result.text_content)
+                    impact_sources.append(f"Case Study: {case_study_info.get('path')}")
+            else:
+                cs_content = self._extract_folder_content(case_study_path, project_path, max_chars=40000)
+                if cs_content:
+                    priority_header = (
+                        f"\n[PRIORITY 2 - CASE STUDY] Case Study folder contents.\n"
+                        f"Use for narrative context. If numbers conflict with PRIORITY 1, use PRIORITY 1.\n\n"
+                    )
+                    impact_contents.append(priority_header + cs_content)
+                    impact_sources.append(f"Case Study: {case_study_info.get('path')}")
+        
+        # 3. Project Updates — PRIORITY 3 (most recent) and PRIORITY 4 (older)
         project_updates_info = anchor_data.get("project_updates", {})
         if project_updates_info.get("found"):
             update_paths = project_updates_info.get("paths", [])
-            self.console.print(f"[dim]• Reading {min(len(update_paths), 3)} most recent Project Update(s)[/dim]")
+            self.console.print(f"[dim]• Reading {min(len(update_paths), 3)} most recent Project Update(s) (Priority 3-4)[/dim]")
             
-            for update_path in update_paths[:3]:
+            for idx, update_path in enumerate(update_paths[:3]):
                 update_file = project_path / update_path
                 if update_file.exists() and update_file.is_file():
                     result = extract_file_content(update_file, max_chars=15000)
                     if result.success:
-                        header = f"\n{'='*60}\nFILE: {update_path}\n{'='*60}\n"
+                        if idx == 0:
+                            # Most recent update = PRIORITY 3
+                            priority_tag = "[PRIORITY 3 - LATEST UPDATE]"
+                            priority_note = "Most recent update. Only use numbers if Close Out AND Case Study are both missing."
+                        else:
+                            # Older updates = PRIORITY 4
+                            priority_tag = "[PRIORITY 4 - EARLIER UPDATE]"
+                            priority_note = "Earlier update — numbers here are OUTDATED. Use ONLY for historical context, NOT for final results."
+                        header = (
+                            f"\n{'='*60}\n"
+                            f"{priority_tag} FILE: {update_path}\n"
+                            f"{priority_note}\n"
+                            f"{'='*60}\n"
+                        )
                         impact_contents.append(header + result.text_content)
                         impact_sources.append(f"Project Update: {update_path}")
         
@@ -1824,6 +2649,9 @@ Category: {cat_name}
         # =====================================================================
         # STEP 10: Save to Azure SQL Database (if enabled)
         # =====================================================================
+        # DEBUG: Show Azure SQL status
+        self.console.print(f"\n[dim]DEBUG: AZURE_SQL_ENABLED = {AZURE_SQL_ENABLED}[/dim]")
+        
         if AZURE_SQL_ENABLED:
             self.console.print(Panel(
                 f"[bold]Step 10/{total_steps}:[/bold] Saving to Azure SQL Database",
@@ -1877,8 +2705,10 @@ Category: {cat_name}
                     # Run blocking database operations in thread pool
                     # This prevents pyodbc from blocking the asyncio event loop
                     self.console.print("[cyan]Connecting to Azure SQL (in background thread)...[/cyan]")
+                    self.console.print(f"[dim]DEBUG: Saving client '{extracted_client_name}' to table '{AZURE_SQL_TABLE}'[/dim]")
                     row_id = await asyncio.to_thread(save_to_azure_sync)
-                    self.console.print(f"[green]✓[/green] Saved to Azure SQL (client: {extracted_client_name})")
+                    self.console.print(f"[green]✓[/green] Saved to Azure SQL (client: {extracted_client_name}, row_id: {row_id})")
+                    self.console.print(f"[dim]DEBUG: Database save successful![/dim]")
                         
                 except ImportError as e:
                     self.console.print(f"[yellow]⚠️ Azure SQL driver not available: {e}[/yellow]")
@@ -1887,6 +2717,147 @@ Category: {cat_name}
                 except Exception as e:
                     self.console.print(f"[red]❌ Failed to save to Azure SQL: {e}[/red]")
                     self.console.print("[dim]You can manually upload the JSON files later.[/dim]")
+        else:
+            self.console.print("[yellow]⚠️ Azure SQL is DISABLED - skipping database save[/yellow]")
+            self.console.print("[dim]To enable: source azure_setup.sh before running python -m src[/dim]")
+        
+        self.console.print()
+        return True
+    
+    # =========================================================================
+    # /agentbatch Command - Batch Agent Extraction
+    # =========================================================================
+    async def _handle_agentbatch(self, args: List[str]) -> None:
+        """
+        Handle /agentbatch command - run /agent on every project folder in inputs/.
+        
+        Iterates through all subfolders in the inputs directory, running the full
+        /agent extraction pipeline on each one sequentially. If a project fails,
+        it retries up to 2 attempts before moving on.
+        
+        Displays an overall progress summary and a final report at the end.
+        """
+        # Validate configuration upfront (once for the whole batch)
+        errors = validate_config()
+        if errors:
+            self.console.print("[red]Configuration errors:[/red]")
+            for error in errors:
+                self.console.print(f"  [red]•[/red] {error}")
+            return
+        
+        # Ensure directories exist
+        ensure_directories()
+        
+        # Find all project folders in inputs/
+        if not INPUTS_DIR.exists():
+            self.console.print(f"[red]Inputs directory not found: {INPUTS_DIR}/[/red]")
+            return
+        
+        project_folders = sorted([
+            entry for entry in INPUTS_DIR.iterdir()
+            if entry.is_dir() and not entry.name.startswith(".")
+        ], key=lambda p: p.name.lower())
+        
+        if not project_folders:
+            self.console.print(f"[red]No project folders found in {INPUTS_DIR}/[/red]")
+            self.console.print(f"[dim]Please add project folders to {INPUTS_DIR}/ and try again.[/dim]")
+            return
+        
+        total_projects = len(project_folders)
+        max_retries = 2
+        
+        # Display batch overview
+        self.console.print(Panel(
+            f"[bold cyan]Batch Agent Extraction[/bold cyan]\n\n"
+            f"Found [bold]{total_projects}[/bold] project folder(s) in {INPUTS_DIR}/\n"
+            f"Retries per project: {max_retries} attempts\n"
+            f"Mode: Sequential",
+            title="[bold]/agentbatch[/bold]",
+            border_style="cyan",
+        ))
+        
+        # List all projects
+        self.console.print("\n[bold]Projects to process:[/bold]")
+        for i, folder in enumerate(project_folders, 1):
+            self.console.print(f"  {i:3d}. {folder.name}")
+        self.console.print()
+        
+        # Track results
+        succeeded: List[str] = []
+        failed: List[tuple] = []  # (name, error_message)
+        batch_start_time = datetime.now()
+        
+        # Process each project
+        for idx, project_folder in enumerate(project_folders, 1):
+            project_name = project_folder.name
+            
+            self.console.print()
+            self.console.print("=" * 80)
+            self.console.print(Panel(
+                f"[bold]Project {idx}/{total_projects}:[/bold] {project_name}",
+                border_style="magenta",
+            ))
+            self.console.print("=" * 80)
+            
+            # Retry loop
+            success = False
+            last_error = ""
+            for attempt in range(1, max_retries + 1):
+                if attempt > 1:
+                    self.console.print(f"\n[yellow]Retry attempt {attempt}/{max_retries} for {project_name}...[/yellow]\n")
+                
+                try:
+                    result = await self._handle_agent(args, project_path=project_folder)
+                    if result:
+                        success = True
+                        break
+                    else:
+                        last_error = "Pipeline returned failure (see output above)"
+                        self.console.print(f"[yellow]⚠️ Attempt {attempt}/{max_retries} failed for {project_name}[/yellow]")
+                except Exception as e:
+                    last_error = str(e)
+                    self.console.print(f"[red]❌ Attempt {attempt}/{max_retries} error for {project_name}: {e}[/red]")
+            
+            if success:
+                succeeded.append(project_name)
+                self.console.print(f"\n[green]✓ Completed: {project_name} ({idx}/{total_projects})[/green]")
+            else:
+                failed.append((project_name, last_error))
+                self.console.print(f"\n[red]❌ Failed after {max_retries} attempts: {project_name} ({idx}/{total_projects})[/red]")
+            
+            # Show running tally
+            self.console.print(f"[dim]Progress: {len(succeeded)} succeeded, {len(failed)} failed, {total_projects - idx} remaining[/dim]")
+        
+        # =====================================================================
+        # Final Summary
+        # =====================================================================
+        batch_elapsed = datetime.now() - batch_start_time
+        elapsed_minutes = batch_elapsed.total_seconds() / 60
+        
+        self.console.print("\n")
+        self.console.print("=" * 80)
+        self.console.print(Panel(
+            f"[bold]Batch Extraction Complete[/bold]\n\n"
+            f"Total projects: {total_projects}\n"
+            f"Succeeded: [green]{len(succeeded)}[/green]\n"
+            f"Failed: [red]{len(failed)}[/red]\n"
+            f"Duration: {elapsed_minutes:.1f} minutes",
+            title="[bold]/agentbatch Summary[/bold]",
+            border_style="green" if not failed else "yellow",
+        ))
+        
+        # Show succeeded projects
+        if succeeded:
+            self.console.print("\n[green][bold]Succeeded:[/bold][/green]")
+            for name in succeeded:
+                self.console.print(f"  [green]✓[/green] {name}")
+        
+        # Show failed projects with reasons
+        if failed:
+            self.console.print("\n[red][bold]Failed:[/bold][/red]")
+            for name, error in failed:
+                self.console.print(f"  [red]❌[/red] {name}")
+                self.console.print(f"     [dim]Last error: {error[:200]}[/dim]")
         
         self.console.print()
     
@@ -2209,6 +3180,1165 @@ Category: {cat_name}
             "[bold green]PowerPoint Generation Complete[/bold green]",
             border_style="green",
         ))
+    
+    # =========================================================================
+    # /powerpoint2 Command - Template-Based PowerPoint Generation
+    # =========================================================================
+    async def _handle_powerpoint2(self, args: List[str]) -> None:
+        """
+        Handle /powerpoint2 command - generates PowerPoint using LLM Case Study template.
+        
+        This command:
+        1. Lists clients from Azure SQL database
+        2. User selects a client
+        3. Fetches client_context, case_study, impact, categories from database
+        4. Generates PowerPoint by replacing text in the template
+        5. Falls back to /agent if no clients in database
+        
+        Uses "LLM Case Study Format.pptx" as exact template.
+        """
+        # Validate configuration
+        errors = validate_config()
+        if errors:
+            self.console.print("[red]Configuration errors:[/red]")
+            for error in errors:
+                self.console.print(f"  [red]•[/red] {error}")
+            return
+        
+        # Ensure directories exist
+        ensure_directories()
+        
+        self.console.print()
+        self.console.print(Panel(
+            "[bold magenta]PowerPoint Generation (Template)[/bold magenta]\n"
+            "Generate case study using LLM Case Study Format template",
+            border_style="magenta",
+        ))
+        
+        # =====================================================================
+        # Step 1: Check Azure SQL and list clients
+        # =====================================================================
+        client_context_data = None
+        case_study_data = None
+        impact_data = None
+        categories_data = None
+        extracted_client_name = None
+        
+        if AZURE_SQL_ENABLED:
+            self.console.print("\n[cyan]Connecting to Azure SQL Database...[/cyan]")
+            
+            try:
+                connection_string = get_azure_connection_string()
+                writer = AzureSQLWriter(connection_string, AZURE_SQL_TABLE)
+                
+                # Get list of clients
+                clients = writer.list_clients()
+                
+                if clients:
+                    self.console.print(f"[green]✓[/green] Found {len(clients)} client(s) in database\n")
+                    
+                    # Display numbered list
+                    self.console.print("[bold cyan]Available Clients:[/bold cyan]")
+                    table = Table(show_header=True, header_style="bold")
+                    table.add_column("#", style="dim", width=4)
+                    table.add_column("Client Name", style="cyan")
+                    table.add_column("Last Updated", style="dim")
+                    
+                    for i, client in enumerate(clients, 1):
+                        updated = client.get("updated_at", client.get("extraction_timestamp", ""))
+                        if updated:
+                            updated_str = updated.strftime("%Y-%m-%d %H:%M") if hasattr(updated, 'strftime') else str(updated)
+                        else:
+                            updated_str = "N/A"
+                        table.add_row(str(i), client["client_name"], updated_str)
+                    
+                    self.console.print(table)
+                    self.console.print()
+                    
+                    # Get user selection
+                    self.console.print("[dim]Enter client number (or 'q' to quit, 'new' to run fresh extraction):[/dim]")
+                    
+                    while True:
+                        try:
+                            selection = input("> ").strip().lower()
+                            
+                            if selection == 'q':
+                                self.console.print("[yellow]Cancelled.[/yellow]")
+                                return
+                            
+                            if selection == 'new':
+                                # User wants to run fresh extraction
+                                self.console.print("\n[cyan]Running fresh extraction with /agent...[/cyan]\n")
+                                await self._handle_agent(args)
+                                
+                                # Check if extraction succeeded
+                                if hasattr(self, '_last_client_context') and self._last_client_context:
+                                    client_context_data = self._last_client_context
+                                    case_study_data = self._last_case_study
+                                    impact_data = self._last_impact
+                                    categories_data = getattr(self, '_last_categories', {})
+                                    client = client_context_data.get("client", {})
+                                    extracted_client_name = client.get("client_name", "Unknown")
+                                else:
+                                    self.console.print("[red]❌ Extraction failed. Cannot generate PowerPoint.[/red]")
+                                    return
+                                break
+                            
+                            # Parse number selection
+                            idx = int(selection) - 1
+                            if 0 <= idx < len(clients):
+                                selected_client = clients[idx]["client_name"]
+                                self.console.print(f"\n[green]✓[/green] Selected: {selected_client}")
+                                
+                                # Fetch client data from database
+                                self.console.print("[dim]Fetching data from database...[/dim]")
+                                client_data = writer.get_client(selected_client)
+                                
+                                if client_data:
+                                    client_context_data = client_data.get("client_context", {})
+                                    case_study_data = client_data.get("case_study", {})
+                                    impact_data = client_data.get("impact", {})
+                                    categories_data = client_data.get("categories", {})
+                                    extracted_client_name = selected_client
+                                    self.console.print(f"[green]✓[/green] Loaded data for {selected_client}")
+                                else:
+                                    self.console.print(f"[red]❌ Failed to fetch data for {selected_client}[/red]")
+                                    return
+                                break
+                            else:
+                                self.console.print(f"[red]Invalid selection. Enter 1-{len(clients)}[/red]")
+                        
+                        except ValueError:
+                            self.console.print("[red]Please enter a number, 'new', or 'q'[/red]")
+                    
+                    writer.close()
+                    
+                else:
+                    # No clients in database - fall back to /agent
+                    self.console.print("[yellow]⚠️ No clients found in database[/yellow]")
+                    self.console.print("[dim]Falling back to fresh extraction...[/dim]\n")
+                    writer.close()
+                    
+                    await self._handle_agent(args)
+                    
+                    # Check if extraction succeeded
+                    if hasattr(self, '_last_client_context') and self._last_client_context:
+                        client_context_data = self._last_client_context
+                        case_study_data = self._last_case_study
+                        impact_data = self._last_impact
+                        categories_data = getattr(self, '_last_categories', {})
+                        client = client_context_data.get("client", {})
+                        extracted_client_name = client.get("client_name", "Unknown")
+                    else:
+                        self.console.print("[red]❌ Extraction failed. Cannot generate PowerPoint.[/red]")
+                        return
+            
+            except Exception as e:
+                self.console.print(f"[red]❌ Database error: {e}[/red]")
+                self.console.print("[dim]Falling back to fresh extraction...[/dim]\n")
+                
+                await self._handle_agent(args)
+                
+                # Check if extraction succeeded
+                if hasattr(self, '_last_client_context') and self._last_client_context:
+                    client_context_data = self._last_client_context
+                    case_study_data = self._last_case_study
+                    impact_data = self._last_impact
+                    categories_data = getattr(self, '_last_categories', {})
+                    client = client_context_data.get("client", {})
+                    extracted_client_name = client.get("client_name", "Unknown")
+                else:
+                    self.console.print("[red]❌ Extraction failed. Cannot generate PowerPoint.[/red]")
+                    return
+        
+        else:
+            # Azure SQL not enabled - fall back to /agent
+            self.console.print("[yellow]⚠️ Azure SQL not enabled[/yellow]")
+            self.console.print("[dim]Falling back to fresh extraction...[/dim]\n")
+            
+            await self._handle_agent(args)
+            
+            # Check if extraction succeeded
+            if hasattr(self, '_last_client_context') and self._last_client_context:
+                client_context_data = self._last_client_context
+                case_study_data = self._last_case_study
+                impact_data = self._last_impact
+                categories_data = getattr(self, '_last_categories', {})
+                client = client_context_data.get("client", {})
+                extracted_client_name = client.get("client_name", "Unknown")
+            else:
+                self.console.print("[red]❌ Extraction failed. Cannot generate PowerPoint.[/red]")
+                return
+        
+        # =====================================================================
+        # Step 2: Generate PowerPoint using the shared helper
+        # =====================================================================
+        success = await self._generate_powerpoint2_for_client(
+            client_context_data=client_context_data,
+            case_study_data=case_study_data,
+            impact_data=impact_data,
+            categories_data=categories_data,
+            extracted_client_name=extracted_client_name,
+        )
+        
+        if success:
+            self.console.print()
+            self.console.print(Panel(
+                "[bold green]PowerPoint Generation Complete (Template v2)[/bold green]",
+                border_style="green",
+            ))
+    
+    # =========================================================================
+    # /pdf Command - Convert PowerPoint files to PDF
+    # =========================================================================
+    async def _handle_pdf(self, args: List[str]) -> None:
+        """
+        Handle /pdf command - convert PPTX files to PDF using Microsoft PowerPoint.
+        
+        Lists PPTX files in the powerpoints/ directory, allows single or
+        multi-selection, then converts each to PDF via AppleScript automation.
+        """
+        ensure_directories()
+        
+        # Check platform
+        if platform.system() != "Darwin":
+            self.console.print("[red]❌ /pdf currently only works on macOS (uses Microsoft PowerPoint via AppleScript).[/red]")
+            self.console.print("[dim]On Windows, open the PPTX in PowerPoint and use File → Save As → PDF.[/dim]")
+            return
+        
+        # Check if PowerPoint is available
+        pptx_app_path = Path("/Applications/Microsoft PowerPoint.app")
+        if not pptx_app_path.exists():
+            self.console.print("[red]❌ Microsoft PowerPoint not found at /Applications/Microsoft PowerPoint.app[/red]")
+            self.console.print("[dim]Please install Microsoft PowerPoint to use PDF export.[/dim]")
+            return
+        
+        self.console.print()
+        self.console.print(Panel(
+            "[bold cyan]PDF Export[/bold cyan]\n"
+            "Convert PowerPoint presentations to PDF",
+            border_style="cyan",
+        ))
+        
+        # Find all PPTX files in powerpoints/ directory
+        if not POWERPOINTS_DIR.exists():
+            self.console.print(f"[red]❌ Powerpoints directory not found: {POWERPOINTS_DIR}/[/red]")
+            return
+        
+        pptx_files = sorted(
+            [f for f in POWERPOINTS_DIR.iterdir() if f.suffix.lower() == ".pptx" and not f.name.startswith("~")],
+            key=lambda p: p.stat().st_mtime,
+            reverse=True,  # Newest first
+        )
+        
+        if not pptx_files:
+            self.console.print(f"[yellow]⚠️ No .pptx files found in {POWERPOINTS_DIR}/[/yellow]")
+            self.console.print("[dim]Run /powerpoint2 or /powerpointbatch first to generate presentations.[/dim]")
+            return
+        
+        # Display numbered list
+        self.console.print(f"\n[green]✓[/green] Found {len(pptx_files)} PowerPoint file(s)\n")
+        self.console.print("[bold cyan]Available Files:[/bold cyan]")
+        table = Table(show_header=True, header_style="bold")
+        table.add_column("#", style="dim", width=4)
+        table.add_column("Filename", style="cyan")
+        table.add_column("Size", style="dim", width=10)
+        table.add_column("Created", style="dim")
+        
+        for i, f in enumerate(pptx_files, 1):
+            size_kb = f.stat().st_size / 1024
+            size_str = f"{size_kb:.0f} KB" if size_kb < 1024 else f"{size_kb/1024:.1f} MB"
+            mod_time = datetime.fromtimestamp(f.stat().st_mtime).strftime("%Y-%m-%d %H:%M")
+            table.add_row(str(i), f.name, size_str, mod_time)
+        
+        self.console.print(table)
+        self.console.print()
+        
+        # Get selection
+        self.console.print("[dim]Select files (e.g. '1,3,5' or '1-5' or 'all' or 'q' to quit):[/dim]")
+        
+        selected_indices: List[int] = []
+        while True:
+            selection = input("> ").strip()
+            
+            if selection.lower() == 'q':
+                self.console.print("[yellow]Cancelled.[/yellow]")
+                return
+            
+            selected_indices = self._parse_batch_selection(selection, len(pptx_files))
+            
+            if selected_indices:
+                selected_files = [pptx_files[i] for i in selected_indices]
+                self.console.print(f"\n[green]✓[/green] Selected {len(selected_files)} file(s):")
+                for f in selected_files:
+                    self.console.print(f"  • {f.name}")
+                break
+            else:
+                self.console.print(f"[red]Invalid selection. Enter numbers 1-{len(pptx_files)}, ranges (1-5), 'all', or 'q'[/red]")
+        
+        # Convert each file
+        self.console.print()
+        succeeded: List[str] = []
+        failed: List[tuple] = []  # (name, error)
+        
+        for i, pptx_path in enumerate(selected_files, 1):
+            pdf_path = pptx_path.with_suffix(".pdf")
+            self.console.print(f"[dim]({i}/{len(selected_files)})[/dim] Converting {pptx_path.name}...")
+            
+            try:
+                # Use AppleScript to automate Microsoft PowerPoint
+                abs_pptx = str(pptx_path.resolve())
+                abs_pdf = str(pdf_path.resolve())
+                
+                applescript = f'''
+                    tell application "Microsoft PowerPoint"
+                        open POSIX file "{abs_pptx}"
+                        delay 2
+                        save active presentation in POSIX file "{abs_pdf}" as save as PDF
+                        close active presentation saving no
+                    end tell
+                '''
+                
+                result = subprocess.run(
+                    ["osascript", "-e", applescript],
+                    capture_output=True,
+                    text=True,
+                    timeout=60,
+                )
+                
+                if result.returncode != 0:
+                    raise RuntimeError(f"AppleScript error: {result.stderr.strip()}")
+                
+                # Verify PDF was created
+                if pdf_path.exists():
+                    pdf_size = pdf_path.stat().st_size / 1024
+                    size_str = f"{pdf_size:.0f} KB" if pdf_size < 1024 else f"{pdf_size/1024:.1f} MB"
+                    self.console.print(f"  [green]✓[/green] {pdf_path.name} ({size_str})")
+                    succeeded.append(pptx_path.name)
+                else:
+                    raise RuntimeError("PDF file was not created")
+                
+                # Small delay between conversions to let PowerPoint settle
+                if i < len(selected_files):
+                    time.sleep(1)
+                
+            except subprocess.TimeoutExpired:
+                failed.append((pptx_path.name, "Timed out after 60 seconds"))
+                self.console.print(f"  [red]❌[/red] Timed out")
+            except Exception as e:
+                failed.append((pptx_path.name, str(e)))
+                self.console.print(f"  [red]❌[/red] {e}")
+        
+        # Summary
+        self.console.print()
+        if failed:
+            self.console.print(Panel(
+                f"[bold]PDF Export Complete[/bold]\n\n"
+                f"Converted: [green]{len(succeeded)}[/green]\n"
+                f"Failed: [red]{len(failed)}[/red]\n"
+                f"Saved to: {POWERPOINTS_DIR}/",
+                title="[bold]/pdf Summary[/bold]",
+                border_style="yellow",
+            ))
+            for name, error in failed:
+                self.console.print(f"  [red]❌[/red] {name}: {error}")
+        else:
+            self.console.print(Panel(
+                f"[bold green]PDF Export Complete[/bold green]\n\n"
+                f"Converted: [green]{len(succeeded)}[/green] file(s)\n"
+                f"Saved to: {POWERPOINTS_DIR}/",
+                border_style="green",
+            ))
+        self.console.print()
+    
+    # =========================================================================
+    # Batch Selection Parser
+    # =========================================================================
+    @staticmethod
+    def _parse_batch_selection(selection_str: str, max_value: int) -> List[int]:
+        """
+        Parse a batch selection string into a list of 0-based indices.
+        
+        Supports: "all", "1,3,5", "1-5", "1-3,5,7-9", "1 3 5"
+        Returns sorted unique list of 0-based indices.
+        """
+        selection_str = selection_str.strip().lower()
+        
+        if selection_str == "all":
+            return list(range(max_value))
+        
+        indices: set[int] = set()
+        # Normalize: replace spaces with commas for flexible input
+        normalized = selection_str.replace(" ", ",")
+        parts = [p.strip() for p in normalized.split(",") if p.strip()]
+        
+        for part in parts:
+            if "-" in part:
+                try:
+                    start, end = part.split("-", 1)
+                    start_idx = int(start.strip()) - 1  # Convert to 0-based
+                    end_idx = int(end.strip()) - 1
+                    if 0 <= start_idx < max_value and 0 <= end_idx < max_value:
+                        for i in range(min(start_idx, end_idx), max(start_idx, end_idx) + 1):
+                            indices.add(i)
+                except ValueError:
+                    continue
+            else:
+                try:
+                    idx = int(part) - 1  # Convert to 0-based
+                    if 0 <= idx < max_value:
+                        indices.add(idx)
+                except ValueError:
+                    continue
+        
+        return sorted(indices)
+    
+    # =========================================================================
+    # PowerPoint Generation Helper (shared by /powerpoint2 and /powerpointbatch)
+    # =========================================================================
+    async def _generate_powerpoint2_for_client(
+        self,
+        client_context_data: dict,
+        case_study_data: dict,
+        impact_data: dict,
+        categories_data: Optional[dict],
+        extracted_client_name: str,
+    ) -> bool:
+        """
+        Generate a single PowerPoint using the LLM Case Study template.
+        
+        Contains the core generation logic used by /powerpoint2 and /powerpointbatch.
+        Returns True on success, False on failure.
+        """
+        # Validate required data
+        if not client_context_data:
+            self.console.print("[red]❌ No client context data available. Cannot generate PowerPoint.[/red]")
+            return False
+        
+        if not case_study_data:
+            self.console.print("[red]❌ No case study data available. Cannot generate PowerPoint.[/red]")
+            return False
+        
+        if not impact_data:
+            self.console.print("[red]❌ No impact data available. Cannot generate PowerPoint.[/red]")
+            return False
+        
+        # =====================================================================
+        # Web Search for PE Firm (search only, description generated later)
+        # =====================================================================
+        pe_web_search_results = ""
+        client = client_context_data.get("client", client_context_data)
+        pe_sponsor = client.get("sponsor_pe_firm", "")
+        industry = client.get("industry_primary", "")
+        
+        if pe_sponsor:
+            self.console.print(f"\n[cyan]🌐 Searching web for PE firm: {pe_sponsor}...[/cyan]")
+            
+            # Initialize LLM client if needed
+            if not self.llm_client:
+                self.llm_client = OpenAIClient()
+            
+            try:
+                # Search for PE firm info
+                search_query = f"{pe_sponsor} private equity firm industry focus portfolio"
+                web_response = self.llm_client.web_search(search_query)
+                
+                if web_response and web_response.content:
+                    self.console.print(f"[green]✓[/green] Found PE firm info ({len(web_response.content)} chars)")
+                    pe_web_search_results = web_response.content[:2000]
+                
+            except Exception as e:
+                self.console.print(f"[yellow]⚠️ PE web search failed: {e}[/yellow]")
+        
+        # =====================================================================
+        # LLM Content Generation with Validation
+        # =====================================================================
+        self.console.print("\n[cyan]📝 Generating slide content with validation...[/cyan]")
+        
+        # Initialize LLM client if needed
+        if not self.llm_client:
+            self.llm_client = OpenAIClient()
+        
+        # Import the PPTX prompt runner
+        from src.prompts.pptx_loader import PPTXPromptRunner
+        prompt_runner = PPTXPromptRunner(self.llm_client)
+        
+        # Extract source data
+        packaging = case_study_data.get("case_study_packaging", case_study_data)
+        client = client_context_data.get("client", client_context_data)
+        
+        client_name = client.get("client_name", "Unknown")
+        industry = client.get("industry_primary", "")
+        business_model = client.get("business_model", "")
+        revenue = client.get("revenue", "")
+        employee_count = client.get("employee_count", "")
+        
+        raw_challenge = packaging.get("client_problem_anonymized", "") or packaging.get("client_problem_statement", "")
+        raw_approach = packaging.get("approach_summary", [])
+        raw_top_levers = packaging.get("top_levers", [])
+        raw_differentiators = packaging.get("where_we_were_unique", [])
+        
+        # Initialize summarized content
+        summarized_content = {
+            "title": None,  # Slide 2 - anonymized title
+            "client_description": None,  # Slide 3
+            "challenge": None,  # Slide 3
+            "approach": None,  # Slide 3
+            "top_levers": None,  # Slide 4
+            "differentiators": None,  # Slide 4
+            "value_metrics": [],  # Slide 4 - calculated separately
+        }
+        
+        # =========================================================================
+        # SLIDE 2: Generate Anonymized Title
+        # =========================================================================
+        self.console.print("\n[bold]Slide 2: Title[/bold]")
+        
+        # Build a proper client description from available context
+        client_desc_parts = []
+        if industry:
+            client_desc_parts.append(f"Industry: {industry}")
+        if business_model:
+            client_desc_parts.append(f"Business Model: {business_model}")
+        if revenue:
+            client_desc_parts.append(f"Revenue: ${revenue:,}" if isinstance(revenue, (int, float)) else f"Revenue: {revenue}")
+        if employee_count:
+            client_desc_parts.append(f"Employees: {employee_count:,}" if isinstance(employee_count, (int, float)) else f"Employees: {employee_count}")
+        
+        # Add any additional context from client data
+        company_type = client.get("company_type") or client.get("ownership_type", "")
+        if company_type:
+            client_desc_parts.append(f"Type: {company_type}")
+        
+        client_description_for_title = "; ".join(client_desc_parts) if client_desc_parts else ""
+        
+        slide_2_result = await prompt_runner.generate_slide_2(
+            client_name=client_name,
+            industry=industry,
+            business_model=business_model,
+            client_description=client_description_for_title,
+        )
+        
+        if slide_2_result.success:
+            summarized_content["title"] = slide_2_result.content.get("title")
+            self.console.print(f"[green]✓[/green] Title: {summarized_content['title']}")
+        else:
+            self.console.print(f"[red]✗[/red] Title generation failed after {slide_2_result.retries_used} retries")
+            for error in slide_2_result.errors[-3:]:  # Show last 3 errors
+                self.console.print(f"  [dim]{error}[/dim]")
+            # Use fallback
+            summarized_content["title"] = f"A Leading {industry} Provider" if industry else "Case Study"
+            self.console.print(f"[yellow]→ Using fallback: {summarized_content['title']}[/yellow]")
+        
+        # =========================================================================
+        # SLIDE 3: Generate Challenge Content
+        # =========================================================================
+        self.console.print("\n[bold]Slide 3: The Challenge[/bold]")
+        
+        # Build context for Slide 3 with specific facts
+        slide_3_context_parts = []
+        
+        # Get financial data for context
+        financials = impact_data.get("financials", {}) if impact_data else {}
+        annual_savings = financials.get("total_annual_savings", {})
+        if isinstance(annual_savings, dict):
+            savings_amount = annual_savings.get("amount", 0)
+        else:
+            savings_amount = annual_savings or 0
+        
+        if savings_amount:
+            slide_3_context_parts.append(f"Total annual savings achieved: ${savings_amount:,.0f}")
+        
+        # Add addressable spend if available
+        addressable_spend = financials.get("addressable_spend", {})
+        if isinstance(addressable_spend, dict):
+            spend_amount = addressable_spend.get("amount", 0)
+        else:
+            spend_amount = addressable_spend or 0
+        
+        if spend_amount:
+            slide_3_context_parts.append(f"Addressable spend: ${spend_amount:,.0f}")
+        
+        # Add number of sites/locations if available
+        num_sites = client.get("number_of_locations") or client.get("num_sites")
+        if num_sites:
+            slide_3_context_parts.append(f"Number of locations: {num_sites}")
+        
+        # Add top categories from categories data
+        if categories_data:
+            categories = categories_data.get("categories", [])
+            top_cats = [c.get("category_label", "") for c in categories[:3] if c.get("category_label")]
+            if top_cats:
+                slide_3_context_parts.append(f"Key categories: {', '.join(top_cats)}")
+        
+        # Add time to value
+        time_to_value = financials.get("time_to_first_savings_days")
+        if time_to_value:
+            slide_3_context_parts.append(f"Time to first savings: {time_to_value} days")
+        
+        slide_3_additional_context = "\n".join(slide_3_context_parts) if slide_3_context_parts else ""
+        
+        slide_3_result = await prompt_runner.generate_slide_3(
+            client_name=client_name,
+            industry=industry,
+            business_model=business_model,
+            revenue=str(revenue) if revenue else "",
+            employee_count=str(employee_count) if employee_count else "",
+            raw_challenge=raw_challenge,
+            raw_approach=raw_approach,
+            additional_context=slide_3_additional_context,
+        )
+        
+        if slide_3_result.success:
+            summarized_content["client_description"] = slide_3_result.content.get("client_description")
+            summarized_content["challenge"] = slide_3_result.content.get("challenge_text")
+            summarized_content["approach"] = [slide_3_result.content.get("approach_text")] if slide_3_result.content.get("approach_text") else []
+            
+            self.console.print(f"[green]✓[/green] Client Desc: {summarized_content['client_description'][:50]}...")
+            self.console.print(f"[green]✓[/green] Challenge: {len(summarized_content['challenge'].split())} words")
+            self.console.print(f"[green]✓[/green] Approach: {len(summarized_content['approach'][0].split()) if summarized_content['approach'] else 0} words")
+        else:
+            self.console.print(f"[red]✗[/red] Slide 3 generation failed after {slide_3_result.retries_used} retries")
+            for error in slide_3_result.errors[-3:]:
+                self.console.print(f"  [dim]{error}[/dim]")
+            # Use fallback - raw data
+            summarized_content["client_description"] = f"A Leading Provider of {industry} Services" if industry else "A Leading Industry Provider"
+            summarized_content["challenge"] = raw_challenge[:300] if raw_challenge else ""
+            summarized_content["approach"] = raw_approach[:4] if raw_approach else []
+            self.console.print(f"[yellow]→ Using fallback data[/yellow]")
+        
+        # =========================================================================
+        # SLIDE 3 (cont): Generate PE Description (RELATIONSHIP VIA:)
+        # =========================================================================
+        pe_description = None
+        if pe_sponsor:
+            self.console.print("\n[bold]Slide 3: PE Description (Relationship Via)[/bold]")
+            self.console.print(f"[dim]Using NEW YAML prompt system for PE description[/dim]")
+            
+            pe_result = await prompt_runner.generate_pe_description(
+                pe_sponsor=pe_sponsor,
+                industry=industry,
+                web_search_results=pe_web_search_results,
+            )
+            
+            if pe_result.success:
+                pe_description = pe_result.content.get("pe_description")
+                self.console.print(f"[green]✓[/green] PE Description: {pe_description}")
+            else:
+                self.console.print(f"[red]✗[/red] PE description generation failed after {pe_result.retries_used} retries")
+                for error in pe_result.errors[-3:]:
+                    self.console.print(f"  [dim]{error}[/dim]")
+                # Use fallback
+                industry_lower = (industry or "").lower()
+                if any(term in industry_lower for term in ["health", "medical", "clinical"]):
+                    pe_description = "Middle-market, growth-focused healthcare PE"
+                elif any(term in industry_lower for term in ["tech", "software"]):
+                    pe_description = "Growth-oriented technology PE firm"
+                elif any(term in industry_lower for term in ["service", "business"]):
+                    pe_description = "Middle-market business services investor"
+                else:
+                    pe_description = "Middle-market, growth-focused PE firm"
+                self.console.print(f"[yellow]→ Using fallback: {pe_description}[/yellow]")
+        
+        # =========================================================================
+        # SLIDE 4: Generate Levers & Differentiators
+        # =========================================================================
+        self.console.print("\n[bold]Slide 4: Key Levers & Differentiators[/bold]")
+        
+        # Build rich additional context for better LLM output
+        context_parts = []
+        
+        # Add financial summary
+        financials = impact_data.get("financials", {}) if impact_data else {}
+        annual_savings = financials.get("total_annual_savings", {})
+        if isinstance(annual_savings, dict):
+            savings_amount = annual_savings.get("amount", 0)
+        else:
+            savings_amount = annual_savings or 0
+        
+        if savings_amount:
+            context_parts.append(f"Total annual savings: ${savings_amount:,.0f}")
+        
+        # Add time to value
+        time_to_value = financials.get("time_to_first_savings_days")
+        if time_to_value:
+            context_parts.append(f"Time to first savings: {time_to_value} days")
+        
+        # Add ROI if available
+        roi = financials.get("roi_multiple")
+        if roi:
+            context_parts.append(f"ROI: {roi}x")
+        
+        # Add key vendors from categories
+        if categories_data:
+            categories = categories_data.get("categories", [])
+            vendors_after = set()
+            for cat in categories[:5]:  # Top 5 categories
+                v_after = cat.get("vendors_after", [])
+                if isinstance(v_after, list):
+                    vendors_after.update(v_after[:2])
+            if vendors_after:
+                context_parts.append(f"Key vendors: {', '.join(list(vendors_after)[:5])}")
+            
+            # Add category-specific savings highlights
+            savings_highlights = []
+            for cat in categories[:3]:  # Top 3 categories
+                cat_label = cat.get("category_label", "")
+                cat_pct = cat.get("savings_percentage", 0)
+                if cat_label and cat_pct:
+                    pct_val = float(str(cat_pct).replace("%", "").replace(",", "")) if cat_pct else 0
+                    if pct_val >= 10:  # Only highlight significant savings
+                        savings_highlights.append(f"{cat_label}: {pct_val:.0f}% savings")
+            if savings_highlights:
+                context_parts.append(f"Category highlights: {'; '.join(savings_highlights)}")
+        
+        # Add value blurb for context
+        value_blurb = packaging.get("value_delivered_blurb", "")
+        if value_blurb:
+            context_parts.append(f"Value summary: {value_blurb[:200]}")
+        
+        additional_context = "\n".join(context_parts) if context_parts else ""
+        
+        slide_4_result = await prompt_runner.generate_slide_4(
+            industry=industry,
+            raw_top_levers=raw_top_levers,
+            raw_differentiators=raw_differentiators,
+            additional_context=additional_context,
+        )
+        
+        if slide_4_result.success:
+            summarized_content["top_levers"] = slide_4_result.content.get("top_levers", [])
+            summarized_content["differentiators"] = slide_4_result.content.get("differentiators", [])
+            
+            self.console.print(f"[green]✓[/green] Top Levers: {len(summarized_content['top_levers'])} items")
+            self.console.print(f"[green]✓[/green] Differentiators: {len(summarized_content['differentiators'])} items")
+        else:
+            self.console.print(f"[red]✗[/red] Slide 4 generation failed after {slide_4_result.retries_used} retries")
+            for error in slide_4_result.errors[-3:]:
+                self.console.print(f"  [dim]{error}[/dim]")
+            # Use fallback - raw data truncated
+            summarized_content["top_levers"] = [lever[:50] for lever in raw_top_levers[:5]]
+            summarized_content["differentiators"] = [d[:100] for d in raw_differentiators[:2]]
+            self.console.print(f"[yellow]→ Using fallback data[/yellow]")
+        
+        # =========================================================================
+        # VALUE METRICS: Calculate (not LLM-generated)
+        # =========================================================================
+        summarized_content["value_metrics"] = []  # Let template_generator calculate
+        
+        # =========================================================================
+        # Content Consistency Check
+        # =========================================================================
+        self.console.print("\n[bold]Content Consistency Check[/bold]")
+        self.console.print("[dim]Validating all slide content for consistency before generation...[/dim]")
+        
+        # Pre-calculate value metrics so the consistency checker can see them
+        pre_calc_metrics = []
+        financials_for_check = {}
+        if impact_data:
+            financials_for_check = impact_data.get("impact", {}).get("financials", {})
+            if not financials_for_check:
+                financials_for_check = impact_data.get("financials", {})
+        annual_amount_check = 0
+        
+        total_annual_check = financials_for_check.get("total_annual_savings", {})
+        if isinstance(total_annual_check, dict):
+            annual_amount_check = total_annual_check.get("amount", 0) or 0
+        elif total_annual_check:
+            annual_amount_check = total_annual_check or 0
+        if not annual_amount_check:
+            annual_savings_check = financials_for_check.get("annual_savings", {})
+            if isinstance(annual_savings_check, dict):
+                annual_amount_check = annual_savings_check.get("amount", 0) or 0
+            else:
+                annual_amount_check = annual_savings_check or 0
+        # Fallback: sum from categories if financials path didn't work
+        if not annual_amount_check and categories_data:
+            for cat in categories_data.get("categories", []):
+                savings = cat.get("savings_annual_run_rate", cat.get("annual_savings", {}))
+                if isinstance(savings, dict):
+                    annual_amount_check += savings.get("amount", 0) or 0
+                elif savings:
+                    annual_amount_check += float(savings) if savings else 0
+        
+        if annual_amount_check:
+            def _fmt_currency_check(amt: float) -> str:
+                if amt >= 1_000_000:
+                    return f"${amt/1_000_000:.1f}M"
+                elif amt >= 1_000:
+                    return f"${amt/1_000:.0f}K"
+                return f"${amt:,.0f}"
+            
+            pre_calc_metrics = [
+                {"value": _fmt_currency_check(annual_amount_check * 3), "description": "Contract Length Savings"},
+                {"value": _fmt_currency_check(annual_amount_check * 13), "description": "Estimated Value Created"},
+            ]
+        
+        # Prepare simplified categories for consistency check
+        check_categories = []
+        if categories_data:
+            for cat in categories_data.get("categories", [])[:7]:
+                check_cat = {
+                    "category_label": cat.get("category_label", ""),
+                    "savings_percentage": cat.get("savings_percentage", 0),
+                    "vendors_before": cat.get("vendors_before", []),
+                    "vendors_after": cat.get("vendors_after", []),
+                    "levers": cat.get("levers", []),
+                }
+                baseline = cat.get("baseline_spend", {})
+                savings = cat.get("savings_annual_run_rate", {})
+                check_cat["baseline_spend"] = baseline.get("amount", 0) if isinstance(baseline, dict) else (baseline or 0)
+                check_cat["savings_amount"] = savings.get("amount", 0) if isinstance(savings, dict) else (savings or 0)
+                check_categories.append(check_cat)
+        
+        # Build the complete content JSON for the consistency checker
+        all_content_for_check = {
+            "slide_2_title": summarized_content.get("title", ""),
+            "slide_3": {
+                "client_description": summarized_content.get("client_description", ""),
+                "challenge_text": summarized_content.get("challenge", ""),
+                "approach_text": summarized_content.get("approach", []),
+                "pe_description": pe_description or "",
+            },
+            "slide_4": {
+                "top_levers": summarized_content.get("top_levers", []),
+                "differentiators": summarized_content.get("differentiators", []),
+            },
+            "value_metrics_calculated": pre_calc_metrics,
+            "slide_5_categories": check_categories,
+            "source_data": {
+                "annual_savings_amount": annual_amount_check,
+                "industry": industry,
+            }
+        }
+        
+        all_content_json = json.dumps(all_content_for_check, indent=2, default=str)
+        
+        with self.console.status(f"[cyan]Running consistency check with {MODEL}...[/cyan]"):
+            consistency_result = await prompt_runner.generate_consistency_check(
+                client_name=client_name,
+                pe_sponsor=pe_sponsor or "",
+                all_content_json=all_content_json,
+            )
+        
+        if consistency_result.success:
+            issues = consistency_result.content.get("issues", [])
+            corrected = consistency_result.content.get("corrected", {})
+            
+            if issues:
+                self.console.print(f"\n[yellow]⚠️ Flagged {len(issues)} consistency issue(s) for review:[/yellow]")
+                for i, issue in enumerate(issues, 1):
+                    field = issue.get("field", "unknown")
+                    desc = issue.get("issue", "")
+                    action = issue.get("action", "")
+                    self.console.print(f"  [yellow]{i}.[/yellow] [bold]{field}[/bold]: {desc}")
+                    if action:
+                        self.console.print(f"     [dim]Suggested fix: {action}[/dim]")
+                self.console.print(f"\n[dim]No automatic corrections applied — review and fix manually in the generated PowerPoint.[/dim]")
+            else:
+                self.console.print("[green]✓[/green] All content is consistent — no issues found")
+        else:
+            self.console.print(f"[yellow]⚠️ Consistency check failed after {consistency_result.retries_used} retries — proceeding with original content[/yellow]")
+            for error in consistency_result.errors[-3:]:
+                self.console.print(f"  [dim]{error}[/dim]")
+        
+        # =====================================================================
+        # Generate PowerPoint using Template
+        # =====================================================================
+        self.console.print()
+        self.console.print(Panel(
+            "[bold]Generating PowerPoint from Template[/bold]\n"
+            "Using: LLM Case Study Format.pptx",
+            border_style="cyan",
+        ))
+        
+        # Find the template
+        template_path = Path(__file__).parent.parent.parent / "LLM Case Study Format.pptx"
+        
+        if not template_path.exists():
+            self.console.print(f"[red]❌ Template not found: {template_path}[/red]")
+            self.console.print("[dim]Please ensure 'LLM Case Study Format.pptx' is in the new-agent directory.[/dim]")
+            return False
+        
+        # Generate timestamp for output filename
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_filename = f"{extracted_client_name}_{timestamp}_case_study_v2.pptx"
+        output_path = POWERPOINTS_DIR / output_filename
+        
+        try:
+            generator = TemplatePPTXGenerator(template_path)
+            
+            # Show what we're about to generate
+            self.console.print("\n[bold cyan]Generating slides:[/bold cyan]")
+            self.console.print(f"  [cyan]•[/cyan] Slide 1: Unlock Hidden Value (unchanged)")
+            self.console.print(f"  [cyan]•[/cyan] Slide 2: {extracted_client_name}")
+            
+            # Get some preview data
+            packaging = case_study_data.get("case_study_packaging", case_study_data)
+            client_desc = f"A Leading {industry} Provider" if industry else "A Leading Industry Provider"
+            self.console.print(f"  [cyan]•[/cyan] Slide 3: {client_desc}")
+            if pe_description:
+                self.console.print(f"  [cyan]•[/cyan]   PE: {pe_description[:50]}...")
+            
+            # Count categories
+            cats = categories_data.get("categories", []) if categories_data else []
+            cat_count = min(len(cats), 7)
+            self.console.print(f"  [cyan]•[/cyan] Slide 4: Key Levers & Value Delivered")
+            self.console.print(f"  [cyan]•[/cyan] Slide 5: {cat_count} category outcomes")
+            
+            # Generate the PowerPoint
+            self.console.print("\n[dim]Creating PowerPoint file...[/dim]")
+            
+            result_path = generator.generate(
+                client_context=client_context_data,
+                case_study=case_study_data,
+                impact=impact_data,
+                pe_description=pe_description,
+                categories_data=categories_data,
+                output_path=output_path,
+                summarized_content=summarized_content,  # Pass LLM-summarized content
+            )
+            
+            self.console.print(f"\n[green]✓[/green] Generated PowerPoint: {result_path.name}")
+            self.console.print(f"[dim]Saved to: {result_path}[/dim]")
+            
+        except Exception as e:
+            self.console.print(f"[red]❌ Failed to generate PowerPoint: {e}[/red]")
+            import traceback
+            self.console.print(f"[dim]{traceback.format_exc()}[/dim]")
+            return False
+        
+        return True
+    
+    # =========================================================================
+    # /powerpointbatch Command - Batch PowerPoint Generation from Database
+    # =========================================================================
+    async def _handle_powerpointbatch(self, args: List[str]) -> None:
+        """
+        Handle /powerpointbatch command - batch generate PowerPoint for multiple clients.
+        
+        Lists clients from Azure SQL database, allows multi-selection,
+        then generates PowerPoint presentations for each selected client.
+        
+        Supports selection formats: "1,3,5", "1-5", "all", "1-3,5,7-9"
+        """
+        # Validate configuration
+        errors = validate_config()
+        if errors:
+            self.console.print("[red]Configuration errors:[/red]")
+            for error in errors:
+                self.console.print(f"  [red]•[/red] {error}")
+            return
+        
+        ensure_directories()
+        
+        if not AZURE_SQL_ENABLED:
+            self.console.print("[red]❌ Azure SQL is not enabled. /powerpointbatch requires database access.[/red]")
+            self.console.print("[dim]Please configure Azure SQL connection in your .env file.[/dim]")
+            return
+        
+        self.console.print()
+        self.console.print(Panel(
+            "[bold magenta]Batch PowerPoint Generation (Template)[/bold magenta]\n"
+            "Generate case study presentations for multiple clients from database",
+            border_style="magenta",
+        ))
+        
+        # =====================================================================
+        # Step 1: Connect to database and list clients
+        # =====================================================================
+        self.console.print("\n[cyan]Connecting to Azure SQL Database...[/cyan]")
+        
+        try:
+            connection_string = get_azure_connection_string()
+            writer = AzureSQLWriter(connection_string, AZURE_SQL_TABLE)
+            
+            clients = writer.list_clients()
+            
+            if not clients:
+                self.console.print("[yellow]⚠️ No clients found in database[/yellow]")
+                self.console.print("[dim]Run /agent or /agentbatch first to extract client data.[/dim]")
+                writer.close()
+                return
+            
+            self.console.print(f"[green]✓[/green] Found {len(clients)} client(s) in database\n")
+            
+            # Display numbered list
+            self.console.print("[bold cyan]Available Clients:[/bold cyan]")
+            table = Table(show_header=True, header_style="bold")
+            table.add_column("#", style="dim", width=4)
+            table.add_column("Client Name", style="cyan")
+            table.add_column("Last Updated", style="dim")
+            
+            for i, client in enumerate(clients, 1):
+                updated = client.get("updated_at", client.get("extraction_timestamp", ""))
+                if updated:
+                    updated_str = updated.strftime("%Y-%m-%d %H:%M") if hasattr(updated, 'strftime') else str(updated)
+                else:
+                    updated_str = "N/A"
+                table.add_row(str(i), client["client_name"], updated_str)
+            
+            self.console.print(table)
+            self.console.print()
+            
+            # =====================================================================
+            # Step 2: Get multi-selection from user
+            # =====================================================================
+            self.console.print("[dim]Select clients (e.g. '1,3,5' or '1-5' or 'all' or 'q' to quit):[/dim]")
+            
+            selected_indices: List[int] = []
+            while True:
+                selection = input("> ").strip()
+                
+                if selection.lower() == 'q':
+                    self.console.print("[yellow]Cancelled.[/yellow]")
+                    writer.close()
+                    return
+                
+                selected_indices = self._parse_batch_selection(selection, len(clients))
+                
+                if selected_indices:
+                    # Show what was selected
+                    selected_names = [clients[i]["client_name"] for i in selected_indices]
+                    self.console.print(f"\n[green]✓[/green] Selected {len(selected_indices)} client(s):")
+                    for i, name in zip(selected_indices, selected_names):
+                        self.console.print(f"  {i+1}. {name}")
+                    break
+                else:
+                    self.console.print(f"[red]Invalid selection. Enter numbers 1-{len(clients)}, ranges (1-5), 'all', or 'q'[/red]")
+            
+            # =====================================================================
+            # Step 3: Fetch data for all selected clients
+            # =====================================================================
+            selected_clients_data: List[dict] = []
+            self.console.print(f"\n[dim]Fetching data for {len(selected_indices)} client(s)...[/dim]")
+            
+            for idx in selected_indices:
+                client_name = clients[idx]["client_name"]
+                client_data = writer.get_client(client_name)
+                
+                if client_data:
+                    selected_clients_data.append({
+                        "client_name": client_name,
+                        "client_context": client_data.get("client_context", {}),
+                        "case_study": client_data.get("case_study", {}),
+                        "impact": client_data.get("impact", {}),
+                        "categories": client_data.get("categories", {}),
+                    })
+                    self.console.print(f"  [green]✓[/green] Loaded: {client_name}")
+                else:
+                    self.console.print(f"  [red]❌[/red] Failed to load: {client_name} (skipping)")
+            
+            writer.close()
+            
+        except Exception as e:
+            self.console.print(f"[red]❌ Database error: {e}[/red]")
+            return
+        
+        if not selected_clients_data:
+            self.console.print("[red]❌ No client data could be loaded. Aborting.[/red]")
+            return
+        
+        # =====================================================================
+        # Step 4: Batch processing with retry logic
+        # =====================================================================
+        total = len(selected_clients_data)
+        max_retries = 2
+        
+        self.console.print()
+        self.console.print(Panel(
+            f"[bold cyan]Batch PowerPoint Generation[/bold cyan]\n\n"
+            f"Clients to process: [bold]{total}[/bold]\n"
+            f"Retries per client: {max_retries} attempts\n"
+            f"Mode: Sequential",
+            title="[bold]/powerpointbatch[/bold]",
+            border_style="cyan",
+        ))
+        
+        # Track results
+        succeeded: List[str] = []
+        failed: List[tuple] = []  # (name, error_message)
+        batch_start_time = datetime.now()
+        
+        # Process each client
+        for idx, client_data in enumerate(selected_clients_data, 1):
+            client_name = client_data["client_name"]
+            
+            self.console.print()
+            self.console.print("=" * 80)
+            self.console.print(Panel(
+                f"[bold]Client {idx}/{total}:[/bold] {client_name}",
+                border_style="magenta",
+            ))
+            self.console.print("=" * 80)
+            
+            # Retry loop
+            success = False
+            last_error = ""
+            for attempt in range(1, max_retries + 1):
+                if attempt > 1:
+                    self.console.print(f"\n[yellow]Retry attempt {attempt}/{max_retries} for {client_name}...[/yellow]\n")
+                
+                try:
+                    result = await self._generate_powerpoint2_for_client(
+                        client_context_data=client_data["client_context"],
+                        case_study_data=client_data["case_study"],
+                        impact_data=client_data["impact"],
+                        categories_data=client_data["categories"],
+                        extracted_client_name=client_name,
+                    )
+                    if result:
+                        success = True
+                        break
+                    else:
+                        last_error = "Generation returned failure (see output above)"
+                        self.console.print(f"[yellow]⚠️ Attempt {attempt}/{max_retries} failed for {client_name}[/yellow]")
+                except Exception as e:
+                    last_error = str(e)
+                    self.console.print(f"[red]❌ Attempt {attempt}/{max_retries} error for {client_name}: {e}[/red]")
+            
+            if success:
+                succeeded.append(client_name)
+                self.console.print(f"\n[green]✓ Completed: {client_name} ({idx}/{total})[/green]")
+            else:
+                failed.append((client_name, last_error))
+                self.console.print(f"\n[red]❌ Failed after {max_retries} attempts: {client_name} ({idx}/{total})[/red]")
+            
+            # Show running tally
+            self.console.print(f"[dim]Progress: {len(succeeded)} succeeded, {len(failed)} failed, {total - idx} remaining[/dim]")
+        
+        # =====================================================================
+        # Final Summary
+        # =====================================================================
+        batch_elapsed = datetime.now() - batch_start_time
+        elapsed_minutes = batch_elapsed.total_seconds() / 60
+        
+        self.console.print("\n")
+        self.console.print("=" * 80)
+        self.console.print(Panel(
+            f"[bold]Batch PowerPoint Generation Complete[/bold]\n\n"
+            f"Total clients: {total}\n"
+            f"Succeeded: [green]{len(succeeded)}[/green]\n"
+            f"Failed: [red]{len(failed)}[/red]\n"
+            f"Duration: {elapsed_minutes:.1f} minutes",
+            title="[bold]/powerpointbatch Summary[/bold]",
+            border_style="green" if not failed else "yellow",
+        ))
+        
+        # Show succeeded clients
+        if succeeded:
+            self.console.print("\n[green][bold]Succeeded:[/bold][/green]")
+            for name in succeeded:
+                self.console.print(f"  [green]✓[/green] {name}")
+        
+        # Show failed clients with reasons
+        if failed:
+            self.console.print("\n[red][bold]Failed:[/bold][/red]")
+            for name, error in failed:
+                self.console.print(f"  [red]❌[/red] {name}")
+                self.console.print(f"     [dim]Last error: {error[:200]}[/dim]")
+        
+        self.console.print()
     
     def _extract_folder_content(self, folder_path: Path, project_path: Path, max_chars: int = 30000) -> str:
         """

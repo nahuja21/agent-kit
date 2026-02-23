@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "All required elements are present: clear objective, quantified $412K savings, multiple proof points (Athena EMR renegotiation, Provista GPO, telecom consolidation).",
+    "headline": "Addiction-treatment provider captures $412K annual savings and 2.3\u00d7 ROI through Treya-led strategic sourcing",
+    "client_problem_statement": "SaVida Health had grown to more than 20 outpatient centers across five states, but purchasing remained decentralized and largely unmanaged. Varying vendor contracts, limited spend visibility, and rising operating costs pressured margins and threatened growth targets set by Council Capital. SaVida needed a fast, data-driven procurement program to aggregate spend, secure better pricing, and preserve clinical quality.",
+    "client_problem_anonymized": "A multi-state addiction treatment provider had grown to more than 20 outpatient centers, but purchasing remained decentralized and largely unmanaged. Varying vendor contracts, limited spend visibility, and rising operating costs pressured margins and threatened growth targets set by the private equity ownership group. The provider needed a fast, data-driven procurement program to aggregate spend, secure better pricing, and preserve clinical quality.",
+    "approach_summary": [
+      "Analyzed $5.3 M across ten indirect spend categories to identify $240-$470 K in addressable savings opportunities.",
+      "Renegotiated the client\u2019s Athenahealth EMR contract via targeted benchmark analysis, cutting percentage-of-collections fees from 4.56 % to 3.40 %.",
+      "Enrolled the client in the Provista GPO, unlocking tiered pricing on medical and office supplies and standardizing SKU catalogues across all sites.",
+      "Ran competitive bids for IT hardware and leveraged Connection and CDW GPO channels to benchmark Dell laptop pricing, achieving 13 % savings.",
+      "Consolidated disparate Comcast Business circuits into a single managed-services solution under review, projected to reduce telecom spend 15-20 % while improving uptime."
+    ],
+    "top_levers": [
+      "Contract renegotiation (Athena EMR)",
+      "GPO enrollment & tier optimization",
+      "Service consolidation (telecom)",
+      "Benchmark pricing & multi-vendor bids"
+    ],
+    "value_delivered_blurb": "Treya delivered $412,065 in verified annual run-rate savings\u2014nearly double the $210 K savings guarantee and equating to a 2.3\u00d7 return on the fixed portion of project fees. Beyond the financial impact, the engagement established a Provista GPO program, standardized purchasing processes, and provided the first enterprise-wide spend visibility SaVida had ever had.",
+    "where_we_were_unique": [
+      "Secured the single largest savings win\u2014$358 K\u2014from a complex Athena EMR renegotiation without disrupting clinical workflows.",
+      "Activated GPO contracts within 90 days, generating quick-hit savings while longer-cycle initiatives matured.",
+      "Overcame incomplete spend data by collaborating directly with suppliers to build accurate baselines, accelerating the sourcing timeline.",
+      "Maintained stakeholder alignment through a hands-on, clinician-friendly approach that safeguarded service quality during vendor changes."
+    ]
+  },
+  "generation_notes": [
+    "Savings and ROI figures sourced from final close-out deck and fee schedule.",
+    "Approach bullets keep client anonymous and highlight category-specific actions.",
+    "Top levers ranked by dollar impact: EMR renegotiation first, followed by GPO savings."
+  ]
+}

@@ -1,0 +1,590 @@
+{
+  "categories": [
+    {
+      "category_label": "Telematics (Samsara)",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2024-10-31",
+      "status": "implemented",
+      "vendors_before": [
+        "Samsara"
+      ],
+      "vendors_after": [
+        "Samsara (5-year contract, additional 10% discount)"
+      ],
+      "levers": [
+        "Contract extension",
+        "Incumbent renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Hardware ownership retained by client \u2013 no service interruption allowed",
+        "contractual_constraints": "Existing Samsara contract amendable at renewal anniversary",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 247856,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Addressable spend shown on Final Savings Dashboard slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 23285,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Savings finalized line item"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 9.0,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Case Study.pptx",
+          "page_or_slide": "5",
+          "quote": "Telematics (Samsara) | $247,856 | 9% | $23,285 | Savings Finalized",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Oil & Lubricants \u2013 Shell",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-02-10",
+      "status": "implemented",
+      "vendors_before": [
+        "Shell"
+      ],
+      "vendors_after": [
+        "Shell (National program via LubeZone)"
+      ],
+      "levers": [
+        "Incumbent renegotiation",
+        "Volume commitment",
+        "Rebate enhancement"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must retain Shell as primary brand for customer preference",
+        "operational_constraints": null,
+        "contractual_constraints": "Pricing locked for 1-year; marketing fund provisions",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 4244416,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Addressable spend for Shell award"
+      },
+      "savings_annual_run_rate": {
+        "amount": 646151,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "15% savings line"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 15.2,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Case Study.pptx",
+          "page_or_slide": "5",
+          "quote": "Oil/Lubricants - Shell Award | $4,244,416 | 15% | $646,151 | pricing live 2/10/25",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Oil & Lubricants \u2013 Chevron",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-03-04",
+      "status": "implemented",
+      "vendors_before": [
+        "Chevron"
+      ],
+      "vendors_after": [
+        "Chevron (Amendment No.6 \u2013 Level 3 pricing)"
+      ],
+      "levers": [
+        "Incumbent renegotiation",
+        "National account pricing",
+        "Rebate adjustment"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "Agreement extended through 2/29/2028 per Amendment No.6",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 2736486,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Addressable spend for Chevron"
+      },
+      "savings_annual_run_rate": {
+        "amount": 227793,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "8% savings line"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 8.3,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Categories/Oil & Lubricants/Chevron/Please_DocuSign_Lubezone_Operations_LLC_Ame.pdf",
+          "page_or_slide": "1",
+          "quote": "AMENDMENT NO. 6 ... effective as of March 4, 2025",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Oil & Lubricants \u2013 ExxonMobil",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-03-01",
+      "status": "implemented",
+      "vendors_before": [
+        "ExxonMobil"
+      ],
+      "vendors_after": [
+        "ExxonMobil (revised distributor pricing)"
+      ],
+      "levers": [
+        "Incumbent renegotiation",
+        "Price benchmark vs Shell/Chevron"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1355356,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Addressable spend for ExxonMobil"
+      },
+      "savings_annual_run_rate": {
+        "amount": 138266,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "10% savings line"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10.2,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Case Study.pptx",
+          "page_or_slide": "5",
+          "quote": "Oil/Lubricants - ExxonMobil | $1,355,356 | 10% | $138,266 | Pricing accepted 3/1/25",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Filters \u2013 Fleetguard",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-01-20",
+      "status": "implemented",
+      "vendors_before": [
+        "Fleetguard"
+      ],
+      "vendors_after": [
+        "Fleetguard (new 68.5% discount tier)"
+      ],
+      "levers": [
+        "Incumbent renegotiation",
+        "Tiered discount improvement"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "Tariff clause addressed in pricing exhibit",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1417378,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Categories/Filters/Fleetguard/Epika Fleetguard Pricing (Current Discount vs Proposed) v3 (post tariffs).xlsx",
+        "notes": "Extended cost at current pricing"
+      },
+      "savings_annual_run_rate": {
+        "amount": 141127,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "10% savings line"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 9.96,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Case Study.pptx",
+          "page_or_slide": "5",
+          "quote": "Filters - Fleetguard | $1,417,378 | 10% | $141,127 | New discount structure effective 1/20/25",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Filters \u2013 Baldwin",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-02-14",
+      "status": "implemented",
+      "vendors_before": [
+        "Baldwin"
+      ],
+      "vendors_after": [
+        "Baldwin (negotiated price file)"
+      ],
+      "levers": [
+        "Incumbent renegotiation",
+        "Rebate structure"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "MOU effective 2/1/25 \u2013 1-year term",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 2330517,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Addressable spend figure"
+      },
+      "savings_annual_run_rate": {
+        "amount": 80356,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "3% savings line"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 3.45,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Categories/Filters/Baldwin/Epika - Baldwin Savings Analysis_02032025.xlsx",
+          "page_or_slide": "Baldwin vs Donaldson sheet",
+          "quote": "Baldwin Incumbent Savings ... $78,257 on $1.21M spend",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Fuel (Comdata)",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-12-10",
+      "end_date": "2025-04-15",
+      "status": "implemented",
+      "vendors_before": [
+        "Ramp",
+        "Fuelman",
+        "Impac Fleet",
+        "Universal Premium Fleet Card"
+      ],
+      "vendors_after": [
+        "Comdata"
+      ],
+      "levers": [
+        "Competitive RFQ",
+        "Vendor consolidation",
+        "Guaranteed rebate"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Card transition must not disrupt fueling for mobile service trucks",
+        "contractual_constraints": "3-year Comdata Mastercard Agreement effective 2025-02-28",
+        "implementation_constraints": "Phased card rollout across business units"
+      },
+      "baseline_spend": {
+        "amount": 4588961,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Addressable spend figure used for savings"
+      },
+      "savings_annual_run_rate": {
+        "amount": 43494,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "1% guaranteed rebate value"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 0.95,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Epika Project Close-Out/Fuel/Epika Fuel Savings Calculation.xlsx",
+          "page_or_slide": "Sheet1",
+          "quote": "Comdata Proposal ... 1.8% guaranteed rebate",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-04-01",
+      "status": "implemented",
+      "vendors_before": [
+        "Amazon",
+        "Staples"
+      ],
+      "vendors_after": [
+        "Office Depot (OMNIA ODP)",
+        "Amazon Business (OMNIA)"
+      ],
+      "levers": [
+        "Join GPO program",
+        "Pricing benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": "Rollout coordinated by Mike (client lead)"
+      },
+      "baseline_spend": {
+        "amount": 279851,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Addressable spend figure"
+      },
+      "savings_annual_run_rate": {
+        "amount": 36381,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Epika Project Close-Out/Office Supplies/Epika - Office Supplies Data_Analysis_Treya.xlsx",
+        "notes": "Savings summary \u2013 13% expected"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 13.0,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Epika Project Close-Out/Office Supplies/Epika - Office Supplies Data_Analysis_Treya.xlsx",
+          "page_or_slide": "Savings Summary",
+          "quote": "Total spend $279,850.97 \u2013 savings $36,988 (13%)",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "After-Market Parts \u2013 CST&T",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-06-30",
+      "status": "implemented",
+      "vendors_before": [
+        "Parts South",
+        "Tidewater/TNT Parts"
+      ],
+      "vendors_after": [
+        "New Life Truck Parts"
+      ],
+      "levers": [
+        "Full RFQ",
+        "Competitive bidding",
+        "Rebate program"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Maintain free local delivery to CST&T location",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1354118,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Addressable spend on dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 135412,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "15% potential savings validated"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10.0,
+      "notes": "Savings validated on $1M bid coverage and extrapolated to full $2.3M spend",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Case Study.pptx",
+          "page_or_slide": "9",
+          "quote": "Potential savings of 15% through New Life\u2019s proposal ... $152k on $1M of spend",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "General Industrial Supplies",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2025-03-01",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Imperial Supplies",
+        "Airgas"
+      ],
+      "vendors_after": [
+        "MSC Industrial (OMNIA Program)",
+        "Fastenal (OMNIA)"
+      ],
+      "levers": [
+        "GPO program adoption",
+        "Vendor consolidation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 591963,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Exhibit A",
+        "notes": "Total spend line for General Industrial Supplies"
+      },
+      "savings_annual_run_rate": {
+        "amount": 12711,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "8% savings on $164,474 addressable; awaiting implementation"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 2.15,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Case Study.pptx",
+          "page_or_slide": "8",
+          "quote": "$12,771 (17% on addressable item spend) in savings found with OMNIA\u2019s MSC program",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "OEM Parts \u2013 PACCAR",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2025-03-01",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Rush Truck Centers / local PACCAR dealers"
+      ],
+      "vendors_after": [
+        "PACCAR (Level-3 national account pricing)"
+      ],
+      "levers": [
+        "National account negotiation",
+        "Rebate program"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must retain OEM parts warranty compliance",
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 4790316,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "Addressable spend shown for PACCAR subset"
+      },
+      "savings_annual_run_rate": {
+        "amount": 479032,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Updates/Epika - Case Study.pptx",
+        "notes": "10% low-end savings estimate \u2013 not yet finalized"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10.0,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Case Study.pptx",
+          "page_or_slide": "7",
+          "quote": "Potential annual savings up to $360k on $5M spend (17% on basket)",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 11,
+    "implemented_count": 9,
+    "in_progress_count": 2,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 23937218,
+    "total_savings": 1484976,
+    "average_savings_percentage": 6.2
+  },
+  "extraction_sources": [
+    "Project Updates/Epika - Case Study.pptx",
+    "Exhibit A",
+    "Epika Project Close-Out/Office Supplies/Epika - Office Supplies Data_Analysis_Treya.xlsx",
+    "Epika Project Close-Out/Fuel/Epika Fuel Savings Calculation.xlsx",
+    "Categories/Filters/Fleetguard/Epika Fleetguard Pricing (Current Discount vs Proposed) v3 (post tariffs).xlsx",
+    "Categories/Filters/Baldwin/Epika - Baldwin Savings Analysis_02032025.xlsx",
+    "Categories/Oil & Lubricants/Chevron/Please_DocuSign_Lubezone_Operations_LLC_Ame.pdf"
+  ],
+  "extraction_notes": [
+    "Baseline spend for vendor-specific Oil & Lubricants categories uses addressable spend from Final Savings Dashboard to align with savings figures",
+    "Telematics baseline derived from dashboard as category not present in original Exhibit A",
+    "Savings percentages calculated where both baseline and savings values available",
+    "Dates defaulted to known contract effective dates when project start unknown"
+  ]
+}

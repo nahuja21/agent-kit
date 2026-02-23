@@ -1,0 +1,374 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "Carrier Enterprises",
+      "category": "HVAC OEM Equipment",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 1971974,
+      "final_spend": 1652185,
+      "savings_dollars": 319789,
+      "savings_percent": 16,
+      "levers_applied": [
+        "National agreement",
+        "Rebate renegotiation",
+        "Front-end price reduction",
+        "Volume consolidation",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "Lennox",
+        "Rheem",
+        "Daikin",
+        "Trane"
+      ],
+      "why_selected": "Best overall economics \u2013 $297K annual rebate plus $22K in front-end price reductions under a national program while retaining existing Carrier product ecosystem.",
+      "why_not_selected": null,
+      "contract_terms": "National price list signed 9/25/2025; pricing held until written notice; annual volume rebate starting at 15% of net purchases; term aligned to calendar year with mutual renewal option.",
+      "negotiation_leverage": "Multi-OEM benchmark data and threat to shift $2M spend created pressure for price concessions.",
+      "supplier_strengths": "Recognized brand, broad equipment portfolio, strong distributor support network.",
+      "supplier_weaknesses": "Historically inconsistent local pricing; limited transparency on parts pricing.",
+      "switching_costs": "High \u2013 technician familiarity, installed base warranties, parts inventory.",
+      "key_contacts": "Ben Cowles \u2013 Sr Director Finance (signatory)",
+      "notes": "Q3 rebate true-up under review could raise annual rebate to $406K.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multiple OEMs benchmarked",
+        "National program negotiated",
+        "Savings >15%"
+      ]
+    },
+    {
+      "supplier_name": "Rheem Sales Company, Inc.",
+      "category": "HVAC OEM Equipment",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 2566500,
+      "final_spend": 2459947,
+      "savings_dollars": 106553,
+      "savings_percent": 4.2,
+      "levers_applied": [
+        "National rebate program",
+        "Rebate tier upgrade",
+        "Volume consolidation",
+        "Direct-to-OEM agreement"
+      ],
+      "alternatives_considered": [
+        "Gemaire (incumbent)",
+        "Allied",
+        "Ferguson",
+        "Daikin",
+        "Carrier"
+      ],
+      "why_selected": "Direct OEM agreement lifted rebate from 6.5% to 8% and standardized national pricing with no distributor mark-up.",
+      "why_not_selected": null,
+      "contract_terms": "Consolidator Incentive Agreement effective 1/1/2026; 1-year term with renewal; rebates paid on net purchases across all Dealer Partners; new acquisitions can be added via exhibit.",
+      "negotiation_leverage": "Aggregated volume across five business units to qualify for higher rebate tier; credible threat to divert spend to competing OEMs.",
+      "supplier_strengths": "Competitive rebate ladder, flexibility to add future acquisitions, strong distributor fulfillment network.",
+      "supplier_weaknesses": "Still reliant on distributors for product flow; limited direct influence on front-end prices.",
+      "switching_costs": "Moderate \u2013 product familiarity but alternatives readily available.",
+      "key_contacts": null,
+      "notes": "Front-end pricing parity still being validated; savings currently driven by rebate delta.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Distributor-to-OEM switch",
+        "Competitive negotiation",
+        "Rebate restructuring"
+      ]
+    },
+    {
+      "supplier_name": "Lennox Industries",
+      "category": "HVAC OEM Equipment",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 2755129,
+      "final_spend": 2382126,
+      "savings_dollars": 373003,
+      "savings_percent": 14,
+      "levers_applied": [
+        "Rebate tier negotiation",
+        "Front-end price benchmarking",
+        "Volume commitment"
+      ],
+      "alternatives_considered": [
+        "Carrier",
+        "Daikin",
+        "Rheem",
+        "Trane"
+      ],
+      "why_selected": "Agreed to 16% rebate on all dollars spent (~$441K) with minimal operational disruption.",
+      "why_not_selected": null,
+      "contract_terms": "National rebate program \u2013 16% tier for $1M\u2013$8M spend; rebates paid quarterly; signing bonus under discussion.",
+      "negotiation_leverage": "Displayed unfavorable price gaps on like-for-like SKUs versus Daikin and Carrier, threatening to redirect volume.",
+      "supplier_strengths": "Large installed base, reliable lead times, generous rebate percentage.",
+      "supplier_weaknesses": "Higher front-end pricing than peers; limited flexibility on key SKUs.",
+      "switching_costs": "High \u2013 equipment compatibility and technician training.",
+      "key_contacts": null,
+      "notes": "Further front-end pricing improvements under review; signing bonus expected between $50-200K.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive benchmarking",
+        "Significant rebate negotiation",
+        "Savings >10%"
+      ]
+    },
+    {
+      "supplier_name": "Johnstone Supply",
+      "category": "HVAC ECM Parts Program",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 355728,
+      "final_spend": 330905,
+      "savings_dollars": 24823,
+      "savings_percent": 7,
+      "levers_applied": [
+        "Rebate program enhancement",
+        "Growth incentive"
+      ],
+      "alternatives_considered": [
+        "Ferguson",
+        "Daikin distributors"
+      ],
+      "why_selected": "Enhanced ECM rebate (2% base + 5% growth) delivered savings without switching suppliers.",
+      "why_not_selected": null,
+      "contract_terms": "Annual ECM rebate program reviewed each year; no minimum purchase commitment.",
+      "negotiation_leverage": "Potential to shift ECM parts to Ferguson created pressure for higher rebate.",
+      "supplier_strengths": "Broad ECM inventory, existing logistics network.",
+      "supplier_weaknesses": "Declined full national HVAC program; limited price concessions beyond rebate.",
+      "switching_costs": "Low-moderate \u2013 parts interchangeable but would require supplier onboarding.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Rebate negotiation",
+        "Savings >5%"
+      ]
+    },
+    {
+      "supplier_name": "R.E. Michel Company",
+      "category": "HVACR & Plumbing Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 1909504,
+      "final_spend": 1883566,
+      "savings_dollars": 25938,
+      "savings_percent": 1.4,
+      "levers_applied": [
+        "RFP",
+        "Vendor consolidation",
+        "Pricing lock via MOU",
+        "Early-payment discount"
+      ],
+      "alternatives_considered": [
+        "Hughes Supply",
+        "Baker Distributing",
+        "Dynamic Air Quality",
+        "Ferguson"
+      ],
+      "why_selected": "Provided lowest Round-2 pricing and agreed to national MOU with 2% early-pay discount.",
+      "why_not_selected": null,
+      "contract_terms": "MOU effective 1/1/2026-12/31/2026; 30-day notice for manufacturer-validated price increases; Net-30 terms with 2% discount if paid by 10th.",
+      "negotiation_leverage": "SKU-level competitive bid across four incumbents with option for exclusive award.",
+      "supplier_strengths": "Aggressive pricing on commodity SKUs; national distribution footprint.",
+      "supplier_weaknesses": "Quoted only 14% of requested SKUs; potential regional service gaps.",
+      "switching_costs": "Low \u2013 products largely interchangeable; requires onboarding and catalog alignment.",
+      "key_contacts": null,
+      "notes": "Preferred supplier designation pending final signature.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Supplier switch",
+        "Vendor consolidation"
+      ]
+    },
+    {
+      "supplier_name": "Hughes Supply",
+      "category": "HVACR & Plumbing Supplies",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 801297,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP",
+        "Pricing comparison"
+      ],
+      "alternatives_considered": [
+        "R.E. Michel",
+        "Baker Distributing",
+        "Dynamic Air Quality"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Round-2 pricing still above R.E. Michel; produced negative savings on key SKUs.",
+      "contract_terms": "Draft MOU prepared but not executed.",
+      "negotiation_leverage": "Incumbent position but could not match competitor pricing.",
+      "supplier_strengths": "Largest SKU coverage of incumbents; established relationships.",
+      "supplier_weaknesses": "Higher pricing; slow response on pricing transparency.",
+      "switching_costs": "Low \u2013 comparable products available from competitors.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Supplier displaced"
+      ]
+    },
+    {
+      "supplier_name": "Baker Distributing",
+      "category": "HVACR & Plumbing Supplies",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 775938,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "R.E. Michel",
+        "Hughes Supply",
+        "Dynamic Air Quality"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Failed to deliver material savings; negative $7K in Round-2 unit price analysis.",
+      "contract_terms": null,
+      "negotiation_leverage": "Incumbent volume but underperformed on pricing.",
+      "supplier_strengths": "Quoted widest SKU list (38% of RFQ).",
+      "supplier_weaknesses": "Pricing uncompetitive versus market.",
+      "switching_costs": "Low",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Supplier displaced"
+      ]
+    },
+    {
+      "supplier_name": "Dynamic Air Quality Solutions",
+      "category": "HVACR & Plumbing Supplies",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 648541,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "R.E. Michel",
+        "Hughes Supply",
+        "Baker Distributing"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Limited SKU overlap and higher unit prices; quoted only 9% of SKUs.",
+      "contract_terms": null,
+      "negotiation_leverage": "Niche IAQ products gave limited leverage.",
+      "supplier_strengths": "Specialized IAQ product line.",
+      "supplier_weaknesses": "High prices, narrow catalog coverage.",
+      "switching_costs": "Low \u2013 IAQ products can be sourced elsewhere.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Supplier displaced"
+      ]
+    },
+    {
+      "supplier_name": "Unifirst Corporation (via Rampart GPO)",
+      "category": "Uniforms",
+      "relationship_status": "new",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 135543,
+      "final_spend": 77754,
+      "savings_dollars": 57689,
+      "savings_percent": 43,
+      "levers_applied": [
+        "GPO consolidation",
+        "Vendor consolidation",
+        "Spend analysis"
+      ],
+      "alternatives_considered": [
+        "Cintas",
+        "Local uniform providers"
+      ],
+      "why_selected": "Rampart GPO pricing yielded 43% savings and allowed single national provider.",
+      "why_not_selected": null,
+      "contract_terms": "GPO agreement; rollout 3-4 months; rental program with standardized rates across BUs.",
+      "negotiation_leverage": "Ability to migrate 83% of volume from Cintas to Unifirst; aggregated headcount across brands.",
+      "supplier_strengths": "Competitive GPO rates, national footprint, existing service at two BUs.",
+      "supplier_weaknesses": "Inventory transition time, limited presence in some micro-markets.",
+      "switching_costs": "Moderate \u2013 coordination of garment returns and new sizing.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "GPO leverage",
+        "Vendor consolidation",
+        "Savings >40%"
+      ]
+    },
+    {
+      "supplier_name": "Cintas Corporation",
+      "category": "Uniforms",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 112604,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "GPO benchmarking"
+      ],
+      "alternatives_considered": [
+        "Unifirst"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Could not match Unifirst GPO pricing; continued would forgo 43% savings.",
+      "contract_terms": "Existing location-level agreements allowed termination with notice.",
+      "negotiation_leverage": "Large incumbent share but pricing above market benchmarks.",
+      "supplier_strengths": "Established service routes, responsive account teams.",
+      "supplier_weaknesses": "High unit costs, contract rigidity.",
+      "switching_costs": "Moderate \u2013 need to handle garment return logistics.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier displaced",
+        "Significant savings opportunity"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 10,
+    "battlecards_generated": 10,
+    "categories_with_battlecards": [
+      "HVAC OEM Equipment",
+      "HVAC ECM Parts Program",
+      "HVACR & Plumbing Supplies",
+      "Uniforms"
+    ],
+    "skipped_reason": "No simple-spend-only suppliers in complex categories"
+  },
+  "extraction_notes": [
+    "Savings, baseline, and lever data pulled from Priority 1 \u2013 FINAL Close Out summaries.",
+    "Carrier contract details sourced from fully executed agreement dated 9/25/25.",
+    "Rheem rebate structure taken from signed Consolidator Incentive Agreement effective 1/1/2026.",
+    "HVACR & Plumbing bid data derived from Project Close-Out Bid Analysis and MOUs.",
+    "Uniforms savings sourced from Cascade \u2013 Uniforms Summary_v2.xlsx weekly spend table."
+  ]
+}

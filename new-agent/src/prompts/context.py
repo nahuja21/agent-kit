@@ -206,7 +206,7 @@ List any ambiguities that would need human clarification."""
 # =============================================================================
 
 # Number of files to select - easy to change!
-FILE_SELECTION_COUNT: int = 30  # Increased to capture ALL categories
+FILE_SELECTION_COUNT: int = 30  # Increased to capture ALL categorie
 
 
 def get_file_selection_prompt(directory_tree: str) -> str:

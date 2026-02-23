@@ -1,0 +1,31 @@
+{
+  "engagement_background": {
+    "objective": "Cascade Services engaged Treya Partners to achieve $0.87\u2013$1.7 million in annual procurement savings (creating roughly $16.6 million in enterprise value), leverage its enterprise-wide buying power, and stand-up a best-in-class, repeatable procurement process within a 5- to 6-month window.",
+    "scope_summary": "Nine spend categories with a $32.9 million baseline (\u2248$26.5 million addressable) are in scope: HVACR OEM/Distributors, HVACR & Plumbing Supplies, Advertising, General Industrial/Electrical Supplies, Electronic Payment Processing, Telecom \u2013 Data & Voice, Fleet, Uniforms, and Commercial Print. Low-spend or low-opportunity categories may be dropped or recategorized during the project; direct field service labor and any parallel sourcing efforts by Cascade are excluded.",
+    "constraints_challenges": [
+      "Decentralized, multi-branch purchasing limits current leverage and complicates change management.",
+      "Supplier data requests may face slow or non-responsive vendors, creating baseline and analysis gaps.",
+      "Stakeholder availability and willingness to participate (data provision, reviews, negotiations) is critical and may be limited.",
+      "Incumbent supplier sensitivities and the risk of informal \u2018side conversations\u2019 could undermine unified negotiation strategy.",
+      "Aggressive timeline \u2013 savings to be implemented by late September 2025 to meet private-equity value-creation targets.",
+      "Internal systems hold only summary AP data; detailed line-item usage often must be sourced from suppliers, leading to potential data quality issues."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Company provided AP data for Jan\u2013Dec 2024; limited internal line-item usage or contract repository exists, so supplier-provided data is required for most categories.",
+    "data_quality_notes": "Spend data resides in AP files with varied vendor naming; historical usage data is incomplete and dependent on supplier cooperation, leading to potential baseline gaps.",
+    "source_file": "Kick-off/Cascade Services  - Strategic Sourcing Project Kickoff (April 4 2025).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Opportunity Assessment and Proposal Decks/Treya Partners. Cascade Services Proposal .pptx",
+    "Kick-off/Cascade Services  - Strategic Sourcing Project Kickoff (April 4 2025).pptx",
+    "Agreement/Cascade Services Executed Agreement 3.31.25.pdf"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from statements about fragmented, decentralized spend and goal to establish best-in-class procurement.",
+    "Data availability and quality drawn from data collection obligations in the executed agreement and kickoff slide describing need for supplier usage files."
+  ]
+}

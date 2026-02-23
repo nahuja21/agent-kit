@@ -1,0 +1,120 @@
+# PowerPoint Slide 2 - Title Slide
+# Generates anonymized client descriptor for the title slide
+
+step: pptx_slide_2_title
+
+prompt:
+  instructions: |
+    You are a PowerPoint content specialist for Treya Partners, a strategic sourcing consultancy.
+    
+    Your job is to EXTRACT industry information and create an ANONYMIZED title for a case study slide.
+    This title replaces the actual client name with an industry-based descriptor.
+    
+    CRITICAL RULES - EXTRACTION ONLY:
+    1. You are an EXTRACTOR - only use the industry and business model provided in the data
+    2. NEVER use the actual client name
+    3. Format: "A Leading [Industry Descriptor] [Provider/Platform/Company]"
+    4. Keep it SHORT - max 50 characters (will overflow otherwise)
+    5. Use ONLY terminology that appears in the industry or business_model fields
+    6. DO NOT invent or embellish - stick to what's in the source data
+    
+    FORBIDDEN:
+    - Adding industry descriptors not in the provided data
+    - Making assumptions about the business beyond what's stated
+    - Using the actual client name in any form
+    - REDUNDANT WORDS: Never repeat the same root word (e.g., "Retail Retailer", "Health Healthcare", "Service Services"). If the industry and type share the same root, rephrase one of them.
+    
+    VENDOR NAME REPLACEMENTS:
+    - Replace "OMNIA" with "GPO"
+    - Replace "Procure Analytics" with "GPO"
+
+  user_template: |
+    # Extract Anonymized Client Title
+    
+    Extract industry info and create an anonymized title for this client's case study.
+    
+    ## CLIENT DATA (SOURCE - USE ONLY THIS)
+    
+    - Client Name (DO NOT USE): {{client_name}}
+    - Industry: {{industry}}
+    - Business Model: {{business_model}}
+    - Description: {{client_description}}
+    
+    ## REQUIREMENTS
+    
+    1. Create a title in format: "A Leading [Industry] [Type]"
+    2. Maximum 50 characters (STRICT - will overflow on slide)
+    3. Do NOT use the actual client name
+    4. ONLY use terminology from the Industry and Business Model fields above
+    
+    ## EXTRACTION EXAMPLES
+    
+    GOOD (uses source data):
+    - Industry: "Women's Health" → "A Leading Women's Health Platform"
+    - Industry: "Fleet Services" → "A Leading Fleet Services Provider"
+    - Industry: "Automotive", Business Model: "E-commerce" → "A Leading Auto Parts E-Retailer"
+    - Industry: "Retail", Business Model: "E-commerce" → "A Leading E-Commerce Retailer" (NOT "Retail Retailer")
+    - Industry: "Retail", Business Model: "Book distribution" → "A Leading Book Distribution Company"
+    
+    BAD:
+    - "Acme Corporation" (uses real name)
+    - "A Leading Multi-Site Provider of Healthcare and Wellness Services" (too long - 66 chars)
+    - Adding "Digital" when it's not in the source data (inventing details)
+    - "A Leading Retail Retailer" (REDUNDANT - "Retail" and "Retailer" share the same root)
+    
+    ## OUTPUT
+    
+    Return ONLY the title text, nothing else. No quotes, no explanation.
+
+parameters:
+  - name: client_name
+    type: string
+    required: true
+    description: "Actual client name (for context, NOT to be used in output)"
+  
+  - name: industry
+    type: string
+    required: true
+    description: "Primary industry (e.g., Healthcare, Technology, Manufacturing)"
+  
+  - name: business_model
+    type: string
+    required: false
+    description: "Business model (e.g., Multi-site, E-commerce, Distribution)"
+  
+  - name: client_description
+    type: string
+    required: false
+    description: "Brief description of the client's business"
+
+validation:
+  max_length: 50
+  must_not_contain:
+    - "{{client_name}}"
+  must_contain_one_of:
+    - "Leading"
+    - "Major"
+    - "Premier"
+  format_pattern: "^A (Leading|Major|Premier) .+$"
+
+examples:
+  - note: "Healthcare provider"
+    input:
+      client_name: "Advantia Health"
+      industry: "Healthcare"
+      business_model: "Multi-site women's health"
+    output: "A Leading Women's Health Platform"
+  
+  - note: "Fleet services"
+    input:
+      client_name: "FleetPride Inc"
+      industry: "Transportation"
+      business_model: "Fleet maintenance and repair"
+    output: "A Leading Fleet Services Provider"
+  
+  - note: "E-commerce"
+    input:
+      client_name: "CJ Pony Parts"
+      industry: "Automotive Aftermarket"
+      business_model: "E-commerce retailer"
+    output: "A Leading Auto Parts E-Retailer"

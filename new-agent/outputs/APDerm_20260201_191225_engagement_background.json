@@ -1,0 +1,34 @@
+{
+  "engagement_background": {
+    "objective": "Create rapid, measurable procurement cost savings by leveraging enterprise-wide purchasing power across indirect and clinical support spend categories in order to improve APDerm\u2019s EBITDA and support its private-equity value-creation plan amid inflationary, pandemic-impacted market conditions.",
+    "scope_summary": "Strategic sourcing of more than 10 indirect spend categories over two phases. Phase 1 targeted 7 categories representing ~US$11 million in annual spend (Employee Benefits, Medical & Office Supplies, IT Hardware/Software, Telecom, Courier, Small Parcel). Phase 2 added categories such as Billing, Janitorial, IT Managed Services, Temp Labor, Copiers/Print, Uniforms, bringing total addressed baseline to US$6.3 million. Categories with limited savings potential (e.g., Waste Management) or recently renegotiated contracts were excluded.",
+    "constraints_challenges": [
+      "Fragmented, decentralized supply base created through multi-site growth and acquisitions",
+      "Limited spend visibility and multiple disparate contracts across locations",
+      "Inflationary environment and COVID-related global supply-chain disruptions driving rising costs",
+      "Need to minimize business disruption and maintain service levels; preference to keep incumbents where possible",
+      "Supplier line-item usage data often unavailable, requiring Treya to contact vendors directly and work with sample data",
+      "Aggressive 3\u20135-month timeline per phase to meet private-equity value-creation milestones",
+      "Requirement for APDerm to cease parallel sourcing activity and route all supplier communications through Treya"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "AP spend data (~US$43 M) exported from internal systems plus scattered supplier contracts; no central contract repository; detailed usage data obtained from vendors case-by-case.",
+    "data_quality_notes": "Inconsistent vendor naming and incomplete historical line-item data; multiple locations and systems resulted in scattered, non-standardized information that required cleansing and supplementation from suppliers.",
+    "source_file": "Case Study/Treya Case Study_APDerm vF.pdf",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Case Study/Treya Case Study_APDerm vF.pdf",
+    "Assessment/APDerm Opportunity Assessment_v2_12.3.20.pdf",
+    "Wave 2/Kickoff/APDerm Phase 2 Project Kickoff (Nov. 9, 2021).pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_APDerm_12.11.20 - signed.pdf"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from statements describing \u2018fragmented supply base\u2019, \u2018decentralized purchasing\u2019, and lack of spend visibility.",
+    "Scope figures taken from Opportunity Assessment (US$11 M across 7 categories) and Case Study (US$6.3 M baseline over two phases).",
+    "Data challenges and prohibition on parallel sourcing extracted from Services Agreement sections 3.2.1-3.2.3."
+  ]
+}

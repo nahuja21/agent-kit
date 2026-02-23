@@ -1,0 +1,166 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "OEM",
+      "After Market Parts & Spares",
+      "Employee Benefits",
+      "Oil/Lubricants",
+      "Filters",
+      "P-Card (Underlying Spend)",
+      "Telecom - Data & Voice",
+      "General Industrial Supplies",
+      "Office Supplies",
+      "Fuel",
+      "Uniforms",
+      "Waste Management",
+      "Tires"
+    ],
+    "initial_categories_count": 13,
+    "category_details": [
+      {
+        "category_name": "OEM",
+        "spend": 14806217,
+        "addressable_pct": 60,
+        "addressable_spend": 8883730,
+        "savings_low": 88837,
+        "savings_high": 266512,
+        "is_cogs": true
+      },
+      {
+        "category_name": "After Market Parts & Spares",
+        "spend": 6933938,
+        "addressable_pct": 80,
+        "addressable_spend": 5547150,
+        "savings_low": 55472,
+        "savings_high": 166415,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Employee Benefits",
+        "spend": 5742152,
+        "addressable_pct": 50,
+        "addressable_spend": 2871076,
+        "savings_low": 143554,
+        "savings_high": 287108,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Oil/Lubricants",
+        "spend": 12544384,
+        "addressable_pct": 80,
+        "addressable_spend": 10035507,
+        "savings_low": 100355,
+        "savings_high": 301065,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Filters",
+        "spend": 3684269,
+        "addressable_pct": 80,
+        "addressable_spend": 2947415,
+        "savings_low": 29474,
+        "savings_high": 88422,
+        "is_cogs": true
+      },
+      {
+        "category_name": "P-Card (Underlying Spend)",
+        "spend": 3500788,
+        "addressable_pct": 50,
+        "addressable_spend": 1750394,
+        "savings_low": 70016,
+        "savings_high": 140032,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Telecom - Data & Voice",
+        "spend": 603716,
+        "addressable_pct": 90,
+        "addressable_spend": 543344,
+        "savings_low": 54334,
+        "savings_high": 108669,
+        "is_cogs": false
+      },
+      {
+        "category_name": "General Industrial Supplies",
+        "spend": 591963,
+        "addressable_pct": 90,
+        "addressable_spend": 532767,
+        "savings_low": 53277,
+        "savings_high": 106553,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Office Supplies",
+        "spend": 258832,
+        "addressable_pct": 100,
+        "addressable_spend": 258832,
+        "savings_low": 25883,
+        "savings_high": 51766,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Fuel",
+        "spend": 1921834,
+        "addressable_pct": 90,
+        "addressable_spend": 1729651,
+        "savings_low": 17297,
+        "savings_high": 51890,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Uniforms",
+        "spend": 468821,
+        "addressable_pct": 90,
+        "addressable_spend": 421939,
+        "savings_low": 21097,
+        "savings_high": 42194,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Waste Management",
+        "spend": 356221,
+        "addressable_pct": 80,
+        "addressable_spend": 284977,
+        "savings_low": 14249,
+        "savings_high": 28498,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Tires",
+        "spend": 522615,
+        "addressable_pct": 80,
+        "addressable_spend": 418092,
+        "savings_low": 4181,
+        "savings_high": 12543,
+        "is_cogs": true
+      }
+    ],
+    "total_spend": 51935749,
+    "total_addressable_spend": 36224874,
+    "savings_estimate_low": 678025,
+    "savings_estimate_high": 1651666,
+    "cogs_categories_count": 6,
+    "cogs_categories_percentage": 46.2,
+    "cogs_addressable_spend": 29561545,
+    "cogs_addressable_percentage": 81.6
+  },
+  "exhibit_b": {
+    "fee_type": "hybrid",
+    "fee_amount": 300000,
+    "minimum_savings_guarantee": null,
+    "minimum_return_on_fees_ratio": 2.0,
+    "fee_hybrid_threshold": 600000,
+    "fee_contingent_percentage": 20,
+    "fee_notes": "Variable fee equals 20% of annual savings created over $600,000; travel costs are pass-through; fixed fee invoiced in three equal installments (9/1/2024, 12/1/2024, 3/1/2025) with 30-day payment terms."
+  },
+  "timing": {
+    "start_date": "2024-08-27",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction / strategic sourcing services"
+  },
+  "extraction_notes": [
+    "Table values were taken exactly as stated; minor rounding applied to addressable spend calculations.",
+    "Savings low/high per category taken from dollar columns; average savings not required.",
+    "Minimum savings guarantee depends on actual savings achieved; document only specifies 2X return ratio, so dollar value not provided."
+  ]
+}

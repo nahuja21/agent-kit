@@ -1,0 +1,36 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client identity, objectives, quantified savings ($426K finalized / $803K total identified), and multiple signed agreements provide a solid fact-base for a compelling case study.",
+    "headline": "PE-backed HVAC services platform unlocks $803K in annual savings in four months through Treya-led OEM rebate renegotiations",
+    "client_problem_statement": "Cascade Services, a rapidly expanding residential HVAC, plumbing, and electrical services consolidator, purchased everything locally at branch level, leaving millions in purchasing power untapped. With private-equity sponsors targeting swift enterprise-value creation, the company needed to centralize procurement, leverage multi-brand volume, and secure hard savings inside a six-month window. Internal data gaps, fragmented supplier relationships, and an aggressive timeline made outside expertise essential.",
+    "client_problem_anonymized": "A rapidly expanding residential HVAC, plumbing, and electrical services platform purchased everything locally at branch level, leaving millions in purchasing power untapped. With the private equity ownership group targeting swift enterprise-value creation, the company needed to centralize procurement, leverage multi-brand volume, and secure hard savings inside a six-month window. Internal data gaps, fragmented supplier relationships, and an aggressive timeline made outside expertise essential.",
+    "approach_summary": [
+      "Analyzed $26.5M in addressable spend across nine categories to pinpoint rebate, pricing, and consolidation opportunities.",
+      "Renegotiated national OEM programs with Carrier and Rheem\u2014securing rebate tiers up to 16% and immediate front-end price concessions.",
+      "Structured a competitive sourcing event for HVACR & plumbing supplies, drafting MOUs that lock pricing and add early-pay discounts.",
+      "Leveraged a Rampart GPO partnership to consolidate uniform rentals under Unifirst, delivering a projected 43% cost reduction.",
+      "Established standardized rebate trackers, national contract templates, and a repeatable sourcing playbook to support future add-on acquisitions."
+    ],
+    "top_levers": [
+      "OEM rebate and contract renegotiation",
+      "GPO consolidation",
+      "Vendor consolidation & competitive RFP",
+      "Rebate program enhancement"
+    ],
+    "value_delivered_blurb": "Treya has delivered $426K in contracted annual run-rate savings and identified a total of $803K across six categories\u2014representing nearly 2\u00d7 the fixed project fee and positioning the client to surpass its $850K minimum savings guarantee once remaining agreements are signed. Beyond the dollars, Treya stood up national pricing, standardized rebate structures, and a scalable procurement process that will streamline future integrations and boost visibility into spend.",
+    "where_we_were_unique": [
+      "Delivered the first signed savings agreement (Carrier) within 120 days of kick-off, well ahead of the six-month target.",
+      "Deep HVAC OEM expertise unlocked rebate tiers unavailable through traditional distributor programs.",
+      "Hands-on creation of supplier MOUs and rebate trackers gave the client a turnkey, repeatable procurement toolkit.",
+      "Collaborative change-management approach navigated decentralized branches and incumbent sensitivities without disrupting field operations."
+    ]
+  },
+  "generation_notes": [
+    "Headline highlights $803K total savings and 4-month speed, anchoring on the most concrete time-to-value metric available.",
+    "Problem statement pulls directly from engagement background and constraints, emphasizing PE value-creation pressure and decentralization pain points.",
+    "Approach bullets mirror highest-impact actions and use generic client references per guidelines.",
+    "Top levers ranked by absolute savings impact (OEM renegotiations > GPO > RFP > rebate enhancements).",
+    "Value blurb acknowledges current vs. guaranteed savings while underscoring ROI and process benefits."
+  ]
+}

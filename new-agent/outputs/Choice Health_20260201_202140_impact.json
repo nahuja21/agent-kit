@@ -1,0 +1,146 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Choice Health At Home secures $534K in annual savings across five spend categories",
+      "narrative": "Treya Partners\u2019 strategic sourcing program has delivered $534,000 in validated annual savings for Choice Health At Home. A new McKesson contract for Medical Supplies is fully executed, locking in $276K per year, while Fleet, Office Supplies, and two temporary labor categories are in late-stage negotiations representing another $258K. Work included competitive RFPs, supplier benchmarking, and targeted contract renegotiations that reduced costs by up to 22 percent."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 534477,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Sum of savings averages for all worked categories on slide 3"
+      },
+      "finalized_savings": {
+        "amount": 276333,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Medical Supplies contract executed (slide 5)"
+      },
+      "in_progress_savings": {
+        "amount": 258144,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Fleet, Office Supplies, Temp Therapists, Temp Nurses in progress or awaiting signature"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 276333,
+        "status": "finalized",
+        "status_notes": "New McKesson contract executed 7/19; 21-22% reduction delivering $276K annual savings (slides 3, 5, 14)"
+      },
+      {
+        "category_name": "Fleet",
+        "annual_savings": 139850,
+        "status": "awaiting signature",
+        "status_notes": "Enterprise full-maintenance addendum negotiated; Choice to execute agreement (slides 3, 5, 8)"
+      },
+      {
+        "category_name": "Office Supplies",
+        "annual_savings": 19768,
+        "status": "in progress",
+        "status_notes": "GPO pricing requests submitted; savings range validated at 10-15% (slides 3, 5)"
+      },
+      {
+        "category_name": "Temps - Therapists",
+        "annual_savings": 59663,
+        "status": "in progress",
+        "status_notes": "Supplier data collected and negotiations materials prepared; 4-8% savings target (slides 3, 5)"
+      },
+      {
+        "category_name": "Temp Staff - Nurses",
+        "annual_savings": 38863,
+        "status": "in progress",
+        "status_notes": "Parallel sourcing effort with therapist staffing; 4-8% savings target (slides 3, 5)"
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Medical Equipment",
+        "reason": "On hold \u2013 awaiting supplier contract update; no savings identified yet"
+      },
+      {
+        "category_name": "Pharmacy",
+        "reason": "De-scoped at client direction"
+      },
+      {
+        "category_name": "IT Hardware",
+        "reason": "De-scoped/on hold \u2013 no sourcing activity beyond preliminary data collection"
+      },
+      {
+        "category_name": "Telecom - Data & Voice",
+        "reason": "De-scoped/on hold"
+      },
+      {
+        "category_name": "Commercial Print",
+        "reason": "De-scoped/on hold"
+      },
+      {
+        "category_name": "Copiers/MFPs",
+        "reason": "De-scoped/on hold"
+      },
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Client elected not to proceed after initial findings"
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 170,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Kick-off in early February; first contract signed July 19"
+      },
+      "notes": "Medical Supplies savings realized within six months of project launch"
+    },
+    "operational_improvements": "Standardized quarterly reporting with McKesson and introduced mileage-based maintenance tiers with Enterprise to improve spend transparency and control.",
+    "proof_points": [
+      {
+        "statement": "\u201cChoice executed new McKesson contract.\u201d \u2013 locking in 21-22% savings worth $276K annually.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "5"
+          }
+        ]
+      },
+      {
+        "statement": "Enterprise analysis identified $140K in annual fleet maintenance savings with new mileage buckets.",
+        "category": "Fleet",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "8"
+          }
+        ]
+      },
+      {
+        "statement": "Office Supplies RFP targeting 10-15% reduction; GPO pricing requests sent to three consortiums.",
+        "category": "Office Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "5"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx"
+  ],
+  "extraction_notes": [
+    "Used savings averages from slide 3 for financial calculations.",
+    "Only categories with RFPs, negotiations, or executed contracts were included.",
+    "On-hold or de-scoped categories excluded per engagement status."
+  ]
+}

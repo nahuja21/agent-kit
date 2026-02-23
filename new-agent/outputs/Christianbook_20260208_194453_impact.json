@@ -1,0 +1,129 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Christianbook secures $1.24M in fully-finalized annual savings across five key spend areas",
+      "narrative": "Treya Partners partnered with Christianbook to run competitive sourcing events for merchant processing, packaging, corrugated, and freight. All five targeted categories are now under new or renegotiated contracts, delivering $1,237,359 in recurring annual savings\u2014an average 13-14% reduction on $9.2 million of addressable spend. Signature wins include 31% savings on LTL freight through a new carrier and a 10% reduction in merchant processing fees by transitioning to Calibr, all without operational disruption."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1237359,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Sum of Savings Avg $ for all finalized categories in the Close Out slide"
+      },
+      "finalized_savings": {
+        "amount": 1237359,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "All five categories carry the \u00fc (finalized) checkmark"
+      },
+      "in_progress_savings": {
+        "amount": 0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "No categories remain open in the Close Out report"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Merchant Processing Fees",
+        "annual_savings": 627726,
+        "status": "finalized",
+        "status_notes": "Calibr selected; contract signed 2/24/2025"
+      },
+      {
+        "category_name": "Corrugated",
+        "annual_savings": 168060,
+        "status": "finalized",
+        "status_notes": "Pricing live with Unicorr, Rand, Key Container; contract signed 12/20/2025"
+      },
+      {
+        "category_name": "Packaging & Shipping Supplies",
+        "annual_savings": 110729,
+        "status": "finalized",
+        "status_notes": "Accutech and Peak contracts executed 12/20/2025"
+      },
+      {
+        "category_name": "LTL",
+        "annual_savings": 266350,
+        "status": "finalized",
+        "status_notes": "Echo Logistics awarded; savings effective 2/28/2025"
+      },
+      {
+        "category_name": "FTL",
+        "annual_savings": 64494,
+        "status": "finalized",
+        "status_notes": "Echo Logistics awarded; savings effective 2/28/2025"
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Ingram Book Group",
+        "reason": "RFP produced no competitive bids; no savings achieved"
+      },
+      {
+        "category_name": "Janitorial Services",
+        "reason": "Removed from scope after spend dropped 50% (one-time purchase)"
+      }
+    ],
+    "not_started_categories": [
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Placed on hold \u2013 no sourcing activity executed"
+      },
+      {
+        "category_name": "Marketing Software",
+        "reason": "Placed on hold \u2013 no sourcing activity executed"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 200,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Project kicked off Aug 2024; first contract (merchant processing) signed 24 Feb 2025"
+      },
+      "notes": "First savings realized in Q2 2025, ~6\u20137 months from project start"
+    },
+    "operational_improvements": "Enhanced cost transparency and benchmarking across freight and packaging; strengthened supplier partnerships while maintaining service continuity; instituted competitive RFP discipline for future indirect spend.",
+    "proof_points": [
+      {
+        "statement": "Reduced LTL freight costs by 31% ($266K annually) by switching to Echo Logistics.",
+        "category": "LTL",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+            "page_or_slide": "1",
+            "quote": "LTL1 \u2026 31% savings \u2026 $266,350"
+          }
+        ]
+      },
+      {
+        "statement": "Cut merchant processing fees by 10% ($558K\u2013$698K range; $628K average) through selection of Calibr.",
+        "category": "Merchant Processing Fees",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+            "page_or_slide": "1",
+            "quote": "Merchant Processing Fees1 \u2026 10%\u201313% savings \u2026 $627,726 avg."
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx"
+  ],
+  "extraction_notes": [
+    "All savings figures taken from Savings Avg ($) column in Priority-1 Close Out file.",
+    "Ingram Book Group shows zero savings in Close Out; therefore excluded.",
+    "Employee Benefits and Marketing Software were never sourced (on hold) \u2013 listed as not started.",
+    "Janitorial Services explicitly removed from scope in earlier updates.",
+    "No conflicts between Close Out and lower-priority documents; confidence set to high."
+  ]
+}

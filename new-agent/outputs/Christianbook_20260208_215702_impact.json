@@ -1,0 +1,141 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Christianbook secures $1.24 M in annual savings across five indirect spend categories",
+      "narrative": "Treya Partners helped Christianbook, LLC drive measurable cost reduction in transportation, packaging, and merchant processing. Five sourcing events were completed and contracted, delivering a verified $1,237,359 in annual savings \u2015 a 13\u201314 % reduction on $9.2 M of addressable spend. Key wins include 31 % savings on LTL freight by introducing a new carrier option, 10 % savings in merchant processing by moving to Calibr, and 14 % savings on corrugated packaging while retaining incumbents. All savings are now finalized and in effect, creating immediate EBITDA impact and stronger supplier partnerships for future growth."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1237359,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Sum of Savings Avg. ($) shown on Final Close-Out slide for all five worked categories."
+      },
+      "finalized_savings": {
+        "amount": 1237359,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "All five categories show contracted dates and appear in final close-out; treated as finalized."
+      },
+      "in_progress_savings": {
+        "amount": 0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "No partially completed categories remain in scope of the final report."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Merchant Processing Fees",
+        "annual_savings": 627726,
+        "status": "finalized",
+        "status_notes": "Contract signed with Calibr on 2/24/2025; 10-13 % fee reduction locked in."
+      },
+      {
+        "category_name": "Corrugated",
+        "annual_savings": 168060,
+        "status": "finalized",
+        "status_notes": "Incumbents Unicorr & Rand renegotiated; pricing effective 12/20/2025."
+      },
+      {
+        "category_name": "Packaging & Shipping Supplies",
+        "annual_savings": 110729,
+        "status": "finalized",
+        "status_notes": "RFP awarded to Accutech & Peak; pricing live 12/20/2025."
+      },
+      {
+        "category_name": "LTL",
+        "annual_savings": 266350,
+        "status": "finalized",
+        "status_notes": "New contract effective 2/28/2025; 31 % annual savings versus baseline."
+      },
+      {
+        "category_name": "FTL",
+        "annual_savings": 64494,
+        "status": "finalized",
+        "status_notes": "Echo selected; 8 % annual savings in linehaul rates effective 2/28/2025."
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Ingram Book Group",
+        "reason": "RFP produced no price decrease; zero savings stated in Final Close-Out."
+      },
+      {
+        "category_name": "Janitorial Services",
+        "reason": "Removed from scope \u2013 spend dropped due to one-time purchase."
+      }
+    ],
+    "not_started_categories": [
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Category placed on hold; no sourcing work completed."
+      },
+      {
+        "category_name": "Marketing Software",
+        "reason": "Category on hold; no sourcing work completed."
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 120,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "First implemented savings (packaging) went live in December 2024, roughly four months after project start in August 2024."
+      },
+      "notes": "Corrugated and packaging prices were in effect for peak season, accelerating benefit capture."
+    },
+    "operational_improvements": "Enhanced cost transparency through competitive RFPs, strengthened supplier relationships without disrupting operations, and established data-driven benchmarks for ongoing logistics negotiations.",
+    "proof_points": [
+      {
+        "statement": "Secured 31 % annual savings on LTL freight by introducing Echo Logistics and renegotiating incumbent rates.",
+        "category": "LTL",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+            "page_or_slide": "1",
+            "quote": "LTL1 \u2026 Savings Low ($) $266,350 | Savings High ($) $266,350 | Savings Avg. ($) $266,350 (31%)"
+          }
+        ]
+      },
+      {
+        "statement": "Delivered 10 % savings in merchant processing by migrating to Calibr, capturing $628K annually.",
+        "category": "Merchant Processing Fees",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+            "page_or_slide": "1",
+            "quote": "Merchant Processing Fees1 \u2026 Savings Avg. ($) $627,726"
+          }
+        ]
+      },
+      {
+        "statement": "Negotiated 14 % savings on corrugated packaging while retaining incumbent suppliers, avoiding operational change.",
+        "category": "Corrugated",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+            "page_or_slide": "1",
+            "quote": "Corrugated1 \u2026 Savings Avg. ($) $168,060 (14%)"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+    "Case Study- Christianbook.docx"
+  ],
+  "extraction_notes": [
+    "Used Final Close-Out (Priority 1) for all savings values. Case Study numbers matched close-out where referenced.",
+    "Savings totals are based on Savings Avg. ($) column, which equals the Savings Low and High for finalized events.",
+    "Ingram Book Group shows zero savings in Final Close-Out and is therefore excluded.",
+    "Employee Benefits and Marketing Software remained on hold; no deliverables completed \u2013 listed under not_started.",
+    "Dates for Corrugated and Packaging show 12/20/2025 in Close-Out, but earlier update indicates implementation on 12/13/2024; treated as finalized with high confidence."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "engagement_background": {
+    "objective": "Achieve $0.9\u2013$1.7 million in cost savings through a six-month strategic sourcing program that leverages Royal Food Service\u2019s enterprise-wide purchasing power, while maintaining or improving service levels and product quality, delivering quick-hit savings by year-end 2024 and full implementation by March 2025.",
+    "scope_summary": "Roughly $33.9 million in indirect spend across 15+ categories is in scope, with the top five (Inbound Freight, Non-IT Temporary Labor, Fleet, Fuel, Corrugated) representing 76 % of the baseline. Low-spend/low-opportunity areas may be dropped after initial analysis, and spend may be re-categorized as better data is obtained.",
+    "constraints_challenges": [
+      "Supplier lack of responsiveness to data and usage requests",
+      "Potential supplier pushback and risk of unsanctioned 'side conversations', necessitating a unified communication strategy",
+      "Limited internal line-item usage data, requiring dependence on supplier-provided information",
+      "Key stakeholder availability constraints for data provision, interviews and deliverable reviews",
+      "Aggressive timeline for quick-hit savings by end of 2024 and full project completion by March 2025",
+      "Incumbent supplier sensitivities during competitive sourcing and negotiations"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "medium",
+    "data_availability": "Basic unit-level spend and invoice data exist internally, but detailed line-item usage often must be requested from suppliers; contracts are available but not centrally organized.",
+    "data_quality_notes": "Category definitions and spend baselines require refinement; internal data sometimes lacks granularity, prompting re-categorization and reliance on supplier data to complete baselines.",
+    "source_file": "Kickoff/Royal Food Service - Strategic Sourcing Project Kickoff Oct 21 2024.pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Kickoff/Royal Food Service - Strategic Sourcing Project Kickoff Oct 21 2024.pptx",
+    "Updates/Royal Food Services_Strategic Sourcing Project Update (September 2 2025).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from need to 'leverage enterprise-wide purchasing power' and absence of mention of a centralized procurement team.",
+    "Data availability and quality issues derived from slides describing data collection approach and potential re-categorization of spend."
+  ]
+}

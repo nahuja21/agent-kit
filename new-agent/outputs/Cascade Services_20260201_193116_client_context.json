@@ -1,0 +1,45 @@
+{
+  "client": {
+    "client_name": "Cascade Residential Services LLC",
+    "industry_primary": "Residential HVAC, Plumbing & Electrical Services",
+    "industry_secondary": null,
+    "primary_industry_sector": "Building Products, Trades & Installed Systems",
+    "business_model": "Multi-brand platform providing residential HVAC, plumbing and electrical services across the South-Atlantic and Gulf States",
+    "sponsor_pe_firm": "Trive Capital and LP First Capital",
+    "client_history": "Cascade Residential Services LLC was formed in December 2022 when Trive Capital and LP First Capital partnered to build a home-services platform. At launch it acquired four Florida-based HVAC and electrical contractors and has since expanded to 13 brands with operations in three states."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": null,
+      "notes": "No revenue figure is disclosed in company documents, press releases, the company website, LinkedIn or business databases reviewed."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": null,
+      "confidence": "low",
+      "source": null,
+      "notes": "The company publicly states it operates 13 brands in three states but does not specify the number of physical locations or branches."
+    },
+    "employees": {
+      "count": 500,
+      "confidence": "medium",
+      "source": "Cascade Services website \u2013 cascadeservices.com (accessed May 2025)",
+      "notes": "The company website states the platform 'employs over 500 individuals'. No other independent headcount figures found."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Cascade Services Executed Agreement 3.31.25.pdf (page 1 \u2013 legal name)",
+    "Kick-off/Cascade Services \u2013 Strategic Sourcing Project Kickoff (April 4 2025).pptx (slides 8-9 \u2013 spend, scope)",
+    "prnewswire.com/news-releases/trive-capital-forms-cascade-services-to-partner-with-market-leading-brands-in-the-home-services-sector-301704615.html (Dec 2022 press release \u2013 formation details, PE sponsors)",
+    "cascadeservices.com (company website \u2013 employee count, business description)"
+  ],
+  "extraction_notes": [
+    "Official legal entity name confirmed in executed services agreement: 'Cascade Residential Services LLC'.",
+    "Industry classification based on company description (residential HVAC, plumbing, electrical) aligns best with Treya cluster 'Building Products, Trades & Installed Systems'.",
+    "PE ownership explicitly stated in PR Newswire release and corroborated by multiple trade articles.",
+    "No reliable revenue or EBITDA data available; multiple database searches (Buzzfile, LinkedIn, Crunchbase) either reference unrelated companies or give no data for this Florida-based platform."
+  ]
+}

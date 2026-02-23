@@ -1,0 +1,33 @@
+{
+  "engagement_background": {
+    "objective": "Leverage enterprise-wide spend through a data-driven strategic sourcing program to capture $0.8\u2013$1.9 million in cost savings and to establish a best-in-class, center-led procurement capability that increases Arotech\u2019s enterprise value.",
+    "scope_summary": "Initial project covered 12 direct and indirect spend areas (~$184 M AP spend) focusing on low-complexity COGS items (AV equipment, electronic components, interconnects/cables) and key indirects (office supplies, temp labor, packaging & shipping supplies, IT hardware, telecom, small parcel). 2022 workstreams added car rental, hotels, MRO, and Amazon IT peripherals, bringing total addressable spend to ~$1.8 M for these incremental categories; core production materials and high-spec COGS items remain out of scope.",
+    "constraints_challenges": [
+      "Highly fragmented supplier base across multiple business units, limiting volume leverage.",
+      "Decentralized purchasing with little cross-BU coordination or standard commercial terms.",
+      "Limited procurement resources and low organizational focus on strategic sourcing.",
+      "Incomplete and inconsistent spend data (P-card/T&E not captured; item-level data gaps; multiple ERP/legacy systems from acquisitions).",
+      "Non-uniform pricing and lack of OEM or volume rebate agreements, requiring extensive baseline validation.",
+      "Five-month target timeline to deliver savings while maintaining business unit consensus."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "AP transaction data from several business units was available; P-card and T&E spend, detailed usage, and many contracts were not centrally stored and had to be requested from suppliers.",
+    "data_quality_notes": "Supplier names inconsistent; line-item detail missing for many vendors; acquisitions not fully integrated into a single system, creating gaps in visibility.",
+    "source_file": "Assessments/Arotech_Opportunity Assessment.pdf",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessments/Arotech_Opportunity Assessment.pdf",
+    "Assessments/Arotech Proposal 3.4.21.pdf",
+    "Project Updates/Kickoff/Arotech -- Project Kickoff - Release.pptx",
+    "Assessments/Arotech Updated Proposal 4.12.21.pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from statements about lack of enterprise-wide leverage and need to stand up procurement capability.",
+    "Data availability and quality issues taken directly from assessment slides noting missing P-card/T&E data and fragmented AP systems.",
+    "Scope boundaries synthesized from original 2021 proposal plus 2022 update decks; exclusions not explicitly listed, but high-spec production materials were not mentioned and therefore treated as out of scope."
+  ]
+}

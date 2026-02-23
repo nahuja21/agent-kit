@@ -1,6 +1,6 @@
-# PowerPoint Slide Content Generation Prompt
-# Generates polished text content for case study PowerPoint slides
-# Uses extracted data to create slide-ready text
+# PowerPoint Slide Content Generation Prompt (Legacy)
+# Used by the original /powerpoint command
+# For /powerpoint2, use the new pptx_slide_*.yaml prompts instead
 
 step: powerpoint_generation
 
@@ -10,9 +10,6 @@ prompt:
     
     Your job is to take extracted case study data and generate POLISHED, SLIDE-READY text
     that will be inserted into a PowerPoint template.
-    
-    The template has specific slides with specific text boxes. You need to generate text
-    that fits each element perfectly - concise, impactful, and professional.
     
     IMPORTANT RULES:
     1. Keep text CONCISE - this is for slides, not documents
@@ -40,129 +37,39 @@ prompt:
     
     ---
     
-    ## SLIDES TO GENERATE
-    
-    Generate content for the following slide elements:
-    
-    ### SLIDE 1: Client + Challenge (Template: Slide 15)
-    
-    **client_description**: A short, anonymized description of the client
-    - Format: "A Leading [Industry] [Provider/Company/Platform]"
-    - Example: "A Leading Women's Health Platform"
-    - Keep to ONE LINE, max 50 characters
-    
-    **pe_relationship**: Generic PE reference
-    - Use: "Private Equity Sponsor" or "PE-Backed"
-    - Do NOT use the actual PE firm name
-    
-    **challenge_text**: The client's challenge/problem
-    - 2-3 sentences maximum
-    - Use anonymized language (no client name)
-    - Focus on the pain points and why they needed help
-    - Soften PE expectations language (use "operational efficiency" not "EBITDA expansion")
-    
-    ### SLIDE 2: Solution + Impact (Template: Slide 16)
-    
-    **solution_bullets**: Array of 3 solution bullets
-    - Each bullet: 1-2 lines maximum
-    - Start with action verb (Analyzed, Negotiated, Consolidated, Leveraged, etc.)
-    - Include specific numbers where available
-    - Use "the client" not the actual client name
-    - Vendor names (McKesson, Athenahealth, etc.) can remain as-is
-    
-    **impact_metric_1_value**: Primary savings metric
-    - Format: "$X.XM in savings" or "$XXK in savings"
-    - Example: "$1.2M in savings"
-    
-    **impact_metric_1_description**: Description for primary metric
-    - Short phrase: "in annual run-rate savings", "across X categories"
-    - Max 30 characters
-    
-    **impact_metric_2_value**: Secondary metric (optional)
-    - Could be: additional savings, ROI, value created
-    - Example: "3x ROI on fees", "$10M+ value created"
-    
-    **impact_metric_2_description**: Description for secondary metric
-    - Short phrase explaining the metric
-    - Max 30 characters
-    
-    **impact_metric_3_value**: Tertiary metric (optional)
-    - Another key win or outcome
-    - Example: "12 categories addressed", "60-day quick wins"
-    
-    **impact_metric_3_description**: Description for tertiary metric
-    - Max 30 characters
-    
     ## OUTPUT FORMAT
     
-    Return valid JSON only:
+    Return valid JSON:
     
     ```json
     {
       "slide_content": {
-        "client_description": "A Leading Women's Health Platform",
+        "client_description": "A Leading [Industry] Provider",
         "pe_relationship": "Private Equity Sponsor",
-        "challenge_text": "The client's rapid growth through acquisitions left purchasing fragmented across 50+ locations with no centralized procurement function. With a focus on operational efficiency and margin improvement, they needed to quickly optimize indirect costs while maintaining clinical operations.",
-        "solution_bullets": [
-          "Analyzed $19M in spend data across 10 categories to identify high-impact opportunities",
-          "Negotiated key incumbent contracts including Athenahealth, reducing fees by 12%",
-          "Consolidated medical supply distribution to McKesson, achieving 14% cost reduction"
-        ],
-        "impact_metric_1_value": "$1.2M in savings",
-        "impact_metric_1_description": "in annual run-rate",
-        "impact_metric_2_value": "3x ROI",
-        "impact_metric_2_description": "on consulting fees",
-        "impact_metric_3_value": "10 categories",
-        "impact_metric_3_description": "addressed"
-      },
-      "generation_notes": [
-        "Used anonymized client description based on industry",
-        "Softened PE language per requirements",
-        "Formatted savings as $1.2M for readability"
-      ]
+        "challenge_text": "Brief challenge description...",
+        "solution_bullets": ["Bullet 1", "Bullet 2", "Bullet 3"],
+        "impact_metric_1_value": "$X.XM",
+        "impact_metric_1_description": "in annual savings",
+        "impact_metric_2_value": "Xx ROI",
+        "impact_metric_2_description": "on fees",
+        "impact_metric_3_value": "X categories",
+        "impact_metric_3_description": "optimized"
+      }
     }
     ```
-    
-    ## IMPORTANT
-    
-    1. All text must be SLIDE-READY - concise and punchy
-    2. NO actual client names - use "the client" or industry descriptors
-    3. NO actual PE firm names - use "private equity sponsor"
-    4. Numbers should be formatted for slides ($1.2M not $1,200,000)
-    5. Keep descriptions SHORT - these go in small text boxes
 
 parameters:
   - name: client_context_data
     type: string
     required: true
-    description: "Client context data from Step 4 (JSON)"
+    description: "Client context data (JSON)"
   
   - name: case_study_data
     type: string
     required: true
-    description: "Case study packaging data from Step 8 (JSON)"
+    description: "Case study packaging data (JSON)"
   
   - name: impact_data
     type: string
     required: true
-    description: "Impact data from Step 6 (JSON)"
-
-examples:
-  - note: "Healthcare case study"
-    input: |
-      Client context with healthcare provider, PE sponsor, etc.
-    output: |
-      {
-        "slide_content": {
-          "client_description": "A Leading Multi-Site Healthcare Provider",
-          "pe_relationship": "Private Equity Sponsor",
-          "challenge_text": "Rapid acquisition-driven growth left the organization with fragmented purchasing across 40+ locations...",
-          "solution_bullets": ["Analyzed...", "Negotiated...", "Consolidated..."],
-          "impact_metric_1_value": "$780K in savings",
-          "impact_metric_1_description": "annual run-rate",
-          "impact_metric_2_value": "3.4x ROI",
-          "impact_metric_2_description": "on fees",
-          "impact_metric_3_value": "8 categories",
-          "impact_metric_3_description": "optimized"
-        }
-      }
+    description: "Impact data (JSON)"

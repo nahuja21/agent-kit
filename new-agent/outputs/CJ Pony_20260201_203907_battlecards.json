@@ -1,0 +1,276 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "FedEx",
+      "category": "Small Parcel Shipping",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 8623763,
+      "final_spend": 8284598,
+      "savings_dollars": 339165,
+      "savings_percent": 4,
+      "levers_applied": [
+        "Renegotiation",
+        "Benchmarking",
+        "Rate discount optimization",
+        "Surcharge reduction"
+      ],
+      "alternatives_considered": [
+        "UPS (Treya GPO)",
+        "OnTrac"
+      ],
+      "why_selected": "Improved transportation and surcharge discounts without operational disruption; FedEx matched benchmark rates and granted fee waivers and favorable DIM factors.",
+      "why_not_selected": null,
+      "contract_terms": "Revised pricing agreement executed 2022; late fee waiver through June 2023; credit card billing terms accepted until 2025; retained DIM factor 210.",
+      "negotiation_leverage": "Benchmark data with UPS GPO rates and threat of switching created competitive pressure on FedEx.",
+      "supplier_strengths": "Nationwide network, existing integration with CJPP systems, reliable ground performance.",
+      "supplier_weaknesses": "Higher fuel surcharges, limited improvement on Express services.",
+      "switching_costs": "System integrations, label printing updates, customer communication, staff retraining.",
+      "key_contacts": null,
+      "notes": "Savings validated using Jan\u2013Feb 2022 shipment-level data and annualized to 339K.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Incumbent contract renegotiated",
+        "Benchmarking against alternate carriers",
+        "Savings >$300K"
+      ]
+    },
+    {
+      "supplier_name": "UPS",
+      "category": "Small Parcel Shipping",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 464665,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Benchmarking",
+        "GPO"
+      ],
+      "alternatives_considered": [
+        "FedEx",
+        "OnTrac"
+      ],
+      "why_selected": null,
+      "why_not_selected": "FedEx matched or beat UPS GPO pricing and avoided system change costs.",
+      "contract_terms": "UPS GPO proposal included improved discounts and accessorial caps (not executed).",
+      "negotiation_leverage": "UPS GPO rates were used as a bargaining chip with FedEx.",
+      "supplier_strengths": "Competitive GPO discounts, extensive network coverage.",
+      "supplier_weaknesses": "Would require migration of shipping systems; limited flexibility on dimensional factors.",
+      "switching_costs": "System changes, label re-configuration, staff training.",
+      "key_contacts": null,
+      "notes": "Benchmark analyses run Aug\u2013Sept 2021 informed negotiations.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive benchmark used in negotiation"
+      ]
+    },
+    {
+      "supplier_name": "Sigma Supply",
+      "category": "Packaging Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP",
+        "Vendor consolidation",
+        "Competitive bidding",
+        "3PL stocking agreement"
+      ],
+      "alternatives_considered": [
+        "Colony Paper",
+        "Incumbent packaging suppliers"
+      ],
+      "why_selected": "Best overall value for Las Vegas site and agreed to operate a 3PL warehouse with no penalties for inventory aged >120 days.",
+      "why_not_selected": null,
+      "contract_terms": "MOU executed March 2022; includes inventory return clause after 120 days; pricing term length not disclosed.",
+      "negotiation_leverage": "Multi-supplier RFP with potential single-source award for Las Vegas volumes.",
+      "supplier_strengths": "Competitive pricing, willingness to hold inventory, national distribution capability.",
+      "supplier_weaknesses": "Pricing for Harrisburg location less competitive than Colony Paper.",
+      "switching_costs": "Packaging spec validation and inventory transition.",
+      "key_contacts": null,
+      "notes": "Sigma to provide best-and-final pricing for Storopack items during implementation.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Supplier switched",
+        "Vendor consolidation"
+      ]
+    },
+    {
+      "supplier_name": "Colony Paper",
+      "category": "Packaging Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 203008,
+      "final_spend": 159243,
+      "savings_dollars": 43765,
+      "savings_percent": 22,
+      "levers_applied": [
+        "RFP",
+        "BAFO pricing",
+        "Vendor consolidation"
+      ],
+      "alternatives_considered": [
+        "Sigma Supply",
+        "Incumbent packaging suppliers"
+      ],
+      "why_selected": "Delivered 22% savings for Harrisburg facility and executed contract quickly.",
+      "why_not_selected": null,
+      "contract_terms": "MOU executed 28 Apr 2022; pricing firm for initial term (length not specified).",
+      "negotiation_leverage": "BAFO round created price tension versus Sigma.",
+      "supplier_strengths": "Aggressive pricing, regional warehousing near Harrisburg.",
+      "supplier_weaknesses": "No West Coast presence.",
+      "switching_costs": "Minor\u2014standard corrugated SKUs and labels.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP with multiple bidders",
+        "Significant savings (>20%)"
+      ]
+    },
+    {
+      "supplier_name": "Carlisle Container",
+      "category": "Corrugated",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 351956,
+      "final_spend": 324632,
+      "savings_dollars": 27324,
+      "savings_percent": 8,
+      "levers_applied": [
+        "RFP",
+        "Payment term improvement",
+        "Early payment discount"
+      ],
+      "alternatives_considered": [
+        "Incumbent corrugated suppliers",
+        "Neway"
+      ],
+      "why_selected": "Lowest pricing for Harrisburg and agreed to 2%30Net60 payment terms.",
+      "why_not_selected": null,
+      "contract_terms": "MOU with option Net30 or 2%30Net60; length not specified.",
+      "negotiation_leverage": "Competitive bid and payment-term flexibility.",
+      "supplier_strengths": "Competitive pricing, flexible terms.",
+      "supplier_weaknesses": "Limited West Coast coverage.",
+      "switching_costs": "Possible tooling or die costs for custom boxes.",
+      "key_contacts": null,
+      "notes": "Cash-flow benefit of $2668 if Net60 terms used.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Supplier switched",
+        "Payment term negotiation"
+      ]
+    },
+    {
+      "supplier_name": "Neway Packaging",
+      "category": "Corrugated",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 400209,
+      "final_spend": 396023,
+      "savings_dollars": 4186,
+      "savings_percent": 1,
+      "levers_applied": [
+        "RFP",
+        "Payment term improvement"
+      ],
+      "alternatives_considered": [
+        "Incumbent corrugated suppliers",
+        "Carlisle Container"
+      ],
+      "why_selected": "Local presence in Las Vegas and ability to meet service requirements.",
+      "why_not_selected": null,
+      "contract_terms": "MOU with 1%10Net45 early payment option.",
+      "negotiation_leverage": "Competitive RFP created pricing pressure.",
+      "supplier_strengths": "Proximity to Vegas facility, quick lead times.",
+      "supplier_weaknesses": "Headline savings modest versus incumbents.",
+      "switching_costs": "Packaging spec alignment and potential tooling.",
+      "key_contacts": null,
+      "notes": "Additional $3960 savings possible with early-pay discount.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Supplier switched"
+      ]
+    },
+    {
+      "supplier_name": "Staffmark",
+      "category": "Temporary Labor \u2013 non-IT",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 242955,
+      "final_spend": 212139,
+      "savings_dollars": 30817,
+      "savings_percent": 13,
+      "levers_applied": [
+        "GPO",
+        "Markup reduction",
+        "Rate benchmarking"
+      ],
+      "alternatives_considered": [
+        "Incumbent local staffing agencies"
+      ],
+      "why_selected": "Access to Omnia Partners GPO rates delivered 13% markup reduction and nationwide capability.",
+      "why_not_selected": null,
+      "contract_terms": "Participation agreement via Omnia Partners executed 2022; standard GPO terms.",
+      "negotiation_leverage": "Pre-negotiated GPO pricing and consolidated volume.",
+      "supplier_strengths": "Scale, wage analysis support, flexible staffing models.",
+      "supplier_weaknesses": "Initial communication issues with local branch; requested rate increases in PA.",
+      "switching_costs": "Onboarding new temps and potential turnover impact.",
+      "key_contacts": null,
+      "notes": "CJPP net savings after Treya fee estimated at 8%.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "GPO leveraged",
+        "Supplier switched",
+        "Savings >5%"
+      ]
+    },
+    {
+      "supplier_name": "K&N ReTrans",
+      "category": "LTL Freight",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 1511574,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Benchmarking",
+        "Rerating analysis"
+      ],
+      "alternatives_considered": [
+        "Existing LTL carrier base (YRC, Old Dominion, Estes, etc.)"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Implementation complexity (IT integration, multiple carrier model) outweighed projected 8% savings.",
+      "contract_terms": "Proposed access to ReTrans carrier network; no agreement executed.",
+      "negotiation_leverage": "Demonstrated 8% savings potential through rerate analysis.",
+      "supplier_strengths": "Broad carrier network, potential waived-claims program.",
+      "supplier_weaknesses": "Tool limited to 50 line items; longer implementation timeline; waived claims did not yield additional discounts.",
+      "switching_costs": "IT integration, catalog classification, process changes.",
+      "key_contacts": null,
+      "notes": "Category discontinued after evaluation; no savings captured.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive benchmark performed",
+        "Implementation challenges led to discontinuation"
+      ]
+    }
+  ]
+}

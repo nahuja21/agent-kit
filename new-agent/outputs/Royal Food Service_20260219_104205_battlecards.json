@@ -1,0 +1,898 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "Kool Logistics",
+      "category": "Inbound Freight",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 9683693,
+      "final_spend": 9178426,
+      "savings_dollars": 505266,
+      "savings_percent": 5.2,
+      "levers_applied": [
+        "Multi-round RFP",
+        "Benchmarking",
+        "Direct negotiation",
+        "Lane optimization"
+      ],
+      "alternatives_considered": [
+        "TQL",
+        "Other prospective carriers in RFP round 1 & 2"
+      ],
+      "why_selected": "Offered competitive rates after being shown market benchmarks; trusted service history with Royal",
+      "why_not_selected": null,
+      "contract_terms": "New rate sheet effective 10/1/2025 for 12-month term; ability to revisit quarterly if diesel index shifts >8%",
+      "negotiation_leverage": "Used lower bids from new carriers (e.g., TQL) to push incumbent to targeted pricing",
+      "supplier_strengths": [
+        "Consistent OTIF performance on produce lanes",
+        "Established communication channels"
+      ],
+      "supplier_weaknesses": [
+        "Initial rates >4% above market until pressured"
+      ],
+      "switching_costs": [
+        "On-boarding new refrigerated carriers, food-safety compliance audits"
+      ],
+      "key_contacts": null,
+      "notes": "Largest single supplier spend in project; savings account for ~47% of total project value.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multi-round RFP",
+        "Competitive negotiation",
+        "Significant savings >$500K"
+      ]
+    },
+    {
+      "supplier_name": "Pro Fresh",
+      "category": "Inbound Freight",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1780132,
+      "final_spend": 1747849,
+      "savings_dollars": 32283,
+      "savings_percent": 1.8,
+      "levers_applied": [
+        "RFP",
+        "Benchmarking",
+        "Direct negotiation"
+      ],
+      "alternatives_considered": [
+        "TQL",
+        "Additional prospective carriers"
+      ],
+      "why_selected": "Met revised target rates and maintained service KPIs on Yuma / Salinas produce lanes",
+      "why_not_selected": null,
+      "contract_terms": "12-month rate commitment with fuel surcharge pegged to DOE index",
+      "negotiation_leverage": "Threat of shifting volume to TQL created price pressure",
+      "supplier_strengths": [
+        "Niche expertise in West-to-East produce lanes",
+        "Reliable capacity during peak season"
+      ],
+      "supplier_weaknesses": [
+        "Limited geographic coverage beyond core lanes"
+      ],
+      "switching_costs": [
+        "Lane-specific training for produce handling"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Competitive pressure used",
+        "Negotiated savings"
+      ]
+    },
+    {
+      "supplier_name": "Rising Staff",
+      "category": "Non-IT Temporary Labor",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Competitive RFP",
+        "Markup reduction",
+        "Vendor consolidation"
+      ],
+      "alternatives_considered": [
+        "Flex Personnel",
+        "Worldstaff",
+        "Jibe Staffing"
+      ],
+      "why_selected": "Reduced regular & OT markups from 35% to 29%; strong familiarity with facility requirements",
+      "why_not_selected": null,
+      "contract_terms": "Updated MSA with 29% markup cap and 30-day payment terms; 2-year term with 1-year renewal option",
+      "negotiation_leverage": "Threat of shifting hours to lower-cost agencies (Jibe, Flex)",
+      "supplier_strengths": [
+        "On-site coordinator already embedded",
+        "Proven fill rates"
+      ],
+      "supplier_weaknesses": [
+        "Historically higher markups before negotiation"
+      ],
+      "switching_costs": [
+        "Training time for new temps, onboarding documentation"
+      ],
+      "key_contacts": null,
+      "notes": "Will retain majority share of hours but expected to cede some volume to Jibe for price discipline.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Markup concessions",
+        "Agency consolidation"
+      ]
+    },
+    {
+      "supplier_name": "Jibe Staffing",
+      "category": "Non-IT Temporary Labor",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 0,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Competitive RFP",
+        "Diversity supplier (MBE)",
+        "Markup benchmarking"
+      ],
+      "alternatives_considered": [
+        "Rising Staff",
+        "Flex Personnel",
+        "Worldstaff"
+      ],
+      "why_selected": "Offered lowest evaluated markup (27.5%); provided on-site support model and MBE credentials",
+      "why_not_selected": null,
+      "contract_terms": "2-year agreement with 27.5% RT markup, 27.5% OT; 15-day payment terms",
+      "negotiation_leverage": "Royal\u2019s ability to move Worldstaff volume to new agency",
+      "supplier_strengths": [
+        "Lower cost structure",
+        "Ability to ramp up quickly",
+        "MBE certification"
+      ],
+      "supplier_weaknesses": [
+        "No prior operating history with Royal",
+        "Requires performance monitoring"
+      ],
+      "switching_costs": [
+        "Background check alignment, safety orientation materials"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "New supplier added",
+        "RFP competition",
+        "Agency consolidation"
+      ]
+    },
+    {
+      "supplier_name": "Worldstaff",
+      "category": "Non-IT Temporary Labor",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": 0,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP",
+        "Performance evaluation"
+      ],
+      "alternatives_considered": [
+        "Rising Staff",
+        "Jibe Staffing",
+        "Flex Personnel"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Highest markups (38%), service concerns and conversion policy misalignment",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": [
+        "Historical familiarity with site"
+      ],
+      "supplier_weaknesses": [
+        "High cost, service complaints"
+      ],
+      "switching_costs": [
+        "Minimal\u2014agency temps can be shifted quickly"
+      ],
+      "key_contacts": null,
+      "notes": "Royal plans zero utilization going forward.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Agency displaced",
+        "Competitive RFP"
+      ]
+    },
+    {
+      "supplier_name": "Rusken Packaging",
+      "category": "Packaging \u2013 Corrugate (RFC)",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1825966,
+      "final_spend": 1716935,
+      "savings_dollars": 109031,
+      "savings_percent": 6.0,
+      "levers_applied": [
+        "Multi-round RFP",
+        "Plant visit",
+        "Direct negotiation",
+        "Volume commitment"
+      ],
+      "alternatives_considered": [
+        "SupplyOne",
+        "International Paper"
+      ],
+      "why_selected": "Improved pricing and agreed to extended payment terms while maintaining VMI model",
+      "why_not_selected": null,
+      "contract_terms": "Pricing fixed for 12 months with quarterly OCC adjustment; Net 45 terms",
+      "negotiation_leverage": "Threat of shifting volume to SupplyOne after comparative site visits",
+      "supplier_strengths": [
+        "Proximity to plant, flexible minimums"
+      ],
+      "supplier_weaknesses": [
+        "Previously increased prices +6% in Mar 2025 before RFP"
+      ],
+      "switching_costs": [
+        "Box specifications / tooling changes"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multi-round RFP",
+        "Supplier site visits",
+        "Negotiated savings >$100K"
+      ]
+    },
+    {
+      "supplier_name": "Victory Packaging",
+      "category": "Packaging \u2013 Corrugate (RFS)",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 426113,
+      "final_spend": 383363,
+      "savings_dollars": 42750,
+      "savings_percent": 10.0,
+      "levers_applied": [
+        "RFP",
+        "Vendor consolidation",
+        "Payment-term extension"
+      ],
+      "alternatives_considered": [
+        "Piedmont National"
+      ],
+      "why_selected": "Offered best overall price and agreed to manage full corrugate SKU portfolio under VMI",
+      "why_not_selected": null,
+      "contract_terms": "VMI agreement executed 6/27/2025 \u2013 Net 45 terms, price caps tied to OCC index",
+      "negotiation_leverage": "Single-source promise drove additional 2% discount",
+      "supplier_strengths": [
+        "National distribution network",
+        "E-catalog integration"
+      ],
+      "supplier_weaknesses": [
+        "Longer lead time on custom SKUs vs. local plants"
+      ],
+      "switching_costs": [
+        "Inventory transition costs during cutover"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "Competitive RFP",
+        "Meaningful savings"
+      ]
+    },
+    {
+      "supplier_name": "Piedmont National",
+      "category": "Packaging \u2013 Corrugate / Stretch Film (RFS)",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": 0,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "Victory Packaging",
+        "BradyPLUS"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Could not match pricing or extended payment terms offered by competitors",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": [
+        "Local service presence"
+      ],
+      "supplier_weaknesses": [
+        "Higher unit prices, limited payment flexibility"
+      ],
+      "switching_costs": [
+        "Run-out of residual inventory"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier displaced after RFP"
+      ]
+    },
+    {
+      "supplier_name": "SupplyOne",
+      "category": "Packaging \u2013 Corrugate & Films",
+      "relationship_status": "considered",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP",
+        "Product sampling"
+      ],
+      "alternatives_considered": [
+        "Rusken",
+        "Victory Packaging"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Pricing uncompetitive and feedback on sample quality mixed",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": [
+        "Broad packaging catalog"
+      ],
+      "supplier_weaknesses": [
+        "Higher pricing; longer lead times"
+      ],
+      "switching_costs": [
+        "Minimal\u2014no unique tooling retained"
+      ],
+      "key_contacts": null,
+      "notes": "Remains a secondary supplier for emergency orders only.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP participation",
+        "Supplier not awarded"
+      ]
+    },
+    {
+      "supplier_name": "Golden Eagle Extrusions",
+      "category": "Packaging \u2013 Films (Roll Stock)",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 826230,
+      "final_spend": 770942,
+      "savings_dollars": 55288,
+      "savings_percent": 6.7,
+      "levers_applied": [
+        "Competitive RFP",
+        "Benchmarking",
+        "Direct negotiation"
+      ],
+      "alternatives_considered": [
+        "Preferred Packaging",
+        "Transcendia"
+      ],
+      "why_selected": "Met target pricing while maintaining film specs critical to MAP packaging",
+      "why_not_selected": null,
+      "contract_terms": "Price-hold through Q3 2026; quarterly resin index review",
+      "negotiation_leverage": "Volume commitment plus competitive bids from Preferred Packaging",
+      "supplier_strengths": [
+        "Consistent film quality, dependable lead times"
+      ],
+      "supplier_weaknesses": [
+        "Limited stretch wrap capability"
+      ],
+      "switching_costs": [
+        "Film performance testing, FSMA documentation"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multi-round RFP",
+        "Savings >5%"
+      ]
+    },
+    {
+      "supplier_name": "Preferred Packaging",
+      "category": "Packaging \u2013 Films",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "Golden Eagle",
+        "Transcendia"
+      ],
+      "why_selected": "Matched Golden Eagle\u2019s concession pricing on shared SKUs",
+      "why_not_selected": null,
+      "contract_terms": "Revised pricing live July 2025; 30-day lead-time commitment",
+      "negotiation_leverage": "Threat of reducing volumes in favor of Golden Eagle",
+      "supplier_strengths": [
+        "Strong technical support"
+      ],
+      "supplier_weaknesses": [
+        "Historically higher pricing before RFP"
+      ],
+      "switching_costs": [
+        "Minimal, same equipment compatibility"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP",
+        "Negotiated concessions"
+      ]
+    },
+    {
+      "supplier_name": "Bunzl",
+      "category": "Packaging \u2013 Stretch Wrap / Steam Pads / Buckets & Misc.",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 105,
+      "final_spend": null,
+      "savings_dollars": 0,
+      "savings_percent": null,
+      "levers_applied": [
+        "Product substitution",
+        "RFP",
+        "Bundled spend"
+      ],
+      "alternatives_considered": [
+        "SupplyOne",
+        "Aptar"
+      ],
+      "why_selected": "Provided lower-cost stretch film and alternative soaker pads with significant per-unit savings",
+      "why_not_selected": null,
+      "contract_terms": "MOUs signed July 2025; pricing fixed through Sept 2026",
+      "negotiation_leverage": "Bundled award of multiple product lots in exchange for deeper discounts",
+      "supplier_strengths": [
+        "Broad catalog, ability to stock multiple DCs",
+        "Flexible payment terms"
+      ],
+      "supplier_weaknesses": [
+        "Longer lead times on custom rigid trays"
+      ],
+      "switching_costs": [
+        "Qualification of food-contact materials"
+      ],
+      "key_contacts": null,
+      "notes": "Also negotiated Inline rigid packaging made domestically through Bunzl for RFC.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier added",
+        "Multiple product lots consolidated",
+        "Savings across categories"
+      ]
+    },
+    {
+      "supplier_name": "Aptar",
+      "category": "Packaging \u2013 Steam Trays & Pads",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 482427,
+      "final_spend": 0,
+      "savings_dollars": 57594,
+      "savings_percent": 11.9,
+      "levers_applied": [
+        "Product substitution",
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "Bunzl (alternative pad)"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Bunzl pad offered significant unit cost reduction with acceptable absorbency performance",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": [
+        "Known product quality"
+      ],
+      "supplier_weaknesses": [
+        "High cost per pad"
+      ],
+      "switching_costs": [
+        "Re-certification of new pad spec in packaging lines"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier replaced",
+        "Product substitution produced >10% savings"
+      ]
+    },
+    {
+      "supplier_name": "Green Oil Company",
+      "category": "Fuel (Diesel & DEF)",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1702707,
+      "final_spend": 1701147,
+      "savings_dollars": 1560,
+      "savings_percent": 0.1,
+      "levers_applied": [
+        "Pricing structure change",
+        "Supplier negotiation",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "FuelFox",
+        "Site Fuel",
+        "Hart Fueling Services"
+      ],
+      "why_selected": "Incumbent diesel pricing already lowest; agreed to move DEF to market-based formula",
+      "why_not_selected": null,
+      "contract_terms": "DEF priced at OPIS + $0.18 effective 9/1/2025; month-to-month for diesel",
+      "negotiation_leverage": "Threat of moving DEF volume to FuelFox tote program",
+      "supplier_strengths": [
+        "Reliable on-site fueling schedule",
+        "Transparent invoicing"
+      ],
+      "supplier_weaknesses": [
+        "Flat-rate DEF pricing prior to renegotiation"
+      ],
+      "switching_costs": [
+        "Set-up of new fueling infrastructure, driver familiarity"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFQ run",
+        "Pricing model change"
+      ]
+    },
+    {
+      "supplier_name": "FuelFox",
+      "category": "Fuel Services",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFQ",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "Green Oil"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Proposal (OPIS + $0.52) higher than incumbent effective cost; delivery fee added",
+      "contract_terms": null,
+      "negotiation_leverage": "Used as benchmark to push incumbent on DEF pricing",
+      "supplier_strengths": [
+        "App-based ordering, national coverage"
+      ],
+      "supplier_weaknesses": [
+        "Higher margin, $200 delivery fee"
+      ],
+      "switching_costs": [
+        "Purchase/lease of DEF totes"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFQ participation",
+        "Provided leverage in negotiation"
+      ]
+    },
+    {
+      "supplier_name": "Grainger (OMNIA GPO)",
+      "category": "General Industrial Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 107898,
+      "final_spend": 923,
+      "savings_dollars": 15457,
+      "savings_percent": 14.3,
+      "levers_applied": [
+        "GPO joinder",
+        "Vendor consolidation",
+        "Line-item benchmarking"
+      ],
+      "alternatives_considered": [
+        "McMaster-Carr"
+      ],
+      "why_selected": "OMNIA program provided average 14% savings on matched SKUs plus dedicated rep",
+      "why_not_selected": null,
+      "contract_terms": "Letter of Participation executed 8/19/2025; pricing per OMNIA contract #192163",
+      "negotiation_leverage": "Ability to shift majority of MRO volume away from McMaster-Carr",
+      "supplier_strengths": [
+        "Broad local branch network",
+        "ePro interface"
+      ],
+      "supplier_weaknesses": [
+        "Back-order risk on niche items"
+      ],
+      "switching_costs": [
+        "SKU cross-reference effort, updating purchasing system"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "GPO leverage",
+        "Supplier switch",
+        "Savings >10%"
+      ]
+    },
+    {
+      "supplier_name": "McMaster-Carr",
+      "category": "General Industrial Supplies",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 107898,
+      "final_spend": 0,
+      "savings_dollars": 15457,
+      "savings_percent": 14.3,
+      "levers_applied": [
+        "Benchmarking",
+        "GPO comparison"
+      ],
+      "alternatives_considered": [
+        "Grainger"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Higher prices on 69 matched SKUs; no ability to match OMNIA contract pricing",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": [
+        "Extensive catalog, immediate shipping"
+      ],
+      "supplier_weaknesses": [
+        "Premium pricing, no discount structure"
+      ],
+      "switching_costs": [
+        "Minimal \u2013 purchasing system update"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier displaced",
+        "Benchmark savings >10%"
+      ]
+    },
+    {
+      "supplier_name": "Ryan Transportation",
+      "category": "Outbound Freight (LTL/FTL)",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 730387,
+      "final_spend": 718767,
+      "savings_dollars": 11620,
+      "savings_percent": 1.6,
+      "levers_applied": [
+        "Lane bidding",
+        "Carrier mix expansion"
+      ],
+      "alternatives_considered": [
+        "Existing carrier mix"
+      ],
+      "why_selected": "Provided lowest quotes on select lanes, generating $1K average monthly savings",
+      "why_not_selected": null,
+      "contract_terms": "Spot bids continued monthly; no long-term obligation",
+      "negotiation_leverage": "Demonstrated rate advantage used to pressure incumbents on other lanes",
+      "supplier_strengths": [
+        "Responsive spot quoting",
+        "Reefer expertise"
+      ],
+      "supplier_weaknesses": [
+        "Limited historical performance data with Royal"
+      ],
+      "switching_costs": [
+        "Carrier onboarding, insurance verification"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "New carrier added",
+        "Competitive bidding process"
+      ]
+    },
+    {
+      "supplier_name": "MidAmerica Business Forms",
+      "category": "Labels",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 88680,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Benchmarking",
+        "Supplier testing"
+      ],
+      "alternatives_considered": [
+        "Premium Label Supply",
+        "Chicago Tag & Label",
+        "Weber Packaging"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Benchmark quotes show 14%-34% savings achievable; awaiting test results",
+      "contract_terms": null,
+      "negotiation_leverage": "Threat of switching entire 12M label volume",
+      "supplier_strengths": [
+        "17-year relationship, consistent supply"
+      ],
+      "supplier_weaknesses": [
+        "Pricing above market"
+      ],
+      "switching_costs": [
+        "Thermal printer calibration, label adhesion testing"
+      ],
+      "key_contacts": null,
+      "notes": "Decision pending completion of sample testing.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier benchmarking",
+        "Potential displacement"
+      ]
+    },
+    {
+      "supplier_name": "Premium Label Supply",
+      "category": "Labels",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 0,
+      "final_spend": null,
+      "savings_dollars": 13080,
+      "savings_percent": 14.8,
+      "levers_applied": [
+        "Supplier sampling",
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "MidAmerica Business Forms",
+        "Chicago Tag & Label",
+        "Weber Packaging"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Samples under testing; final award decision pending",
+      "contract_terms": null,
+      "negotiation_leverage": "Low quote ($0.0063 per label) used to benchmark incumbent",
+      "supplier_strengths": [
+        "Competitive pricing",
+        "Quick sample turnaround"
+      ],
+      "supplier_weaknesses": [
+        "Unproven long-term quality"
+      ],
+      "switching_costs": [
+        "Printer settings adjustments"
+      ],
+      "key_contacts": "Hunter Alexander \u2013 Sales (quote #20257348)",
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP run",
+        "Product testing",
+        "Potential savings >$10K"
+      ]
+    },
+    {
+      "supplier_name": "Chicago Tag & Label",
+      "category": "Labels",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 0,
+      "final_spend": null,
+      "savings_dollars": 12240,
+      "savings_percent": 13.8,
+      "levers_applied": [
+        "Supplier sampling",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "MidAmerica Business Forms",
+        "Premium Label Supply",
+        "Weber Packaging"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Awaiting sample performance results",
+      "contract_terms": null,
+      "negotiation_leverage": null,
+      "supplier_strengths": [
+        "Option for 3M label stock",
+        "Competitive pricing"
+      ],
+      "supplier_weaknesses": [
+        "Longer lead time for sample delivery"
+      ],
+      "switching_costs": [
+        "Logistics of batch ordering"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive quotes",
+        "Product testing phase"
+      ]
+    },
+    {
+      "supplier_name": "Weber Packaging Solutions",
+      "category": "Labels",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 0,
+      "final_spend": null,
+      "savings_dollars": 29880,
+      "savings_percent": 33.7,
+      "levers_applied": [
+        "Supplier sampling",
+        "High-volume price break"
+      ],
+      "alternatives_considered": [
+        "MidAmerica Business Forms",
+        "Premium Label Supply",
+        "Chicago Tag & Label"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Samples scheduled for shipment; evaluation pending",
+      "contract_terms": null,
+      "negotiation_leverage": "Deep discount on 12M label batch created leverage with incumbent",
+      "supplier_strengths": [
+        "Largest potential savings",
+        "Extensive label manufacturing capacity"
+      ],
+      "supplier_weaknesses": [
+        "Unknown performance in Royal printers"
+      ],
+      "switching_costs": [
+        "Need to update label specs in WMS"
+      ],
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant savings potential",
+        "Supplier testing"
+      ]
+    }
+  ]
+}

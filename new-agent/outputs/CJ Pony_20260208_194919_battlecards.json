@@ -1,0 +1,299 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "FedEx",
+      "category": "Small Parcel Shipping",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 8623763,
+      "final_spend": 8284598,
+      "savings_dollars": 339165,
+      "savings_percent": 4,
+      "levers_applied": [
+        "Renegotiation",
+        "Rate restructuring",
+        "Surcharge reduction"
+      ],
+      "alternatives_considered": [
+        "UPS"
+      ],
+      "why_selected": "Provided improved transportation and surcharge discounts without service disruption; agreed to waive late fees until June 2023 and to continue credit-card billing through 2025.",
+      "why_not_selected": null,
+      "contract_terms": "Amended Transportation Services Agreement; late-fee waiver through Jun-2023; credit-card billing terms locked through 2025; dimensional factor retained at 210; no term commitment beyond existing agreement.",
+      "negotiation_leverage": "Threat of moving volume to UPS GPO program, detailed shipment-level benchmarking, and demonstrated savings opportunities on ground minimums and surcharges.",
+      "supplier_strengths": [
+        "Existing integration with CJPP systems",
+        "High on-time performance",
+        "Willingness to reduce ground minimums and surcharges"
+      ],
+      "supplier_weaknesses": [
+        "Higher fuel surcharges versus UPS",
+        "Limited flexibility on Express service discounts"
+      ],
+      "switching_costs": "Medium \u2013 would require label re-routing, system changes, and customer communication if switched.",
+      "key_contacts": null,
+      "notes": "Earned and base discounts as well as surcharge caps were the primary focus areas; negotiation completed May-2022.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multiple suppliers involved (FedEx vs UPS)",
+        "Significant negotiation and contract amendment",
+        "Savings >$50K"
+      ]
+    },
+    {
+      "supplier_name": "UPS",
+      "category": "Small Parcel Shipping",
+      "relationship_status": "considered",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "GPO benchmarking",
+        "Competitive threat"
+      ],
+      "alternatives_considered": [
+        "FedEx"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Could not match FedEx\u2019s revised ground minimums and surcharge concessions; switching costs for full conversion deemed too high for limited incremental savings.",
+      "contract_terms": null,
+      "negotiation_leverage": "Used as competitive benchmark to pressure FedEx; leveraged Treya UPS GPO rates in analysis.",
+      "supplier_strengths": [
+        "Competitive GPO pricing on select service levels",
+        "Rebate opportunities"
+      ],
+      "supplier_weaknesses": [
+        "Lower integration with CJPP shipping systems",
+        "Would require carrier diversification across facilities"
+      ],
+      "switching_costs": "High \u2013 system integration, label changes, staff retraining.",
+      "key_contacts": null,
+      "notes": "Maintained as secondary carrier for limited volume; annual spend historically <10% of parcel costs.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive benchmarking exercise",
+        "Multiple suppliers evaluated"
+      ]
+    },
+    {
+      "supplier_name": "Carlisle Container Co.",
+      "category": "Corrugated",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 351956,
+      "final_spend": 324632,
+      "savings_dollars": 27324,
+      "savings_percent": 8,
+      "levers_applied": [
+        "RFP",
+        "Incumbent renegotiation",
+        "Payment terms optimization"
+      ],
+      "alternatives_considered": [
+        "Neway Packaging"
+      ],
+      "why_selected": "Delivered best pricing on exact-match items for Harrisburg facility and agreed to 2%30-Net60 terms improving cash flow.",
+      "why_not_selected": null,
+      "contract_terms": "Memorandum of Understanding executed Apr-2022; pricing fixed for 12 months with quarterly review; 2% early-pay discount, Net60 standard.",
+      "negotiation_leverage": "Competitive RFP with alternative supplier pricing and commitment to consolidate volumes at Harrisburg plant.",
+      "supplier_strengths": [
+        "Proximity to Harrisburg warehouse",
+        "Responsive lead times",
+        "Willingness to extend terms"
+      ],
+      "supplier_weaknesses": [
+        "Limited design/structural services vs national converters"
+      ],
+      "switching_costs": "Low-to-medium; would require re-qualification of box specs and delivery schedules.",
+      "key_contacts": null,
+      "notes": "Savings exclude additional $6.5K available through early-payment discount.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders",
+        "Payment-term negotiations"
+      ]
+    },
+    {
+      "supplier_name": "Neway Packaging",
+      "category": "Corrugated",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 400209,
+      "final_spend": 396023,
+      "savings_dollars": 4186,
+      "savings_percent": 1,
+      "levers_applied": [
+        "RFP",
+        "Incumbent renegotiation",
+        "Payment terms optimization"
+      ],
+      "alternatives_considered": [
+        "Carlisle Container Co."
+      ],
+      "why_selected": "Maintained service continuity in Las Vegas with modest price reduction and acceptance of 1%10-Net45 terms.",
+      "why_not_selected": null,
+      "contract_terms": "MOU executed Mar-2022; annual price review aligned to industry indices; 1%/10 Net45 early-pay option.",
+      "negotiation_leverage": "Threat to shift volume to other regional converters and consolidated box SKUs.",
+      "supplier_strengths": [
+        "Established delivery routes to Vegas DC",
+        "Flexible minimum order quantities"
+      ],
+      "supplier_weaknesses": [
+        "Small savings achieved due to tight West Coast capacity"
+      ],
+      "switching_costs": "Medium \u2013 alternate vendors would require freight from CA or AZ increasing transit time.",
+      "key_contacts": null,
+      "notes": "Additional $3.96K savings available through early-payment discount not included in headline figure.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Payment-term negotiations",
+        "Multiple suppliers involved"
+      ]
+    },
+    {
+      "supplier_name": "Colony Paper",
+      "category": "Packaging Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 203008,
+      "final_spend": 159243,
+      "savings_dollars": 43765,
+      "savings_percent": 22,
+      "levers_applied": [
+        "RFP",
+        "Incumbent renegotiation",
+        "Payment terms improvement"
+      ],
+      "alternatives_considered": [
+        "Sigma Supply"
+      ],
+      "why_selected": "Provided best-and-final offer with 22% reduction and agreed to maintain local inventory levels for Harrisburg site.",
+      "why_not_selected": null,
+      "contract_terms": "Contract executed Apr-28-2022; pricing locked for 12 months; inventory review every 90 days.",
+      "negotiation_leverage": "Threat of awarding volume to Sigma Supply plus consolidation of SKUs.",
+      "supplier_strengths": [
+        "Local warehousing",
+        "Proven service",
+        "Flexible MOQ"
+      ],
+      "supplier_weaknesses": [
+        "Historically higher pricing prior to negotiation"
+      ],
+      "switching_costs": "Low \u2013 same product specs across vendors, but change would disrupt just-in-time delivery schedules.",
+      "key_contacts": null,
+      "notes": "Colony retained Harrisburg while Sigma awarded Las Vegas facility.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Significant savings >20%",
+        "Supplier consolidation considered"
+      ]
+    },
+    {
+      "supplier_name": "Sigma Supply",
+      "category": "Packaging Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": 92105,
+      "savings_percent": 32,
+      "levers_applied": [
+        "RFP",
+        "Vendor consolidation",
+        "Payment terms improvement"
+      ],
+      "alternatives_considered": [
+        "Colony Paper"
+      ],
+      "why_selected": "Offered 32% category savings overall and provided 3PL warehouse in Hershey, PA with no financial penalties for >120-day inventory.",
+      "why_not_selected": null,
+      "contract_terms": "MOU fully executed Mar-2022; pricing fixed for first 12 months; stocking program with 120-day turnover policy.",
+      "negotiation_leverage": "Ability to split award between regions and threat to incumbent pricing in Las Vegas.",
+      "supplier_strengths": [
+        "Aggressive pricing",
+        "Warehouse/3PL capability",
+        "National reach"
+      ],
+      "supplier_weaknesses": [
+        "New relationship \u2013 operational performance yet to be proven"
+      ],
+      "switching_costs": "Low initially, but increases with inventory commitments held at Sigma facilities.",
+      "key_contacts": null,
+      "notes": "Savings dollars derived as residual category savings after Colony award; exact baseline spend by site not provided.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "New supplier added",
+        "Significant savings >$50K"
+      ]
+    },
+    {
+      "supplier_name": "Staffmark (via OMNIA Partners)",
+      "category": "Temporary Labor \u2013 non-IT",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 242955,
+      "final_spend": 212139,
+      "savings_dollars": 30817,
+      "savings_percent": 13,
+      "levers_applied": [
+        "GPO",
+        "Markup reduction",
+        "Wage rate alignment"
+      ],
+      "alternatives_considered": [
+        "Local temp agencies (unnamed)"
+      ],
+      "why_selected": "Access to OMNIA GPO rates delivering 13% savings and standardized markup structure; ability to serve both PA and NV warehouses.",
+      "why_not_selected": null,
+      "contract_terms": "Participation Agreement executed Aug-2022; markups fixed for 24 months with market wage reviews; no minimum hours commitment.",
+      "negotiation_leverage": "Volume leverage aggregated through OMNIA; benchmarking of historical markups against GPO ceiling rates.",
+      "supplier_strengths": [
+        "National footprint",
+        "On-site recruiting support",
+        "Transparent markup model"
+      ],
+      "supplier_weaknesses": [
+        "Initial misalignment on PA wage rates caused communication issues"
+      ],
+      "switching_costs": "Moderate \u2013 would require onboarding new agency staff and retraining supervisors.",
+      "key_contacts": null,
+      "notes": "CJPP net savings after Treya distribution estimated at 8%.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "GPO agreement",
+        "Supplier switch",
+        "Savings >10%"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 9,
+    "battlecards_generated": 7,
+    "categories_with_battlecards": [
+      "Small Parcel Shipping",
+      "Corrugated",
+      "Packaging Supplies",
+      "Temporary Labor \u2013 non-IT"
+    ],
+    "skipped_reason": "Local unnamed temp agencies and minor packaging vendors lacked sufficient data or strategic activity"
+  },
+  "extraction_notes": [
+    "Savings, baseline, and final spend figures taken from June-1-2022 Close-Out and detailed category slides.",
+    "FedEx contract details extracted from \u2018CJ Pony Parts Pricing 2022\u2019 presentation.",
+    "Corrugated and Packaging supplier pricing and term data sourced from slides 8 and 11 of 05-25-22 update.",
+    "Staffmark numbers pulled from \u2018Temp Labor Revised Savings Analysis\u2019 slide."
+  ]
+}

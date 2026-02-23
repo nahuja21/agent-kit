@@ -1,0 +1,55 @@
+{
+  "client": {
+    "client_name": "Advantia Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Women's health (OB-GYN, telehealth, perinatal support)",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site women's health provider operating OB-GYN clinics and ancillary telehealth services across multiple states",
+    "sponsor_pe_firm": "BlueMountain Capital Management (Assured Guaranty) and Deerfield Management Company",
+    "client_history": "Founded in 2014 in Arlington, Virginia by Sean Glass, Advantia Health has grown through acquisitions such as Heartland Women\u2019s Healthcare (2019) and the Pacify telehealth platform, and in 2020 secured a $45 million growth investment from BlueMountain Capital to accelerate expansion."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 29100000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Buzzfile company profile (https://www.buzzfile.com/business/Advantia-Health-LLC-202-315-5223)",
+      "notes": "Publicly available estimates vary widely: Zippia $13 M, Growjo $22.4 M, Buzzfile $29.1 M, CanvasBusinessModel $89 M (2024). No official filings found. Selected Buzzfile figure as midpoint; wide range indicates low confidence."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 50,
+      "confidence": "low",
+      "source": "Company locations page (https://www.advantiahealth.com/locations/) and PR about Heartland acquisition (PR Newswire, Feb 2019)",
+      "notes": "Heartland acquisition added 25 clinics; Mid-Atlantic listings show 20+ additional sites. Exact current total not enumerated; estimated ~50 clinics."
+    },
+    "employees": {
+      "count": 501,
+      "confidence": "medium",
+      "source": "LeadIQ company profile (Dec 2025) and Indeed company page",
+      "notes": "LeadIQ lists ~501 employees; Indeed and SignalHire list 500-1,000; Zippia cites 750; Buzzfile 259. Majority of sources cluster around 500+, therefore using 501 with medium confidence."
+    }
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf",
+    "https://www.advantiahealth.com/news/advantia-health-announces-45m-investment-to-accelerate-expansion/",
+    "https://www.advantiahealth.com/news/2016-1-8-advantia-health-announces-growth-round-led-by-deerfield-management/",
+    "https://www.prnewswire.com/news-releases/advantia-health-expands-nationally-with-acquisition-of-heartland-womens-healthcare-300798460.html",
+    "https://www.buzzfile.com/business/Advantia-Health-LLC-202-315-5223",
+    "https://www.zippia.com/advantia-health-careers-2144923/revenue/",
+    "https://growjo.com/company/Advantia_Health",
+    "https://canvasbusinessmodel.com/blogs/owners/advantia-health-who-owns",
+    "LeadIQ company profile for Advantia Health",
+    "Indeed company page for Advantia Health",
+    "https://www.advantiahealth.com/locations/"
+  ],
+  "extraction_notes": [
+    "Official company name confirmed in signed services agreement (page 1).",
+    "Primary industry sector aligns with provided cluster #5 (Healthcare Providers & Physician Practice Platforms).",
+    "PE backing: BlueMountain Capital investment press release (Jan 2020) and Deerfield growth financing release (Jan 2016). No single controlling sponsor identified, so both firms listed.",
+    "Revenue figures are third-party estimates only; no audited numbers available, resulting in low confidence.",
+    "No EBITDA data found in documents or credible web sources.",
+    "Location count estimated by combining Heartland\u2019s 25 clinics (PR Newswire) with locations listed on company website; exact number not provided, hence low confidence."
+  ]
+}

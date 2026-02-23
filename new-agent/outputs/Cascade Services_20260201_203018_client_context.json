@@ -1,0 +1,45 @@
+{
+  "client": {
+    "client_name": "Cascade Residential Services LLC",
+    "industry_primary": "Residential HVAC, Plumbing & Electrical Services",
+    "industry_secondary": null,
+    "primary_industry_sector": "Building Products, Trades & Installed Systems",
+    "business_model": "Multi-brand residential home-services platform providing HVAC, plumbing and electrical repair, replacement and maintenance",
+    "sponsor_pe_firm": "Trive Capital and LP First Capital",
+    "client_history": "Cascade Residential Services LLC was formed in December 2022 through a partnership between Trive Capital and LP First Capital to acquire and integrate family-owned HVAC, plumbing and electrical contractors. At inception it acquired four Florida contractors and has since expanded to 13 brands, opening a corporate headquarters in Tampa, Florida in February 2024."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": null,
+      "notes": "No revenue figure was disclosed in company documents, press releases, or reputable databases searched."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 13,
+      "confidence": "medium",
+      "source": "CascadeServices.com press release (Feb 2024) announcing headquarters opening and noting the platform comprises 13 brands",
+      "notes": "Each brand operates as a separate branch in its local market; no separate facilities count published, so brand count is used as the best available proxy for locations."
+    },
+    "employees": {
+      "count": 500,
+      "confidence": "medium",
+      "source": "CascadeServices.com homepage (accessed May 2025)",
+      "notes": "Site states the platform 'employs over 500 people'. No other independent counts located."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Cascade Services Executed Agreement 3.31.25.pdf (page 1)",
+    "CascadeServices.com press release: 'Cascade Services opens their headquarters office in Tampa and expands leadership team' (Feb 2024)",
+    "PRNewswire press release: 'Trive Capital forms Cascade Services to partner with market-leading brands in the home services sector' (Dec 2022)",
+    "PRNewswire press release: 'LP First Capital & Trive Capital announce formation of Cascade Services\u2019 (Jan 2023)"
+  ],
+  "extraction_notes": [
+    "Official legal entity name taken from executed agreement; internal decks refer to 'Cascade Services'.",
+    "PE sponsorship confirmed in multiple PRNewswire releases and internal Treya proposal decks mentioning prior work with Trive portfolio companies.",
+    "Employee count and number of brands both sourced from the company\u2019s own press release; no independent verification found, so confidence set to medium.",
+    "No public revenue or EBITDA figures were found across documents, press releases, LinkedIn, Crunchbase or other databases; those fields are therefore null."
+  ]
+}

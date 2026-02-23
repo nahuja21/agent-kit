@@ -100,8 +100,20 @@ prompt:
     
     ### 6. FINANCIALS
     
-    - `baseline_spend`: Historical/baseline spend (from Exhibit A or category files)
+    - `baseline_spend`: The spend that was ACTUALLY ADDRESSED for this specific category
       - Include: amount, currency, confidence, source_file, notes
+      - **BASELINE SPEND PRIORITY** (use the first available):
+        1. **Close Out / Final Report baseline** — If the Close Out slide shows a "Spend Addressed",
+           "Baseline Spend", or "Current Spend" value for this category, ALWAYS use that number.
+           It reflects the actual spend the team worked against.
+        2. **Category folder data** — If analysis files show a specific baseline, use that.
+        3. **Exhibit A** — Use ONLY if the category maps 1:1 to an Exhibit A line.
+      - **CRITICAL: Sub-category mapping** — If the worked category is a SUB-CATEGORY of an
+        Exhibit A line (e.g., "IUD Order Management" is a subset of "Medical Devices - IUDs"),
+        do NOT use the full Exhibit A line as the baseline. Instead:
+        - Use the Close Out's baseline for that specific sub-category
+        - Or use the category folder's analysis baseline
+        - If neither is available, set confidence to "low" and note the mismatch
     
     - `savings_annual_run_rate`: Annual savings achieved/expected
       - Use data from Impact results
@@ -112,6 +124,12 @@ prompt:
     
     - `savings_percentage`: Calculated (savings ÷ baseline × 100)
       - If you have both savings and baseline, calculate this
+      - **IMPORTANT**: If the Close Out or final report states a savings percentage,
+        USE THAT PERCENTAGE rather than recalculating from Exhibit A numbers.
+        The Close Out percentage is based on the actual addressed spend, which
+        may differ from the broader Exhibit A category line.
+      - If you do calculate it yourself, use the `baseline_spend` amount from above
+        (which should already be the correct category-specific baseline, not a parent line)
     
     ### 7. EVIDENCE & NOTES
     
@@ -240,14 +258,15 @@ prompt:
     ## IMPORTANT RULES
     
     1. **Use Impact category list as source of truth** - only include categories that were actually worked
-    2. **Match baseline from Exhibit A** - link by category name (may need fuzzy matching)
-    3. **Extract vendors carefully** - before = incumbent, after = selected/recommended
-    4. **Levers should be specific** - not just "negotiation" but "GPO tier upgrade" or "vendor consolidation"
-    5. **Calculate savings_percentage** if you have both baseline and savings
-    6. **Constraints are optional** - only include if mentioned in category files
-    7. **Status must match Impact** - use the status from Impact results
-    8. **Evidence should be specific** - include file, page/slide, and quote when possible
-    9. **Dollar amounts**: Full numbers (1800000 not "$1.8M")
+    2. **Baseline spend priority**: Close Out baseline > Category folder analysis > Exhibit A (see FINANCIALS section above)
+    3. **Sub-category awareness**: If a worked category is a SUBSET of an Exhibit A line, do NOT use the full Exhibit A spend as baseline — use the Close Out or category-specific baseline instead
+    4. **Savings percentage**: Prefer the Close Out's stated percentage over recalculating from Exhibit A
+    5. **Extract vendors carefully** - before = incumbent, after = selected/recommended
+    6. **Levers should be specific** - not just "negotiation" but "GPO tier upgrade" or "vendor consolidation"
+    7. **Constraints are optional** - only include if mentioned in category files
+    8. **Status must match Impact** - use the status from Impact results
+    9. **Evidence should be specific** - include file, page/slide, and quote when possible
+    10. **Dollar amounts**: Full numbers (1800000 not "$1.8M")
 
 parameters:
   - name: client_name

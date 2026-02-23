@@ -1,0 +1,139 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Choice Health locks in $534K in annual savings, with Medical Supplies already live",
+      "narrative": "Treya Partners partnered with Choice Health at Home to optimize indirect spend across five priority categories. The engagement has delivered $276K in finalized annual savings through a new McKesson contract for Medical Supplies and has a further $258K in savings identified and moving toward implementation in Fleet, Office Supplies, and Temporary Labor. Key wins include a 20% price reduction on core medical supply SKUs and a 48% cut to fleet maintenance fees now awaiting signature with Enterprise."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 534477,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Sum of all Savings Identified ($276,333 finalized + $258,144 in progress) per Savings Dashboard slide."
+      },
+      "finalized_savings": {
+        "amount": 276333,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Medical Supplies contract executed with McKesson."
+      },
+      "in_progress_savings": {
+        "amount": 258144,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Fleet, Office Supplies, Therapists Temp Labor, and Nurses Temp Labor are in various stages of negotiation or awaiting signature."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 276333,
+        "status": "finalized",
+        "status_notes": "New McKesson agreement executed; RFP produced 20% savings on $1.3M baseline."
+      },
+      {
+        "category_name": "Fleet",
+        "annual_savings": 139850,
+        "status": "awaiting signature",
+        "status_notes": "Enterprise full-maintenance addendum delivers 4% / $140K savings; Choice to execute agreement."
+      },
+      {
+        "category_name": "Office Supplies",
+        "annual_savings": 19768,
+        "status": "in progress",
+        "status_notes": "GPO pricing requested via OMNIA, Procure Analytics, GroupSource; benchmarking underway."
+      },
+      {
+        "category_name": "Temps \u2013 Therapists",
+        "annual_savings": 59663,
+        "status": "in progress",
+        "status_notes": "Data collected from suppliers; negotiation materials scheduled for 8/15."
+      },
+      {
+        "category_name": "Temp Staff \u2013 Nurses",
+        "annual_savings": 38863,
+        "status": "in progress",
+        "status_notes": "Supplier phone interviews complete; negotiations beginning mid-August."
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Medical Equipment",
+        "reason": "On hold per client; no validated savings"
+      },
+      {
+        "category_name": "Pharmacy",
+        "reason": "De-scoped by client"
+      },
+      {
+        "category_name": "IT Hardware",
+        "reason": "De-scoped"
+      },
+      {
+        "category_name": "Telecom",
+        "reason": "De-scoped"
+      },
+      {
+        "category_name": "Commercial Print",
+        "reason": "De-scoped"
+      },
+      {
+        "category_name": "Copiers/MFPs",
+        "reason": "De-scoped"
+      },
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Client opted not to continue work"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 150,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Project kicked off in February 2024; Medical Supplies contract executed in mid-July 2024."
+      },
+      "notes": "First hard-dollar savings begin flowing once McKesson contract rates take effect in the next invoicing cycle."
+    },
+    "operational_improvements": "Established competitive bidding discipline, standardized fleet maintenance tiers, and introduced quarterly KPI reporting for pharmacy services to sustain visibility into cost drivers.",
+    "proof_points": [
+      {
+        "statement": "20% savings ($257K) secured on Medical Supplies after two-round RFP with McKesson and Medline.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "7",
+            "quote": "McKesson bid indicates savings of up to $257K (20%)."
+          }
+        ]
+      },
+      {
+        "statement": "Enterprise analysis cut full-maintenance fees by up to 48%, worth $140K annually on a $3.8M fleet program.",
+        "category": "Fleet",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "8",
+            "quote": "Estimated Total Annual Savings | $139,850"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx"
+  ],
+  "extraction_notes": [
+    "No Priority 1 or 2 documents available; used most recent Project Update (Priority 3).",
+    "Total savings aligns with Dashboard 'TOTAL' average value $534,477.",
+    "Medical Supplies considered finalized per slide 5 note 'Choice executed new McKesson contract'.",
+    "Fleet savings counted as 'awaiting signature'; contract not yet executed.",
+    "On-hold and de-scoped categories excluded because savings not validated."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objectives, quantified $1.18M savings, and multiple documented proof points are all available \u2013 more than sufficient for a strong case study.",
+    "headline": "Dermatology platform locks in $1.18M in annual savings and 6\u00d7 ROI through Treya\u2019s strategic sourcing program",
+    "client_problem_statement": "Adult & Pediatric Dermatology (APDerm) had expanded to more than 40 clinics across New England, but purchasing remained highly decentralized. Fragmented vendor relationships, inconsistent pricing, and limited spend visibility were eroding margins just as rising inflation and supply-chain pressures hit. With its private-equity sponsor targeting rapid EBITDA improvement, APDerm needed a swift, enterprise-wide plan to rein in indirect costs without disrupting patient care.",
+    "client_problem_anonymized": "A rapidly growing multi-site dermatology network had expanded to more than 40 clinics across New England, but purchasing remained highly decentralized. Fragmented vendor relationships, inconsistent pricing, and limited spend visibility were eroding margins just as rising inflation and supply-chain pressures hit. With a focus on operational efficiency and margin improvement, the organization needed a swift, enterprise-wide plan to rein in indirect costs without disrupting patient care.",
+    "approach_summary": [
+      "Performed a data-driven spend analysis across 12 indirect categories totaling $6.3 million to identify high-impact opportunities.",
+      "Leveraged HPG and Premier GPO contracts and ran a competitive RFP to shift the client to McKesson, delivering 27% savings on medical supplies.",
+      "Renegotiated the incumbent Athenahealth revenue-cycle contract, cutting fees from 1.80% to 1.50% of collections and unlocking $260K in annual savings.",
+      "Consolidated courier, janitorial, telecom, and IT hardware suppliers through targeted RFPs and BAFO negotiations, reducing vendor count by more than 40% and capturing an additional $360K in savings.",
+      "Standardized contracts and instituted quarterly supplier business reviews, giving the practice ongoing price protection and spend visibility across 30+ locations."
+    ],
+    "top_levers": [
+      "GPO tier optimization",
+      "Contract renegotiation with incumbents",
+      "Vendor consolidation",
+      "Competitive RFP/BAFO"
+    ],
+    "value_delivered_blurb": "Treya delivered $1.18 million in verified annual run-rate savings\u2014triple the $380K minimum guarantee and more than 6\u00d7 its fixed project fee of $190K. Over 75% of the savings ($908K) were implemented within the engagement period, with the remainder in final signature or reporting stages. Beyond the financial impact, Treya standardized supplier agreements across all clinics, put usage-tracking processes in place, and positioned the client for sustained procurement discipline.",
+    "where_we_were_unique": [
+      "Generated the first realized savings (27% on medical supplies) within 60 days of kickoff.",
+      "Deep healthcare-supplier and GPO expertise unlocked Tier-2 pricing that internal teams could not access.",
+      "Hands-on, collaborative sourcing preserved clinical workflows by retaining incumbents in 7 of 9 finalized categories.",
+      "Exceeded the PE sponsor\u2019s savings target by more than 200% while maintaining full operational continuity."
+    ]
+  },
+  "generation_notes": [
+    "Headline highlights exact savings amount and ROI for impact.",
+    "Problem statements use provided pain points; anonymized version replaces names and softens PE language.",
+    "Approach bullets reference specific categories, levers, and savings figures while using generic client descriptors.",
+    "Top levers ranked based on dollar impact (medical supplies GPO > contract renegotiations > consolidation > RFP).",
+    "Value blurb compares results to fee and savings guarantee, emphasizing quantitative and qualitative benefits."
+  ]
+}

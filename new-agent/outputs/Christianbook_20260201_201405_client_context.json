@@ -1,0 +1,52 @@
+{
+  "client": {
+    "client_name": "Christianbook, LLC",
+    "industry_primary": "Retail",
+    "industry_secondary": "E-commerce and book distribution",
+    "primary_industry_sector": "Retail, Consumer Brands & DTC",
+    "business_model": "Omnichannel retailer and distributor of Christian books, Bibles, homeschool curricula and related faith-based products sold through its e-commerce site, annual catalogs, and wholesale channels.",
+    "sponsor_pe_firm": "Nonantum Capital Partners",
+    "client_history": "Founded in 1978 by brothers Stephen and Ray Hendrickson in Lynn, Massachusetts, Christianbook has grown into one of the world\u2019s largest distributors of Christian products. The privately-held, family-founded company rebranded from Christian Book Distributors to Christianbook in 2019 and now operates from a 370,000-sq-ft headquarters and distribution center in Peabody, MA, serving more than two million customers annually."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 178000000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "ECDB retailer profile (2024)",
+      "notes": "ECDB estimates 2024 sales at $178M, whereas Grips Intelligence estimates $374M for the same year. No audited figures available; chose lower bound and flagged low confidence due to wide discrepancy."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 1,
+      "confidence": "high",
+      "source": "Christianbook.com \u2018Customer Pick Up\u2019 and company FAQ pages; Agreement document lists single Peabody, MA address",
+      "notes": "All sources reference only the 140 Summit Street, Peabody MA headquarters/distribution facility."
+    },
+    "employees": {
+      "count": 560,
+      "confidence": "medium",
+      "source": "TopWorkplaces.com company profile (2023)",
+      "notes": "Employee counts reported range from 450 (Buzzfile) to 600+ (Mapquest); TopWorkplaces lists 560 and is used as midpoint."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Treya Procurement Cost Reduction Services Agreement Christianbook_v2.docx.pdf (page 1)",
+    "Case Study- Christianbook.docx",
+    "Christianbook.com FAQ and Customer Pick Up pages",
+    "TopWorkplaces.com company profile",
+    "ECDB retailer profile for Christianbook (2024)",
+    "GripsIntelligence.com retailer insight (2024)",
+    "Mapquest listing for Christianbook HQ",
+    "Rushtopress.org news release (2020 Nonantum recap)",
+    "Cartermorse.com transaction summary (Nonantum Capital Partners recapitalization)"
+  ],
+  "extraction_notes": [
+    "Official legal name confirmed in signed services agreement between Treya and Christianbook, LLC.",
+    "Nonantum Capital Partners ownership corroborated by Carter Morse transaction summary and Case Study document.",
+    "Revenue figures vary widely between ECDB ($178M) and Grips Intelligence ($374M); no primary filings found. Selected conservative ECDB figure and flagged low confidence.",
+    "No EBITDA data found in any document or reputable web source.",
+    "Only a single operational facility is consistently referenced across company materials; no evidence of additional sites.",
+    "Employee count shows moderate variation; selected 560 from TopWorkplaces (2023 recognition list) and noted range."
+  ]
+}

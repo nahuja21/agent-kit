@@ -1,0 +1,125 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Arotech captures $100K in new annual savings across four indirect spend categories",
+      "narrative": "During 2022 Treya Partners completed four strategic sourcing work-streams for Arotech\u2014car rental, hotels, IT hardware bought through Amazon, and MRO supplies\u2014delivering a validated $100,069 in additional annual savings. These new wins lift the engagement\u2019s post-baseline total to roughly $600K, with final signatures now the only remaining step for full realization. Contract documents have been drafted and routed; once executed, the savings will begin flowing immediately through updated rates and new supplier agreements."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 100069,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "Sum of Savings-in-Hand figures on Slide 4 (Car Rental, Hotels, Amazon IT Hardware, MRO)."
+      },
+      "finalized_savings": {
+        "amount": 0,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "All four categories are awaiting final signature or roll-out; none are yet marked 'implemented'."
+      },
+      "in_progress_savings": {
+        "amount": 100069,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "All savings currently in progress / awaiting signature."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Car Rental",
+        "annual_savings": 29600,
+        "status": "awaiting signature",
+        "status_notes": "Enterprise/National OMNIA agreement drafted; documents sent via DocuSign on 12/8, awaiting client completion (Slide 3)."
+      },
+      {
+        "category_name": "Hotels",
+        "annual_savings": 37500,
+        "status": "in progress",
+        "status_notes": "IHG chain-wide discount loaded in Egencia; one remaining property-specific agreement sent to client for signature (Slide 5)."
+      },
+      {
+        "category_name": "IT Hardware / Peripherals (Amazon)",
+        "annual_savings": 15485,
+        "status": "in progress",
+        "status_notes": "Connection pricing negotiated; client to begin funneling Amazon IT hardware spend through Connection contract (Slide 5)."
+      },
+      {
+        "category_name": "MRO",
+        "annual_savings": 17484,
+        "status": "awaiting signature",
+        "status_notes": "Dual-source solution finalized (keep Grainger, add Fastenal via OMNIA); participation agreement sent to client on 12/13 (Slide 3 & 5)."
+      }
+    ],
+    "excluded_categories": [],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": null,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": null,
+        "notes": "First-savings start date depends on execution of pending contracts; not yet specified."
+      },
+      "notes": "All work-streams are contract-ready; savings will commence once documents are signed and supplier rates loaded."
+    },
+    "operational_improvements": "Standardized national supplier agreements were negotiated, enabling centralized travel booking through Egencia, automated OMNIA GPO pricing for MRO, and a consolidated IT hardware channel to curb Amazon marketplace leakage.",
+    "proof_points": [
+      {
+        "statement": "Switching to the OMNIA/Enterprise car rental program lowers daily rates by 13-32%, driving $29.6K in annual savings on Arotech\u2019s $185K spend.",
+        "category": "Car Rental",
+        "evidence": [
+          {
+            "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+            "page_or_slide": "4 & 9",
+            "quote": "Savings in Hand \u2013 Car Rental: $29,600 (16%)"
+          }
+        ]
+      },
+      {
+        "statement": "Property-specific hotel negotiations plus an IHG chain-wide Business Edge enrollment capture 6% savings, worth $37.5K annually.",
+        "category": "Hotels",
+        "evidence": [
+          {
+            "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+            "page_or_slide": "4 & 10",
+            "quote": "Treya has negotiated ... 6% or $37,500 in hotel savings on its annual hotel spend baseline of ~$615K"
+          }
+        ]
+      },
+      {
+        "statement": "Redirecting half of Amazon IT hardware purchases to Connection at negotiated pricing cuts costs by 5%, saving $15.5K a year.",
+        "category": "IT Hardware / Peripherals (Amazon)",
+        "evidence": [
+          {
+            "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+            "page_or_slide": "4 & 5",
+            "quote": "IT Hardware / Peripherals (Amazon) \u2013 $15,485 savings (5%)"
+          }
+        ]
+      },
+      {
+        "statement": "Dual-source MRO strategy with Fastenal via OMNIA supplements Grainger and delivers 6% savings, valued at $17.5K per year.",
+        "category": "MRO",
+        "evidence": [
+          {
+            "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+            "page_or_slide": "4 & 7",
+            "quote": "Final MRO savings are $17K ... 6% or $17K in MRO savings is available to Arotech"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "New Sourceable Categories vMS/Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx"
+  ],
+  "extraction_notes": [
+    "Slide 4 'Savings Tracker \u2013 New 2022 Workstreams' lists $100,069 in 'Savings in Hand'; this aligns with the Executive Summary\u2019s '$100K in incremental savings'.",
+    "Slide 12 shows different interim estimates (total $114,648). Higher-priority within the same document is assumed to be Slide 4 since it is explicitly labeled 'Savings in Hand'. Values from Slide 4 were used.",
+    "No Priority 1 (Close-Out) or Priority 2 (Case Study) documents were provided; Priority 3 numbers therefore serve as the authoritative results."
+  ]
+}

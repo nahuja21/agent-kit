@@ -1,0 +1,118 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "Fasteners",
+      "P-Card",
+      "Temporary Labor - non IT",
+      "Employee Benefits",
+      "Packaging & Shipping Supplies",
+      "Small Parcel Shipping",
+      "LTL/FTL",
+      "Ocean Freight"
+    ],
+    "initial_categories_count": 8,
+    "category_details": [
+      {
+        "category_name": "Fasteners",
+        "spend": 908937,
+        "addressable_pct": 50,
+        "addressable_spend": 454469,
+        "savings_low": 22723,
+        "savings_high": 68170,
+        "is_cogs": true
+      },
+      {
+        "category_name": "P-Card",
+        "spend": 8687482,
+        "addressable_pct": 5,
+        "addressable_spend": 434374,
+        "savings_low": 21719,
+        "savings_high": 43437,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Temporary Labor - non IT",
+        "spend": 862410,
+        "addressable_pct": 50,
+        "addressable_spend": 431205,
+        "savings_low": 12936,
+        "savings_high": 34496,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Employee Benefits",
+        "spend": 1097954,
+        "addressable_pct": 70,
+        "addressable_spend": 768568,
+        "savings_low": 38428,
+        "savings_high": 61485,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Packaging & Shipping Supplies",
+        "spend": 961784,
+        "addressable_pct": 85,
+        "addressable_spend": 817516,
+        "savings_low": 65401,
+        "savings_high": 98102,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Small Parcel Shipping",
+        "spend": 10779703,
+        "addressable_pct": 80,
+        "addressable_spend": 8623762,
+        "savings_low": 86238,
+        "savings_high": 172475,
+        "is_cogs": true
+      },
+      {
+        "category_name": "LTL/FTL",
+        "spend": 1679527,
+        "addressable_pct": 90,
+        "addressable_spend": 1511574,
+        "savings_low": 75579,
+        "savings_high": 151157,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Ocean Freight",
+        "spend": 580889,
+        "addressable_pct": 95,
+        "addressable_spend": 551845,
+        "savings_low": 11037,
+        "savings_high": 27592,
+        "is_cogs": true
+      }
+    ],
+    "total_spend": 25558686,
+    "total_addressable_spend": 13593313,
+    "savings_estimate_low": 334061,
+    "savings_estimate_high": 656916,
+    "cogs_categories_count": 5,
+    "cogs_categories_percentage": 62.5,
+    "cogs_addressable_spend": 11959166,
+    "cogs_addressable_percentage": 88.0
+  },
+  "exhibit_b": {
+    "fee_type": "hybrid",
+    "fee_amount": 75000,
+    "minimum_savings_guarantee": 75000,
+    "minimum_return_on_fees_ratio": 1.0,
+    "fee_hybrid_threshold": 215000,
+    "fee_contingent_percentage": 35,
+    "fee_notes": "35% of savings for 8 consecutive quarters post category completion; quarterly invoices deferred until $215,000 in savings realized."
+  },
+  "timing": {
+    "start_date": "2021-06-22",
+    "end_date": "2024-06-22",
+    "engagement_type": "Procurement cost reduction / strategic sourcing services"
+  },
+  "extraction_notes": [
+    "Savings low/high figures taken directly from Exhibit A dollar columns.",
+    "Addressable spend figures calculated as Spend \u00d7 Addressable% and rounded to nearest dollar.",
+    "COGS determination based on packaging, shipping and direct material relevance; shipping categories treated as COGS.",
+    "End date calculated as 36 months from execution date, per contract term clause.",
+    "Fee hybrid threshold interpreted from: 'Until $215,000 in savings is realized, quarterly invoice will be $0.00'."
+  ]
+}

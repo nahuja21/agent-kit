@@ -1,0 +1,141 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Christianbook captures $1.24M in fully-finalized annual savings across five indirect spend categories",
+      "narrative": "Treya Partners executed competitive RFPs and negotiations in transportation, packaging and payments that are now fully contracted and live. All five worked categories\u2014Merchant Processing Fees, Corrugated, Packaging & Shipping Supplies, LTL and FTL\u2014have signed agreements delivering $1,237,359 in recurring annual savings. Key wins include 31 % lower LTL costs through a new carrier, 13 % savings in merchant processing via a broker switch, and 14 % price cuts on corrugated while keeping incumbents in place. An additional RFP was run for Ingram Book Group; pricing held flat, so no incremental savings were booked."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1237359,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx (Slide 1)",
+        "notes": "Sum of finalized savings across five categories"
+      },
+      "finalized_savings": {
+        "amount": 1237359,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx (Slide 1)",
+        "notes": "All worked categories show check-mark (\u00fc) under 'Savings Finalized'"
+      },
+      "in_progress_savings": {
+        "amount": 0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "No remaining categories with work underway but not yet contracted"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Merchant Processing Fees",
+        "annual_savings": 627726,
+        "status": "finalized",
+        "status_notes": "Calibr selected; contract signed 2/24/2025 delivering 10-13 % fee reduction"
+      },
+      {
+        "category_name": "Corrugated",
+        "annual_savings": 168060,
+        "status": "finalized",
+        "status_notes": "Incumbents Unicorr & Rand renegotiated; new pricing live 12/20/2025"
+      },
+      {
+        "category_name": "Packaging & Shipping Supplies",
+        "annual_savings": 110729,
+        "status": "finalized",
+        "status_notes": "RFP awarded to Peak & Accutech; pricing live 1/1/2025"
+      },
+      {
+        "category_name": "LTL",
+        "annual_savings": 266350,
+        "status": "finalized",
+        "status_notes": "Echo selected after competitive bid; contract effective 2/28/2025 with 31 % savings"
+      },
+      {
+        "category_name": "FTL",
+        "annual_savings": 64494,
+        "status": "finalized",
+        "status_notes": "Echo award delivers 8 % savings; contract effective 2/28/2025"
+      },
+      {
+        "category_name": "Ingram Book Group",
+        "annual_savings": 0,
+        "status": "RFP completed \u2013 no savings",
+        "status_notes": "Only incumbent bid; pricing unchanged so category closed without savings impact"
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Janitorial Services",
+        "reason": "Removed from scope \u2013 spend dropped 50 % (one-time purchase)"
+      }
+    ],
+    "not_started_categories": [
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Placed on hold \u2013 no sourcing activity performed"
+      },
+      {
+        "category_name": "Marketing Software",
+        "reason": "Placed on hold \u2013 no sourcing activity performed"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 130,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pdf (Slides 3 & 12)",
+        "notes": "First savings realized when packaging pricing went live 12/13/2024, ~130 days after project kickoff in early August 2024"
+      },
+      "notes": "Majority of savings implemented within six months of project start"
+    },
+    "operational_improvements": "Enhanced supplier visibility and leverage through formal RFPs; maintained service continuity by retaining key incumbents; instituted data-driven benchmarking and contract terms for ongoing cost control.",
+    "proof_points": [
+      {
+        "statement": "31 % annual cost reduction in LTL by shifting volume to Echo Logistics, saving $266K per year.",
+        "category": "LTL",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+            "page_or_slide": "1",
+            "quote": "LTL1 | $873,264 | 31% | $266,350"
+          }
+        ]
+      },
+      {
+        "statement": "Negotiated 13 % savings on merchant processing fees, generating $628K in annual benefit without operational disruption.",
+        "category": "Merchant Processing Fees",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+            "page_or_slide": "1",
+            "quote": "Merchant Processing Fees1 | 10% \u2013 13% | $557,715 \u2013 $697,738 (Avg $627,726)"
+          }
+        ]
+      },
+      {
+        "statement": "Reduced corrugated spend by $168K annually while keeping incumbent suppliers through competitive benchmarking.",
+        "category": "Corrugated",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pdf",
+            "page_or_slide": "12",
+            "quote": "We reduced costs by $168K while retaining incumbent suppliers Unicorr and Rand"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+    "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pdf",
+    "Case Study- Christianbook.docx"
+  ],
+  "extraction_notes": [
+    "Savings figures taken from 'Christianbook \u2013 Final Savings' slide which shows check-marks for finalized categories.",
+    "Ingram Book Group included for completeness but registers $0 savings; excluded categories and on-hold items not counted in totals."
+  ]
+}

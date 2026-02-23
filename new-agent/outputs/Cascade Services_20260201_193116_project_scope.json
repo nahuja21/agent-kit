@@ -1,0 +1,125 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "HVACR OEM/Distributor",
+      "HVACR & Plumbing Supplies",
+      "Advertising",
+      "General Industrial/Electrical Supplies",
+      "Electronic Payment Processing",
+      "Telecom - Data & Voice",
+      "Fleet",
+      "Uniforms",
+      "Commercial Print"
+    ],
+    "initial_categories_count": 9,
+    "category_details": [
+      {
+        "category_name": "HVACR OEM/Distributor",
+        "spend": 21324005,
+        "addressable_pct": 80,
+        "addressable_spend": 17059204,
+        "savings_low": 511776,
+        "savings_high": 1023552,
+        "is_cogs": true
+      },
+      {
+        "category_name": "HVACR & Plumbing Supplies",
+        "spend": 3263085,
+        "addressable_pct": 80,
+        "addressable_spend": 2610468,
+        "savings_low": 104419,
+        "savings_high": 208837,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Advertising",
+        "spend": 4719942,
+        "addressable_pct": 75,
+        "addressable_spend": 3539956,
+        "savings_low": 106199,
+        "savings_high": 176998,
+        "is_cogs": false
+      },
+      {
+        "category_name": "General Industrial/Electrical Supplies",
+        "spend": 616016,
+        "addressable_pct": 90,
+        "addressable_spend": 554414,
+        "savings_low": 38809,
+        "savings_high": 66530,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Electronic Payment Processing",
+        "spend": 1328549,
+        "addressable_pct": 80,
+        "addressable_spend": 1062839,
+        "savings_low": 31885,
+        "savings_high": 63770,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Telecom - Data & Voice",
+        "spend": 400954,
+        "addressable_pct": 90,
+        "addressable_spend": 360859,
+        "savings_low": 28869,
+        "savings_high": 54129,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Fleet",
+        "spend": 793464,
+        "addressable_pct": 80,
+        "addressable_spend": 634771,
+        "savings_low": 25391,
+        "savings_high": 50782,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Uniforms",
+        "spend": 501134,
+        "addressable_pct": 90,
+        "addressable_spend": 451020,
+        "savings_low": 22551,
+        "savings_high": 45102,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Commercial Print",
+        "spend": 226394,
+        "addressable_pct": 80,
+        "addressable_spend": 181115,
+        "savings_low": 7245,
+        "savings_high": 14489,
+        "is_cogs": false
+      }
+    ],
+    "total_spend": 32947148,
+    "total_addressable_spend": 26454646,
+    "savings_estimate_low": 877144,
+    "savings_estimate_high": 1704189,
+    "cogs_categories_count": 3,
+    "cogs_categories_percentage": 33.3,
+    "cogs_addressable_spend": 20224086,
+    "cogs_addressable_percentage": 76.4
+  },
+  "exhibit_b": {
+    "fee_type": "fixed",
+    "fee_amount": 425000,
+    "minimum_savings_guarantee": 850000,
+    "minimum_return_on_fees_ratio": 2.0,
+    "fee_hybrid_threshold": null,
+    "fee_contingent_percentage": null,
+    "fee_notes": "Fixed project fee divided into five equal invoices: 9/1/2025, 10/1/2025, 11/1/2025, 6/1/2026, 7/1/2026. 30-day payment terms. Travel passed through at cost."
+  },
+  "timing": {
+    "start_date": "2025-03-31",
+    "end_date": null,
+    "engagement_type": "Procurement cost-reduction / strategic sourcing engagement"
+  },
+  "extraction_notes": [
+    "Savings totals were calculated by summing individual category values; they differ slightly from the total row in the PDF (likely rounding/omission of Commercial Print).",
+    "COGS classification is based on judgement: HVAC-related and industrial supply categories deemed COGS; others treated as SG&A."
+  ]
+}

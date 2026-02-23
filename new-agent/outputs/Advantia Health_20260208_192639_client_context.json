@@ -1,0 +1,50 @@
+{
+  "client": {
+    "client_name": "Advantia Health LLC",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Women's health & OB-GYN services",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site women's healthcare platform that operates OB-GYN, primary care and related specialty clinics across several U.S. states with both in-person and telehealth services.",
+    "sponsor_pe_firm": "Assured Healthcare Partners",
+    "client_history": "Founded in 2014 by Sean Glass and headquartered in Arlington, Virginia, Advantia Health has expanded rapidly through acquisitions\u2014most notably the 2019 purchase of Heartland Women\u2019s Healthcare\u2014and the launch of its flagship \u2018Liv by Advantia Health\u2019 clinic in Washington, D.C., positioning itself as a leading integrated women\u2019s health provider in the Mid-Atlantic and Midwest."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 29100000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Buzzfile company profile (approx. $29.1 M annual revenue)",
+      "notes": "Publicly available estimates vary widely: Zippia $13 M (2024), Growjo $22.4 M, Buzzfile $29.1 M, CanvasBusinessModel $89 M. No official filing or press release was found. Using Buzzfile figure as midpoint but treating with low confidence."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 27,
+      "confidence": "low",
+      "source": "craft.co locations page and specific clinic addresses listed in web search results",
+      "notes": "27 distinct clinic addresses were enumerated across MD, VA, DC, IL and MO. Company press releases indicate additional sites (e.g., Heartland Women\u2019s Healthcare adds 25 locations) but a precise total is not published on the public website."
+    },
+    "employees": {
+      "count": 750,
+      "confidence": "medium",
+      "source": "Zippia company profile (750 employees, 2024); corroborated by Indeed and SignalHire ranges of 500-1,000 employees",
+      "notes": "LinkedIn lists the company size band as 501-1,000, consistent with Zippia\u2019s 750 figure. Buzzfile lists 259 which appears understated, so 750 is used."
+    }
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf",
+    "Advantia Health press release \u2013 Heartland Women\u2019s Healthcare acquisition (biospace.com)",
+    "Advantia Health press release \u2013 $45 M investment (advantiahealth.com, Jan 2020)",
+    "Buzzfile profile: Advantia Health LLC",
+    "Zippia profile: Advantia Health",
+    "craft.co locations page",
+    "SignalHire and Indeed company size estimates",
+    "privateequityinfo.com \u2013 ownership by Assured Healthcare Partners"
+  ],
+  "extraction_notes": [
+    "Company\u2019s legal name confirmed as \u201cAdvantia Health\u201d in signed services agreement.",
+    "PE ownership: Privateequityinfo.com lists Assured Healthcare Partners as owner; 2020 press release cites investment from BlueMountain Capital (now part of AHP), supporting the identification.",
+    "No authoritative revenue filings located; used Buzzfile but flagged low confidence due to wide variance among estimation sites.",
+    "EBITDA not publicly disclosed in any document or web source reviewed."
+  ]
+}

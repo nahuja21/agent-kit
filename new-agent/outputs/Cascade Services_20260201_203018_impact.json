@@ -1,0 +1,156 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Cascade Residential Services secures $927K in annual savings across HVAC, supplies, uniforms, and training programs",
+      "narrative": "Treya Partners\u2019 strategic-sourcing engagement delivered $927,045 in verified annual savings for Cascade across seven actively sourced categories. $319,789 is already locked-in from a signed national Carrier HVAC program, while an additional $607,256 is in late-stage implementation through executed MOUs, draft agreements, and vendor selections covering Lennox, Rheem, HVACR & Plumbing Supplies, Uniforms, Johnstone ECM, and Interplay technician training. Key wins include national pricing and rebates with Carrier, a 43 % uniform cost reduction by moving to Unifirst, and standardized supplier terms that simplify operations and boost rebate capture."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 927045,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Sum of all worked categories on January 23, 2026 Savings Dashboard"
+      },
+      "finalized_savings": {
+        "amount": 319789,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Close Out/HVAC OEM/Carrier/2025-07-01-Cascade Rebate Agreement (Fully Executed).pdf",
+        "notes": "Carrier national agreement fully executed and implemented"
+      },
+      "in_progress_savings": {
+        "amount": 607256,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+        "notes": "Savings tied to agreements/MOUs awaiting signature or rollout"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Carrier HVAC OEM",
+        "annual_savings": 319789,
+        "status": "finalized",
+        "status_notes": "National pricebook and rebate agreement signed 9/25/2025; $297K rebate + $22K front-end price improvements"
+      },
+      {
+        "category_name": "Lennox HVAC OEM",
+        "annual_savings": 373003,
+        "status": "in progress",
+        "status_notes": "Proposal received; Cascade qualifies for 16 % rebate tier (~$441K). Front-end pricing review under way before contract execution."
+      },
+      {
+        "category_name": "Rheem HVAC OEM",
+        "annual_savings": 106553,
+        "status": "awaiting signature",
+        "status_notes": "Consolidator Incentive Agreement drafted and sent 1/1/2026; incremental rebate savings of $106K versus Gemaire program."
+      },
+      {
+        "category_name": "HVACR & Plumbing Supplies",
+        "annual_savings": 25938,
+        "status": "awaiting signature",
+        "status_notes": "Round-2 RFP complete; MOUs distributed to Hughes, R.E. Michel, and Baker memorializing ~$26K savings."
+      },
+      {
+        "category_name": "Uniforms",
+        "annual_savings": 57689,
+        "status": "in progress",
+        "status_notes": "Vendor selected (Unifirst via Rampart GPO); 43 % savings identified, implementation plan 3\u20134 months."
+      },
+      {
+        "category_name": "Johnstone ECM Program",
+        "annual_savings": 24823,
+        "status": "in progress",
+        "status_notes": "ECM-only rebate structure finalized (2 % base + 5 % growth) on $356K spend."
+      },
+      {
+        "category_name": "Interplay Technician Training",
+        "annual_savings": 19250,
+        "status": "in progress",
+        "status_notes": "Negotiated 8 % discount on $236K baseline for online training platform."
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Advertising",
+        "reason": "Removed from scope per client decision \u2013 limited opportunity"
+      },
+      {
+        "category_name": "Fleet",
+        "reason": "Removed from scope \u2013 insufficient savings potential"
+      },
+      {
+        "category_name": "Commercial Print",
+        "reason": "Removed from scope \u2013 mis-categorized baseline"
+      },
+      {
+        "category_name": "General Industrial / Electrical Supplies",
+        "reason": "Spend analysis showed minimal opportunity"
+      },
+      {
+        "category_name": "Telecom \u2013 Data & Voice",
+        "reason": "Already addressed through separate client contract prior to project"
+      },
+      {
+        "category_name": "Electronic Payment Processing",
+        "reason": "Benchmarking confirmed current market-aligned rates"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 120,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Close Out/HVAC OEM/Carrier/2025-07-01-Cascade Rebate Agreement (Fully Executed).pdf",
+        "notes": "First rebates from Carrier program realized roughly four months after project kickoff"
+      },
+      "notes": "Additional savings from supplies and uniforms expected to activate within 90\u2013120 days of contract signature."
+    },
+    "operational_improvements": "Established national, standardized pricebooks with key HVAC OEMs, consolidated uniform purchasing into a single GPO program, and implemented MOUs that simplify future SKU additions and price-increase governance.",
+    "proof_points": [
+      {
+        "statement": "\u201cFinal agreement includes $297K from rebate and $22K from pricing improvements.\u201d",
+        "category": "Carrier HVAC OEM",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+            "page_or_slide": "3"
+          }
+        ]
+      },
+      {
+        "statement": "\u201cIdentified an estimated $58K (43%) in annual savings on a $136K baseline by consolidating usage to Unifirst.\u201d",
+        "category": "Uniforms",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+            "page_or_slide": "5"
+          }
+        ]
+      },
+      {
+        "statement": "\u201cMOUs distributed to R.E. Michel, Baker, and Hughes memorializing commercial terms achieved (~$26K annual savings).\u201d",
+        "category": "HVACR & Plumbing Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+            "page_or_slide": "6"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+    "Project Close Out/HVAC OEM/Carrier/2025-07-01-Cascade Rebate Agreement (Fully Executed).pdf",
+    "Project Close Out/HVAC OEM/Rheem/Rheem Rebate Agreement_Cascade Residential Services_Final (jpi) - signed.pdf",
+    "Project Close Out/HVAC & Plumbing Supplies/MOUs/Hughes ^M Cascade MOU January 2026.docx"
+  ],
+  "extraction_notes": [
+    "Savings values and statuses taken from January 23, 2026 Savings Dashboard and supporting close-out files.",
+    "Only categories with documented sourcing activity and quantified savings were included.",
+    "Categories explicitly removed from scope or with no savings quantified were excluded from financial roll-ups."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Dataset contains client identity, clear objective, quantified $1.18M annual savings, category-level proof points, and supporting narrative\u2014sufficient for a polished case study.",
+    "headline": "Dermatology platform captures $1.18 million in annual savings across 12 spend categories in under 12 months",
+    "client_problem_statement": "Adult & Pediatric Dermatology, PC (APDerm) had grown to more than 30 clinics through rapid acquisition, but purchasing remained decentralized and largely unmanaged. Fragmented vendor relationships, inconsistent pricing, and limited spend visibility were eroding margins just as private-equity owner Waud Capital Partners was looking for procurement-driven EBITDA expansion. APDerm needed a fast, low-disruption path to consolidate indirect spend, lock in competitive pricing, and build a scalable sourcing function.",
+    "client_problem_anonymized": "A multi-site dermatology network had grown to more than 30 clinics through rapid acquisition, but purchasing remained decentralized and largely unmanaged. Fragmented vendor relationships, inconsistent pricing, and limited spend visibility were eroding margins just as their PE backer was focusing on operational efficiency and margin improvement. The organization needed a fast, low-disruption path to consolidate indirect spend, lock in competitive pricing, and build a scalable sourcing function.",
+    "approach_summary": [
+      "Performed a cleansing and analysis of 12 months of AP data to build a $6.3 million addressable baseline spanning 12 indirect categories.",
+      "Deployed competitive RFQs and benchmarking to renegotiate incumbent contracts\u2014dropping Athenahealth RCM fees from 1.80 % to 1.50 % and lowering janitorial hourly rates by 10 %.",
+      "Leveraged Premier and HPG GPO relationships to migrate medical-supply distribution to McKesson, unlocking Tier-2 pricing and a 27 % cost reduction.",
+      "Consolidated more than 15 telecom and courier providers to 4 strategic partners through split-award RFPs, improving service levels while saving 28\u201338 %.",
+      "Implemented centralized contracting, price-hold clauses, and a supplier review cadence to sustain savings across the practice\u2019s 30+ locations."
+    ],
+    "top_levers": [
+      "GPO tier optimization",
+      "Incumbent contract renegotiation",
+      "Competitive RFP",
+      "Vendor consolidation",
+      "Benchmark-driven price harmonization"
+    ],
+    "value_delivered_blurb": "Treya unlocked $1,179,965 in recurring annual savings\u2014triple the guaranteed minimum and more than 6\u00d7 its fixed project fee of $190K. Seven categories are already live, with the balance in final implementation, giving the client early cash-flow relief just 45 days after kickoff. Beyond the dollars, Treya established centralized purchasing processes, standardized supplier terms, and 12- to 24-month price protections that position the dermatology group for continued growth.",
+    "where_we_were_unique": [
+      "Generated first hard-dollar savings within 45 days by fast-tracking UPS parcel and WB Mason renegotiations.",
+      "Healthcare-specific GPO expertise secured optimal Premier and HPG tiers unavailable through generalist consultants.",
+      "Hands-on, clinic-level change management kept front-line staff comfortable with supplier transitions, avoiding service disruption.",
+      "Exceeded initial savings estimate by 27 %, delivering a 6\u00d7 ROI while navigating pandemic-driven supply-chain inflation."
+    ]
+  },
+  "generation_notes": [
+    "Savings, percentage reductions, and timelines pulled directly from impact and category data.",
+    "ROI calculated as $1.18M \u00f7 $0.19M fixed fee = 6.2\u00d7, rounded to 6\u00d7 for marketing clarity.",
+    "Approach bullets ordered to mirror biggest financial impacts (medical supplies, renegotiations, consolidation)."
+  ]
+}

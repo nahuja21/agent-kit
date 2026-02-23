@@ -1,0 +1,156 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "Fleet",
+      "Employee Benefits",
+      "Medical Supplies",
+      "Pharmacy",
+      "Medical Equipment",
+      "Temps - Therapists",
+      "TTI Temp Staff - Nurses",
+      "Telecom-Data & Voice",
+      "Commercial Print",
+      "Copiers/MFPs",
+      "Office Supplies",
+      "IT Hardware"
+    ],
+    "initial_categories_count": 12,
+    "category_details": [
+      {
+        "category_name": "Fleet",
+        "spend": 4183120,
+        "addressable_pct": 90,
+        "addressable_spend": 3764808,
+        "savings_low": 75296,
+        "savings_high": 225888,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Employee Benefits",
+        "spend": 4138052,
+        "addressable_pct": 80,
+        "addressable_spend": 3310442,
+        "savings_low": 99313,
+        "savings_high": 198627,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Medical Supplies",
+        "spend": 1799484,
+        "addressable_pct": 90,
+        "addressable_spend": 1619536,
+        "savings_low": 80977,
+        "savings_high": 194344,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Pharmacy",
+        "spend": 2347556,
+        "addressable_pct": 90,
+        "addressable_spend": 2112800,
+        "savings_low": 84512,
+        "savings_high": 169024,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Medical Equipment",
+        "spend": 1798328,
+        "addressable_pct": 75,
+        "addressable_spend": 1348746,
+        "savings_low": 53950,
+        "savings_high": 107900,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Temps - Therapists",
+        "spend": 1242983,
+        "addressable_pct": 80,
+        "addressable_spend": 994386,
+        "savings_low": 39775,
+        "savings_high": 79551,
+        "is_cogs": true
+      },
+      {
+        "category_name": "TTI Temp Staff - Nurses",
+        "spend": 809647,
+        "addressable_pct": 80,
+        "addressable_spend": 647718,
+        "savings_low": 25909,
+        "savings_high": 51817,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Telecom-Data & Voice",
+        "spend": 326336,
+        "addressable_pct": 90,
+        "addressable_spend": 293702,
+        "savings_low": 23496,
+        "savings_high": 44055,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Commercial Print",
+        "spend": 379546,
+        "addressable_pct": 90,
+        "addressable_spend": 341591,
+        "savings_low": 17080,
+        "savings_high": 34159,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Copiers/MFPs",
+        "spend": 372403,
+        "addressable_pct": 90,
+        "addressable_spend": 335163,
+        "savings_low": 16758,
+        "savings_high": 33516,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Office Supplies",
+        "spend": 175717,
+        "addressable_pct": 90,
+        "addressable_spend": 158145,
+        "savings_low": 15815,
+        "savings_high": 23722,
+        "is_cogs": false
+      },
+      {
+        "category_name": "IT Hardware",
+        "spend": 159979,
+        "addressable_pct": 90,
+        "addressable_spend": 143981,
+        "savings_low": 11518,
+        "savings_high": 21597,
+        "is_cogs": false
+      }
+    ],
+    "total_spend": 17733152,
+    "total_addressable_spend": 15071018,
+    "savings_estimate_low": 544399,
+    "savings_estimate_high": 1184201,
+    "cogs_categories_count": 5,
+    "cogs_categories_percentage": 41.7,
+    "cogs_addressable_spend": 6723186,
+    "cogs_addressable_percentage": 44.6
+  },
+  "exhibit_b": {
+    "fee_type": "fixed",
+    "fee_amount": 250000,
+    "minimum_savings_guarantee": null,
+    "minimum_return_on_fees_ratio": 1.5,
+    "fee_hybrid_threshold": null,
+    "fee_contingent_percentage": null,
+    "fee_notes": "Fixed project fee split into five equal monthly invoices; travel passed through at cost."
+  },
+  "timing": {
+    "start_date": "2024-01-03",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction / strategic sourcing engagement"
+  },
+  "extraction_notes": [
+    "Savings guarantee is expressed only as a 1.5X return-on-fees ratio; no explicit dollar amount provided, so minimum_savings_guarantee set to null.",
+    "Signature dates for both parties are 1/3/2024; Agreement states it is effective upon signatures, used as start_date.",
+    "Temps categories classified as COGS because labor directly delivers patient care; classification may vary by accounting policy."
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "categories": [
+    {
+      "category_label": "Billing Systems / RCM",
+      "category_l1": "Administrative",
+      "category_l2": "Revenue Cycle",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-09-01",
+      "status": "implemented",
+      "vendors_before": [
+        "Athenahealth (athenaOne)"
+      ],
+      "vendors_after": [
+        "Athenahealth \u2013 amended contract (3.15% fee tier)"
+      ],
+      "levers": [
+        "Incumbent renegotiation",
+        "Benchmark pricing analysis",
+        "Contract amendment"
+      ],
+      "constraints": {
+        "supplier_constraints": "Early-termination penalty (~$9 M) made switch away from Athena impractical.",
+        "operational_constraints": "Must avoid disruption to RCM workflow across all practices.",
+        "contractual_constraints": "Four-year price-lock amendment signed Jan-2021 limited timing for renegotiation.",
+        "implementation_constraints": "Pricing applied retroactively; no system changes required."
+      },
+      "baseline_spend": {
+        "amount": 2033693,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "EXHIBIT A DATA \u2192 category_details[Billing Systems/ RCM]",
+        "notes": "Initial baseline prior to refreshed volume forecast; Exhibit A is the required source."
+      },
+      "savings_annual_run_rate": {
+        "amount": 259200,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "9 % fee reduction effective 9/1/2022."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 12.75,
+      "notes": "Savings realized through lowering athenaOne blended rate from 3.39 % to 3.15 % of collections.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+          "page_or_slide": "3",
+          "quote": "Billing Systems / RCM | $259,200 | 9 % | Vendor / Purchasing Behavior Change Required? \u2013 No | Savings Start Date 9/1/2022",
+          "date_extracted": "2026-02-07"
+        }
+      ]
+    },
+    {
+      "category_label": "Medical Supplies",
+      "category_l1": "Clinical",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-10-31",
+      "status": "implemented",
+      "vendors_before": [
+        "Medline (Heartland region)",
+        "McKesson (Mid-Atlantic region)",
+        "Cardinal",
+        "Henry Schein"
+      ],
+      "vendors_after": [
+        "McKesson (enterprise-wide prime distributor)"
+      ],
+      "levers": [
+        "Competitive RFP",
+        "Distributor consolidation",
+        "Volume aggregation",
+        "Payment-terms improvement"
+      ],
+      "constraints": {
+        "supplier_constraints": "Mid-Atlantic sites requested no distributor change; Heartland agreed to switch.",
+        "operational_constraints": "Must maintain on-hand inventory throughout distributor transition.",
+        "contractual_constraints": null,
+        "implementation_constraints": "Staggered cut-over by region with McKesson implementation team."
+      },
+      "baseline_spend": {
+        "amount": 1498946,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "EXHIBIT A DATA \u2192 category_details[Medical Supplies]",
+        "notes": "Baseline corresponds to FY-21 usage across all practices."
+      },
+      "savings_annual_run_rate": {
+        "amount": 156610,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "14 % reduction; new agreement with McKesson effective 10/31/2022."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10.45,
+      "notes": "Heartland volumes were shifted to McKesson; Mid-Atlantic kept incumbent pricing but benefited from enterprise formulary.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+          "page_or_slide": "3",
+          "quote": "Medical Supplies | $1,133,051 spend addressed | $156,610 savings (14 %) | Distributor Change (to McKesson) in Heartland Required",
+          "date_extracted": "2026-02-07"
+        }
+      ]
+    },
+    {
+      "category_label": "Sonography Services",
+      "category_l1": "Clinical Services",
+      "category_l2": "Imaging",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "IT Imaging (outsourced pay-per-scan model)"
+      ],
+      "vendors_after": [
+        "Advantia in-house sonography staff (supplemented by Staffmark recruiter)"
+      ],
+      "levers": [
+        "Make-or-buy analysis",
+        "Labor insourcing",
+        "Competitive bid of alternate staffing models"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Clinical coverage must be maintained during 50 % transition period.",
+        "contractual_constraints": "Existing location-specific agreements with IT Imaging run month-to-month.",
+        "implementation_constraints": "Recruiting pipeline and onboarding of full-time sonographers."
+      },
+      "baseline_spend": {
+        "amount": 819732,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Spend addressed figure used because category not discrete in Exhibit A."
+      },
+      "savings_annual_run_rate": {
+        "amount": 152115,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "19 % savings; currently 50 % realized while transition completes."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 18.55,
+      "notes": "Final savings will grow as remaining outsourced sites convert to in-house model by EOY 2022.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+          "page_or_slide": "4 (note 1)",
+          "quote": "Sonography services \u2026 current estimates at 50 % completion, with expected full transition by EOY.",
+          "date_extracted": "2026-02-07"
+        }
+      ]
+    },
+    {
+      "category_label": "IUD Order Management",
+      "category_l1": "Medical Devices",
+      "category_l2": "IUDs",
+      "category_l3": null,
+      "start_date": "2022-07-11",
+      "end_date": "2022-07-11",
+      "status": "implemented",
+      "vendors_before": [
+        "Bayer",
+        "Cooper Surgical",
+        "AbbVie"
+      ],
+      "vendors_after": [
+        "Same manufacturers \u2013 purchasing now aligned to \u2265 5-unit order minimum"
+      ],
+      "levers": [
+        "Policy enforcement of minimum order quantities",
+        "Demand aggregation",
+        "Behavioral change"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must continue procuring through USWHA group-purchasing contracts.",
+        "operational_constraints": "Practice managers must plan inventory to meet 5-unit thresholds.",
+        "contractual_constraints": null,
+        "implementation_constraints": "Training and communication to 24 practice locations."
+      },
+      "baseline_spend": {
+        "amount": 3925417,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "EXHIBIT A DATA \u2192 category_details[Medical Devices \u2013 IUDs]",
+        "notes": "COGS category; 80 % considered addressable."
+      },
+      "savings_annual_run_rate": {
+        "amount": 55193,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "4 % savings through consistent order-size compliance."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 1.41,
+      "notes": "Zero-discount orders were eliminated, capturing manufacturer rebates embedded in USWHA pricing tiers.",
+      "evidence": [
+        {
+          "source_file": "Categories/Medical Devices (IUDs)/Zero Order Analysis/Advantia - IUD Data & Zero Discount Orders (04-04-2022).xlsx",
+          "page_or_slide": "Sheet: Summary & Savings",
+          "quote": "Order Minimum Guideline Summary \u2013 Savings If Discount Applied $55,193",
+          "date_extracted": "2026-02-07"
+        }
+      ]
+    },
+    {
+      "category_label": "Bayer IUD Program",
+      "category_l1": "Medical Devices",
+      "category_l2": "IUDs",
+      "category_l3": "Manufacturer Support",
+      "start_date": "2022-07-11",
+      "end_date": "2022-07-11",
+      "status": "implemented",
+      "vendors_before": [
+        "Bayer \u2013 no program enrollment"
+      ],
+      "vendors_after": [
+        "Bayer \u2013 Confidence in Coverage replacement program"
+      ],
+      "levers": [
+        "Enrollment in manufacturer replacement program",
+        "Rebate capture"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Clinics must submit denied-claim documentation to Bayer for replacement units.",
+        "contractual_constraints": null,
+        "implementation_constraints": "Minimal \u2013 program sign-up and staff education."
+      },
+      "baseline_spend": {
+        "amount": null,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": null,
+        "notes": "Program produces avoided replacement cost; baseline not separately tracked."
+      },
+      "savings_annual_run_rate": {
+        "amount": 21600,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Savings equal value of replacement IUDs no longer purchased."
+      },
+      "savings_one_time": null,
+      "savings_percentage": null,
+      "notes": "Advantia now receives free replacement devices when payer denies; avoids write-offs.",
+      "evidence": [
+        {
+          "source_file": "Categories/Medical Devices (IUDs)/Denied IUD Analysis/Confidence in Coverage IUD Flashcard.pdf",
+          "page_or_slide": "1",
+          "quote": "If your patient is denied coverage \u2026 Bayer will replace that IUD at no cost.",
+          "date_extracted": "2026-02-07"
+        }
+      ]
+    },
+    {
+      "category_label": "Lab Services",
+      "category_l1": "Clinical Services",
+      "category_l2": "Diagnostic Testing",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-10-15",
+      "status": "implemented",
+      "vendors_before": [
+        "LabCorp (incumbent)"
+      ],
+      "vendors_after": [
+        "LabCorp \u2013 renegotiated pricing (9 % reduction)"
+      ],
+      "levers": [
+        "Competitive RFQ",
+        "Incumbent negotiation",
+        "Benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": "Some practices required phlebotomy services integrated with athenahealth.",
+        "operational_constraints": "Avoid disruption to LIS interfaces; Quest change deemed impractical.",
+        "contractual_constraints": null,
+        "implementation_constraints": "Pricing update only; no supplier change so minimal transition."
+      },
+      "baseline_spend": {
+        "amount": 423792,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "Spend addressed figure used; aligns with RFQ data."
+      },
+      "savings_annual_run_rate": {
+        "amount": 40218,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+        "notes": "9 % savings with incumbent effective 10/15/2022."
+      },
+      "savings_one_time": null,
+      "savings_percentage": 9.49,
+      "notes": "Quest proposal offered higher savings but operational fit led Advantia to keep LabCorp.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+          "page_or_slide": "8",
+          "quote": "LabCorp | $401,318 historical | Proposed $361,101 | $40,218 savings (10 %)",
+          "date_extracted": "2026-02-07"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 6,
+    "implemented_count": 5,
+    "in_progress_count": 1,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 8701580,
+    "total_savings": 684936,
+    "average_savings_percentage": 7.87
+  },
+  "extraction_sources": [
+    "Project Closeout - Client/Supplemental Materials/Advantia - Project Close Out Summary - (11-22-2022).pptx",
+    "EXHIBIT A DATA (Initial Scope)",
+    "Categories/Medical Devices (IUDs)/Zero Order Analysis/Advantia - IUD Data & Zero Discount Orders (04-04-2022).xlsx",
+    "Project Updates/Advantia Strategic Sourcing Project Update (102122) vF1.pptx",
+    "Categories/Medical Devices (IUDs)/Denied IUD Analysis/Confidence in Coverage IUD Flashcard.pdf"
+  ],
+  "extraction_notes": [
+    "Baseline spend values default to Exhibit A where available; for Sonography and Lab Services the project close-out \u2018spend addressed\u2019 figure was used because Exhibit A grouped these dollars under broader diagnostic categories.",
+    "All savings figures and statuses sourced from the FINAL project close-out deck dated 11-22-2022, per instructions to treat this as source of truth."
+  ]
+}

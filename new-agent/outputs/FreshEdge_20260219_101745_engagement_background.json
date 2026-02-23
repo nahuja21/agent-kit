@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "FreshEdge engaged Treya Partners to conduct strategic sourcing across indirect (non-COGS) spend and select logistics categories in order to capture measurable cost savings and deliver at least $0.6M in guaranteed annual EBITDA improvement.",
+    "scope_summary": "The project initially covered 7+ indirect categories (e.g., packaging & corrugate, pallets, utilities, waste management, fuel, LTL/FTL freight, temp labor, benefits, insurance) representing roughly $25-33 M in addressable spend, with customer-directed tableware, contracted telecom, leased forklifts and other low-value areas explicitly excluded or later removed from scope.",
+    "constraints_challenges": [
+      "Highly fragmented spend spread across more than 20 business units (Get Fresh, Piazza, Indianapolis Fruit, Sirna & Sons, etc.) operating on separate systems and processes",
+      "Significant data cleansing effort required \u2013 multiple AP/GL exports, inconsistent vendor names, and large deltas between kickoff and refreshed spend files",
+      "Existing long-term supplier agreements and equipment leases (e.g., 3-year telecom contract, forklift leases) limit near-term addressable spend",
+      "Customer-directed or brand-specified suppliers (e.g., tableware) constrain supplier switching despite potential savings",
+      "Some categories showed limited savings (<5-10%) causing stakeholder reluctance to pursue changes"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "medium",
+    "data_availability": "AP/GL spend exports from Produce Pro and other systems for each business unit; no unified spend platform or contract repository.",
+    "data_quality_notes": "Multiple vendor naming conventions required manual de-duplication; differing time frames across files (Jan-Dec 2022 vs Jul 2023-Jun 2024) caused large variances; direct vs indirect spend intermingled and had to be re-mapped.",
+    "source_file": "Assessment/Spend Analysis FreshEdge 04.27.2023 (Original).xlsx; Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessment/Spend Analysis FreshEdge 04.27.2023 (Original).xlsx",
+    "Assessment/Spend Analysis FreshEdge 07.12.2023.xlsx",
+    "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+    "Agreement/2023.09.27 FreshEdge Treya - Procurement Cost Reduction Services K - Fully Executed.pdf"
+  ],
+  "extraction_notes": [
+    "Objective and fee details taken from Fees and Agreement pages (fixed fee $300K, minimum savings guarantee $600K).",
+    "Scope boundaries and exclusions derived from Savings Dashboard (Out-of-Scope & Discontinued lists) and initial Savings Opportunity worksheet.",
+    "Operating model and data challenges inferred from multi-BU spend files and AP Spend Comparison slide; maturity judged medium because some contracts and category management exist but no centralized procurement function."
+  ]
+}

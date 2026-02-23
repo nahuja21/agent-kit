@@ -1,0 +1,154 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Cascade Residential Services captures $803K in annual savings across HVAC and indirect categories",
+      "narrative": "Treya Partners\u2019 strategic sourcing program delivered $803,000 in validated annual savings for Cascade Residential Services across six actively-sourced categories. Two OEM agreements (Carrier and Rheem) are fully executed, locking in $426K of annual benefit through improved pricing and richer rebate structures. A further $377K is in advanced stages \u2013 including a Lennox rebate program, HVACR & Plumbing Supplies MOUs, Johnstone ECM incentives, and a Unifirst uniform program \u2013 and is expected to close in the coming months. The project standardized national pricing, introduced transparent rebate tiers, and positioned Cascade to leverage consolidated scale going forward."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 803137,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis_v2.xlsx",
+        "notes": "Sum of finalized ($426,341) and in-progress ($376,796) savings across all worked categories."
+      },
+      "finalized_savings": {
+        "amount": 426341,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis_v2.xlsx",
+        "notes": "Carrier agreement ($319,789) and Rheem agreement ($106,553) are fully executed."
+      },
+      "in_progress_savings": {
+        "amount": 376796,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis_v2.xlsx",
+        "notes": "Lennox rebate, Johnstone ECM program, HVACR & Plumbing Supplies MOU, and Uniforms program are negotiated but not yet implemented."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "HVAC OEM \u2013 Carrier",
+        "annual_savings": 319789,
+        "status": "finalized",
+        "status_notes": "National rebate & pricing agreement fully executed on 9/25/2025; savings comprises $297K rebate + $22K price improvements."
+      },
+      {
+        "category_name": "HVAC OEM \u2013 Rheem",
+        "annual_savings": 106553,
+        "status": "finalized",
+        "status_notes": "Consolidator Incentive Agreement signed 1/1/2026 providing 8% rebate on $2.57M spend."
+      },
+      {
+        "category_name": "HVAC OEM \u2013 Lennox",
+        "annual_savings": 268344,
+        "status": "in progress",
+        "status_notes": "Rebate program negotiated (16% of $2.76M spend); agreement under review."
+      },
+      {
+        "category_name": "HVAC OEM \u2013 Johnstone ECM Program",
+        "annual_savings": 24823,
+        "status": "in progress",
+        "status_notes": "ECM-specific rebate (2% base + 5% growth) on $356K spend; implementation pending."
+      },
+      {
+        "category_name": "HVACR & Plumbing Supplies",
+        "annual_savings": 25938,
+        "status": "awaiting signature",
+        "status_notes": "MOUs issued to R.E. Michel, Baker and Hughes; round-2 pricing yields $25.9K annual savings, awaiting vendor countersignature."
+      },
+      {
+        "category_name": "Uniforms",
+        "annual_savings": 57689,
+        "status": "in progress",
+        "status_notes": "Program consolidation to Unifirst via Rampart GPO identified 43% savings; implementation timeline 3-4 months."
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Fleet",
+        "reason": "Removed from scope \u2013 limited opportunity"
+      },
+      {
+        "category_name": "Advertising",
+        "reason": "Removed from scope \u2013 recent negotiations already completed"
+      },
+      {
+        "category_name": "Commercial Print",
+        "reason": "Removed from scope \u2013 minimal spend"
+      },
+      {
+        "category_name": "General Industrial / Electrical Supplies",
+        "reason": "Minimal opportunity after spend review"
+      },
+      {
+        "category_name": "Telecom \u2013 Data & Voice",
+        "reason": "Category already addressed via separate agreement prior to project"
+      },
+      {
+        "category_name": "Electronic Payment Processing",
+        "reason": "Current arrangements aligned with benchmarks \u2013 limited opportunity"
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 30,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": "Project Close Out/HVAC OEM/Carrier/2025-07-01-Cascade Rebate Agreement (Fully Executed).pdf",
+        "notes": "Carrier pricing and rebate savings began with contract effective date; exact first-invoice date not provided."
+      },
+      "notes": "Carrier savings began the first month after contract execution; other categories will phase in during Q1-Q2 2026."
+    },
+    "operational_improvements": "Established national, standardized price lists across key HVAC OEMs and plumbing distributors, introduced disciplined rebate tracking, and created template MOUs to streamline future supplier onboarding.",
+    "proof_points": [
+      {
+        "statement": "\u201cFinal agreement includes $297K from rebate and $22K from pricing improvements.\u201d",
+        "category": "HVAC OEM \u2013 Carrier",
+        "evidence": [
+          {
+            "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis_v2.xlsx",
+            "page_or_slide": "Summary tab \u2013 Carrier row"
+          }
+        ]
+      },
+      {
+        "statement": "\u201cSavings analysis suggests an overall $106K annual rebate savings when factoring in the Rheem national program.\u201d",
+        "category": "HVAC OEM \u2013 Rheem",
+        "evidence": [
+          {
+            "source_file": "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis_v2.xlsx",
+            "page_or_slide": "Summary tab \u2013 Rheem analysis"
+          }
+        ]
+      },
+      {
+        "statement": "\u201cCollected round-2 proposals \u2026 showing savings of $26K with R.E. Michel.\u201d",
+        "category": "HVACR & Plumbing Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Close Out/HVAC & Plumbing Supplies/Cascade Services - HVACR & Plumbing Supplies Savings Analysis.xlsx",
+            "page_or_slide": "Summary sheet"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Close Out/HVAC OEM/Cascade Services - HVAC OEM Savings Analysis_v2.xlsx",
+    "Project Close Out/HVAC OEM/Carrier/2025-07-01-Cascade Rebate Agreement (Fully Executed).pdf",
+    "Project Close Out/HVAC OEM/Rheem/Rheem Rebate Agreement_Cascade Residential Services_Final (jpi) - signed.pdf",
+    "Project Close Out/HVAC & Plumbing Supplies/Cascade Services - HVACR & Plumbing Supplies Savings Analysis.xlsx",
+    "Project Updates/Cascade Services - Strategic Sourcing Project Update (January 23, 2026).pptx",
+    "Project Close Out/HVAC & Plumbing Supplies/MOUs/Hughes ^M Cascade MOU January 2026.docx"
+  ],
+  "extraction_notes": [
+    "Lennox total savings differs between two Close-Out workbooks: original file shows $373,003 vs. v2 shows $268,344 (used v2).",
+    "Uniforms savings ($57,689) only appears in latest project update \u2013 acceptable because category is in progress and absent from Close-Out.",
+    "Front-end pricing for Lennox shows negative savings; only rebate savings counted, matching workbook\u2019s total column.",
+    "Savings totals rounded to nearest whole dollar for reporting."
+  ]
+}

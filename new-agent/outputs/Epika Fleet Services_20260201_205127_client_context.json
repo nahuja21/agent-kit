@@ -1,0 +1,48 @@
+{
+  "client": {
+    "client_name": "Epika Fleet Services, Inc.",
+    "industry_primary": "Commercial fleet maintenance & repair services",
+    "industry_secondary": "Mobile and in-shop truck service centers",
+    "primary_industry_sector": "Logistics, Fleet, Distribution & Aftermarket Parts",
+    "business_model": "Nationwide network of mobile technicians and service centers providing preventative maintenance and repair for medium- and heavy-duty truck fleets",
+    "sponsor_pe_firm": "Ares Management Corporation (majority owner, acquired April 2025)",
+    "client_history": "Founded in 2016 and headquartered in Nashville, Tennessee, Epika Fleet Services has grown through ten+ acquisitions into a coast-to-coast provider serving more than 2,000 fleet customers across nearly 40 states."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 18000000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Growjo estimate (growjo.com/company/Epika_Fleet_Services, accessed 2026-02-02)",
+      "notes": "Company does not publicly disclose revenue. Growjo estimates ~$18 M. No corroborating figures found in press releases or filings."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 20,
+      "confidence": "low",
+      "source": "PR Newswire release 2023-10-06 (prnewswire.com/news-releases/epika-fleet-services-partners-with-fleet-mobile-maintenance-in-detroit-mi-301661131.html)",
+      "notes": "Release states 'approximately 20 in-shop centers'. Mobile branches and quick-service sites are additional but not clearly enumerated; physical in-shop facilities most comparable to 'locations' metric requested."
+    },
+    "employees": {
+      "count": 550,
+      "confidence": "medium",
+      "source": "Epika press release announcing Ares acquisition (epikafleet.com/press-release/epika-fleet-services-inc-acquired-by-ares-management, 2025-04-21)",
+      "notes": "Press release cites 'more than 550 technicians'; LinkedIn company page lists ~600 total employees (accessed 2026-02-02). Using 550 as conservative figure."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Treya Procurement Cost Reduction Services Agreement_Epika Fleet Services_vF_8.26.24.pdf",
+    "Project Updates/Epika - Case Study.pptx (slide 3)",
+    "Epika press release \u2013 Ares acquisition (epikafleet.com, 2025-04-21)",
+    "PR Newswire \u2013 partnership with Fleet Mobile Maintenance (2023-10-06)",
+    "Growjo company profile (growjo.com/company/Epika_Fleet_Services)",
+    "LinkedIn company page (accessed 2026-02-02)"
+  ],
+  "extraction_notes": [
+    "Official legal name confirmed in services agreement between Treya Partners and Epika Fleet Services, Inc.",
+    "PE ownership: Trivest was minority investor (2018) but majority stake now held by Ares Management as confirmed by multiple press releases; Ares reported as current sponsor.",
+    "Revenue is an external estimate only; no primary documents list dollar figures.",
+    "Employee count varies slightly by source (550+ in 2025 press release vs ~600 on LinkedIn); treated as medium confidence.",
+    "Physical location count refers to in-shop centers; total service touch-points (mobile branches, quick-service, etc.) are higher but inconsistently reported."
+  ]
+}

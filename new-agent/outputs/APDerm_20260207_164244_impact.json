@@ -1,0 +1,180 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "APDerm captures $1.18M in annual savings across 12 spend categories; $0.91M already locked in",
+      "narrative": "Through a two-phase strategic sourcing program with Treya Partners, Adult & Pediatric Dermatology (APDerm) optimized $6.3 million in indirect spend spanning medical supplies, revenue cycle, facilities, logistics and more. The engagement has delivered $907,775 in finalized annual savings across nine categories, while another $272,190 is in the final award or reporting stage. Key wins include a 27% reduction on medical supplies with McKesson, a 17% fee cut with Athenahealth billing services, and a 20% cost drop in janitorial services. Most savings were achieved while retaining incumbent suppliers, minimizing operational disruption."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1179965,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Sum of Phase 1 savings ($703,965) + finalized Phase 2 savings ($203,810) + in-progress Phase 2 savings ($272,190)."
+      },
+      "finalized_savings": {
+        "amount": 907775,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Includes all Phase 1 categories plus Janitorial Services and Non-IT Temp Labor from Phase 2."
+      },
+      "in_progress_savings": {
+        "amount": 272190,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "Billing Services, Copier/Print and Uniforms are in award review or reporting stages."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 485087,
+        "status": "finalized",
+        "status_notes": "McKesson agreement executed 7/30/21; 27% savings implemented (Slide 5 & 16)."
+      },
+      {
+        "category_name": "Courier Services",
+        "annual_savings": 121572,
+        "status": "finalized",
+        "status_notes": "Millers Express & Xpressman contracts fully executed; 28% savings (Slide 16)."
+      },
+      {
+        "category_name": "Telecom \u2013 Circuits",
+        "annual_savings": 37454,
+        "status": "finalized",
+        "status_notes": "OneSource (MetTel/Verizon) selected; 38% savings (Slide 16)."
+      },
+      {
+        "category_name": "IT Hardware",
+        "annual_savings": 29410,
+        "status": "finalized",
+        "status_notes": "Whalley selected; 27% savings (Slide 16)."
+      },
+      {
+        "category_name": "Office Supplies & Furniture",
+        "annual_savings": 13694,
+        "status": "finalized",
+        "status_notes": "WB Mason contract complete; 8% savings (Slide 16)."
+      },
+      {
+        "category_name": "Small Parcel Shipping",
+        "annual_savings": 10508,
+        "status": "finalized",
+        "status_notes": "UPS selected; 30% savings (Slide 16)."
+      },
+      {
+        "category_name": "Telecom \u2013 PBX / Contact Center",
+        "annual_savings": 6240,
+        "status": "finalized",
+        "status_notes": "Tidal selected; 3% savings (Slide 16)."
+      },
+      {
+        "category_name": "Janitorial Services",
+        "annual_savings": 193565,
+        "status": "finalized",
+        "status_notes": "Enterprise Cleaning rates implemented 6/1/22; 20% savings (Slide 3 & 4)."
+      },
+      {
+        "category_name": "Non-IT Temporary Labor",
+        "annual_savings": 10245,
+        "status": "finalized",
+        "status_notes": "Randstad Premier GPO pricing implemented; 11% savings (Slide 3 & 12)."
+      },
+      {
+        "category_name": "Billing Services",
+        "annual_savings": 259800,
+        "status": "awaiting signature",
+        "status_notes": "Athenahealth fee reduced from 1.80% to 1.50%; contract under award review (Slide 3 & 13)."
+      },
+      {
+        "category_name": "Copier / Print Services",
+        "annual_savings": 9369,
+        "status": "in progress",
+        "status_notes": "Usage data collection completed; proposal analysis in reporting phase. Low-end savings value used (Slide 3)."
+      },
+      {
+        "category_name": "Uniforms",
+        "annual_savings": 3021,
+        "status": "award review",
+        "status_notes": "Cintas proposal analyzed; decision pending (Slide 3 & 4). Low-end savings value used."
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "IT Managed Services",
+        "reason": "Opportunity identified but sourcing not yet begun; no savings shown in close-out."
+      },
+      {
+        "category_name": "Laundry / Linen",
+        "reason": "Data collection only; no sourcing activity or savings reported."
+      },
+      {
+        "category_name": "Waste Management",
+        "reason": "Deemed out of scope due to recent Stericycle agreement."
+      },
+      {
+        "category_name": "Path Lab Systems",
+        "reason": "Pricing comparison performed but no savings quantified or supplier selected."
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 60,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+        "notes": "First finalized savings came with the McKesson medical supplies contract executed 7/30/21, roughly two months after Phase 1 kick-off."
+      },
+      "notes": "Most Phase 1 categories were implemented within the first quarter of the engagement."
+    },
+    "operational_improvements": "Standardized supplier contracts across more than 30 clinic locations, leveraged two GPOs (HPG & Premier) for price stability, and instituted ongoing usage tracking for janitorial and copier programs to ensure sustained compliance.",
+    "proof_points": [
+      {
+        "statement": "Reduced Athenahealth revenue-share fee from 1.80% to 1.50%, unlocking $259,800 in annual savings (17%).",
+        "category": "Billing Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "page_or_slide": "13",
+            "quote": "Billing Systems Spend: $1,558,800 \u2192 $1,299,000   Cost Savings $259,800 (17%)"
+          }
+        ]
+      },
+      {
+        "statement": "Negotiated McKesson distribution agreement delivering 27% savings ($485K) on medical supplies while locking pricing for 12 months.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "page_or_slide": "5",
+            "quote": "Historical Spend $1,817,711 | Savings % 27 | Savings $ 485,087"
+          }
+        ]
+      },
+      {
+        "statement": "Consolidated janitorial services under Enterprise Cleaning with retroactive pricing, cutting costs by $193,565 annually (20%).",
+        "category": "Janitorial Services",
+        "evidence": [
+          {
+            "source_file": "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+            "page_or_slide": "3",
+            "quote": "Scenario 1: All locations awarded to Enterprise Cleaning | $193,565 savings"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Wave 2/Updates/APDerm Phase 2 Project Close-out (Aug 5, 2022).pptx",
+    "Case Study/Treya Case Study_APDerm vF.pdf"
+  ],
+  "extraction_notes": [
+    "Copier/Print Services and Uniforms show a savings range; low-end value was taken for conservative reporting.",
+    "No conflicting savings amounts were found between the Close-out and Case Study documents; Close-out values used exclusively.",
+    "IT Managed Services, Laundry/Linen, Waste Management and Path Lab appear in data trackers but have no quantified savings in the Close-out and were therefore excluded."
+  ]
+}

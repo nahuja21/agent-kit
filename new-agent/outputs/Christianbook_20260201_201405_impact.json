@@ -1,0 +1,120 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Treya delivers $1.24M in fully-finalized annual savings across five spend categories for Christianbook",
+      "narrative": "Through competitive RFPs, incumbent renegotiations, and carrier trials, Treya Partners secured $1,237,359 in recurring annual savings for Christianbook across Merchant Processing, LTL/FTL freight, Corrugated, and Packaging Supplies. All five categories are contracted and implemented, preserving service continuity while reducing costs by an average of 13%. The rapid, data-driven sourcing approach translated to material EBITDA lift and an estimated $11M in enterprise value."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 1237359,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Sum of savings avg. for all finalized categories"
+      },
+      "finalized_savings": {
+        "amount": 1237359,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "All included categories show check-mark 'Savings Finalized'"
+      },
+      "in_progress_savings": {
+        "amount": 0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": null,
+        "notes": "No additional categories currently in flight with pending savings"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Merchant Processing Fees",
+        "annual_savings": 627726,
+        "status": "finalized",
+        "status_notes": "Calibr selected; contract signed 2/24/2025 at 10% fee reduction"
+      },
+      {
+        "category_name": "LTL",
+        "annual_savings": 266350,
+        "status": "finalized",
+        "status_notes": "Echo Logistics awarded; 31% cost reduction effective 2/28/2025"
+      },
+      {
+        "category_name": "FTL",
+        "annual_savings": 64494,
+        "status": "finalized",
+        "status_notes": "Echo Logistics trial converted; 8% savings locked in 2/28/2025"
+      },
+      {
+        "category_name": "Corrugated",
+        "annual_savings": 168060,
+        "status": "finalized",
+        "status_notes": "Pricing with Unicorr, Rand, Key Container implemented Jan 2025"
+      },
+      {
+        "category_name": "Packaging & Shipping Supplies",
+        "annual_savings": 110729,
+        "status": "finalized",
+        "status_notes": "Accutech & Peak contracts live Jan 2025 delivering 12% savings"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 60,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Case Study- Christianbook.docx",
+        "notes": "Corrugated and Packaging savings went live within two months of RFP close"
+      },
+      "notes": "First savings captured in early Q1 2025 following December contract awards."
+    },
+    "operational_improvements": "Expanded carrier and supplier bench strength, improved pricing transparency, and instituted quarterly business reviews for freight and packaging suppliers.",
+    "proof_points": [
+      {
+        "statement": "Secured 31% savings in LTL freight by shifting volume to Echo Logistics, worth $266K annually.",
+        "category": "LTL",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+            "page_or_slide": "1",
+            "quote": "\u00fc | 2/28/2025 | LTL | $873,264 | 31% | $266,350"
+          }
+        ]
+      },
+      {
+        "statement": "Negotiated 10% reduction in merchant processing fees, equating to $628K annual savings while moving to Calibr.",
+        "category": "Merchant Processing Fees",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+            "page_or_slide": "1",
+            "quote": "\u00fc | 2/24/2025 | Merchant Processing Fees | $5,367,215 | 10% | $627,726"
+          }
+        ]
+      },
+      {
+        "statement": "Retained incumbent corrugated suppliers while cutting costs by $168K (14%).",
+        "category": "Corrugated",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+            "page_or_slide": "12",
+            "quote": "We reduced costs by $168K while retaining incumbent suppliers Unicorr and Rand..."
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+    "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+    "Case Study- Christianbook.docx"
+  ],
+  "extraction_notes": [
+    "Only categories with finalized savings check-marks were included.",
+    "Ingram Book Group yielded no savings and is excluded per extraction rules.",
+    "Employee Benefits, Marketing Software, Janitorial Services and all 'Potential New Opportunities' were excluded as no meaningful sourcing work is complete."
+  ]
+}

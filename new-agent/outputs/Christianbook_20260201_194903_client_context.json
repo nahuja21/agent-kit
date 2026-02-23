@@ -1,0 +1,52 @@
+{
+  "client": {
+    "client_name": "Christianbook, LLC",
+    "industry_primary": "Retail (Books & Faith-based Products)",
+    "industry_secondary": "E-commerce & Catalog Distribution",
+    "primary_industry_sector": "Retail, Consumer Brands & DTC",
+    "business_model": "Family-founded online and catalog retailer/wholesaler of Christian books, media, gifts and curriculum serving consumers, churches and schools worldwide.",
+    "sponsor_pe_firm": "Nonantum Capital Partners",
+    "client_history": "Founded in 1978 by the Hendrickson family, Christianbook has grown from a garage-based bookseller into one of the world\u2019s largest distributors of Christian products. Headquartered in Peabody, Massachusetts, the company operates a 370,000-sq-ft fulfillment center and serves millions of customers through its e-commerce site and extensive catalog mailings."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 71000000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Manta.com company profile (Christianbook.com \u2013 $71,120,468, accessed 2024-02-02)",
+      "notes": "Other estimation sites list $53.4M (Growjo) and $84.2M (Buzzfile). No official figures released. Reported as mid-point of public estimates; treated with low confidence."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 1,
+      "confidence": "high",
+      "source": "Christianbook.com FAQs/About page \u2013 indicates only headquarters with customer pick-up at 140 Summit St, Peabody, MA.",
+      "notes": "Company states it does not operate retail stores beyond its Peabody headquarters."
+    },
+    "employees": {
+      "count": 560,
+      "confidence": "medium",
+      "source": "TopWorkplaces.com profile (lists approximately 560 employees, accessed 2024-02-02)",
+      "notes": "Other sources: itemlive.com (\u2248600 in 2020), Wikipedia (500 in 2012; 600 in 2019). Using most recent third-party listing; moderate variance across years."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Treya Procurement Cost Reduction Services Agreement Christianbook_v2.pdf",
+    "Case Study- Christianbook.docx",
+    "Christianbook.com \u2013 About/FAQs pages",
+    "Accio.com article on recapitalization (2023)",
+    "TopWorkplaces.com company profile (2024)",
+    "Manta.com company profile",
+    "Growjo.com company estimate",
+    "Buzzfile.com company estimate",
+    "Itemlive.com news article (2020)",
+    "Wikipedia.org \u2013 Christianbook page"
+  ],
+  "extraction_notes": [
+    "Official legal name confirmed in services agreement (Christianbook, LLC).",
+    "PE sponsorship: Accio.com press release states recapitalization by Nonantum Capital Partners alongside founder.",
+    "Revenue figures are estimates only; no audited or official numbers available, leading to low confidence.",
+    "Single operating location consistently referenced across company materials; no evidence of additional facilities.",
+    "Employee count varies by source and year; selected most recent reliable listing (TopWorkplaces 2024)."
+  ]
+}

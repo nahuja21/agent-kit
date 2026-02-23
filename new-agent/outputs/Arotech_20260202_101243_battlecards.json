@@ -1,0 +1,280 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "Rave Computer",
+      "category": "Rave Computer Hardware",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1600000,
+      "final_spend": 1538000,
+      "savings_dollars": 62000,
+      "savings_percent": 4,
+      "levers_applied": [
+        "Renegotiation"
+      ],
+      "alternatives_considered": [],
+      "why_selected": "Retained due to specialized hardware configuration knowledge and willingness to reduce pricing after benchmarking.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing concessions applied to existing MSA; no term change disclosed.",
+      "negotiation_leverage": "Threat of competitive bid and volume visibility.",
+      "supplier_strengths": "Deep product expertise with Arotech\u2019s simulation hardware; proven delivery.",
+      "supplier_weaknesses": "Limited competition in niche configurations kept savings to 4%.",
+      "switching_costs": "Hardware requalification and potential production delays.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant negotiation",
+        "Meaningful savings (> $50K)"
+      ]
+    },
+    {
+      "supplier_name": "Connection",
+      "category": "COGS \u2013 Audio Visual / IT",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 2500000,
+      "final_spend": null,
+      "savings_dollars": 158000,
+      "savings_percent": 6,
+      "levers_applied": [
+        "Competitive bidding",
+        "Supplier diversification"
+      ],
+      "alternatives_considered": [
+        "Tierney/Bluum",
+        "Synnex",
+        "CDW"
+      ],
+      "why_selected": "Provided best overall pricing on high-volume AV items and could integrate with existing IT hardware program.",
+      "why_not_selected": null,
+      "contract_terms": "Catalog pricing with quarterly review; no volume commitment stated.",
+      "negotiation_leverage": "Large consolidated spend ($2.5M) and competition among four national resellers.",
+      "supplier_strengths": "Broad line card, existing relationship on IT side, strong logistics.",
+      "supplier_weaknesses": "Requires minimum order size for free freight.",
+      "switching_costs": "Low \u2013 standard commodity products.",
+      "key_contacts": {
+        "name": "Aaron Noga",
+        "email": "Aaron.Noga@connection.com",
+        "phone": "603-683-3172"
+      },
+      "notes": "Connection will also absorb a portion of previous Amazon hardware spend.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multiple suppliers involved",
+        "Competitive bid run",
+        "Significant savings"
+      ]
+    },
+    {
+      "supplier_name": "Connection",
+      "category": "IT Hardware / Peripherals (Amazon replacement)",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 677695,
+      "final_spend": 662210,
+      "savings_dollars": 15485,
+      "savings_percent": 5,
+      "levers_applied": [
+        "Alternate reseller sourcing",
+        "Price benchmarking"
+      ],
+      "alternatives_considered": [
+        "Continue buying from Amazon Business"
+      ],
+      "why_selected": "Matched Amazon SKU list and agreed to flat 5% discount with dedicated account support.",
+      "why_not_selected": null,
+      "contract_terms": "Price file tied to matched SKUs; review every 6 months.",
+      "negotiation_leverage": "Ability to redirect ~$680K of unmanaged Amazon spend.",
+      "supplier_strengths": "Lower landed cost, centralized invoicing, tax-exempt processing.",
+      "supplier_weaknesses": "Slightly longer lead times than Amazon Prime.",
+      "switching_costs": "User training to order through Connection portal.",
+      "key_contacts": {
+        "name": "Aaron Noga",
+        "email": "Aaron.Noga@connection.com",
+        "phone": "603-683-3172"
+      },
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "Benchmarking produced measurable savings"
+      ]
+    },
+    {
+      "supplier_name": "Enterprise / National (via OMNIA Partners)",
+      "category": "Car Rental",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 185000,
+      "final_spend": 155400,
+      "savings_dollars": 29600,
+      "savings_percent": 16,
+      "levers_applied": [
+        "GPO contract",
+        "Benchmark pricing"
+      ],
+      "alternatives_considered": [
+        "Remain on direct agreement"
+      ],
+      "why_selected": "OMNIA GPO contract delivered 13-32% lower daily rates with no participation fee.",
+      "why_not_selected": null,
+      "contract_terms": "Participation agreement with OMNIA; no volume commitment; rates locked for 2 years.",
+      "negotiation_leverage": "Aggregate buying power of OMNIA membership and demonstrated savings analysis.",
+      "supplier_strengths": "Large location network; Emerald Aisle benefits; centralized billing.",
+      "supplier_weaknesses": "Some premium classes showed minimal savings.",
+      "switching_costs": "Minimal\u2014same supplier, just new billing codes.",
+      "key_contacts": {
+        "name": "Meghan Thomas",
+        "email": "Meghan.e.thomas@ehi.com",
+        "phone": "216-338-7529"
+      },
+      "notes": "Arotech must complete DocuSign forms to activate new billing codes.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "GPO leveraged",
+        "Meaningful savings",
+        "Contract structure changed"
+      ]
+    },
+    {
+      "supplier_name": "Grainger",
+      "category": "MRO (Industrial Supplies)",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 310000,
+      "final_spend": 292516,
+      "savings_dollars": 17484,
+      "savings_percent": 6,
+      "levers_applied": [
+        "Dual-source strategy",
+        "GPO participation"
+      ],
+      "alternatives_considered": [
+        "Fastenal via OMNIA"
+      ],
+      "why_selected": "Maintained for breadth of catalog and existing punch-out integration; matched select Fastenal pricing.",
+      "why_not_selected": null,
+      "contract_terms": "Existing Grainger agreement retained; supplemental Fastenal option added.",
+      "negotiation_leverage": "Threat of shifting high-margin lines to Fastenal.",
+      "supplier_strengths": "Next-day delivery, wide SKU availability, established terms.",
+      "supplier_weaknesses": "Higher pricing on specific categories (e.g., plumbing).",
+      "switching_costs": "System integrations and established user familiarity.",
+      "key_contacts": null,
+      "notes": "Savings concentrated in categories where Fastenal outperformed Grainger.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier consolidation/dual source",
+        "Negotiation against alternative pricing"
+      ]
+    },
+    {
+      "supplier_name": "Fastenal (via OMNIA Partners)",
+      "category": "MRO (Industrial Supplies)",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "GPO participation",
+        "Category benchmarking"
+      ],
+      "alternatives_considered": [
+        "Grainger"
+      ],
+      "why_selected": "Offered 18-50% lower pricing on targeted categories such as plumbing and adhesives.",
+      "why_not_selected": null,
+      "contract_terms": "OMNIA participation agreement; no volume commitment.",
+      "negotiation_leverage": "Ability to shift spend away from Grainger created concessions.",
+      "supplier_strengths": "Competitive category pricing, branch network, vendor-managed inventory options.",
+      "supplier_weaknesses": "Smaller SKU breadth than Grainger.",
+      "switching_costs": "Low; purchases will be spot buys on identified categories.",
+      "key_contacts": {
+        "name": "Eric Chaput",
+        "email": "echaput@fastenal.com",
+        "phone": "401-651-8420"
+      },
+      "notes": "Projected to capture spend in seven high-savings segments.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "New dual-source supplier",
+        "GPO leveraged for pricing"
+      ]
+    },
+    {
+      "supplier_name": "IHG Business Edge",
+      "category": "Hotels \u2013 Chainwide Program",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 278000,
+      "final_spend": 250000,
+      "savings_dollars": 28000,
+      "savings_percent": 10,
+      "levers_applied": [
+        "Chainwide discount program",
+        "Travel program consolidation"
+      ],
+      "alternatives_considered": [
+        "Unmanaged hotel bookings"
+      ],
+      "why_selected": "10% off BAR across 17 IHG brands with seamless Egencia integration.",
+      "why_not_selected": null,
+      "contract_terms": "Business Edge enrollment; rates loaded in Egencia; annual review.",
+      "negotiation_leverage": "Volume data and commitment to drive 50% of stays to IHG.",
+      "supplier_strengths": "Global footprint; loyalty benefits; self-service rate loading.",
+      "supplier_weaknesses": "Requires travelers to choose IHG to realize savings.",
+      "switching_costs": "Low \u2013 opt-out of program at any time.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "New program enrollment",
+        "Strategic savings across chain"
+      ]
+    },
+    {
+      "supplier_name": "Holiday Inn Express & Suites Ann Arbor",
+      "category": "Hotels \u2013 Property-Specific Agreement",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 22266,
+      "final_spend": 13230,
+      "savings_dollars": 3785,
+      "savings_percent": 17,
+      "levers_applied": [
+        "Property-specific rate negotiation"
+      ],
+      "alternatives_considered": [
+        "Continue booking at retail rate in Ann Arbor market"
+      ],
+      "why_selected": "Offered fixed $105 nightly rate including breakfast and parking.",
+      "why_not_selected": null,
+      "contract_terms": "Rate valid through 12/31/2023; non-last room availability.",
+      "negotiation_leverage": "Consolidated 126 annual nights into single property commitment.",
+      "supplier_strengths": "Proximity to HQ, reliable availability, complimentary services.",
+      "supplier_weaknesses": "Rate is NLRA \u2013 blackout risk at peak times.",
+      "switching_costs": "Low \u2013 individual traveler booking preference changes.",
+      "key_contacts": {
+        "name": "Nancy Schnebelt",
+        "email": "nancy@aaholidayinn.com",
+        "phone": "734-827-1100"
+      },
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Property-specific negotiation",
+        "Documented savings >15%"
+      ]
+    }
+  ]
+}

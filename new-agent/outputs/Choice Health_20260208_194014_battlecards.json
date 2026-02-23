@@ -1,0 +1,177 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "McKesson Medical-Surgical Minnesota Supply Inc.",
+      "category": "Medical Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1301434,
+      "final_spend": 1025101,
+      "savings_dollars": 276333,
+      "savings_percent": 21.2,
+      "levers_applied": [
+        "Competitive RFP",
+        "Volume aggregation",
+        "Benchmarking",
+        "Contract renegotiation"
+      ],
+      "alternatives_considered": [
+        "Cardinal Health",
+        "Medline Industries",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": "Delivered deepest price concessions (\u224820% on full market basket) while eliminating transition risk; agreed to firm two-year pricing and quarterly rebates.",
+      "why_not_selected": null,
+      "contract_terms": "2-year master supply agreement (15-Jul-2024 \u2013 15-Jul-2026) with firm pricing, volume-based rebates, optional 1-year renewal.",
+      "negotiation_leverage": "Credible threat of switch to Medline/Cardinal, SKU-level benchmark gaps, and consolidated enterprise volume enabled aggressive discounting.",
+      "supplier_strengths": [
+        "Broad post-acute catalog",
+        "Next-day delivery to 95 % of branches",
+        "Dedicated implementation & analytics support"
+      ],
+      "supplier_weaknesses": [
+        "Pre-RFP pricing drifted above market",
+        "Only 15 % SKU overlap in initial benchmark required iterative pricing rounds"
+      ],
+      "switching_costs": "Low-to-moderate since incumbent systems already in place; retaining supplier avoided staff retraining and formulary rebuild.",
+      "key_contacts": [
+        "Shane Holloway \u2013 VP Post-Acute Corporate Accounts",
+        "Kerri Laginess \u2013 Corporate Accounts Director"
+      ],
+      "notes": "MOU executed July 2024; savings to be validated quarterly by Treya and Choice Health finance.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted with 6 bidders",
+        "Significant savings (>20%)",
+        "Contract renegotiation vs. potential switch"
+      ]
+    },
+    {
+      "supplier_name": "Medline Industries, LP",
+      "category": "Medical Supplies",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 1301434,
+      "final_spend": null,
+      "savings_dollars": 129679,
+      "savings_percent": 10.0,
+      "levers_applied": [
+        "Competitive RFP"
+      ],
+      "alternatives_considered": [
+        "McKesson Medical-Surgical",
+        "Cardinal Health",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Offered only 10 % savings vs. McKesson\u2019s 20 %+ and required full system transition with higher implementation cost.",
+      "contract_terms": null,
+      "negotiation_leverage": "Used Medline quote as benchmark to secure deeper concessions from incumbent.",
+      "supplier_strengths": [
+        "Direct-to-home distribution model",
+        "Competitive pricing on wound-care SKUs",
+        "Nationwide DC network"
+      ],
+      "supplier_weaknesses": [
+        "Missed target prices on ~50 % of market basket",
+        "Less favorable rebate structure",
+        "Limited EDI readiness for Choice systems"
+      ],
+      "switching_costs": "High \u2013 new ordering portal, SKU cross-referencing, and staff training required.",
+      "key_contacts": null,
+      "notes": "Kept engaged through two RFP rounds; final offer submitted 18-Jun-2024.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Participated in multi-round RFP",
+        "Pricing used as negotiation lever"
+      ]
+    },
+    {
+      "supplier_name": "Cardinal Health at-Home",
+      "category": "Medical Supplies",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 1301434,
+      "final_spend": null,
+      "savings_dollars": 79702,
+      "savings_percent": 12.0,
+      "levers_applied": [
+        "Competitive RFP"
+      ],
+      "alternatives_considered": [
+        "McKesson Medical-Surgical",
+        "Medline Industries",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Initial submission had unit-of-measure discrepancies; corrected pricing still lagged McKesson on high-volume SKUs and lacked firm rebate commitment.",
+      "contract_terms": null,
+      "negotiation_leverage": "Incomplete bid limited utility, but presence in final round reinforced competitive tension.",
+      "supplier_strengths": [
+        "Strong chronic-care product set",
+        "Regional DC in Fort Worth (reduced transit times)"
+      ],
+      "supplier_weaknesses": [
+        "Data quality issues in RFP response",
+        "Savings below target",
+        "Unclear implementation timeline"
+      ],
+      "switching_costs": "Would require new EDI integration and distribution onboarding.",
+      "key_contacts": null,
+      "notes": "Treya analysis indicates potential to revisit in future cycles if service issues with incumbent arise.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Participated in RFP",
+        "Bid quality issues required additional analysis"
+      ]
+    },
+    {
+      "supplier_name": "Enterprise Fleet Management",
+      "category": "Fleet",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 3764808,
+      "final_spend": 3624958,
+      "savings_dollars": 139850,
+      "savings_percent": 3.7,
+      "levers_applied": [
+        "Program restructuring",
+        "Benchmarking analysis",
+        "Contract renegotiation"
+      ],
+      "alternatives_considered": [],
+      "why_selected": "Amended full-maintenance program cut monthly maintenance rates up to 48 % in low-mileage bucket without disrupting existing leases.",
+      "why_not_selected": null,
+      "contract_terms": "Service Agreement Addendum executed Jun-2024; maintenance rates tiered by five mileage buckets; annual review clause.",
+      "negotiation_leverage": "Treya analysis showed only 33 % of vehicles drew maintenance yet were billed flat rate; data drove cost-to-serve argument.",
+      "supplier_strengths": [
+        "Nationwide service network",
+        "Existing lease fleet & reporting",
+        "Willingness to restructure pricing quickly"
+      ],
+      "supplier_weaknesses": [
+        "Legacy flat-rate model over-billed Choice Health",
+        "Limited transparency on pass-through repair costs"
+      ],
+      "switching_costs": "High \u2013 385 active leases would incur termination penalties; driver onboarding to new lessor.",
+      "key_contacts": null,
+      "notes": "Savings tracked at $140 K annually; Treya to memorialize terms and monitor adherence through quarterly scorecards.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant contract restructuring",
+        "Detailed benchmark analysis used to drive pricing",
+        "Savings >$50 K"
+      ]
+    }
+  ]
+}

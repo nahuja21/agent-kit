@@ -1,0 +1,50 @@
+{
+  "client": {
+    "client_name": "Christianbook, LLC",
+    "industry_primary": "Retail (Books, Media & Gifts)",
+    "industry_secondary": "E-commerce & Distribution",
+    "primary_industry_sector": "Retail, Consumer Brands & DTC",
+    "business_model": "Omnichannel retailer and distributor of Christian books, Bibles, gifts and homeschool resources, selling through a large e-commerce site, print catalogs and wholesale channels.",
+    "sponsor_pe_firm": "Nonantum Capital Partners",
+    "client_history": "Founded in 1978 by the Hendrickson family, Christianbook has grown from a small mail-order operation into one of the largest global suppliers of Christian-focused books and related products, operating out of a 370,000-sq-ft headquarters in Peabody, Massachusetts."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 71000000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Growjo ($53.4M), Manta ($71.1M), Buzzfile ($84.2M)",
+      "notes": "No official filing available. Third-party estimates range $53.4M\u2013$84.2M. Used mid-range figure ($71M) but reliability is low."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 1,
+      "confidence": "medium",
+      "source": "Company headquarters address in Agreement PDF and Google Maps listing",
+      "notes": "Only a single 370,000-sq-ft headquarters/distribution facility in Peabody, MA is referenced in all sources; no additional offices confirmed."
+    },
+    "employees": {
+      "count": 560,
+      "confidence": "medium",
+      "source": "TopWorkplaces.com (560 employees) corroborated by Wikipedia (\"over 600\" in 2019) and Leadiq (\u2248501 in 2025)",
+      "notes": "Estimates vary between 450\u2013600. Selected 560 from TopWorkplaces (dated 2023) as the most specific recent figure."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Treya Procurement Cost Reduction Services Agreement Christianbook_v2.docx.pdf (pages 1-2)",
+    "Case Study- Christianbook.docx",
+    "Growjo company page (https://growjo.com/company/Christianbook.com)",
+    "Manta company profile (https://www.manta.com/c/mmf6vg3/christianbook-com)",
+    "Buzzfile company profile (https://www.buzzfile.com/business/C-B-D-978-977-5000)",
+    "TopWorkplaces.com profile (https://topworkplaces.com/company/christian-book-distributors-inc/)",
+    "Wikipedia article on Christianbook (https://en.wikipedia.org/wiki/Christianbook)",
+    "Google Maps listing \u2013 Christianbook HQ, 140 Summit St, Peabody, MA"
+  ],
+  "extraction_notes": [
+    "Official legal name confirmed from signed services agreement (\"Christianbook, LLC\").",
+    "PE ownership: recapitalization by Nonantum Capital Partners noted by Accio.com and Rushtopress.org articles.",
+    "Revenue highly inconsistent across estimation sites; no audited figures available, hence low confidence.",
+    "Only a single physical facility is documented; company primarily operates online/catalog channels.",
+    "Employee count fluctuates in public sources; selected midpoint value and marked confidence as medium."
+  ]
+}

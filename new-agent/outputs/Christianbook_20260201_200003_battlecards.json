@@ -1,0 +1,298 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "Calibr Merchant Solutions",
+      "category": "Merchant Processing Fees",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 5367215,
+      "final_spend": 4809500,
+      "savings_dollars": 557715,
+      "savings_percent": 10.4,
+      "levers_applied": [
+        "RFP",
+        "Supplier switch",
+        "Fee renegotiation"
+      ],
+      "alternatives_considered": [
+        "Chase Paymentech",
+        "Braintree / PayPal"
+      ],
+      "why_selected": "Quoted a 2.56% net effective rate vs. incumbent 2.86%; projected >$550K annual savings; offered agnostic technology stack, strong customer service and interchange optimization support.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing to be memorialized post-award; month-to-month with option to exit incumbent Chase once Calibr live; 3-5 year enterprise value modeled on savings.",
+      "negotiation_leverage": "Provided Chase\u2019s detailed 12-month statement to all bidders; credible switching intent and PE-backed mandate for 10%+ savings.",
+      "supplier_strengths": [
+        "Lower processor and network fees",
+        "Consultative onboarding team",
+        "Ability to further optimize interchange after go-live"
+      ],
+      "supplier_weaknesses": [
+        "Implementation effort for token migration",
+        "Limited track record with Christian-focused retailers"
+      ],
+      "switching_costs": "Re-tokenizing stored cards, migrating subscription/MIT framework, re-certifying payment pages; estimated 4\u20136 week IT effort.",
+      "key_contacts": null,
+      "notes": "Treya to schedule implementation kickoff; Calibr believes additional savings possible after first quarter review.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders",
+        "Supplier switched",
+        "Savings >10%"
+      ]
+    },
+    {
+      "supplier_name": "Chase Paymentech",
+      "category": "Merchant Processing Fees",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 5367215,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP",
+        "Benchmark challenge"
+      ],
+      "alternatives_considered": [
+        "Calibr Merchant Solutions",
+        "Braintree / PayPal"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Refused to improve 2.86% net effective rate; potential future increases; lost on price and service flexibility.",
+      "contract_terms": "Monthly evergreen agreement; no minimum volume commitments.",
+      "negotiation_leverage": "30-year tenure created complacency; competitive bids exposed 30 bps over-market pricing.",
+      "supplier_strengths": [
+        "Mature platform",
+        "Historical relationship familiarity"
+      ],
+      "supplier_weaknesses": [
+        "Highest total cost",
+        "Limited pricing transparency",
+        "Slow to innovate per client feedback"
+      ],
+      "switching_costs": "Minimal due to month-to-month terms, but card token migration required.",
+      "key_contacts": null,
+      "notes": "Treya will notify Chase of non-renewal once Calibr contract executed.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Supplier displaced",
+        "Significant savings opportunity"
+      ]
+    },
+    {
+      "supplier_name": "Echo Global Logistics",
+      "category": "LTL",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 873264,
+      "final_spend": 602104,
+      "savings_dollars": 271160,
+      "savings_percent": 31.1,
+      "levers_applied": [
+        "Competitive bid",
+        "Supplier switch",
+        "Benchmark-based negotiation"
+      ],
+      "alternatives_considered": [
+        "Old Dominion",
+        "CH Robinson",
+        "Coyote Logistics"
+      ],
+      "why_selected": "Lowest all-in bid (25-31% below incumbent); flexible 3-month trial, technology portal for real-time quoting, favorable fuel inclusive rates.",
+      "why_not_selected": null,
+      "contract_terms": "3-month pilot beginning mid-Jan 2025; no volume commitments; contract to be finalized post-pilot with option for 12-month fixed linehaul matrix.",
+      "negotiation_leverage": "Incumbent contract expiring 2/28/25 with no penalties; market rates down >20%; competitive RFP data.",
+      "supplier_strengths": [
+        "National carrier network",
+        "Integrated TMS visibility",
+        "Strong savings on benchmark lanes"
+      ],
+      "supplier_weaknesses": [
+        "Unproven service history with Christianbook",
+        "Requires process change for load tendering"
+      ],
+      "switching_costs": "Carrier onboarding, updating routing guide in WMS, staff training on Echo portal.",
+      "key_contacts": null,
+      "notes": "Performance to be reviewed after February to confirm long-term award.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Supplier switched",
+        "Savings >25%"
+      ]
+    },
+    {
+      "supplier_name": "Old Dominion Freight Line",
+      "category": "LTL",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 873264,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "Competitive bid",
+        "Benchmark negotiation"
+      ],
+      "alternatives_considered": [
+        "Echo Global Logistics",
+        "CH Robinson",
+        "Coyote Logistics"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Pricing 15-25% above market benchmarks; would not meet target reductions during renewal discussions.",
+      "contract_terms": "Rates effective until 2/28/2025; no minimum volume clause allowed easy exit.",
+      "negotiation_leverage": "Threat of full shift to Echo, RFP results shared.",
+      "supplier_strengths": [
+        "High service quality",
+        "Long-standing relationship"
+      ],
+      "supplier_weaknesses": [
+        "Uncompetitive pricing",
+        "Limited flexibility on fuel surcharge"
+      ],
+      "switching_costs": "Minimal due to no volume commitments; internal comfort level with OD operations lost.",
+      "key_contacts": null,
+      "notes": "Christianbook may retain OD as secondary backup carrier for peak periods.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Supplier displaced",
+        "Savings >25% achievable by switching"
+      ]
+    },
+    {
+      "supplier_name": "Echo Global Logistics",
+      "category": "FTL",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 851164,
+      "final_spend": 815026,
+      "savings_dollars": 36138,
+      "savings_percent": 4.2,
+      "levers_applied": [
+        "Competitive bid",
+        "Route rebid",
+        "Supplier consolidation"
+      ],
+      "alternatives_considered": [
+        "TransLink",
+        "RoadOne",
+        "Ryan Transportation",
+        "Coyote Logistics"
+      ],
+      "why_selected": "Provided lowest cost on majority of lanes; enabled consolidation of fragmented carrier base; aligns with parallel LTL award for administrative simplicity.",
+      "why_not_selected": null,
+      "contract_terms": "Spot-quote model with quarterly rate reviews; no fuel schedule deviations allowed; performance KPIs tracked during Q1 trial.",
+      "negotiation_leverage": "Bundling FTL and LTL volume; ability to shift lanes immediately post-peak season.",
+      "supplier_strengths": [
+        "Competitive linehaul rates",
+        "Single platform for TL & LTL",
+        "Data analytics support"
+      ],
+      "supplier_weaknesses": [
+        "Savings modest vs. LTL",
+        "Service performance yet to be proven"
+      ],
+      "switching_costs": "Lane set-up in TMS, updating carrier master list, credit app processing.",
+      "key_contacts": null,
+      "notes": "Echo to start quoting FTL lanes in parallel with LTL pilot beginning January.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multiple incumbents consolidated",
+        "Competitive RFQ",
+        "Supplier switch"
+      ]
+    },
+    {
+      "supplier_name": "Unicorr Packaging Group",
+      "category": "Corrugated",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": 80800,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP",
+        "Target pricing",
+        "Volume allocation commitment"
+      ],
+      "alternatives_considered": [
+        "Rand Whitney",
+        "Key Container Corp.",
+        "Lindenmeyr Munroe",
+        "Acorn Paper"
+      ],
+      "why_selected": "Met target pricing while retaining >50% of business to honor prior contractual commitments; offered quickest implementation (1/1/2025).",
+      "why_not_selected": null,
+      "contract_terms": "Pricing effective 1/1/2025 with quarterly OCC index review; volume share >50% for duration of 12-month agreement.",
+      "negotiation_leverage": "Threat of shifting volume to new entrant Key Container; full usage data shared across bidders.",
+      "supplier_strengths": [
+        "Responsive on target price resets",
+        "Established specs and tooling familiarity"
+      ],
+      "supplier_weaknesses": [
+        "Initial quote above market, required multiple rounds to meet targets"
+      ],
+      "switching_costs": "New die-cuts and pallet patterns if moved; potential line downtime.",
+      "key_contacts": null,
+      "notes": "Savings represents combined reductions on CB#1 and CB#3 cartons.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multi-supplier award",
+        "Significant negotiation rounds"
+      ]
+    },
+    {
+      "supplier_name": "Key Container Corp.",
+      "category": "Corrugated",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 317600,
+      "final_spend": 256000,
+      "savings_dollars": 61600,
+      "savings_percent": 19.4,
+      "levers_applied": [
+        "RFP",
+        "New supplier qualification"
+      ],
+      "alternatives_considered": [
+        "Unicorr Packaging Group",
+        "Rand Whitney",
+        "Lindenmeyr Munroe"
+      ],
+      "why_selected": "Most competitive pricing on high-volume CB #5A carton; diversified supply base and added leverage over incumbents.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing live 12/13/2024; no minimum volume but expected share ~26% of category spend.",
+      "negotiation_leverage": "Willingness to pilot new supplier for price relief; incumbents aware of potential shift.",
+      "supplier_strengths": [
+        "Aggressive pricing",
+        "Flexible production slots"
+      ],
+      "supplier_weaknesses": [
+        "New relationship \u2013 quality and lead-time performance untested"
+      ],
+      "switching_costs": "Tooling for new SKU already produced; limited additional costs.",
+      "key_contacts": null,
+      "notes": "Continued qualification during Q1 to monitor quality metrics before long-term commitment.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "New supplier added",
+        "Savings >15% on awarded SKU"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "client": {
+    "client_name": "FreshEdge, LLC",
+    "industry_primary": "Food distribution",
+    "industry_secondary": "Fresh produce wholesale",
+    "primary_industry_sector": "Logistics, Fleet, Distribution & Aftermarket Parts",
+    "business_model": "Super-regional fresh food distributor operating a network of temperature-controlled warehouses and a large truck fleet serving foodservice and retail customers across the Mid-West and Southeastern United States.",
+    "sponsor_pe_firm": "Wind Point Partners",
+    "client_history": "FreshEdge was formed in 2019 through the combination of IF&P Foods and Get Fresh Produce. The company has expanded rapidly via a series of acquisitions and now ranks among the largest independent fresh food distributors in the U.S. In October 2022 it was acquired by Chicago-based private equity firm Wind Point Partners, with the founding leadership team retaining a meaningful stake."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 254300000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Buzzfile company profile (buzzfile.com/business/Freshedge, accessed 2024-02)",
+      "notes": "Buzzfile lists $254.3 M annual revenue. GetLatka reports $42.8 M (2025) which is inconsistent with the firm\u2019s >2,000 employee count. No figure is provided in press releases or the company website. Using the Buzzfile figure but confidence kept low due to conflicting third-party estimates and lack of official disclosure."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 35,
+      "confidence": "medium",
+      "source": "ThePacker article \"Frontier Produce joins FreshEdge\" 17-Jul-2024 (thepacker.com)",
+      "notes": "Article quoting FreshEdge states the company operates \"over 1.3 million square feet across 35 facilities\". Businesswire release (Oct-2022) cited 25 facilities. Increase aligns with 2023-2024 acquisitions; treating 35 as current but only medium confidence as no facilities list on website."
+    },
+    "employees": {
+      "count": 2800,
+      "confidence": "medium",
+      "source": "FreshFruitPortal article 30-Sep-2025 \"FreshEdge names new CEO\" (freshfruitportal.com)",
+      "notes": "Article says the company employed \"approximately 2,800 individuals\". Earlier 2022 articles noted >2,000 following acquisitions, supporting the higher 2025 figure."
+    }
+  },
+  "extraction_sources": [
+    "Assessment/Spend Analysis FreshEdge 07.12.2023.xlsx (client name in multiple sheets)",
+    "Businesswire press release 04-Oct-2022 (Rotunda Capital Partners Completes Sale of FreshEdge)",
+    "Wind Point Partners website deal announcement (wppartners.com, Oct-2022)",
+    "ThePacker.com article 17-Jul-2024",
+    "FreshFruitPortal.com article 30-Sep-2025",
+    "FreshPlaza.com article 06-May-2022 (City Produce acquisition)",
+    "Buzzfile company profile (accessed 2024-02)",
+    "GetLatka profile (accessed 2024-02)"
+  ],
+  "extraction_notes": [
+    "Official legal name appears in multiple internal documents and press releases as \"FreshEdge\" or \"FreshEdge, LLC\" \u2013 LLC designation retained for formality.",
+    "PE ownership confirmed by both Wind Point Partners site and Businesswire press release; earlier backing by Rotunda Capital Partners noted but current sponsor is Wind Point Partners.",
+    "Revenue figures are not officially disclosed. Third-party sources conflict sharply; chose higher Buzzfile estimate as it aligns better with employee scale but confidence kept low.",
+    "EBITDA not disclosed in any internal or external source reviewed.",
+    "Locations count varies by year (25 in 2022 press release, 35 in 2024 article); selected most recent figure and assigned medium confidence.",
+    "Employee count corroborated by multiple news items tracking acquisitions; LinkedIn did not publish a specific headcount figure."
+  ]
+}

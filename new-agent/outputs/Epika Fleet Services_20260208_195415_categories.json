@@ -1,0 +1,587 @@
+{
+  "categories": [
+    {
+      "category_label": "Oil & Lubricants \u2013 Shell",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-02-10",
+      "status": "implemented",
+      "vendors_before": [
+        "Shell"
+      ],
+      "vendors_after": [
+        "Shell (renewed enterprise agreement)"
+      ],
+      "levers": [
+        "Strategic incumbent renegotiation",
+        "Volume aggregation",
+        "Enhanced rebate/marketing fund"
+      ],
+      "constraints": {
+        "supplier_constraints": "Brand preference for Shell products across business units",
+        "operational_constraints": null,
+        "contractual_constraints": "Existing Shell contract required amendment rather than new agreement",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 4244416,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Addressable spend shown on Savings Dashboard slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 646151,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "15% savings noted on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 15,
+      "notes": "Pricing effective 2/10/2025 per amendment; included marketing fund improvement",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+          "page_or_slide": 3,
+          "quote": "Oil/Lubricants - Shell Award | $4,244,416 | 15% | $646,151 | \u2713 | 2/10/2025",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Oil & Lubricants \u2013 Chevron",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-03-01",
+      "status": "implemented",
+      "vendors_before": [
+        "Chevron"
+      ],
+      "vendors_after": [
+        "Chevron (amended national agreement)"
+      ],
+      "levers": [
+        "Strategic incumbent renegotiation",
+        "Price harmonization across SKUs",
+        "Retro-billing correction"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must retain Chevron products for certain customer specifications",
+        "operational_constraints": null,
+        "contractual_constraints": "Supply agreement already in place \u2013 extended through 2028",
+        "implementation_constraints": "Required retro-active billing correction back to 3/1/2025"
+      },
+      "baseline_spend": {
+        "amount": 2736486,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Addressable spend shown on Savings Dashboard slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 227793,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "8% savings noted on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 8,
+      "notes": "Amendment No. 6 executed 3/4/2025; billing corrected retro-actively",
+      "evidence": [
+        {
+          "source_file": "Epika Project Close-Out/Oil and Lubricants/Chevron/Please_DocuSign_Lubezone_Operations_LLC_Ame.pdf",
+          "page_or_slide": 1,
+          "quote": "Term of the Agreement shall be amended by extending through February 29, 2028",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Oil & Lubricants \u2013 ExxonMobil",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-03-01",
+      "status": "implemented",
+      "vendors_before": [
+        "ExxonMobil"
+      ],
+      "vendors_after": [
+        "ExxonMobil (new enterprise pricing)"
+      ],
+      "levers": [
+        "Strategic incumbent renegotiation",
+        "Volume aggregation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1355356,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Addressable spend shown on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 138266,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "10% savings noted"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10,
+      "notes": "Corrected usage data received and pricing live 3/1/2025",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+          "page_or_slide": 6,
+          "quote": "ExxonMobil pricing proposal ... total savings of $138k before rebates on $1.36M historical spend (10%)",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Filters \u2013 Fleetguard",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2024-01-20",
+      "status": "implemented",
+      "vendors_before": [
+        "Fleetguard"
+      ],
+      "vendors_after": [
+        "Fleetguard (enterprise pricing agreement)"
+      ],
+      "levers": [
+        "Strategic incumbent renegotiation",
+        "National program creation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "Pricing agreement effective 1/20/2024",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1417378,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Addressable spend shown on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 141127,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "10% savings noted"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Epika Project Close-Out/Filters/Fleetguard/Invoices/invoice-FGUSA-27334875.pdf",
+          "page_or_slide": 1,
+          "quote": "Invoice Date: 02/19/2025 \u2013 reflects new pricing",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Filters \u2013 Baldwin",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-02-14",
+      "status": "implemented",
+      "vendors_before": [
+        "Baldwin"
+      ],
+      "vendors_after": [
+        "Baldwin (negotiated national program)"
+      ],
+      "levers": [
+        "Strategic incumbent renegotiation",
+        "Rebate structure"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "MOU effective Feb 1 2025",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 2336693,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Addressable spend shown on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 80356,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "3% savings noted"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 3,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Categories/Filters/MOU - Epika_Baldwin (EMAM)_01.27.2025.docx",
+          "page_or_slide": 1,
+          "quote": "Volume Rebate: Baldwin will pay Epika ... based on 2025 calendar year sales",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Telematics (Samsara)",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2024-10-31",
+      "status": "implemented",
+      "vendors_before": [
+        "Samsara"
+      ],
+      "vendors_after": [
+        "Samsara (renewed 5-year term with discount)"
+      ],
+      "levers": [
+        "Contract term extension",
+        "Hardware discount negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must remain on Samsara platform for API integrations",
+        "operational_constraints": null,
+        "contractual_constraints": "5-year term required for additional 10% discount",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 247856,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Spend shown on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 23285,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "9% savings"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 9,
+      "notes": "Hardware ownership clarified and contract executed 10/31/2024",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+          "page_or_slide": 3,
+          "quote": "Telematics (Samsara) | $247,856 | 9% | $23,285 | \u2713 | 12/31/2024",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Fuel (Comdata Fleet Card)",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-04-15",
+      "status": "implemented",
+      "vendors_before": [
+        "Ramp",
+        "Impac Fleet",
+        "Fuelman",
+        "Universal Premium Fleet Card"
+      ],
+      "vendors_after": [
+        "Comdata Mastercard Fleet Card"
+      ],
+      "levers": [
+        "Competitive RFQ",
+        "Vendor consolidation",
+        "Rebate improvement"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Required fraud-protection features and network coverage",
+        "contractual_constraints": "3-year initial term with Comdata",
+        "implementation_constraints": "Phased card rollout across business units"
+      },
+      "baseline_spend": {
+        "amount": 4588961,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Spend shown on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 43494,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "1% effective rebate improvement"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 1,
+      "notes": "Agreement #00818987 effective 2/28/2025",
+      "evidence": [
+        {
+          "source_file": "Epika Project Close-Out/Fuel/Epika Fleet Services Inc. - Final Comdata Mastercard Agreement between Epika Fleet Services  Comdata Inc. (including Affiliates).pdf",
+          "page_or_slide": 1,
+          "quote": "Comdata Mastercard Corporate Card\u00ae Agreement ... Initial Term: Three (3) Years ... Effective Date: 28th February 2025",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies (ODP/OMNIA)",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-04-01",
+      "status": "implemented",
+      "vendors_before": [
+        "Amazon Business",
+        "Staples"
+      ],
+      "vendors_after": [
+        "Office Depot / ODP Business Solutions via OMNIA cooperative contract"
+      ],
+      "levers": [
+        "GPO contract joinder",
+        "Vendor consolidation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": "Joinder signed 4/1/2025",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 279851,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Spend shown on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 36381,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "13% savings noted"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 13,
+      "notes": null,
+      "evidence": [
+        {
+          "source_file": "Epika Project Close-Out/Office Supplies/Epika - Office Supplies Data_Analysis_Treya.xlsx",
+          "page_or_slide": "Savings Summary",
+          "quote": "Total spend $279,850.97 ... Savings on full spend $36,988.95 (~13%)",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "General Industrial Supplies",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Imperial Supplies",
+        "Airgas"
+      ],
+      "vendors_after": [
+        "MSC Industrial (OMNIA program)"
+      ],
+      "levers": [
+        "GPO assessment",
+        "Vendor consolidation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": "Pending leadership approval before rollout"
+      },
+      "baseline_spend": {
+        "amount": 164474,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Addressable spend updated on May 16 Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 12711,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "8% savings potential shown"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 8,
+      "notes": "OMNIA/MSC assessment validated 17% item-level savings; awaiting go-live",
+      "evidence": [
+        {
+          "source_file": "Categories/GIS/Epika Imperial Supplies Market Basket OMNIA.xlsx",
+          "page_or_slide": "Sheet 1",
+          "quote": "$12,771 (17% on addressable spend) in savings found with OMNIA\u2019s MSC program",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "After-Market Parts \u2013 CS T&T",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Parts South",
+        "Tidewater/TNT Parts"
+      ],
+      "vendors_after": [
+        "New Life Parts (proposed)"
+      ],
+      "levers": [
+        "Competitive RFP",
+        "Rebate negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1026032,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "Spend for CST&T sub-category on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 76207,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "15% potential rebate translated to average savings"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7.4,
+      "notes": "Negotiations active; exploring 10% rebate structure with New Life",
+      "evidence": [
+        {
+          "source_file": "Categories/After Market Parts & Spares/Epika - New Life Savings Opportunity.pptx",
+          "page_or_slide": 1,
+          "quote": "$152k on $1M of spend in RFP (~15% savings)",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    },
+    {
+      "category_label": "After-Market Parts \u2013 Remaining",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "FleetPride",
+        "TruckPro",
+        "Various regional distributors"
+      ],
+      "vendors_after": [
+        "To be determined (multiple supplier negotiations underway)"
+      ],
+      "levers": [
+        "Competitive bids",
+        "Rebate programs",
+        "Data-driven negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 6212523,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "High-level spend figure on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 62125,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+        "notes": "2% placeholder savings on dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 1,
+      "notes": "Additional supplier negotiations underway across remaining BUs",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+          "page_or_slide": 3,
+          "quote": "After Market Parts \u2013 Remaining | $6,212,523 | 0-2% | $62,125",
+          "date_extracted": "2026-02-09"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 11,
+    "implemented_count": 8,
+    "in_progress_count": 3,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 24610026,
+    "total_savings": 1487896,
+    "average_savings_percentage": 6.0
+  },
+  "extraction_sources": [
+    "Project Updates/Epika - Strategic Sourcing Project Update (May 16 2025).pptx",
+    "Epika Project Close-Out/Fuel/Epika Fleet Services Inc. - Final Comdata Mastercard Agreement between Epika Fleet Services  Comdata Inc. (including Affiliates).pdf",
+    "Epika Project Close-Out/Oil and Lubricants/Chevron/Please_DocuSign_Lubezone_Operations_LLC_Ame.pdf",
+    "Categories/Filters/MOU - Epika_Baldwin (EMAM)_01.27.2025.docx",
+    "Categories/GIS/Epika Imperial Supplies Market Basket OMNIA.xlsx"
+  ],
+  "extraction_notes": [
+    "Baseline and savings figures for all finalized categories taken directly from the Savings Dashboard slide in the 05-16-2025 project update (Close-Out).",
+    "General Industrial Supplies baseline increased from $119K to $164K between April and May updates; latest figure used.",
+    "After-Market Parts baselines represent sub-sets of the Exhibit A \u2018After Market Parts & Spares\u2019 line \u2013 full Exhibit A spend not used."
+  ]
+}

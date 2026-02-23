@@ -1,0 +1,288 @@
+{
+  "categories": [
+    {
+      "category_label": "Medical Supplies",
+      "category_l1": "Clinical",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-02-15",
+      "end_date": "2024-07-19",
+      "status": "implemented",
+      "vendors_before": [
+        "McKesson"
+      ],
+      "vendors_after": [
+        "McKesson (renegotiated addendum)"
+      ],
+      "levers": [
+        "RFP",
+        "incumbent renegotiation",
+        "volume rebate",
+        "contract extension"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "No stockouts during transition; critical clinical supplies",
+        "contractual_constraints": "New two-year supply agreement effective 2024-07-15 through 2026-07-15",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1301434,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend figure shown in Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 276333,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "21-22% reduction from new McKesson contract"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 21.25,
+      "notes": "RFP run with Medline & Cardinal; McKesson retained after offering >20% price reduction and volume rebate.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "3",
+          "quote": "Medical Supplies: $1,301,434 addressable spend, 21-22% savings, $276K annual savings. New McKesson contract executed 7/19.",
+          "date_extracted": "2026-02-01"
+        },
+        {
+          "source_file": "Categories/Medical Supplies + Equipment/Medical Supplies/Choice Health- Medical Supplies MOU.docx",
+          "page_or_slide": "1",
+          "quote": "This agreement shall be effective from July 15, 2024 through July 15, 2026.",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Fleet",
+      "category_l1": "Operations",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-02-16",
+      "end_date": null,
+      "status": "negotiated",
+      "vendors_before": [
+        "Enterprise Fleet Management"
+      ],
+      "vendors_after": [
+        "Enterprise Fleet Management (Full Maintenance Addendum pending signature)"
+      ],
+      "levers": [
+        "incumbent renegotiation",
+        "pricing restructure",
+        "bucketed mileage rates"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Vehicles must remain in service; no downtime permitted",
+        "contractual_constraints": "Addendum requires Choice Health signature to take effect",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 3764808,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend shown in Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 139850,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "4% savings from revised full-maintenance rates"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 3.71,
+      "notes": "Negotiated five mileage buckets lowering maintenance cost per vehicle. Awaiting client execution of addendum.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "8",
+          "quote": "Enterprise analysis indicates an estimated $140K (4%) annual savings on a $3.8M baseline.",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Office Supplies",
+      "category_l1": "Indirect",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-05-15",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Business Essentials"
+      ],
+      "vendors_after": [
+        "GPO pricing via OMNIA",
+        "Procure Analytics",
+        "GroupSource (under evaluation)"
+      ],
+      "levers": [
+        "GPO benchmarking",
+        "competitive quotes"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 158145,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend from Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 19768,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Mid-point of 10-15% savings range"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 12.5,
+      "notes": "GPO pricing requests submitted; awaiting responses to finalize supplier selection.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "3",
+          "quote": "Office Supplies: $158,145 addressable spend; 10-15% savings opportunity; $19,768 avg.",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Temps - Therapists",
+      "category_l1": "Labor",
+      "category_l2": "Temporary Staffing",
+      "category_l3": null,
+      "start_date": "2024-05-28",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Capstone Therapy",
+        "Alliance Therapy Services",
+        "InHome Therapy",
+        "HealthPRO Heritage",
+        "Therapy Link",
+        "Ultra Therapy Solutions"
+      ],
+      "vendors_after": [],
+      "levers": [
+        "multi-supplier negotiations",
+        "rate benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must maintain geographic coverage across all service areas",
+        "operational_constraints": "Quality and credentialing standards cannot be compromised",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 994386,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend from Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 59663,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Mid-point of 4-8% target savings"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 6.0,
+      "notes": "Data collected from top vendors; negotiation materials to be shared with suppliers.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "5",
+          "quote": "Treya to share negotiation materials with Jeff and Josh on 8/15 and schedule calls with suppliers",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Temp Staff - Nurses",
+      "category_l1": "Labor",
+      "category_l2": "Temporary Staffing",
+      "category_l3": null,
+      "start_date": "2024-05-28",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Jogan Health",
+        "No Place Like Home",
+        "Mercy Staffing",
+        "Medtrekkerr",
+        "SnapNurse"
+      ],
+      "vendors_after": [],
+      "levers": [
+        "parallel sourcing",
+        "rate benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": "Maintain adequate nurse availability in rural markets",
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 647718,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Addressable spend from Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 38863,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Mid-point of 4-8% target savings"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 6.0,
+      "notes": "Supplier calls held week of 7/22; negotiations to follow.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+          "page_or_slide": "3",
+          "quote": "Temp Staff \u2013 Nurses: $647,718 addressable spend; 4-8% savings target; $38,863 avg.",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 5,
+    "implemented_count": 1,
+    "negotiated_count": 1,
+    "in_progress_count": 3,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 6866491,
+    "total_savings": 534477,
+    "average_savings_percentage": 7.8
+  },
+  "extraction_sources": [
+    "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+    "Categories/Medical Supplies + Equipment/Medical Supplies/Choice Health- Medical Supplies MOU.docx"
+  ],
+  "extraction_notes": [
+    "Baseline spend figures align with Addressable Spend values used in client Savings Dashboard.",
+    "Savings percentages calculated using mid-point of target range for in-progress categories."
+  ]
+}

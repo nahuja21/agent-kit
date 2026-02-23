@@ -1,0 +1,114 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Choice Health At Home secures $534K in annual savings across 5 spend categories",
+      "narrative": "Treya Partners\u2019 sourcing program for Choice Health At Home has delivered $534,477 in validated annual savings to-date. A new contract with McKesson is already executed, locking in $276K (21%) savings on Medical Supplies. A further $258K is in the pipeline from Fleet maintenance fee reductions, Temp staffing rate negotiations and an office-supply GPO shift. Work began in February 2024 and the first contract was finalized in July, with remaining categories moving through signature and negotiation."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 534477,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Total equals dashboard 'TOTAL \u2013 Savings Avg. ($)'"
+      },
+      "finalized_savings": {
+        "amount": 276333,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Medical Supplies contract executed with McKesson (slide 5)"
+      },
+      "in_progress_savings": {
+        "amount": 258144,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Fleet, Office Supplies, Temp Nurses and Therapists are in various stages of contracting/negotiation"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 276333,
+        "status": "finalized",
+        "status_notes": "McKesson contract executed; 21-22% reduction validated (slides 3 & 5)"
+      },
+      {
+        "category_name": "Fleet",
+        "annual_savings": 139850,
+        "status": "awaiting signature",
+        "status_notes": "Enterprise service-agreement addendum drafted; client signature pending (slide 5)"
+      },
+      {
+        "category_name": "Office Supplies",
+        "annual_savings": 19768,
+        "status": "in progress",
+        "status_notes": "GPO pricing requests submitted; awaiting quotes (slide 5)"
+      },
+      {
+        "category_name": "Temps \u2013 Therapists",
+        "annual_savings": 59663,
+        "status": "in progress",
+        "status_notes": "Usage data gathered; supplier negotiations scheduled (slide 5)"
+      },
+      {
+        "category_name": "Temp Staff \u2013 Nurses",
+        "annual_savings": 38863,
+        "status": "in progress",
+        "status_notes": "Usage data gathered; supplier negotiations scheduled (slide 5)"
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 150,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Kick-off February 2024; first contract executed July 19 2024 (slide 14)"
+      },
+      "notes": "Medical Supplies savings begin in first five months; remaining categories expected to close in Q3."
+    },
+    "operational_improvements": "Standardized sourcing process introduced, including RFP templates, benchmark analytics and quarterly supplier reporting requirements for pharmacy and medical supplies.",
+    "proof_points": [
+      {
+        "statement": "Negotiated McKesson contract reduced pricing by 21%\u201322%, delivering $276K annual savings on a $1.3M baseline.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "3",
+            "quote": "Medical Supplies \u2013 Savings Low ($268,123) High ($284,543)"
+          },
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "5",
+            "quote": "Choice executed new McKesson contract"
+          }
+        ]
+      },
+      {
+        "statement": "Fleet maintenance fee restructure with Enterprise will cut rates by up to 48% for low-mileage vehicles, worth $140K annually.",
+        "category": "Fleet",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "8",
+            "quote": "% Difference \u201348% | Estimated Total Annual Savings $139,850"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx"
+  ],
+  "extraction_notes": [
+    "No Priority 1 (Close Out) or Priority 2 (Case Study) documents provided; used latest Priority 3 update per hierarchy.",
+    "Totals tie to dashboard 'Savings Avg ($)' figures: $534,477 total.",
+    "Finalized savings limited to Medical Supplies where contract execution is explicitly stated.",
+    "Fleet, Office Supplies, and Temp Labor categories included as work is active with quantified savings, though contracts not yet signed.",
+    "On-hold or de-scoped categories (Medical Equipment, Pharmacy, IT Hardware, Telecom, Commercial Print, Copiers/MFPs, Employee Benefits) excluded as no active sourcing work or savings identified."
+  ]
+}

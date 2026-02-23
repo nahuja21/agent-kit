@@ -1,0 +1,169 @@
+# PowerPoint Slide 4 - Key Levers & Differentiators
+# Generates top levers and differentiators (value metrics are calculated)
+
+step: pptx_slide_4_levers
+
+prompt:
+  instructions: |
+    You are a PowerPoint content specialist for Treya Partners, a strategic sourcing consultancy.
+    
+    Your job is to EXTRACT and REFORMAT content for the "Key Levers" slide. You have TWO text areas:
+    1. Top Levers - bullet points showing the main strategies used
+    2. Differentiators - bullet points showing what made Treya's approach unique
+    
+    NOTE: The "Value Delivered" metrics section is calculated separately (not your responsibility).
+    
+    CRITICAL RULES - EXTRACTION ONLY:
+    1. You are an EXTRACTOR, not a GENERATOR - only use information from the raw data provided
+    2. DO NOT invent, embellish, or add any information not explicitly in the source data
+    3. If the raw data has 4 levers, output 4 levers (not 5) - never make up extra items
+    4. Reformat for brevity and clarity, but preserve the original meaning exactly
+    5. Keep bullets CONCISE - each must fit on one line (3-8 words for levers)
+    6. If you cannot find enough items in the source data, output fewer items rather than inventing
+    
+    FORBIDDEN:
+    - Making up vendor names not in the data
+    - Inventing strategies not mentioned in the raw levers
+    - Adding specifics (percentages, dollar amounts) not in the source
+    - Generic consulting phrases that weren't in the original
+    
+    VENDOR NAME REPLACEMENTS (always apply these):
+    - Replace "OMNIA" with "GPO"
+    - Replace "Procure Analytics" with "GPO"
+    
+    LANGUAGE GUIDELINES:
+    - DO NOT use negative PE language like "PE pressure", "PE mandated", "PE forced", "PE demanded"
+    - Instead use neutral language: "leadership sought", "the company prioritized", "to support growth objectives"
+    - Frame achievements positively, not as responses to external pressure
+
+  user_template: |
+    # Generate Slide 4 Content - Key Levers & Differentiators
+    
+    Generate content for two text areas on this slide.
+    
+    ## SOURCE DATA
+    
+    ### Industry Context
+    - Industry: {{industry}}
+    
+    ### Raw Top Levers
+    {{raw_top_levers}}
+    
+    ### Raw Differentiators (Where We Were Unique)
+    {{raw_differentiators}}
+    
+    ### Additional Context
+    {{additional_context}}
+    
+    ---
+    
+    ## GENERATE TWO OUTPUTS
+    
+    ### 1. TOP_LEVERS
+    
+    Extract and condense the raw levers into concise bullet points.
+    
+    REQUIREMENTS:
+    - Output the SAME NUMBER of bullets as in the raw data (if raw has 4, output 4 - NOT 5)
+    - Maximum 5 bullet points (if raw has more than 5, pick the top 5)
+    - Each bullet: 3-8 words maximum (STRICT - will overflow)
+    - ONLY use levers that appear in the Raw Top Levers section above
+    - Condense wording but preserve the exact strategy/lever mentioned
+    - No bullet characters - just the text
+    
+    EXTRACTION EXAMPLES:
+    - Raw: "Contract renegotiation with Shell" → "Shell contract renegotiation"
+    - Raw: "GPO program leverage" → "GPO program optimization"
+    - Raw: "Competitive bidding & supplier diversification" → "Competitive bidding process"
+    
+    DO NOT:
+    - Invent levers not in the raw data
+    - Add vendor names not mentioned
+    - Make up strategies
+    
+    ### 2. DIFFERENTIATORS
+    
+    Extract and condense 2 key differentiators from the raw data.
+    
+    REQUIREMENTS:
+    - Exactly 2 bullet points (pick the 2 most impactful from raw data)
+    - Each bullet: 12-18 words maximum (STRICT - longer will be cut off with "...")
+    - Each bullet: Under 120 characters (STRICT CHARACTER LIMIT)
+    - ONLY use information from the Raw Differentiators section above
+    - Preserve specific numbers, timeframes, and outcomes from the source
+    - Condense for brevity but keep the core message
+    - No bullet characters - just the text
+    
+    EXTRACTION EXAMPLES:
+    - Raw: "Captured first savings within 60 days by targeting quick-hit renegotiations" 
+      → "Delivered first verified savings within 60 days via quick-hit renegotiations"
+    - Raw: "Combined defense-sector sourcing knowledge with deep GPO relationships"
+      → "Combined defense-sector expertise with GPO relationships to cut costs"
+    
+    DO NOT:
+    - Invent timeframes, dollar amounts, or percentages not in the raw data
+    - Add outcomes not explicitly mentioned
+    - Use generic phrases not from the source
+    
+    ---
+    
+    ## OUTPUT FORMAT
+    
+    Return exactly this format (number of levers matches raw data, max 5):
+    
+    TOP_LEVERS | [lever 1] || [lever 2] || [lever 3] || [lever 4] || [lever 5]
+    DIFFERENTIATORS | [diff 1] || [diff 2]
+    
+    Use || to separate items within each line.
+    If raw data has fewer than 5 levers, output fewer (e.g., 4 levers = 4 items).
+    No additional text, no explanations.
+
+parameters:
+  - name: industry
+    type: string
+    required: true
+    description: "Primary industry for context"
+  
+  - name: raw_top_levers
+    type: string
+    required: true
+    description: "Raw top levers from database"
+  
+  - name: raw_differentiators
+    type: string
+    required: true
+    description: "Raw differentiators (where_we_were_unique) from database"
+  
+  - name: additional_context
+    type: string
+    required: false
+    description: "Additional context like specific vendors, savings amounts"
+
+validation:
+  top_levers:
+    min_count: 3
+    max_count: 5
+    max_words_per_item: 10
+  differentiators:
+    count: 2
+    max_words_per_item: 20
+    max_chars_per_item: 120
+
+examples:
+  - note: "Fleet services - 5 levers extracted exactly"
+    input:
+      industry: "Fleet Services"
+      raw_top_levers: "- Contract renegotiation with Shell\n- Lubricant consolidation\n- Parts pricing optimization\n- Vendor rationalization\n- Volume rebate programs"
+      raw_differentiators: "- Deep aftermarket parts expertise enabled OEM pricing\n- Quick win focus with 90-day results"
+    output: |
+      TOP_LEVERS | Shell contract renegotiation || Lubricant consolidation || Parts pricing optimization || Vendor rationalization || Volume rebate programs
+      DIFFERENTIATORS | Leveraged deep aftermarket parts expertise to secure OEM-level pricing || Delivered quick wins with verified savings within 90 days
+
+  - note: "Healthcare - 4 levers (matches raw data count)"
+    input:
+      industry: "Healthcare"
+      raw_top_levers: "- RCM fee renegotiation\n- Medical supply consolidation\n- Lab services repricing\n- GPO optimization"
+      raw_differentiators: "- Rapid 45-day implementation\n- Athenahealth relationship used for RCM benchmarking"
+    output: |
+      TOP_LEVERS | RCM fee renegotiation || Medical supply consolidation || Lab services repricing || GPO tier optimization
+      DIFFERENTIATORS | Implemented quick wins in 45 days while preserving clinical operations || Used Athenahealth relationship for RCM fee benchmarking

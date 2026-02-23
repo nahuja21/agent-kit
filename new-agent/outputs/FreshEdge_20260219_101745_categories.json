@@ -1,0 +1,450 @@
+{
+  "categories": [
+    {
+      "category_label": "Packaging / Corrugate / Labels",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "negotiated",
+      "vendors_before": [
+        "Concept Packaging Group",
+        "Kodiak",
+        "Demand Packaging",
+        "Landsberg Orora",
+        "Envoy Solutions"
+      ],
+      "vendors_after": [
+        "Welch Packaging (corrugate)",
+        "Bunzl (packaging & labels)"
+      ],
+      "levers": [
+        "Competitive RFP",
+        "Supplier consolidation",
+        "Volume aggregation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 5705747,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Addressable spend column for Packaging/Corrugate RFP"
+      },
+      "savings_annual_run_rate": {
+        "amount": 1557729,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Average savings value shown"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 27.0,
+      "notes": "MOUs drafted; awaiting final FreshEdge approval before implementation.",
+      "evidence": [
+        {
+          "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+          "page_or_slide": "3",
+          "quote": "Packaging/Corrugate RFP | $13,295,697 | 43% | $5,705,747 | ... | $1,557,729 | 27%",
+          "date_extracted": "2026-02-19"
+        },
+        {
+          "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+          "page_or_slide": "5",
+          "quote": "By awarding to Welch and Bunzl, there is a potential savings opportunity of $1.6M (27%) across Corrugate, Packaging, and Labels spend.",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Fuel",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Quick Fuel",
+        "Avalon",
+        "P&J Petroleum",
+        "Wex",
+        "Penske",
+        "Comdata",
+        "Phillips Energy"
+      ],
+      "vendors_after": [
+        "Loves/Pilot (via WPP national fuel program)"
+      ],
+      "levers": [
+        "National fuel card program",
+        "Vendor consolidation",
+        "Volume leverage"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Must maintain uninterrupted fuel access across multi-state fleet",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 15831194,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Addressable spend column for Fuel"
+      },
+      "savings_annual_run_rate": {
+        "amount": 394485,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Average savings value shown"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 2.49,
+      "notes": "FreshEdge is working with WPP to implement Loves/Pilot national fuel program.",
+      "evidence": [
+        {
+          "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+          "page_or_slide": "3",
+          "quote": "Fuel | $17,590,216 | 90% | $15,831,194 | 1% | 4% | $83,387 | $705,582 | $394,485",
+          "date_extracted": "2026-02-19"
+        },
+        {
+          "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+          "page_or_slide": "4",
+          "quote": "FreshEdge is working with Felipe at WPP to implement Loves/Pilots fuel program",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Utilities \u2013 All Other",
+      "category_l1": "Utilities",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Local utility providers at multiple OpCos"
+      ],
+      "vendors_after": [
+        "Freedom Energy Logistics (broker \u2013 under evaluation)"
+      ],
+      "levers": [
+        "Energy brokerage",
+        "Competitive supply bids"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 860455,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Addressable spend column for Utilities \u2013 All Other"
+      },
+      "savings_annual_run_rate": {
+        "amount": 65284,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Average savings value shown"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7.59,
+      "notes": "Freedom Energy Logistics compiling data and drafting LOE/LOA documents.",
+      "evidence": [
+        {
+          "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+          "page_or_slide": "3",
+          "quote": "Utilities - All Other | $2,458,444 | 35% | $860,455 | 5% | 10% | $43,023 | $86,046 | $64,534",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Waste Management",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "identified",
+      "vendors_before": [
+        "Republic Services",
+        "Arrowaste",
+        "Local haulers"
+      ],
+      "vendors_after": [
+        "GPS (broker) \u2013 recommended"
+      ],
+      "levers": [
+        "Broker negotiation",
+        "Service optimization"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 732631,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Addressable spend column for Waste Management"
+      },
+      "savings_annual_run_rate": {
+        "amount": 54947,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Average savings value shown"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7.5,
+      "notes": "Category analysis complete; client has paused work after engaging broker.",
+      "evidence": [
+        {
+          "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+          "page_or_slide": "3",
+          "quote": "Waste Management | $814,034 | 90% | $732,631 | 5% | 10% | $36,632 | $73,263 | $54,947",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "P-Card",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "identified",
+      "vendors_before": [
+        "Current corporate card issuer (undisclosed)"
+      ],
+      "vendors_after": null,
+      "levers": [
+        "Rebate negotiation",
+        "Program benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1949322,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Addressable spend column for P-Card"
+      },
+      "savings_annual_run_rate": {
+        "amount": 146199,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Average savings value shown"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7.5,
+      "notes": "Opportunity (5\u201310 % rebate) identified; implementation deferred by client.",
+      "evidence": [
+        {
+          "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+          "page_or_slide": "3",
+          "quote": "P-Card | $5,569,492 | 35% | $1,949,322 | 5% | 10% | $97,466 | $194,932 | $146,199",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Crates & Pallets",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2024-05-??",
+      "status": "implemented",
+      "vendors_before": [
+        "Kamps"
+      ],
+      "vendors_after": [
+        "Kamps (incumbent retained)"
+      ],
+      "levers": [
+        "Incumbent renegotiation",
+        "Price reduction",
+        "Long-term agreement"
+      ],
+      "constraints": {
+        "supplier_constraints": "Client preference to avoid supplier change",
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 228118,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Addressable spend column for Crates & Pallets"
+      },
+      "savings_annual_run_rate": {
+        "amount": 34662,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Average savings value shown"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 15.0,
+      "notes": "48-month MOU executed with Kamps locking in savings without supplier change.",
+      "evidence": [
+        {
+          "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+          "page_or_slide": "3",
+          "quote": "Crates & Pallets | $1,019,296 | 22% | $228,118 | 15% | 15% | $34,662 | $34,662 | $34,662",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Utilities \u2013 Electric (Sirna & Sons)",
+      "category_l1": "Utilities",
+      "category_l2": "Electric",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2024-05-14",
+      "status": "implemented",
+      "vendors_before": [
+        "Ohio Edison (local utility)"
+      ],
+      "vendors_after": [
+        "WGL Energy Services"
+      ],
+      "levers": [
+        "Brokered energy supply contract",
+        "Fixed-rate hedging"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 158750,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Addressable spend column for Utilities \u2013 Electric"
+      },
+      "savings_annual_run_rate": {
+        "amount": 15188,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Average savings value shown"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10.0,
+      "notes": "48-month supply agreement signed with WGL on 5/14/24.",
+      "evidence": [
+        {
+          "source_file": "Categories/Utilities/Final Agreements/Sirna & Sons/BaseContract_63952_05142024130315004_051424010300.pdf",
+          "page_or_slide": "1",
+          "quote": "BASE AGREEMENT ... dated 5/14/2024 by and between WGL Energy Services, Inc. and Sirna and Sons Produce",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Utilities \u2013 Gas (Sirna & Sons)",
+      "category_l1": "Utilities",
+      "category_l2": "Gas",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2024-08-01",
+      "status": "implemented",
+      "vendors_before": [
+        "Local natural gas utility"
+      ],
+      "vendors_after": [
+        "Gas South"
+      ],
+      "levers": [
+        "Brokered supply contract"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 10000,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Addressable spend column for Utilities \u2013 Gas"
+      },
+      "savings_annual_run_rate": {
+        "amount": 400,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Average savings value shown"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 4.0,
+      "notes": "36-month contract signed with Gas South on 8/1/24.",
+      "evidence": [
+        {
+          "source_file": "Categories/Utilities/Final Agreements/Sirna & Sons/Sirna and Sons Produce-NB-NG-Nov24-Contract.pdf",
+          "page_or_slide": "3",
+          "quote": "Jason Dolder, 8/1/2024",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 8,
+    "implemented_count": 3,
+    "negotiated_count": 1,
+    "in_progress_count": 2,
+    "identified_count": 2,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 25476217,
+    "total_savings": 2268894,
+    "average_savings_percentage": 8.9
+  },
+  "extraction_sources": [
+    "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+    "Categories/Utilities/Final Agreements/Sirna & Sons/BaseContract_63952_05142024130315004_051424010300.pdf",
+    "Categories/Utilities/Final Agreements/Sirna & Sons/Sirna and Sons Produce-NB-NG-Nov24-Contract.pdf"
+  ],
+  "extraction_notes": [
+    "All baselines sourced from Addressable $ column in 08.13.24 Project Update slide 3, representing the spend actually addressed in each workstream.",
+    "Savings values use the \u201cSavings Avg $\u201d figures reported on the same slide, ensuring alignment with Impact close-out numbers.",
+    "Start dates were not explicitly stated in provided documents and are left null; end dates use contract signature dates when available."
+  ]
+}

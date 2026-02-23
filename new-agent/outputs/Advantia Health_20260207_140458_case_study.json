@@ -1,0 +1,35 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client name, objectives, quantified $685K run-rate savings, and multiple documented proof points are present.",
+    "headline": "Rapidly growing women\u2019s health platform unlocks $685K in annual savings and 3\u00d7 ROI through Treya\u2019s strategic sourcing program",
+    "client_problem_statement": "Advantia Health had expanded quickly through acquisitions, leaving purchasing highly decentralized across two AP systems and 50 clinics. Fragmented vendor relationships, inconsistent pricing, and limited spend visibility were eroding margins just as PE backers expected value-creation results. With roughly $19 million in addressable spend and no strategic procurement function, Advantia needed outside expertise to capture savings without disrupting patient care.",
+    "client_problem_anonymized": "A rapidly expanding women\u2019s health platform had grown through acquisitions, leaving purchasing highly decentralized across two AP systems and 50 clinics. Fragmented vendor relationships, inconsistent pricing, and limited spend visibility were eroding margins just as the private equity ownership group focused on operational efficiency and margin improvement. With roughly $19 million in addressable spend and no strategic procurement function, the provider needed outside expertise to capture savings without disrupting patient care.",
+    "approach_summary": [
+      "Analyzed $19 million in spend across 10 categories, normalizing data from two AP systems to build a fact-based sourcing wave plan.",
+      "Renegotiated the incumbent Athenahealth RCM contract, lowering the collections fee from 3.39 % to 3.15 % and delivering $259K in annual savings.",
+      "Ran a competitive RFP and shifted the client to a single prime distributor (McKesson), aggregating medical-supply volume and cutting costs by $157K (14 %).",
+      "Executed a make-or-buy analysis that is transitioning outsourced sonography to in-house staffing, generating $152K in savings with full benefits by year-end.",
+      "Implemented quick-win policy changes\u20145-unit minimum IUD orders and enrollment in Bayer\u2019s replacement program\u2014capturing an additional $77K with zero supplier change."
+    ],
+    "top_levers": [
+      "Contract renegotiation",
+      "Vendor consolidation & competitive RFP",
+      "Make-or-buy insourcing",
+      "Purchasing policy enforcement",
+      "Manufacturer rebate program enrollment"
+    ],
+    "value_delivered_blurb": "Treya delivered $684,936 in validated, recurring annual savings across six categories\u2014exceeding the $450K minimum guarantee and providing a 3.0\u00d7 return on the $225K fixed fee. First savings were realized within 40 days, and five of six workstreams are fully implemented. Beyond the financial impact, Treya established enterprise purchasing policies, consolidated distributors, and laid the groundwork for a scalable procurement function.",
+    "where_we_were_unique": [
+      "Captured first hard-dollar savings in just six weeks through targeted policy changes.",
+      "Healthcare-specific benchmarks enabled high-impact renegotiations with vendors like Athenahealth and LabCorp without operational disruption.",
+      "Hands-on change-management kept clinicians engaged during distributor consolidation and sonography insourcing.",
+      "Exceeded savings guarantee by 52 % while working with limited, fragmented spend and contract data."
+    ]
+  },
+  "generation_notes": [
+    "Savings, timing, and ROI figures taken directly from Impact & Results and Exhibit B fee data.",
+    "Approach bullets ordered by individual category savings contributions.",
+    "Anonymized problem statement follows specified replacement rules."
+  ]
+}

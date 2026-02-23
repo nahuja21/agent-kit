@@ -1,0 +1,151 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "McKesson Medical-Surgical",
+      "category": "Medical Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1301434,
+      "final_spend": 1025101,
+      "savings_dollars": 276333,
+      "savings_percent": 21.0,
+      "levers_applied": [
+        "RFP",
+        "Incumbent renegotiation",
+        "Volume rebate",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "Medline",
+        "Cardinal Health",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": "Met or exceeded target prices from benchmark, agreed to tiered volume rebate, and allowed seamless continuation of supply chain with no clinical disruption.",
+      "why_not_selected": null,
+      "contract_terms": "Addendum executed 7/19/2024; tiered volume-rebate schedule tied to annual spend; price caps for 12 months; automatic 1-year renewals unless cancelled with 60-day notice.",
+      "negotiation_leverage": "Competitive RFP created switching risk; benchmarking showed 15-46% SKU gaps; threat to award to Medline/Cardinal; consolidated enterprise-wide volume offered.",
+      "supplier_strengths": [
+        "Nationwide distribution network",
+        "Existing ordering platform already integrated at 40+ sites",
+        "Willingness to match target pricing and provide rebates"
+      ],
+      "supplier_weaknesses": [
+        "Initial pricing 15-30% above market",
+        "Slow to resolve back-order substitutions"
+      ],
+      "switching_costs": "Re-training clinicians on new SKUs, formulary conversions, system integrations, and potential dual-inventory period.",
+      "key_contacts": [
+        "Shane Holloway \u2013 VP Post-Acute Care",
+        "Kerri Laginess \u2013 Corporate Accounts Director"
+      ],
+      "notes": "Round-2 bid covered 99.8% of baseline SKUs with 20% savings; contract now live and savings tracking to plan.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders",
+        "Significant negotiation",
+        "Savings >$50K"
+      ]
+    },
+    {
+      "supplier_name": "Medline Industries",
+      "category": "Medical Supplies",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 1301434,
+      "final_spend": null,
+      "savings_dollars": 129679,
+      "savings_percent": 10.0,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "McKesson",
+        "Cardinal Health",
+        "Pandion",
+        "Henry Schein",
+        "HPG"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Offered only 10% savings versus McKesson\u2019s 20%; SKU coverage matched but pricing missed several target thresholds.",
+      "contract_terms": null,
+      "negotiation_leverage": "Used as credible alternative to pressure incumbent; offered direct-to-home model advantages.",
+      "supplier_strengths": [
+        "Robust direct-to-home fulfillment network",
+        "Competitive but not best-in-class pricing",
+        "Dedicated implementation team"
+      ],
+      "supplier_weaknesses": [
+        "Did not meet target price on high-spend SKUs",
+        "UoM mismatches required manual conversions",
+        "Rebate structure less favorable"
+      ],
+      "switching_costs": null,
+      "key_contacts": null,
+      "notes": "Kept engaged as fallback option should incumbent performance slip; potential for future spot buys.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders",
+        "Supplier not selected"
+      ]
+    },
+    {
+      "supplier_name": "Enterprise Fleet Management",
+      "category": "Fleet",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 3764808,
+      "final_spend": 3624958,
+      "savings_dollars": 139850,
+      "savings_percent": 4.0,
+      "levers_applied": [
+        "Incumbent renegotiation",
+        "Cost model redesign",
+        "Benchmark analysis"
+      ],
+      "alternatives_considered": [],
+      "why_selected": "Ability to restructure full-maintenance rates by mileage bucket with immediate savings and no disruption to existing leases.",
+      "why_not_selected": null,
+      "contract_terms": "Service Agreement Addendum (pending execution) to lock new mileage-bucket rates through June 2026; quarterly reconciliation to actual miles; option to exit units with 30-day notice.",
+      "negotiation_leverage": "Benchmark showed only 126 of 385 vehicles using maintenance each month; highlighted overpayment; threat to rebid or self-fund maintenance.",
+      "supplier_strengths": [
+        "Nationwide maintenance network",
+        "Flexible lease structures",
+        "Quick analytical turnaround"
+      ],
+      "supplier_weaknesses": [
+        "Initial rates set uniformly high regardless of utilization",
+        "Limited transparency on pass-through fees"
+      ],
+      "switching_costs": "Would require buying out or reassigning ~400 active leases; driver reassignment and titling complexity.",
+      "key_contacts": null,
+      "notes": "Savings will be monitored via monthly bucket-level reporting once addendum is signed.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant negotiation",
+        "Cost model redesign",
+        "Savings >$50K"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 12,
+    "battlecards_generated": 3,
+    "categories_with_battlecards": [
+      "Medical Supplies",
+      "Fleet"
+    ],
+    "skipped_reason": "Office Supplies and Temp Labor still in data-collection phase; Pharmacy on hold; remaining suppliers lacked strategic detail."
+  },
+  "extraction_notes": [
+    "Savings figures for McKesson and Medline taken from Round-2 RFP savings analysis.",
+    "Enterprise savings and rate details sourced from slides 8 & 9 of Project Update deck.",
+    "Contract term details limited; used available data from Project Update and category folders."
+  ]
+}

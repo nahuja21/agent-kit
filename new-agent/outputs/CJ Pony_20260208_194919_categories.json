@@ -1,0 +1,212 @@
+{
+  "categories": [
+    {
+      "category_label": "Small Parcel Shipping",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2021-08-30",
+      "end_date": "2022-06-01",
+      "status": "implemented",
+      "vendors_before": [
+        "FedEx (incumbent)",
+        "UPS"
+      ],
+      "vendors_after": [
+        "FedEx (renegotiated agreement)"
+      ],
+      "levers": [
+        "Contract renegotiation",
+        "Rate restructuring",
+        "Surcharge reduction"
+      ],
+      "constraints": {
+        "supplier_constraints": "Client preferred to remain with FedEx for operational consistency",
+        "operational_constraints": null,
+        "contractual_constraints": "Existing FedEx agreement renewal window leveraged for better terms",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 8623763,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "Baseline labeled \u201cEstablished Baseline\u201d on Savings Summary slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 339165,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "Savings confirmed in final close-out report"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 4.0,
+      "notes": "New FedEx Transportation Services Amendment executed; credit-card billing terms and surcharge concessions captured.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+          "page_or_slide": "3",
+          "quote": "Small Parcel Shipping | $8,623,763  | 4% | $339,165",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "Corrugated",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-06-01",
+      "status": "implemented",
+      "vendors_before": [
+        "Carlisle (Harrisburg)",
+        "Neway (Las Vegas)"
+      ],
+      "vendors_after": [
+        "Carlisle (renegotiated)",
+        "Neway (renegotiated)"
+      ],
+      "levers": [
+        "RFP",
+        "Incumbent renegotiation",
+        "Payment terms optimization"
+      ],
+      "constraints": {
+        "supplier_constraints": "Regional sourcing required (PA & NV plants)",
+        "operational_constraints": "No changes to box specifications during transition",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 711708,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "Baseline labeled \u201cEstablished Baseline\u201d on Savings Summary slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 35806,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "5 % savings locked in through executed MOUs"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 5.0,
+      "notes": "MOUs with Carlisle and Neway signed; early-pay discount and extended-term options analyzed but not counted in run-rate.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+          "page_or_slide": "3",
+          "quote": "Corrugated | $711,708  | 5% | $35,806",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging Supplies",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-06-01",
+      "status": "implemented",
+      "vendors_before": [
+        "Colony Paper (incumbent Harrisburg)"
+      ],
+      "vendors_after": [
+        "Colony Paper (renegotiated)",
+        "Sigma Supply (Las Vegas)"
+      ],
+      "levers": [
+        "RFP",
+        "Vendor consolidation",
+        "Payment terms improvement"
+      ],
+      "constraints": {
+        "supplier_constraints": "Maintain dual-source model PA & NV to support inventory availability",
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 419304,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "Baseline labeled \u201cEstablished Baseline\u201d on Savings Summary slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 135870,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "32 % savings confirmed"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 32.0,
+      "notes": "MOUs executed with Sigma (NV) and Colony (PA); Harrisburg renegotiation yielded 22 % item savings plus term benefits.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+          "page_or_slide": "3",
+          "quote": "Packaging Supplies | $419,304  | 32% | $135,870",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "Temporary Labor \u2013 non-IT",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Multiple local temp staffing agencies"
+      ],
+      "vendors_after": [
+        "Staffmark (via OMNIA Partners)"
+      ],
+      "levers": [
+        "GPO participation agreement",
+        "Markup reduction",
+        "Wage rate alignment"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Need to maintain adequate labor fill rates in PA & NV",
+        "contractual_constraints": null,
+        "implementation_constraints": "Local wage increase discussions delaying final rollout"
+      },
+      "baseline_spend": {
+        "amount": 240405,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx",
+        "notes": "Baseline shown on Savings Dashboard slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 30817,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx",
+        "notes": "13 % savings estimate; agreement signed but wage negotiations ongoing"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 13.0,
+      "notes": "Participation agreement executed; awaiting final local rate confirmation before full implementation.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx",
+          "page_or_slide": "3",
+          "quote": "Temporary Labor - non IT | $240,405  | 13% | $30,817",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "client": {
+    "client_name": "Royal Food Service",
+    "industry_primary": "Food Distribution",
+    "industry_secondary": "Fresh Produce & Dairy",
+    "primary_industry_sector": "Logistics, Fleet, Distribution & Aftermarket Parts",
+    "business_model": "Regional distributor of fresh produce and dairy products to restaurants, schools, hospitals and other institutional food-service customers across the U.S. Southeast.",
+    "sponsor_pe_firm": null,
+    "client_history": "Royal Food Service was founded in 1994 in Atlanta, Georgia, by Craig Fleming and Mark Whitehurst. Since then it has grown into one of the largest independent fresh-produce distributors in the Southeast, operating several HACCP-certified cold-storage and processing facilities and a fleet of more than 90 refrigerated trucks."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 75100000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Growjo company profile (75.1 M USD) \u2013 corroborated by Leadiq estimate 50-100 M USD; Martini.ai lists 200 M USD which is a significant outlier",
+      "notes": "Most third-party data aggregators (Growjo 75.1 M, Leadiq 50-100 M, AllBiz 25-74.9 M) cluster in the ~75 M range, while one source (Martini.ai) reports 200 M. No audited figures are publicly available, so an estimated 75.1 M is reported with low confidence and the wider $50-200 M range is noted."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 3,
+      "confidence": "medium",
+      "source": "Official company website About page \u2013 lists main 74,000 sq ft warehouse at 3720 Zip Industrial Blvd SE and two Royal Fresh Cuts facilities at 3675 and 3600 Zip Industrial Blvd SE, Atlanta GA",
+      "notes": "All three facilities are in Atlanta; no additional sites are referenced in documents or web sources."
+    },
+    "employees": {
+      "count": 220,
+      "confidence": "medium",
+      "source": "AllBiz (approx. 220 at Atlanta facility) and Leadiq (201-203 employees as of Feb 2026)",
+      "notes": "Both sources show headcount in the low-200s; no official figure on the company website. Averaged to 220 to reflect upper end of the reported range."
+    }
+  },
+  "extraction_sources": [
+    "Kickoff/Royal Food Service - Strategic Sourcing Project Kickoff Oct 21 2024.pptx (slides 1-2 confirm official name)",
+    "royalfoodservice-online.com/about.php (facility details)",
+    "Growjo company profile (revenue estimate 75.1 M)",
+    "Leadiq company profile (revenue 50-100 M; 201-203 employees)",
+    "AllBiz listing (25-74.9 M revenue; ~220 employees)",
+    "martini.ai research page (200 M revenue outlier)",
+    "Crunchbase profile (founders and private ownership information)"
+  ],
+  "extraction_notes": [
+    "No indication of private-equity ownership; Crunchbase lists company as privately held by founders.",
+    "Revenue estimates vary widely ($50-200 M); majority of sources cluster around $75 M, hence low confidence.",
+    "No EBITDA figures located in any document or reputable source.",
+    "Facilities count taken from addresses listed on official website; unclear whether additional cross-docking or sales offices exist."
+  ]
+}

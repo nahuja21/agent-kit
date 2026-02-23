@@ -1,0 +1,37 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "All required components are available: clear objectives, quantified $1.24M savings (13% reduction), multiple category-level proof points, and documented approach.",
+    "headline": "Faith-based e-commerce retailer captures $1.24M (13%) annual savings and 3.3x ROI through Treya-led strategic sourcing sprint",
+    "client_problem_statement": "Christianbook, LLC\u2014a family-founded online and catalog retailer of Christian books and gifts\u2014was managing nearly $18 million of indirect spend through long-standing, largely unchallenged supplier relationships. With new backing from Nonantum Capital Partners and an aggressive value-creation timeline, leadership needed to quickly unlock hard cost savings in freight, packaging, merchant processing and other categories while preserving service continuity during peak fulfillment seasons. Without a centralized procurement function, the company sought external expertise to drive data-driven negotiations and stand up scalable sourcing processes.",
+    "client_problem_anonymized": "A leading faith-based e-commerce retailer was managing nearly $18 million of indirect spend through long-standing, largely unchallenged supplier relationships. With support from the private equity ownership group and an aggressive value-creation timeline, leadership needed to quickly unlock hard cost savings in freight, packaging, merchant processing and other categories while preserving service continuity during peak fulfillment seasons. Lacking a centralized procurement function, the company sought external expertise to drive data-driven negotiations and establish scalable sourcing processes.",
+    "approach_summary": [
+      "Performed a rapid 12-month AP spend diagnostic to baseline $18 million across eight indirect categories and prioritize high-impact opportunities.",
+      "Ran data-rich competitive RFPs for merchant processing, corrugated, packaging supplies, LTL and FTL freight, injecting market tension and benchmarking every bid line.",
+      "Negotiated a switch from Chase Paymentech to Calibr Merchant Solutions, reducing net effective processing rates from 2.86% to 2.56% while ensuring seamless checkout migration.",
+      "Retained incumbent corrugated and packaging suppliers but leveraged multi-round pricing negotiations to secure double-digit discounts and new volume-based rebates.",
+      "Consolidated LTL and FTL transportation with Echo Logistics, capturing 31% freight savings and simplifying carrier management, all timed post-peak to avoid operational disruption."
+    ],
+    "top_levers": [
+      "Competitive RFP",
+      "Vendor switch",
+      "Incumbent contract renegotiation",
+      "Market benchmarking",
+      "Supplier consolidation"
+    ],
+    "value_delivered_blurb": "Treya delivered $1,237,359 in fully executed annual savings\u2014with an additional $30,291 in flight\u2014equating to a 13% cost reduction across five categories and a 3.3\u00d7 return on its $375K fixed project fee. Savings landed at the high end of the original estimate while preserving service quality, accelerating value realization in just 120 days, and laying the groundwork for a scalable, best-in-class procurement function.",
+    "where_we_were_unique": [
+      "Achieved first live pricing reductions within four months of kick-off, well ahead of peak season.",
+      "Balanced cost take-out with operational continuity by retaining or seamlessly transitioning mission-critical suppliers.",
+      "Leveraged deep freight, payments and packaging category expertise to exceed the client\u2019s high-end savings target.",
+      "Provided hands-on data collection and stakeholder coordination, filling resource gaps and establishing repeatable sourcing templates for future waves."
+    ]
+  },
+  "generation_notes": [
+    "Headline includes dollar savings, percentage reduction and ROI to maximize impact.",
+    "Problem statements draw directly from engagement objectives and constraints, with anonymized version following required rules.",
+    "Approach bullets prioritized by savings contribution and specificity of actions.",
+    "Top levers ranked according to total dollars saved per lever across categories.",
+    "ROI calculated as $1.24M savings \u00f7 $0.375M fee = 3.3x."
+  ]
+}

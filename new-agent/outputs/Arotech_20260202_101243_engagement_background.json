@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "Capture $0.8-$1.9 M in cost savings by applying a data-driven strategic sourcing process across fragmented direct (low-complexity COGS) and indirect categories, while standing up a center-led procurement capability that leverages enterprise-wide spend for Arotech\u2019s multiple business units.",
+    "scope_summary": "Initial scope covers seven priority categories\u2014COGS (AV Equipment, Electronic Components, Interconnects/Cables) plus Office Supplies, Non-IT Temp Labor, Packaging & Shipping Supplies, and IT Hardware\u2014representing ~US$184 M in total AP spend with an addressable subset targeted for a 5-month sourcing wave; travel/T&E P-card tail and high-complexity production inputs are out of scope for this phase.",
+    "constraints_challenges": [
+      "Highly fragmented supplier base creates limited volume leverage and non-uniform pricing.",
+      "Procurement is decentralized across several business units, resulting in inconsistent commercial terms and few enterprise contracts.",
+      "Incomplete spend visibility \u2013 P-card, T&E and some line-item detail not present in initial AP extract; additional unit-level data must be gathered from key suppliers.",
+      "Lack of internal strategic procurement resources or formal processes to support a center-led effort.",
+      "Minimal OEM or rebate agreements and absence of pricing validation mechanisms.",
+      "Compressed five-month timeline to deliver identified savings while maintaining supply continuity."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Aggregated AP spend files from multiple business units are available; contract repositories are ad-hoc; detailed usage data must be requested from high-spend suppliers.",
+    "data_quality_notes": "Supplier names inconsistent, missing P-card/T&E transactions, limited SKU-level detail; multiple systems across recently acquired entities hinder a clean, enterprise spend view.",
+    "source_file": "Assessments/Arotech_Opportunity Assessment.pdf",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessments/Arotech Proposal 3.4.21.pptx",
+    "Assessments/Arotech_Opportunity Assessment.pdf",
+    "Project Updates/Kickoff/Arotech -- Project Kickoff - R1.pptx"
+  ],
+  "extraction_notes": [
+    "Decentralized operating model and low maturity explicitly referenced in proposal and assessment slides.",
+    "Scope categories and savings targets taken from March 4 proposal and May 7 kickoff deck.",
+    "Data limitations detailed on assessment slides noting missing P-card/T&E info."
+  ]
+}

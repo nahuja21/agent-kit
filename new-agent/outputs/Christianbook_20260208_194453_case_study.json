@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "All critical elements are present: named client and industry, clear objectives, quantified $1.24M savings with category-level proof points, and detailed approach.",
+    "headline": "Christianbook trims $1.24 million in annual indirect spend and nets a 3.3\u00d7 ROI through Treya\u2019s strategic sourcing program",
+    "client_problem_statement": "Christianbook, a multichannel retailer of Christian books and gifts, relied on long-standing supplier relationships and a largely decentralized purchasing model. With private-equity ownership seeking to boost enterprise value, leadership needed a rapid, data-driven way to uncover and capture savings across freight, payments, packaging, and other indirect categories. Limited internal bandwidth, incomplete vendor data, and the risk of disrupting customer fulfillment made outside expertise essential.",
+    "client_problem_anonymized": "A multichannel faith-based retailer relied on long-standing supplier relationships and a largely decentralized purchasing model. With the private equity ownership group focused on operational efficiency and margin improvement, leadership needed a rapid, data-driven way to uncover and capture savings across freight, payments, packaging, and other indirect categories. Limited internal bandwidth, incomplete vendor data, and the risk of disrupting customer fulfillment made outside expertise essential.",
+    "approach_summary": [
+      "Performed a forensic 12-month AP spend analysis covering eight indirect categories totaling $18 M, prioritizing $9.2 M for immediate action.",
+      "Launched competitive RFPs underpinned by Treya market benchmarks for merchant processing, LTL/FTL freight, corrugated cartons, and shipping supplies.",
+      "Transitioned card processing to Calibr and freight to Echo Logistics, orchestrating zero-downtime cutovers while negotiating best-in-class rates.",
+      "Re-negotiated with incumbent packaging suppliers and added a third partner to unlock volume-based price breaks without changing product specifications.",
+      "Implemented spend dashboards, supplier scorecards, and communication protocols to institutionalize strategic sourcing discipline for future waves."
+    ],
+    "top_levers": [
+      "Competitive RFP",
+      "Vendor/carrier switch",
+      "Contract renegotiation & benchmarking",
+      "Multi-supplier award for volume leverage"
+    ],
+    "value_delivered_blurb": "Treya delivered $1,237,359 in fully-finalized annual savings\u2014an average 13.4 % reduction that slightly exceeded the high end of the original estimate. The engagement generated a 3.3\u00d7 return on Treya\u2019s fixed $375K fee while enhancing cost transparency, supplier performance management, and procurement governance that will fuel additional future savings.",
+    "where_we_were_unique": [
+      "Exceeded the client\u2019s own high-end savings projection by leveraging real-time market benchmarks.",
+      "Drove a 31 % LTL freight reduction without service disruption by executing a well-planned carrier switch during peak season.",
+      "Balanced savings with relationship continuity\u2014retaining preferred suppliers in key categories while still securing double-digit price cuts.",
+      "Realized first contract signatures and savings within roughly six months, accelerating EBITDA impact ahead of the next budgeting cycle."
+    ]
+  },
+  "generation_notes": [
+    "ROI calculated as $1.237M savings \u00f7 $0.375M fee = 3.3\u00d7.",
+    "Approach bullets use generic descriptors (\u201cthe client\u201d) and retain vendor names where allowed.",
+    "Headline highlights dollar savings, action, and ROI."
+  ]
+}

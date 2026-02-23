@@ -1,0 +1,49 @@
+{
+  "client": {
+    "client_name": "Christianbook, LLC",
+    "industry_primary": "Retail",
+    "industry_secondary": "E-commerce / Book & Media Distribution",
+    "primary_industry_sector": "Retail, Consumer Brands & DTC",
+    "business_model": "Family-founded specialty e-commerce and catalog retailer/wholesaler of Christian books, Bibles, homeschool and gift products, fulfilling orders from a single headquarters & distribution center.",
+    "sponsor_pe_firm": "Nonantum Capital Partners",
+    "client_history": "Founded in 1978 in Massachusetts as Christian Book Distributors by Stephen Hendrickson, the company rebranded to Christianbook in 2019 to avoid CBD confusion and has grown into a leading global supplier of faith-based books and resources. In 2021 it completed a recapitalization with Nonantum Capital Partners to accelerate growth."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 53400000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Accio.com company profile (est. $53.4M, accessed 2024-07); Manta.com profile reports $71.1M",
+      "notes": "Only third-party estimation sites available and figures vary ($53.4M Accio vs $71.1M Manta vs $25-100M SignalHire). Using Accio midpoint but reliability is low."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 1,
+      "confidence": "high",
+      "source": "Christianbook.com About Us page \u2013 describes single 370,000-sq-ft headquarters/distribution facility at 140 Summit St., Peabody, MA",
+      "notes": "No evidence of additional retail sites; company operates primarily online/phone order fulfillment from Peabody campus."
+    },
+    "employees": {
+      "count": 600,
+      "confidence": "medium",
+      "source": "Christianbook.com About Us page (\"employs approximately 600 individuals\"); corroborated by Itemlive.com article (2020) stating \"close to 600 people\"",
+      "notes": "No newer LinkedIn headcount found; two independent sources align on ~600."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Treya Procurement Cost Reduction Services Agreement Christianbook_v2.docx.pdf",
+    "Case Study- Christianbook.docx",
+    "Christianbook.com About Us page (accessed 2024-07)",
+    "pehub.com article 2021-10-01 \"Nonantum recaps Christianbook\"",
+    "Accio.com Christianbook profile",
+    "Manta.com Christianbook.com profile",
+    "Itemlive.com article 2020-09-07 \"Family values reflected at Peabody\u2019s Christianbook\""
+  ],
+  "extraction_notes": [
+    "Official company name confirmed as \"Christianbook, LLC\" in signed services agreement.",
+    "PE ownership verified by multiple sources; no conflicting information.",
+    "Revenue figures are estimates from third-party databases with significant variance; no audited or company-released numbers available.",
+    "Single headquarters facility explicitly described on company website; no other physical stores mentioned.",
+    "Employee count consistently cited as ~600 by both company and local news source."
+  ]
+}

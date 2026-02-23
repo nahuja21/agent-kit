@@ -1,0 +1,126 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Treya Partners secures $412K in annual savings for SaVida Health with $358K already locked in",
+      "narrative": "Since launching in October 2024, Treya Partners has driven meaningful sourcing activity across five spend areas for SaVida Health. The engagement has finalized $357,889 in annual savings through an Athena EMR contract renegotiation and has unlocked a further $54,176 in validated or actively-negotiated savings from GPO, IT hardware, and telecom initiatives. Key wins include cutting EMR fees by 1.16 percentage points and moving SaVida onto a Provista GPO contract for medical and office supplies. Additional run-rate savings will be realized as the telecom consolidation and hardware strategy are completed."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 412065,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Sum of savings avg. for all worked categories"
+      },
+      "finalized_savings": {
+        "amount": 357889,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "EMR category marked with check-mark indicating finalized contract"
+      },
+      "in_progress_savings": {
+        "amount": 54176,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "GPO, IT Hardware, and Telecom savings where agreements are signed or negotiations underway"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "EMR (Athena)",
+        "annual_savings": 357889,
+        "status": "finalized",
+        "status_notes": "Three-year contract signed 4/15/2025; fee reduced from 4.56 % to 3.40 %"
+      },
+      {
+        "category_name": "Provista GPO \u2013 Office Supplies",
+        "annual_savings": 4033,
+        "status": "implemented",
+        "status_notes": "Provista agreement signed 5/5/2025; savings validation with SaVida team in progress"
+      },
+      {
+        "category_name": "Provista GPO \u2013 Medical Supplies",
+        "annual_savings": 27992,
+        "status": "implemented",
+        "status_notes": "Same Provista agreement covers medical supplies; high-usage SKU pricing received and accepted"
+      },
+      {
+        "category_name": "IT Hardware",
+        "annual_savings": 4301,
+        "status": "in progress",
+        "status_notes": "Specs sent to Connection; preliminary savings identified, CDW negotiation pending"
+      },
+      {
+        "category_name": "Telecom \u2013 Data & Voice",
+        "annual_savings": 17850,
+        "status": "in progress",
+        "status_notes": "Comcast consolidation proposal reviewed; managed-services agreement under client review"
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Small Parcel Shipping",
+        "reason": "Removed from scope \u2013 incumbent pricing already competitive"
+      },
+      {
+        "category_name": "Waste Management",
+        "reason": "Removed from scope \u2013 new contract signed prior to engagement"
+      },
+      {
+        "category_name": "Commercial Print",
+        "reason": "Removed from scope \u2013 limited savings opportunity"
+      },
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Removed from scope \u2013 client fully insured, limited opportunity"
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 197,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Engagement kicked off Oct 2024; first savings contract (EMR) signed 4/15/2025"
+      },
+      "notes": "Major savings implemented within seven months of project launch"
+    },
+    "operational_improvements": "Enabled group purchasing organization participation, standardized IT hardware specifications, and laid groundwork for a single managed-services telecom environment, streamlining future purchasing and vendor management.",
+    "proof_points": [
+      {
+        "statement": "Renegotiated Athena EMR fees from 4.56 % to 3.40 %, delivering $357,889 in annual savings.",
+        "category": "EMR",
+        "evidence": [
+          {
+            "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+            "page_or_slide": "6",
+            "quote": "Athena's final proposal meets the 3.4% target rate, delivering approximately $358K in annual savings"
+          }
+        ]
+      },
+      {
+        "statement": "Signed Provista GPO agreement covering office and medical supplies, unlocking combined run-rate savings of $32,025.",
+        "category": "GPO Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+            "page_or_slide": "4",
+            "quote": "ProVista agreement signed; savings validation with Savida team underway"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+    "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx"
+  ],
+  "extraction_notes": [
+    "Only categories with concrete sourcing activity (contracts signed, negotiations completed, or in-flight negotiations with clear supplier proposals) are included.",
+    "Employee Benefits and three other categories were explicitly removed from scope and therefore excluded from savings totals."
+  ]
+}

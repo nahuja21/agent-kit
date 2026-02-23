@@ -1,0 +1,34 @@
+{
+  "exhibit_a": {
+    "initial_categories": [],
+    "initial_categories_count": 0,
+    "category_details": [],
+    "total_spend": 0,
+    "total_addressable_spend": 0,
+    "savings_estimate_low": 0,
+    "savings_estimate_high": 0,
+    "cogs_categories_count": 0,
+    "cogs_categories_percentage": 0,
+    "cogs_addressable_spend": 0,
+    "cogs_addressable_percentage": 0
+  },
+  "exhibit_b": {
+    "fee_type": null,
+    "fee_amount": null,
+    "minimum_savings_guarantee": null,
+    "minimum_return_on_fees_ratio": null,
+    "fee_hybrid_threshold": null,
+    "fee_contingent_percentage": null,
+    "fee_notes": null
+  },
+  "timing": {
+    "start_date": "2023-09-27",
+    "end_date": null,
+    "engagement_type": "Procurement Cost Reduction Services"
+  },
+  "extraction_notes": [
+    "The supplied document text did not include the actual content of Exhibit A or Exhibit B. Only DocuSign headers and a signature date (09/27/2023) were visible.",
+    "Without the tables or fee language, all Exhibit-related numeric fields are left blank or set to 0/null.",
+    "Start date inferred from the signature date shown on page 6. Engagement type taken from the file name."
+  ]
+}

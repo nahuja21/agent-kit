@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "Choice Health at Home engaged Treya Partners to capture roughly $0.54-1.2 million in annual savings through strategic sourcing of key indirect and clinical-support spend categories, leveraging enterprise-wide purchasing power to boost EBITDA and stand up a best-in-class procurement process before July 2024.",
+    "scope_summary": "Initial scope covers 12 categories\u2014Fleet, Employee Benefits, Medical Supplies, Pharmacy, Medical Equipment, Temp Labor (Therapists and Nurses), Telecom (Data & Voice), Commercial Print, Copiers/MFPs, Office Supplies and IT Hardware\u2014representing about $17.7 million in annual spend with 75-90 % addressability. Large direct-care areas (e.g., Doctors, Homecare Software, Hospice Services) and any categories not listed in Exhibit A are currently out of scope or on hold.",
+    "constraints_challenges": [
+      "Supplier lack of responsiveness to data and usage requests, slowing baseline development",
+      "Incumbent supplier pushback requiring a unified \u2018one-voice\u2019 negotiation strategy",
+      "Risk of unauthorized \u201cside conversations\u201d with suppliers that could erode leverage",
+      "Limited stakeholder availability for data provision, interviews, and timely feedback",
+      "Aggressive five-to-six-month timeline to deliver savings and complete sourcing by July 2024",
+      "Incomplete or non-standardized usage and contract data; AP file required significant cleanup and mapping",
+      "Sensitivity around certain strategic suppliers where Choice may prefer to lead negotiations"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Accounts-payable spend extract (~$39 M) available in Excel; no centralized contract repository; limited internal usage reporting\u2014Treya must request line-item data directly from high-spend suppliers.",
+    "data_quality_notes": "Duplicate vendor naming, unmapped GL lines and missing historical usage data; some suppliers unwilling or slow to provide 12-month histories, creating gaps in the baseline.",
+    "source_file": "Project Kickoff/Choice Health - Strategic Sourcing Project Kickoff - (0122024).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Project Kickoff/Choice Health - Strategic Sourcing Project Kickoff - (0122024).pptx",
+    "Proposal and Assessments/Treya Initial Opportunity Assessment - Choice Health.pptx",
+    "Agreement/Treya Procurement Cost Reduction Services Agreement_Choice Health at Home.docx.pdf"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from need for Treya to \u2018do the heavy lifting\u2019, decentralized AP spend, and absence of formal procurement team references.",
+    "Data quality observations pulled from spend analysis workbooks and supplier data-collection provisions in the Agreement."
+  ]
+}

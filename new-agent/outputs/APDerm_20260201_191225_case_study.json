@@ -1,0 +1,35 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client, objective, quantified $1.18M savings, timing metrics, and multiple proof-points are all documented, enabling a strong, data-backed case study.",
+    "headline": "Dermatology platform captures $1.18 million in annual savings and 6\u00d7 ROI through Treya\u2019s strategic sourcing program",
+    "client_problem_statement": "Adult & Pediatric Dermatology, PC (APDerm), the largest physician-led dermatology network in New England, had expanded to 40+ clinics through rapid acquisitions that left purchasing highly fragmented. Site managers negotiated their own deals, creating hundreds of disparate contracts, limited spend visibility, and rising costs amid COVID-era inflation. Backed by Waud Capital Partners, APDerm needed measurable cost reductions to boost EBITDA and hit aggressive value-creation milestones without disrupting patient care.",
+    "client_problem_anonymized": "A multi-site dermatology network had expanded to 40+ clinics through rapid acquisitions that left purchasing highly fragmented. Site managers negotiated their own deals, creating hundreds of disparate contracts, limited spend visibility, and rising costs amid COVID-era inflation. Supported by their PE backer and focused on operational efficiency and margin improvement, the organization needed measurable cost reductions without disrupting patient care.",
+    "approach_summary": [
+      "Analyzed more than $6.3 million of indirect and clinical-support spend across 12 categories to establish baselines and savings hypotheses.",
+      "Leveraged healthcare GPO relationships to transition medical-supply distribution to McKesson and align with HPG/Premier Tier-2 pricing, cutting costs by 27 %.",
+      "Ran competitive RFPs that consolidated courier, janitorial, and telecom services from dozens of vendors to a core group of high-performers, securing up to 38 % rate reductions while maintaining service levels for 30+ clinics.",
+      "Renegotiated the incumbent Athenahealth revenue-cycle contract, lowering collection fees from 1.80 % to 1.50 % and unlocking $260K in annual savings.",
+      "Delivered quick-win GPO programs for UPS small-parcel shipping and Randstad temporary labor within 60 days, then instituted centralized contracting and quarterly business reviews to sustain results."
+    ],
+    "top_levers": [
+      "GPO tier optimization",
+      "Competitive RFP",
+      "Contract renegotiation",
+      "Vendor consolidation",
+      "Rate benchmarking"
+    ],
+    "value_delivered_blurb": "Treya verified $1,179,965 in annual run-rate savings\u2014well above the $928K high-end estimate and more than triple the contractual savings guarantee. Six categories are already live and delivering $862K, with the remaining $318K in final contracting. Beyond the 6.2\u00d7 return on Treya\u2019s fixed $190K fee, the engagement instituted centralized contracts, 12-month price holds on core medical items, and new supplier-performance dashboards that position the client for ongoing margin expansion.",
+    "where_we_were_unique": [
+      "Generated first hard-dollar savings within 60 days by activating GPO quick-wins.",
+      "Deep healthcare sourcing expertise and distributor relationships enabled 27 % savings on core medical supplies without changing formularies.",
+      "Hands-on, vendor-facing approach relieved internal staff and maintained clinician buy-in during transitions across 30+ locations.",
+      "Expanded scope mid-engagement, uncovering an additional $320K in savings opportunities beyond the original seven categories."
+    ]
+  },
+  "generation_notes": [
+    "Savings, percentages, and ROI calculated directly from provided financials ($1.18M savings \u00f7 $0.19M fee).",
+    "Approach bullets prioritize actions linked to highest savings categories (medical supplies, courier, janitorial, telecom, billing).",
+    "Anonymization replaces company and PE names per instructions while retaining context."
+  ]
+}

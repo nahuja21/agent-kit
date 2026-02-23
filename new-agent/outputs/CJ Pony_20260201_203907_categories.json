@@ -1,0 +1,247 @@
+{
+  "categories": [
+    {
+      "category_label": "Small Parcel Shipping (FedEx)",
+      "category_l1": "Logistics",
+      "category_l2": "Parcel",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-06-01",
+      "status": "implemented",
+      "vendors_before": [
+        "FedEx"
+      ],
+      "vendors_after": [
+        "FedEx (renegotiated agreement)"
+      ],
+      "levers": [
+        "Renegotiation",
+        "Benchmarking",
+        "Rate discount optimization",
+        "Surcharge reduction"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must retain FedEx as primary parcel carrier",
+        "operational_constraints": "Service levels and transit times could not be impacted",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 10779703,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "EXHIBIT A DATA",
+        "notes": "Initial baseline spend listed for Small Parcel Shipping"
+      },
+      "savings_annual_run_rate": {
+        "amount": 339165,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "4% annual savings from new FedEx agreement"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 3.1,
+      "notes": "Earned discount tiers, minimum charge, and surcharge concessions drove savings.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+          "page_or_slide": "3",
+          "quote": "Small Parcel Shipping | $8,623,763  | 4% | $339,165",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging Supplies",
+      "category_l1": "Direct Materials",
+      "category_l2": "Packaging",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2022-04-28",
+      "status": "implemented",
+      "vendors_before": [
+        "Multiple incumbent packaging suppliers"
+      ],
+      "vendors_after": [
+        "Sigma (Las Vegas warehouse)",
+        "Colony Paper (Harrisburg)"
+      ],
+      "levers": [
+        "RFP",
+        "Vendor consolidation",
+        "Competitive bidding"
+      ],
+      "constraints": {
+        "supplier_constraints": "Separate vendors required for PA vs NV locations",
+        "operational_constraints": "Need local warehousing capability for rapid fulfillment",
+        "contractual_constraints": null,
+        "implementation_constraints": "Inventory transition coordinated to avoid stockouts"
+      },
+      "baseline_spend": {
+        "amount": 961784,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "EXHIBIT A DATA",
+        "notes": "Exhibit A line item 'Packaging & Shipping Supplies'"
+      },
+      "savings_annual_run_rate": {
+        "amount": 135870,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "32% savings realized via MOUs with Sigma & Colony"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 14.1,
+      "notes": "Significant price reductions plus 3PL warehouse benefit in Las Vegas.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+          "page_or_slide": "3",
+          "quote": "Packaging Supplies | $419,304  | 32% | $135,870",
+          "date_extracted": "2026-02-01"
+        },
+        {
+          "source_file": "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx",
+          "page_or_slide": "4",
+          "quote": "Packaging MOU for Sigma in Las Vegas has been fully executed\u2026 Colony Papers \u2026 contract executed on 4/28",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Corrugated",
+      "category_l1": "Direct Materials",
+      "category_l2": "Packaging",
+      "category_l3": "Corrugated",
+      "start_date": null,
+      "end_date": "2022-03-25",
+      "status": "implemented",
+      "vendors_before": [
+        "Existing corrugated suppliers (unnamed incumbents)"
+      ],
+      "vendors_after": [
+        "Carlisle (Harrisburg)",
+        "Neway (Las Vegas)"
+      ],
+      "levers": [
+        "RFP",
+        "Payment term improvement"
+      ],
+      "constraints": {
+        "supplier_constraints": "Vendors must service specific warehouse locations",
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 711708,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "Corrugated established baseline shown in savings slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 35806,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "5% savings including extended payment terms"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 5.0,
+      "notes": "Extended payment terms provided additional cash-flow benefit.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+          "page_or_slide": "3",
+          "quote": "Corrugated | $711,708  | 5% | $35,806",
+          "date_extracted": "2026-02-01"
+        },
+        {
+          "source_file": "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx",
+          "page_or_slide": "11",
+          "quote": "Total corrugated savings are estimated at $32K (4%) with exact match items and an additional $4K - $10K in savings through payment term improvement.",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "category_label": "Temporary Labor \u2013 non-IT",
+      "category_l1": "Labor",
+      "category_l2": "Temporary Staffing",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Local staffing agencies (incumbent suppliers)"
+      ],
+      "vendors_after": [
+        "Staffmark via Omnia Partners GPO"
+      ],
+      "levers": [
+        "GPO",
+        "Markup reduction",
+        "Rate benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": "Must comply with local wage rates in PA and NV",
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": "Pending resolution of local rate increase request"
+      },
+      "baseline_spend": {
+        "amount": 862410,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "EXHIBIT A DATA",
+        "notes": "Initial scope baseline 'Temporary Labor - non IT'"
+      },
+      "savings_annual_run_rate": {
+        "amount": 30817,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx",
+        "notes": "13% savings on current markups estimated"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 3.6,
+      "notes": "Participation agreement executed; wage analysis under review.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx",
+          "page_or_slide": "3",
+          "quote": "Temporary Labor - non IT | $240,405  | 13% | $30,817",
+          "date_extracted": "2026-02-01"
+        },
+        {
+          "source_file": "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx",
+          "page_or_slide": "4",
+          "quote": "GPO Participation agreement fully executed with Omnia / Staffmark\u2026 Local Staffmark team conducted wage analysis and requested an increase in PA rates",
+          "date_extracted": "2026-02-01"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 4,
+    "implemented_count": 3,
+    "in_progress_count": 1,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 13315605,
+    "total_savings": 541658,
+    "average_savings_percentage": 4.1
+  },
+  "extraction_sources": [
+    "EXHIBIT A DATA",
+    "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+    "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx"
+  ],
+  "extraction_notes": [
+    "Baseline spend values default to Exhibit A where available per instructions; Corrugated baseline sourced from savings slide due to absence in Exhibit A.",
+    "Savings percentages calculated against Exhibit A baselines; therefore differ from slide-quoted percentages.",
+    "Start and end dates not explicitly documented in files; left null where timing could not be confirmed."
+  ]
+}

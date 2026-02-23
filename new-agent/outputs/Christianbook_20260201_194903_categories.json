@@ -1,0 +1,435 @@
+{
+  "categories": [
+    {
+      "category_label": "Merchant Processing Fees",
+      "category_l1": "Finance",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-08-01",
+      "end_date": "2025-02-24",
+      "status": "implemented",
+      "vendors_before": [
+        "Chase Paymentech"
+      ],
+      "vendors_after": [
+        "Calibr Merchant Solutions"
+      ],
+      "levers": [
+        "RFP",
+        "Vendor switch",
+        "Benchmarking/market comparison"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Must maintain seamless customer checkout experience during processor cut-over",
+        "contractual_constraints": "Month-to-month agreement with incumbent allowed exit at any time",
+        "implementation_constraints": "Token migration and subscription card data transfer required"
+      },
+      "baseline_spend": {
+        "amount": 5243627,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Exhibit A Data.json",
+        "notes": "Initial baseline spend from Exhibit A"
+      },
+      "savings_annual_run_rate": {
+        "amount": 557715,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings finalized 2/24/2025"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 10.6,
+      "notes": "Calibr offered a 2.56% net effective rate vs. 2.86% with Chase, delivering ~10% annual savings.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "1",
+          "quote": "\u00fc | 2/24/2025 | Merchant Processing Fees1 | $5,367,215 | 100% | ... | 10% | 13% | $557,715 |",
+          "date_extracted": "2026-02-02"
+        },
+        {
+          "source_file": "Categories/Merchant Processing/Christianbook- Merchant Processing RFP Analysis.pptx",
+          "page_or_slide": "3",
+          "quote": "Calibr ... proposed a net effective rate of 2.56%, offering an estimated $550K (10%) in conservative savings.",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "Corrugated",
+      "category_l1": "Packaging",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-08-05",
+      "end_date": "2025-12-20",
+      "status": "implemented",
+      "vendors_before": [
+        "Unicorr",
+        "Rand Whitney"
+      ],
+      "vendors_after": [
+        "Unicorr",
+        "Rand Whitney",
+        "Key Container Corp"
+      ],
+      "levers": [
+        "RFP",
+        "Incumbent renegotiation",
+        "Competitive bidding"
+      ],
+      "constraints": {
+        "supplier_constraints": "Maintain >50% volume with Unicorr per existing commitment",
+        "operational_constraints": "No carton spec changes allowed during peak season",
+        "contractual_constraints": "Long-term pricing agreement with Unicorr required continuity",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1433856,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Exhibit A Data.json",
+        "notes": null
+      },
+      "savings_annual_run_rate": {
+        "amount": 168060,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings finalized 12/20/2025"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 11.7,
+      "notes": "Savings achieved while retaining incumbents and onboarding Key Container for select SKUs.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+          "page_or_slide": "12",
+          "quote": "We reduced costs by $168K while retaining incumbent suppliers Unicorr and Rand, and continued qualification of Key Container Corp.",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging & Shipping Supplies",
+      "category_l1": "Packaging",
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-08-05",
+      "end_date": "2025-12-20",
+      "status": "implemented",
+      "vendors_before": [
+        "Peak Technologies",
+        "Accutech"
+      ],
+      "vendors_after": [
+        "Peak Technologies",
+        "Accutech"
+      ],
+      "levers": [
+        "RFP",
+        "Price renegotiation",
+        "Rebate introduction"
+      ],
+      "constraints": {
+        "supplier_constraints": "Retain incumbents to avoid equipment re-calibration",
+        "operational_constraints": "No disruption to fulfillment center operations",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1274235,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Exhibit A Data.json",
+        "notes": null
+      },
+      "savings_annual_run_rate": {
+        "amount": 110729,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings finalized 12/20/2025"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 8.7,
+      "notes": "Accutech agreed to a 2% rebate once annual volume exceeds $1.25M.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+          "page_or_slide": "13",
+          "quote": "Total Current Cost $897,369 ... Totals $786,641 | Savings $110,729 | 12%",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "LTL",
+      "category_l1": "Transportation",
+      "category_l2": "Freight",
+      "category_l3": "Less-Than-Truckload",
+      "start_date": "2024-09-01",
+      "end_date": "2025-02-28",
+      "status": "implemented",
+      "vendors_before": [
+        "Old Dominion"
+      ],
+      "vendors_after": [
+        "Echo Logistics"
+      ],
+      "levers": [
+        "RFP",
+        "Vendor switch",
+        "Benchmark-based negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Trial period required to confirm service levels before full transition",
+        "contractual_constraints": "Old Dominion rates effective until 2/28/2025 but no volume minimums",
+        "implementation_constraints": "Transition scheduled post-peak season"
+      },
+      "baseline_spend": {
+        "amount": 873264,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+        "notes": "Updated baseline based on 6-month shipment data annualized"
+      },
+      "savings_annual_run_rate": {
+        "amount": 266350,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings finalized 2/28/2025"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 30.5,
+      "notes": "Echo\u2019s all-in rates delivered ~31% savings versus Old Dominion linehaul plus fuel.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+          "page_or_slide": "14",
+          "quote": "Round 2 of the RFQ has concluded, yielding an anticipated savings of 15-25%. Echo ... identifying approximately $271K in annual savings.",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "FTL",
+      "category_l1": "Transportation",
+      "category_l2": "Freight",
+      "category_l3": "Full Truckload",
+      "start_date": "2024-09-01",
+      "end_date": "2025-02-28",
+      "status": "implemented",
+      "vendors_before": [
+        "TransLink",
+        "RoadOne"
+      ],
+      "vendors_after": [
+        "Echo Logistics"
+      ],
+      "levers": [
+        "RFP",
+        "Lane-level pricing comparison"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Must support multi-stop lanes to FedEx and UPS hubs",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 851164,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+        "notes": "Baseline derived from historical shipment data used in RFQ"
+      },
+      "savings_annual_run_rate": {
+        "amount": 64494,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings finalized 2/28/2025"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7.6,
+      "notes": "Echo offered 4% savings; additional benefit from aligning LTL and FTL with single provider.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+          "page_or_slide": "11",
+          "quote": "FTL | Annual Spend Bid On $851,164 ... Echo New Cost $815,026 | Savings $36,138 | 4%",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "Ingram Book Group (Book Fulfillment)",
+      "category_l1": "Supply Chain Services",
+      "category_l2": "Fulfillment",
+      "category_l3": null,
+      "start_date": "2025-01-29",
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Ingram Book Company"
+      ],
+      "vendors_after": null,
+      "levers": [
+        "RFP"
+      ],
+      "constraints": {
+        "supplier_constraints": "Limited competitive landscape; historical reliance on Ingram",
+        "operational_constraints": "High order volume with 87% single-book orders requires fast fulfillment",
+        "contractual_constraints": "Existing Fulfillment Services Agreement dating back to 2013 with auto-renewals",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 612056,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Exhibit A Data.json",
+        "notes": "Initial Exhibit A baseline; current spend estimated at ~$2M (slide 9) but RFP still open"
+      },
+      "savings_annual_run_rate": null,
+      "savings_one_time": null,
+      "savings_percentage": null,
+      "notes": "RFP issued to Ingram and Baker & Taylor; responses due 2/14/2025.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+          "page_or_slide": "9",
+          "quote": "Treya has completed a comprehensive analysis ... an RFP will be launched to Ingram and Baker & Taylor Publishing today.",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "Employee Benefits",
+      "category_l1": "Human Resources",
+      "category_l2": "Benefits",
+      "category_l3": null,
+      "start_date": "2024-10-02",
+      "end_date": null,
+      "status": "identified",
+      "vendors_before": [
+        "Harvard Pilgrim Health Care",
+        "Tufts Health Plan"
+      ],
+      "vendors_after": null,
+      "levers": [
+        "Self-funded model evaluation",
+        "Claims analytics"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Maintain competitive benefits to retain employees",
+        "contractual_constraints": "Annual renewal cycle July 1; carrier change would align with plan year",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 3430509,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Exhibit A Data.json",
+        "notes": null
+      },
+      "savings_annual_run_rate": {
+        "amount": 218629,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+        "notes": "Savings identified based on 2023 claims; project on hold pending updated data"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 6.4,
+      "notes": "Move to self-funding and full RX rebate pass-through projected to save ~$220K annually.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+          "page_or_slide": "4",
+          "quote": "Employee Benefits2 | $4,490,895 ... Current savings identified is $218,629 based on 2023 historical claims data.",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "Marketing Software",
+      "category_l1": "IT",
+      "category_l2": "Software",
+      "category_l3": "Marketing Tech Stack",
+      "start_date": "2024-10-15",
+      "end_date": null,
+      "status": "identified",
+      "vendors_before": [
+        "Akamai",
+        "Certona (Monetate)",
+        "Bloomreach",
+        "Level Access",
+        "Oracle",
+        "Cogent",
+        "Others"
+      ],
+      "vendors_after": null,
+      "levers": [
+        "License rationalization",
+        "Contract renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Mission-critical CDN (Akamai) cannot be disrupted",
+        "operational_constraints": null,
+        "contractual_constraints": "Multiple staggered expiration dates across vendors",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1035326,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Exhibit A Data.json",
+        "notes": null
+      },
+      "savings_annual_run_rate": {
+        "amount": 23295,
+        "currency": "USD",
+        "confidence": "low",
+        "source_file": "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+        "notes": "Low-end savings estimate (3% of addressable spend); project on hold"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 2.2,
+      "notes": "Opportunity to consolidate overlapping tools and renegotiate core contracts once project restarts.",
+      "evidence": [
+        {
+          "source_file": "Categories/Marketing Software/Christianbook - Marketing Software Category Tracker.xlsx",
+          "page_or_slide": "Category Tracker sheet",
+          "quote": "Akamai | 152,662.56 ... Certona (Monetate) | 104,125 ... Bloomreach | 75,000",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 8,
+    "implemented_count": 5,
+    "in_progress_count": 1,
+    "identified_count": 2,
+    "not_pursued_count": 0,
+    "total_baseline_spend": 14754037,
+    "total_savings": 1409272,
+    "average_savings_percentage": 9.5
+  },
+  "extraction_sources": [
+    "Exhibit A Data.json",
+    "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+    "Project Updates/Christianbook - Strategic Sourcing Project Update (012925).pptx",
+    "Categories/Merchant Processing/Christianbook- Merchant Processing RFP Analysis.pptx"
+  ],
+  "extraction_notes": [
+    "Baseline spend values prioritize Exhibit A; updated spends from later analyses used only when Exhibit category split was unavailable (e.g., LTL and FTL).",
+    "Savings percentages are calculated using Exhibit A baseline except where baseline only exists in later project files (LTL/FTL).",
+    "Janitorial Services was formally removed from scope and is not included."
+  ]
+}

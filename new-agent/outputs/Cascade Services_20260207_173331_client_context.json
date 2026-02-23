@@ -1,0 +1,40 @@
+{
+  "client": {
+    "client_name": "Cascade Residential Services LLC",
+    "industry_primary": "Residential HVAC, Plumbing & Electrical Services",
+    "industry_secondary": "Home Services Platform",
+    "primary_industry_sector": "Building Products, Trades & Installed Systems",
+    "business_model": "Multi-brand residential HVAC, plumbing and electrical services platform operating across the South Atlantic and Gulf States",
+    "sponsor_pe_firm": "LP First Capital and Trive Capital",
+    "client_history": "Cascade Residential Services LLC (doing business as Cascade Services) was formed in December 2022 through a partnership between private-equity firms LP First Capital and Trive Capital. The platform began with the acquisition of four Florida-based HVAC and electrical contractors and has since grown to encompass 13 brands providing residential HVAC, plumbing and electrical services across several southern U.S. states."
+  },
+  "size_metrics": {
+    "revenue": null,
+    "ebitda": null,
+    "locations": {
+      "count": null,
+      "confidence": "low",
+      "source": null,
+      "notes": "No reliable count of branch locations or offices was available in documents or official web sources."
+    },
+    "employees": {
+      "count": 500,
+      "confidence": "medium",
+      "source": "Cascade Services website (cascadeservices.com \u2013 'About' section, accessed 2026-02-08)",
+      "notes": "Site states the platform 'comprises 13 brands and employs over 500 individuals'. No second independent count located."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Cascade Services Executed Agreement 3.31.25.pdf (page 1)",
+    "Cascade Services website (https://www.cascadeservices.com)",
+    "PR Newswire release: 'Trive Capital Forms Cascade Services...' 12-Dec-2022",
+    "PE Professional article: 'Cascade Services launched by LP First and Trive' 09-Jan-2023"
+  ],
+  "extraction_notes": [
+    "Legal name confirmed as 'Cascade Residential Services LLC' in executed services agreement.",
+    "PE ownership and formation details cross-checked between PR Newswire press release and PE Professional article; both match.",
+    "Employee count only stated on company website; no LinkedIn or database figure located, so confidence marked 'medium'.",
+    "No credible sources disclosed revenue or EBITDA; those fields left null to avoid unsupported estimation.",
+    "Number of physical locations not explicitly disclosed by any primary or secondary source."
+  ]
+}

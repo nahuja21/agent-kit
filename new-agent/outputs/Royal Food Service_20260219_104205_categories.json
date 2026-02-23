@@ -1,0 +1,585 @@
+{
+  "categories": [
+    {
+      "category_label": "Inbound Freight",
+      "category_l1": "Logistics",
+      "category_l2": "Freight",
+      "category_l3": "Inbound Refrigerated",
+      "start_date": null,
+      "end_date": "2025-09-16",
+      "status": "implemented",
+      "vendors_before": [
+        "Kool Logistics",
+        "Pro Fresh"
+      ],
+      "vendors_after": [
+        "Kool Logistics (renegotiated rates)",
+        "Pro Fresh (renegotiated rates)"
+      ],
+      "levers": [
+        "Competitive multi-round RFP",
+        "Direct negotiations with incumbents",
+        "Benchmarking against prospective carriers"
+      ],
+      "constraints": {
+        "supplier_constraints": "Royal preferred to keep trusted incumbent carriers if pricing was competitive",
+        "operational_constraints": "All loads must deliver to single Atlanta DC without service disruption",
+        "contractual_constraints": null,
+        "implementation_constraints": "New rate sheets had to align with Royal\u2019s annual contract period beginning 10/01/25"
+      },
+      "baseline_spend": {
+        "amount": 9469500,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable Spend listed on Savings Dashboard (page 3)"
+      },
+      "savings_annual_run_rate": {
+        "amount": 537550,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Finalized savings shown on Freight \u2013 Final Savings Overview (page 10)"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 6,
+      "notes": "Savings locked in for next contract period with incumbent carriers; new rates already live.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "3",
+          "quote": "Inbound Freight  |  Addressable Spend $9,469,500  |  Savings 6% ($537,550)  |  Finalized",
+          "date_extracted": "2026-02-19"
+        },
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "10",
+          "quote": "Treya negotiated directly with the two incumbent carriers to secure lower rates. As a result, Royal locked in $537K (5%) in annual savings.",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Non-IT Temporary Labor",
+      "category_l1": "Labor",
+      "category_l2": "Temporary Staffing",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-06-30",
+      "status": "implemented",
+      "vendors_before": [
+        "Rising Staff",
+        "Worldstaff",
+        "Flex Personnel",
+        "Staffmark"
+      ],
+      "vendors_after": [
+        "Rising Staff (preferred incumbent, reduced mark-ups)",
+        "Jibe Staffing (new agency)"
+      ],
+      "levers": [
+        "Agency consolidation",
+        "Competitive RFP",
+        "Markup reduction negotiations"
+      ],
+      "constraints": {
+        "supplier_constraints": "Maintain reliable coverage for warehouse & production shifts",
+        "operational_constraints": "No disruption to daily staffing levels during transition",
+        "contractual_constraints": null,
+        "implementation_constraints": "Staggered rollout of new mark-ups by agency"
+      },
+      "baseline_spend": {
+        "amount": 4910645,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable Spend listed on Savings Dashboard (page 3)"
+      },
+      "savings_annual_run_rate": {
+        "amount": 202607,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Scenario 2 selected on Temporary Labor \u2013 Final Savings Overview (page 9)"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 4,
+      "notes": "Worldstaff removed due to poor service; Jibe added for competitive pricing.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "9",
+          "quote": "Recommendation: keep majority of contingent labor with Rising Staff while leveraging Jibe \u2026 estimated to deliver $203K in annual savings.",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging \u2013 Corrugate",
+      "category_l1": "Packaging",
+      "category_l2": "Corrugated Boxes",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-07-31",
+      "status": "implemented",
+      "vendors_before": [
+        "Rusken",
+        "Piedmont National",
+        "Victory Packaging",
+        "SupplyOne"
+      ],
+      "vendors_after": [
+        "Rusken (RFC award with improved pricing)",
+        "Victory Packaging (RFS consolidated)"
+      ],
+      "levers": [
+        "Multi-round RFP",
+        "Supplier site visits",
+        "Vendor consolidation",
+        "Direct negotiations"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Box specs and flute strength had to remain unchanged for food safety",
+        "contractual_constraints": null,
+        "implementation_constraints": "Extended payment terms requested in negotiation"
+      },
+      "baseline_spend": {
+        "amount": 2252079,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable spend listed on Savings Dashboard (page 3)"
+      },
+      "savings_annual_run_rate": {
+        "amount": 151781,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Savings figure confirmed on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7,
+      "notes": "Full corrugated spend for RFS shifted to single supplier to leverage volume.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "8",
+          "quote": "Negotiated improved pricing on top movers with Rusken \u2026 Total annual savings of $241K (corrugate portion $109K RFC, $43K RFS).",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging \u2013 Films",
+      "category_l1": "Packaging",
+      "category_l2": "Films & Stretch Wrap",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-07-31",
+      "status": "implemented",
+      "vendors_before": [
+        "Golden Eagle",
+        "Preferred Packaging",
+        "SupplyOne"
+      ],
+      "vendors_after": [
+        "Golden Eagle (improved pricing)",
+        "Preferred Packaging (improved pricing)",
+        "Bunzl (stretch wrap award)"
+      ],
+      "levers": [
+        "Competitive RFP",
+        "Benchmarking incumbent pricing",
+        "Supplier product testing"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Film performance must meet MAP tray sealing requirements",
+        "contractual_constraints": null,
+        "implementation_constraints": "Samples validated prior to price activation"
+      },
+      "baseline_spend": {
+        "amount": 862732,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable spend on Savings Dashboard (page 3)"
+      },
+      "savings_annual_run_rate": {
+        "amount": 61033,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Savings listed on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7,
+      "notes": "Stretch wrap moved to Bunzl; roll-stock incumbents reduced pricing.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "8",
+          "quote": "Film  |  $826,230 baseline  |  $55,288 savings \u2013 Improved pricing from incumbent roll stock vendors, stretch wrap awarded to Bunzl",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging \u2013 Steam Trays & Pads",
+      "category_l1": "Packaging",
+      "category_l2": "Steam Trays & Soaker Pads",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-07-31",
+      "status": "implemented",
+      "vendors_before": [
+        "Aptar"
+      ],
+      "vendors_after": [
+        "Bunzl (alternative soaker pads)"
+      ],
+      "levers": [
+        "Product substitution",
+        "Multi-round RFP",
+        "Direct negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Pad absorbency spec required for food safety",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 482427,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable spend on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 57594,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Savings listed on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 12,
+      "notes": "Conversion to Bunzl pads completed with significant unit cost reduction.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "8",
+          "quote": "Steam Trays and Pads  |  $57,594 savings  |  Converting to Bunzl soaker pads",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging \u2013 Rigid Packaging",
+      "category_l1": "Packaging",
+      "category_l2": "Rigid Containers",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-07-31",
+      "status": "implemented",
+      "vendors_before": [
+        "Bunzl (Inline \u2013 imported)"
+      ],
+      "vendors_after": [
+        "Bunzl (Inline \u2013 domestic production)"
+      ],
+      "levers": [
+        "Supplier sourcing shift (offshore to domestic)",
+        "Negotiated price reductions"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Must maintain compatibility with existing sealing equipment",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 417895,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable spend on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 14682,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Savings listed on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 4,
+      "notes": "Shift to Inline domestic option through Bunzl lowered unit costs and lead times.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "8",
+          "quote": "Rigid Packaging  |  Savings reflect Inline domestic pricing through Bunzl",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging \u2013 Misc",
+      "category_l1": "Packaging",
+      "category_l2": "Miscellaneous Supplies",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-07-31",
+      "status": "implemented",
+      "vendors_before": [
+        "Bunzl"
+      ],
+      "vendors_after": [
+        "Bunzl (renegotiated pricing on buckets & lids)"
+      ],
+      "levers": [
+        "Price benchmarking",
+        "Direct negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 138364,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable spend on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 23685,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Savings listed on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 17,
+      "notes": "Improved bucket/lid pricing through incumbent Bunzl.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "8",
+          "quote": "Misc  |  Improved pricing from Bunzl on buckets and bucket lids  |  $4,550 RFC savings + $19,135 RFS savings",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Fuel (DEF)",
+      "category_l1": "Fuel",
+      "category_l2": "Diesel Exhaust Fluid",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-06-15",
+      "status": "implemented",
+      "vendors_before": [
+        "Green Oil"
+      ],
+      "vendors_after": [
+        "Green Oil (market-based DEF pricing)"
+      ],
+      "levers": [
+        "Pricing structure change (flat rate \u2192 market index)",
+        "Supplier negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Long-standing relationship with Green Oil preferred",
+        "operational_constraints": "On-site fueling services had to remain uninterrupted",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1702707,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable spend on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 1560,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Savings figure listed on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 0,
+      "notes": "DEF priced at market index; diesel already competitive, no additional savings.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "7",
+          "quote": "Worked with Green Oil to implement market-based DEF pricing rather than flat-rate pricing; expected annual savings of $1,560",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "LTL / FTL Outbound Freight",
+      "category_l1": "Logistics",
+      "category_l2": "Freight",
+      "category_l3": "Outbound",
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "Incumbent carrier mix"
+      ],
+      "vendors_after": [
+        "Ryan Transportation (added to lane mix)"
+      ],
+      "levers": [
+        "Add new carrier to competitive lane bidding",
+        "Ongoing monthly savings tracking"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Royal awards lanes to lowest priced dependable vendor on ad-hoc basis",
+        "contractual_constraints": null,
+        "implementation_constraints": "Savings to be validated over a full quarter before finalizing"
+      },
+      "baseline_spend": {
+        "amount": 730387,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable spend on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 11620,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Savings tracking through August; figure shown on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 2,
+      "notes": "Savings based on June\u2013August lane comparisons with Ryan Transportation.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "11",
+          "quote": "Ryan has been in place now for 3+ months and has saved Royal ~$1K/month or $12K annually",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "General Industrial Supplies (McMaster-Carr \u2192 Grainger)",
+      "category_l1": "MRO / Indirect",
+      "category_l2": "General Industrial Supplies",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "McMaster-Carr",
+        "Grainger (direct account without GPO pricing)"
+      ],
+      "vendors_after": [
+        "Grainger (OMNIA GPO program)"
+      ],
+      "levers": [
+        "GPO joinder",
+        "Vendor consolidation",
+        "Line-item price benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Must ensure Grainger stock levels cover frequently ordered SKUs",
+        "contractual_constraints": null,
+        "implementation_constraints": "Kick-off call scheduled; utilization ramp being monitored"
+      },
+      "baseline_spend": {
+        "amount": 107898,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Addressable spend on Savings Dashboard"
+      },
+      "savings_annual_run_rate": {
+        "amount": 15457,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Savings listed on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 14,
+      "notes": "Shift of McMaster-Carr spend to Grainger OMNIA contract underway.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "6",
+          "quote": "Treya identified $15K in savings by shifting McMaster-Carr usage to the Grainger program",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "category_label": "Labels",
+      "category_l1": "Packaging / Office",
+      "category_l2": "Thermal Labels",
+      "category_l3": null,
+      "start_date": null,
+      "end_date": null,
+      "status": "in_progress",
+      "vendors_before": [
+        "MidAmerica Business Forms"
+      ],
+      "vendors_after": [
+        "Premium Label Supply (samples under test)",
+        "Chicago Tag & Label (samples under test)",
+        "Weber Packaging (samples under test)"
+      ],
+      "levers": [
+        "Supplier RFP",
+        "Product sampling & performance testing",
+        "Benchmark pricing for incumbent negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Labels must perform in cold, moist warehouse environment for picking operations",
+        "contractual_constraints": null,
+        "implementation_constraints": "Testing must complete before award decision"
+      },
+      "baseline_spend": {
+        "amount": 88680,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Baseline spend detailed on Labels \u2013 Preliminary Savings slide (page 12)"
+      },
+      "savings_annual_run_rate": {
+        "amount": 21060,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+        "notes": "Mid-point of $12\u201330K savings range shown on Savings Dashboard"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 24,
+      "notes": "Samples delivered; savings contingent on successful performance and incumbent negotiations.",
+      "evidence": [
+        {
+          "source_file": "Project Closeout/Royal Food Service - Strategic Sourcing Project Closeout (091625).pdf",
+          "page_or_slide": "12",
+          "quote": "Quotes \u2026 indicate estimated annual savings between of $12k \u2013 $30k, or 15% \u2013 34% on an $89k baseline",
+          "date_extracted": "2026-02-19"
+        }
+      ]
+    }
+  ]
+}

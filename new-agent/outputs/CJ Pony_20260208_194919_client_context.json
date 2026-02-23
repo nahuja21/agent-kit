@@ -1,0 +1,52 @@
+{
+  "client": {
+    "client_name": "CJ Pony Parts, Inc.",
+    "industry_primary": "Automotive aftermarket parts e-commerce",
+    "industry_secondary": "Retail/E-commerce",
+    "primary_industry_sector": "Logistics, Fleet, Distribution & Aftermarket Parts",
+    "business_model": "E-commerce retailer and distributor of restoration and performance parts for Ford Mustang and other enthusiast vehicles, operating out of centralized warehouse and distribution facilities",
+    "sponsor_pe_firm": "Century Park Capital Partners",
+    "client_history": "Founded in 1985 in Harrisburg, Pennsylvania by Jay Zeigler and Creed Stammel to serve the classic Mustang community, CJ Pony Parts has expanded to carry 65,000+ SKUs across multiple vehicle platforms and runs an industry-leading YouTube channel. In April 2021 the company was recapitalized by Century Park Capital Partners to accelerate growth, followed by the 2024 acquisition of American Powertrain."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 27700000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Growjo company profile (https://growjo.com/company/CJ_Pony_Parts) corroborated by Buzzfile (https://www.buzzfile.com/business/Cjponyparts.com-717-657-9252)",
+      "notes": "Growjo estimates $27.7 M; Buzzfile lists $24.6 M; SignalHire gives broad $25\u2013100 M range; Zippia lists $55 M. Majority of sources cluster in mid-20 M range, but data are third-party estimates with no official filing, so confidence is low."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 2,
+      "confidence": "high",
+      "source": "Cience company profile (https://www.cience.com/company/cj-pony-parts/-8658309258576520161) and DiodeDynamics dealer page (https://www.diodedynamics.com/find-a-dealer/cj-pony-parts-2/)",
+      "notes": "Both sources cite one headquarters campus in Harrisburg, PA (63,000 sq ft) and one distribution center in Las Vegas, NV (100,000 sq ft). No additional facilities mentioned in documents or other web sources."
+    },
+    "employees": {
+      "count": 120,
+      "confidence": "low",
+      "source": "Growjo (revenue per employee metric implies ~122 employees) and SignalHire (100\u2013200 range)",
+      "notes": "Employee estimates vary: LeadIQ 87, Buzzfile 56 at HQ, SignalHire 100\u2013200, Growjo implied 122. Selected 120 as midpoint of most common range; lack of official figure lowers confidence."
+    }
+  },
+  "extraction_sources": [
+    "Assessment/Rahul's Files from DD Support/1.4 - CJ PBM Consulting Agreement 11_2_20.pdf (company legal name)",
+    "centuryparkcapital.com press release \u2013 \u201cCentury Park Recapitalizes CJ Pony Parts\u201d (ownership)",
+    "businesswire.com \u2013 CJ Pony Acquires American Powertrain (history)",
+    "Growjo company profile (revenue & employees)",
+    "Buzzfile company profile (revenue estimate, employees at HQ)",
+    "SignalHire company profile (employee range)",
+    "Cience.com company overview (facility details)",
+    "diodedynamics.com dealer page (Las Vegas distribution center)"
+  ],
+  "extraction_notes": [
+    "Company name appears as \u201cCJ Pony Parts, Inc.\u201d in multiple signed agreements\u2014used this as official name.",
+    "Primary industry cluster chosen as Logistics, Fleet, Distribution & Aftermarket Parts because the firm is an aftermarket parts distributor/retailer.",
+    "PE ownership confirmed by Century Park Capital Partners press release (April 5 2021); PNC Erieview noted as minority co-investor but main sponsor recorded.",
+    "Revenue figures are all third-party estimates; no audited financials found. Range $24.6 M\u2013$55 M, selected Growjo midpoint with low confidence.",
+    "No EBITDA data located in any documents or reputable web sources.",
+    "Locations consistently described as two facilities (PA HQ + NV distribution).",
+    "Employee counts inconsistent across sources (56\u2013200); selected 120 as representative but confidence low."
+  ]
+}

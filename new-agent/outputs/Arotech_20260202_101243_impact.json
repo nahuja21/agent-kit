@@ -1,0 +1,141 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Arotech captures $320K in verified annual savings across six spend categories",
+      "narrative": "Treya Partners helped Arotech lock in $320,069 of annualized savings by completing or advancing sourcing initiatives in six indirect and COGS categories. Two categories (Rave Computer hardware and Audio-Visual/IT COGS) are fully implemented and delivering $220K in recurring benefit. Four additional categories \u2013 Car Rental, Hotels, Amazon IT peripherals and MRO \u2013 have completed negotiations and are now in the client signature / roll-out phase representing a further $100K in savings once activated. Key wins include double-digit rate reductions through the OMNIA GPO for travel, a dual-source MRO strategy, and migration of Amazon IT spend to a lower-cost reseller."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 320069,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "Sum of savings shown in the savings tracker and May 2022 dashboard for categories with documented work."
+      },
+      "finalized_savings": {
+        "amount": 220000,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Savings Dashboard (5/20/22).pptx",
+        "notes": "Rave Computer ($62K) and COGS \u2013 Audio Visual/IT ($158K) are marked as implemented in the May 2022 dashboard."
+      },
+      "in_progress_savings": {
+        "amount": 100069,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+        "notes": "Savings with check-mark 'Savings in Hand' but awaiting final client signatures/roll-out."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Rave Computer Hardware",
+        "annual_savings": 62000,
+        "status": "finalized",
+        "status_notes": "Contract signed 4/1/22; 4% reduction on $1.6M baseline spend."
+      },
+      {
+        "category_name": "COGS \u2013 Audio Visual / IT",
+        "annual_savings": 158000,
+        "status": "finalized",
+        "status_notes": "6% savings on $2.5M baseline; savings allocated across multiple business units."
+      },
+      {
+        "category_name": "Car Rental",
+        "annual_savings": 29600,
+        "status": "awaiting signature",
+        "status_notes": "Enterprise/National OMNIA documents completed by Treya; sent to Arotech via DocuSign 12/8."
+      },
+      {
+        "category_name": "Hotels (Property-specific & IHG chain-wide)",
+        "annual_savings": 37500,
+        "status": "awaiting signature",
+        "status_notes": "Two of three property agreements signed; final agreement and company-wide roll-out memo pending."
+      },
+      {
+        "category_name": "IT Hardware / Peripherals (Amazon)",
+        "annual_savings": 15485,
+        "status": "in progress",
+        "status_notes": "Pricing secured with Connection (~5% less than Amazon); adoption/ordering transition under way."
+      },
+      {
+        "category_name": "MRO (Grainger / Fastenal dual-source)",
+        "annual_savings": 17484,
+        "status": "awaiting signature",
+        "status_notes": "OMNIA/Fastenal participation agreement sent to Arotech 12/13; no volume commitment required."
+      }
+    ],
+    "excluded_categories": [],
+    "not_started_categories": [
+      {
+        "category_name": "COGS \u2013 Manufacturing",
+        "reason": "Identified as potentially addressable but no sourcing activity started."
+      },
+      {
+        "category_name": "P-Card Tail Spend",
+        "reason": "Listed as potential opportunity; analysis only, no sourcing work performed."
+      },
+      {
+        "category_name": "LTL/FTL Freight",
+        "reason": "Potential future wave; no RFP or negotiations completed."
+      }
+    ],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 60,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": "Savings Dashboard (5/20/22).pptx",
+        "notes": "First savings came from Rave Computer renegotiation which started in February and went live 4/1/22."
+      },
+      "notes": "Travel and MRO savings expected to be realized within 30-45 days of client signature."
+    },
+    "operational_improvements": "Standardized travel booking through Egencia with pre-loaded negotiated hotel and car rental rates, introduced dual-source strategy for critical MRO commodities, and shifted fragmented Amazon IT spend to a contracted reseller to enable controlled pricing and reporting.",
+    "proof_points": [
+      {
+        "statement": "16% average reduction on commonly booked hotel nights through property-specific deals in Ann Arbor, Phoenix and Orlando.",
+        "category": "Hotels",
+        "evidence": [
+          {
+            "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+            "page_or_slide": "10",
+            "quote": "Treya has negotiated rates with 3 properties\u2026 that will create $10K in savings or 16% annually."
+          }
+        ]
+      },
+      {
+        "statement": "Enterprise/National OMNIA program will cut compact car rental rates by up to 26%, yielding ~$30K annual savings.",
+        "category": "Car Rental",
+        "evidence": [
+          {
+            "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+            "page_or_slide": "9",
+            "quote": "Arotech can save between 13-32%\u2026 translates to $24K-$59K in savings on historical spend (~$185K)."
+          }
+        ]
+      },
+      {
+        "statement": "Switching select MRO categories to Fastenal GPO pricing captures 6% overall savings with no volume commitment.",
+        "category": "MRO",
+        "evidence": [
+          {
+            "source_file": "Arotech Strategic Sourcing Project Update (121322).pptx",
+            "page_or_slide": "7",
+            "quote": "6% or $17K in MRO savings is available\u2026 through a dual-source solution."
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "New Sourceable Categories vMS/Project Updates/Arotech Strategic Sourcing Project Update (121322).pptx",
+    "New Sourceable Categories vMS/Project Updates/Arotech Strategic Sourcing Project Update (120622).pptx",
+    "Savings Dashboard (5/20/22)"
+  ],
+  "extraction_notes": [
+    "Included only categories with documented savings figures and evidence of sourcing activity.",
+    "Earlier 2021 savings rolled into Rave Computer and COGS AV/IT lines; other historical categories lacked explicit data and were excluded.",
+    "Potential categories discussed in updates but without active sourcing work were listed under 'not_started'."
+  ]
+}

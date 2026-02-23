@@ -1,0 +1,52 @@
+{
+  "client": {
+    "client_name": "CJ Pony Parts, Inc.",
+    "industry_primary": "Automotive aftermarket parts and accessories e-commerce",
+    "industry_secondary": "Retail / E-commerce",
+    "primary_industry_sector": "Logistics, Fleet, Distribution & Aftermarket Parts",
+    "business_model": "Online retailer and distributor of aftermarket automotive parts with two U.S. distribution centers servicing enthusiasts worldwide",
+    "sponsor_pe_firm": "Century Park Capital Partners",
+    "client_history": "Founded in 1985 by Jay Zeigler and Creed Stammel, CJ Pony Parts began as a Mustang restoration parts supplier and has grown into a leading e-commerce platform offering 100,000+ SKUs for multiple vehicle models. The company operates distribution hubs in Pennsylvania and Nevada and received a majority investment from Century Park Capital Partners in April 2021 to accelerate its growth."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 55000000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "Zippia company profile (https://www.zippia.com/cj-pony-parts-careers-1173612/revenue/) accessed 2024-10-30",
+      "notes": "Public estimates vary widely: Buzzfile $24.6M, Growjo $27.7M, Zippia $55M, Grips Intelligence $72.3M (online sales only). No official figures available; using midpoint (Zippia) but confidence is low."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 2,
+      "confidence": "high",
+      "source": "Company address information in multiple documents (e.g., PBM Consulting Agreement page 1) and ContactOut profile (https://contactout.com/company/cj-pony-parts-6047386)",
+      "notes": "Headquarters campus in Harrisburg, PA and a 100,000 sq ft distribution center in Las Vegas, NV confirmed by ContactOut and Lusha profiles."
+    },
+    "employees": {
+      "count": 122,
+      "confidence": "medium",
+      "source": "Growjo profile (https://growjo.com/company/CJ_Pony_Parts) accessed 2024-10-30",
+      "notes": "Other sources: NAICSList 141, SignalHire 100-200, Buzzfile 56, Zippia 67. Selected Growjo figure as mid-range; lack of official disclosure lowers confidence."
+    }
+  },
+  "extraction_sources": [
+    "1.4 - CJ PBM Consulting Agreement 11_2_20.pdf (page 1)",
+    "centuryparkcapital.com press release 2021-04-05",
+    "businesswire.com news release 2024-07-11",
+    "ContactOut company profile",
+    "Lusha company profile",
+    "Zippia company profile",
+    "Growjo company profile",
+    "Buzzfile company profile",
+    "SignalHire company profile",
+    "Grips Intelligence retailer report"
+  ],
+  "extraction_notes": [
+    "Company name confirmed as 'CJ Pony Parts, Inc.' in multiple legal agreements.",
+    "PE ownership: Century Park Capital Partners recapitalization announced April 2021; also notes PNC Erieview Capital as co-investor.",
+    "Revenue figures are all third-party estimates; no official numbers available, resulting in low confidence.",
+    "No EBITDA data found in any documents or reputable web sources.",
+    "Locations count based on explicit facility descriptions (HQ campus and Las Vegas DC)."
+  ]
+}

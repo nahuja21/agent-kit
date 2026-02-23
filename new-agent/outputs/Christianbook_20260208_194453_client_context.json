@@ -1,0 +1,49 @@
+{
+  "client": {
+    "client_name": "Christianbook, LLC",
+    "industry_primary": "Retail",
+    "industry_secondary": "E-commerce & Publishing",
+    "primary_industry_sector": "Retail, Consumer Brands & DTC",
+    "business_model": "Family-founded direct-to-consumer and wholesale retailer of Christian books, Bibles, gifts and homeschool materials sold via e-commerce, catalog and a single distribution headquarters.",
+    "sponsor_pe_firm": "Nonantum Capital Partners",
+    "client_history": "Founded in 1978 by brothers Stephen and Ray Hendrickson, Christianbook has grown from a small mail-order business into one of the world\u2019s largest distributors of Christian products. In 2019 it rebranded from Christian Book Distributors to Christianbook, and in 2021 partnered with Nonantum Capital Partners to support its next growth phase."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 373800000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "gripsintelligence.com retailer insight page (2024 online sales figure)",
+      "notes": "Grips Intelligence reports 2024 online sales of $373.8M. ECDB estimates total revenue at $178M for the same period. No official figures available; chose higher figure as it is more recent and specific, but large discrepancy lowers confidence."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 1,
+      "confidence": "medium",
+      "source": "Christianbook.com About-Us page",
+      "notes": "Company states operations are run from a single 370,000-sq-ft headquarters/distribution facility in Peabody, MA. No other active retail sites listed."
+    },
+    "employees": {
+      "count": 600,
+      "confidence": "high",
+      "source": "Christianbook.com About-Us page and Itemlive article (2020)",
+      "notes": "Both sources consistently cite \"over 600 employees\"; no contradictory counts found."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Treya Procurement Cost Reduction Services Agreement Christianbook_v2.docx.pdf",
+    "Case Study- Christianbook.docx",
+    "Christianbook.com About-Us page",
+    "gripsintelligence.com retailer insight (2024)",
+    "ecdb.com retailer estimate (2024)",
+    "Itemlive.com article 2020",
+    "pehub.com article on Nonantum recapitalization (Oct 2021)"
+  ],
+  "extraction_notes": [
+    "Official company name confirmed in signed services agreement (page 1).",
+    "PE ownership verified by PE Hub recapitalization article; no conflicting ownership information.",
+    "Revenue figures vary widely between ecommerce analytics providers; no audited or press-release numbers located, so confidence marked low.",
+    "Employee count corroborated by two independent sources using the identical figure; treated as high confidence.",
+    "Only one operational facility is referenced across all official and news sources; treated as the location count."
+  ]
+}

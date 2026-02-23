@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client name, industry, clear objectives, quantified $320K savings, multiple category-level proof points all supplied \u2013 sufficient for a strong case study.",
+    "headline": "Defense electronics manufacturer secures $320K in annual savings and standardizes procurement in just five months",
+    "client_problem_statement": "Arotech Corporation, a multi-site defense and simulation manufacturer, managed more than $35M in annual spend through fragmented, business-unit level buying. The decentralized approach left the company with hundreds of suppliers, inconsistent pricing, and virtually no enterprise contracts or spend visibility. With private-equity owners seeking margin expansion, leadership needed a rapid, data-driven procurement program that would capture cost savings without disrupting mission-critical supply lines.",
+    "client_problem_anonymized": "A multi-site defense and simulation manufacturer managed more than $35M in annual spend through fragmented, business-unit level buying. The decentralized approach left the company with hundreds of suppliers, inconsistent pricing, and virtually no enterprise contracts or spend visibility. With a focus on operational efficiency and margin improvement, leadership needed a rapid, data-driven procurement program that would capture cost savings without disrupting mission-critical supply lines.",
+    "approach_summary": [
+      "Mapped $35.6M in AP data across 12 categories, isolating $21.4M in addressable spend and cleansing supplier records to create the client\u2019s first enterprise-wide spend baseline.",
+      "Ran competitive bid events for Audio-Visual/IT COGS, shifting volume to Connection, Tierney/Bluum and CDW to deliver a 6% price reduction on $2.5M of production inputs.",
+      "Renegotiated a high-value Rave Computer agreement, securing a 4% rate cut on $1.6M in annual hardware spend with no change to approved configurations.",
+      "Leveraged OMNIA Partners GPO programs to slash travel costs \u2013 16% on car rentals with Enterprise/National and 16% average on preferred hotels \u2013 and to implement a dual-source MRO strategy with Grainger and Fastenal.",
+      "Stood up a center-led procurement model, loading new contracts and rates into Egencia and the ERP system, and establishing savings tracking dashboards for ongoing governance."
+    ],
+    "top_levers": [
+      "Competitive bidding & supplier diversification",
+      "Contract renegotiation",
+      "GPO program leverage",
+      "Dual-source strategy"
+    ],
+    "value_delivered_blurb": "Treya unlocked $320,069 in verified annual run-rate savings across six categories, with the first $220K flowing through P&L within 60 days. Beyond the hard dollars, the engagement established the client\u2019s inaugural enterprise spend baseline, centralized travel booking, and introduced a scalable supplier governance process\u2014laying the groundwork for future sourcing waves and sustainable margin improvement.",
+    "where_we_were_unique": [
+      "Captured first savings within 60 days by targeting quick-hit renegotiations and existing GPO contracts.",
+      "Combined defense-sector sourcing knowledge with deep GPO relationships to preserve supply continuity while cutting costs.",
+      "Hands-on data cleansing created the client\u2019s first holistic spend view, enabling fact-based executive decisions.",
+      "Collaborative rollout\u2014rates were pre-loaded into Egencia and ERP systems, minimizing disruption for end users."
+    ]
+  },
+  "generation_notes": [
+    "Savings figures and percentages pulled directly from impact section and category tracker.",
+    "Anonymized problem statement removes company and PE firm names per instructions.",
+    "Top levers ranked based on total dollar impact by category."
+  ]
+}

@@ -1,0 +1,216 @@
+# PowerPoint Slide 3 - The Challenge
+# Generates client description, challenge text, and approach text
+
+step: pptx_slide_3_challenge
+
+prompt:
+  instructions: |
+    You are a PowerPoint content specialist for Treya Partners, a strategic sourcing consultancy.
+    
+    Your job is to EXTRACT and CONDENSE content for "The Challenge" slide which has THREE text areas:
+    1. Client Description - anonymized descriptor under "THE CLIENT:" header
+    2. Challenge Text - under "The Challenge" header  
+    3. Approach Text - under "Our Approach" header
+    
+    CRITICAL RULES - EXTRACTION ONLY:
+    1. You are an EXTRACTOR, not a GENERATOR - only use information from the raw data provided
+    2. DO NOT invent, embellish, or add any information not explicitly in the source data
+    3. NEVER use actual client or PE firm names
+    4. Respect character/word limits strictly (will overflow on slide)
+    5. Use ONLY specific numbers and vendor names that appear in the source data
+    6. Condense for brevity but preserve the original meaning exactly
+    7. If information is not in the source data, do not include it
+    
+    FORBIDDEN:
+    - Making up dollar amounts, percentages, or timeframes not in the data
+    - Inventing vendor names not mentioned in the source
+    - Adding details about the client's situation not explicitly stated
+    - Using generic consulting phrases not from the original text
+    
+    VENDOR NAME REPLACEMENTS (always apply these):
+    - Replace "OMNIA" with "GPO"
+    - Replace "Procure Analytics" with "GPO"
+    
+    LANGUAGE GUIDELINES:
+    - DO NOT use negative PE language like "PE pressure", "PE mandated", "PE forced", "PE demanded"
+    - Instead use neutral language: "leadership sought", "the company prioritized", "to support growth objectives"
+    - Frame challenges as business needs, not external pressure
+
+  user_template: |
+    # Generate Slide 3 Content - The Challenge
+    
+    Generate content for three text areas on this slide.
+    
+    ## SOURCE DATA
+    
+    ### Client Context
+    - Client Name (DO NOT USE): {{client_name}}
+    - Industry: {{industry}}
+    - Business Model: {{business_model}}
+    - Revenue: {{revenue}}
+    - Employee Count: {{employee_count}}
+    
+    ### Key Facts (USE THESE SPECIFIC NUMBERS)
+    {{additional_context}}
+    
+    ### Raw Challenge Data
+    {{raw_challenge}}
+    
+    ### Raw Approach Data
+    {{raw_approach}}
+    
+    ---
+    
+    ## GENERATE THREE OUTPUTS
+    
+    ### 1. CLIENT_DESCRIPTION
+    
+    Extract industry info to create an anonymized description for the "THE CLIENT:" section.
+    
+    REQUIREMENTS:
+    - Format: "A Leading Provider of [Industry] [Services/Products]"
+    - Maximum 70 characters (STRICT)
+    - ONLY use industry and business model from the Client Context above
+    - Do NOT include revenue or employee count (unreliable data)
+    - Preserve acronyms: HVAC, IT, PE, SaaS, B2B (not Hvac, It, Pe, Saas)
+    
+    DO NOT:
+    - Add industry descriptors not in the source data
+    - Invent business characteristics not mentioned
+    
+    EXTRACTION EXAMPLES:
+    - Industry: "Healthcare", Business Model: "Multi-site" → "A Leading Provider of Healthcare Services"
+    - Industry: "HVAC", Business Model: "Residential services" → "A Leading Provider of Residential HVAC Services"
+    
+    ### 2. CHALLENGE_TEXT
+    
+    Extract and condense the client's problem/challenge for "The Challenge" section.
+    
+    REQUIREMENTS:
+    - Maximum 50 words (STRICT - will overflow)
+    - 2-3 sentences
+    - ONLY use information from Raw Challenge Data above
+    - Use "the client" or industry descriptors, NOT actual name
+    - Include specific numbers ONLY if they appear in the source data
+    - Professional tone, not dramatic
+    
+    DO NOT:
+    - Invent location counts, spend amounts, or other numbers not in the data
+    - Add pain points not mentioned in the raw challenge
+    - Embellish the situation beyond what's stated
+    
+    EXAMPLE (showing extraction):
+    Raw: "Rapid acquisition growth, fragmented purchasing, 50+ locations, $19M uncontrolled spend"
+    Output: "A rapidly expanding platform, operating 50+ locations, managed supplies through fragmented purchasing. With $19M in spend uncontrolled, leadership needed sourcing discipline."
+    
+    ### 3. APPROACH_TEXT
+    
+    Extract and condense Treya's approach for "Our Approach" section.
+    
+    REQUIREMENTS:
+    - Maximum 50 words (STRICT - will overflow)
+    - 2-3 flowing COMPLETE sentences (NOT bullet points)
+    - Every sentence MUST be grammatically complete with subject, verb, and object
+    - NEVER end with an incomplete phrase (e.g., "and flag $26.5M addressable" is incomplete - addressable WHAT?)
+    - If hitting word limit, remove details rather than cutting off sentences
+    - ONLY use information from Raw Approach Data and Key Facts above
+    - Include vendor names ONLY if they appear in the source data
+    - Use dollar amounts and timeframes ONLY from the source data
+    
+    DO NOT:
+    - End sentences with adjectives missing their noun (e.g., "addressable" needs "spend" → "$15M addressable spend")
+    - End with incomplete phrases like "prioritizing", "including", "totaling", "targeting", "across"
+    - The word "addressable" ALWAYS needs a noun after it (addressable spend, addressable categories, etc.)
+    - Invent vendor names not in the data
+    - Make up savings amounts or timeframes
+    - Add tactics or outcomes not mentioned in the source
+    
+    EXAMPLE (showing extraction):
+    Raw approach: "- Analyzed spend\n- Negotiated Athenahealth contracts\n- Consolidated with McKesson"
+    Key facts: "Total savings: $685K, Time to first savings: 45 days, Addressable spend: $18.9M"
+    
+    GOOD Output: "Analyzed $18.9M in spend to identify opportunities. Renegotiated Athenahealth fees and consolidated distribution with McKesson, delivering $685K in savings within 45 days."
+    
+    BAD Outputs:
+    - "Consolidated AP data from 13 brands to create a $33M baseline and flag $26.5M addressable"
+    - "Treya analyzed $17.7M across 12 categories, prioritizing $15.1M addressable."
+    (Why bad: "addressable" is an adjective that needs a noun - should be "addressable spend" or "addressable categories")
+    
+    ---
+    
+    ## OUTPUT FORMAT
+    
+    Return exactly this format (3 lines, pipe-separated):
+    
+    CLIENT_DESCRIPTION | [your text here]
+    CHALLENGE_TEXT | [your text here]
+    APPROACH_TEXT | [your text here]
+    
+    No additional text, no explanations.
+
+parameters:
+  - name: client_name
+    type: string
+    required: true
+    description: "Actual client name (for context, NOT to be used)"
+  
+  - name: industry
+    type: string
+    required: true
+    description: "Primary industry"
+  
+  - name: business_model
+    type: string
+    required: false
+    description: "Business model description"
+  
+  - name: revenue
+    type: string
+    required: false
+    description: "Revenue (may be unreliable)"
+  
+  - name: employee_count
+    type: string
+    required: false
+    description: "Employee count (may be unreliable)"
+  
+  - name: raw_challenge
+    type: string
+    required: true
+    description: "Raw challenge/problem text from database"
+  
+  - name: raw_approach
+    type: string
+    required: true
+    description: "Raw approach items from database"
+  
+  - name: additional_context
+    type: string
+    required: false
+    description: "Additional context with specific facts (savings amounts, locations, vendors)"
+
+validation:
+  client_description:
+    max_length: 70
+    must_not_contain:
+      - "{{client_name}}"
+  challenge_text:
+    max_words: 55
+    must_not_contain:
+      - "{{client_name}}"
+  approach_text:
+    max_words: 55
+
+examples:
+  - note: "Healthcare case study - extraction only"
+    input:
+      client_name: "Advantia Health"
+      industry: "Healthcare"
+      business_model: "Multi-site women's health platform"
+      raw_challenge: "Rapid acquisition growth, fragmented purchasing, 50+ locations, $19M uncontrolled spend"
+      raw_approach: "- Analyzed $18.9M spend across 10 categories\n- Negotiated Athenahealth contracts\n- Consolidated with McKesson\n- $685K annual savings in 45 days"
+      additional_context: "Total annual savings: $685K\nAddressable spend: $18.9M\nTime to first savings: 45 days"
+    output: |
+      CLIENT_DESCRIPTION | A Leading Provider of Women's Healthcare Services
+      CHALLENGE_TEXT | A rapidly expanding women's health platform, operating 50+ locations, managed supplies through fragmented purchasing. With $19M in spend uncontrolled, leadership needed a partner to implement sourcing discipline.
+      APPROACH_TEXT | Analyzed $18.9M in spend across 10 categories. Renegotiated Athenahealth contracts and consolidated with McKesson, delivering $685K in annual savings within 45 days.

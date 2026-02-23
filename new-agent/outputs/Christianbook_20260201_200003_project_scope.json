@@ -1,0 +1,117 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "LTL/FTL",
+      "Merchant Processing Fees",
+      "Corrugated",
+      "Employee Benefits",
+      "Packaging & Shipping Supplies",
+      "Janitorial Services",
+      "Marketing Software",
+      "Ingram Book Group"
+    ],
+    "initial_categories_count": 8,
+    "category_details": [
+      {
+        "category_name": "LTL/FTL",
+        "spend": 4742688,
+        "addressable_pct": 85,
+        "addressable_spend": 4031285,
+        "savings_low": 161251,
+        "savings_high": 322503,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Merchant Processing Fees",
+        "spend": 5243627,
+        "addressable_pct": 30,
+        "addressable_spend": 1573088,
+        "savings_low": 94385,
+        "savings_high": 235963,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Corrugated",
+        "spend": 1433856,
+        "addressable_pct": 90,
+        "addressable_spend": 1290470,
+        "savings_low": 129047,
+        "savings_high": 193571,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Employee Benefits",
+        "spend": 3430509,
+        "addressable_pct": 75,
+        "addressable_spend": 2572882,
+        "savings_low": 102915,
+        "savings_high": 205831,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Packaging & Shipping Supplies",
+        "spend": 1274235,
+        "addressable_pct": 90,
+        "addressable_spend": 1146812,
+        "savings_low": 114681,
+        "savings_high": 172022,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Janitorial Services",
+        "spend": 363872,
+        "addressable_pct": 90,
+        "addressable_spend": 327485,
+        "savings_low": 26199,
+        "savings_high": 49123,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Marketing Software",
+        "spend": 1035326,
+        "addressable_pct": 50,
+        "addressable_spend": 517663,
+        "savings_low": 15530,
+        "savings_high": 31060,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Ingram Book Group",
+        "spend": 612056,
+        "addressable_pct": 90,
+        "addressable_spend": 550850,
+        "savings_low": 11018,
+        "savings_high": 22035,
+        "is_cogs": true
+      }
+    ],
+    "total_spend": 18136208,
+    "total_addressable_spend": 12010535,
+    "savings_estimate_low": 655027,
+    "savings_estimate_high": 1232107,
+    "cogs_categories_count": 4,
+    "cogs_categories_percentage": 50.0,
+    "cogs_addressable_spend": 7019417,
+    "cogs_addressable_percentage": 58.5
+  },
+  "exhibit_b": {
+    "fee_type": "fixed",
+    "fee_amount": 375000,
+    "minimum_savings_guarantee": 562500,
+    "minimum_return_on_fees_ratio": 1.5,
+    "fee_hybrid_threshold": null,
+    "fee_contingent_percentage": null,
+    "fee_notes": "Project fee invoiced in five installments of $75,000 each (Sep-24, Oct-24, Nov-24, Jan-25, Feb-25). Travel fees are passed through at cost."
+  },
+  "timing": {
+    "start_date": "2024-08-08",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction / strategic sourcing services"
+  },
+  "extraction_notes": [
+    "Exhibit A OCR had minor character errors (e.g., 'UTL/FTL' read as 'LTL/FTL', 'A%' interpreted as 4%). Values were confirmed against row totals.",
+    "Addressable spend values were rounded to the nearest whole dollar.",
+    "Minimum savings guarantee dollar amount derived from 1.5\u00d7 ratio applied to the fixed fee ($375,000 \u00d7 1.5).",
+    "No explicit project end date found; left as null."
+  ]
+}

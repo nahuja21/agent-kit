@@ -1,0 +1,35 @@
+{
+  "engagement_background": {
+    "objective": "CJ Pony Parts engaged Treya Partners to drive measurable procurement cost reduction by performing strategic sourcing and leveraging GPO contracts across selected direct and indirect spend areas, with a commitment to identify at least $100K in annual savings within three months and ultimately deliver $330K\u2013$660K in recurring annual savings while maintaining service and quality levels.",
+    "scope_summary": "Phase-1 scope covers eight targeted categories representing roughly $11.5 million in baseline spend \u2013 Fasteners, Small Parcel Shipping, LTL/FTL freight, Corrugated & Packaging Supplies, Temporary Labor, Employee Benefits, P-Card spend and Ocean Freight. Activities include data collection, baseline validation, competitive bidding or incumbent negotiations, GPO enrollment and implementation support. Direct material categories outside the listed areas and any parallel client-run sourcing events are expressly out of scope.",
+    "constraints_challenges": [
+      "Supplier fragmentation and long-standing incumbent relationships may limit switching leverage.",
+      "Initial AP file lacked detailed P-Card and travel spend, requiring additional data cleansing and categorization.",
+      "Aggressive 5-6 month timeline to implement savings and the contractual requirement to show $100K identified savings within three months.",
+      "Requirement to halt all parallel procurement activity to avoid conflicting supplier messages.",
+      "IT integration and line-item limitations complicate deployment of the proposed K&N ReTrans LTL solution.",
+      "Two geographically separate distribution centers (PA and NV) create differing freight and packaging requirements."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "medium",
+    "data_availability": "12-month AP spend extract (Dec-2019\u2013Nov-2020), separate shipment-level parcel files, and existing carrier/benefit contracts were available; however, detailed P-Card, T&E, and some item-level descriptions were missing.",
+    "data_quality_notes": "Multiple vendor naming conventions, limited item descriptors, and absent P-Card detail required manual categorization and cleansing before analysis.",
+    "source_file": "Assessment/Rahul's Files from DD Support/CJP Procurement Savings Opportunity 3.5.21.pptx; Project Updates/CJ Pony Strategic Sourcing Project Kickoff 062821 v1.pptx; Assessment/Rahul's Files from DD Support/AP Data Consolidated 12.1.19 - 11.30.20.xlsx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Project Updates/CJ Pony Strategic Sourcing Project Kickoff 062821 v1.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement CJP 6.11.21 vF - signed.pdf",
+    "Assessment/Rahul's Files from DD Support/CJP Procurement Savings Opportunity 3.5.21.pptx",
+    "Assessment/Rahul's Files from DD Support/AP Data Consolidated 12.1.19 - 11.30.20.xlsx",
+    "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx"
+  ],
+  "extraction_notes": [
+    "Objective and savings targets explicitly stated in Kickoff slide 6 and the signed services agreement Exhibit A.",
+    "Scope boundaries drawn from Kickoff timeline (slide 7) and Exhibit A of services agreement; out-of-scope inferred from clause prohibiting parallel sourcing.",
+    "Operating model and maturity inferred from presence of logistics manager, existing carrier contracts, but absence of formal strategic sourcing prior to Treya\u2019s involvement.",
+    "Data quality observations taken from AP data request slide and AP extract notes; completeness issues noted in assessment deck."
+  ]
+}

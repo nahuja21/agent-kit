@@ -1,0 +1,33 @@
+{
+  "engagement_background": {
+    "objective": "Generate $0.54\u2013$1.2 million in annual savings through strategic sourcing across key spend areas, while establishing a best-in-class, enterprise-wide procurement process that leverages Choice Health At Home\u2019s scale and supports value creation goals before July 2024.",
+    "scope_summary": "Initial scope covers 12 indirect spend categories (Fleet, Employee Benefits, Medical Supplies, Pharmacy, Medical Equipment, Temp Labor \u2013 Therapists & Nurses, Telecom, Commercial Print, Copiers/MFPs, Office Supplies, IT Hardware) representing $17.7 million in AP spend, of which 75-90 % is considered addressable. Tail spend within each category and additional items (e.g., Assisted Living, Doctors, Hospice Services) are currently out of scope or on hold and may be revisited later.",
+    "constraints_challenges": [
+      "Supplier non-responsiveness to line-item data requests, delaying baseline creation.",
+      "Decentralized stakeholder base \u2013 requires coordination across multiple locations and functions for data, interviews and approvals.",
+      "Incumbent supplier sensitivities and risk of \u2018side conversations\u2019, necessitating a unified communication strategy.",
+      "Incomplete internal usage and contract data; need to source detail directly from vendors to build accurate baselines.",
+      "Aggressive five-to-six-month timeline with target completion by July 2024.",
+      "Potential stakeholder fatigue or pushback if savings are not realized quickly."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Accounts-payable spend extract (~$39 M) available; limited centralized contract files; detailed usage data must be collected from high-spend suppliers.",
+    "data_quality_notes": "Duplicate vendor names and unmapped GL codes required cleansing; significant gaps in historical usage and contract data for several suppliers.",
+    "source_file": "Proposal and Assessments/Treya Initial Opportunity Assessment - Choice Health.pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Project Kickoff/Choice Health - Strategic Sourcing Project Kickoff - (0122024).pptx",
+    "Proposal and Assessments/Treya Initial Opportunity Assessment - Choice Health.pptx",
+    "Proposal and Assessments/Treya Project Proposal - Choice Health.pptx",
+    "Proposal and Assessments/Choice Health Spend Analysis 10.30.2023.xlsx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from slides emphasizing need to leverage enterprise-wide purchasing power and establish procurement processes.",
+    "Data availability and quality notes taken from spend analysis workbooks showing extensive vendor mapping and missing usage data.",
+    "Constraints list combines explicit \u2018Typical Project Challenges\u2019 slide with project-specific progress updates."
+  ]
+}

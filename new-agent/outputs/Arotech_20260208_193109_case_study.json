@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Client identity, objectives, quantified $100K annual savings, and four detailed proof points are available \u2013 sufficient for a concise, numbers-driven case study.",
+    "headline": "Defense technology manufacturer unlocks $100K in annual savings by centralizing travel, MRO, and IT spend",
+    "client_problem_statement": "Arotech Corporation\u2019s two divisions purchased everything from travel to MRO supplies in silos, creating a highly fragmented supplier base, inconsistent pricing, and little visibility into roughly $36 M of annual spend. With new private-equity ownership looking to boost enterprise value, the company needed a rapid, data-driven sourcing program to capture near-term savings and build a sustainable, center-led procurement function.",
+    "client_problem_anonymized": "A niche defense technology manufacturer\u2019s two divisions purchased everything from travel to MRO supplies in silos, creating a highly fragmented supplier base, inconsistent pricing, and little visibility into roughly $36 M of annual spend. With the private equity ownership group focusing on operational efficiency and margin improvement, the company needed a rapid, data-driven sourcing program to capture near-term savings and build a sustainable, center-led procurement function.",
+    "approach_summary": [
+      "Analyzed $1.8 M of indirect spend across travel, IT hardware, and MRO to validate baselines despite incomplete P-card and T&E data.",
+      "Migrated car-rental and key MRO categories onto OMNIA Partners GPO contracts, securing 13\u201332% rate reductions without operational disruption.",
+      "Negotiated chain-wide IHG Business Edge discounts and three property-specific hotel agreements, loading all preferred rates into the Egencia booking tool.",
+      "Redirected high-volume Amazon IT hardware purchases to Connection at pre-negotiated pricing, curbing marketplace leakage.",
+      "Standardized supplier contracts and implemented a center-led travel policy, giving the client real-time spend visibility and governance going forward."
+    ],
+    "top_levers": [
+      "GPO adoption",
+      "Contract renegotiation",
+      "Vendor funneling to preferred reseller",
+      "Rate benchmarking"
+    ],
+    "value_delivered_blurb": "Treya delivered $100,069 in validated annual run-rate savings across four indirect categories and raised cumulative engagement savings to roughly $600K\u2014achieving the client\u2019s minimum savings guarantee and a 1.5\u00d7 return on the $400K project fee. Beyond the dollars, the project put national supplier agreements, centralized booking tools, and spend dashboards in place, giving leadership a scalable procurement platform for future growth.",
+    "where_we_were_unique": [
+      "Captured quick-win savings within five months by leveraging Treya\u2019s defense-qualified GPO relationships.",
+      "Converted fragmented, low-quality spend data into actionable baselines that withstood stakeholder scrutiny.",
+      "Balanced speed with buy-in by retaining incumbent suppliers where operational continuity was critical.",
+      "Provided end-to-end implementation support\u2014drafting contracts, routing DocuSigns, and loading negotiated rates\u2014so savings begin the moment signatures are complete."
+    ]
+  },
+  "generation_notes": [
+    "Savings and spend figures come directly from the 12-13-22 project update (Slide 4).",
+    "Cumulative $600K savings referenced from impact summary narrative; aligns with minimum-savings guarantee in fee schedule.",
+    "Approach bullets ordered roughly by savings contribution, highlighting the largest levers first."
+  ]
+}

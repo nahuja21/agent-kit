@@ -1,0 +1,319 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "Enterprise Holdings (Enterprise/National)",
+      "category": "Car Rental",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 185000,
+      "final_spend": 155400,
+      "savings_dollars": 29600,
+      "savings_percent": 16,
+      "levers_applied": [
+        "GPO adoption",
+        "Rate benchmarking",
+        "Contract renegotiation"
+      ],
+      "alternatives_considered": null,
+      "why_selected": "Able to migrate to OMNIA Partners contract delivering 16% lower daily rates without changing traveler experience",
+      "why_not_selected": null,
+      "contract_terms": "OMNIA Partners master agreement \u2013 no participation fees, no blackout dates, local account management; market-share commitment required",
+      "negotiation_leverage": "Public-sector GPO pricing significantly below direct corporate agreement; willingness to shift 100% of car rental volume",
+      "supplier_strengths": "Extensive US network, Emerald Aisle service, proven service levels with Arotech travelers",
+      "supplier_weaknesses": "Some premium classes slightly higher than GPO rates (PFAR, SKAR)",
+      "switching_costs": "Minimal \u2013 same supplier, only rate code change in Egencia",
+      "key_contacts": {
+        "Account Manager": "Meghan Thomas \u2013 meghan.e.thomas@ehi.com"
+      },
+      "notes": "Two revised documents sent via DocuSign 12/8/22 must be executed for rates to load.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "GPO leveraged",
+        "Significant savings >15%",
+        "Contract renegotiation required"
+      ]
+    },
+    {
+      "supplier_name": "IHG Business Edge",
+      "category": "Hotels",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 278000,
+      "final_spend": 250000,
+      "savings_dollars": 28000,
+      "savings_percent": 10,
+      "levers_applied": [
+        "Chain-wide discount program",
+        "Volume funneling",
+        "Rate loading into TMC"
+      ],
+      "alternatives_considered": null,
+      "why_selected": "10% global discount across 17 IHG brands with no room-night commitment; easy integration with Egencia",
+      "why_not_selected": null,
+      "contract_terms": "Business Edge enrollment \u2013 annual program, no fixed term, discount auto-renews with continued membership",
+      "negotiation_leverage": "Aggregated spend commitment (targeting 50% of unmanaged hotel spend) provided leverage to access tiered discount",
+      "supplier_strengths": "Large global footprint, consistent mid-scale brands matching travel patterns, loyalty benefits for travelers",
+      "supplier_weaknesses": "Requires travelers to shift stays from Marriott/Hilton properties",
+      "switching_costs": "Traveler habit change and policy enforcement",
+      "key_contacts": null,
+      "notes": "Rates already loaded into Egencia; announcement memo pending circulation.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multiple suppliers consolidated",
+        "Meaningful savings >$50K across hotel program",
+        "New chain agreement added"
+      ]
+    },
+    {
+      "supplier_name": "Holiday Inn Express & Suites \u2013 Ann Arbor (IHG)",
+      "category": "Hotels",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 22266,
+      "final_spend": 18481,
+      "savings_dollars": 3785,
+      "savings_percent": 17,
+      "levers_applied": [
+        "Property-specific negotiation",
+        "Volume commitment"
+      ],
+      "alternatives_considered": [
+        "Other Ann Arbor properties (unmanaged rates)"
+      ],
+      "why_selected": "Offered $105 flat rate (17% below current average) plus complimentary breakfast & parking",
+      "why_not_selected": null,
+      "contract_terms": "Fixed rate through 12/31/2023; Non-last-room-availability; quarterly performance reviews",
+      "negotiation_leverage": "Estimated 126 annual nights; competitive landscape in Ann Arbor",
+      "supplier_strengths": "Newer property, included amenities valued by travelers",
+      "supplier_weaknesses": "Rate subject to availability; 24-hr cancellation policy",
+      "switching_costs": "Minimal \u2013 same city, booking through Egencia",
+      "key_contacts": {
+        "Director of Sales": "Nancy Schnebelt \u2013 nancy@aaholidayinn.com"
+      },
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Property-specific deal",
+        "Direct negotiation achieved >15% savings"
+      ]
+    },
+    {
+      "supplier_name": "Courtyard by Marriott Mesa at Wrigleyville West",
+      "category": "Hotels",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 27814,
+      "final_spend": 23642,
+      "savings_dollars": 4172,
+      "savings_percent": 15,
+      "levers_applied": [
+        "Property-specific negotiation"
+      ],
+      "alternatives_considered": null,
+      "why_selected": "Agreed to $188 rate vs $221 historical average for 126 annual nights",
+      "why_not_selected": null,
+      "contract_terms": "2023 preferred rate, standard Marriott cancellation (48 hrs)",
+      "negotiation_leverage": "Consolidated volume commitment for Mesa/Phoenix market",
+      "supplier_strengths": "Close to client site, Marriott Bonvoy benefits",
+      "supplier_weaknesses": "Higher base rate than limited-service options",
+      "switching_costs": "Traveler familiarity and loyalty program changes",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Negotiated new preferred property",
+        "Savings >$50K program-wide"
+      ]
+    },
+    {
+      "supplier_name": "Courtyard by Marriott Orlando International Drive",
+      "category": "Hotels",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 10437,
+      "final_spend": 8871,
+      "savings_dollars": 1566,
+      "savings_percent": 15,
+      "levers_applied": [
+        "Property-specific negotiation"
+      ],
+      "alternatives_considered": null,
+      "why_selected": "Offered $110 rate vs $129 historical average for regular Orlando travel",
+      "why_not_selected": null,
+      "contract_terms": "Preferred corporate rate valid CY2023, 24-hr cancellation",
+      "negotiation_leverage": "Regular 54 night annual volume presented to hotel",
+      "supplier_strengths": "Location near convention center, consistent brand standards",
+      "supplier_weaknesses": "Limited premium amenities",
+      "switching_costs": "Low \u2013 same chain as many existing stays",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Individual property deal",
+        ">5% savings achieved"
+      ]
+    },
+    {
+      "supplier_name": "Connection (PC Connection, Inc.)",
+      "category": "IT Hardware / Peripherals",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 309700,
+      "final_spend": 294215,
+      "savings_dollars": 15485,
+      "savings_percent": 5,
+      "levers_applied": [
+        "Supplier switch",
+        "Price benchmarking",
+        "Volume funneling"
+      ],
+      "alternatives_considered": [
+        "Continue with Amazon Business marketplace"
+      ],
+      "why_selected": "Provided contract pricing averaging 5% below Amazon on high-usage IT SKUs; ability to extend credit terms and reporting",
+      "why_not_selected": null,
+      "contract_terms": "Master reseller agreement; no minimums; pricing reviewed annually",
+      "negotiation_leverage": "Competitive quote exercise using detailed Amazon purchase history for $438K of spend",
+      "supplier_strengths": "Dedicated account team, punch-out catalog, broad distributor network",
+      "supplier_weaknesses": "Longer lead times on low-volume niche items vs Amazon Prime",
+      "switching_costs": "Onboarding users to new portal, updating PO workflows",
+      "key_contacts": {
+        "Account Manager": "Aaron Noga \u2013 Aaron.Noga@connection.com \u2013 603-683-3172"
+      },
+      "notes": "Savings assumed on 50% of Amazon hardware spend; further migration could increase savings.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "Competitive benchmarking",
+        "Savings >$50K category"
+      ]
+    },
+    {
+      "supplier_name": "Amazon Business",
+      "category": "IT Hardware / Peripherals",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 309700,
+      "final_spend": 0,
+      "savings_dollars": 15485,
+      "savings_percent": 5,
+      "levers_applied": [
+        "Benchmarking against reseller pricing"
+      ],
+      "alternatives_considered": [
+        "Connection",
+        "CDW",
+        "Synnex (considered for other AV scope)"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Higher average unit pricing; limited ability to lock contract rates or provide reporting",
+      "contract_terms": null,
+      "negotiation_leverage": "Threat of migration to contracted reseller with fixed discounts",
+      "supplier_strengths": "Ease of ordering, fast shipping, broad catalog",
+      "supplier_weaknesses": "Dynamic pricing, limited strategic support, no fixed discounts",
+      "switching_costs": "Loss of Prime shipping benefits; need to route purchases through PO process",
+      "key_contacts": null,
+      "notes": "Amazon retained for non-addressable miscellaneous purchases outside hardware scope.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "Benchmarking exercise",
+        "Category savings >$50K"
+      ]
+    },
+    {
+      "supplier_name": "Grainger",
+      "category": "MRO \u2013 General Industrial Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 310000,
+      "final_spend": 292516,
+      "savings_dollars": 17484,
+      "savings_percent": 6,
+      "levers_applied": [
+        "Dual-source strategy",
+        "GPO pricing benchmark",
+        "Selective category shifting"
+      ],
+      "alternatives_considered": [
+        "Fastenal (GPO)",
+        "Sherwin-Williams (initial data)"
+      ],
+      "why_selected": "Maintains wide catalog and existing logistics; competitive on many segments after benchmarking",
+      "why_not_selected": null,
+      "contract_terms": "Existing agreement retained; no volume commitment; to be supplemented by Fastenal for select SKUs",
+      "negotiation_leverage": "Threat of diverting categories with >20% price gaps to Fastenal",
+      "supplier_strengths": "Established account set-up, integrated e-procurement, broad inventory",
+      "supplier_weaknesses": "Higher pricing in Plumbing, Adhesives, Material Handling",
+      "switching_costs": "Systems integrations, user familiarity, national branch network",
+      "key_contacts": null,
+      "notes": "Continues to capture majority of MRO spend; targeted categories moved to Fastenal.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Benchmark study identified category variances",
+        "Multi-supplier strategy implemented",
+        "Savings >$50K project"
+      ]
+    },
+    {
+      "supplier_name": "Fastenal (via OMNIA Partners)",
+      "category": "MRO \u2013 General Industrial Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 0,
+      "final_spend": null,
+      "savings_dollars": 17484,
+      "savings_percent": 6,
+      "levers_applied": [
+        "GPO pricing",
+        "Category carve-out",
+        "Dual sourcing"
+      ],
+      "alternatives_considered": [
+        "Maintain 100% with Grainger"
+      ],
+      "why_selected": "Provided 18-50% lower pricing on targeted sub-categories (e.g., Plumbing 50%, Adhesives 34%) with no volume commitment",
+      "why_not_selected": null,
+      "contract_terms": "OMNIA participation agreement \u2013 no minimum spend, access to national price file",
+      "negotiation_leverage": "Ability to shift spend away from Grainger quickly",
+      "supplier_strengths": "Competitive pricing, local branch support, vending solutions",
+      "supplier_weaknesses": "Narrower catalog than Grainger, potential freight on low-value orders",
+      "switching_costs": "Set-up of new vendor accounts and part number cross-referencing",
+      "key_contacts": {
+        "Sales": "Eric Chaput \u2013 echaput@fastenal.com \u2013 401-651-8420"
+      },
+      "notes": "Savings captured when Arotech routes high-gap categories to Fastenal.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "New supplier added",
+        "GPO leveraged",
+        "Significant sub-category savings"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 9,
+    "battlecards_generated": 9,
+    "categories_with_battlecards": [
+      "Car Rental",
+      "Hotels",
+      "IT Hardware / Peripherals",
+      "MRO \u2013 General Industrial Supplies"
+    ],
+    "skipped_reason": "No other categories met complexity criteria or had sufficient negotiation detail"
+  },
+  "extraction_notes": [
+    "Savings, baseline and rate details sourced from 12/13/22 project update slides",
+    "Property-specific hotel data taken from Hotels: Property-Specific & Chainwide Savings slide",
+    "Fastenal segment-level savings percentages drawn from MRO Savings Update slide"
+  ]
+}

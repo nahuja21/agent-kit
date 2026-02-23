@@ -1,0 +1,44 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Outpatient addiction treatment",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site outpatient medication-assisted treatment provider for opioid and alcohol use disorders",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "Founded in 2010, SaVida Health delivers medication-assisted treatment, counseling and case management for substance-use disorders. Council Capital acquired a controlling interest in 2017, after which the company expanded from New England into multiple Mid-Atlantic and Southern states."
+  },
+  "size_metrics": {
+    "revenue": null,
+    "ebitda": null,
+    "locations": {
+      "count": 50,
+      "confidence": "medium",
+      "source": "SaVida Health press release on savidahealth.com (Sep 2024) stating the company \"operates over 50 clinics\"",
+      "notes": "Official press release gives the most recent count ('over 50 clinics'). Earlier 2020 article (bhbusiness.com, Nov 2020) cited 22 locations, supporting growth trajectory."
+    },
+    "employees": {
+      "count": 155,
+      "confidence": "medium",
+      "source": "bouncewatch.com company profile (accessed 2024-09) listing 155 employees; SignalHire range 100-200 employees corroborates",
+      "notes": "No employee count published by the company. Bouncewatch provides a specific figure, which aligns with the broader range reported by SignalHire."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.pdf",
+    "savidahealth.com press release (Sep 2024) \u2013 \"SaVida Health advances its mission with new location in Danville, VA\"",
+    "councilcapital.com \u2013 SaVida Health portfolio page",
+    "mergr.com \u2013 Council Capital acquires SaVida Health (Aug 2017)",
+    "bouncewatch.com \u2013 SaVida Health profile",
+    "signalhire.com \u2013 SaVida Health company overview",
+    "bhbusiness.com \u2013 article Nov 2020 on clinic expansion"
+  ],
+  "extraction_notes": [
+    "Official company name appears as \"SaVida Health\" in multiple sources (kickoff deck, agreement header, company website).",
+    "Council Capital ownership confirmed by councilcapital.com and mergr.com.",
+    "No standalone revenue or EBITDA figures found in any documents, filings, or reputable databases; company is privately held and does not publish financials.",
+    "Location count taken from most recent company press release ('over 50 clinics'); earlier sources show lower counts, indicating growth.",
+    "Employee count based on bouncewatch.com (155) and corroborated by SignalHire range; LinkedIn did not provide a concrete figure."
+  ]
+}

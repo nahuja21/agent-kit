@@ -1,0 +1,157 @@
+{
+  "exhibit_a": {
+    "initial_categories": [
+      "Audio Visual Equipment",
+      "Electronic Components - Distributor",
+      "Interconnects/Cables",
+      "Office Supplies",
+      "P-Card",
+      "Temporary Labor - non IT",
+      "Packaging & Shipping Supplies",
+      "IT Hardware",
+      "Telecom - Data & Voice",
+      "IT Consulting & Systems Integrators",
+      "Small Parcel Shipping",
+      "Travel Related Expenses"
+    ],
+    "initial_categories_count": 12,
+    "category_details": [
+      {
+        "category_name": "Audio Visual Equipment",
+        "spend": 4437251,
+        "addressable_pct": 75,
+        "addressable_spend": 3327938,
+        "savings_low": 166397,
+        "savings_high": 332794,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Electronic Components - Distributor",
+        "spend": 3632679,
+        "addressable_pct": 80,
+        "addressable_spend": 2906143,
+        "savings_low": 145307,
+        "savings_high": 290614,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Interconnects/Cables",
+        "spend": 1578987,
+        "addressable_pct": 50,
+        "addressable_spend": 789494,
+        "savings_low": 39475,
+        "savings_high": 78949,
+        "is_cogs": true
+      },
+      {
+        "category_name": "Office Supplies",
+        "spend": 352078,
+        "addressable_pct": 80,
+        "addressable_spend": 281662,
+        "savings_low": 28166,
+        "savings_high": 56333,
+        "is_cogs": false
+      },
+      {
+        "category_name": "P-Card",
+        "spend": 4123183,
+        "addressable_pct": 50,
+        "addressable_spend": 2061592,
+        "savings_low": 103080,
+        "savings_high": 206159,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Temporary Labor - non IT",
+        "spend": 1815174,
+        "addressable_pct": 70,
+        "addressable_spend": 1270622,
+        "savings_low": 38119,
+        "savings_high": 101650,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Packaging & Shipping Supplies",
+        "spend": 449626,
+        "addressable_pct": 80,
+        "addressable_spend": 359701,
+        "savings_low": 10791,
+        "savings_high": 35970,
+        "is_cogs": true
+      },
+      {
+        "category_name": "IT Hardware",
+        "spend": 1845287,
+        "addressable_pct": 80,
+        "addressable_spend": 1476229,
+        "savings_low": 73811,
+        "savings_high": 221434,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Telecom - Data & Voice",
+        "spend": 535699,
+        "addressable_pct": 80,
+        "addressable_spend": 428559,
+        "savings_low": 21428,
+        "savings_high": 42856,
+        "is_cogs": false
+      },
+      {
+        "category_name": "IT Consulting & Systems Integrators",
+        "spend": 13165026,
+        "addressable_pct": 50,
+        "addressable_spend": 6582513,
+        "savings_low": 131650,
+        "savings_high": 329126,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Small Parcel Shipping",
+        "spend": 287389,
+        "addressable_pct": 90,
+        "addressable_spend": 258650,
+        "savings_low": 38797,
+        "savings_high": 51730,
+        "is_cogs": false
+      },
+      {
+        "category_name": "Travel Related Expenses",
+        "spend": 3388624,
+        "addressable_pct": 50,
+        "addressable_spend": 1694312,
+        "savings_low": 50829,
+        "savings_high": 169431,
+        "is_cogs": false
+      }
+    ],
+    "total_spend": 35611003,
+    "total_addressable_spend": 21437415,
+    "savings_estimate_low": 847851,
+    "savings_estimate_high": 1917046,
+    "cogs_categories_count": 4,
+    "cogs_categories_percentage": 33.3,
+    "cogs_addressable_spend": 7383276,
+    "cogs_addressable_percentage": 34.4
+  },
+  "exhibit_b": {
+    "fee_type": "hybrid",
+    "fee_amount": 400000,
+    "minimum_savings_guarantee": 600000,
+    "minimum_return_on_fees_ratio": 1.5,
+    "fee_hybrid_threshold": 847851,
+    "fee_contingent_percentage": 10,
+    "fee_notes": "Fixed fee divided into four equal installments; variable fee billed at project completion or 6-month anniversary. Travel fees passed through at cost."
+  },
+  "timing": {
+    "start_date": "2021-04-21",
+    "end_date": null,
+    "engagement_type": "Procurement cost reduction services"
+  },
+  "extraction_notes": [
+    "All values taken exactly as stated in Exhibit A and Exhibit B of the signed agreement.",
+    "Addressable spend calculated as Spend \u00d7 Addressable%. Rounded to nearest dollar.",
+    "COGS classification based on production-related categories; some judgement applied for Packaging & Shipping Supplies.",
+    "End date not specified in the agreement."
+  ]
+}

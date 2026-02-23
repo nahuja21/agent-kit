@@ -1,0 +1,125 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "CJ Pony Parts captures $510K in implemented savings with another $31K in progress",
+      "narrative": "Treya Partners helped CJ Pony Parts drive significant cost reductions across shipping and packaging spend. Three categories\u2014Small Parcel Shipping, Corrugated, and Packaging Supplies\u2014are fully implemented, delivering $510,841 in validated annual savings. A fourth category, Temporary Labor, has a GPO agreement in place and is projected to add $30,817 once fully rolled out. Discontinued categories such as LTL/FTL and Employee Benefits were removed after confirming limited savings potential."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 541658,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "Sum of finalized savings from Close Out ($510,841) plus in-progress Temporary Labor savings from 5/25/22 update ($30,817)."
+      },
+      "finalized_savings": {
+        "amount": 510841,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+        "notes": "Small Parcel, Corrugated, and Packaging Supplies shown as Final Project Savings."
+      },
+      "in_progress_savings": {
+        "amount": 30817,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx",
+        "notes": "Temporary Labor GPO participation agreement executed; local rate discussions ongoing."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Small Parcel Shipping",
+        "annual_savings": 339165,
+        "status": "finalized",
+        "status_notes": "FedEx agreement executed; $339,165 (4%) annual reduction confirmed in Close Out."
+      },
+      {
+        "category_name": "Corrugated",
+        "annual_savings": 35806,
+        "status": "finalized",
+        "status_notes": "MOUs with Carlisle (PA) and Neway (NV) completed; 5% savings locked in."
+      },
+      {
+        "category_name": "Packaging Supplies",
+        "annual_savings": 135870,
+        "status": "finalized",
+        "status_notes": "Sigma and Colony Paper MOUs executed; 32% savings validated."
+      },
+      {
+        "category_name": "Temporary Labor \u2013 non-IT",
+        "annual_savings": 30817,
+        "status": "in progress",
+        "status_notes": "Omnia/Staffmark participation agreement signed; wage analysis and local rate alignment underway."
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "LTL/FTL",
+        "reason": "Category work discontinued due to implementation challenges and removed from scope."
+      },
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Analysis showed program already competitive; category discontinued."
+      },
+      {
+        "category_name": "Fasteners",
+        "reason": "Savings opportunity deemed insufficient; category discontinued."
+      },
+      {
+        "category_name": "P-Card (Office Supplies)",
+        "reason": "Limited savings potential; category discontinued."
+      },
+      {
+        "category_name": "Ocean Freight",
+        "reason": "Category discontinued due to lack of savings opportunity."
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": null,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": null,
+        "notes": "Start date not specified in available documents; first executed savings occurred prior to 6/1/22 Close Out."
+      },
+      "notes": "Savings from FedEx agreement were realized in the first project cycle, but exact timeline is not stated."
+    },
+    "operational_improvements": "Standardized packaging SKUs across locations, secured improved payment terms on corrugated purchases, and leveraged a national GPO agreement for staffing to streamline vendor management.",
+    "proof_points": [
+      {
+        "statement": "FedEx contract renegotiation cut annual parcel spend by $339K (4%).",
+        "category": "Small Parcel Shipping",
+        "evidence": [
+          {
+            "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+            "page_or_slide": "3",
+            "quote": "Small Parcel Shipping | $8,623,763 | 4% | $339,165"
+          }
+        ]
+      },
+      {
+        "statement": "Packaging Supplies RFP delivered 32% savings, equating to $136K annually.",
+        "category": "Packaging Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+            "page_or_slide": "3",
+            "quote": "Packaging Supplies | $419,304 | 32% | $135,870"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/CJ Pony Strategic Sourcing Project Close Out (June 1 2022).pptx",
+    "Project Updates/Biweekly Updates/CJ Pony Strategic Sourcing Project Update (052522).pptx"
+  ],
+  "extraction_notes": [
+    "Packaging Supplies savings differ between Close Out ($135,870 used) and 5/25 update ($137,316). Close Out figure used per priority rules.",
+    "Temporary Labor savings taken from 5/25 update because not included in Close Out but work is clearly underway.",
+    "All discontinued categories listed in updates were excluded from savings totals."
+  ]
+}

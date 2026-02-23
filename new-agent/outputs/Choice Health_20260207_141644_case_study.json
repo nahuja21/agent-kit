@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "All core elements are present: named client & industry, clear cost-reduction mandate, $534K quantified savings with multiple category-level proof points, and detailed approach data.",
+    "headline": "Choice Health At Home unlocks $534K in annualized savings in just five months with Treya\u2019s strategic sourcing program",
+    "client_problem_statement": "Choice Health At Home had expanded rapidly across four states, but purchasing remained decentralized and ad-hoc. Fragmented vendor relationships, inconsistent pricing and limited spend visibility hindered its ability to leverage scale. With Trive Capital and Coltala Holdings looking to accelerate value creation, leadership needed a fast, data-driven procurement strategy to deliver meaningful EBITDA impact before mid-2024.",
+    "client_problem_anonymized": "A multi-state home health and hospice provider had expanded rapidly, but purchasing remained decentralized and ad-hoc. Fragmented vendor relationships, inconsistent pricing and limited spend visibility hindered its ability to leverage scale. With the private equity ownership group focused on operational efficiency and margin improvement, leadership needed a fast, data-driven procurement strategy to deliver meaningful EBITDA impact before mid-2024.",
+    "approach_summary": [
+      "Mapped $17.7M in AP transactions and cleansed vendor data to identify $15.1M of addressable spend across 12 indirect and clinical categories.",
+      "Prioritized five high-impact categories representing $6.9M for Wave-1 and launched simultaneous workstreams to meet a five-month timeline.",
+      "Renegotiated the incumbent McKesson distribution agreement through market-basket benchmarking and a stepped volume-rebate ladder, capturing 21% savings on medical supplies.",
+      "Redesigned Enterprise Fleet Management\u2019s maintenance fee structure, lowering low-mileage rates by up to 48% and delivering a projected $140K annual benefit once the addendum is signed.",
+      "Implemented a standardized sourcing toolkit\u2014RFP templates, supplier scorecards and quarterly business reviews\u2014establishing the client\u2019s first enterprise-wide procurement process."
+    ],
+    "top_levers": [
+      "Incumbent contract renegotiation",
+      "Volume rebate & GPO tier optimization",
+      "Cost model redesign",
+      "Rate card benchmarking & supplier negotiations"
+    ],
+    "value_delivered_blurb": "Treya has validated $534,477 in annual run-rate savings\u2014already generating a 2.1\u00d7 return on the fixed $250K project fee and exceeding the 1.5\u00d7 guarantee five months into the engagement. The program is on track to surpass the high-end savings estimate of $1.18M as remaining Fleet and Temp Staffing agreements are finalized. Beyond hard dollars, Choice Health At Home now has a repeatable sourcing framework and real-time visibility into spend performance.",
+    "where_we_were_unique": [
+      "Delivered the first signed contract and savings within 150 days of project kick-off, meeting aggressive PE timelines.",
+      "Combined deep healthcare supply-chain expertise with data-driven benchmarking to negotiate 21% reductions while maintaining clinical continuity.",
+      "Redesigned cost models (e.g., fleet maintenance buckets) rather than relying solely on price-down tactics, unlocking savings overlooked by internal teams.",
+      "Embedded procurement governance\u2014supplier reporting, RFP templates, rebate tracking\u2014equipping the client to sustain savings long after project close."
+    ]
+  },
+  "generation_notes": [
+    "ROI calculated as $534K savings \u00f7 $250K fee = 2.1\u00d7, based solely on validated savings.",
+    "Wave-1 spend and timeline pulled from project scope and status slides.",
+    "All language adheres to anonymization rules where specified."
+  ]
+}

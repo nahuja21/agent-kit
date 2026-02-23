@@ -1,0 +1,335 @@
+{
+  "categories": [
+    {
+      "category_label": "Merchant Processing Fees",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-08-05",
+      "end_date": "2025-02-24",
+      "status": "implemented",
+      "vendors_before": [
+        "Chase Paymentech"
+      ],
+      "vendors_after": [
+        "Calibr Merchant Solutions"
+      ],
+      "levers": [
+        "RFP",
+        "Supplier switch",
+        "Fee renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Maintain seamless customer payment experience during transition",
+        "contractual_constraints": "Month-to-month Chase contract allowed exit without penalty",
+        "implementation_constraints": "Tokenization transition and subscription billing migration required"
+      },
+      "baseline_spend": {
+        "amount": 5367215,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Updated annualized spend shown in Final Savings slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 627726,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings Avg. column"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 11.7,
+      "notes": "Net effective processing rate reduced from 2.86 % with Chase to 2.56 % with Calibr.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "1",
+          "quote": "Merchant Processing Fees | $5,367,215 | Savings Avg. ($) $627,726",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "Corrugated",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-08-05",
+      "end_date": "2025-12-20",
+      "status": "implemented",
+      "vendors_before": [
+        "Unicorr",
+        "Rand Whitney"
+      ],
+      "vendors_after": [
+        "Unicorr",
+        "Rand Whitney",
+        "Key Container Corp."
+      ],
+      "levers": [
+        "RFP",
+        "Incumbent renegotiation",
+        "Multi-supplier award"
+      ],
+      "constraints": {
+        "supplier_constraints": "Maintain >50 % volume with Unicorr per prior commitment",
+        "operational_constraints": "Box specifications locked for warehouse automation compatibility",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 1226725,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Spend value noted on Final Savings slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 168060,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings Avg. column"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 13.7,
+      "notes": "Kept incumbents while leveraging competitive bids to drive price concessions.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "1",
+          "quote": "Corrugated | $1,226,725 | Savings Avg. ($) $168,060",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging & Shipping Supplies",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-08-05",
+      "end_date": "2025-01-01",
+      "status": "implemented",
+      "vendors_before": [
+        "Peak Technologies",
+        "Accutech Packaging"
+      ],
+      "vendors_after": [
+        "Peak Technologies",
+        "Accutech Packaging"
+      ],
+      "levers": [
+        "RFP",
+        "Incumbent renegotiation",
+        "Competitive benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "No change to material specs to avoid re-certification on pack lines",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 897369,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Spend value noted on Final Savings slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 110729,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings Avg. column"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 12.3,
+      "notes": "Achieved price reductions across air pillows, stretch film and labels.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "1",
+          "quote": "Packaging & Shipping Supplies | $897,369 | Savings Avg. ($) $110,729",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "LTL",
+      "category_l1": "Transportation",
+      "category_l2": "Freight",
+      "category_l3": "Less-than-Truckload",
+      "start_date": "2024-08-05",
+      "end_date": "2025-02-28",
+      "status": "implemented",
+      "vendors_before": [
+        "Old Dominion"
+      ],
+      "vendors_after": [
+        "Echo Global Logistics"
+      ],
+      "levers": [
+        "Competitive bid",
+        "Supplier switch",
+        "Benchmark-based negotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Service levels monitored via 3-month trial before full transition",
+        "contractual_constraints": "Old Dominion contract expiry 2025-02-28 enabled switch",
+        "implementation_constraints": "Transition scheduled post-peak season"
+      },
+      "baseline_spend": {
+        "amount": 873264,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Annualized baseline spend from Savings slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 266350,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings Avg. column"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 30.5,
+      "notes": "Echo provided most competitive all-in rates, yielding 31 % savings.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "1",
+          "quote": "LTL | $873,264 | Savings Avg. ($) $266,350",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "FTL",
+      "category_l1": "Transportation",
+      "category_l2": "Freight",
+      "category_l3": "Full Truckload",
+      "start_date": "2024-08-05",
+      "end_date": "2025-02-28",
+      "status": "implemented",
+      "vendors_before": [
+        "TransLink",
+        "RoadOne",
+        "Ryan Transportation",
+        "Coyote Logistics"
+      ],
+      "vendors_after": [
+        "Echo Global Logistics"
+      ],
+      "levers": [
+        "Competitive bid",
+        "Supplier switch",
+        "Route rebid"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Two-stop Memphis/Atlanta/Chicago lanes required in bids",
+        "contractual_constraints": null,
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 851164,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Annualized baseline spend from Savings slide"
+      },
+      "savings_annual_run_rate": {
+        "amount": 64494,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings Avg. column"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 7.6,
+      "notes": "Echo awarded based on lowest total cost across bid lanes.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "1",
+          "quote": "FTL | $851,164 | Savings Avg. ($) $64,494",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "category_label": "Ingram Book Group",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": "2024-08-05",
+      "end_date": "2025-02-28",
+      "status": "not_pursued",
+      "vendors_before": [
+        "Ingram Book Group"
+      ],
+      "vendors_after": [
+        "Ingram Book Group"
+      ],
+      "levers": [
+        "RFP"
+      ],
+      "constraints": {
+        "supplier_constraints": "Sole viable distributor for required print-on-demand mix",
+        "operational_constraints": null,
+        "contractual_constraints": "Long-term fulfillment services agreement in place since 2013",
+        "implementation_constraints": null
+      },
+      "baseline_spend": {
+        "amount": 2019402,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Updated spend shown under Wave 2"
+      },
+      "savings_annual_run_rate": {
+        "amount": 0,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "CONFIRMED CATEGORY LIST",
+        "notes": "RFP completed \u2013 no savings"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 0.0,
+      "notes": "Only incumbent bid; pricing unchanged so category closed.",
+      "evidence": [
+        {
+          "source_file": "CONFIRMED CATEGORY LIST",
+          "page_or_slide": null,
+          "quote": "Ingram Book Group: $0 [RFP completed \u2013 no savings] Only incumbent bid; pricing unchanged so category closed without savings impact",
+          "date_extracted": "2026-02-02"
+        }
+      ]
+    }
+  ],
+  "categories_summary": {
+    "total_count": 6,
+    "implemented_count": 5,
+    "in_progress_count": 0,
+    "not_pursued_count": 1,
+    "total_baseline_spend": 11235139,
+    "total_savings": 1237359,
+    "average_savings_percentage": 13.4
+  },
+  "extraction_sources": [
+    "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+    "CONFIRMED CATEGORY LIST",
+    "Exhibit A data"
+  ],
+  "extraction_notes": [
+    "Baseline spends for transportation and packaging categories use updated 2025 annualized figures from Final Savings dashboard rather than original Exhibit A estimates.",
+    "Start dates approximated to project kick-off (early August 2024) per Project Timing Overview legend.",
+    "Savings percentages are calculated from Savings Avg. values divided by updated spend for each category."
+  ]
+}

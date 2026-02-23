@@ -1,0 +1,33 @@
+{
+  "engagement_background": {
+    "objective": "Advantia Health engaged Treya Partners to identify and capture measurable cost savings across key indirect and clinical spend categories, while establishing stronger procurement processes and controls to support EBITDA improvement and private-equity value-creation goals.",
+    "scope_summary": "The project targets 10 spend categories identified via AP and P-card analysis\u2014representing approximately $19.0 M in annual spend and an estimated $0.73 M-$1.4 M savings opportunity. Categories include Employee Benefits (optional timing), Medical & Diagnostic Devices, Medical Supplies, Billing/RCM, Medical Equipment, Telecom, Data Center/Cloud, Office Supplies, and Electronic Payment Processing (addressability TBD). All other categories remain out of scope unless mutually added.",
+    "constraints_challenges": [
+      "Limited strategic procurement resources and focus inside Advantia prior to the engagement.",
+      "Incomplete and fragmented spend visibility\u2014AP and P-card data reside in two separate systems (Advantia Mid-Atlantic and Heartland) with limited line-item detail.",
+      "Ongoing post-acquisition integration gaps across clinics create inconsistent buying practices and supplier fragmentation.",
+      "Decentralized, multi-site healthcare environment with sensitive incumbent supplier relationships that must be maintained with minimal clinical disruption.",
+      "Six-month target timeline (plus later Benefits workstream) requires rapid data collection and prohibits parallel client-run sourcing activity per the signed agreement.",
+      "Some savings depend on behavioral or operational changes (e.g., purchasing IUDs in 5-unit lots, standardizing sonography equipment manufacturers)."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Accounts Payable data (Oct 2020\u2013Sep 2021) and YTD P-card data were available; contracts and detailed usage data had to be requested from suppliers; no centralized contract repository.",
+    "data_quality_notes": "Multiple naming conventions and two separate AP/P-card systems; limited line-item detail and gaps where suppliers did not provide historical usage data despite follow-up.",
+    "source_file": "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "Assessment/AdvantiaHealth - Proposal Nov 29 2021.pptx",
+    "Project Updates/Kickoff/Advantia Strategic Sourcing Project Kickoff (100622).pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from statements about lack of strategic procurement focus, multi-site roll-up structure, and need for procurement process review.",
+    "Data quality observations drawn from assessment slide detailing categorization challenges and agreement clauses describing data collection efforts.",
+    "Objective and scope synthesized from executive summary slides in assessment, proposal, and kickoff decks."
+  ]
+}

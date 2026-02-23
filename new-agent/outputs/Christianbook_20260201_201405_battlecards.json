@@ -1,0 +1,518 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "Calibr Merchant Solutions",
+      "category": "Merchant Processing Fees",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 5367215,
+      "final_spend": 4809500,
+      "savings_dollars": 557715,
+      "savings_percent": 10,
+      "levers_applied": [
+        "RFP",
+        "Supplier switch",
+        "Competitive benchmarking"
+      ],
+      "alternatives_considered": [
+        "Chase Paymentech",
+        "Braintree / PayPal"
+      ],
+      "why_selected": "Offered lowest net effective rate (2.56%) with estimated $557K annual savings; agnostic technology platform and strong customer service.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing to be memorialized; initial term expected 3 years with annual reviews (in progress).",
+      "negotiation_leverage": "Ability to move entire ~$188M processing volume and competitive pressure from multiple bids.",
+      "supplier_strengths": [
+        "Lower fees",
+        "Interchange optimization expertise",
+        "Responsive service team"
+      ],
+      "supplier_weaknesses": [
+        "Implementation still pending; migration of tokens/subscriptions required"
+      ],
+      "switching_costs": "Systems integration, token migration, certification testing, customer communication.",
+      "key_contacts": null,
+      "notes": "Implementation planning meetings to define timeline and resources.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Supplier switched",
+        "Significant savings (>10%)"
+      ]
+    },
+    {
+      "supplier_name": "Chase Paymentech",
+      "category": "Merchant Processing Fees",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 5367215,
+      "final_spend": null,
+      "savings_dollars": 0,
+      "savings_percent": 0,
+      "levers_applied": [
+        "RFP",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "Calibr Merchant Solutions",
+        "Braintree / PayPal"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Refused to reduce 2.86% net effective rate after 30-year relationship; uncompetitive versus market benchmarks.",
+      "contract_terms": "Month-to-month; decision not to renew communicated after award.",
+      "negotiation_leverage": "Threat of full volume loss; competitive proposals.",
+      "supplier_strengths": [
+        "Longstanding relationship",
+        "Stable processing platform"
+      ],
+      "supplier_weaknesses": [
+        "Highest fees among bidders",
+        "Limited flexibility"
+      ],
+      "switching_costs": "Minimal due to month-to-month contract.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Incumbent displaced",
+        "Competitive RFP"
+      ]
+    },
+    {
+      "supplier_name": "Braintree / PayPal",
+      "category": "Merchant Processing Fees",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": 5367215,
+      "final_spend": 5627557,
+      "savings_dollars": -260343,
+      "savings_percent": -4.85,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "Calibr Merchant Solutions",
+        "Chase Paymentech"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Quoted 2.96% net effective rate \u2013 highest total cost; lacked detail on interchange assumptions.",
+      "contract_terms": null,
+      "negotiation_leverage": "Pricing compared unfavorably to other bidders.",
+      "supplier_strengths": [
+        "Well-known platform"
+      ],
+      "supplier_weaknesses": [
+        "Higher fees",
+        "Incomplete pricing transparency"
+      ],
+      "switching_costs": null,
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multiple bidders",
+        "Competitive RFP"
+      ]
+    },
+    {
+      "supplier_name": "Echo Logistics",
+      "category": "LTL",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 873264,
+      "final_spend": 606914,
+      "savings_dollars": 266350,
+      "savings_percent": 31,
+      "levers_applied": [
+        "RFP",
+        "Vendor switch",
+        "Trial program",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "Old Dominion Freight Line",
+        "C.H. Robinson",
+        "Coyote Logistics",
+        "FedEx Freight"
+      ],
+      "why_selected": "Most competitive bid (15\u201325% below benchmark) and agreed to 3-month no-commitment trial.",
+      "why_not_selected": null,
+      "contract_terms": "Initial 3-month pilot; no volume commitments; option to extend to annual contract post-trial.",
+      "negotiation_leverage": "Incumbent contract expiring with no volume minimums; multi-broker competition.",
+      "supplier_strengths": [
+        "Lower rates",
+        "Managed transportation offering",
+        "Flexibility to scale"
+      ],
+      "supplier_weaknesses": [
+        "Performance yet to be validated during pilot"
+      ],
+      "switching_costs": "Carrier onboarding, TMS integration, staff training.",
+      "key_contacts": null,
+      "notes": "Savings projected at ~$271K annually if pilot is successful.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP with multiple bidders",
+        "Supplier switch",
+        "Significant savings (31%)"
+      ]
+    },
+    {
+      "supplier_name": "Old Dominion Freight Line",
+      "category": "LTL",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 873264,
+      "final_spend": null,
+      "savings_dollars": 0,
+      "savings_percent": 0,
+      "levers_applied": [
+        "Negotiation using benchmarks",
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "Echo Logistics",
+        "C.H. Robinson",
+        "Coyote Logistics",
+        "FedEx Freight"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Pricing 15\u201325% above market; unwilling to match competitive rates during renewal discussions.",
+      "contract_terms": "Previous agreement expired 2/28/2025; no volume commitments.",
+      "negotiation_leverage": "Threat of loss of 100% volume and benchmark data.",
+      "supplier_strengths": [
+        "Established service history",
+        "Strong service levels"
+      ],
+      "supplier_weaknesses": [
+        "Uncompetitive pricing",
+        "Limited rate flexibility"
+      ],
+      "switching_costs": "Minimal due to no contractual penalties.",
+      "key_contacts": null,
+      "notes": "May still be used as backup carrier post-transition.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Incumbent displaced",
+        "Competitive RFP"
+      ]
+    },
+    {
+      "supplier_name": "Echo Logistics",
+      "category": "FTL",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 851164,
+      "final_spend": 815026,
+      "savings_dollars": 36138,
+      "savings_percent": 4,
+      "levers_applied": [
+        "RFP",
+        "Supplier consolidation"
+      ],
+      "alternatives_considered": [
+        "TransLink",
+        "RoadOne",
+        "Ryan Transportation"
+      ],
+      "why_selected": "Lowest total lane cost; ability to bundle with LTL portfolio for additional leverage.",
+      "why_not_selected": null,
+      "contract_terms": "Lane-based pricing with DOE fuel schedule; quarterly business reviews.",
+      "negotiation_leverage": "Volume consolidation from two incumbents; competitive multi-round RFQ.",
+      "supplier_strengths": [
+        "Competitive rates",
+        "National carrier network",
+        "Data visibility tools"
+      ],
+      "supplier_weaknesses": [
+        "Savings modest (4%) relative to LTL; performance to be monitored"
+      ],
+      "switching_costs": "Carrier setup and routing guide updates.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multiple bidders",
+        "Supplier switch",
+        "Competitive RFQ"
+      ]
+    },
+    {
+      "supplier_name": "TransLink",
+      "category": "FTL",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": -25509,
+      "savings_percent": -3,
+      "levers_applied": [
+        "RFQ comparison"
+      ],
+      "alternatives_considered": [
+        "Echo Logistics",
+        "RoadOne",
+        "Ryan Transportation"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Revised bid resulted in 3% cost increase versus baseline; failed to meet target pricing.",
+      "contract_terms": null,
+      "negotiation_leverage": "Competitive bids highlighted cost gap.",
+      "supplier_strengths": [
+        "Existing operational familiarity"
+      ],
+      "supplier_weaknesses": [
+        "Higher pricing after volume changes"
+      ],
+      "switching_costs": "Driver familiarity on certain lanes.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFQ",
+        "Incumbent displaced"
+      ]
+    },
+    {
+      "supplier_name": "RoadOne",
+      "category": "FTL",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": -92534,
+      "savings_percent": -11,
+      "levers_applied": [
+        "RFQ comparison"
+      ],
+      "alternatives_considered": [
+        "Echo Logistics",
+        "TransLink",
+        "Ryan Transportation"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Proposal 11% above baseline; lacked clarity on fuel schedule.",
+      "contract_terms": null,
+      "negotiation_leverage": "Competitive pricing pressure from Echo.",
+      "supplier_strengths": [
+        "Existing carrier network"
+      ],
+      "supplier_weaknesses": [
+        "Highest cost proposal",
+        "Incomplete bid data"
+      ],
+      "switching_costs": "Minimal contractual barriers.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFQ",
+        "Incumbent displaced"
+      ]
+    },
+    {
+      "supplier_name": "Unicorr",
+      "category": "Corrugated",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 624100,
+      "final_spend": 543300,
+      "savings_dollars": 80800,
+      "savings_percent": 13,
+      "levers_applied": [
+        "RFP",
+        "Targeted renegotiation"
+      ],
+      "alternatives_considered": [
+        "Rand Whitney",
+        "Key Container Corporation"
+      ],
+      "why_selected": "Met target pricing while honoring existing volume commitments (>50% of business).",
+      "why_not_selected": null,
+      "contract_terms": "Revised pricing effective 1/1/2025; annual review.",
+      "negotiation_leverage": "Competitive bids and ability to shift share to Key Container.",
+      "supplier_strengths": [
+        "Reliable supply",
+        "Willingness to align prices"
+      ],
+      "supplier_weaknesses": [
+        "Prior prices above market"
+      ],
+      "switching_costs": "Tooling and box design compatibility.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multi-supplier award",
+        "Significant savings"
+      ]
+    },
+    {
+      "supplier_name": "Rand Whitney",
+      "category": "Corrugated",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 285025,
+      "final_spend": 259365,
+      "savings_dollars": 25660,
+      "savings_percent": 9,
+      "levers_applied": [
+        "RFP",
+        "Incumbent renegotiation"
+      ],
+      "alternatives_considered": [
+        "Unicorr",
+        "Key Container Corporation"
+      ],
+      "why_selected": "Competitive on specific SKUs; maintains dual-sourcing strategy.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing effective date TBD (post-award).",
+      "negotiation_leverage": "Threat of volume shift to Key Container and Unicorr.",
+      "supplier_strengths": [
+        "Existing quality",
+        "Responsive account team"
+      ],
+      "supplier_weaknesses": [
+        "Limited flexibility on select items (0% savings on CB #7A)"
+      ],
+      "switching_costs": "Box specifications and pallet program.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP",
+        "Multi-supplier award"
+      ]
+    },
+    {
+      "supplier_name": "Key Container Corporation",
+      "category": "Corrugated",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 317600,
+      "final_spend": 256000,
+      "savings_dollars": 61600,
+      "savings_percent": 19,
+      "levers_applied": [
+        "RFP",
+        "New supplier onboarding"
+      ],
+      "alternatives_considered": [
+        "Unicorr",
+        "Rand Whitney"
+      ],
+      "why_selected": "Provided best pricing on CB #5A (19% savings) and created leverage with incumbents.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing live 12/13/2024; qualification of production samples ongoing.",
+      "negotiation_leverage": "Ability to award incremental volume.",
+      "supplier_strengths": [
+        "Aggressive pricing",
+        "Willing to invest in new tooling"
+      ],
+      "supplier_weaknesses": [
+        "New relationship \u2013 quality and service yet to be proven"
+      ],
+      "switching_costs": "Initial tooling and testing costs.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "New supplier added",
+        "Competitive RFP",
+        "Significant savings"
+      ]
+    },
+    {
+      "supplier_name": "Accutech Packaging",
+      "category": "Packaging & Shipping Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 771994,
+      "final_spend": 673212,
+      "savings_dollars": 98782,
+      "savings_percent": 13,
+      "levers_applied": [
+        "RFP",
+        "Price renegotiation",
+        "Rebate program"
+      ],
+      "alternatives_considered": [
+        "Peak Technologies",
+        "Lindenmeyr",
+        "Sigma Supply"
+      ],
+      "why_selected": "Quoted 11.7% savings plus 2% volume rebate; coverage of 100% of RFQ items.",
+      "why_not_selected": null,
+      "contract_terms": "2% rebate once spend hits $1.25M; pricing effective 1/1/2025.",
+      "negotiation_leverage": "Full product bundle and threat to award to alternate distributors.",
+      "supplier_strengths": [
+        "Broad product range",
+        "Rebate incentives"
+      ],
+      "supplier_weaknesses": [
+        "Some items showed no price reduction"
+      ],
+      "switching_costs": "Minimal \u2013 same SKU specs retained.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP",
+        "Rebate structure",
+        "Significant savings"
+      ]
+    },
+    {
+      "supplier_name": "Peak Technologies",
+      "category": "Packaging & Shipping Supplies",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 125376,
+      "final_spend": 113429,
+      "savings_dollars": 11947,
+      "savings_percent": 9,
+      "levers_applied": [
+        "RFP",
+        "Price negotiation"
+      ],
+      "alternatives_considered": [
+        "Accutech Packaging",
+        "Lindenmeyr",
+        "Sigma Supply"
+      ],
+      "why_selected": "Competitive on label items; maintained dual-sourcing for risk mitigation.",
+      "why_not_selected": null,
+      "contract_terms": "Pricing live 12/13/2024; annual review.",
+      "negotiation_leverage": "Ability to shift entire label volume to Accutech.",
+      "supplier_strengths": [
+        "Label expertise",
+        "Improved pricing"
+      ],
+      "supplier_weaknesses": [
+        "Smaller share of overall category spend"
+      ],
+      "switching_costs": "Low \u2013 standardized labels.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP",
+        "Multi-supplier award"
+      ]
+    }
+  ]
+}

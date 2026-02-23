@@ -77,3 +77,11 @@ paths:
   inputs: "inputs"
   outputs: "outputs"
   prompts: "prompts"
+
+# SharePoint / Microsoft Graph API
+sharepoint:
+  client_id: "${SHAREPOINT_CLIENT_ID}"        # Azure AD App Registration client ID
+  tenant_id: "treyapartners.onmicrosoft.com"  # Azure AD tenant
+  hostname: "treyapartners.sharepoint.com"
+  site_path: "/sites/Projects"
+  library_name: "Projects"                    # Document library name

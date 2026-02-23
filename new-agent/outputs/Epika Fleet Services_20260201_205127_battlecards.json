@@ -1,0 +1,280 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "Samsara",
+      "category": "Telematics",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 247856,
+      "final_spend": 224571,
+      "savings_dollars": 23285,
+      "savings_percent": 9,
+      "levers_applied": [
+        "Contract extension",
+        "Incumbent renegotiation"
+      ],
+      "alternatives_considered": [],
+      "why_selected": "Best\u2010in\u2010class platform already deployed, offered additional 10% discount in exchange for 5-year extension and confirmed hardware ownership",
+      "why_not_selected": null,
+      "contract_terms": "5-year extension executed 10/31/2024; 10% unit price reduction locked for term; hardware becomes Epika asset at end of term",
+      "negotiation_leverage": "Threat of competitive bid at contract expiry and willingness to commit long term volume",
+      "supplier_strengths": "Deep integration with fleet maintenance, robust analytics, national support",
+      "supplier_weaknesses": "Price premium vs emerging players; long contract length",
+      "switching_costs": "Device removal & re-install, platform retraining, data migration",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Incumbent renegotiation",
+        "Savings >5%",
+        "Long-term contract restructuring"
+      ]
+    },
+    {
+      "supplier_name": "Shell (via LubeZone)",
+      "category": "Oil & Lubricants",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 4244416,
+      "final_spend": 3598265,
+      "savings_dollars": 646151,
+      "savings_percent": 15,
+      "levers_applied": [
+        "Incumbent renegotiation",
+        "Volume commitment",
+        "Rebate enhancement"
+      ],
+      "alternatives_considered": [
+        "Chevron",
+        "ExxonMobil"
+      ],
+      "why_selected": "Largest share of Epika volume, agreed to drop bulk T4/T5 pricing to $10.39/gal net of rebate and increase marketing fund",
+      "why_not_selected": null,
+      "contract_terms": "Pricing effective 2/10/2025; bulk and package price file with quarterly index review; enhanced $0.75/gal rebate paid quarterly",
+      "negotiation_leverage": "Cross-bid with Chevron/Exxon pricing and threat to shift lead brand, consolidated demand across 8 BUs",
+      "supplier_strengths": "Brand preference among technicians, nationwide distributor network",
+      "supplier_weaknesses": "Historically higher pricing, limited synthetic coverage",
+      "switching_costs": "Flush & replace inventory, technician re-training, marketing re-print",
+      "key_contacts": null,
+      "notes": "$33k incremental savings achieved from Lucas grease add-on",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multi-supplier benchmark",
+        "Significant savings (>10%)",
+        "Rebate restructuring"
+      ]
+    },
+    {
+      "supplier_name": "Chevron",
+      "category": "Oil & Lubricants",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 2736486,
+      "final_spend": 2508693,
+      "savings_dollars": 227793,
+      "savings_percent": 8,
+      "levers_applied": [
+        "National account pricing",
+        "Incumbent renegotiation",
+        "Rebate adjustment"
+      ],
+      "alternatives_considered": [
+        "Shell",
+        "ExxonMobil"
+      ],
+      "why_selected": "Granted Level-3 national account pricing under Amendment No.6 and matched Shell bulk pricing on core SKUs",
+      "why_not_selected": null,
+      "contract_terms": "Amendment No.6 signed 3/4/2025; term extended to 2/29/2028; annual CPI cap 3%; pricing loaded 3/1/2025 (retro-credit issued for billing error)",
+      "negotiation_leverage": "Validated Shell benchmark pricing, leveraged multi-brand demand through LubeZone",
+      "supplier_strengths": "Strong OEM approvals, stable supply chain, wide SKU breadth",
+      "supplier_weaknesses": "Slow pricing implementation (initial invoice errors)",
+      "switching_costs": "Moderate \u2013 product qualification and inventory swap",
+      "key_contacts": null,
+      "notes": "Retroactive credit issued for invoices 3/1\u20133/15 after mis-pricing discovered",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Contract amendment with extended term",
+        "Competitive benchmarks",
+        "Savings >$50K"
+      ]
+    },
+    {
+      "supplier_name": "ExxonMobil",
+      "category": "Oil & Lubricants",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1355356,
+      "final_spend": 1217090,
+      "savings_dollars": 138266,
+      "savings_percent": 10,
+      "levers_applied": [
+        "Incumbent renegotiation",
+        "Price benchmark vs Shell/Chevron"
+      ],
+      "alternatives_considered": [
+        "Shell",
+        "Chevron"
+      ],
+      "why_selected": "Matched market pricing, accepted revised distributor model delivering 10% reduction plus new 4-tier rebate",
+      "why_not_selected": null,
+      "contract_terms": "Revised distributor price list effective 3/1/2025; bulk discounts tied to 5,000+ gal orders; annual volume rebate up to 4%",
+      "negotiation_leverage": "Threat to consolidate volume with Shell/Chevron, detailed historical usage analysis",
+      "supplier_strengths": "Premium synthetic offer, strong distributor service",
+      "supplier_weaknesses": "Higher list prices without rebate, limited marketing funds",
+      "switching_costs": "Product approvals and tank cleaning",
+      "key_contacts": null,
+      "notes": "Potential additional $57k rebate upside not yet booked in savings",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Tri-brand competitive negotiation",
+        "Savings >5%",
+        "Rebate redesign"
+      ]
+    },
+    {
+      "supplier_name": "Fleetguard (Cummins Filtration)",
+      "category": "Filters",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1417378,
+      "final_spend": 1276251,
+      "savings_dollars": 141127,
+      "savings_percent": 10,
+      "levers_applied": [
+        "Tiered discount improvement",
+        "Incumbent renegotiation"
+      ],
+      "alternatives_considered": [
+        "Baldwin",
+        "Donaldson"
+      ],
+      "why_selected": "Agreed to move from 65% off MRP to 68.5% off, maintaining OEM warranty alignment",
+      "why_not_selected": null,
+      "contract_terms": "New discount tier effective 1/20/2024; quarterly volume review; tariffs pass-through restricted",
+      "negotiation_leverage": "Competitive price analysis against Baldwin RFQ and Donaldson pricing",
+      "supplier_strengths": "OEM spec fit, broad SKU coverage, dependable lead times",
+      "supplier_weaknesses": "Pricing opacity tied to MRP, tariff exposure",
+      "switching_costs": "Filter cross-reference validation, inventory purge",
+      "key_contacts": null,
+      "notes": "Tariff clause negotiated to cap pass-through at 3%",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive benchmarking",
+        "Discount tier change",
+        "Savings >5%"
+      ]
+    },
+    {
+      "supplier_name": "Baldwin Filters (Parker EMAM)",
+      "category": "Filters",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 2330517,
+      "final_spend": 2250161,
+      "savings_dollars": 80356,
+      "savings_percent": 3,
+      "levers_applied": [
+        "Incumbent renegotiation",
+        "Rebate structure"
+      ],
+      "alternatives_considered": [
+        "Fleetguard",
+        "Donaldson"
+      ],
+      "why_selected": "Introduced calendar-year volume rebate (up to 4%) and harmonized price file across 538 SKUs",
+      "why_not_selected": null,
+      "contract_terms": "MOU signed 1/27/2025; pricing effective 2/1/2025 through 2/1/2026; annual rebate paid by 1/31/2026",
+      "negotiation_leverage": "Large cross-referenced SKU analysis showing potential switch to Fleetguard/Donaldson",
+      "supplier_strengths": "Wide heavy-duty coverage, responsive account team",
+      "supplier_weaknesses": "Some SKUs priced above Donaldson, limited consignment options",
+      "switching_costs": "Training, stocking mix changes",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Rebate program creation",
+        "SKU level price file negotiation",
+        "Savings >$50K"
+      ]
+    },
+    {
+      "supplier_name": "Comdata",
+      "category": "Fuel Card Program",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 4588961,
+      "final_spend": 4545467,
+      "savings_dollars": 43494,
+      "savings_percent": 1,
+      "levers_applied": [
+        "Competitive RFQ",
+        "Vendor consolidation",
+        "Guaranteed rebate"
+      ],
+      "alternatives_considered": [
+        "Impac Fleet",
+        "Ramp",
+        "Fuelman",
+        "Universal Premium Fleet Card",
+        "CarIQ Pay"
+      ],
+      "why_selected": "Highest guaranteed economics \u2013 1.6% rebate plus 0.2% network discount floor (1.8% effective) and full fleet card consolidation",
+      "why_not_selected": null,
+      "contract_terms": "3-year Comdata Mastercard agreement signed 2/28/2025; rebate paid monthly; card & program fees waived",
+      "negotiation_leverage": "Multi-vendor RFQ with quantified rebate comparisons and threat to split award",
+      "supplier_strengths": "Large card acceptance network, real-time controls, Samsara integration",
+      "supplier_weaknesses": "Rebate dependent on timely invoice payment; implementation effort",
+      "switching_costs": "Card issuance, driver training, system integration",
+      "key_contacts": null,
+      "notes": "Implementation underway \u2013 go-live April 2025",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFQ with 3+ bidders",
+        "Vendor consolidation across 4 legacy cards"
+      ]
+    },
+    {
+      "supplier_name": "New Life Truck Parts",
+      "category": "After-Market Parts & Spares",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 1354118,
+      "final_spend": 1218706,
+      "savings_dollars": 135412,
+      "savings_percent": 10,
+      "levers_applied": [
+        "Full RFQ",
+        "Competitive bidding",
+        "Rebate program"
+      ],
+      "alternatives_considered": [
+        "Parts South",
+        "Tidewater/TNT Parts",
+        "FleetPride"
+      ],
+      "why_selected": "Provided 15% unit price reduction on matched SKUs, free delivery to CST&T, 9 regional warehouses and volume rebate up to 5%",
+      "why_not_selected": null,
+      "contract_terms": "Award pending final MSA \u2013 target go-live Q3 2025; rebate tiers: 1% <$1M, 2% $1\u20132M, 5% >$2M",
+      "negotiation_leverage": "Detailed SKU-level bid comparison and willingness to move entire $2.3M spend",
+      "supplier_strengths": "Competitive pricing, geographic coverage, proactive cross-referencing service",
+      "supplier_weaknesses": "New relationship \u2013 no performance history with Epika",
+      "switching_costs": "System setup, vendor onboarding, parts cross-reference validation",
+      "key_contacts": null,
+      "notes": "Potential enterprise-wide expansion after CST&T pilot",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "Full RFQ with multiple incumbents",
+        "Savings >10%"
+      ]
+    }
+  ]
+}

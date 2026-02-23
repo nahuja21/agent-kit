@@ -1,0 +1,447 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "athenahealth",
+      "category": "EMR",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1596000,
+      "final_spend": 1238111,
+      "savings_dollars": 357889,
+      "savings_percent": 22.4,
+      "levers_applied": [
+        "RFP",
+        "Benchmarking",
+        "Renegotiation",
+        "Threat of switch",
+        "Volume commitment"
+      ],
+      "alternatives_considered": [
+        "Sigmund Software",
+        "Qualifacts",
+        "MedEvolve",
+        "MedicsCloud"
+      ],
+      "why_selected": "Met 3.4% collection-based fee target, delivered >22% savings with no platform switch and limited disruption.",
+      "why_not_selected": null,
+      "contract_terms": "3-year term; fee = 3.4% of net collections; Year-3 price cap CPI+2%; Savida now covers credit-card processing fees; opportunity to renegotiate extension in Year-2.",
+      "negotiation_leverage": "Four credible bidders in RFP and benchmark data showing athena above market rates.",
+      "supplier_strengths": "Deep integration with Savida workflows; proven MAT functionality; dedicated customer-success team.",
+      "supplier_weaknesses": "Attempted price increase; CPI escalator risk; credit-card fees shifted to client.",
+      "switching_costs": "High\u2014data migration, provider training, revenue-cycle downtime.",
+      "key_contacts": [
+        "Mercedes Dahar \u2013 Director, Customer Success",
+        "Molly Hebert \u2013 Group Sales Executive Manager"
+      ],
+      "notes": "Re-engage athena in Year-2 to trade extension for elimination of CPI uplift.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders",
+        "Significant negotiation",
+        "Savings >5%"
+      ]
+    },
+    {
+      "supplier_name": "Sigmund Software",
+      "category": "EMR",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "athenahealth",
+        "Qualifacts",
+        "MedEvolve",
+        "MedicsCloud"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Higher total cost after implementation fees and data-migration risk; athena matched target pricing.",
+      "contract_terms": "Proposed multi-year SaaS license for Aura platform with optional bundled RCM; pricing in 12/20/24 and 2/20/25 proposals.",
+      "negotiation_leverage": "Served mainly to pressure athena on pricing.",
+      "supplier_strengths": "Behavioral-health focus, strong customization, positive peer references.",
+      "supplier_weaknesses": "Migration complexity, unclear billing integration, higher upfront cost.",
+      "switching_costs": "Full data migration, training, workflow rebuild.",
+      "key_contacts": [
+        "Cory Valentine \u2013 VP Sales"
+      ],
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders"
+      ]
+    },
+    {
+      "supplier_name": "Qualifacts",
+      "category": "EMR",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "athenahealth",
+        "Sigmund Software",
+        "MedEvolve",
+        "MedicsCloud"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Did not meet Savida\u2019s required pricing target; concerns about scalability for rapid-growth footprint.",
+      "contract_terms": "CareLogic SaaS proposal dated 12/6/2024; pricing valid through 3/6/2025.",
+      "negotiation_leverage": "Offered benchmark for market rates on behavioral-health EMRs.",
+      "supplier_strengths": "Strong clinical documentation and reporting features.",
+      "supplier_weaknesses": "Limited revenue-cycle track record; higher cost than athena after final round.",
+      "switching_costs": "High implementation fees plus staff retraining.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders"
+      ]
+    },
+    {
+      "supplier_name": "MedEvolve",
+      "category": "EMR",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "athenahealth",
+        "Sigmund Software",
+        "Qualifacts",
+        "MedicsCloud"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Workflow and disaster-recovery strengths noted but pricing and change-management effort outweighed benefits.",
+      "contract_terms": "Proposed PM + Billing platform with optional EI suite; detailed in RFP folder 12/02/24.",
+      "negotiation_leverage": "Helped establish ceiling on athena\u2019s pricing.",
+      "supplier_strengths": "Robust analytics, detailed DR plan, scalable cloud option.",
+      "supplier_weaknesses": "Less proven in MAT specialty; implementation complexity.",
+      "switching_costs": "Full migration and training required.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders"
+      ]
+    },
+    {
+      "supplier_name": "MedicsCloud (ADS)",
+      "category": "EMR",
+      "relationship_status": "considered",
+      "was_incumbent": false,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": null,
+      "savings_percent": null,
+      "levers_applied": [
+        "RFP"
+      ],
+      "alternatives_considered": [
+        "athenahealth",
+        "Sigmund Software",
+        "Qualifacts",
+        "MedEvolve"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Quoted 4%\u20134.5% of collections\u2014above athena\u2019s final offer; less referenceable in behavioral-health space.",
+      "contract_terms": "RCM + EMR proposal dated 1/07/25; sliding fee scale with volume.",
+      "negotiation_leverage": "Added competitive tension in final round.",
+      "supplier_strengths": "All-in-one platform, flexible fee options.",
+      "supplier_weaknesses": "Higher ongoing cost, limited behavioral-health references.",
+      "switching_costs": "High migration effort.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "RFP conducted",
+        "Multiple bidders"
+      ]
+    },
+    {
+      "supplier_name": "Provista GPO (Office Supplies)",
+      "category": "Office Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 153942,
+      "final_spend": 149909,
+      "savings_dollars": 4033,
+      "savings_percent": 2.6,
+      "levers_applied": [
+        "GPO enrollment",
+        "Benchmark pricing"
+      ],
+      "alternatives_considered": [
+        "Staples"
+      ],
+      "why_selected": "Access to aggregated GPO pricing on core SKUs with minimal operational change.",
+      "why_not_selected": null,
+      "contract_terms": "Participating member agreement; pricing tied to Provista contracts; renews annually.",
+      "negotiation_leverage": "Large Provista member volume and benchmark comparisons.",
+      "supplier_strengths": "Broad SKU coverage, automated rebates, no direct contract negotiation.",
+      "supplier_weaknesses": "Compliance requirements to stay on-contract; limited brand flexibility.",
+      "switching_costs": "Low\u2014roster upload and new ordering portal.",
+      "key_contacts": null,
+      "notes": "Savings validation of high-usage SKUs still underway.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "GPO leverage",
+        "Competitive benchmark"
+      ]
+    },
+    {
+      "supplier_name": "Staples",
+      "category": "Office Supplies",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": 153942,
+      "final_spend": null,
+      "savings_dollars": 4033,
+      "savings_percent": 2.6,
+      "levers_applied": [
+        "GPO comparison"
+      ],
+      "alternatives_considered": [
+        "Provista GPO"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Pricing above Provista contract rates on high-volume items.",
+      "contract_terms": "Standard Staples Advantage terms (cancelled).",
+      "negotiation_leverage": "Threat of switch to GPO.",
+      "supplier_strengths": "Established ordering portal, broad catalog.",
+      "supplier_weaknesses": "Non-competitive pricing, limited rebate structure.",
+      "switching_costs": "Low\u2014users already familiar with online ordering interfaces.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "Benchmarking showed savings opportunity"
+      ]
+    },
+    {
+      "supplier_name": "Provista GPO (Medical Supplies)",
+      "category": "Medical Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 127494,
+      "final_spend": 99502,
+      "savings_dollars": 27992,
+      "savings_percent": 22.0,
+      "levers_applied": [
+        "GPO enrollment",
+        "High-usage SKU pricing",
+        "Benchmarking"
+      ],
+      "alternatives_considered": [
+        "Midland Scientific",
+        "MedSupply Partners"
+      ],
+      "why_selected": "Secured double-digit savings across lab and medical consumables with contract pricing and rebate opportunities.",
+      "why_not_selected": null,
+      "contract_terms": "Member participation agreement signed 5/5/2025; pricing tied to Provista/Premier tiers; annual review.",
+      "negotiation_leverage": "Aggregated volume across Savida locations and Premier contract tiers.",
+      "supplier_strengths": "Wide contract portfolio, electronic ordering, freight incentives.",
+      "supplier_weaknesses": "Requires adherence to contract formulary; possible back-order risk on niche items.",
+      "switching_costs": "Location roster upload and item cross-reference; moderate.",
+      "key_contacts": null,
+      "notes": "Need to finalize temp-strip cup pricing to lock in savings.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "GPO leverage",
+        "Savings >5%"
+      ]
+    },
+    {
+      "supplier_name": "Midland Scientific",
+      "category": "Medical Supplies",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": 27992,
+      "savings_percent": 22.0,
+      "levers_applied": [
+        "GPO comparison"
+      ],
+      "alternatives_considered": [
+        "Provista GPO"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Did not match Provista contract pricing on solvents and reagents.",
+      "contract_terms": null,
+      "negotiation_leverage": "Threat of moving volume to GPO contracts.",
+      "supplier_strengths": "Specialty lab chemicals and reagents.",
+      "supplier_weaknesses": "Higher pricing on high-volume SKUs; limited breadth for medical consumables.",
+      "switching_costs": "Moderate\u2014new item numbers needed but no system integration.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "Benchmarking identified >5% savings"
+      ]
+    },
+    {
+      "supplier_name": "MedSupply Partners",
+      "category": "Medical Supplies",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": 27992,
+      "savings_percent": 22.0,
+      "levers_applied": [
+        "GPO comparison"
+      ],
+      "alternatives_considered": [
+        "Provista GPO"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Prices on gloves, caps, and deep-well plates exceeded Provista rates.",
+      "contract_terms": null,
+      "negotiation_leverage": "Ability to consolidate SKUs under Provista contract.",
+      "supplier_strengths": "Responsive customer service; niche lab plastics.",
+      "supplier_weaknesses": "Non-competitive pricing, freight charges.",
+      "switching_costs": "Low\u2014items available through alternate distributors.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Supplier switched",
+        "Benchmarking identified >5% savings"
+      ]
+    },
+    {
+      "supplier_name": "Connection",
+      "category": "IT Hardware",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 33082,
+      "final_spend": 28781,
+      "savings_dollars": 4301,
+      "savings_percent": 13.0,
+      "levers_applied": [
+        "Competitive quote",
+        "VAR negotiation",
+        "GPO leverage"
+      ],
+      "alternatives_considered": [
+        "GHA Technologies",
+        "CDW"
+      ],
+      "why_selected": "Provided best like-for-like pricing and agreed to benchmark future purchases.",
+      "why_not_selected": null,
+      "contract_terms": "Quote-based purchasing with option to piggyback on Provista IT contract pricing.",
+      "negotiation_leverage": "Benchmarked Dell and HP models across three VARs; used lowest quote to negotiate.",
+      "supplier_strengths": "Aggressive pricing, multiple OEM lines, quick quote turnaround.",
+      "supplier_weaknesses": "Requires case-by-case quoting; no existing e-procurement link.",
+      "switching_costs": "Minimal\u2014device images already Dell factory-loaded.",
+      "key_contacts": null,
+      "notes": "Use Connection quotes to pressure CDW on future buys.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive quotes gathered",
+        "Supplier switched",
+        "Savings >5%"
+      ]
+    },
+    {
+      "supplier_name": "GHA Technologies",
+      "category": "IT Hardware",
+      "relationship_status": "displaced",
+      "was_incumbent": true,
+      "was_awarded": false,
+      "baseline_spend": null,
+      "final_spend": null,
+      "savings_dollars": 4301,
+      "savings_percent": 13.0,
+      "levers_applied": [
+        "Benchmarking",
+        "Competitive quote"
+      ],
+      "alternatives_considered": [
+        "Connection",
+        "CDW"
+      ],
+      "why_selected": null,
+      "why_not_selected": "Could not match Connection\u2019s quoted pricing on Dell OptiPlex and Latitude models.",
+      "contract_terms": "Transactional PO basis; Net-30 terms.",
+      "negotiation_leverage": "Ability to shift upcoming laptop refresh to lower-priced VAR.",
+      "supplier_strengths": "Existing account setup; Dell Premier access.",
+      "supplier_weaknesses": "Higher unit pricing; limited pricing transparency.",
+      "switching_costs": "Low\u2014same OEM products.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive quotes",
+        "Supplier switched"
+      ]
+    },
+    {
+      "supplier_name": "Comcast Business (via TPX managed services)",
+      "category": "Telecom \u2013 Data & Voice",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 102000,
+      "final_spend": 84150,
+      "savings_dollars": 17850,
+      "savings_percent": 17.5,
+      "levers_applied": [
+        "Service consolidation",
+        "Bandwidth optimization",
+        "Managed-services agreement"
+      ],
+      "alternatives_considered": [
+        "TPX (as aggregator)"
+      ],
+      "why_selected": "Consolidation under single hierarchy reduced duplicate fees and enabled managed monitoring without changing last-mile provider.",
+      "why_not_selected": null,
+      "contract_terms": "Pending agreement\u2014standard 36-month term with TPX overlay; SLA for uptime & bandwidth.",
+      "negotiation_leverage": "Ability to consolidate 30+ location accounts and optimize bandwidth tiers.",
+      "supplier_strengths": "Ubiquitous cable footprint; quick install intervals; TPX adds 24/7 monitoring.",
+      "supplier_weaknesses": "Limited fiber availability in rural sites; past billing complexity.",
+      "switching_costs": "Medium\u2014circuit re-provisioning and potential ETF if moved away.",
+      "key_contacts": null,
+      "notes": "Validate savings once final circuits and managed-service fee schedule are confirmed.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Service consolidation",
+        "Negotiation achieved >5% savings"
+      ]
+    }
+  ]
+}

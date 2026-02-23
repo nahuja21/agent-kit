@@ -1,0 +1,33 @@
+{
+  "exhibit_a": {
+    "initial_categories": [],
+    "initial_categories_count": 0,
+    "category_details": [],
+    "total_spend": 0,
+    "total_addressable_spend": 0,
+    "savings_estimate_low": 0,
+    "savings_estimate_high": 0,
+    "cogs_categories_count": 0,
+    "cogs_categories_percentage": 0,
+    "cogs_addressable_spend": 0,
+    "cogs_addressable_percentage": 0
+  },
+  "exhibit_b": {
+    "fee_type": null,
+    "fee_amount": null,
+    "minimum_savings_guarantee": null,
+    "minimum_return_on_fees_ratio": null,
+    "fee_hybrid_threshold": null,
+    "fee_contingent_percentage": null,
+    "fee_notes": null
+  },
+  "timing": {
+    "start_date": "2024-10-04",
+    "end_date": null,
+    "engagement_type": null
+  },
+  "extraction_notes": [
+    "The provided document excerpt did not include Exhibits A or B, therefore no scope or fee data was available to extract.",
+    "Only a signature block was visible on page 6, giving a signature date of 10/4/2024 which has been used as the start_date."
+  ]
+}

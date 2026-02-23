@@ -1,0 +1,51 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Substance use disorder & addiction treatment",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site outpatient provider of medication-assisted treatment (MAT) for opioid and alcohol addiction",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "Founded in 2010, SaVida Health has expanded from a single clinic to a multi-state platform providing medication-assisted treatment for opioid and alcohol use disorders. In 2017, Nashville-based private-equity firm Council Capital acquired a controlling interest, funding expansion to more than 20 outpatient centers across Vermont, Massachusetts, Maine, Virginia, and Delaware."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": 75000000,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "LeadIQ company profile for SaVida Health (https://leadiq.com/c/savida-health/5c6a313b20000097313b8d4d)",
+      "notes": "LeadIQ lists estimated revenue in the $50M\u2013$100M range. No other primary or official sources provide figures, so midpoint ($75M) is shown as an approximation."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 22,
+      "confidence": "medium",
+      "source": "Behavioral Health Business article (https://bhbusiness.com/2020/11/09/...) citing 'over 20 outpatient treatment centers' corroborated by 16 specific addresses on SaVida Health locations page (https://savidahealth.com/locations/)",
+      "notes": "Website lists 16 locations in five states; multiple news pieces (2020\u20132024) state the network has grown to \u2018over 20\u2019. Using 22 as a conservative figure within that description."
+    },
+    "employees": {
+      "count": 165,
+      "confidence": "medium",
+      "source": "LeadIQ employee directory (approx. 165 employees, October 2025) and SignalHire (100-200 range)",
+      "notes": "Both LeadIQ and other staffing databases place staff between 100 and 200; LeadIQ gives the most precise point estimate at 165."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "SaVida Health website \u2013 locations page (https://savidahealth.com/locations/)",
+    "Behavioral Health Business article, Nov 9 2020",
+    "LeadIQ company profile for SaVida Health",
+    "SignalHire company profile for SaVida Health",
+    "ContactOut company profile for SaVida Health",
+    "Crunchbase profile for SaVida Health"
+  ],
+  "extraction_notes": [
+    "Official naming: internal documents consistently refer to the operating entity as \u201cSaVida Health\u201d; legal entity \u2018SaVida Management\u2019 appears in the services agreement.",
+    "Council Capital ownership confirmed by multiple sources (Mergr transaction record, Council Capital website).",
+    "No EBITDA figures located in documents, SEC filings, or credible databases; field left null per instructions.",
+    "Revenue figures are third-party estimates only; treated with low confidence.",
+    "Location count derived from direct address list (16) plus confirmation from news coverage of additional openings, yielding an estimate of 22.",
+    "Employee count triangulated from multiple HR databases; LinkedIn did not provide a precise number at time of extraction."
+  ]
+}

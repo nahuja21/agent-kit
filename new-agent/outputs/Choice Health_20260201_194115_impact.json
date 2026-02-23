@@ -1,0 +1,149 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "Choice Health locks in $276K and identifies another $258K, totaling $534K in annual savings across five spend categories",
+      "narrative": "Through a focused strategic-sourcing program, Treya Partners delivered a finalized $276K annual reduction on Medical Supplies and surfaced an additional $258K across Fleet, Office Supplies and two temporary labor categories that are now moving through final negotiation and contracting. RFPs, supplier negotiations and contract execution were completed in under six months, giving Choice Health clear line-of-sight to more than half-a-million dollars in recurring savings."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 534477,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Sum of Medical Supplies, Fleet, Office Supplies, Temps-Therapists, Temps-Nurses from Savings Dashboard (slide 3)"
+      },
+      "finalized_savings": {
+        "amount": 276333,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Medical Supplies contract executed (slide 5); savings line on Savings Dashboard"
+      },
+      "in_progress_savings": {
+        "amount": 258144,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Fleet awaiting signature; three additional categories in active sourcing (slides 3, 5)"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Medical Supplies",
+        "annual_savings": 276333,
+        "status": "finalized",
+        "status_notes": "New McKesson contract executed 7/19; 21-22% reduction equating to $276K annually (slides 3, 5, 14)"
+      },
+      {
+        "category_name": "Fleet",
+        "annual_savings": 139850,
+        "status": "awaiting signature",
+        "status_notes": "Enterprise addendum drafted; Choice to sign, locking in 4% / $140K savings (slides 3, 5, 8)"
+      },
+      {
+        "category_name": "Office Supplies",
+        "annual_savings": 19768,
+        "status": "in progress",
+        "status_notes": "GPO pricing requests sent; awaiting quotes to finalize 10-15% savings (slides 3, 5)"
+      },
+      {
+        "category_name": "Temps \u2013 Therapists",
+        "annual_savings": 59663,
+        "status": "in progress",
+        "status_notes": "Usage data collected and vendor negotiations scheduled 8/15 (slides 3, 5)"
+      },
+      {
+        "category_name": "Temp Staff \u2013 Nurses",
+        "annual_savings": 38863,
+        "status": "in progress",
+        "status_notes": "Parallel process with therapist staffing suppliers (slides 3, 5)"
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Medical Equipment",
+        "reason": "Placed on hold by client before benchmarking could begin; no savings identified"
+      },
+      {
+        "category_name": "Pharmacy",
+        "reason": "De-scoped; only advisory review performed, no sourcing event"
+      },
+      {
+        "category_name": "IT Hardware",
+        "reason": "De-scoped prior to sourcing"
+      },
+      {
+        "category_name": "Telecom",
+        "reason": "De-scoped prior to sourcing"
+      },
+      {
+        "category_name": "Commercial Print",
+        "reason": "De-scoped prior to sourcing"
+      },
+      {
+        "category_name": "Copiers/MFPs",
+        "reason": "De-scoped prior to sourcing"
+      },
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Client chose not to proceed after preliminary review"
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 150,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+        "notes": "Kick-off in Feb; Medical Supplies contract executed mid-July"
+      },
+      "notes": "First contracted savings (Medical Supplies) realized in roughly five months from project kick-off."
+    },
+    "operational_improvements": "Standardized medical-supply formulary and reporting, introduced mileage-based fleet maintenance tiers, and consolidated vendor data collection processes to support ongoing spend visibility.",
+    "proof_points": [
+      {
+        "statement": "\u201cChoice executed new McKesson contract\u201d delivering a 21-22% reduction or $276K in annual savings.",
+        "category": "Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "5",
+            "quote": "Choice executed new McKesson contract"
+          }
+        ]
+      },
+      {
+        "statement": "Enterprise fleet maintenance restructure will cut per-vehicle costs up to 48% in certain mileage bands, totaling $140K annually once signed.",
+        "category": "Fleet",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "8",
+            "quote": "Estimated Total Annual Savings | $139,850"
+          }
+        ]
+      },
+      {
+        "statement": "Therapist and nurse staffing RFPs underway with 7 vendors; data-driven negotiation targeting up to 8% rate reduction.",
+        "category": "Temp Labor",
+        "evidence": [
+          {
+            "source_file": "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx",
+            "page_or_slide": "5",
+            "quote": "Data usage requests sent to 7 vendors \u2026 Treya to share negotiation materials with Jeff and Josh on 8/15"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Updates/Choice Health - Strategic Sourcing Project Update (August 8 2024).pptx"
+  ],
+  "extraction_notes": [
+    "Only categories with tangible sourcing activity and quantified savings were included.",
+    "Medical Supplies is finalized; Fleet pending signature; the remaining three categories are actively being sourced.",
+    "All on-hold or de-scoped categories were excluded per instructions."
+  ]
+}

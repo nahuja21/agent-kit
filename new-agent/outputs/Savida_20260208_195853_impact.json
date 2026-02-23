@@ -1,0 +1,127 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "SaVida Health secures $412K in annual savings; $358K already locked in through EMR renegotiation",
+      "narrative": "Treya Partners partnered with SaVida Health to optimize spend across five critical categories. The engagement has delivered $357,889 in fully-executed annual savings by renegotiating the Athena EMR contract, while an additional $54,176 is in the final stages of validation across GPO, IT hardware, and telecom initiatives. Key wins include signing a Provista GPO agreement for medical and office supplies and consolidating telecom services with Comcast. Further savings are expected once GPO compliance is confirmed and telecom contracts are executed."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 412065,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Sum of average annual savings for all worked categories in final close-out dashboard."
+      },
+      "finalized_savings": {
+        "amount": 357889,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "EMR category shows checkmark and 4/15/25 signature date."
+      },
+      "in_progress_savings": {
+        "amount": 54176,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "GPO, IT Hardware, and Telecom initiatives signed or in contracting but savings still being validated."
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "EMR (Athena)",
+        "annual_savings": 357889,
+        "status": "finalized",
+        "status_notes": "Contract signed 4/15/2025 reducing fee from 4.56% to 3.40%."
+      },
+      {
+        "category_name": "Provista GPO \u2013 Office Supplies",
+        "annual_savings": 4033,
+        "status": "awaiting savings validation",
+        "status_notes": "Agreement signed 5/5/2025; Treya to validate savings on SKU usage with SaVida."
+      },
+      {
+        "category_name": "Provista GPO \u2013 Medical Supplies",
+        "annual_savings": 27992,
+        "status": "awaiting savings validation",
+        "status_notes": "Agreement signed 5/5/2025; savings range 10-34%, midpoint used per close-out dashboard."
+      },
+      {
+        "category_name": "IT Hardware",
+        "annual_savings": 4301,
+        "status": "in progress",
+        "status_notes": "Pricing received from Connection VAR; awaiting final purchasing decision to leverage Provista/CDW."
+      },
+      {
+        "category_name": "Telecom \u2013 Data & Voice",
+        "annual_savings": 17850,
+        "status": "in progress",
+        "status_notes": "Comcast managed services solution under review; consolidation expected to deliver 15-20% savings."
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Small Parcel Shipping",
+        "reason": "Removed from scope \u2013 incumbent already competitively priced"
+      },
+      {
+        "category_name": "Waste Management",
+        "reason": "Removed from scope \u2013 new contract signed just before engagement"
+      },
+      {
+        "category_name": "Commercial Print",
+        "reason": "Removed from scope \u2013 limited opportunity"
+      },
+      {
+        "category_name": "Employee Benefits",
+        "reason": "Removed from scope \u2013 fully insured plan, no viable switch to self-funded"
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": 190,
+        "unit": "days",
+        "confidence": "medium",
+        "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+        "notes": "Kick-off 10/08/2024 to EMR contract execution 04/15/2025."
+      },
+      "notes": "First savings realized with the executed EMR agreement in April 2025."
+    },
+    "operational_improvements": "Implemented a Provista GPO program to streamline purchasing across office and medical supplies and initiated telecom service consolidation to a single managed provider, improving administrative efficiency.",
+    "proof_points": [
+      {
+        "statement": "Renegotiated Athena EMR fee from 4.56% to 3.40%, generating $357,889 in annual savings.",
+        "category": "EMR",
+        "evidence": [
+          {
+            "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+            "page_or_slide": "6",
+            "quote": "Athena's final proposal meets the 3.4% target rate, delivering approximately $358K in annual savings."
+          }
+        ]
+      },
+      {
+        "statement": "Signed Provista GPO agreement covering high-usage office and medical supplies, projected to save $32K annually once fully implemented.",
+        "category": "GPO \u2013 Office & Medical Supplies",
+        "evidence": [
+          {
+            "source_file": "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx",
+            "page_or_slide": "4",
+            "quote": "ProVista agreement signed; savings validation with Savida team underway."
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Closeout Folder/Savida Health - Strategic Sourcing Project Closeout (May 8,2025).pptx"
+  ],
+  "extraction_notes": [
+    "All savings values sourced from Priority-1 close-out deck (slide 4).",
+    "In-progress savings use the 'Savings Avg.' column per instructions; validation still pending per Executive Summary.",
+    "No numerical conflicts found between close-out and latest update; close-out values used.",
+    "Engagement kicked off 10/08/2024 based on slide 7 baseline dashboard; first finalized contract on 04/15/2025."
+  ]
+}

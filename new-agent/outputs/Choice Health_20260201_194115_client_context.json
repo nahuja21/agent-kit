@@ -1,0 +1,48 @@
+{
+  "client": {
+    "client_name": "Choice Health at Home",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Home Health, Hospice & Rehabilitation Services",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-state provider of home health, hospice and rehabilitation therapy services",
+    "sponsor_pe_firm": "Trive Capital; Coltala Holdings",
+    "client_history": "Founded in 2007 by physical therapist David Jackson in Tyler, Texas, Choice Health at Home has expanded through organic growth and a series of acquisitions to serve patients across Texas, Oklahoma, Kansas and Louisiana. The company partnered with private-equity firms Trive Capital and Coltala Holdings in 2021 to accelerate its regional expansion."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": null,
+      "notes": "No credible public source or document in the provided materials states company revenue."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": null,
+      "confidence": "low",
+      "source": null,
+      "notes": "Company website and provided documents mention operations in several states but do not specify the number of branch offices or care locations."
+    },
+    "employees": {
+      "count": 1000,
+      "confidence": "low",
+      "source": "LinkedIn company page (linkedin.com/company/choicehealthathome) shows 1,001-5,000 employees; Bitscale.ai profile (bitscale.ai/directory/choice-health-at-home) lists 86 employees.",
+      "notes": "Significant discrepancy between sources. LinkedIn range suggests a large field-based workforce typical for home-health providers, while Bitscale likely reflects corporate headcount only. Using the lower bound of the LinkedIn range as a conservative estimate."
+    }
+  },
+  "extraction_sources": [
+    "Agreement/Treya Procurement Cost Reduction Services Agreement_Choice Health at Home.docx.pdf (pp.1-2)",
+    "choicehealthathome.com/about",
+    "trivecapital.com press release (Aug 2021)",
+    "homehealthcarenews.com article (Jun 2021)",
+    "LinkedIn company page (Choice Health at Home)",
+    "bitscale.ai profile for Choice Health at Home"
+  ],
+  "extraction_notes": [
+    "Official legal name confirmed from the signed services agreement between Treya Partners and Choice Health at Home.",
+    "Primary industry and business model derived from the company\u2019s own About page and multiple news articles describing its services.",
+    "PE sponsorship verified by both Trive Capital website announcement and Home Health Care News coverage of Coltala Holdings\u2019 investment.",
+    "No reliable revenue or EBITDA figures were found in any document, press release or business database accessed.",
+    "Employee headcount shows conflicting data; LinkedIn\u2019s much higher range is considered more plausible for a multi-state home-health provider, but confidence remains low due to lack of corroboration."
+  ]
+}

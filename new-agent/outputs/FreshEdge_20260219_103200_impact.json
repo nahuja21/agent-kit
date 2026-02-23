@@ -1,0 +1,166 @@
+{
+  "impact": {
+    "summary": {
+      "headline": "FreshEdge uncovers $2.27 M in annual savings across eight indirect spend categories",
+      "narrative": "Treya Partners\u2019 strategic-sourcing engagement with FreshEdge has identified $2.27 million in annual savings across eight worked categories. Three categories\u2014Crates & Pallets and Sirna & Sons\u2019 electricity and gas\u2014are already under signed agreements, locking in $50 K of recurring savings. A further $2.22 million is in various stages of implementation, highlighted by a $1.56 million packaging/corrugate award, a national fuel card roll-out, and utility aggregation work. Additional opportunities in waste management and P-Card optimization remain available once client pauses are lifted."
+    },
+    "financials": {
+      "total_annual_savings": {
+        "amount": 2268894,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Sum of Savings Avg. amounts shown on slide 3 (Savings Identified, Ongoing Workstreams, On-Hold)"
+      },
+      "finalized_savings": {
+        "amount": 50250,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Agreements/MOUs signed for Crates & Pallets ($34,662) and Sirna & Sons electricity ($15,188) and gas ($400)"
+      },
+      "in_progress_savings": {
+        "amount": 2218644,
+        "currency": "USD",
+        "confidence": "medium",
+        "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+        "notes": "Remaining categories are in implementation, active sourcing, or client-initiated hold status"
+      },
+      "one_time_savings": null
+    },
+    "category_results": [
+      {
+        "category_name": "Packaging / Corrugate / Labels",
+        "annual_savings": 1557729,
+        "status": "awaiting signature",
+        "status_notes": "MOUs for Welch (corrugate) and Bunzl (packaging & labels) drafted; awaiting final FreshEdge approval before sending to suppliers (slides 4-5)"
+      },
+      {
+        "category_name": "Fuel",
+        "annual_savings": 394485,
+        "status": "in progress",
+        "status_notes": "FreshEdge working with WPP to implement Loves/Pilot fuel program (slide 4)"
+      },
+      {
+        "category_name": "Waste Management",
+        "annual_savings": 54947,
+        "status": "on hold",
+        "status_notes": "Initial savings identified with broker GPS; category currently on client hold (slide 4)"
+      },
+      {
+        "category_name": "Utilities \u2013 All Other",
+        "annual_savings": 64534,
+        "status": "in progress",
+        "status_notes": "Data gathering and LOE/LOA endorsements underway across business units (slide 4)"
+      },
+      {
+        "category_name": "P-Card",
+        "annual_savings": 146199,
+        "status": "on hold",
+        "status_notes": "Spend analysis complete; implementation paused by client (slide 3)"
+      },
+      {
+        "category_name": "Crates & Pallets",
+        "annual_savings": 34662,
+        "status": "finalized",
+        "status_notes": "MOU signed with incumbent Kamps (slide 4)"
+      },
+      {
+        "category_name": "Utilities \u2013 Electric (Sirna & Sons)",
+        "annual_savings": 15188,
+        "status": "finalized",
+        "status_notes": "48-month agreement signed with WGL on 5/14 (slides 4 & 10)"
+      },
+      {
+        "category_name": "Utilities \u2013 Gas (Sirna & Sons)",
+        "annual_savings": 400,
+        "status": "finalized",
+        "status_notes": "36-month agreement signed with Gas South on 8/1 (slide 4)"
+      }
+    ],
+    "excluded_categories": [
+      {
+        "category_name": "Tableware",
+        "reason": "Moved out of scope \u2013 100 % customer-directed vendors (slide 3)"
+      },
+      {
+        "category_name": "Disinfection Supplies/Services",
+        "reason": "Moved out of scope due to materially reduced addressable spend (slide 3)"
+      },
+      {
+        "category_name": "Telecom",
+        "reason": "Moved out of scope \u2013 locked into 3-year agreement (slide 3)"
+      },
+      {
+        "category_name": "Forklifts",
+        "reason": "Moved out of scope \u2013 assets under lease; limited opportunity (slide 3)"
+      },
+      {
+        "category_name": "General Industrial Supplies",
+        "reason": "Sourcing discontinued \u2013 no savings available (slide 3)"
+      },
+      {
+        "category_name": "Janitorial & Office Supplies",
+        "reason": "Sourcing discontinued \u2013 savings deemed too small to implement (slide 3)"
+      }
+    ],
+    "not_started_categories": [],
+    "time_to_value": {
+      "value_realized_in_days": {
+        "value": null,
+        "unit": "days",
+        "confidence": "low",
+        "source_file": null,
+        "notes": "Kick-off and implementation dates not provided; first signed savings (Crates & Pallets) occurred before Aug 13 update"
+      },
+      "notes": "Signed savings for Crates & Pallets and Sirna & Sons utilities represent the first value delivered"
+    },
+    "operational_improvements": "Standardized packaging specifications across multiple operating companies, secured long-term fixed-rate energy contracts, and initiated enterprise-wide fuel card consolidation for better visibility and control.",
+    "proof_points": [
+      {
+        "statement": "Packaging & corrugate RFP awards to Welch and Bunzl deliver $1.56 M in annual savings, a 27 % reduction on $5.7 M of spend.",
+        "category": "Packaging / Corrugate / Labels",
+        "evidence": [
+          {
+            "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+            "page_or_slide": "5",
+            "quote": "Grand Total | $5,705,747 | $1,557,729 | 27%"
+          }
+        ]
+      },
+      {
+        "statement": "FreshEdge locked in a 48-month electricity contract with WGL, projecting $61 K total savings for Sirna & Sons.",
+        "category": "Utilities \u2013 Electric",
+        "evidence": [
+          {
+            "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+            "page_or_slide": "10",
+            "quote": "Over the 48-month term, Treya projects total savings of $61K or approximately $15K (10%) per year."
+          }
+        ]
+      },
+      {
+        "statement": "The incumbent pallet supplier Kamps signed an MOU preserving service while still saving $34.7 K annually.",
+        "category": "Crates & Pallets",
+        "evidence": [
+          {
+            "source_file": "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx",
+            "page_or_slide": "4",
+            "quote": "MOU signed by Kamps and FreshEdge"
+          }
+        ]
+      }
+    ]
+  },
+  "extraction_sources": [
+    "Project Update/FreshEdge - Strategic Sourcing Project Update (08.13.24).pptx"
+  ],
+  "extraction_notes": [
+    "No Priority-1 Close-Out or Priority-2 Case Study documents provided; latest update (Priority 3) used for all results.",
+    "Total savings of $2,268,894 matches the Savings Avg. total on slide 3.",
+    "Finalized savings limited to categories with signed agreements/MOUs as explicitly stated on slides 4 and 10.",
+    "Waste Management savings shown under 'Savings Identified' but category later noted as 'put on hold'; treated as on-hold, not finalized.",
+    "P-Card optimization included as 'on hold' because preliminary addressable spend and savings analysis completed (slide 3).",
+    "All out-of-scope and discontinued categories excluded from financials per instructions."
+  ]
+}

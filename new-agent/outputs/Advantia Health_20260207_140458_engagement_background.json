@@ -1,0 +1,31 @@
+{
+  "engagement_background": {
+    "objective": "Advantia Health engaged Treya Partners to identify and capture cost-savings across its spend base, strengthen procurement processes, and support value-creation objectives by delivering $0.7-$1.4 million in annual savings through strategic sourcing.",
+    "scope_summary": "Treya is addressing 10 spend categories representing roughly $19 million in addressable spend (out of ~$45 million total AP/P-card spend), plus a review of procurement processes and operational controls; optional work on Employee Benefits was scheduled for a later phase.",
+    "constraints_challenges": [
+      "Limited strategic procurement resources and focus prior to the engagement",
+      "Spend and contract data spread across two AP systems (Advantia Mid-Atlantic and Heartland) with incomplete line-item detail",
+      "Supplier fragmentation and long-standing incumbent relationships across multi-site clinics, making change management sensitive",
+      "Requirement to avoid parallel purchasing activity during the project to prevent market confusion",
+      "Six-month target timeline (excluding Benefits) places pressure on data collection, sourcing cycles, and implementation"
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "AP and P-card header-level data from two systems were available; contracts and detailed usage data had to be requested from key suppliers.",
+    "data_quality_notes": "No centralized contract repository; inconsistent supplier naming and limited item-level usage details\u2014some suppliers did not provide data even after multiple requests.",
+    "source_file": "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Assessment/AdvantiaHealth - Spend Analysis Opportunity v1 JV (11-22-2021).pptx",
+    "Assessment/AdvantiaHealth - Proposal Nov 29 2021.pptx",
+    "Agreement/Advantia Treya Procurement Cost Reduction Services Agreement (Dec 13 2021 Final) - signed.pdf",
+    "Project Updates/Kickoff/Advantia Strategic Sourcing Project Kickoff (100622).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from slides citing lack of strategic procurement focus and need for process/controls review.",
+    "Data challenges taken from agreement language on difficulty collecting supplier line-item data and from spend assessment methodology description."
+  ]
+}

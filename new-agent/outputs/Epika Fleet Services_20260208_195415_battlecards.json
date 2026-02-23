@@ -1,0 +1,340 @@
+{
+  "battlecards": [
+    {
+      "supplier_name": "Shell Lubricants Solutions",
+      "category": "Oil & Lubricants",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 4244416,
+      "final_spend": 3598265,
+      "savings_dollars": 646151,
+      "savings_percent": 15.2,
+      "levers_applied": [
+        "Strategic incumbent renegotiation",
+        "Volume aggregation",
+        "Enhanced rebate/marketing fund",
+        "Benchmark to competitor pricing"
+      ],
+      "alternatives_considered": [
+        "Chevron",
+        "ExxonMobil"
+      ],
+      "why_selected": "Maintained preferred brand equity while meeting target cost reductions; offered largest front-end price drop plus new marketing fund.",
+      "why_not_selected": null,
+      "contract_terms": "Enterprise pricing agreement; new prices effective 10-Feb-2025 with quarterly true-ups and 3-year commercial commitment.",
+      "negotiation_leverage": "Threat of shifting bulk volume to Chevron/Exxon, consolidated enterprise volume previously unknown to Shell, documented YOY volume decline used to justify margin reduction.",
+      "supplier_strengths": "Strong brand recognition with fleet customers, broad SKU coverage, national distribution network, co-op marketing funds.",
+      "supplier_weaknesses": "Historic pricing creep, limited price transparency on packaged goods.",
+      "switching_costs": "Changing customer-facing brand signage, technician retraining, purge/flush of bulk tanks.",
+      "key_contacts": "Carmela Cochrane \u2013 Key Account Manager; John Walters \u2013 On-Hwy Team Lead",
+      "notes": "Marketing fund improved by $27K annually and Lucas grease pricing reduced an additional $33K.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant negotiation",
+        "Savings >15%",
+        "Multiple alternative majors benchmarked"
+      ]
+    },
+    {
+      "supplier_name": "Chevron Products Company",
+      "category": "Oil & Lubricants",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 2736486,
+      "final_spend": 2508693,
+      "savings_dollars": 227793,
+      "savings_percent": 8.3,
+      "levers_applied": [
+        "Strategic incumbent renegotiation",
+        "Price harmonization across SKUs",
+        "Retro-billing correction"
+      ],
+      "alternatives_considered": [
+        "Shell",
+        "ExxonMobil"
+      ],
+      "why_selected": "Competitive net pricing on synthetic SKUs and willingness to retro-bill price errors back to 1-Mar-2025.",
+      "why_not_selected": null,
+      "contract_terms": "Lubricants Supply Agreement extended to 29-Feb-2028 (Amendment No. 6); price list locked for 12 months with \u22643% annual cap thereafter.",
+      "negotiation_leverage": "Documented billing errors, ability to allocate incremental share to Shell, multi-site consolidated demand.",
+      "supplier_strengths": "Premium Delo brand, technical support team, bulk and packaged options.",
+      "supplier_weaknesses": "Slower price file updates created invoice errors; smaller marketing fund than Shell.",
+      "switching_costs": "Tank cleaning, filter changeovers, customer perception of changing brands.",
+      "key_contacts": null,
+      "notes": "Chevron agreed to credit invoices and issue corrected retro-billing for all shipments since 1-Mar-2025.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant negotiation",
+        "Contract term extension",
+        "Invoice correction worth >$100K"
+      ]
+    },
+    {
+      "supplier_name": "ExxonMobil (Mobil Delvac)",
+      "category": "Oil & Lubricants",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1355356,
+      "final_spend": 1217090,
+      "savings_dollars": 138266,
+      "savings_percent": 10.2,
+      "levers_applied": [
+        "Strategic incumbent renegotiation",
+        "Volume aggregation"
+      ],
+      "alternatives_considered": [
+        "Shell",
+        "Chevron"
+      ],
+      "why_selected": "Agreed to match Shell bulk pricing on top SKUs and introduced anniversary promotion valued at $150K.",
+      "why_not_selected": null,
+      "contract_terms": "New enterprise price file effective 1-Mar-2025; rebates tiered by total Mobil gallons with annual true-up.",
+      "negotiation_leverage": "Potential loss of share to Shell, consolidated volume visibility, timing before Mobil Delvac 100th anniversary promo.",
+      "supplier_strengths": "Strong OEM approvals, marketing promotions, reliable distributor network.",
+      "supplier_weaknesses": "Higher packaged pricing than peers, rebate complexity.",
+      "switching_costs": "Same as other oil majors\u2014bulk tank purge and customer brand impact.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Significant negotiation",
+        "Re-pricing plus marketing incentives",
+        "Savings >10%"
+      ]
+    },
+    {
+      "supplier_name": "Fleetguard (Cummins Filtration)",
+      "category": "Filters",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 1417378,
+      "final_spend": 1276251,
+      "savings_dollars": 141127,
+      "savings_percent": 10.0,
+      "levers_applied": [
+        "National program creation",
+        "Strategic renegotiation",
+        "Competitive benchmark vs Baldwin/Donaldson"
+      ],
+      "alternatives_considered": [
+        "Baldwin",
+        "Donaldson"
+      ],
+      "why_selected": "Matched Baldwin pricing on high-run SKUs while maintaining OEM spec quality; agreed to single national price list.",
+      "why_not_selected": null,
+      "contract_terms": "Enterprise pricing agreement effective Jan-2025; quarterly rebate payable based on consolidated volumes.",
+      "negotiation_leverage": "Threat to divert volume to Baldwin, ability to showcase cross-reference savings analysis.",
+      "supplier_strengths": "OEM-grade filtration, broad SKU match, strong technical data.",
+      "supplier_weaknesses": "Historically inconsistent pricing across BUs.",
+      "switching_costs": "Minimal\u2014filters interchangeable; primary cost is system price file update.",
+      "key_contacts": null,
+      "notes": "Invoices collected (FGUSA- series) confirm new pricing live 19-Feb-2025.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Multiple suppliers in play",
+        "National program established",
+        "Savings ~10%"
+      ]
+    },
+    {
+      "supplier_name": "Baldwin Filters (Parker EMAM)",
+      "category": "Filters",
+      "relationship_status": "incumbent",
+      "was_incumbent": true,
+      "was_awarded": true,
+      "baseline_spend": 2336693,
+      "final_spend": 2256337,
+      "savings_dollars": 80356,
+      "savings_percent": 3.4,
+      "levers_applied": [
+        "Rebate structure",
+        "Strategic renegotiation",
+        "Cross-bid with Fleetguard"
+      ],
+      "alternatives_considered": [
+        "Fleetguard",
+        "Donaldson"
+      ],
+      "why_selected": "Provided tiered volume rebate up to 5% and agreed to national shipment support.",
+      "why_not_selected": null,
+      "contract_terms": "MOU effective 1-Feb-2025 through 31-Dec-2025 with annual rebate true-up; option to extend.",
+      "negotiation_leverage": "Epika growth story and risk of SKU rationalization toward Fleetguard only.",
+      "supplier_strengths": "Largest HD filter catalog, fast lead times, rebate flexibility.",
+      "supplier_weaknesses": "Lower OEM brand equity vs Fleetguard, some SKUs priced above market.",
+      "switching_costs": "Low\u2014filters interchangeable; admin to change SKUs in POS.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive negotiations with multiple suppliers",
+        "Rebate program created"
+      ]
+    },
+    {
+      "supplier_name": "Comdata Inc.",
+      "category": "Fuel (Fleet Card)",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 4588961,
+      "final_spend": 4545467,
+      "savings_dollars": 43494,
+      "savings_percent": 0.95,
+      "levers_applied": [
+        "Competitive RFQ",
+        "Vendor consolidation",
+        "Rebate improvement",
+        "Guaranteed network discount"
+      ],
+      "alternatives_considered": [
+        "Impac Fleet",
+        "Ramp",
+        "Fuelman",
+        "Universal Premium Fleet Card",
+        "CarIQ Pay"
+      ],
+      "why_selected": "Highest guaranteed effective rebate (1.8%) and Mastercard acceptance network; scalable implementation plan.",
+      "why_not_selected": null,
+      "contract_terms": "Comdata Mastercard Corporate Card Agreement #00818987; 3-year initial term starting 28-Feb-2025 with auto-renewal.",
+      "negotiation_leverage": "Single enterprise award of >$4.5M fuel spend, competitive bids from 3 other issuers.",
+      "supplier_strengths": "Universal acceptance, advanced fraud controls, implementation team assigned.",
+      "supplier_weaknesses": "Requires switch to new card platform and driver training.",
+      "switching_costs": "Card re-issuance, system integration with expense tools, driver onboarding.",
+      "key_contacts": null,
+      "notes": "Implementation kickoff held 29-Jan-2025; template with all Epika operating companies submitted.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFQ",
+        "Supplier switched/consolidated",
+        "Multi-million spend"
+      ]
+    },
+    {
+      "supplier_name": "Office Depot / ODP Business Solutions (via OMNIA)",
+      "category": "Office Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 279851,
+      "final_spend": 243470,
+      "savings_dollars": 36381,
+      "savings_percent": 13.0,
+      "levers_applied": [
+        "GPO contract joinder",
+        "Vendor consolidation"
+      ],
+      "alternatives_considered": [
+        "Amazon Business",
+        "Staples"
+      ],
+      "why_selected": "Immediate access to OMNIA Tier-1 discount structure without RFP; one vendor able to service all locations.",
+      "why_not_selected": null,
+      "contract_terms": "Participating addendum executed Q1-2025; pricing tied to OMNIA Contract #R191902 through 4-30-2026 with two 12-month renewals.",
+      "negotiation_leverage": "Leverage of OMNIA national volume and credible threat to leave Amazon/Staples.",
+      "supplier_strengths": "Wide SKU breadth, next-day delivery, aggressive GPO pricing.",
+      "supplier_weaknesses": "Requires internal adoption of punch-out catalog; back-order risk in remote branches.",
+      "switching_costs": "Minimal\u2014new vendor account setup and user training.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "GPO leverage",
+        "Vendor consolidation",
+        "Savings >10%"
+      ]
+    },
+    {
+      "supplier_name": "MSC Industrial Supply (OMNIA program)",
+      "category": "General Industrial Supplies",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 164474,
+      "final_spend": 151763,
+      "savings_dollars": 12711,
+      "savings_percent": 7.7,
+      "levers_applied": [
+        "GPO assessment",
+        "Vendor consolidation"
+      ],
+      "alternatives_considered": [
+        "Imperial Supplies",
+        "Airgas",
+        "Fastenal (evaluated)"
+      ],
+      "why_selected": "OMNIA savings assessment showed 17% price drop on high-usage list and ability to cover 100% of requirements.",
+      "why_not_selected": null,
+      "contract_terms": "OMNIA Contract #R192006 participation; pricing fixed for 12 months with quarterly price audit rights.",
+      "negotiation_leverage": "Demonstrated SKU-level savings analysis; willingness to consolidate Airgas MRO items.",
+      "supplier_strengths": "Extensive catalog, integrated e-procurement, national logistics.",
+      "supplier_weaknesses": "Potential freight charges on low-value orders.",
+      "switching_costs": "User training on new punch-out; phasing out local Imperial representatives.",
+      "key_contacts": null,
+      "notes": null,
+      "is_complex": true,
+      "complexity_reasons": [
+        "Vendor consolidation across BUs",
+        "GPO program assessment",
+        "Multi-supplier comparison"
+      ]
+    },
+    {
+      "supplier_name": "New Life Parts",
+      "category": "After-Market Truck Parts (CS T&T)",
+      "relationship_status": "new",
+      "was_incumbent": false,
+      "was_awarded": true,
+      "baseline_spend": 1026032,
+      "final_spend": 949825,
+      "savings_dollars": 76207,
+      "savings_percent": 7.4,
+      "levers_applied": [
+        "Competitive RFP",
+        "Rebate negotiation"
+      ],
+      "alternatives_considered": [
+        "Parts South",
+        "Tidewater/TNT Parts"
+      ],
+      "why_selected": "Offered 15% price reduction on market basket plus tiered rebate up to 5% over $2 M spend.",
+      "why_not_selected": null,
+      "contract_terms": "Proposed agreement: 1-year base term with automatic 1-year renewals; rebate: 1% <$1M, 2% <$2M, 5% >$2M (paid annually).",
+      "negotiation_leverage": "Threat of retaining incumbents, consolidated $2.3M spend visibility, ability to shift volume quickly.",
+      "supplier_strengths": "Competitive pricing, willingness to commit to rebate, broad heavy-duty inventory.",
+      "supplier_weaknesses": "New relationship\u2014limited performance history with Epika, potential onboarding hiccups.",
+      "switching_costs": "System SKU mapping, credit setup, possible freight variance.",
+      "key_contacts": null,
+      "notes": "Award is contingent on CST&T leadership final approval expected 30-Apr-2025.",
+      "is_complex": true,
+      "complexity_reasons": [
+        "Competitive RFP",
+        "Supplier switch",
+        "Savings >7%"
+      ]
+    }
+  ],
+  "summary": {
+    "total_suppliers_evaluated": 20,
+    "battlecards_generated": 9,
+    "categories_with_battlecards": [
+      "Oil & Lubricants",
+      "Filters",
+      "Fuel",
+      "Office Supplies",
+      "General Industrial Supplies",
+      "After-Market Truck Parts"
+    ],
+    "skipped_reason": "Suppliers in simple renewals or with only basic spend data (e.g., Telematics-Samsara, Uniforms, Telecom) were skipped due to limited strategic content."
+  },
+  "extraction_notes": [
+    "Baseline and savings figures taken from Priority 1 Close-Out summary sheets.",
+    "Chevron contract extension date sourced from Amendment No. 6 signed 4-Mar-2025.",
+    "Comdata contract details pulled from fully executed Corporate Card Agreement (#00818987).",
+    "Fleetguard and Baldwin invoice samples dated Feb-2025 validate price implementation.",
+    "New Life Parts rebate tiers referenced from RFQ bid analysis (NL Rebate Summary sheet)."
+  ]
+}

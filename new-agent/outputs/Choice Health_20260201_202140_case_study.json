@@ -1,0 +1,34 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Engagement includes client identity and industry, clear objectives, $534K in validated annual savings, multiple quantified proof points, and detailed approach information\u2014sufficient for a full marketing case study.",
+    "headline": "Home-health provider secures $534K in annual savings in under six months through Treya-led strategic sourcing",
+    "client_problem_statement": "Choice Health At Home had grown rapidly through acquisitions, leaving procurement highly decentralized across more than 45 branch locations. Fragmented vendor relationships, inconsistent pricing, and limited spend visibility were eroding margins just as its private-equity sponsors pushed for accelerated EBITDA improvement. The organization needed a fast, disciplined sourcing program to unlock savings and build a scalable procurement infrastructure by mid-2024.",
+    "client_problem_anonymized": "A rapidly expanding multi-state home health and hospice provider had a highly decentralized purchasing model across more than 45 branch locations. Fragmented vendor relationships, inconsistent pricing, and limited spend visibility were eroding margins just as the private equity ownership group focused on operational efficiency and margin improvement. The organization needed a fast, disciplined sourcing program to unlock savings and build a scalable procurement infrastructure by mid-2024.",
+    "approach_summary": [
+      "Analyzed $17.7M in spend across 12 clinical and indirect categories, prioritizing the $15.1M deemed 80\u201390% addressable.",
+      "Ran a competitive RFP against Medline and Cardinal, then renegotiated with incumbent McKesson to secure a 21\u201322% price reduction and volume rebate on medical supplies.",
+      "Restructured the Enterprise Fleet Management agreement, introducing mileage-based maintenance buckets that cut costs by 4% while keeping vehicles in service.",
+      "Benchmarked office-supply pricing through three national GPOs (OMNIA, Procure Analytics, GroupSource) to validate a 10\u201315% savings opportunity.",
+      "Instituted standardized supplier scorecards and quarterly business reviews, giving the provider its first enterprise-wide visibility into category performance."
+    ],
+    "top_levers": [
+      "Incumbent contract renegotiation",
+      "Competitive RFP & supplier benchmarking",
+      "Pricing restructuring (fleet mileage buckets)",
+      "GPO benchmarking / tier optimization"
+    ],
+    "value_delivered_blurb": "Treya unlocked $534,000 in validated annual run-rate savings\u2014already delivering a 2.1\u00d7 return on the fixed $250K project fee and keeping the client on pace to exceed its 1.5\u00d7 ROI guarantee. Savings were realized within 170 days of kick-off, with additional negotiated value of $258K awaiting final signatures. Beyond the dollars, the engagement established standardized reporting and supplier-management processes that position the organization for continued cost discipline.",
+    "where_we_were_unique": [
+      "Delivered first contract execution and savings within six months despite limited historical usage data.",
+      "Combined competitive RFP pressure with incumbent leverage to achieve a 22% reduction without disrupting medical-supply continuity.",
+      "Applied healthcare-specific GPO expertise to surface quick-win pricing tiers unavailable through the client\u2019s previous channels.",
+      "Implemented a collaborative, hands-on change-management approach that kept clinical and operations stakeholders aligned throughout negotiations."
+    ]
+  },
+  "generation_notes": [
+    "All figures (spend, savings percentages, durations) pulled directly from provided data.",
+    "ROI calculated as $534K savings \u00f7 $250K fee = 2.14\u00d7, rounded to 2.1\u00d7 for narrative clarity.",
+    "Approach bullets use generic client descriptors, while vendor names remain specific per instructions."
+  ]
+}

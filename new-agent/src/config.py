@@ -62,7 +62,7 @@ IGNORED_FOLDERS = {
 # ============================================================================
 # LLM Configuration
 # ============================================================================
-MAX_TOKENS = 16000  # Max output tokens (increased for o3)
+MAX_TOKENS = 50000  # Max output tokens (high to prevent truncation with o3 reasoning)
 TEMPERATURE = 0.7  # Balanced creativity/consistency (not used by o3)
 
 
@@ -84,6 +84,22 @@ AZURE_SQL_PASSWORD = os.environ.get("AZURE_SQL_PASSWORD", "")
 
 # Table name for case study extractions
 AZURE_SQL_TABLE = os.environ.get("AZURE_SQL_TABLE", "case_study_extractions")
+
+
+# ============================================================================
+# SharePoint / Microsoft Graph API Configuration
+# ============================================================================
+# Azure AD App Registration for Graph API access
+# Required: Register an app at https://portal.azure.com → Azure Active Directory → App registrations
+# Add delegated permissions: Files.Read.All, Sites.Read.All
+# Enable "Allow public client flows" for device code auth
+SHAREPOINT_CLIENT_ID = os.environ.get("SHAREPOINT_CLIENT_ID", "")
+SHAREPOINT_TENANT_ID = os.environ.get("SHAREPOINT_TENANT_ID", "treyapartners.onmicrosoft.com")
+
+# SharePoint site details (parsed from your SharePoint URL)
+SHAREPOINT_HOSTNAME = "treyapartners.sharepoint.com"
+SHAREPOINT_SITE_PATH = "/sites/Projects"
+SHAREPOINT_LIBRARY_NAME = "Projects"  # The document library name
 
 
 def validate_config() -> list[str]:
@@ -142,6 +158,17 @@ def get_azure_connection_string() -> str:
         f"Connection Timeout=60;"
         f"LoginTimeout=60;"
     )
+
+
+def validate_sharepoint_config() -> list[str]:
+    """Validate SharePoint configuration and return list of errors."""
+    errors = []
+    if not SHAREPOINT_CLIENT_ID:
+        errors.append(
+            "SHAREPOINT_CLIENT_ID environment variable is not set. "
+            "Register an app at https://portal.azure.com → Azure AD → App registrations"
+        )
+    return errors
 
 
 def ensure_directories() -> None:

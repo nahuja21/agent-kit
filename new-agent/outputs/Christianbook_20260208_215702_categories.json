@@ -1,0 +1,267 @@
+{
+  "categories": [
+    {
+      "category_label": "Merchant Processing Fees",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-02-24",
+      "status": "implemented",
+      "vendors_before": [
+        "Chase Paymentech"
+      ],
+      "vendors_after": [
+        "Calibr Merchant Solutions"
+      ],
+      "levers": [
+        "RFP",
+        "vendor switch",
+        "competitive benchmarking",
+        "fee renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Seamless transition required to avoid payment interruptions",
+        "contractual_constraints": "30-year incumbent relationship with Chase; no early-termination penalties noted",
+        "implementation_constraints": "Tokenization and customer card data migration needed"
+      },
+      "baseline_spend": {
+        "amount": 5367215,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Spend value shown in Final Savings slide (Slide 1) \u2013 \u2018Spend\u2019 column for Merchant Processing Fees"
+      },
+      "savings_annual_run_rate": {
+        "amount": 627726,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Average savings figure from Final Savings slide (Slide 1)"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 12.0,
+      "notes": "Calibr offered a 0.30 pp reduction in net effective processing rate (2.86 % \u2192 2.56 %).",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "Slide 1",
+          "quote": "Merchant Processing Fees \u2013 Spend $5,367,215 | Savings Avg. ($) $627,726 | Contract signing date 2/24/2025",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "Corrugated",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-12-20",
+      "status": "implemented",
+      "vendors_before": [
+        "Unicorr",
+        "Rand-Whitney"
+      ],
+      "vendors_after": [
+        "Unicorr (renegotiated)",
+        "Rand-Whitney (renegotiated)",
+        "Key Container Corp."
+      ],
+      "levers": [
+        "RFP",
+        "incumbent renegotiation",
+        "competitive bidding",
+        "volume-based price breaks"
+      ],
+      "constraints": {
+        "supplier_constraints": "Desire to retain incumbents for operational continuity",
+        "operational_constraints": "Box specs locked \u2013 no design changes allowed during peak season",
+        "contractual_constraints": null,
+        "implementation_constraints": "Phased price roll-in (Unicorr 1/1/2025; Rand TBD)"
+      },
+      "baseline_spend": {
+        "amount": 1226725,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "\u2018Spend\u2019 column for Corrugated on Final Savings slide (Slide 1)"
+      },
+      "savings_annual_run_rate": {
+        "amount": 168060,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings figure listed in Final Savings slide (Slide 1)"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 14.0,
+      "notes": "Savings achieved while keeping both incumbent suppliers; added Key Container for additional leverage.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "Slide 12",
+          "quote": "We reduced costs by $168K while retaining incumbent suppliers Unicorr and Rand\u2026",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "Packaging & Shipping Supplies",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-12-20",
+      "status": "implemented",
+      "vendors_before": [
+        "Accutech",
+        "Peak Technologies"
+      ],
+      "vendors_after": [
+        "Accutech (improved pricing)",
+        "Peak Technologies (improved pricing)"
+      ],
+      "levers": [
+        "RFP",
+        "incumbent renegotiation",
+        "line-item price targeting"
+      ],
+      "constraints": {
+        "supplier_constraints": "Retain current SKUs and suppliers to avoid warehouse re-qualification",
+        "operational_constraints": null,
+        "contractual_constraints": null,
+        "implementation_constraints": "New prices loaded into ERP before holiday peak"
+      },
+      "baseline_spend": {
+        "amount": 897369,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Spend value for Packaging & Shipping Supplies on Final Savings slide (Slide 1)"
+      },
+      "savings_annual_run_rate": {
+        "amount": 110729,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings figure from Final Savings slide (Slide 1)"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 12.0,
+      "notes": "Maintained all existing suppliers; achieved double-digit cost reductions on top 10 SKUs.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "Slide 13",
+          "quote": "The packaging RFP delivered significant cost savings while retaining incumbent suppliers, Peak and Accutech\u2026 Total savings $110,729 (12 %).",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "LTL",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-02-28",
+      "status": "implemented",
+      "vendors_before": [
+        "Old Dominion"
+      ],
+      "vendors_after": [
+        "Old Dominion (renegotiated)"
+      ],
+      "levers": [
+        "RFP",
+        "market benchmarking",
+        "rate renegotiation"
+      ],
+      "constraints": {
+        "supplier_constraints": "Long-standing relationship favored keeping Old Dominion if competitive",
+        "operational_constraints": "No service disruption during busy season",
+        "contractual_constraints": "Previous contract effective until 2/28/2025 with no volume commitments",
+        "implementation_constraints": "Three-month trial of alternative carriers used as leverage in negotiations"
+      },
+      "baseline_spend": {
+        "amount": 873264,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Spend value for LTL on Final Savings slide (Slide 1)"
+      },
+      "savings_annual_run_rate": {
+        "amount": 266350,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings figure from Final Savings slide (Slide 1)"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 31.0,
+      "notes": "Negotiated aggressive linehaul discounts resulting in >30 % savings versus prior OD rates.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "Slide 1",
+          "quote": "LTL \u2013 Spend $873,264 | Savings Avg. ($) $266,350 | Savings 31 %",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    },
+    {
+      "category_label": "FTL",
+      "category_l1": null,
+      "category_l2": null,
+      "category_l3": null,
+      "start_date": null,
+      "end_date": "2025-02-28",
+      "status": "implemented",
+      "vendors_before": [
+        "TransLink",
+        "RoadOne"
+      ],
+      "vendors_after": [
+        "Echo Logistics"
+      ],
+      "levers": [
+        "RFP",
+        "vendor switch",
+        "lane-level price benchmarking"
+      ],
+      "constraints": {
+        "supplier_constraints": null,
+        "operational_constraints": "Two-stop deliveries for Memphis, Atlanta and Chicago lanes had to be preserved",
+        "contractual_constraints": null,
+        "implementation_constraints": "Echo onboarding and system integration completed before contract go-live"
+      },
+      "baseline_spend": {
+        "amount": 851164,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Spend value for FTL on Final Savings slide (Slide 1)"
+      },
+      "savings_annual_run_rate": {
+        "amount": 64494,
+        "currency": "USD",
+        "confidence": "high",
+        "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+        "notes": "Savings figure from Final Savings slide (Slide 1)"
+      },
+      "savings_one_time": null,
+      "savings_percentage": 8.0,
+      "notes": "Echo submitted most competitive bid in RFP; selected as new primary FTL carrier.",
+      "evidence": [
+        {
+          "source_file": "Project Updates/Christianbook- Close Out and Potential Wave 2 Review.pptx",
+          "page_or_slide": "Slide 11",
+          "quote": "FTL \u2013 Savings ($) $64,494 | Echo submitted the most competitive bid\u2026",
+          "date_extracted": "2026-02-08"
+        }
+      ]
+    }
+  ]
+}

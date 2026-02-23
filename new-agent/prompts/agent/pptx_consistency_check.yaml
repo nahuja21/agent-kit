@@ -1,0 +1,165 @@
+# PowerPoint Content Consistency Check
+# Validates all slide content for number, terminology, and anonymization consistency
+# before generating the final PowerPoint file.
+
+step: pptx_consistency_check
+
+prompt:
+  instructions: |
+    You are a CONSISTENCY CHECKER for PowerPoint slide content.
+
+    Your job is to review ALL content destined for a case study PowerPoint and ensure
+    everything is internally consistent — numbers, terminology, facts, and anonymization.
+
+    ## WHAT TO CHECK
+
+    1. NUMBER CONSISTENCY
+       - Dollar amounts mentioned in text must agree across slides
+       - If challenge text says "$X savings" it must match the value_metrics_calculated numbers
+       - Percentages referenced in levers/approach must match category savings_percentage values
+       - Employee counts, location counts must be consistent
+       - For total savings figures, ONLY compare against source_data.annual_savings_amount
+         and value_metrics_calculated. These are the GROUND TRUTH.
+       - CRITICAL: slide_5_categories is a REPRESENTATIVE SAMPLE of top categories, NOT the
+         complete list. Do NOT:
+           • Cross-check total category counts in text against slide_5_categories
+           • Sum up slide_5_categories savings and compare to total savings figures
+           • Flag any mismatch between totals in text and slide_5_categories subtotals
+         Text that says "10 categories" or "$645K total savings" is correct even if slide 5
+         only lists 6 categories that sum to a different amount.
+
+    2. TERMINOLOGY CONSISTENCY
+       - Same concept uses the same word everywhere (e.g., don't mix "locations" and "sites")
+       - Category names referenced in levers/approach must match actual category_label values
+       - Industry terminology should be consistent
+
+    3. ANONYMIZATION
+       - The real client name must NEVER appear anywhere
+       - The real PE firm name must NEVER appear anywhere
+       - No other identifying information that could reveal the client
+
+    4. FACTUAL CONSISTENCY
+       - Do NOT flag category counts as inconsistent with slide_5_categories — slide 5 is a selected subset
+       - Levers should not contradict approach or challenge
+       - Client description should align with the industry/business model in the content
+
+    5. NATURAL LANGUAGE QUALITY
+       - Title should be professional, read naturally, and match the case study content
+       - No redundant/repeated root words (e.g., "Retail Retailer", "Health Healthcare", "Service Services")
+       - No awkward phrasing — read each field out loud; if it sounds wrong, fix it
+       - No first-person language ("we", "our") in client description
+       - Consistent tense across slides
+       - Challenge and approach text should flow logically as coherent paragraphs
+       - Bullet points (levers, differentiators) should each be a complete, meaningful thought
+
+    ## CRITICAL RULES
+
+    - "source_data" contains GROUND TRUTH numbers. Text must agree with these.
+    - "value_metrics_calculated" are FIXED (3x and 13x annual savings). Do NOT change them — adjust text to match.
+    - "slide_5_categories" is a REPRESENTATIVE SAMPLE — do NOT sum its values or use it as a source of truth for totals.
+      It exists only for checking terminology (category names, vendor names) — never for validating dollar totals or counts.
+    - Only correct: title, client_description, challenge, approach, top_levers, differentiators, pe_description
+    - Be CONSERVATIVE — only fix genuine inconsistencies, not stylistic preferences
+    - If everything is consistent, return the content unchanged with an empty issues array
+    - Preserve the original meaning and intent when making corrections
+
+  user_template: |
+    # Consistency Check — All Slide Content
+
+    Review the following PowerPoint slide content for consistency before generation.
+
+    ## CONFIDENTIAL NAMES (must NOT appear anywhere in the corrected output)
+    - Client Name: {{client_name}}
+    - PE Firm Name: {{pe_sponsor}}
+
+    ## ALL SLIDE CONTENT (JSON)
+
+    {{all_content_json}}
+
+    ---
+
+    ## TASK
+
+    1. Review ALL content above for consistency (numbers, terminology, facts, anonymization)
+    2. If you find issues, correct ONLY the editable text fields
+    3. Return your response as a single JSON object with this EXACT structure:
+
+    ```json
+    {
+      "issues": [
+        {
+          "field": "field_name",
+          "issue": "description of the inconsistency found",
+          "action": "what was corrected"
+        }
+      ],
+      "corrected": {
+        "title": "the title text",
+        "client_description": "the client description text",
+        "challenge": "the challenge paragraph text",
+        "approach": ["the approach paragraph text"],
+        "top_levers": ["lever 1", "lever 2", "lever 3", "lever 4", "lever 5"],
+        "differentiators": ["differentiator 1", "differentiator 2"],
+        "pe_description": "the PE description text"
+      }
+    }
+    ```
+
+    4. If NO issues are found, return an EMPTY "issues" array and the ORIGINAL content unchanged in "corrected"
+    5. The "corrected" object MUST contain ALL seven fields, even if unchanged
+    6. Return ONLY the JSON — no explanation or commentary outside the JSON block
+
+parameters:
+  - name: client_name
+    type: string
+    required: true
+    description: "Real client name — must not appear in corrected output"
+
+  - name: pe_sponsor
+    type: string
+    required: false
+    description: "Real PE firm name — must not appear in corrected output"
+
+  - name: all_content_json
+    type: string
+    required: true
+    description: "JSON string containing all slide content to validate"
+
+validation:
+  must_be_valid_json: true
+  required_keys:
+    - issues
+    - corrected
+  corrected_required_keys:
+    - title
+    - client_description
+    - challenge
+    - approach
+    - top_levers
+    - differentiators
+    - pe_description
+
+examples:
+  - note: "Number inconsistency between challenge and value metrics"
+    issues:
+      - field: "challenge"
+        issue: "Challenge text mentions '$5M in savings' but calculated annual savings is $1.18M (value metrics show $3.5M contract length)"
+        action: "Updated challenge to reference '$1.2M in annual savings' to match source data"
+
+  - note: "Anonymization leak"
+    issues:
+      - field: "client_description"
+        issue: "Client description contains the actual company name 'Acme Corp'"
+        action: "Replaced with anonymized description 'A Leading Provider of Industrial Services'"
+
+  - note: "Terminology mismatch"
+    issues:
+      - field: "top_levers"
+        issue: "Lever 3 references 'Janitorial' but categories table uses 'Janitorial & Sanitation'"
+        action: "Updated lever to use consistent category name 'Janitorial & Sanitation'"
+
+  - note: "Redundant/awkward title"
+    issues:
+      - field: "title"
+        issue: "Title 'A Leading Retail Retailer' has redundant words — 'Retail' and 'Retailer' repeat the same root"
+        action: "Changed to 'A Leading E-Commerce Retailer' using the business model for differentiation"

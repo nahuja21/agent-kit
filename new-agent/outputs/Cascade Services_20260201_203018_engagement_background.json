@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "Reduce Cascade Residential Services\u2019 procurement costs by roughly $0.87-$1.7 million through a 5-6 month strategic sourcing program that leverages enterprise-wide purchasing power, secures competitive supplier agreements, and establishes a best-in-class procurement process to support private-equity value creation.",
+    "scope_summary": "Nine indirect/direct-indirect categories totaling about $33 million in baseline spend are in scope (\u2248$26.5 million addressable). Key areas include HVACR OEM/Distributors, HVAC & Plumbing Supplies, Advertising, General Industrial/Electrical Supplies, Electronic Payment Processing, Telecom, Fleet, Uniforms, and Commercial Print; low-opportunity categories may be dropped as analysis progresses.",
+    "constraints_challenges": [
+      "Decentralized, multi-brand purchasing limits leverage and requires aggregation of spend across business units.",
+      "Supplier data requests may receive limited or delayed responses, hampering baseline build-out.",
+      "Minimal internal procurement bandwidth\u2014Treya must do the \"heavy lifting\" while still needing timely stakeholder input.",
+      "Aggressive timeline (project start April 2025, completion by late September 2025) driven by PE value-creation targets.",
+      "Incumbent supplier sensitivities and potential stakeholder pushback when competitive bidding threatens long-standing relationships."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "AP transaction data for Jan-Dec 2024 is available; detailed line-item usage and many contracts must be obtained directly from high-spend suppliers.",
+    "data_quality_notes": "Spend data lacks consistent vendor naming, tail spend may be non-addressable, and gaps exist when suppliers do not provide historical usage\u2014necessitating representative sampling.",
+    "source_file": "Kick-off/Cascade Services  - Strategic Sourcing Project Kickoff (April 4 2025).pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Kick-off/Cascade Services  - Strategic Sourcing Project Kickoff (April 4 2025).pptx",
+    "Opportunity Assessment and Proposal Decks/Treya Partners. Cascade Services Proposal 1.31.25.pdf",
+    "Agreement/Cascade Services Executed Agreement 3.31.25.pdf",
+    "Project Updates/Cascade Services - Strategic Sourcing Project Update (December 19, 2025).pptx"
+  ],
+  "extraction_notes": [
+    "Decentralized model inferred from references to fragmented purchasing and need to leverage enterprise-wide power.",
+    "Maturity assessed as low because goal is to establish a best-in-class procurement process and Treya is providing most procurement capabilities.",
+    "Data observations taken from agreement language on data collection and kickoff slide on data requests."
+  ]
+}

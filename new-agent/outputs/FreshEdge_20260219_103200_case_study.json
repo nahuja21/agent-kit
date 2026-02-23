@@ -1,0 +1,36 @@
+{
+  "case_study_packaging": {
+    "case_study_ready": true,
+    "readiness_notes": "Engagement includes clear objective, quantified $2.27M savings across eight categories, multiple signed agreements and detailed proof points\u2014sufficient for a robust case study.",
+    "headline": "Fresh produce distributor captures $2.3M in annual savings by unifying procurement across eight indirect spend categories",
+    "client_problem_statement": "FreshEdge, a rapidly expanding super-regional fresh food distributor backed by Wind Point Partners, had grown through more than a dozen acquisitions in just four years. Purchasing was highly decentralized across 20+ operating companies, resulting in fragmented vendor relationships, duplicate spend and limited spend visibility. To hit aggressive EBITDA improvement targets, the company needed a systematic, enterprise-wide approach to reduce indirect costs without disrupting operations.",
+    "client_problem_anonymized": "A rapidly expanding super-regional fresh food distributor backed by the private equity ownership group had grown through more than a dozen acquisitions in just four years. Purchasing was highly decentralized across 20+ operating companies, resulting in fragmented vendor relationships, duplicate spend and limited spend visibility. To support operational efficiency and margin improvement goals, the company needed a systematic, enterprise-wide approach to reduce indirect costs without disrupting operations.",
+    "approach_summary": [
+      "Performed a granular spend analysis of $1.14 B in accounts-payable data, cleansing and mapping thousands of vendors and GL codes to identify $41 M in high-potential indirect spend.",
+      "Ran competitive RFPs in packaging, corrugate and labeling\u2014aggregating $5.7 M of volume and awarding to Welch Packaging and Bunzl to deliver a 27% cost reduction.",
+      "Consolidated eight legacy fuel programs into a single Loves/Pilot fleet card solution, leveraging volume to negotiate best-in-class rebates for the client\u2019s 300-truck fleet.",
+      "Brokered fixed-rate electricity and natural-gas contracts for Sirna & Sons locations, locking in four-year energy savings and eliminating commodity price volatility.",
+      "Renegotiated incumbent pallet supplier Kamps, securing double-digit savings while maintaining service levels valued by operating companies."
+    ],
+    "top_levers": [
+      "Competitive RFP",
+      "Supplier consolidation & volume aggregation",
+      "Brokered energy contracts",
+      "Incumbent contract renegotiation"
+    ],
+    "value_delivered_blurb": "Treya identified $2.27 million in annual run-rate savings\u2014over 8% of the $27.9 million addressable baseline\u2014while standardizing specifications and supplier terms across eight categories. More than $50 k is already contractually secured, with an additional $2.22 million approved or in implementation, positioning the client to exceed its PE value-creation targets. Beyond dollars, the engagement delivered a cleansed spend cube, common contract templates and a repeatable sourcing playbook the client can use for future categories.",
+    "where_we_were_unique": [
+      "Converted messy, decentralized AP data into an actionable spend cube within six weeks, enabling rapid opportunity sizing.",
+      "Balanced enterprise savings with local operating-company preferences, retaining incumbents where service was critical while still extracting double-digit savings.",
+      "Leveraged deep packaging market expertise to standardize specs and unlock 27% savings that internal teams had considered unattainable.",
+      "Collaborated closely with the private equity sponsor to align sourcing waves with value-creation milestones and board reporting cycles."
+    ]
+  },
+  "generation_notes": [
+    "Headline and savings figures align with $2.268M total savings identified (rounded to $2.3M for marketing impact).",
+    "Problem statement cites decentralization, acquisitions and PE value-creation as primary drivers\u2014drawn from engagement background.",
+    "Approach bullets mirror documented categories and levers, using generic 'the client' references as required.",
+    "Top levers ranked by contribution to total savings (packaging RFP largest).",
+    "Value blurb highlights secured vs. in-progress savings and non-financial benefits."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "engagement_background": {
+    "objective": "SaVida Health engaged Treya Partners to generate approximately $240K\u2013$470K in cost savings through strategic sourcing across multiple spend categories, while maintaining or improving service levels and leveraging the company\u2019s enterprise-wide purchasing power within a six-month project window (quick wins by end of 2024 and full completion by March 2025).",
+    "scope_summary": "Initial scope covers 10 indirect and clinical-support spend categories (EMR, Employee Benefits, Scientific/Medical Lab Equipment & Supplies, Medical Equipment & Supplies, Small Parcel, IT Hardware, Telecom, Office Supplies, Commercial Print, Waste Management) representing a $5.3 M baseline. Up to 90 % of this spend is addressable, but low-opportunity categories may be dropped or re-categorised as better data emerges.",
+    "constraints_challenges": [
+      "Supplier non-responsiveness to data requests, delaying baseline creation and RFx work.",
+      "Need for a unified, \u2018no side conversations\u2019 communication strategy to prevent supplier pushback.",
+      "Potential lack of stakeholder availability for data provision, interviews, and timely feedback.",
+      "Pressure to realise quick-hit savings before year-end and finish the full programme by mid-March 2025.",
+      "Incumbent supplier sensitivities during competitive bidding or renegotiations.",
+      "Gaps in line-item usage data, requiring supplier outreach and acceptance of representative samples.",
+      "Requirement for SaVida to cease parallel procurement activity in in-scope categories to avoid market confusion."
+    ]
+  },
+  "procurement_environment": {
+    "operating_model": "decentralized",
+    "maturity": "low",
+    "data_availability": "Internal AP/PO data exists but is insufficient at the line-item level; current contracts are scattered and supplier usage reports are not consistently received, so Treya must obtain detailed data directly from key vendors.",
+    "data_quality_notes": "No single contract repository; multiple suppliers per category; historical usage data often incomplete, requiring representative sampling after six weeks of collection effort if gaps remain.",
+    "source_file": "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "confidence": "medium"
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "Project Updates/Savida Health - Strategic Sourcing Project Update (March 27,2025).pptx"
+  ],
+  "extraction_notes": [
+    "Operating model and maturity inferred from the need to aggregate purchasing power, collect unit-level data, and the absence of a formal procurement function.",
+    "Data availability details taken from both the kickoff deck (Slides 5, 11) and the Agreement (Section 3.2)."
+  ]
+}

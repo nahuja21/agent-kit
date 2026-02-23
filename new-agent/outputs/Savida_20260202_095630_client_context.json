@@ -1,0 +1,51 @@
+{
+  "client": {
+    "client_name": "SaVida Health",
+    "industry_primary": "Healthcare",
+    "industry_secondary": "Outpatient addiction treatment (opioid & alcohol use disorders)",
+    "primary_industry_sector": "Healthcare Providers & Physician Practice Platforms",
+    "business_model": "Multi-site outpatient medication-assisted treatment provider",
+    "sponsor_pe_firm": "Council Capital",
+    "client_history": "Founded in 2010, SaVida Health provides medication-assisted treatment for opioid and alcohol use disorders. The company was acquired by healthcare-focused private equity firm Council Capital in 2017 and has since expanded to operate more than 20 clinics across several U.S. states."
+  },
+  "size_metrics": {
+    "revenue": {
+      "amount": null,
+      "currency": "USD",
+      "confidence": "low",
+      "source": "leadiq.com company profile (estimate $50\u2013$100 M)",
+      "notes": "Only indicative estimates available from LeadIQ; no official or corroborating figures found. Range too broad to state a single reliable number, so revenue left null."
+    },
+    "ebitda": null,
+    "locations": {
+      "count": 20,
+      "confidence": "medium",
+      "source": "Behavioral Health Business article 21-Oct-2020 stating 'more than 20 outpatient centers' (bhbusiness.com/pipeline-savidas-continued-expansion\u2026)",
+      "notes": "Company website and other news releases reference 'over 20' clinics but do not list a precise count. Using the conservative minimum of 20."
+    },
+    "employees": {
+      "count": 165,
+      "confidence": "medium",
+      "source": "LeadIQ employee directory (Oct 2025) reporting ~165 employees; SignalHire and Clodura list 100-200 and 155 respectively.",
+      "notes": "Multiple third-party sources cluster between 155-165 employees; LeadIQ provides the most specific recent figure."
+    }
+  },
+  "extraction_sources": [
+    "Kick-Off/Savida Health - Strategic Sourcing Project Kickoff Oct 8 2024.pptx",
+    "Agreement/Procurement Cost Reduction Services Agreement_SaVida Management_vF.docx.pdf",
+    "savidahealth.com/about-us",
+    "councilcapital.com/company/savida-health",
+    "mergr.com/transaction/council-capital-acquires-savida-health",
+    "bhbusiness.com/2020/10/21/pipeline-savidas-continued-expansion-new-behavioral-hospital",
+    "leadiq.com/c/savida-health",
+    "signalhire.com/companies/savida-health",
+    "clodura.ai/directory/company/savida-health"
+  ],
+  "extraction_notes": [
+    "Company name appears as 'SaVida Health' in project slides and public sources; legal entity in agreement is 'SaVida Management'.",
+    "Council Capital ownership confirmed in Mergr database and Council Capital portfolio page.",
+    "Revenue remains undetermined due to lack of authoritative data; only broad estimate from LeadIQ.",
+    "Employee count triangulated from three data vendors; selected highest-specificity figure (165) but marked confidence 'medium' due to sourcing limitations.",
+    "Location count based on multiple articles and company language stating 'more than 20' clinics; exact number not publicly itemized."
+  ]
+}
